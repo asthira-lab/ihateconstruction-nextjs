@@ -3,7 +3,7 @@
 **The smart way to estimate construction materials and costs.**
 
 A platform that helps contractors, builders, and project managers get accurate material estimates in seconds — no spreadsheets, no guessing, no math errors.
- 
+
 ## The Problem We Solve
 
 Construction estimation is broken:

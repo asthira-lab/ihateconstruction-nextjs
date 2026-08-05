@@ -21,13 +21,13 @@ const PRODUCT: FooterLink[] = [
 ];
 
 const COMPANY: FooterLink[] = [
-  { label: "About" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
 const LEGAL: FooterLink[] = [
-  { label: "Privacy" },
-  { label: "Terms" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
 ];
 
 function FooterList({ title, links }: { title: string; links: FooterLink[] }) {
