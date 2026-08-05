@@ -87,18 +87,10 @@ export default function AboutPage() {
               <li>Works on a ₹10,000 phone over 4G. No desktop-only workflows.</li>
             </ul>
 
-            <h2>Built With</h2>
-            <ul>
-              <li>Next.js (React) — fast, server-rendered, works on slow connections.</li>
-              <li>PostgreSQL — your data is in a real database, not a spreadsheet.</li>
-              <li>Clerk — secure authentication without building it from scratch.</li>
-              <li>Vercel — deployed on edge, fast anywhere in India.</li>
-            </ul>
-
             <h2>Contact</h2>
             <p>
               Have feedback, found a bug, or want to partner? Reach us at{" "}
-              <a href="mailto:hello@ihateconstruction.co">hello@ihateconstruction.co</a> or use the{" "}
+              <a href="mailto:huzaif89@hotmail.com">huzaif89@hotmail.com</a> or use the{" "}
               <a href="/contact">contact form</a>.
             </p>
           </div>
