@@ -10,9 +10,9 @@ import { STEEL_FAQ, STEEL_STANDARDS } from "@/features/calculators/steel";
 import { SteelCalculatorForm } from "./SteelCalculatorForm";
 
 const PAGE_PATH = "/calculators/steel";
-const TITLE = "Steel Calculator";
+const TITLE = "Steel Calculator — TMT Bar Weight, Reinforcement & Bar Schedule";
 const DESCRIPTION =
-  "Calculate the total weight of reinforcement steel for any RCC member. Bar-schedule mode is accurate to the drawing; thumb-rule mode gives a quick ±20% estimate from concrete volume. Fe 500 / Fe 550 TMT, IS 1786.";
+  "Free steel calculator. Enter your bar schedule or concrete volume and get the total weight of reinforcement steel in kg — for slabs, beams, columns, footings, and staircases. Uses D²/162, Fe 500 / Fe 550 TMT, IS 1786.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -20,13 +20,22 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_PATH },
   keywords: [
     "steel calculator",
-    "reinforcement calculator",
+    "steel weight calculator",
     "TMT bar weight calculator",
+    "reinforcement calculator",
+    "rebar weight calculator",
+    "steel bar calculator",
     "D squared by 162",
-    "thumb rule steel",
+    "d2 by 162 formula",
+    "thumb rule steel calculator",
     "IS 1786 calculator",
-    "Fe 500 Fe 550 calculator",
+    "Fe 500 calculator",
+    "Fe 550 calculator",
     "RCC steel weight",
+    "bar schedule calculator",
+    "steel for slab calculator",
+    "steel for column calculator",
+    "steel for beam calculator",
   ],
   openGraph: {
     type: "website",
@@ -44,19 +53,37 @@ export const metadata: Metadata = {
   },
 };
 
-function faqJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: STEEL_FAQ.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
+function jsonLd() {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: STEEL_FAQ.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "Steel Calculator",
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "Any (web)",
+      url: `${siteUrl}${PAGE_PATH}`,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      description: DESCRIPTION,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+        { "@type": "ListItem", position: 2, name: "Calculators", item: `${siteUrl}/calculators` },
+        { "@type": "ListItem", position: 3, name: "Steel Calculator", item: `${siteUrl}${PAGE_PATH}` },
+      ],
+    },
+  ];
 }
 
 export default function SteelCalculatorPage() {
@@ -64,7 +91,7 @@ export default function SteelCalculatorPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd()) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }}
       />
       <SiteHeader />
       <main className="flex-1">
@@ -74,7 +101,7 @@ export default function SteelCalculatorPage() {
               Calculator
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              {TITLE}
+              Steel Calculator — TMT Bar Weight &amp; Reinforcement
             </h1>
             <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
               Two ways in — enter your bar schedule for an accurate weight, or

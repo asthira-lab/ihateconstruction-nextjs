@@ -20,9 +20,9 @@ import {
 import { ConcreteCalculatorForm } from "./ConcreteCalculatorForm";
 
 const PAGE_PATH = "/calculators/concrete";
-const TITLE = "Concrete Calculator";
+const TITLE = "Concrete Calculator — Cement, Sand & Aggregate for Slab, Beam, Column";
 const DESCRIPTION =
-  "Calculate the exact cement bags, sand, and coarse aggregate for any concrete pour. Supports M5 through M25 grades with the standard IS 456 mix ratios, plus custom ratios. Free, unit-aware, GST-ready contractor tool.";
+  "Free concrete calculator. Enter your slab, beam, column, or footing size and get cement bags, sand, and coarse aggregate — for M5 to M25 grades using the standard IS 456 mix ratios. Works in cubic yards, cubic feet, and cubic metres.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -30,12 +30,22 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_PATH },
   keywords: [
     "concrete calculator",
+    "concrete calculator for slab",
+    "concrete calculator yards",
+    "concrete calculator cubic yards",
+    "concrete calculator bags",
     "cement sand aggregate calculator",
+    "M15 concrete calculator",
     "M20 concrete calculator",
     "M25 concrete calculator",
     "concrete mix ratio calculator India",
     "PCC calculator",
     "RCC calculator",
+    "ready mix concrete calculator",
+    "concrete slab calculator",
+    "footing concrete calculator",
+    "column concrete calculator",
+    "beam concrete calculator",
   ],
   openGraph: {
     type: "website",
@@ -53,19 +63,48 @@ export const metadata: Metadata = {
   },
 };
 
-function faqJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: CONCRETE_FAQ.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
+// FAQPage + SoftwareApplication + BreadcrumbList JSON-LD for max SERP surface.
+function jsonLd() {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: CONCRETE_FAQ.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "Concrete Calculator",
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "Any (web)",
+      url: `${siteUrl}${PAGE_PATH}`,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      description: DESCRIPTION,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Calculators",
+          item: `${siteUrl}/calculators`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Concrete Calculator",
+          item: `${siteUrl}${PAGE_PATH}`,
+        },
+      ],
+    },
+  ];
 }
 
 export default function ConcreteCalculatorPage() {
@@ -73,7 +112,7 @@ export default function ConcreteCalculatorPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd()) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }}
       />
       <SiteHeader />
       <main className="flex-1">
@@ -83,7 +122,7 @@ export default function ConcreteCalculatorPage() {
               Calculator
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              {TITLE}
+              Concrete Calculator — Slab, Beam, Column &amp; Footing
             </h1>
             <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
               Enter the wet volume of concrete you need to pour, pick a grade,

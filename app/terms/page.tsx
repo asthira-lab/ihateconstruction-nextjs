@@ -6,19 +6,55 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 
 const PAGE_PATH = "/terms";
-const TITLE = "Terms of Service";
-const DESCRIPTION = "Terms and conditions for using iHateConstruction.";
+const TITLE = "Terms of Service — Rules for Using iHateConstruction";
+const DESCRIPTION =
+  "iHateConstruction terms of service. The rules for using our free construction calculators, project management, BOQ builder, quotation and invoice tools, and payment collection features.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
-  openGraph: { type: "website", url: `${siteUrl}${PAGE_PATH}`, title: `${TITLE} — ${siteConfig.shortName}`, description: DESCRIPTION, siteName: siteConfig.shortName },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: `${siteUrl}${PAGE_PATH}`,
+    title: `${TITLE} — ${siteConfig.shortName}`,
+    description: DESCRIPTION,
+    siteName: siteConfig.shortName,
+    images: [siteConfig.ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${TITLE} — ${siteConfig.shortName}`,
+    description: DESCRIPTION,
+    images: [siteConfig.ogImage],
+  },
 };
+
+function jsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: TITLE,
+    url: `${siteUrl}${PAGE_PATH}`,
+    description: DESCRIPTION,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+        { "@type": "ListItem", position: 2, name: "Terms of Service", item: `${siteUrl}${PAGE_PATH}` },
+      ],
+    },
+  };
+}
 
 export default function TermsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }}
+      />
       <SiteHeader />
       <main className="flex-1">
         <Container className="py-12">

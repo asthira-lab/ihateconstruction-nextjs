@@ -39,6 +39,25 @@ function jsonLd() {
       name: siteConfig.shortName,
       url: siteUrl,
       inLanguage: "en-IN",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${siteUrl}/calculators?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    },
+    // ItemList of the six calculators — surfaces them as sitelinks from the homepage.
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Construction calculators",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Cement Calculator", url: `${siteUrl}/calculators/cement` },
+        { "@type": "ListItem", position: 2, name: "Concrete Calculator", url: `${siteUrl}/calculators/concrete` },
+        { "@type": "ListItem", position: 3, name: "Brick Calculator", url: `${siteUrl}/calculators/brick` },
+        { "@type": "ListItem", position: 4, name: "Steel Calculator", url: `${siteUrl}/calculators/steel` },
+        { "@type": "ListItem", position: 5, name: "Paint Calculator", url: `${siteUrl}/calculators/paint` },
+        { "@type": "ListItem", position: 6, name: "Tile Calculator", url: `${siteUrl}/calculators/tile` },
+      ],
     },
   ];
 }

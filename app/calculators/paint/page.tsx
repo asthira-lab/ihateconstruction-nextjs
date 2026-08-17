@@ -17,9 +17,9 @@ import { PAINT_FAQ, PAINT_STANDARDS } from "@/features/calculators/paint";
 import { PaintCalculatorForm } from "./PaintCalculatorForm";
 
 const PAGE_PATH = "/calculators/paint";
-const TITLE = "Paint Calculator";
+const TITLE = "Paint Calculator — Litres for Interior, Exterior & Room";
 const DESCRIPTION =
-  "Calculate the exact litres of paint for any room or wall area. Supports interior emulsion, exterior emulsion, enamel, primers, and putty. Handles multiple coats and per-layer customisation. Free contractor tool.";
+  "Free paint calculator. Enter room dimensions or wall area and get the exact litres of paint you need for interior emulsion, exterior emulsion, enamel, primer, and putty. Handles multiple coats, ceilings, doors, and windows.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -27,13 +27,19 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_PATH },
   keywords: [
     "paint calculator",
+    "paint calculator for room",
+    "paint calculator for house",
+    "wall paint calculator",
+    "interior paint calculator",
+    "exterior paint calculator",
     "paint litre calculator",
-    "wall paint calculator India",
+    "paint quantity calculator",
     "primer calculator",
     "putty calculator",
     "coverage per litre",
     "interior emulsion calculator",
     "exterior emulsion calculator",
+    "how much paint do I need",
   ],
   openGraph: {
     type: "website",
@@ -51,19 +57,37 @@ export const metadata: Metadata = {
   },
 };
 
-function faqJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: PAINT_FAQ.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
+function jsonLd() {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: PAINT_FAQ.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "Paint Calculator",
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "Any (web)",
+      url: `${siteUrl}${PAGE_PATH}`,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      description: DESCRIPTION,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+        { "@type": "ListItem", position: 2, name: "Calculators", item: `${siteUrl}/calculators` },
+        { "@type": "ListItem", position: 3, name: "Paint Calculator", item: `${siteUrl}${PAGE_PATH}` },
+      ],
+    },
+  ];
 }
 
 export default function PaintCalculatorPage() {
@@ -71,7 +95,7 @@ export default function PaintCalculatorPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd()) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }}
       />
       <SiteHeader />
       <main className="flex-1">
@@ -81,7 +105,7 @@ export default function PaintCalculatorPage() {
               Calculator
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              {TITLE}
+              Paint Calculator — Litres for Interior &amp; Exterior Walls
             </h1>
             <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
               Enter a room or a total area, pick your paint products, and

@@ -6,19 +6,48 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 
 const PAGE_PATH = "/about";
-const TITLE = "About";
-const DESCRIPTION = "The story behind iHateConstruction — why we built it and who it's for.";
+const TITLE = "About — Free Construction Calculators & Contractor Software";
+const DESCRIPTION =
+  "About iHateConstruction — free construction calculators for cement, concrete, brick, steel, paint, and tile, plus BOQ, quotation, and GST invoicing built for Indian contractors.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
-  openGraph: { type: "website", url: `${siteUrl}${PAGE_PATH}`, title: `${TITLE} — ${siteConfig.shortName}`, description: DESCRIPTION, siteName: siteConfig.shortName },
+  keywords: [
+    "about ihateconstruction",
+    "construction management software India",
+    "contractor software India",
+    "construction calculator app",
+  ],
+  openGraph: { type: "website", url: `${siteUrl}${PAGE_PATH}`, title: `${TITLE} — ${siteConfig.shortName}`, description: DESCRIPTION, siteName: siteConfig.shortName, images: [siteConfig.ogImage] },
+  twitter: { card: "summary_large_image", title: `${TITLE} — ${siteConfig.shortName}`, description: DESCRIPTION, images: [siteConfig.ogImage] },
 };
+
+function jsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: TITLE,
+    url: `${siteUrl}${PAGE_PATH}`,
+    description: DESCRIPTION,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+        { "@type": "ListItem", position: 2, name: "About", item: `${siteUrl}${PAGE_PATH}` },
+      ],
+    },
+  };
+}
 
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }}
+      />
       <SiteHeader />
       <main className="flex-1">
         <Container className="py-12">

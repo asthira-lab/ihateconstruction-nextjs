@@ -8,14 +8,20 @@ import { Container } from "@/components/layout/Container";
 import { ContactForm } from "./ContactForm";
 
 const PAGE_PATH = "/contact";
-const TITLE = "Contact";
+const TITLE = "Contact — Talk to the iHateConstruction Team";
 const DESCRIPTION =
-  "Get in touch with the iHateConstruction team about bugs, features, partnerships, or general questions. We usually reply within two business days.";
+  "Contact iHateConstruction about bugs, features, calculator requests, partnerships, or general questions. One of us reads every message and usually replies within two business days.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
+  keywords: [
+    "contact ihateconstruction",
+    "construction calculator support",
+    "contractor software support India",
+    "feedback",
+  ],
   openGraph: {
     type: "website",
     url: `${siteUrl}${PAGE_PATH}`,
@@ -32,9 +38,32 @@ export const metadata: Metadata = {
   },
 };
 
+// ContactPage + BreadcrumbList — gives Google a clean signal for the "Contact"
+// entity and the site hierarchy.
+function jsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: TITLE,
+    url: `${siteUrl}${PAGE_PATH}`,
+    description: DESCRIPTION,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+        { "@type": "ListItem", position: 2, name: "Contact", item: `${siteUrl}${PAGE_PATH}` },
+      ],
+    },
+  };
+}
+
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }}
+      />
       <SiteHeader />
       <main className="flex-1">
         <Container className="py-12">

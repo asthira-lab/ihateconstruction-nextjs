@@ -20,10 +20,17 @@ export interface CalculatorEntry {
 
 export const CALCULATORS: CalculatorEntry[] = [
   {
+    slug: "cement",
+    title: "Cement calculator",
+    description:
+      "Bags of cement for a slab, post hole, or any volume. Supports 94 lb Portland, 50 kg, and sand-and-cement mixes.",
+    status: "live",
+  },
+  {
     slug: "brick",
     title: "Brick calculator",
     description:
-      "Bricks, mortar, cement, and sand for any wall. Supports modular, traditional, and AAC block presets.",
+      "Bricks, mortar, cement, and sand for any wall, patio, paver, or fire pit. Supports modular, traditional, red brick, fire brick, and AAC.",
     status: "live",
   },
   {

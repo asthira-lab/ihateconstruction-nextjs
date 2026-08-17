@@ -15,14 +15,26 @@ import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
 import { CALCULATORS, calculatorHref } from "@/features/calculators/registry";
 
 const PAGE_PATH = "/calculators";
-const TITLE = "Calculators";
+const TITLE = "Free Construction Calculators — Cement, Concrete, Brick, Steel, Paint, Tile";
 const DESCRIPTION =
-  "Free construction calculators — brick, concrete, steel, paint, and tile. Enter your job and get an exact material order in Indian units, ready to hand to your supplier.";
+  "Six free construction calculators — cement, concrete, brick, steel, paint, and tile. Enter your job and get an exact material order in cubic yards, cubic feet, or metric units. Bags of cement for a slab, bricks for a wall, steel for reinforcement, litres of paint for a room, tiles for a floor.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
+  keywords: [
+    "construction calculator",
+    "cement calculator",
+    "concrete calculator",
+    "brick calculator",
+    "steel calculator",
+    "paint calculator",
+    "tile calculator",
+    "free construction calculator",
+    "building material calculator",
+    "contractor calculator",
+  ],
   openGraph: {
     type: "website",
     url: `${siteUrl}${PAGE_PATH}`,
@@ -40,17 +52,32 @@ export const metadata: Metadata = {
 };
 
 function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Construction calculators",
-    itemListElement: CALCULATORS.map((c, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: c.title,
-      url: `${siteUrl}${calculatorHref(c)}`,
-    })),
-  };
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Construction calculators",
+      itemListElement: CALCULATORS.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.title,
+        url: `${siteUrl}${calculatorHref(c)}`,
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Calculators",
+          item: `${siteUrl}${PAGE_PATH}`,
+        },
+      ],
+    },
+  ];
 }
 
 export default function CalculatorsPage() {
@@ -68,12 +95,13 @@ export default function CalculatorsPage() {
               Tools
             </p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Calculators
+              Free construction calculators
             </h1>
             <p className="mt-4 text-base text-black/70 dark:text-white/70">
-              Five construction calculators — enter your job, get an exact
-              material list. Brick is live now; concrete, steel, paint, and tile
-              are on the way.
+              Six calculators for the material orders you actually place — cement,
+              concrete, brick, steel, paint, and tile. Enter your dimensions, get
+              bags, bricks, kilograms, or litres. Works in cubic yards, cubic feet,
+              and cubic metres.
             </p>
           </header>
 

@@ -10,9 +10,9 @@ import { TILE_FAQ, TILE_STANDARDS } from "@/features/calculators/tile";
 import { TileCalculatorForm } from "./TileCalculatorForm";
 
 const PAGE_PATH = "/calculators/tile";
-const TITLE = "Tile Calculator";
+const TITLE = "Tile Calculator — Floor, Wall, Adhesive & Grout";
 const DESCRIPTION =
-  "Calculate the exact number of tiles, adhesive quantity, and grout volume for any floor or wall. Supports vitrified, ceramic, and traditional mortar-bed installation. Free contractor tool.";
+  "Free tile calculator. Enter floor or wall area, pick a tile size, and get the exact tile count, adhesive quantity, and grout volume. Supports vitrified, ceramic, and traditional mortar-bed installation with wastage.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -22,12 +22,17 @@ export const metadata: Metadata = {
     "tile calculator",
     "floor tile calculator",
     "wall tile calculator",
+    "how many tiles do I need",
+    "tile calculator square feet",
     "tile adhesive calculator",
     "grout calculator",
     "vitrified tile calculator",
     "ceramic tile calculator",
+    "bathroom tile calculator",
+    "kitchen tile calculator",
     "thin-set adhesive calculator",
     "mortar bed tile calculator India",
+    "tile count calculator",
   ],
   openGraph: {
     type: "website",
@@ -45,16 +50,37 @@ export const metadata: Metadata = {
   },
 };
 
-function faqJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: TILE_FAQ.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
-    })),
-  };
+function jsonLd() {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: TILE_FAQ.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "Tile Calculator",
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "Any (web)",
+      url: `${siteUrl}${PAGE_PATH}`,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      description: DESCRIPTION,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+        { "@type": "ListItem", position: 2, name: "Calculators", item: `${siteUrl}/calculators` },
+        { "@type": "ListItem", position: 3, name: "Tile Calculator", item: `${siteUrl}${PAGE_PATH}` },
+      ],
+    },
+  ];
 }
 
 export default function TileCalculatorPage() {
@@ -62,7 +88,7 @@ export default function TileCalculatorPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd()) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }}
       />
       <SiteHeader />
       <main className="flex-1">
@@ -72,7 +98,7 @@ export default function TileCalculatorPage() {
               Calculator
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              {TITLE}
+              Tile Calculator — Floor, Wall, Adhesive &amp; Grout
             </h1>
             <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
               Enter the surface, the tile size, and pick a preset — we return

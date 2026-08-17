@@ -6,19 +6,55 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 
 const PAGE_PATH = "/privacy";
-const TITLE = "Privacy Policy";
-const DESCRIPTION = "How iHateConstruction collects, uses, and protects your data.";
+const TITLE = "Privacy Policy — How We Handle Your Data";
+const DESCRIPTION =
+  "iHateConstruction privacy policy. Learn what personal data we collect, how we use it, where it's stored, and your rights over your account, projects, calculations, and business data.";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
-  openGraph: { type: "website", url: `${siteUrl}${PAGE_PATH}`, title: `${TITLE} — ${siteConfig.shortName}`, description: DESCRIPTION, siteName: siteConfig.shortName },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: `${siteUrl}${PAGE_PATH}`,
+    title: `${TITLE} — ${siteConfig.shortName}`,
+    description: DESCRIPTION,
+    siteName: siteConfig.shortName,
+    images: [siteConfig.ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${TITLE} — ${siteConfig.shortName}`,
+    description: DESCRIPTION,
+    images: [siteConfig.ogImage],
+  },
 };
+
+function jsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: TITLE,
+    url: `${siteUrl}${PAGE_PATH}`,
+    description: DESCRIPTION,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+        { "@type": "ListItem", position: 2, name: "Privacy Policy", item: `${siteUrl}${PAGE_PATH}` },
+      ],
+    },
+  };
+}
 
 export default function PrivacyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()) }}
+      />
       <SiteHeader />
       <main className="flex-1">
         <Container className="py-12">
@@ -75,7 +111,7 @@ export default function PrivacyPage() {
             <p>We may update this policy. Material changes will be notified via email or in-app notice at least 14 days before taking effect.</p>
 
             <h2>10. Contact</h2>
-            <p>For privacy-related queries: <a href="mailto:privacy@ihateconstruction.co">privacy@ihateconstruction.co</a></p>
+            <p>For privacy-related queries: <a href="mailto:huzaif89@hotmail.com">huzaif89@hotmail.com</a></p>
           </div>
         </Container>
       </main>
