@@ -51,12 +51,12 @@ function jsonLd() {
       "@type": "ItemList",
       name: "Construction calculators",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Cement Calculator", url: `${siteUrl}/calculators/cement` },
-        { "@type": "ListItem", position: 2, name: "Concrete Calculator", url: `${siteUrl}/calculators/concrete` },
-        { "@type": "ListItem", position: 3, name: "Brick Calculator", url: `${siteUrl}/calculators/brick` },
-        { "@type": "ListItem", position: 4, name: "Steel Calculator", url: `${siteUrl}/calculators/steel` },
-        { "@type": "ListItem", position: 5, name: "Paint Calculator", url: `${siteUrl}/calculators/paint` },
-        { "@type": "ListItem", position: 6, name: "Tile Calculator", url: `${siteUrl}/calculators/tile` },
+        { "@type": "ListItem", position: 1, name: "Cement Calculator", url: `${siteUrl}/calculators/cement-calculator` },
+        { "@type": "ListItem", position: 2, name: "Concrete Calculator", url: `${siteUrl}/calculators/concrete-calculator` },
+        { "@type": "ListItem", position: 3, name: "Brick Calculator", url: `${siteUrl}/calculators/brick-calculator` },
+        { "@type": "ListItem", position: 4, name: "Steel Calculator", url: `${siteUrl}/calculators/steel-calculator` },
+        { "@type": "ListItem", position: 5, name: "Paint Calculator", url: `${siteUrl}/calculators/paint-calculator` },
+        { "@type": "ListItem", position: 6, name: "Tile Calculator", url: `${siteUrl}/calculators/tile-calculator` },
       ],
     },
   ];

@@ -1,11 +1,4 @@
-/**
- * /calculators/concrete — Server Component.
- *
- * Owns page metadata, static content (H1, intro, formula card, FAQ, JSON-LD
- * schema), and the initial standards data that seeds the client form. The
- * calculation itself lives in the Server Action; the interactive form is a
- * client island.
- */
+// /calculators/steel-calculator — server component. Metadata + static content + form island.
 
 import type { Metadata } from "next";
 import { siteConfig, siteUrl } from "@/app/lib/site";
@@ -13,63 +6,59 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
-import {
-  CONCRETE_FAQ,
-  CONCRETE_STANDARDS,
-} from "@/features/calculators/concrete";
-import { ConcreteCalculatorForm } from "./ConcreteCalculatorForm";
+import { STEEL_FAQ, STEEL_STANDARDS } from "@/features/calculators/steel";
+import { SteelCalculatorForm } from "./SteelCalculatorForm";
 
-const PAGE_PATH = "/calculators/concrete";
-const TITLE = "Concrete Calculator — Cement, Sand & Aggregate for Slab, Beam, Column";
+const PAGE_PATH = "/calculators/steel-calculator";
+const TITLE = "Steel Calculator — TMT Bar Weight & Reinforcement";
 const DESCRIPTION =
-  "Free concrete calculator. Enter your slab, beam, column, or footing size and get cement bags, sand, and coarse aggregate — for M5 to M25 grades using the standard IS 456 mix ratios. Works in cubic yards, cubic feet, and cubic metres.";
+  "Free steel calculator. Enter your bar schedule or concrete volume and get the total weight of reinforcement steel in kg — for slabs, beams, columns, footings, and staircases. Uses D²/162, Fe 500 / Fe 550 TMT, IS 1786.";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
   keywords: [
-    "concrete calculator",
-    "concrete calculator for slab",
-    "concrete calculator yards",
-    "concrete calculator cubic yards",
-    "concrete calculator bags",
-    "cement sand aggregate calculator",
-    "M15 concrete calculator",
-    "M20 concrete calculator",
-    "M25 concrete calculator",
-    "concrete mix ratio calculator India",
-    "PCC calculator",
-    "RCC calculator",
-    "ready mix concrete calculator",
-    "concrete slab calculator",
-    "footing concrete calculator",
-    "column concrete calculator",
-    "beam concrete calculator",
+    "steel calculator",
+    "steel weight calculator",
+    "TMT bar weight calculator",
+    "reinforcement calculator",
+    "rebar weight calculator",
+    "steel bar calculator",
+    "D squared by 162",
+    "d2 by 162 formula",
+    "thumb rule steel calculator",
+    "IS 1786 calculator",
+    "Fe 500 calculator",
+    "Fe 550 calculator",
+    "RCC steel weight",
+    "bar schedule calculator",
+    "steel for slab calculator",
+    "steel for column calculator",
+    "steel for beam calculator",
   ],
   openGraph: {
     type: "website",
     url: `${siteUrl}${PAGE_PATH}`,
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     siteName: siteConfig.shortName,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     images: [siteConfig.ogImage],
   },
 };
 
-// FAQPage + SoftwareApplication + BreadcrumbList JSON-LD for max SERP surface.
 function jsonLd() {
   return [
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: CONCRETE_FAQ.map((item) => ({
+      mainEntity: STEEL_FAQ.map((item) => ({
         "@type": "Question",
         name: item.question,
         acceptedAnswer: { "@type": "Answer", text: item.answer },
@@ -78,7 +67,7 @@ function jsonLd() {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Concrete Calculator",
+      name: "Steel Calculator",
       applicationCategory: "UtilitiesApplication",
       operatingSystem: "Any (web)",
       url: `${siteUrl}${PAGE_PATH}`,
@@ -90,24 +79,14 @@ function jsonLd() {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Calculators",
-          item: `${siteUrl}/calculators`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Concrete Calculator",
-          item: `${siteUrl}${PAGE_PATH}`,
-        },
+        { "@type": "ListItem", position: 2, name: "Calculators", item: `${siteUrl}/calculators` },
+        { "@type": "ListItem", position: 3, name: "Steel Calculator", item: `${siteUrl}${PAGE_PATH}` },
       ],
     },
   ];
 }
 
-export default function ConcreteCalculatorPage() {
+export default function SteelCalculatorPage() {
   return (
     <>
       <script
@@ -122,45 +101,46 @@ export default function ConcreteCalculatorPage() {
               Calculator
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Concrete Calculator — Slab, Beam, Column &amp; Footing
+              Steel Calculator — TMT Bar Weight &amp; Reinforcement
             </h1>
             <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
-              Enter the wet volume of concrete you need to pour, pick a grade,
-              and we&apos;ll return cement bags, sand, and coarse aggregate —
-              matched to the IS 456 mix ratio for that grade.
+              Two ways in — enter your bar schedule for an accurate weight, or
+              enter concrete volume + member type for a quick thumb-rule
+              estimate. Both use IS 1786 defaults; both are fully overridable.
             </p>
           </header>
 
           <section className="mb-16">
-            <ConcreteCalculatorForm initialStandards={CONCRETE_STANDARDS} />
+            <SteelCalculatorForm initialStandards={STEEL_STANDARDS} />
           </section>
 
-          {/* Formula card */}
           <section className="mb-16 rounded-lg border border-black/10 p-6 dark:border-white/10">
             <h2 className="text-lg font-semibold">How the calculation works</h2>
             <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm text-black/75 dark:text-white/75">
               <li>
-                <strong>Dry volume</strong> = wet volume × 1.54. The dry-to-wet
-                factor accounts for the shrinkage that happens when dry
-                ingredients combine into wet concrete.
+                <strong>Weight per metre</strong> = D² / 162 kg/m, where D is
+                the bar diameter in mm. Comes from π × (D/2)² × 7850 kg/cum
+                ÷ 10⁶ — the standard site shortcut.
               </li>
               <li>
-                <strong>Wastage</strong> is applied uniformly to all three
-                components (default 3%). Dry volume × (1 + wastage %).
+                <strong>Total length</strong> for each bar row = length ×
+                count. Cutting length includes hooks / bends if you enter it
+                that way; laps and chairs aren&apos;t modeled separately.
               </li>
               <li>
-                <strong>Split by mix ratio</strong> a : b : c. For M20 (1:1.5:3),
-                cement takes 1/5.5 of the total, sand takes 1.5/5.5, and
-                aggregate takes 3/5.5.
+                <strong>Weight per row</strong> = weight per metre × total
+                length. Sum across rows for the total before wastage.
               </li>
               <li>
-                <strong>Cement bags</strong> = cement volume × 1440 kg/cum ÷ 50 kg/bag,
-                rounded up to the next whole bag.
+                <strong>Wastage</strong> (default 3%) is added on top for
+                cutting waste and small oversights.
               </li>
               <li>
-                <strong>Sand &amp; aggregate</strong> are quoted in whichever unit
-                you select — cft (default in India), cubic meters, or kilograms
-                using standard bulk densities.
+                <strong>Thumb rule</strong> mode multiplies concrete volume by
+                a kg/cum rate that depends on the member (80 for slabs, 100
+                for beams, 130 for columns, 70 for footings, 130 for
+                staircases). Rough — ±20% — use only for pricing, not
+                procurement.
               </li>
             </ol>
           </section>
@@ -170,7 +150,7 @@ export default function ConcreteCalculatorPage() {
               Frequently asked questions
             </h2>
             <dl className="space-y-6">
-              {CONCRETE_FAQ.map((item) => (
+              {STEEL_FAQ.map((item) => (
                 <div key={item.question}>
                   <dt className="text-sm font-semibold">{item.question}</dt>
                   <dd className="mt-1 text-sm text-black/70 dark:text-white/70">
@@ -185,7 +165,7 @@ export default function ConcreteCalculatorPage() {
             <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
               Other calculators
             </h2>
-            <CalculatorGrid filter={(c) => c.slug !== "concrete"} />
+            <CalculatorGrid filter={(c) => c.slug !== "steel-calculator"} />
           </section>
         </Container>
       </main>

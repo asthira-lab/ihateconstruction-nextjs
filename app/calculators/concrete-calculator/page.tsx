@@ -1,4 +1,11 @@
-// /calculators/tile — server component. Page metadata + static content + form island.
+/**
+ * /calculators/concrete-calculator — Server Component.
+ *
+ * Owns page metadata, static content (H1, intro, formula card, FAQ, JSON-LD
+ * schema), and the initial standards data that seeds the client form. The
+ * calculation itself lives in the Server Action; the interactive form is a
+ * client island.
+ */
 
 import type { Metadata } from "next";
 import { siteConfig, siteUrl } from "@/app/lib/site";
@@ -6,56 +13,63 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
-import { TILE_FAQ, TILE_STANDARDS } from "@/features/calculators/tile";
-import { TileCalculatorForm } from "./TileCalculatorForm";
+import {
+  CONCRETE_FAQ,
+  CONCRETE_STANDARDS,
+} from "@/features/calculators/concrete";
+import { ConcreteCalculatorForm } from "./ConcreteCalculatorForm";
 
-const PAGE_PATH = "/calculators/tile";
-const TITLE = "Tile Calculator — Floor, Wall, Adhesive & Grout";
+const PAGE_PATH = "/calculators/concrete-calculator";
+const TITLE = "Concrete Calculator — Slab, Beam, Column & Footing";
 const DESCRIPTION =
-  "Free tile calculator. Enter floor or wall area, pick a tile size, and get the exact tile count, adhesive quantity, and grout volume. Supports vitrified, ceramic, and traditional mortar-bed installation with wastage.";
+  "Free concrete calculator. Enter your slab, beam, column, or footing size and get cement bags, sand, and coarse aggregate — for M5 to M25 grades using the standard IS 456 mix ratios. Works in cubic yards, cubic feet, and cubic metres.";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
   keywords: [
-    "tile calculator",
-    "floor tile calculator",
-    "wall tile calculator",
-    "how many tiles do I need",
-    "tile calculator square feet",
-    "tile adhesive calculator",
-    "grout calculator",
-    "vitrified tile calculator",
-    "ceramic tile calculator",
-    "bathroom tile calculator",
-    "kitchen tile calculator",
-    "thin-set adhesive calculator",
-    "mortar bed tile calculator India",
-    "tile count calculator",
+    "concrete calculator",
+    "concrete calculator for slab",
+    "concrete calculator yards",
+    "concrete calculator cubic yards",
+    "concrete calculator bags",
+    "cement sand aggregate calculator",
+    "M15 concrete calculator",
+    "M20 concrete calculator",
+    "M25 concrete calculator",
+    "concrete mix ratio calculator India",
+    "PCC calculator",
+    "RCC calculator",
+    "ready mix concrete calculator",
+    "concrete slab calculator",
+    "footing concrete calculator",
+    "column concrete calculator",
+    "beam concrete calculator",
   ],
   openGraph: {
     type: "website",
     url: `${siteUrl}${PAGE_PATH}`,
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     siteName: siteConfig.shortName,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     images: [siteConfig.ogImage],
   },
 };
 
+// FAQPage + SoftwareApplication + BreadcrumbList JSON-LD for max SERP surface.
 function jsonLd() {
   return [
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: TILE_FAQ.map((item) => ({
+      mainEntity: CONCRETE_FAQ.map((item) => ({
         "@type": "Question",
         name: item.question,
         acceptedAnswer: { "@type": "Answer", text: item.answer },
@@ -64,7 +78,7 @@ function jsonLd() {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Tile Calculator",
+      name: "Concrete Calculator",
       applicationCategory: "UtilitiesApplication",
       operatingSystem: "Any (web)",
       url: `${siteUrl}${PAGE_PATH}`,
@@ -76,14 +90,24 @@ function jsonLd() {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
-        { "@type": "ListItem", position: 2, name: "Calculators", item: `${siteUrl}/calculators` },
-        { "@type": "ListItem", position: 3, name: "Tile Calculator", item: `${siteUrl}${PAGE_PATH}` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Calculators",
+          item: `${siteUrl}/calculators`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Concrete Calculator",
+          item: `${siteUrl}${PAGE_PATH}`,
+        },
       ],
     },
   ];
 }
 
-export default function TileCalculatorPage() {
+export default function ConcreteCalculatorPage() {
   return (
     <>
       <script
@@ -98,46 +122,45 @@ export default function TileCalculatorPage() {
               Calculator
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Tile Calculator — Floor, Wall, Adhesive &amp; Grout
+              Concrete Calculator — Slab, Beam, Column &amp; Footing
             </h1>
             <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
-              Enter the surface, the tile size, and pick a preset — we return
-              tile count with wastage plus adhesive and grout. Handles both
-              modern thin-set and traditional 20&nbsp;mm mortar bed.
+              Enter the wet volume of concrete you need to pour, pick a grade,
+              and we&apos;ll return cement bags, sand, and coarse aggregate —
+              matched to the IS 456 mix ratio for that grade.
             </p>
           </header>
 
           <section className="mb-16">
-            <TileCalculatorForm initialStandards={TILE_STANDARDS} />
+            <ConcreteCalculatorForm initialStandards={CONCRETE_STANDARDS} />
           </section>
 
+          {/* Formula card */}
           <section className="mb-16 rounded-lg border border-black/10 p-6 dark:border-white/10">
             <h2 className="text-lg font-semibold">How the calculation works</h2>
             <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm text-black/75 dark:text-white/75">
               <li>
-                <strong>Net area</strong> = length × width − sum of excluded
-                rectangles (columns, drains, pipe cutouts).
+                <strong>Dry volume</strong> = wet volume × 1.54. The dry-to-wet
+                factor accounts for the shrinkage that happens when dry
+                ingredients combine into wet concrete.
               </li>
               <li>
-                <strong>Tile count (before wastage)</strong> = ⌈net area ÷ tile
-                area⌉. Tiles are rounded up — you can&apos;t buy half a tile.
+                <strong>Wastage</strong> is applied uniformly to all three
+                components (default 3%). Dry volume × (1 + wastage %).
               </li>
               <li>
-                <strong>Tile count (final)</strong> = ⌈count × (1 + wastage
-                %)⌉. Default wastage is 10% — bump higher for diagonal or
-                border-heavy layouts.
+                <strong>Split by mix ratio</strong> a : b : c. For M20 (1:1.5:3),
+                cement takes 1/5.5 of the total, sand takes 1.5/5.5, and
+                aggregate takes 3/5.5.
               </li>
               <li>
-                <strong>Thin-set adhesive</strong> (kg) = net area ÷ coverage
-                (sqm/kg). Or <strong>mortar bed</strong> (cum) = net area ×
-                thickness, then cement:sand ratio splits it into bags + cft.
+                <strong>Cement bags</strong> = cement volume × 1440 kg/cum ÷ 50 kg/bag,
+                rounded up to the next whole bag.
               </li>
               <li>
-                <strong>Grout volume</strong> ≈ total joint length × joint
-                width × joint depth. Joint depth defaults to the tile
-                thickness (override in Customise if you only grout the top of
-                the joint). Weight uses ~1500 kg/cum. Add 15–25% on top when
-                actually buying grout — mixing waste is real.
+                <strong>Sand &amp; aggregate</strong> are quoted in whichever unit
+                you select — cft (default in India), cubic meters, or kilograms
+                using standard bulk densities.
               </li>
             </ol>
           </section>
@@ -147,7 +170,7 @@ export default function TileCalculatorPage() {
               Frequently asked questions
             </h2>
             <dl className="space-y-6">
-              {TILE_FAQ.map((item) => (
+              {CONCRETE_FAQ.map((item) => (
                 <div key={item.question}>
                   <dt className="text-sm font-semibold">{item.question}</dt>
                   <dd className="mt-1 text-sm text-black/70 dark:text-white/70">
@@ -162,7 +185,7 @@ export default function TileCalculatorPage() {
             <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
               Other calculators
             </h2>
-            <CalculatorGrid filter={(c) => c.slug !== "tile"} />
+            <CalculatorGrid filter={(c) => c.slug !== "concrete-calculator"} />
           </section>
         </Container>
       </main>

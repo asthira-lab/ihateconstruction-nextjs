@@ -20,42 +20,42 @@ export interface CalculatorEntry {
 
 export const CALCULATORS: CalculatorEntry[] = [
   {
-    slug: "cement",
+    slug: "cement-calculator",
     title: "Cement calculator",
     description:
       "Bags of cement for a slab, post hole, or any volume. Supports 94 lb Portland, 50 kg, and sand-and-cement mixes.",
     status: "live",
   },
   {
-    slug: "brick",
+    slug: "brick-calculator",
     title: "Brick calculator",
     description:
       "Bricks, mortar, cement, and sand for any wall, patio, paver, or fire pit. Supports modular, traditional, red brick, fire brick, and AAC.",
     status: "live",
   },
   {
-    slug: "concrete",
+    slug: "concrete-calculator",
     title: "Concrete calculator",
     description:
       "Cement, sand, and aggregate for a given volume and mix ratio (M15, M20, M25, custom).",
     status: "live",
   },
   {
-    slug: "steel",
+    slug: "steel-calculator",
     title: "Steel calculator",
     description:
       "Reinforcement weight for beams, columns, and slabs from a bar schedule.",
     status: "live",
   },
   {
-    slug: "paint",
+    slug: "paint-calculator",
     title: "Paint calculator",
     description:
       "Litres of paint for interior or exterior walls, factoring surface area, coats, and coverage.",
     status: "live",
   },
   {
-    slug: "tile",
+    slug: "tile-calculator",
     title: "Tile calculator",
     description:
       "Tile count, adhesive, and grout for any floor or wall. Handles tile size, joint width, and wastage.",

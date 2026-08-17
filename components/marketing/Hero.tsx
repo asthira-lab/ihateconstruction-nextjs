@@ -35,7 +35,7 @@ export function Hero() {
             <Icon name="arrow-right" size={16} decorative />
           </a>
           <a
-            href="/calculators/brick"
+            href="/calculators/brick-calculator"
             className="inline-flex h-11 items-center justify-center rounded border border-black/15 px-5 text-sm font-medium text-black transition-colors hover:bg-black/[.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/20 dark:text-white dark:hover:bg-white/[.06] dark:focus-visible:ring-white dark:focus-visible:ring-offset-black"
           >
             Try the brick calculator

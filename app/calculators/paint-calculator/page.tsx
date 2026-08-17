@@ -1,4 +1,11 @@
-// /calculators/steel — server component. Metadata + static content + form island.
+/**
+ * /calculators/paint-calculator — Server Component.
+ *
+ * Owns page metadata, static content (H1, intro, formula card, FAQ,
+ * JSON-LD schema), and the initial standards data that seeds the client
+ * form. The calculation itself lives in the Server Action; the interactive
+ * form is a client island.
+ */
 
 import type { Metadata } from "next";
 import { siteConfig, siteUrl } from "@/app/lib/site";
@@ -6,48 +13,45 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
-import { STEEL_FAQ, STEEL_STANDARDS } from "@/features/calculators/steel";
-import { SteelCalculatorForm } from "./SteelCalculatorForm";
+import { PAINT_FAQ, PAINT_STANDARDS } from "@/features/calculators/paint";
+import { PaintCalculatorForm } from "./PaintCalculatorForm";
 
-const PAGE_PATH = "/calculators/steel";
-const TITLE = "Steel Calculator — TMT Bar Weight, Reinforcement & Bar Schedule";
+const PAGE_PATH = "/calculators/paint-calculator";
+const TITLE = "Paint Calculator — Interior, Exterior & Room";
 const DESCRIPTION =
-  "Free steel calculator. Enter your bar schedule or concrete volume and get the total weight of reinforcement steel in kg — for slabs, beams, columns, footings, and staircases. Uses D²/162, Fe 500 / Fe 550 TMT, IS 1786.";
+  "Free paint calculator. Enter room dimensions or wall area and get the exact litres of paint you need for interior emulsion, exterior emulsion, enamel, primer, and putty. Handles multiple coats, ceilings, doors, and windows.";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
   keywords: [
-    "steel calculator",
-    "steel weight calculator",
-    "TMT bar weight calculator",
-    "reinforcement calculator",
-    "rebar weight calculator",
-    "steel bar calculator",
-    "D squared by 162",
-    "d2 by 162 formula",
-    "thumb rule steel calculator",
-    "IS 1786 calculator",
-    "Fe 500 calculator",
-    "Fe 550 calculator",
-    "RCC steel weight",
-    "bar schedule calculator",
-    "steel for slab calculator",
-    "steel for column calculator",
-    "steel for beam calculator",
+    "paint calculator",
+    "paint calculator for room",
+    "paint calculator for house",
+    "wall paint calculator",
+    "interior paint calculator",
+    "exterior paint calculator",
+    "paint litre calculator",
+    "paint quantity calculator",
+    "primer calculator",
+    "putty calculator",
+    "coverage per litre",
+    "interior emulsion calculator",
+    "exterior emulsion calculator",
+    "how much paint do I need",
   ],
   openGraph: {
     type: "website",
     url: `${siteUrl}${PAGE_PATH}`,
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     siteName: siteConfig.shortName,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     images: [siteConfig.ogImage],
   },
@@ -58,7 +62,7 @@ function jsonLd() {
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: STEEL_FAQ.map((item) => ({
+      mainEntity: PAINT_FAQ.map((item) => ({
         "@type": "Question",
         name: item.question,
         acceptedAnswer: { "@type": "Answer", text: item.answer },
@@ -67,7 +71,7 @@ function jsonLd() {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Steel Calculator",
+      name: "Paint Calculator",
       applicationCategory: "UtilitiesApplication",
       operatingSystem: "Any (web)",
       url: `${siteUrl}${PAGE_PATH}`,
@@ -80,13 +84,13 @@ function jsonLd() {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
         { "@type": "ListItem", position: 2, name: "Calculators", item: `${siteUrl}/calculators` },
-        { "@type": "ListItem", position: 3, name: "Steel Calculator", item: `${siteUrl}${PAGE_PATH}` },
+        { "@type": "ListItem", position: 3, name: "Paint Calculator", item: `${siteUrl}${PAGE_PATH}` },
       ],
     },
   ];
 }
 
-export default function SteelCalculatorPage() {
+export default function PaintCalculatorPage() {
   return (
     <>
       <script
@@ -101,46 +105,48 @@ export default function SteelCalculatorPage() {
               Calculator
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Steel Calculator — TMT Bar Weight &amp; Reinforcement
+              Paint Calculator — Litres for Interior &amp; Exterior Walls
             </h1>
             <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
-              Two ways in — enter your bar schedule for an accurate weight, or
-              enter concrete volume + member type for a quick thumb-rule
-              estimate. Both use IS 1786 defaults; both are fully overridable.
+              Enter a room or a total area, pick your paint products, and
+              we&apos;ll return the litres you need — per layer and in total.
+              Handles primer under emulsion, multiple coats, and per-layer
+              coverage overrides.
             </p>
           </header>
 
           <section className="mb-16">
-            <SteelCalculatorForm initialStandards={STEEL_STANDARDS} />
+            <PaintCalculatorForm initialStandards={PAINT_STANDARDS} />
           </section>
 
+          {/* Formula card */}
           <section className="mb-16 rounded-lg border border-black/10 p-6 dark:border-white/10">
             <h2 className="text-lg font-semibold">How the calculation works</h2>
             <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm text-black/75 dark:text-white/75">
               <li>
-                <strong>Weight per metre</strong> = D² / 162 kg/m, where D is
-                the bar diameter in mm. Comes from π × (D/2)² × 7850 kg/cum
-                ÷ 10⁶ — the standard site shortcut.
+                <strong>Wall area</strong> = 2 × (length + width) × height. If
+                you tick &quot;include ceiling,&quot; length × width is added on
+                top.
               </li>
               <li>
-                <strong>Total length</strong> for each bar row = length ×
-                count. Cutting length includes hooks / bends if you enter it
-                that way; laps and chairs aren&apos;t modeled separately.
+                <strong>Openings</strong> (doors and windows) are subtracted
+                rectangularly to give the net paintable area.
               </li>
               <li>
-                <strong>Weight per row</strong> = weight per metre × total
-                length. Sum across rows for the total before wastage.
+                For each layer, <strong>area covered</strong> = net area ×
+                number of coats. Two coats on 60 sqm means painting 120 sqm.
               </li>
               <li>
-                <strong>Wastage</strong> (default 3%) is added on top for
-                cutting waste and small oversights.
+                <strong>Litres before wastage</strong> = area covered ÷
+                coverage per litre (12 sqm/L for interior emulsion by default).
               </li>
               <li>
-                <strong>Thumb rule</strong> mode multiplies concrete volume by
-                a kg/cum rate that depends on the member (80 for slabs, 100
-                for beams, 130 for columns, 70 for footings, 130 for
-                staircases). Rough — ±20% — use only for pricing, not
-                procurement.
+                <strong>Litres</strong> = litres before wastage × (1 + wastage
+                %). Default wastage is 5–7% depending on the paint type — bump
+                it for rough or absorbent surfaces.
+              </li>
+              <li>
+                Totals across layers give the full paint order for the job.
               </li>
             </ol>
           </section>
@@ -150,7 +156,7 @@ export default function SteelCalculatorPage() {
               Frequently asked questions
             </h2>
             <dl className="space-y-6">
-              {STEEL_FAQ.map((item) => (
+              {PAINT_FAQ.map((item) => (
                 <div key={item.question}>
                   <dt className="text-sm font-semibold">{item.question}</dt>
                   <dd className="mt-1 text-sm text-black/70 dark:text-white/70">
@@ -165,7 +171,7 @@ export default function SteelCalculatorPage() {
             <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
               Other calculators
             </h2>
-            <CalculatorGrid filter={(c) => c.slug !== "steel"} />
+            <CalculatorGrid filter={(c) => c.slug !== "paint-calculator"} />
           </section>
         </Container>
       </main>

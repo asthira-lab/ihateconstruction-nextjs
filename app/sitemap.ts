@@ -11,12 +11,12 @@ import { siteUrl } from "./lib/site";
 
 // Keep in sync with the calculator config registry.
 const CALCULATOR_SLUGS = [
-  "cement",
-  "concrete",
-  "brick",
-  "paint",
-  "tile",
-  "steel",
+  "cement-calculator",
+  "concrete-calculator",
+  "brick-calculator",
+  "paint-calculator",
+  "tile-calculator",
+  "steel-calculator",
 ] as const;
 
 // Marketing / SEO pages — priority + freq reflect how often each page really

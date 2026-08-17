@@ -1,11 +1,4 @@
-/**
- * /calculators/paint — Server Component.
- *
- * Owns page metadata, static content (H1, intro, formula card, FAQ,
- * JSON-LD schema), and the initial standards data that seeds the client
- * form. The calculation itself lives in the Server Action; the interactive
- * form is a client island.
- */
+// /calculators/tile-calculator — server component. Page metadata + static content + form island.
 
 import type { Metadata } from "next";
 import { siteConfig, siteUrl } from "@/app/lib/site";
@@ -13,45 +6,45 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
-import { PAINT_FAQ, PAINT_STANDARDS } from "@/features/calculators/paint";
-import { PaintCalculatorForm } from "./PaintCalculatorForm";
+import { TILE_FAQ, TILE_STANDARDS } from "@/features/calculators/tile";
+import { TileCalculatorForm } from "./TileCalculatorForm";
 
-const PAGE_PATH = "/calculators/paint";
-const TITLE = "Paint Calculator — Litres for Interior, Exterior & Room";
+const PAGE_PATH = "/calculators/tile-calculator";
+const TITLE = "Tile Calculator — Floor, Wall, Adhesive & Grout";
 const DESCRIPTION =
-  "Free paint calculator. Enter room dimensions or wall area and get the exact litres of paint you need for interior emulsion, exterior emulsion, enamel, primer, and putty. Handles multiple coats, ceilings, doors, and windows.";
+  "Free tile calculator. Enter floor or wall area, pick a tile size, and get the exact tile count, adhesive quantity, and grout volume. Supports vitrified, ceramic, and traditional mortar-bed installation with wastage.";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
   keywords: [
-    "paint calculator",
-    "paint calculator for room",
-    "paint calculator for house",
-    "wall paint calculator",
-    "interior paint calculator",
-    "exterior paint calculator",
-    "paint litre calculator",
-    "paint quantity calculator",
-    "primer calculator",
-    "putty calculator",
-    "coverage per litre",
-    "interior emulsion calculator",
-    "exterior emulsion calculator",
-    "how much paint do I need",
+    "tile calculator",
+    "floor tile calculator",
+    "wall tile calculator",
+    "how many tiles do I need",
+    "tile calculator square feet",
+    "tile adhesive calculator",
+    "grout calculator",
+    "vitrified tile calculator",
+    "ceramic tile calculator",
+    "bathroom tile calculator",
+    "kitchen tile calculator",
+    "thin-set adhesive calculator",
+    "mortar bed tile calculator India",
+    "tile count calculator",
   ],
   openGraph: {
     type: "website",
     url: `${siteUrl}${PAGE_PATH}`,
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     siteName: siteConfig.shortName,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     images: [siteConfig.ogImage],
   },
@@ -62,7 +55,7 @@ function jsonLd() {
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: PAINT_FAQ.map((item) => ({
+      mainEntity: TILE_FAQ.map((item) => ({
         "@type": "Question",
         name: item.question,
         acceptedAnswer: { "@type": "Answer", text: item.answer },
@@ -71,7 +64,7 @@ function jsonLd() {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      name: "Paint Calculator",
+      name: "Tile Calculator",
       applicationCategory: "UtilitiesApplication",
       operatingSystem: "Any (web)",
       url: `${siteUrl}${PAGE_PATH}`,
@@ -84,13 +77,13 @@ function jsonLd() {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
         { "@type": "ListItem", position: 2, name: "Calculators", item: `${siteUrl}/calculators` },
-        { "@type": "ListItem", position: 3, name: "Paint Calculator", item: `${siteUrl}${PAGE_PATH}` },
+        { "@type": "ListItem", position: 3, name: "Tile Calculator", item: `${siteUrl}${PAGE_PATH}` },
       ],
     },
   ];
 }
 
-export default function PaintCalculatorPage() {
+export default function TileCalculatorPage() {
   return (
     <>
       <script
@@ -105,48 +98,46 @@ export default function PaintCalculatorPage() {
               Calculator
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Paint Calculator — Litres for Interior &amp; Exterior Walls
+              Tile Calculator — Floor, Wall, Adhesive &amp; Grout
             </h1>
             <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
-              Enter a room or a total area, pick your paint products, and
-              we&apos;ll return the litres you need — per layer and in total.
-              Handles primer under emulsion, multiple coats, and per-layer
-              coverage overrides.
+              Enter the surface, the tile size, and pick a preset — we return
+              tile count with wastage plus adhesive and grout. Handles both
+              modern thin-set and traditional 20&nbsp;mm mortar bed.
             </p>
           </header>
 
           <section className="mb-16">
-            <PaintCalculatorForm initialStandards={PAINT_STANDARDS} />
+            <TileCalculatorForm initialStandards={TILE_STANDARDS} />
           </section>
 
-          {/* Formula card */}
           <section className="mb-16 rounded-lg border border-black/10 p-6 dark:border-white/10">
             <h2 className="text-lg font-semibold">How the calculation works</h2>
             <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm text-black/75 dark:text-white/75">
               <li>
-                <strong>Wall area</strong> = 2 × (length + width) × height. If
-                you tick &quot;include ceiling,&quot; length × width is added on
-                top.
+                <strong>Net area</strong> = length × width − sum of excluded
+                rectangles (columns, drains, pipe cutouts).
               </li>
               <li>
-                <strong>Openings</strong> (doors and windows) are subtracted
-                rectangularly to give the net paintable area.
+                <strong>Tile count (before wastage)</strong> = ⌈net area ÷ tile
+                area⌉. Tiles are rounded up — you can&apos;t buy half a tile.
               </li>
               <li>
-                For each layer, <strong>area covered</strong> = net area ×
-                number of coats. Two coats on 60 sqm means painting 120 sqm.
+                <strong>Tile count (final)</strong> = ⌈count × (1 + wastage
+                %)⌉. Default wastage is 10% — bump higher for diagonal or
+                border-heavy layouts.
               </li>
               <li>
-                <strong>Litres before wastage</strong> = area covered ÷
-                coverage per litre (12 sqm/L for interior emulsion by default).
+                <strong>Thin-set adhesive</strong> (kg) = net area ÷ coverage
+                (sqm/kg). Or <strong>mortar bed</strong> (cum) = net area ×
+                thickness, then cement:sand ratio splits it into bags + cft.
               </li>
               <li>
-                <strong>Litres</strong> = litres before wastage × (1 + wastage
-                %). Default wastage is 5–7% depending on the paint type — bump
-                it for rough or absorbent surfaces.
-              </li>
-              <li>
-                Totals across layers give the full paint order for the job.
+                <strong>Grout volume</strong> ≈ total joint length × joint
+                width × joint depth. Joint depth defaults to the tile
+                thickness (override in Customise if you only grout the top of
+                the joint). Weight uses ~1500 kg/cum. Add 15–25% on top when
+                actually buying grout — mixing waste is real.
               </li>
             </ol>
           </section>
@@ -156,7 +147,7 @@ export default function PaintCalculatorPage() {
               Frequently asked questions
             </h2>
             <dl className="space-y-6">
-              {PAINT_FAQ.map((item) => (
+              {TILE_FAQ.map((item) => (
                 <div key={item.question}>
                   <dt className="text-sm font-semibold">{item.question}</dt>
                   <dd className="mt-1 text-sm text-black/70 dark:text-white/70">
@@ -171,7 +162,7 @@ export default function PaintCalculatorPage() {
             <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
               Other calculators
             </h2>
-            <CalculatorGrid filter={(c) => c.slug !== "paint"} />
+            <CalculatorGrid filter={(c) => c.slug !== "tile-calculator"} />
           </section>
         </Container>
       </main>

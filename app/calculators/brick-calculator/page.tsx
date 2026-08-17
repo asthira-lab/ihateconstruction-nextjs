@@ -1,5 +1,5 @@
 /**
- * /calculators/brick — Server Component.
+ * /calculators/brick-calculator — Server Component.
  *
  * Owns page metadata, static content (H1, intro, FAQ, JSON-LD schema), and
  * the initial standards data that seeds the client form. The calculation
@@ -15,13 +15,13 @@ import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
 import { BRICK_FAQ, BRICK_STANDARDS } from "@/features/calculators/brick";
 import { BrickCalculatorForm } from "./BrickCalculatorForm";
 
-const PAGE_PATH = "/calculators/brick";
-const TITLE = "Brick Calculator — Bricks & Mortar for Wall, Patio, Paver, Fire Pit";
+const PAGE_PATH = "/calculators/brick-calculator";
+const TITLE = "Brick Calculator — Wall, Patio, Paver & Fire Pit";
 const DESCRIPTION =
   "Free brick calculator. Work out the exact number of bricks and the mortar (cement + sand) you need for any wall, patio, paver run, fire pit, retaining wall, or house. Supports red brick, fire brick, concrete brick, modular, traditional, and AAC block. Inputs by square feet or wall dimensions.";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
   keywords: [
@@ -51,14 +51,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: `${siteUrl}${PAGE_PATH}`,
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     siteName: siteConfig.shortName,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     images: [siteConfig.ogImage],
   },
@@ -251,7 +251,7 @@ export default function BrickCalculatorPage() {
             <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
               Other calculators
             </h2>
-            <CalculatorGrid filter={(c) => c.slug !== "brick"} />
+            <CalculatorGrid filter={(c) => c.slug !== "brick-calculator"} />
           </section>
         </Container>
       </main>

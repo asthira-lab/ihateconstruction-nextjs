@@ -15,12 +15,12 @@ import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
 import { CALCULATORS, calculatorHref } from "@/features/calculators/registry";
 
 const PAGE_PATH = "/calculators";
-const TITLE = "Free Construction Calculators — Cement, Concrete, Brick, Steel, Paint, Tile";
+const TITLE = "Free Construction Calculators — Cement, Concrete, Brick";
 const DESCRIPTION =
   "Six free construction calculators — cement, concrete, brick, steel, paint, and tile. Enter your job and get an exact material order in cubic yards, cubic feet, or metric units. Bags of cement for a slab, bricks for a wall, steel for reinforcement, litres of paint for a room, tiles for a floor.";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
   keywords: [
@@ -38,14 +38,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: `${siteUrl}${PAGE_PATH}`,
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     siteName: siteConfig.shortName,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     images: [siteConfig.ogImage],
   },

@@ -1,4 +1,4 @@
-// /calculators/cement — server component. Metadata + static SEO copy + form island.
+// /calculators/cement-calculator — server component. Metadata + static SEO copy + form island.
 
 import type { Metadata } from "next";
 import { siteConfig, siteUrl } from "@/app/lib/site";
@@ -9,13 +9,13 @@ import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
 import { CEMENT_FAQ } from "@/features/calculators/cement";
 import { CementCalculatorForm } from "./CementCalculatorForm";
 
-const PAGE_PATH = "/calculators/cement";
-const TITLE = "Cement Calculator — Bags for Slab, Post Hole & Concrete";
+const PAGE_PATH = "/calculators/cement-calculator";
+const TITLE = "Cement Calculator — Slab, Post Hole & Cubic Yards";
 const DESCRIPTION =
   "Free cement calculator. Work out how many bags of cement you need for a concrete slab, post hole, wall, or any volume — in cubic yards, cubic feet, or cubic metres. Supports 94 lb Portland, 50 kg, 40 kg, 60 lb, and 80 lb bags, sand and cement mixes (1:3, 1:4, 1:6), and standard slab mixes (M15, M20, M25).";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
   keywords: [
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: `${siteUrl}${PAGE_PATH}`,
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     siteName: siteConfig.shortName,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${TITLE} — ${siteConfig.shortName}`,
+    title: TITLE,
     description: DESCRIPTION,
     images: [siteConfig.ogImage],
   },
@@ -249,7 +249,7 @@ export default function CementCalculatorPage() {
             <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
               Other calculators
             </h2>
-            <CalculatorGrid filter={(c) => c.slug !== "cement"} />
+            <CalculatorGrid filter={(c) => c.slug !== "cement-calculator"} />
           </section>
         </Container>
       </main>

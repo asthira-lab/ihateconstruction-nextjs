@@ -24,7 +24,7 @@ export function ClosingCTA() {
           </p>
           <div className="mt-8">
             <a
-              href="/calculators/brick"
+              href="/calculators/brick-calculator"
               className="inline-flex h-11 items-center gap-2 rounded bg-black px-6 text-sm font-medium text-white transition-colors hover:bg-black/85 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:bg-white dark:text-black dark:hover:bg-white/85 dark:focus-visible:ring-white dark:focus-visible:ring-offset-black"
             >
               Open brick calculator
