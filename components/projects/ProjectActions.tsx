@@ -9,7 +9,7 @@ import {
   archiveProjectAction,
   deleteProjectAction,
   unarchiveProjectAction,
-} from "@/app/projects/actions";
+} from "@/app/[lang]/projects/actions";
 import type { Project } from "@/features/projects";
 
 export function ProjectActions({ project }: { project: Project }) {

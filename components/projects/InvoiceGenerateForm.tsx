@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
 import { FieldError } from "@/components/ui/FieldError";
-import { generateInvoiceAction } from "@/app/projects/[id]/invoices/actions";
+import { generateInvoiceAction } from "@/app/[lang]/projects/[id]/invoices/actions";
 
 interface Quotation {
   id: string;

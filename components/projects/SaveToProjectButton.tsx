@@ -2,14 +2,15 @@
 
 // Embeddable on each calculator page. Only visible when signed in. Opens a project picker.
 
-import { useEffect, useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useAuth } from "@clerk/nextjs";
 import { Button } from "@/components/ui/Button";
 import {
   listActiveProjectsForPickerAction,
   saveCalculationAction,
-} from "@/app/projects/[id]/calculations/actions";
+} from "@/app/[lang]/projects/[id]/calculations/actions";
 import type { CalculatorSlug } from "@/features/project-calculations";
 
 interface Props {
@@ -37,8 +38,9 @@ export function SaveToProjectButton({ calculator, request, result }: Props) {
 
   const disabled = !request || !result;
 
-  useEffect(() => {
-    if (!open || projects.length) return;
+  function openDialog() {
+    setOpen(true);
+    if (projects.length) return;
     setLoading(true);
     setError(null);
     listActiveProjectsForPickerAction()
@@ -51,7 +53,7 @@ export function SaveToProjectButton({ calculator, request, result }: Props) {
         }
       })
       .finally(() => setLoading(false));
-  }, [open, projects.length]);
+  }
 
   if (!isLoaded || !isSignedIn) return null;
 
@@ -83,7 +85,7 @@ export function SaveToProjectButton({ calculator, request, result }: Props) {
       <Button
         variant="secondary"
         size="sm"
-        onClick={() => setOpen(true)}
+        onClick={openDialog}
         disabled={disabled}
         title={disabled ? "Run the calculator first" : "Save this run to a project"}
       >
@@ -109,9 +111,9 @@ export function SaveToProjectButton({ calculator, request, result }: Props) {
                 ) : projects.length === 0 ? (
                   <p className="text-sm text-black/60 dark:text-white/60">
                     You have no active projects.{" "}
-                    <a href="/projects/new" className="underline">
+                    <Link href="/projects/new" className="underline">
                       Create one
-                    </a>
+                    </Link>
                     .
                   </p>
                 ) : (

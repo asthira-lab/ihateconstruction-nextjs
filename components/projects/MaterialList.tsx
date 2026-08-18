@@ -5,7 +5,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { listMaterialsAction } from "@/app/projects/[id]/materials/actions";
+import { listMaterialsAction } from "@/app/[lang]/projects/[id]/materials/actions";
 import type { ProjectMaterial } from "@/features/project-materials";
 
 interface Props {

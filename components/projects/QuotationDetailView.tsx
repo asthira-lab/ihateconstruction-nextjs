@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import type { Quotation } from "@/features/project-quotations";
-import { deleteQuotationAction, updateStatusAction } from "@/app/projects/[id]/quotations/actions";
+import { deleteQuotationAction, updateStatusAction } from "@/app/[lang]/projects/[id]/quotations/actions";
 
 interface Props {
   quotation: Quotation;

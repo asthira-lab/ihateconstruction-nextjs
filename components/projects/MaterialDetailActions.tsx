@@ -5,7 +5,7 @@
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
-import { deleteMaterialAction } from "@/app/projects/[id]/materials/actions";
+import { deleteMaterialAction } from "@/app/[lang]/projects/[id]/materials/actions";
 
 export function MaterialDetailActions({ materialId, projectId }: { materialId: string; projectId: string }) {
   const router = useRouter();

@@ -4,7 +4,7 @@
 
 import { useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
-import { createMaterialAction } from "@/app/projects/[id]/materials/actions";
+import { createMaterialAction } from "@/app/[lang]/projects/[id]/materials/actions";
 import type { MaterialType } from "@/features/project-materials";
 
 const MATERIAL_TYPES: MaterialType[] = [

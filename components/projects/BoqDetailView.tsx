@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import type { Boq } from "@/features/project-boqs";
-import { deleteBoqAction } from "@/app/projects/[id]/boqs/actions";
+import { deleteBoqAction } from "@/app/[lang]/projects/[id]/boqs/actions";
 import { AddMaterialModal } from "./AddMaterialModal";
 import { BrandSwapDropdown } from "./BrandSwapDropdown";
 

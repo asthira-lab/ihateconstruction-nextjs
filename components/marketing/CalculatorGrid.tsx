@@ -1,14 +1,4 @@
-/**
- * CalculatorGrid — the 5-card grid used by /calculators.
- *
- * Reads from the shared registry (features/calculators/registry.ts) so the
- * homepage teaser, the /calculators index, and any future related-calculators
- * strip all agree on what's live and what's coming.
- *
- * Live calculators render as full <a> Cards. "Coming soon" calculators are
- * plain divs with a pill badge — keyboard-focusable but non-navigable, so
- * a keyboard user can read them but doesn't hit dead links.
- */
+// CalculatorGrid — 5-card grid used by /calculators. Locale-aware links + "Coming soon" label.
 
 import { Card } from "@/components/ui/Card";
 import { Icon } from "@/components/ui/Icon";
@@ -18,9 +8,9 @@ import {
   type CalculatorEntry,
 } from "@/features/calculators/registry";
 
-function LiveCard({ entry }: { entry: CalculatorEntry }) {
+function LiveCard({ entry, locale }: { entry: CalculatorEntry; locale: string }) {
   return (
-    <Card as="a" href={calculatorHref(entry)} interactive className="group">
+    <Card as="a" href={calculatorHref(entry, locale)} interactive className="group">
       <div className="flex items-center justify-between">
         <span
           aria-hidden="true"
@@ -43,13 +33,9 @@ function LiveCard({ entry }: { entry: CalculatorEntry }) {
   );
 }
 
-function ComingCard({ entry }: { entry: CalculatorEntry }) {
+function ComingCard({ entry, comingLabel }: { entry: CalculatorEntry; comingLabel: string }) {
   return (
-    <Card
-      as="div"
-      aria-disabled="true"
-      className="opacity-70"
-    >
+    <Card as="div" aria-disabled="true" className="opacity-70">
       <div className="flex items-center justify-between">
         <span
           aria-hidden="true"
@@ -58,7 +44,7 @@ function ComingCard({ entry }: { entry: CalculatorEntry }) {
           <Icon name="calculator" size={20} decorative />
         </span>
         <span className="rounded-full border border-black/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-widest text-black/60 dark:border-white/15 dark:text-white/60">
-          Coming soon
+          {comingLabel}
         </span>
       </div>
       <h3 className="mt-5 text-lg font-semibold text-black/70 dark:text-white/70">
@@ -72,20 +58,21 @@ function ComingCard({ entry }: { entry: CalculatorEntry }) {
 }
 
 interface CalculatorGridProps {
-  /** Optional filter — e.g. only render live ones on the homepage teaser. */
+  locale: string;
+  comingLabel: string;
   filter?: (entry: CalculatorEntry) => boolean;
 }
 
-export function CalculatorGrid({ filter }: CalculatorGridProps = {}) {
+export function CalculatorGrid({ locale, comingLabel, filter }: CalculatorGridProps) {
   const entries = filter ? CALCULATORS.filter(filter) : CALCULATORS;
   return (
     <ul className="grid gap-4 md:grid-cols-2">
       {entries.map((entry) => (
         <li key={entry.slug}>
           {entry.status === "live" ? (
-            <LiveCard entry={entry} />
+            <LiveCard entry={entry} locale={locale} />
           ) : (
-            <ComingCard entry={entry} />
+            <ComingCard entry={entry} comingLabel={comingLabel} />
           )}
         </li>
       ))}

@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
 import { FieldError } from "@/components/ui/FieldError";
-import { generateBoqAction } from "@/app/projects/[id]/boqs/actions";
+import { generateBoqAction } from "@/app/[lang]/projects/[id]/boqs/actions";
 
 interface CalcOption {
   id: string;
@@ -17,13 +17,11 @@ interface CalcOption {
 
 interface Props {
   projectId: string;
-  currency: string;
-  availableGroups: string[];
   calculations?: CalcOption[];
   materialCount?: number;
 }
 
-export function BoqGenerateForm({ projectId, currency, availableGroups, calculations = [], materialCount = 0 }: Props) {
+export function BoqGenerateForm({ projectId, calculations = [], materialCount = 0 }: Props) {
   const router = useRouter();
   const [name, setName] = useState("");
   const [notes, setNotes] = useState("");

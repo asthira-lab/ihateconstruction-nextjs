@@ -63,6 +63,6 @@ export const CALCULATORS: CalculatorEntry[] = [
   },
 ];
 
-export function calculatorHref(entry: CalculatorEntry): string {
-  return `/calculators/${entry.slug}`;
+export function calculatorHref(entry: CalculatorEntry, locale?: string): string {
+  return locale ? `/${locale}/calculators/${entry.slug}` : `/calculators/${entry.slug}`;
 }

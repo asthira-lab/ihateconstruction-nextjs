@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState, useTransition } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/Button";
-import { listProjectsAction } from "@/app/projects/actions";
+import { listProjectsAction } from "@/app/[lang]/projects/actions";
 import type { Project } from "@/features/projects";
 
 interface Props {

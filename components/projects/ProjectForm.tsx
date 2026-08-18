@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
 import { FieldError } from "@/components/ui/FieldError";
-import { createProjectAction, patchProjectAction } from "@/app/projects/actions";
+import { createProjectAction, patchProjectAction } from "@/app/[lang]/projects/actions";
 import type { Project } from "@/features/projects";
 
 type Mode = "create" | "edit";

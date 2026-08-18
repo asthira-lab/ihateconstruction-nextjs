@@ -5,7 +5,7 @@
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/Button";
-import { patchBoqAction } from "@/app/projects/[id]/boqs/actions";
+import { patchBoqAction } from "@/app/[lang]/projects/[id]/boqs/actions";
 import type { BoqLine } from "@/features/project-boqs";
 
 interface Props {

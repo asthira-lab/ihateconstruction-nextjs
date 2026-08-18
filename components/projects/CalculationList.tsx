@@ -5,7 +5,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { listCalculationsAction } from "@/app/projects/[id]/calculations/actions";
+import { listCalculationsAction } from "@/app/[lang]/projects/[id]/calculations/actions";
 import type { SavedCalculation } from "@/features/project-calculations";
 import { CalculationResult, calculationHeadline } from "./CalculationResult";
 import { MaterialsFromCalculation } from "./MaterialsFromCalculation";

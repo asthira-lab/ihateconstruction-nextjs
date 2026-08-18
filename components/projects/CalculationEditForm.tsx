@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
 import { FieldError } from "@/components/ui/FieldError";
-import { patchCalculationAction } from "@/app/projects/[id]/calculations/actions";
+import { patchCalculationAction } from "@/app/[lang]/projects/[id]/calculations/actions";
 import type { SavedCalculation } from "@/features/project-calculations";
 
 export function CalculationEditForm({ calc }: { calc: SavedCalculation }) {

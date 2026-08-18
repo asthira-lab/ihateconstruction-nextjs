@@ -3,7 +3,7 @@
 // Inline brand picker for BOQ material rows
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";
-import { swapBrandAction } from "@/app/projects/[id]/boqs/actions";
+import { swapBrandAction } from "@/app/[lang]/projects/[id]/boqs/actions";
 
 interface Props {
   boqId: string;

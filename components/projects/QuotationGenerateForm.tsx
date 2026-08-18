@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
 import { FieldError } from "@/components/ui/FieldError";
-import { generateQuotationAction } from "@/app/projects/[id]/quotations/actions";
+import { generateQuotationAction } from "@/app/[lang]/projects/[id]/quotations/actions";
 
 interface BoqOption {
   id: string;

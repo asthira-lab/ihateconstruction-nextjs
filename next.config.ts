@@ -15,9 +15,26 @@ const CALCULATOR_REDIRECTS = [
   permanent: true,
 }));
 
+// Block search-engine indexing on every non-production host (Vercel preview
+// domains, branch deploys, deployment-hash URLs). Production only lives on
+// ihateconstruction.co — anywhere else gets X-Robots-Tag: noindex, nofollow
+// so Google/Bing drop duplicate rankings for the same content.
+const NOINDEX_HEADERS = [
+  {
+    source: "/:path*",
+    has: [{ type: "host" as const, value: "(?<host>.*\\.vercel\\.app)" }],
+    headers: [
+      { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive, nosnippet" },
+    ],
+  },
+];
+
 const nextConfig: NextConfig = {
   async redirects() {
     return CALCULATOR_REDIRECTS;
+  },
+  async headers() {
+    return NOINDEX_HEADERS;
   },
 };
 

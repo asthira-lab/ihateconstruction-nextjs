@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
-import { bulkImportMaterialsAction } from "@/app/projects/[id]/materials/actions";
+import { bulkImportMaterialsAction } from "@/app/[lang]/projects/[id]/materials/actions";
 import type { MaterialSuggestion } from "@/features/project-materials/from-calculation";
 
 interface Props {

@@ -1,34 +1,14 @@
-/**
- * SiteFooter — 3-column footer, shared across all pages.
- *
- * Deliberately renders dead links as muted <span>s instead of <a>s: a link
- * that 404s destroys trust more than a missing link. When each route lands,
- * flip its <span> to <a href="…"> — no other changes needed.
- */
+// Global footer. Dict-driven; footer links are locale-prefixed.
 
 import { Container } from "./Container";
+import { getDictionary } from "@/app/[lang]/dictionaries";
+import { lang as rootLang } from "next/root-params";
+import { isLocale, defaultLocale } from "@/app/i18n-config";
 
 interface FooterLink {
   label: string;
-  href?: string; // absent = not built yet, renders as span
+  href?: string;
 }
-
-const PRODUCT: FooterLink[] = [
-  { label: "Calculators", href: "/calculators" },
-  { label: "Roadmap" },
-  { label: "Projects & BOQ", href: "/projects" },
-  { label: "Quotations", href: "/projects" },
-];
-
-const COMPANY: FooterLink[] = [
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
-
-const LEGAL: FooterLink[] = [
-  { label: "Privacy", href: "/privacy" },
-  { label: "Terms", href: "/terms" },
-];
 
 function FooterList({ title, links }: { title: string; links: FooterLink[] }) {
   return (
@@ -58,30 +38,49 @@ function FooterList({ title, links }: { title: string; links: FooterLink[] }) {
   );
 }
 
-export function SiteFooter() {
+export async function SiteFooter() {
+  const dict = await getDictionary();
+  const t = dict.footer;
+  const raw = await rootLang();
+  const locale = raw && isLocale(raw) ? raw : defaultLocale;
   const year = 2026; // Deterministic — no `new Date()` on server for cache-friendliness.
+
+  const PRODUCT: FooterLink[] = [
+    { label: t.calculators, href: `/${locale}/calculators` },
+    { label: t.roadmap },
+    { label: t.projectsBoq, href: `/${locale}/projects` },
+    { label: t.quotations, href: `/${locale}/projects` },
+  ];
+  const COMPANY: FooterLink[] = [
+    { label: t.about, href: `/${locale}/about` },
+    { label: t.contact, href: `/${locale}/contact` },
+  ];
+  const LEGAL: FooterLink[] = [
+    { label: t.privacy, href: `/${locale}/privacy` },
+    { label: t.terms, href: `/${locale}/terms` },
+  ];
+
   return (
     <footer className="mt-24 border-t border-black/10 py-12 dark:border-white/10">
       <Container>
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
-          {/* Wordmark + tagline occupies the first column */}
           <div className="md:col-span-1">
             <p className="font-mono text-[13px] uppercase tracking-[.14em]">
               ihateconstruction
             </p>
             <p className="mt-3 text-sm text-black/60 dark:text-white/60">
-              Construction calculators and estimating tools for contractors.
+              {t.tagline}
             </p>
           </div>
 
-          <FooterList title="Product" links={PRODUCT} />
-          <FooterList title="Company" links={COMPANY} />
-          <FooterList title="Legal" links={LEGAL} />
+          <FooterList title={t.product} links={PRODUCT} />
+          <FooterList title={t.company} links={COMPANY} />
+          <FooterList title={t.legal} links={LEGAL} />
         </div>
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-2 border-t border-black/5 pt-6 text-xs text-black/50 dark:border-white/5 dark:text-white/50">
-          <p>© {year} ihateconstruction.co</p>
-          <p>Made for Indian construction sites · en-IN</p>
+          <p>{t.copy.replace("{year}", String(year))}</p>
+          <p>{t.made}</p>
         </div>
       </Container>
     </footer>

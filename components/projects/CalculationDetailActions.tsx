@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 import {
   deleteCalculationAction,
   recomputeCalculationAction,
-} from "@/app/projects/[id]/calculations/actions";
+} from "@/app/[lang]/projects/[id]/calculations/actions";
 import type { SavedCalculation } from "@/features/project-calculations";
 
 interface Props {

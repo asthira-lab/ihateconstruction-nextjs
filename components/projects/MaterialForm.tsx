@@ -9,7 +9,7 @@ import { FieldError } from "@/components/ui/FieldError";
 import {
   createMaterialAction,
   patchMaterialAction,
-} from "@/app/projects/[id]/materials/actions";
+} from "@/app/[lang]/projects/[id]/materials/actions";
 import {
   MATERIAL_TYPES,
   MATERIAL_UNITS,

@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { Button } from "@/components/ui/Button";
 import { FieldError } from "@/components/ui/FieldError";
-import { recordPaymentAction, patchInvoiceAction, deleteInvoiceAction } from "@/app/projects/[id]/invoices/actions";
+import { recordPaymentAction, deleteInvoiceAction } from "@/app/[lang]/projects/[id]/invoices/actions";
 import type { Invoice } from "@/features/project-invoices";
 
 interface Props {
