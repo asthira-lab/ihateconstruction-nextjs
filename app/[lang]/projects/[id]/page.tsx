@@ -96,16 +96,6 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   );
 }
 
-function Stat({ label, value, sub }: { label: string; value: number; sub?: string }) {
-  return (
-    <div className="rounded-lg border border-black/10 p-4 dark:border-white/10">
-      <p className="text-xs uppercase tracking-widest text-black/60 dark:text-white/60">{label}</p>
-      <p className="mt-2 text-2xl font-semibold">{value}</p>
-      {sub ? <p className="mt-1 text-xs text-black/40 dark:text-white/40">{sub}</p> : null}
-    </div>
-  );
-}
-
 function StatLink({ label, value, href }: { label: string; value: number; href: string }) {
   return (
     <Link
