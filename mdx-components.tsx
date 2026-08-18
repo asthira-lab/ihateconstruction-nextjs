@@ -1,5 +1,5 @@
 import type { MDXComponents } from "mdx/types";
-import { headingToId } from "@/features/calculators/rebar/slug";
+import { headingToId } from "@/features/calculators/slug";
 
 // Flatten React children (strings, elements, arrays) to plain text.
 function textOf(node: React.ReactNode): string {

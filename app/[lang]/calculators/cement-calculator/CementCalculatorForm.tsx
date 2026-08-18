@@ -11,6 +11,8 @@ import {
   type CementInput,
   type CementOutput,
 } from "@/features/calculators/cement";
+import { BlockGroup } from "@/components/calculators/ui/BlockGroup";
+import { FeedbackBar } from "@/components/calculators/ui/FeedbackBar";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 type Mode = "slab" | "post-hole" | "volume";
@@ -57,9 +59,10 @@ function fmt(n: number, digits = 2): string {
 interface Props {
   t: Dictionary["calculators"]["cement"]["form"];
   common: Dictionary["common"];
+  cCommon: Dictionary["calculators"]["common"];
 }
 
-export function CementCalculatorForm({ t, common }: Props) {
+export function CementCalculatorForm({ t, common, cCommon }: Props) {
   const [state, setState] = useState<FormState>(INITIAL);
 
   const result: CementOutput | null = useMemo(() => {
@@ -108,86 +111,57 @@ export function CementCalculatorForm({ t, common }: Props) {
     m === "slab" ? t.modes.slab : m === "post-hole" ? t.modes.post : t.modes.free;
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
-      <div className="space-y-6 rounded-lg border border-black/10 p-6 dark:border-white/10">
-        <fieldset>
-          <legend className="text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
-            {t.pouring}
-          </legend>
-          <div className="mt-3 grid grid-cols-3 gap-2">
-            {(["slab", "post-hole", "volume"] as Mode[]).map((m) => (
-              <button
-                key={m}
-                type="button"
-                onClick={() => update("mode", m)}
-                className={`rounded border px-3 py-2 text-sm ${
-                  state.mode === m
-                    ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black"
-                    : "border-black/15 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/5"
-                }`}
-              >
-                {modeLabel(m)}
-              </button>
-            ))}
-          </div>
-        </fieldset>
+    <div className="space-y-4">
+      <BlockGroup title={t.pouring}>
+        <div className="grid grid-cols-3 gap-2">
+          {(["slab", "post-hole", "volume"] as Mode[]).map((m) => (
+            <button
+              key={m}
+              type="button"
+              onClick={() => update("mode", m)}
+              className={`rounded border px-3 py-2 text-sm ${
+                state.mode === m
+                  ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black"
+                  : "border-black/15 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/5"
+              }`}
+            >
+              {modeLabel(m)}
+            </button>
+          ))}
+        </div>
+      </BlockGroup>
 
-        {state.mode === "slab" && (
+      {state.mode === "slab" && (
+        <BlockGroup title={t.modes.slab}>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            <NumField
-              label={t.lengthFt}
-              value={state.slabLengthFt}
-              onChange={(v) => update("slabLengthFt", v)}
-            />
-            <NumField
-              label={t.widthFt}
-              value={state.slabWidthFt}
-              onChange={(v) => update("slabWidthFt", v)}
-            />
-            <NumField
-              label={t.thicknessIn}
-              value={state.slabThicknessIn}
-              onChange={(v) => update("slabThicknessIn", v)}
-            />
+            <NumField label={t.lengthFt} value={state.slabLengthFt} onChange={(v) => update("slabLengthFt", v)} />
+            <NumField label={t.widthFt} value={state.slabWidthFt} onChange={(v) => update("slabWidthFt", v)} />
+            <NumField label={t.thicknessIn} value={state.slabThicknessIn} onChange={(v) => update("slabThicknessIn", v)} />
           </div>
-        )}
+        </BlockGroup>
+      )}
 
-        {state.mode === "post-hole" && (
+      {state.mode === "post-hole" && (
+        <BlockGroup title={t.modes.post}>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            <NumField
-              label={t.diameterIn}
-              value={state.postDiameterIn}
-              onChange={(v) => update("postDiameterIn", v)}
-            />
-            <NumField
-              label={t.depthFt}
-              value={state.postDepthFt}
-              onChange={(v) => update("postDepthFt", v)}
-            />
-            <NumField
-              label={t.posts}
-              value={state.postCount}
-              onChange={(v) => update("postCount", v)}
-            />
+            <NumField label={t.diameterIn} value={state.postDiameterIn} onChange={(v) => update("postDiameterIn", v)} />
+            <NumField label={t.depthFt} value={state.postDepthFt} onChange={(v) => update("postDepthFt", v)} />
+            <NumField label={t.posts} value={state.postCount} onChange={(v) => update("postCount", v)} />
           </div>
-        )}
+        </BlockGroup>
+      )}
 
-        {state.mode === "volume" && (
+      {state.mode === "volume" && (
+        <BlockGroup title={t.modes.free}>
           <div className="grid grid-cols-2 gap-3">
-            <NumField
-              label={t.wetVolume}
-              value={state.volumeAmount}
-              onChange={(v) => update("volumeAmount", v)}
-            />
+            <NumField label={t.wetVolume} value={state.volumeAmount} onChange={(v) => update("volumeAmount", v)} />
             <label className="flex flex-col text-sm">
               <span className="mb-1 text-xs font-medium text-black/70 dark:text-white/70">
                 {t.unit}
               </span>
               <select
                 value={state.volumeUnit}
-                onChange={(e) =>
-                  update("volumeUnit", e.target.value as VolumeUnit)
-                }
+                onChange={(e) => update("volumeUnit", e.target.value as VolumeUnit)}
                 className="rounded border border-black/15 bg-transparent px-3 py-2 text-sm dark:border-white/15"
               >
                 <option value="cuyd">{t.units.yd3}</option>
@@ -196,61 +170,54 @@ export function CementCalculatorForm({ t, common }: Props) {
               </select>
             </label>
           </div>
-        )}
+        </BlockGroup>
+      )}
 
-        <label className="flex flex-col text-sm">
-          <span className="mb-1 text-xs font-medium text-black/70 dark:text-white/70">
-            {t.ratio}
-          </span>
-          <select
-            value={state.presetId}
-            onChange={(e) => update("presetId", e.target.value)}
-            className="rounded border border-black/15 bg-transparent px-3 py-2 text-sm dark:border-white/15"
-          >
-            {CEMENT_PRESETS.map((p) => (
-              <option key={p.id} value={p.id}>
-                {p.label}
-              </option>
-            ))}
-          </select>
-          <span className="mt-1 text-xs text-black/60 dark:text-white/60">
-            {findCementPreset(state.presetId)?.description}
-          </span>
-        </label>
-
-        <div className="grid grid-cols-2 gap-3">
+      <BlockGroup title={t.ratio}>
+        <div className="space-y-3">
           <label className="flex flex-col text-sm">
             <span className="mb-1 text-xs font-medium text-black/70 dark:text-white/70">
-              {t.bagSize}
+              {t.ratio}
             </span>
             <select
-              value={state.bagWeight}
-              onChange={(e) => update("bagWeight", e.target.value as BagWeightKg)}
+              value={state.presetId}
+              onChange={(e) => update("presetId", e.target.value)}
               className="rounded border border-black/15 bg-transparent px-3 py-2 text-sm dark:border-white/15"
             >
-              {Object.entries(BAG_WEIGHTS).map(([k, v]) => (
-                <option key={k} value={k}>
-                  {v.label}
+              {CEMENT_PRESETS.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.label}
                 </option>
               ))}
             </select>
+            <span className="mt-1 text-xs text-black/60 dark:text-white/60">
+              {findCementPreset(state.presetId)?.description}
+            </span>
           </label>
-          <NumField
-            label={t.wastage}
-            value={state.wastagePercent}
-            onChange={(v) => update("wastagePercent", v)}
-          />
+
+          <div className="grid grid-cols-2 gap-3">
+            <label className="flex flex-col text-sm">
+              <span className="mb-1 text-xs font-medium text-black/70 dark:text-white/70">
+                {t.bagSize}
+              </span>
+              <select
+                value={state.bagWeight}
+                onChange={(e) => update("bagWeight", e.target.value as BagWeightKg)}
+                className="rounded border border-black/15 bg-transparent px-3 py-2 text-sm dark:border-white/15"
+              >
+                {Object.entries(BAG_WEIGHTS).map(([k, v]) => (
+                  <option key={k} value={k}>
+                    {v.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <NumField label={t.wastage} value={state.wastagePercent} onChange={(v) => update("wastagePercent", v)} />
+          </div>
         </div>
+      </BlockGroup>
 
-        <Button type="button" variant="secondary" onClick={() => setState(INITIAL)}>
-          {common.reset}
-        </Button>
-      </div>
-
-      <aside
-        aria-label={t.resultAria}
-        className="rounded-lg border border-black/10 p-6 dark:border-white/10"
-      >
+      <div aria-live="polite" aria-label={t.resultAria} className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-black">
         <h2 className="text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
           {t.youNeed}
         </h2>
@@ -267,13 +234,9 @@ export function CementCalculatorForm({ t, common }: Props) {
 
             <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
               <dt className="text-black/60 dark:text-white/60">{t.cementKg}</dt>
-              <dd className="text-right font-medium">
-                {fmt(result.cementKg, 1)}
-              </dd>
+              <dd className="text-right font-medium">{fmt(result.cementKg, 1)}</dd>
               <dt className="text-black/60 dark:text-white/60">{t.cementLb}</dt>
-              <dd className="text-right font-medium">
-                {fmt(result.cementLb, 1)}
-              </dd>
+              <dd className="text-right font-medium">{fmt(result.cementLb, 1)}</dd>
               {result.sandKg > 0 && (
                 <>
                   <dt className="text-black/60 dark:text-white/60">{common.sand}</dt>
@@ -286,31 +249,31 @@ export function CementCalculatorForm({ t, common }: Props) {
                 <>
                   <dt className="text-black/60 dark:text-white/60">{common.aggregate}</dt>
                   <dd className="text-right font-medium">
-                    {fmt(result.aggregateKg, 0)} kg /{" "}
-                    {fmt(result.aggregateFt3, 1)} cft
+                    {fmt(result.aggregateKg, 0)} kg / {fmt(result.aggregateFt3, 1)} cft
                   </dd>
                 </>
               )}
             </dl>
 
-            <div className="border-t border-black/10 pt-3 text-xs text-black/60 dark:text-white/60 dark:border-white/10">
+            <div className="border-t border-black/10 pt-3 text-xs text-black/60 dark:border-white/10 dark:text-white/60">
               <p>
-                {t.wetVol} {fmt(result.wetVolumeYd3, 2)} yd³ ·{" "}
-                {fmt(result.wetVolumeM3, 2)} m³ · {fmt(result.wetVolumeFt3, 1)}{" "}
-                ft³
+                {t.wetVol} {fmt(result.wetVolumeYd3, 2)} yd³ · {fmt(result.wetVolumeM3, 2)} m³ · {fmt(result.wetVolumeFt3, 1)} ft³
               </p>
               <p className="mt-1">
-                {t.mixLabel} {result.mixLabel} {t.dry}{" "}
-                {state.wastagePercent}%
+                {t.mixLabel} {result.mixLabel} {t.dry} {state.wastagePercent}%
               </p>
             </div>
           </div>
         ) : (
-          <p className="mt-4 text-sm text-black/60 dark:text-white/60">
-            {t.empty}
-          </p>
+          <p className="mt-4 text-sm text-black/60 dark:text-white/60">{t.empty}</p>
         )}
-      </aside>
+      </div>
+
+      <Button type="button" variant="secondary" onClick={() => setState(INITIAL)}>
+        {common.reset}
+      </Button>
+
+      <FeedbackBar question={cCommon.didWeSolve} yesLabel={common.yes} noLabel={common.no} />
     </div>
   );
 }

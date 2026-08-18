@@ -4,11 +4,9 @@ import Script from "next/script";
 import { ClerkProvider } from "@clerk/nextjs";
 import { notFound } from "next/navigation";
 import { siteConfig, siteUrl } from "../lib/site";
+import { ADSENSE_CLIENT } from "../lib/ads";
 import { isLocale, locales, rtlLocales, type Locale } from "../i18n-config";
 import "../globals.css";
-
-// Google AdSense publisher ID for the loader script.
-const ADSENSE_CLIENT = "ca-pub-9420524527207355";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });

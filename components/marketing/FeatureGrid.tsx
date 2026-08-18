@@ -1,20 +1,25 @@
 // 3 marketing cards. Icons are hardcoded; copy comes from dict.
 
+import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
-type Props = { dict: Dictionary["home"]["features"]; comingLabel: string };
+type Props = {
+  dict: Dictionary["home"]["features"];
+  comingLabel: string;
+  locale: string;
+};
 
 type CardKey = "calculators" | "projects" | "quotations";
-const CARDS: { key: CardKey; icon: IconName; coming?: true }[] = [
+const CARDS: { key: CardKey; icon: IconName; href?: string; coming?: true }[] = [
   { key: "calculators", icon: "calculator" },
   { key: "projects", icon: "layers", coming: true },
   { key: "quotations", icon: "receipt", coming: true },
 ];
 
-export function FeatureGrid({ dict, comingLabel }: Props) {
+export function FeatureGrid({ dict, comingLabel, locale }: Props) {
   return (
     <section className="py-20">
       <Container>
@@ -48,7 +53,18 @@ export function FeatureGrid({ dict, comingLabel }: Props) {
                     </span>
                   ) : null}
                 </div>
-                <h3 className="mt-5 text-lg font-semibold">{card.title}</h3>
+                <h3 className="mt-5 text-lg font-semibold">
+                  {c.key === "calculators" ? (
+                    <Link
+                      href={`/${locale}/calculators`}
+                      className="underline-offset-4 hover:underline"
+                    >
+                      {card.title}
+                    </Link>
+                  ) : (
+                    card.title
+                  )}
+                </h3>
                 <p className="mt-2 text-sm text-black/70 dark:text-white/70">
                   {card.body}
                 </p>

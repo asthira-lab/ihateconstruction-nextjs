@@ -1,0 +1,29 @@
+## Comment le calcul des carreaux fonctionne
+
+1. **Surface nette** = longueur × largeur − somme des rectangles exclus (piliers, évacuations, découpes de tuyaux).
+2. **Nombre de carreaux (avant perte)** = surface nette ÷ surface du carreau, arrondi au supérieur. On n'achète pas un demi-carreau.
+3. **Nombre final** = nombre × (1 + perte %), arrondi à nouveau. Perte par défaut de 10 %.
+4. **Colle en couche mince** (kg) = surface nette ÷ rendement (m²/kg). Ou **lit de mortier** (m³) = surface nette × épaisseur, puis le ratio ciment:sable le divise en sacs + ft³.
+5. **Volume de joint** ≈ longueur totale de joint × largeur × profondeur. La profondeur par défaut = épaisseur du carreau (modifiable si vous ne remplissez que le dessus). Poids ~1500 kg/m³.
+
+## Types de carreaux
+
+- **Grès cérame de sol** — 600×600mm et plus. Colle fine, joint de 3mm. Le carreau de sol le plus courant en Inde.
+- **Céramique murale** — généralement 300×450mm, salles de bain et cuisines. Colle fine, joint de 2mm.
+- **Lit de mortier traditionnel** — 20mm de mortier ciment:sable d'abord, carreaux pressés ensuite. Ancienne méthode, encore courante à l'extérieur.
+
+## Guide des pertes
+
+- **10 %** par défaut — les carreaux perdent plus que le béton ou la brique car les coupes produisent des demi-carreaux inutilisables.
+- Les poses en diagonale et les bordures montent à 12–15 %.
+- Les pièces carrées simples peuvent descendre à 5–7 %.
+
+## Exemple résolu
+
+Une pièce de **5,0 m × 3,6 m** avec un pilier de **0,9 m × 0,9 m**, grès cérame **600×600mm**.
+
+- Surface brute = 5,0 × 3,6 = **18 m²**
+- Surface nette = 18 − (0,9 × 0,9) = **17,19 m²**
+- Surface du carreau = 0,6 × 0,6 = **0,36 m²**
+- Nombre avant perte = ⌈17,19 ÷ 0,36⌉ = **48 carreaux**
+- Nombre final = ⌈48 × 1,10⌉ = **53 carreaux**

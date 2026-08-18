@@ -1,1223 +1,1395 @@
 {
- "common": {
-  "cancel": "Cancelar",
-  "save": "Guardar",
-  "saveChanges": "Guardar cambios",
-  "saving": "Guardando…",
-  "delete": "Eliminar",
-  "deleting": "Eliminando…",
-  "back": "Atrás",
-  "loading": "Cargando…",
-  "loadMore": "Cargar más",
-  "close": "Cerrar",
-  "edit": "Editar",
-  "new": "Nuevo",
-  "add": "Agregar",
-  "remove": "Quitar",
-  "confirm": "Confirmar",
-  "yes": "Sí",
-  "no": "No",
-  "required": "*",
-  "optional": "(opcional)",
-  "openings": "Vanos",
-  "netArea": "Área neta",
-  "wastage": "Desperdicio",
-  "cement": "Cemento",
-  "sand": "Arena",
-  "aggregate": "Agregado",
-  "mortar": "Mortero",
-  "grout": "Lechada",
-  "unit": "Unidad",
-  "length": "Largo",
-  "width": "Ancho",
-  "height": "Alto",
-  "thickness": "Espesor",
-  "volume": "Volumen",
-  "quantity": "Cantidad",
-  "reset": "Restablecer",
-  "calculate": "Calcular",
-  "calculating": "Calculando…",
-  "preset": "Predefinido",
-  "customise": "Personalizar",
-  "fixHighlighted": "Corrige los campos resaltados para continuar.",
-  "noAccount": "Sin cuenta",
-  "notFound": "—",
-  "coming": "Próximamente"
- },
- "header": {
-  "brand": "ihateconstruction",
-  "homeAria": "Inicio de ihateconstruction.co",
-  "calculators": "Calculadoras",
-  "projects": "Proyectos",
-  "signIn": "Iniciar sesión"
- },
- "footer": {
-  "product": "Producto",
-  "company": "Empresa",
-  "legal": "Legal",
-  "calculators": "Calculadoras",
-  "roadmap": "Hoja de ruta",
-  "projectsBoq": "Proyectos y BOQ",
-  "quotations": "Cotizaciones",
-  "about": "Acerca de",
-  "contact": "Contacto",
-  "privacy": "Privacidad",
-  "terms": "Términos",
-  "tagline": "Calculadoras de construcción y herramientas de presupuestación para contratistas.",
-  "copy": "© {year} ihateconstruction.co",
-  "made": "Hecho para obras de construcción indias · en-IN"
- },
- "home": {
-  "hero": {
-   "eyebrow": "Herramientas gratuitas para contratistas indios",
-   "title": "Presupuestos y calculadoras hechas para la forma en que los contratistas realmente trabajan.",
-   "subtitle": "Calculadoras gratuitas y con unidades integradas que convierten las dimensiones de una pared en pedidos de materiales: ladrillos, cemento, arena, azulejos, pintura, acero. Proyectos, BOQ y cotizaciones listas para GST vienen a continuación.",
-   "ctaPrimary": "Abrir calculadoras",
-   "ctaSecondary": "Prueba la calculadora de ladrillos",
-   "note": "No se requiere cuenta · Métrico e imperial · Funciona en el móvil"
-  },
-  "features": {
-   "eyebrow": "Qué incluye",
-   "title": "Una plataforma. Del presupuesto a la factura.",
-   "subtitle": "Empieza con las calculadoras hoy. Guarda los resultados en proyectos, genera BOQ y cotizaciones, y envía facturas listas para GST, todo bajo un mismo techo.",
-   "cards": {
-    "calculators": {
-     "title": "Calculadoras",
-     "body": "Cinco calculadoras probadas en obra para concreto, ladrillo, pintura, azulejo y acero. Ingresa tu trabajo y obtén las cantidades exactas de material."
-    },
-    "projects": {
-     "title": "Proyectos y BOQ",
-     "body": "Guarda cada cálculo en un proyecto. Arma automáticamente una lista de cantidades con totales acumulados."
-    },
-    "quotations": {
-     "title": "Cotizaciones y facturas",
-     "body": "PDFs profesionales con tu logo, datos del cliente, desglose de GST y datos bancarios indios."
-    }
-   }
-  },
-  "howItWorks": {
-   "eyebrow": "Cómo funciona",
-   "title": "Tres pasos, sin hoja de cálculo.",
-   "steps": {
-    "pick": {
-     "title": "Elige una calculadora",
-     "body": "Elige entre concreto, ladrillo, pintura, azulejo o acero. Cada una viene con los preajustes que realmente usas en obra."
-    },
-    "enter": {
-     "title": "Ingresa tu trabajo",
-     "body": "Dimensiones de la pared, proporciones de mezcla, desperdicio: deslizadores para la forma que quieres, entrada directa para el número exacto."
-    },
-    "order": {
-     "title": "Obtén tu lista de pedido",
-     "body": "Ladrillos en piezas, cemento en bolsas de 50 kg, arena en pies cúbicos. Listo para entregar a tu proveedor."
-    }
-   }
-  },
-  "indian": {
-   "eyebrow": "Hecho para obras indias",
-   "title": "En unidades indias, para cómo compran los contratistas indios.",
-   "body1": "Cada calculadora trae los preajustes que usas en obra: ladrillo modular IS 1077, ladrillo tradicional de 230×110×75 mm, bloques AAC. Las cantidades salen en las unidades en las que vas a pedir, así que lo que dice la calculadora es lo que le dices al proveedor.",
-   "body2": "Sin tablas de conversión. Sin \"más o menos\". Sin terminología importada de EE. UU. que no coincide con cómo se ejecuta realmente el trabajo.",
-   "bullets": [
-    "Preajustes de ladrillos modulares, tradicionales y bloques AAC",
-    "Cemento en bolsas de 50 kg, arena en pies cúbicos",
-    "Entrada en métrico o imperial, por campo",
-    "Porcentajes de desperdicio que los contratistas realmente usan",
-    "Salidas listas para GST (próximamente con cotizaciones)",
-    "Ladrillo modular IS 1077 como opción predeterminada de primer nivel"
-   ]
-  },
-  "closing": {
-   "title": "Empieza con la calculadora de ladrillos.",
-   "body": "No se necesita cuenta. Ingresa las dimensiones de tu pared y obtén un pedido de material exacto: ladrillos, bolsas de cemento, arena, en menos de un minuto.",
-   "cta": "Abrir calculadora de ladrillos"
-  }
- },
- "breadcrumbs": {
-  "home": "Inicio",
-  "calculators": "Calculadoras",
-  "about": "Acerca de",
-  "contact": "Contacto",
-  "privacy": "Política de privacidad",
-  "terms": "Términos del servicio"
- },
- "about": {
-  "meta": {
-   "title": "Acerca de — Calculadoras de construcción gratuitas y software para contratistas",
-   "description": "Acerca de iHateConstruction — calculadoras de construcción gratuitas para cemento, concreto, ladrillo, acero, pintura y azulejo, además de BOQ, cotizaciones y facturación con GST hechas para contratistas indios."
-  },
-  "title": "Acerca de iHateConstruction",
-  "problem": {
-   "heading": "El problema",
-   "body": "La construcción en India es una industria de ₹13 lakh crore, y la mayoría de los contratistas todavía calcula costos en papel, envía cotizaciones por capturas de pantalla en WhatsApp y lleva los pagos en un cuaderno. Las herramientas que existen o están hechas para contratistas generales estadounidenses (Procore, Buildertrend) o son demasiado complejas para un equipo de 5 personas que hace obra residencial.",
-   "intro": "Hemos visto a los contratistas batallar con:",
-   "items": [
-    "Adivinar las cantidades de material → pedir de más un 15-20% (₹ directo al desagüe)",
-    "Cotizar de memoria → olvidar renglones, cobrar de menos, conversaciones incómodas después",
-    "Llevar los pagos en papel → \"¿pagó la segunda cuota o no?\"",
-    "Compartir documentos → reenvíos por WhatsApp de PDFs borrosos hechos en MS Paint"
-   ]
-  },
-  "solution": {
-   "heading": "La solución",
-   "body": "iHateConstruction le da a los contratistas indios un solo lugar para presupuestar, cotizar, facturar y cobrar, sin el exceso empresarial ni el precio de $300 al mes.",
-   "cards": {
-    "calculators": {
-     "title": "Calculadoras",
-     "body": "Concreto, acero, ladrillo, pintura, azulejo, con los estándares indios (códigos IS) incorporados."
-    },
-    "boq": {
-     "title": "BOQ y cotizaciones",
-     "body": "Genera listas profesionales de cantidades (BOQ) y cotizaciones para el cliente en segundos."
-    },
-    "invoices": {
-     "title": "Facturas y pagos",
-     "body": "Lleva registro de quién debe qué. Comparte un QR de UPI para cobro instantáneo. Registra pagos con OCR de capturas de pantalla."
-    },
-    "pdf": {
-     "title": "Exportación a PDF",
-     "body": "Documentos profesionales en A4 que tus clientes sí respetan, no reenvíos de WhatsApp."
-    }
-   }
-  },
-  "audience": {
-   "heading": "Para quién es",
-   "items": [
-    {
-     "bold": "Contratistas independientes",
-     "rest": " que hacen proyectos residenciales y pequeños comerciales."
-    },
-    {
-     "bold": "Pequeñas empresas de construcción",
-     "rest": " (2-15 personas) que necesitan estructura sin sobrecarga."
-    },
-    {
-     "bold": "Ingenieros civiles",
-     "rest": " que presupuestan por su cuenta y quieren cálculos precisos y repetibles."
-    },
-    {
-     "bold": "Diseñadores de interiores",
-     "rest": " que necesitan estimar materiales para proyectos de acondicionamiento."
-    }
-   ]
-  },
-  "india": {
-   "heading": "India primero",
-   "intro": "Cada decisión que tomamos empieza con el contratista indio:",
-   "items": [
-    "Los cálculos usan códigos IS y prácticas estándar indias (no ASTM ni Eurocode).",
-    "Las unidades de material coinciden con lo que compras en el godown local: bolsas, CFT, pies corridos.",
-    "La moneda es INR. Las tasas de GST vienen integradas. La región fiscal importa.",
-    "Pago con QR de UPI, porque así paga India en 2026.",
-    "Funciona en un teléfono de ₹10,000 con 4G. Sin flujos que solo funcionan en escritorio."
-   ]
-  },
-  "contact": {
-   "heading": "Contacto",
-   "body1": "¿Tienes comentarios, encontraste un error o quieres asociarte? Escríbenos a",
-   "email": "huzaif89@hotmail.com",
-   "body2": "o usa el",
-   "link": "formulario de contacto"
-  }
- },
- "privacy": {
-  "meta": {
-   "title": "Política de privacidad — Cómo manejamos tus datos",
-   "description": "Política de privacidad de iHateConstruction. Conoce qué datos personales recopilamos, cómo los usamos, dónde se almacenan y tus derechos sobre tu cuenta, proyectos, cálculos y datos de negocio."
-  },
-  "title": "Política de privacidad",
-  "updated": "Última actualización: 5 de agosto de 2026",
-  "s1": {
-   "heading": "1. Información que recopilamos",
-   "intro": "Cuando usas iHateConstruction, recopilamos:",
-   "items": [
-    {
-     "bold": "Información de la cuenta:",
-     "rest": " nombre, dirección de correo electrónico y credenciales de autenticación (gestionadas mediante Clerk)."
-    },
-    {
-     "bold": "Datos de proyecto:",
-     "rest": " proyectos, cálculos, materiales, BOQ, cotizaciones y facturas que creas."
-    },
-    {
-     "bold": "Datos de uso:",
-     "rest": " páginas visitadas, funciones usadas, tipo de navegador, información del dispositivo y dirección IP."
-    },
-    {
-     "bold": "Información de pago:",
-     "rest": " IDs de UPI y códigos QR que subes voluntariamente. No procesamos ni almacenamos números de tarjeta de crédito."
-    }
-   ]
-  },
-  "s2": {
-   "heading": "2. Cómo usamos tus datos",
-   "items": [
-    "Proporcionar, mantener y mejorar el servicio.",
-    "Generar documentos (BOQ, cotizaciones, facturas, PDFs) según los solicites.",
-    "Enviar correos transaccionales (verificación de cuenta, restablecimiento de contraseña).",
-    "Analizar patrones de uso para mejorar funciones (de forma agregada, nunca vendidos)."
-   ]
-  },
-  "s3": {
-   "heading": "3. Almacenamiento y seguridad de los datos",
-   "body": "Tus datos se almacenan en bases de datos cifradas alojadas en infraestructura de nube segura. Usamos TLS para todos los datos en tránsito. La autenticación es gestionada por Clerk, un proveedor con cumplimiento SOC 2 Type II."
-  },
-  "s4": {
-   "heading": "4. Uso compartido de datos",
-   "intro": "No vendemos tus datos. Solo los compartimos con:",
-   "items": [
-    {
-     "bold": "Proveedores de servicio:",
-     "rest": " hosting (Vercel), autenticación (Clerk), base de datos (PostgreSQL gestionado), solo lo necesario para operar."
-    },
-    {
-     "bold": "Tus clientes:",
-     "rest": " cuando generas un enlace público de cotización, los detalles de la cotización son visibles para cualquiera con el enlace."
-    },
-    {
-     "bold": "Requisitos legales:",
-     "rest": " si lo exige la ley india o una orden judicial válida."
-    }
-   ]
-  },
-  "s5": {
-   "heading": "5. Tus derechos",
-   "items": [
-    {
-     "bold": "Acceso:",
-     "rest": " ver todos los datos asociados a tu cuenta."
-    },
-    {
-     "bold": "Exportación:",
-     "rest": " descargar tus proyectos, cálculos y documentos."
-    },
-    {
-     "bold": "Eliminación:",
-     "rest": " solicitar la eliminación completa de tu cuenta y todos los datos asociados."
-    },
-    {
-     "bold": "Corrección:",
-     "rest": " actualizar información inexacta en cualquier momento."
-    }
-   ]
-  },
-  "s6": {
-   "heading": "6. Cookies",
-   "body": "Usamos cookies esenciales para autenticación y gestión de sesión. Sin cookies publicitarias. Sin píxeles de seguimiento de terceros."
-  },
-  "s7": {
-   "heading": "7. Retención de datos",
-   "body": "Tus datos se conservan mientras tu cuenta esté activa. Las cuentas eliminadas se purgan dentro de 30 días. Los registros de auditoría se conservan durante 1 año por motivos de seguridad."
-  },
-  "s8": {
-   "heading": "8. Menores",
-   "body": "iHateConstruction no está destinado a usuarios menores de 18 años. No recopilamos datos de menores de forma consciente."
-  },
-  "s9": {
-   "heading": "9. Cambios",
-   "body": "Podemos actualizar esta política. Los cambios importantes se notificarán por correo electrónico o mediante aviso en la app al menos 14 días antes de entrar en vigor."
-  },
-  "s10": {
-   "heading": "10. Contacto",
-   "body": "Para consultas relacionadas con privacidad:",
-   "email": "huzaif89@hotmail.com"
-  }
- },
- "terms": {
-  "meta": {
-   "title": "Términos del servicio — Reglas para usar iHateConstruction",
-   "description": "Términos del servicio de iHateConstruction. Las reglas para usar nuestras calculadoras de construcción gratuitas, la gestión de proyectos, el generador de BOQ, las herramientas de cotización y factura, y las funciones de cobro de pagos."
-  },
-  "title": "Términos del servicio",
-  "updated": "Última actualización: 5 de agosto de 2026",
-  "s1": {
-   "heading": "1. Aceptación",
-   "body": "Al acceder o usar iHateConstruction (\"el Servicio\"), aceptas quedar sujeto a estos Términos. Si no estás de acuerdo, no uses el Servicio."
-  },
-  "s2": {
-   "heading": "2. Descripción del servicio",
-   "intro": "iHateConstruction es una plataforma de gestión de construcción y presupuestación que proporciona:",
-   "items": [
-    "Calculadoras de materiales de construcción (concreto, acero, ladrillo, pintura, azulejo).",
-    "Gestión de proyectos con cálculos guardados y precios de materiales.",
-    "Generación de listas de cantidades (BOQ).",
-    "Creación de cotizaciones y facturas con exportación a PDF.",
-    "Herramientas de cobro de pagos (QR de UPI, enlaces de pago)."
-   ]
-  },
-  "s3": {
-   "heading": "3. Cuentas de usuario",
-   "items": [
-    "Debes proporcionar información exacta al crear una cuenta.",
-    "Eres responsable de toda la actividad bajo tu cuenta.",
-    "No debes compartir tus credenciales ni permitir que otros accedan a tu cuenta.",
-    "Podemos suspender o cerrar cuentas que infrinjan estos Términos."
-   ]
-  },
-  "s4": {
-   "heading": "4. Tus datos",
-   "items": [
-    "Conservas la propiedad de todo el contenido que creas (proyectos, cálculos, documentos).",
-    "Nos otorgas una licencia limitada para almacenar, procesar y mostrar tus datos únicamente para prestar el Servicio.",
-    "No reclamamos la propiedad de tus datos de negocio."
-   ]
-  },
-  "s5": {
-   "heading": "5. Uso aceptable",
-   "intro": "Aceptas no:",
-   "items": [
-    "Usar el Servicio para fines ilegales.",
-    "Subir contenido malicioso o intentar vulnerar la seguridad.",
-    "Extraer, rastrear o descargar en bloque datos del Servicio.",
-    "Suplantar a otra persona o entidad.",
-    "Usar las calculadoras para decisiones de ingeniería críticas de seguridad sin verificación profesional independiente."
-   ]
-  },
-  "s6": {
-   "heading": "6. Aviso sobre las calculadoras",
-   "boldLabel": "Importante:",
-   "body": " Las calculadoras entregan estimaciones basadas en fórmulas estándar y normas regionales. Son herramientas de estimación, no sustitutos de la ingeniería estructural profesional. Verifica siempre las cantidades con un ingeniero calificado antes de comprar o construir."
-  },
-  "s7": {
-   "heading": "7. Funciones de pago",
-   "items": [
-    "Las funciones de cobro (QR de UPI, enlaces de pago) facilitan la comunicación entre tú y tus clientes.",
-    "No somos un procesador de pagos. El dinero fluye directamente entre tú y tu cliente.",
-    "No somos responsables de disputas de pago, transacciones fallidas ni montos incorrectos.",
-    "Cuando integramos pasarelas de pago (Razorpay), sus términos también aplican."
-   ]
-  },
-  "s8": {
-   "heading": "8. Disponibilidad",
-   "body": "Buscamos alta disponibilidad, pero no garantizamos servicio ininterrumpido. El mantenimiento programado se anunciará con anticipación. No somos responsables de pérdidas por tiempo de inactividad."
-  },
-  "s9": {
-   "heading": "9. Limitación de responsabilidad",
-   "intro": "En la máxima medida permitida por la ley india:",
-   "items": [
-    "El Servicio se proporciona \"tal cual\" sin garantías de ningún tipo.",
-    "No somos responsables por daños indirectos, incidentales o consecuentes.",
-    "Nuestra responsabilidad total se limita al monto que nos hayas pagado en los 12 meses anteriores al reclamo (o ₹5,000, lo que sea mayor)."
-   ]
-  },
-  "s10": {
-   "heading": "10. Propiedad intelectual",
-   "items": [
-    "El Servicio, su diseño, código y marca son nuestra propiedad intelectual.",
-    "No puedes copiar, modificar ni redistribuir ninguna parte del Servicio.",
-    "El nombre \"iHateConstruction\" y las marcas asociadas son nuestras marcas comerciales."
-   ]
-  },
-  "s11": {
-   "heading": "11. Terminación",
-   "items": [
-    "Puedes eliminar tu cuenta en cualquier momento.",
-    "Podemos terminar tu acceso por infracciones a los Términos con aviso.",
-    "Al terminarse, tienes 30 días para exportar tus datos antes de que se eliminen."
-   ]
-  },
-  "s12": {
-   "heading": "12. Ley aplicable",
-   "body": "Estos Términos se rigen por las leyes de la India. Las disputas estarán sujetas a la jurisdicción exclusiva de los tribunales de Bengaluru, Karnataka."
-  },
-  "s13": {
-   "heading": "13. Cambios",
-   "body": "Podemos modificar estos Términos. Los cambios importantes se comunicarán con 14 días de anticipación. El uso continuado tras los cambios constituye aceptación."
-  },
-  "s14": {
-   "heading": "14. Contacto",
-   "body": "Preguntas sobre estos Términos:",
-   "email": "legal@ihateconstruction.co"
-  }
- },
- "contact": {
-  "meta": {
-   "title": "Contacto — Habla con el equipo de iHateConstruction",
-   "description": "Contacta a iHateConstruction sobre errores, funciones, solicitudes de calculadoras, asociaciones o preguntas generales. Uno de nosotros lee cada mensaje y suele responder en un plazo de dos días hábiles."
-  },
-  "eyebrow": "Empresa",
-  "title": "Contáctanos",
-  "subtitle": "Escríbenos sobre un error, una calculadora que quieras que construyamos, una asociación o cualquier otra cosa. Uno de nosotros lee cada mensaje y suele responder en un plazo de dos días hábiles.",
-  "form": {
-   "name": "Nombre",
-   "email": "Correo electrónico",
-   "subject": "Asunto",
-   "message": "Mensaje",
-   "website": "Sitio web",
-   "send": "Enviar",
-   "sending": "Enviando…",
-   "successTitle": "Mensaje enviado",
-   "successBody": "Gracias, ya lo recibimos.",
-   "successNote": "Uno de nosotros leerá tu nota y responderá al correo que nos diste, usualmente en un plazo de dos días hábiles.",
-   "sendAnother": "Enviar otro",
-   "subjects": {
-    "general": "Pregunta general",
-    "bug": "Reporte de error",
-    "feature": "Solicitud de función",
-    "partnership": "Asociación"
-   },
-   "errors": {
-    "nameRequired": "Ingresa tu nombre.",
-    "nameShort": "El nombre debe tener al menos 2 caracteres.",
-    "nameLong": "El nombre debe tener 80 caracteres o menos.",
-    "emailRequired": "Ingresa tu correo electrónico.",
-    "emailInvalid": "Eso no parece un correo electrónico válido.",
-    "messageRequired": "Ingresa un mensaje.",
-    "messageShort": "El mensaje debe tener al menos 10 caracteres.",
-    "messageLong": "El mensaje debe tener {max} caracteres o menos.",
-    "fixHighlighted": "Corrige los campos resaltados para continuar."
-   }
-  }
- },
- "calculators": {
-  "index": {
-   "meta": {
-    "title": "Calculadoras de construcción gratuitas — Cemento, concreto, ladrillo y rebar",
-    "description": "Siete calculadoras de construcción gratuitas: cemento, concreto, ladrillo, acero, rebar, pintura y azulejo. Ingresa tu trabajo y obtén un pedido exacto de material en yardas cúbicas, pies cúbicos o unidades métricas. Bolsas de cemento para una losa, ladrillos para una pared, acero para refuerzo, litros de pintura para una habitación, azulejos para un piso."
-   },
-   "eyebrow": "Herramientas",
-   "title": "Calculadoras de construcción gratuitas",
-   "subtitle": "Siete calculadoras para los pedidos de material que realmente haces: cemento, concreto, ladrillo, acero, rebar, pintura y azulejo. Ingresa tus dimensiones y obtén bolsas, ladrillos, kilogramos o litros. Funciona en yardas cúbicas, pies cúbicos y metros cúbicos.",
-   "missing": "¿Te falta una calculadora que usas a diario?",
-   "contactSoon": "Formulario de contacto próximamente."
-  },
   "common": {
-   "eyebrow": "Calculadora",
-   "faq": "Preguntas frecuentes",
-   "other": "Otras calculadoras",
-   "how": "Cómo funciona el cálculo",
-   "customParams": "Parámetros personalizados",
-   "fillForm": "Rellena el formulario y presiona Calcular para ver tu lista de materiales.",
-   "fillFormSteel": "Rellena el formulario y presiona Calcular para ver el peso del acero.",
-   "fillFormPaint": "Rellena el formulario y presiona Calcular para ver tu cotización de pintura.",
-   "fillFormTile": "Rellena el formulario y presiona Calcular para ver tu cotización de azulejos.",
-   "shareResult": "Compartir resultado",
-   "reload": "Recargar",
-   "clearAll": "Borrar todos los cambios",
-   "didWeSolve": "¿Resolvimos tu problema hoy?"
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saveChanges": "Guardar cambios",
+    "saving": "Guardando…",
+    "delete": "Eliminar",
+    "deleting": "Eliminando…",
+    "back": "Atrás",
+    "loading": "Cargando…",
+    "loadMore": "Cargar más",
+    "close": "Cerrar",
+    "edit": "Editar",
+    "new": "Nuevo",
+    "add": "Agregar",
+    "remove": "Quitar",
+    "confirm": "Confirmar",
+    "yes": "Sí",
+    "no": "No",
+    "required": "*",
+    "optional": "(opcional)",
+    "openings": "Vanos",
+    "netArea": "Área neta",
+    "wastage": "Desperdicio",
+    "cement": "Cemento",
+    "sand": "Arena",
+    "aggregate": "Agregado",
+    "mortar": "Mortero",
+    "grout": "Lechada",
+    "unit": "Unidad",
+    "length": "Largo",
+    "width": "Ancho",
+    "height": "Alto",
+    "thickness": "Espesor",
+    "volume": "Volumen",
+    "quantity": "Cantidad",
+    "reset": "Restablecer",
+    "calculate": "Calcular",
+    "calculating": "Calculando…",
+    "preset": "Predefinido",
+    "customise": "Personalizar",
+    "fixHighlighted": "Corrige los campos resaltados para continuar.",
+    "noAccount": "Sin cuenta",
+    "notFound": "—",
+    "coming": "Próximamente"
   },
-  "cement": {
-   "meta": {
-    "title": "Calculadora de cemento — Losa, hoyo de poste y yardas cúbicas",
-    "description": "Calculadora de cemento gratuita. Calcula cuántas bolsas de cemento necesitas para una losa de concreto, un hoyo de poste, una pared o cualquier volumen, en yardas cúbicas, pies cúbicos o metros cúbicos. Admite bolsas de 94 lb Portland, 50 kg, 40 kg, 60 lb y 80 lb, mezclas de arena y cemento (1:3, 1:4, 1:6) y mezclas estándar de losa (M15, M20, M25)."
-   },
-   "crumb": "Calculadora de cemento",
-   "title": "Calculadora de cemento",
-   "subtitle": "Calcula exactamente cuántas bolsas de cemento necesitas: para una losa de concreto, un juego de hoyos de poste o cualquier volumen húmedo en yardas cúbicas, pies cúbicos o metros cúbicos. Admite bolsas de cemento Portland de 94 lb, bolsas indias de 50 kg, 40 kg, 60 lb y 80 lb, además de mezclas de arena y cemento (1:3, 1:4, 1:6) y mezclas estándar de concreto (M15, M20, M25).",
-   "handles": "Qué maneja esta calculadora de cemento",
-   "cards": {
-    "slab": {
-     "title": "Cemento para una losa",
-     "body": "Ingresa largo, ancho y espesor en pies y pulgadas. La calculadora devuelve bolsas de cemento para mezcla M15, M20 o M25: los tres grados usados para entradas de auto, pisos de garaje y losas de casa."
+  "header": {
+    "brand": "ihateconstruction",
+    "homeAria": "Inicio de ihateconstruction.co",
+    "calculators": "Calculadoras",
+    "projects": "Proyectos",
+    "signIn": "Iniciar sesión"
+  },
+  "footer": {
+    "product": "Producto",
+    "company": "Empresa",
+    "legal": "Legal",
+    "calculators": "Calculadoras",
+    "roadmap": "Hoja de ruta",
+    "projectsBoq": "Proyectos y BOQ",
+    "quotations": "Cotizaciones",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "tagline": "Calculadoras de construcción y herramientas de presupuestación para contratistas.",
+    "copy": "© {year} ihateconstruction.co",
+    "made": "Hecho para obras de construcción indias · en-IN"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Herramientas gratuitas para contratistas indios",
+      "title": "Presupuestos y calculadoras hechas para la forma en que los contratistas realmente trabajan.",
+      "subtitle": "Calculadoras gratuitas y con unidades integradas que convierten las dimensiones de una pared en pedidos de materiales: ladrillos, cemento, arena, azulejos, pintura, acero. Proyectos, BOQ y cotizaciones listas para GST vienen a continuación.",
+      "ctaPrimary": "Abrir calculadoras",
+      "ctaSecondary": "Prueba la calculadora de ladrillos",
+      "note": "No se requiere cuenta · Métrico e imperial · Funciona en el móvil"
     },
-    "post": {
-     "title": "Cemento para hoyo de poste",
-     "body": "Postes de cerca, buzones, postes de señales. Ingresa el diámetro del hoyo, la profundidad y cuántos postes vas a colocar; la herramienta dimensiona un relleno de arena y cemento 1:3 para toda la corrida."
+    "features": {
+      "eyebrow": "Qué incluye",
+      "title": "Una plataforma. Del presupuesto a la factura.",
+      "subtitle": "Empieza con las calculadoras hoy. Guarda los resultados en proyectos, genera BOQ y cotizaciones, y envía facturas listas para GST, todo bajo un mismo techo.",
+      "cards": {
+        "calculators": {
+          "title": "Calculadoras",
+          "body": "Cinco calculadoras probadas en obra para concreto, ladrillo, pintura, azulejo y acero. Ingresa tu trabajo y obtén las cantidades exactas de material."
+        },
+        "projects": {
+          "title": "Proyectos y BOQ",
+          "body": "Guarda cada cálculo en un proyecto. Arma automáticamente una lista de cantidades con totales acumulados."
+        },
+        "quotations": {
+          "title": "Cotizaciones y facturas",
+          "body": "PDFs profesionales con tu logo, datos del cliente, desglose de GST y datos bancarios indios."
+        }
+      }
     },
-    "cuyd": {
-     "title": "Yardas cúbicas de cemento",
-     "body": "¿Ya conoces tu volumen en yardas cúbicas? Cambia al modo Volumen libre. También se admiten metros cúbicos y pies cúbicos: la calculadora convierte entre los tres."
-    },
-    "sc": {
-     "title": "Arena y cemento",
-     "body": "Elige el preajuste de enlucido 1:4, de mampostería 1:6 o de mortero rico 1:3 cuando solo mezcles cemento con arena, sin agregado. El resultado muestra tanto bolsas de cemento como pies cúbicos de arena."
-    },
-    "portland": {
-     "title": "Bolsas de cemento Portland de 94 lb",
-     "body": "Contratistas en EE. UU. que compran cemento Portland Type I/II en bolsas de 94 lb: elige ese tamaño de bolsa y el total se redondea automáticamente a bolsas enteras."
+    "howItWorks": {
+      "eyebrow": "Cómo funciona",
+      "title": "Tres pasos, sin hoja de cálculo.",
+      "steps": {
+        "pick": {
+          "title": "Elige una calculadora",
+          "body": "Elige entre concreto, ladrillo, pintura, azulejo o acero. Cada una viene con los preajustes que realmente usas en obra."
+        },
+        "enter": {
+          "title": "Ingresa tu trabajo",
+          "body": "Dimensiones de la pared, proporciones de mezcla, desperdicio: deslizadores para la forma que quieres, entrada directa para el número exacto."
+        },
+        "order": {
+          "title": "Obtén tu lista de pedido",
+          "body": "Ladrillos en piezas, cemento en bolsas de 50 kg, arena en pies cúbicos. Listo para entregar a tu proveedor."
+        }
+      }
     },
     "indian": {
-     "title": "Bolsas indias de 50 kg",
-     "body": "Para contratistas en India: bolsas de OPC / PPC de 50 kg, proporciones de mezcla IS 456 y resultados en pies cúbicos, las unidades en las que realmente cotiza tu godown."
+      "eyebrow": "Hecho para obras indias",
+      "title": "En unidades indias, para cómo compran los contratistas indios.",
+      "body1": "Cada calculadora trae los preajustes que usas en obra: ladrillo modular IS 1077, ladrillo tradicional de 230×110×75 mm, bloques AAC. Las cantidades salen en las unidades en las que vas a pedir, así que lo que dice la calculadora es lo que le dices al proveedor.",
+      "body2": "Sin tablas de conversión. Sin \"más o menos\". Sin terminología importada de EE. UU. que no coincide con cómo se ejecuta realmente el trabajo.",
+      "bullets": [
+        "Preajustes de ladrillos modulares, tradicionales y bloques AAC",
+        "Cemento en bolsas de 50 kg, arena en pies cúbicos",
+        "Entrada en métrico o imperial, por campo",
+        "Porcentajes de desperdicio que los contratistas realmente usan",
+        "Salidas listas para GST (próximamente con cotizaciones)",
+        "Ladrillo modular IS 1077 como opción predeterminada de primer nivel"
+      ]
+    },
+    "closing": {
+      "title": "Empieza con la calculadora de ladrillos.",
+      "body": "No se necesita cuenta. Ingresa las dimensiones de tu pared y obtén un pedido de material exacto: ladrillos, bolsas de cemento, arena, en menos de un minuto.",
+      "cta": "Abrir calculadora de ladrillos"
     }
-   },
-   "form": {
-    "pouring": "¿Qué vas a vaciar?",
-    "modes": {
-     "slab": "Losa de concreto",
-     "post": "Hoyo de poste",
-     "free": "Volumen libre"
-    },
-    "lengthFt": "Largo (ft)",
-    "widthFt": "Ancho (ft)",
-    "thicknessIn": "Espesor (in)",
-    "diameterIn": "Diámetro del hoyo (in)",
-    "depthFt": "Profundidad (ft)",
-    "posts": "Número de postes",
-    "wetVolume": "Volumen húmedo",
-    "unit": "Unidad",
-    "units": {
-     "yd3": "Yardas cúbicas",
-     "m3": "Metros cúbicos",
-     "ft3": "Pies cúbicos"
-    },
-    "ratio": "Proporción de mezcla",
-    "bagSize": "Tamaño de bolsa de cemento",
-    "wastage": "Desperdicio (%)",
-    "resultAria": "Resultado de la calculadora de cemento",
-    "youNeed": "Necesitarás",
-    "bags": "bolsas de cemento (",
-    "cementKg": "Cemento (kg)",
-    "cementLb": "Cemento (lb)",
-    "wetVol": "Volumen húmedo:",
-    "dry": "· Factor de volumen seco 1.54 · Desperdicio",
-    "mixLabel": "Mezcla:",
-    "empty": "Ingresa tus dimensiones para ver las bolsas de cemento y las cantidades de material."
-   }
   },
-  "concrete": {
-   "meta": {
-    "title": "Calculadora de concreto — Losa, viga, columna y zapata",
-    "description": "Calculadora de concreto gratuita. Ingresa el tamaño de tu losa, viga, columna o zapata y obtén bolsas de cemento, arena y agregado grueso, para grados M5 a M25 usando las proporciones de mezcla estándar IS 456. Funciona en yardas cúbicas, pies cúbicos y metros cúbicos."
-   },
-   "crumb": "Calculadora de concreto",
-   "title": "Calculadora de concreto — Losa, viga, columna y zapata",
-   "subtitle": "Ingresa el volumen húmedo de concreto que necesitas vaciar, elige un grado y te devolveremos bolsas de cemento, arena y agregado grueso, ajustados a la proporción de mezcla IS 456 de ese grado.",
-   "form": {
-    "grade": "Grado del concreto",
-    "customGrade": "Personalizar este grado",
-    "volume": "Volumen de concreto",
-    "wetVol": "Volumen húmedo",
-    "volAria": "Volumen de concreto",
-    "volHelp": "Ingresa el volumen final (húmedo) de concreto que necesitas vaciar.",
-    "outputs": "Unidades de salida",
-    "ratio": "Proporción de mezcla (c : s : a)",
-    "wastage": "Desperdicio",
-    "wastageAria": "Porcentaje de desperdicio",
-    "dtw": "Factor seco a húmedo",
-    "dtwAria": "Factor seco a húmedo",
-    "density": "Densidad del cemento",
-    "densityAria": "Densidad aparente del cemento",
-    "bag": "Peso de la bolsa de cemento",
-    "bagAria": "Peso de la bolsa de cemento",
-    "errors": {
-     "volMin": "Ingresa un volumen mayor que 0.",
-     "volMax": "El volumen debe ser 10,000 o menos.",
-     "ratioFmt": "Usa el formato \"a:b:c\", por ejemplo \"1:1.5:3\".",
-     "ratioPos": "Cada parte de la proporción debe ser mayor que 0.",
-     "wastageRange": "Ingresa un número entre 0 y 50.",
-     "wastageMax": "El desperdicio debe ser 50% o menos.",
-     "dtwMin": "El factor seco a húmedo debe ser mayor que 1.",
-     "dtwMax": "Un factor seco a húmedo mayor a 2 no es realista.",
-     "density": "Ingresa una densidad mayor que 0.",
-     "bag": "Ingresa un peso de bolsa mayor que 0."
-    }
-   }
+  "breadcrumbs": {
+    "home": "Inicio",
+    "calculators": "Calculadoras",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacy": "Política de privacidad",
+    "terms": "Términos del servicio"
   },
-  "brick": {
-   "meta": {
-    "title": "Calculadora de ladrillos — Pared, patio, adoquín y fogón",
-    "description": "Calculadora de ladrillos gratuita. Calcula la cantidad exacta de ladrillos y el mortero (cemento + arena) que necesitas para cualquier pared, patio, tramo de adoquín, fogón, muro de contención o casa. Admite ladrillo rojo, ladrillo refractario, ladrillo de concreto, modular, tradicional y bloque AAC. Entradas por pies cuadrados o dimensiones de la pared."
-   },
-   "crumb": "Calculadora de ladrillos",
-   "title": "Calculadora de ladrillos — Pared, patio, adoquín y fogón",
-   "subtitle": "Ingresa las dimensiones de tu pared, una superficie total en pies cuadrados o el volumen que necesitas rellenar. Te devolveremos la cantidad de ladrillos, el volumen de mortero, las bolsas de cemento y la arena, ajustado al ladrillo que realmente usas, ya sea ladrillo rojo de arcilla, ladrillo refractario, ladrillo de concreto, modular o un bloque AAC.",
-   "form": {
-    "mode": "Modo de entrada",
-    "modes": {
-     "dims": "Por dimensiones de la pared",
-     "vol": "Por volumen total"
+  "about": {
+    "meta": {
+      "title": "Acerca de — Calculadoras de construcción gratuitas y software para contratistas",
+      "description": "Acerca de iHateConstruction — calculadoras de construcción gratuitas para cemento, concreto, ladrillo, acero, pintura y azulejo, además de BOQ, cotizaciones y facturación con GST hechas para contratistas indios."
     },
-    "standard": "Estándar del ladrillo",
-    "customStd": "Personalizar este estándar",
-    "wallDims": "Dimensiones de la pared",
-    "openings": "Vanos (puertas, ventanas)",
-    "addOpening": "+ Agregar vano",
-    "noOpenings": "Sin vanos: cuenta toda la pared.",
-    "labelPh": "Etiqueta (opcional)",
-    "removeOpAria": "Quitar vano {i}",
-    "defaultDoor": "Puerta",
-    "openingN": "Vano {n}",
-    "totalVol": "Volumen total",
-    "volAria": "Volumen total",
-    "mortarThickness": "Espesor del mortero",
-    "mortarThicknessAria": "Espesor de la junta de mortero",
-    "mortarRatio": "Proporción de mortero (cemento : arena)",
-    "brickWastage": "Desperdicio de ladrillo %",
-    "brickWastageAria": "Porcentaje de desperdicio de ladrillo",
-    "mortarWastage": "Desperdicio de mortero %",
-    "mortarWastageAria": "Porcentaje de desperdicio de mortero",
-    "dtw": "Factor seco a húmedo",
-    "dtwAria": "Factor de expansión seco a húmedo del mortero",
-    "brickSize": "Tamaño del ladrillo",
-    "customBrickLen": "Largo de ladrillo personalizado",
-    "customBrickWid": "Ancho de ladrillo personalizado",
-    "customBrickHt": "Alto de ladrillo personalizado",
-    "errors": {
-     "lenMin": "Ingresa un largo mayor que 0.",
-     "lenMax": "El largo debe ser 100 m o menos.",
-     "htMin": "Ingresa un alto mayor que 0.",
-     "htMax": "El alto debe ser 20 m o menos.",
-     "thickMin": "Ingresa un espesor mayor que 0.",
-     "thickTooThin": "El espesor debe ser de al menos 50 mm.",
-     "thickTooThick": "El espesor debe ser 500 mm o menos.",
-     "widMin": "Ingresa un ancho mayor que 0.",
-     "opWider": "El vano es más ancho que la pared.",
-     "opTaller": "El vano es más alto que la pared.",
-     "opExceeds": "El área total de vanos supera el área de la pared.",
-     "volMin": "Ingresa un volumen mayor que 0."
+    "title": "Acerca de iHateConstruction",
+    "problem": {
+      "heading": "El problema",
+      "body": "La construcción en India es una industria de ₹13 lakh crore, y la mayoría de los contratistas todavía calcula costos en papel, envía cotizaciones por capturas de pantalla en WhatsApp y lleva los pagos en un cuaderno. Las herramientas que existen o están hechas para contratistas generales estadounidenses (Procore, Buildertrend) o son demasiado complejas para un equipo de 5 personas que hace obra residencial.",
+      "intro": "Hemos visto a los contratistas batallar con:",
+      "items": [
+        "Adivinar las cantidades de material → pedir de más un 15-20% (₹ directo al desagüe)",
+        "Cotizar de memoria → olvidar renglones, cobrar de menos, conversaciones incómodas después",
+        "Llevar los pagos en papel → \"¿pagó la segunda cuota o no?\"",
+        "Compartir documentos → reenvíos por WhatsApp de PDFs borrosos hechos en MS Paint"
+      ]
+    },
+    "solution": {
+      "heading": "La solución",
+      "body": "iHateConstruction le da a los contratistas indios un solo lugar para presupuestar, cotizar, facturar y cobrar, sin el exceso empresarial ni el precio de $300 al mes.",
+      "cards": {
+        "calculators": {
+          "title": "Calculadoras",
+          "body": "Concreto, acero, ladrillo, pintura, azulejo, con los estándares indios (códigos IS) incorporados."
+        },
+        "boq": {
+          "title": "BOQ y cotizaciones",
+          "body": "Genera listas profesionales de cantidades (BOQ) y cotizaciones para el cliente en segundos."
+        },
+        "invoices": {
+          "title": "Facturas y pagos",
+          "body": "Lleva registro de quién debe qué. Comparte un QR de UPI para cobro instantáneo. Registra pagos con OCR de capturas de pantalla."
+        },
+        "pdf": {
+          "title": "Exportación a PDF",
+          "body": "Documentos profesionales en A4 que tus clientes sí respetan, no reenvíos de WhatsApp."
+        }
+      }
+    },
+    "audience": {
+      "heading": "Para quién es",
+      "items": [
+        {
+          "bold": "Contratistas independientes",
+          "rest": " que hacen proyectos residenciales y pequeños comerciales."
+        },
+        {
+          "bold": "Pequeñas empresas de construcción",
+          "rest": " (2-15 personas) que necesitan estructura sin sobrecarga."
+        },
+        {
+          "bold": "Ingenieros civiles",
+          "rest": " que presupuestan por su cuenta y quieren cálculos precisos y repetibles."
+        },
+        {
+          "bold": "Diseñadores de interiores",
+          "rest": " que necesitan estimar materiales para proyectos de acondicionamiento."
+        }
+      ]
+    },
+    "india": {
+      "heading": "India primero",
+      "intro": "Cada decisión que tomamos empieza con el contratista indio:",
+      "items": [
+        "Los cálculos usan códigos IS y prácticas estándar indias (no ASTM ni Eurocode).",
+        "Las unidades de material coinciden con lo que compras en el godown local: bolsas, CFT, pies corridos.",
+        "La moneda es INR. Las tasas de GST vienen integradas. La región fiscal importa.",
+        "Pago con QR de UPI, porque así paga India en 2026.",
+        "Funciona en un teléfono de ₹10,000 con 4G. Sin flujos que solo funcionan en escritorio."
+      ]
+    },
+    "contact": {
+      "heading": "Contacto",
+      "body1": "¿Tienes comentarios, encontraste un error o quieres asociarte? Escríbenos a",
+      "email": "huzaif89@hotmail.com",
+      "body2": "o usa el",
+      "link": "formulario de contacto"
     }
-   }
   },
-  "steel": {
-   "meta": {
-    "title": "Calculadora de acero — Peso de barra TMT y refuerzo",
-    "description": "Calculadora de acero gratuita. Ingresa tu programa de barras o el volumen de concreto y obtén el peso total del acero de refuerzo en kg, para losas, vigas, columnas, zapatas y escaleras. Usa D²/162, Fe 500 / Fe 550 TMT, IS 1786."
-   },
-   "crumb": "Calculadora de acero",
-   "title": "Calculadora de acero — Peso de barra TMT y refuerzo",
-   "subtitle": "Dos formas de entrada: ingresa tu programa de barras para un peso preciso, o ingresa el volumen de concreto + tipo de elemento para una estimación rápida por regla del pulgar. Ambas usan valores predeterminados IS 1786; ambas son totalmente ajustables.",
-   "form": {
-    "mode": "Modo de entrada",
-    "modes": {
-     "schedule": "Por programa de barras",
-     "thumb": "Por regla del pulgar"
+  "privacy": {
+    "meta": {
+      "title": "Política de privacidad — Cómo manejamos tus datos",
+      "description": "Política de privacidad de iHateConstruction. Conoce qué datos personales recopilamos, cómo los usamos, dónde se almacenan y tus derechos sobre tu cuenta, proyectos, cálculos y datos de negocio."
     },
-    "modeHint1": "Preciso. Úsalo cuando tengas el plano.",
-    "modeHint2": "Aproximado (±20%). Úsalo solo para estimaciones de precio.",
-    "standard": "Estándar del acero",
-    "customStd": "Personalizar este estándar",
-    "schedule": "Programa de barras",
-    "addBar": "+ Agregar barra",
-    "barPh": "Barra {i}",
-    "removeBarAria": "Quitar barra {i}",
-    "diameter": "Diámetro",
-    "count": "Cantidad",
-    "diaAria": "Diámetro de la barra {i} (mm)",
-    "lenAria": "Largo de la barra {i}",
-    "countAria": "Cantidad de la barra {i}",
-    "diaOption": "{d} mm",
-    "member": "Elemento + volumen",
-    "memberType": "Tipo de elemento",
-    "concreteVol": "Volumen de concreto",
-    "volAria": "Volumen de concreto",
-    "defaultRate": "Tasa predeterminada: {value} kg/cum para {member}. Activa Personalizar para sobrescribir.",
-    "wastage": "Desperdicio",
-    "wastageAria": "Porcentaje de desperdicio",
-    "kgPerCum": "kg / cum",
-    "kgPerCumAria": "Kilogramos por metro cúbico de concreto",
-    "barLabels": {
-     "dia": "Barra de {diameter}mm",
-     "mainBottom": "Barras principales — inferior",
-     "distribution": "Barras de distribución",
-     "generic": "Barra {n}"
+    "title": "Política de privacidad",
+    "updated": "Última actualización: 5 de agosto de 2026",
+    "s1": {
+      "heading": "1. Información que recopilamos",
+      "intro": "Cuando usas iHateConstruction, recopilamos:",
+      "items": [
+        {
+          "bold": "Información de la cuenta:",
+          "rest": " nombre, dirección de correo electrónico y credenciales de autenticación (gestionadas mediante Clerk)."
+        },
+        {
+          "bold": "Datos de proyecto:",
+          "rest": " proyectos, cálculos, materiales, BOQ, cotizaciones y facturas que creas."
+        },
+        {
+          "bold": "Datos de uso:",
+          "rest": " páginas visitadas, funciones usadas, tipo de navegador, información del dispositivo y dirección IP."
+        },
+        {
+          "bold": "Información de pago:",
+          "rest": " IDs de UPI y códigos QR que subes voluntariamente. No procesamos ni almacenamos números de tarjeta de crédito."
+        }
+      ]
     },
-    "errors": {
-     "diaMin": "Ingresa un diámetro mayor que 0.",
-     "diaMax": "El diámetro debe ser 100 mm o menos.",
-     "lenMin": "Ingresa un largo mayor que 0.",
-     "lenMax": "El largo debe ser 50 m o menos.",
-     "countMin": "Al menos 1 barra.",
-     "volMin": "Ingresa un volumen mayor que 0."
+    "s2": {
+      "heading": "2. Cómo usamos tus datos",
+      "items": [
+        "Proporcionar, mantener y mejorar el servicio.",
+        "Generar documentos (BOQ, cotizaciones, facturas, PDFs) según los solicites.",
+        "Enviar correos transaccionales (verificación de cuenta, restablecimiento de contraseña).",
+        "Analizar patrones de uso para mejorar funciones (de forma agregada, nunca vendidos)."
+      ]
+    },
+    "s3": {
+      "heading": "3. Almacenamiento y seguridad de los datos",
+      "body": "Tus datos se almacenan en bases de datos cifradas alojadas en infraestructura de nube segura. Usamos TLS para todos los datos en tránsito. La autenticación es gestionada por Clerk, un proveedor con cumplimiento SOC 2 Type II."
+    },
+    "s4": {
+      "heading": "4. Uso compartido de datos",
+      "intro": "No vendemos tus datos. Solo los compartimos con:",
+      "items": [
+        {
+          "bold": "Proveedores de servicio:",
+          "rest": " hosting (Vercel), autenticación (Clerk), base de datos (PostgreSQL gestionado), solo lo necesario para operar."
+        },
+        {
+          "bold": "Tus clientes:",
+          "rest": " cuando generas un enlace público de cotización, los detalles de la cotización son visibles para cualquiera con el enlace."
+        },
+        {
+          "bold": "Requisitos legales:",
+          "rest": " si lo exige la ley india o una orden judicial válida."
+        }
+      ]
+    },
+    "s5": {
+      "heading": "5. Tus derechos",
+      "items": [
+        {
+          "bold": "Acceso:",
+          "rest": " ver todos los datos asociados a tu cuenta."
+        },
+        {
+          "bold": "Exportación:",
+          "rest": " descargar tus proyectos, cálculos y documentos."
+        },
+        {
+          "bold": "Eliminación:",
+          "rest": " solicitar la eliminación completa de tu cuenta y todos los datos asociados."
+        },
+        {
+          "bold": "Corrección:",
+          "rest": " actualizar información inexacta en cualquier momento."
+        }
+      ]
+    },
+    "s6": {
+      "heading": "6. Cookies",
+      "body": "Usamos cookies esenciales para autenticación y gestión de sesión. Sin cookies publicitarias. Sin píxeles de seguimiento de terceros."
+    },
+    "s7": {
+      "heading": "7. Retención de datos",
+      "body": "Tus datos se conservan mientras tu cuenta esté activa. Las cuentas eliminadas se purgan dentro de 30 días. Los registros de auditoría se conservan durante 1 año por motivos de seguridad."
+    },
+    "s8": {
+      "heading": "8. Menores",
+      "body": "iHateConstruction no está destinado a usuarios menores de 18 años. No recopilamos datos de menores de forma consciente."
+    },
+    "s9": {
+      "heading": "9. Cambios",
+      "body": "Podemos actualizar esta política. Los cambios importantes se notificarán por correo electrónico o mediante aviso en la app al menos 14 días antes de entrar en vigor."
+    },
+    "s10": {
+      "heading": "10. Contacto",
+      "body": "Para consultas relacionadas con privacidad:",
+      "email": "huzaif89@hotmail.com"
     }
-   }
   },
-  "paint": {
-   "meta": {
-    "title": "Calculadora de pintura — Interior, exterior y por habitación",
-    "description": "Calculadora de pintura gratuita. Ingresa las dimensiones de la habitación o el área de la pared y obtén los litros exactos de pintura que necesitas para emulsión interior, emulsión exterior, esmalte, imprimante y masilla. Maneja múltiples manos, techos, puertas y ventanas."
-   },
-   "crumb": "Calculadora de pintura",
-   "title": "Calculadora de pintura — Litros para paredes interiores y exteriores",
-   "subtitle": "Ingresa una habitación o un área total, elige tus productos de pintura y te devolveremos los litros que necesitas, por capa y en total. Maneja imprimante bajo emulsión, múltiples manos y ajustes de rendimiento por capa.",
-   "form": {
-    "mode": "Modo de entrada",
-    "modes": {
-     "room": "Por dimensiones de la habitación",
-     "area": "Por área total"
+  "terms": {
+    "meta": {
+      "title": "Términos del servicio — Reglas para usar iHateConstruction",
+      "description": "Términos del servicio de iHateConstruction. Las reglas para usar nuestras calculadoras de construcción gratuitas, la gestión de proyectos, el generador de BOQ, las herramientas de cotización y factura, y las funciones de cobro de pagos."
     },
-    "roomDims": "Dimensiones de la habitación",
-    "includeCeiling": "Incluir techo",
-    "openings": "Vanos (puertas, ventanas)",
-    "addOpening": "+ Agregar vano",
-    "noOpenings": "Sin vanos: cuenta toda la pared.",
-    "labelPh": "Etiqueta (opcional)",
-    "totalArea": "Área total",
-    "area": "Área",
-    "areaAria": "Área total pintable",
-    "layers": "Capas de pintura",
-    "addLayer": "+ Agregar capa",
-    "layersHelp": "Una fila por aplicación de producto, por ejemplo un imprimante + un acabado para una pared nueva.",
-    "layerN": "Capa {i}",
-    "type": "Tipo",
-    "coats": "Manos",
-    "coatsAria": "Manos de la capa {i}",
-    "customLayer": "Personalizar esta capa",
-    "kgPerSqm": "kg / sqm",
-    "kgPerSqmAria": "kg por sqm de la capa {i}",
-    "coverage": "Rendimiento / L",
-    "coverageAria": "Rendimiento por litro de la capa {i}",
-    "wastage": "Desperdicio",
-    "wastageAria": "Porcentaje de desperdicio de la capa {i}",
-    "defaultDoor": "Puerta",
-    "openingN": "Vano {n}",
-    "errors": {
-     "lenMin": "Ingresa un largo mayor que 0.",
-     "lenMax": "El largo debe ser 100 m o menos.",
-     "widMin": "Ingresa un ancho mayor que 0.",
-     "widMax": "El ancho debe ser 100 m o menos.",
-     "htMin": "Ingresa un alto mayor que 0.",
-     "htMax": "El alto debe ser 20 m o menos.",
-     "opWider": "El vano es más ancho que la pared más larga.",
-     "opTaller": "El vano es más alto que la pared.",
-     "opExceeds": "El área total de vanos supera el área de la pared.",
-     "areaMin": "Ingresa un área mayor que 0.",
-     "coats": "Al menos 1 mano.",
-     "kgPerSqm": "Ingresa un kg/sqm mayor que 0.",
-     "coverage": "Ingresa un rendimiento mayor que 0."
+    "title": "Términos del servicio",
+    "updated": "Última actualización: 5 de agosto de 2026",
+    "s1": {
+      "heading": "1. Aceptación",
+      "body": "Al acceder o usar iHateConstruction (\"el Servicio\"), aceptas quedar sujeto a estos Términos. Si no estás de acuerdo, no uses el Servicio."
+    },
+    "s2": {
+      "heading": "2. Descripción del servicio",
+      "intro": "iHateConstruction es una plataforma de gestión de construcción y presupuestación que proporciona:",
+      "items": [
+        "Calculadoras de materiales de construcción (concreto, acero, ladrillo, pintura, azulejo).",
+        "Gestión de proyectos con cálculos guardados y precios de materiales.",
+        "Generación de listas de cantidades (BOQ).",
+        "Creación de cotizaciones y facturas con exportación a PDF.",
+        "Herramientas de cobro de pagos (QR de UPI, enlaces de pago)."
+      ]
+    },
+    "s3": {
+      "heading": "3. Cuentas de usuario",
+      "items": [
+        "Debes proporcionar información exacta al crear una cuenta.",
+        "Eres responsable de toda la actividad bajo tu cuenta.",
+        "No debes compartir tus credenciales ni permitir que otros accedan a tu cuenta.",
+        "Podemos suspender o cerrar cuentas que infrinjan estos Términos."
+      ]
+    },
+    "s4": {
+      "heading": "4. Tus datos",
+      "items": [
+        "Conservas la propiedad de todo el contenido que creas (proyectos, cálculos, documentos).",
+        "Nos otorgas una licencia limitada para almacenar, procesar y mostrar tus datos únicamente para prestar el Servicio.",
+        "No reclamamos la propiedad de tus datos de negocio."
+      ]
+    },
+    "s5": {
+      "heading": "5. Uso aceptable",
+      "intro": "Aceptas no:",
+      "items": [
+        "Usar el Servicio para fines ilegales.",
+        "Subir contenido malicioso o intentar vulnerar la seguridad.",
+        "Extraer, rastrear o descargar en bloque datos del Servicio.",
+        "Suplantar a otra persona o entidad.",
+        "Usar las calculadoras para decisiones de ingeniería críticas de seguridad sin verificación profesional independiente."
+      ]
+    },
+    "s6": {
+      "heading": "6. Aviso sobre las calculadoras",
+      "boldLabel": "Importante:",
+      "body": " Las calculadoras entregan estimaciones basadas en fórmulas estándar y normas regionales. Son herramientas de estimación, no sustitutos de la ingeniería estructural profesional. Verifica siempre las cantidades con un ingeniero calificado antes de comprar o construir."
+    },
+    "s7": {
+      "heading": "7. Funciones de pago",
+      "items": [
+        "Las funciones de cobro (QR de UPI, enlaces de pago) facilitan la comunicación entre tú y tus clientes.",
+        "No somos un procesador de pagos. El dinero fluye directamente entre tú y tu cliente.",
+        "No somos responsables de disputas de pago, transacciones fallidas ni montos incorrectos.",
+        "Cuando integramos pasarelas de pago (Razorpay), sus términos también aplican."
+      ]
+    },
+    "s8": {
+      "heading": "8. Disponibilidad",
+      "body": "Buscamos alta disponibilidad, pero no garantizamos servicio ininterrumpido. El mantenimiento programado se anunciará con anticipación. No somos responsables de pérdidas por tiempo de inactividad."
+    },
+    "s9": {
+      "heading": "9. Limitación de responsabilidad",
+      "intro": "En la máxima medida permitida por la ley india:",
+      "items": [
+        "El Servicio se proporciona \"tal cual\" sin garantías de ningún tipo.",
+        "No somos responsables por daños indirectos, incidentales o consecuentes.",
+        "Nuestra responsabilidad total se limita al monto que nos hayas pagado en los 12 meses anteriores al reclamo (o ₹5,000, lo que sea mayor)."
+      ]
+    },
+    "s10": {
+      "heading": "10. Propiedad intelectual",
+      "items": [
+        "El Servicio, su diseño, código y marca son nuestra propiedad intelectual.",
+        "No puedes copiar, modificar ni redistribuir ninguna parte del Servicio.",
+        "El nombre \"iHateConstruction\" y las marcas asociadas son nuestras marcas comerciales."
+      ]
+    },
+    "s11": {
+      "heading": "11. Terminación",
+      "items": [
+        "Puedes eliminar tu cuenta en cualquier momento.",
+        "Podemos terminar tu acceso por infracciones a los Términos con aviso.",
+        "Al terminarse, tienes 30 días para exportar tus datos antes de que se eliminen."
+      ]
+    },
+    "s12": {
+      "heading": "12. Ley aplicable",
+      "body": "Estos Términos se rigen por las leyes de la India. Las disputas estarán sujetas a la jurisdicción exclusiva de los tribunales de Bengaluru, Karnataka."
+    },
+    "s13": {
+      "heading": "13. Cambios",
+      "body": "Podemos modificar estos Términos. Los cambios importantes se comunicarán con 14 días de anticipación. El uso continuado tras los cambios constituye aceptación."
+    },
+    "s14": {
+      "heading": "14. Contacto",
+      "body": "Preguntas sobre estos Términos:",
+      "email": "legal@ihateconstruction.co"
     }
-   }
   },
-  "tile": {
-   "meta": {
-    "title": "Calculadora de azulejos — Piso, pared, adhesivo y lechada",
-    "description": "Calculadora de azulejos gratuita. Ingresa el área del piso o la pared, elige el tamaño del azulejo y obtén la cantidad exacta de azulejos, la cantidad de adhesivo y el volumen de lechada. Admite instalación vitrificada, cerámica y con cama de mortero tradicional, con desperdicio."
-   },
-   "crumb": "Calculadora de azulejos",
-   "title": "Calculadora de azulejos — Piso, pared, adhesivo y lechada",
-   "subtitle": "Ingresa la superficie, el tamaño del azulejo y elige un preajuste: devolvemos la cantidad de azulejos con desperdicio más el adhesivo y la lechada. Maneja tanto la instalación moderna con thin-set como la cama de mortero tradicional de 20 mm.",
-   "form": {
-    "surface": "Superficie",
-    "modes": {
-     "floor": "Piso",
-     "wall": "Pared"
+  "contact": {
+    "meta": {
+      "title": "Contacto — Habla con el equipo de iHateConstruction",
+      "description": "Contacta a iHateConstruction sobre errores, funciones, solicitudes de calculadoras, asociaciones o preguntas generales. Uno de nosotros lee cada mensaje y suele responder en un plazo de dos días hábiles."
     },
-    "floorDims": "Dimensiones del piso",
-    "wallDims": "Dimensiones de la pared (ancho × alto)",
-    "excluded": "Áreas excluidas (columnas, drenajes, recortes)",
-    "addEx": "+ Agregar exclusión",
-    "noEx": "Sin exclusiones: se enlosa toda la superficie.",
-    "labelPh": "Etiqueta (opcional)",
-    "cutoutN": "Recorte {n}",
-    "tileSize": "Tamaño del azulejo",
-    "standard": "Estándar del azulejo",
-    "wastage": "Desperdicio",
-    "method": "Método",
-    "methods": {
-     "thinset": "Thin-set",
-     "bed": "Cama de mortero"
-    },
-    "coveragePerKg": "Rendimiento/kg",
-    "bedThickness": "Espesor de la cama",
-    "mortarRatio": "Proporción de mortero",
-    "groutWidth": "Ancho de lechada",
-    "groutDepth": "Profundidad de lechada",
-    "groutDepthHelp": "Por defecto, el espesor del azulejo. Edita para sobrescribir.",
-    "tileThickness": "Espesor del azulejo",
-    "errors": {
-     "lenMin": "Ingresa un largo mayor que 0.",
-     "lenMax": "El largo debe ser 500 m o menos.",
-     "widMin": "Ingresa un ancho mayor que 0.",
-     "widMax": "El ancho debe ser 500 m o menos.",
-     "tileLen": "Ingresa un largo de azulejo mayor que 0.",
-     "tileWid": "Ingresa un ancho de azulejo mayor que 0.",
-     "exLen": "El largo debe ser mayor que 0.",
-     "exWid": "El ancho debe ser mayor que 0.",
-     "exAll": "Las áreas excluidas suman toda la superficie. Redúcelas.",
-     "coverage": "El rendimiento debe ser mayor que 0.",
-     "thickness": "El espesor debe ser mayor que 0.",
-     "ratio": "Formato a:b (por ejemplo, 1:4)."
+    "eyebrow": "Empresa",
+    "title": "Contáctanos",
+    "subtitle": "Escríbenos sobre un error, una calculadora que quieras que construyamos, una asociación o cualquier otra cosa. Uno de nosotros lee cada mensaje y suele responder en un plazo de dos días hábiles.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "website": "Sitio web",
+      "send": "Enviar",
+      "sending": "Enviando…",
+      "successTitle": "Mensaje enviado",
+      "successBody": "Gracias, ya lo recibimos.",
+      "successNote": "Uno de nosotros leerá tu nota y responderá al correo que nos diste, usualmente en un plazo de dos días hábiles.",
+      "sendAnother": "Enviar otro",
+      "subjects": {
+        "general": "Pregunta general",
+        "bug": "Reporte de error",
+        "feature": "Solicitud de función",
+        "partnership": "Asociación"
+      },
+      "errors": {
+        "nameRequired": "Ingresa tu nombre.",
+        "nameShort": "El nombre debe tener al menos 2 caracteres.",
+        "nameLong": "El nombre debe tener 80 caracteres o menos.",
+        "emailRequired": "Ingresa tu correo electrónico.",
+        "emailInvalid": "Eso no parece un correo electrónico válido.",
+        "messageRequired": "Ingresa un mensaje.",
+        "messageShort": "El mensaje debe tener al menos 10 caracteres.",
+        "messageLong": "El mensaje debe tener {max} caracteres o menos.",
+        "fixHighlighted": "Corrige los campos resaltados para continuar."
+      }
     }
-   }
   },
-  "rebar": {
-   "meta": {
-    "title": "Calculadora de Rebar — Acero para Losa, Zapata y Muro (Longitud, Piezas y Peso)",
-    "description": "Calculadora de rebar gratuita para losas, zapatas, muros y cimentaciones de concreto. Ingresa largo, ancho, separación y recubrimiento al borde para obtener el número de barras, la longitud total, las piezas de 12 m y el peso por metro o pie cuadrado. Fórmula D²/162."
-   },
-   "crumb": "Calculadora de Rebar",
-   "title": "Calculadora de Rebar — Refuerzo para Losa, Zapata, Muro y Cimentación",
-   "subtitle": "Calcula cuánto acero de refuerzo necesitas para una losa, zapata, muro o cimentación. Ingresa el tamaño del elemento, la separación c/c y el recubrimiento al borde — obtén barras por dirección, longitud total, piezas de 12 m y peso por m² y ft².",
-   "form": {
-    "section1": "Elemento + dimensiones",
-    "member": "Tipo de elemento",
-    "memberHint": "Mismo cálculo de malla — solo cambia la separación inicial sugerida.",
-    "dimHint": "Dimensiones totales vertidas del elemento (borde a borde), no la malla.",
-    "section2": "Distribución del refuerzo",
-    "spacing": "Separación barra–barra (c/c)",
-    "spacingAria": "Separación centro a centro entre barras paralelas",
-    "edgeSpacing": "Recubrimiento al borde",
-    "edgeAria": "Distancia de la barra exterior al borde del elemento",
-    "section3": "Barra + pedido",
-    "barDiameter": "Diámetro de barra",
-    "barLength": "Longitud de una barra",
-    "barLengthAria": "Longitud comercial de una barra del proveedor",
-    "wastage": "Desperdicio",
-    "wastageAria": "Porcentaje de desperdicio por corte, traslapes y solapes",
-    "lenAria": "Largo del elemento",
-    "widAria": "Ancho del elemento",
-    "errors": {
-     "lenMin": "Ingresa un largo mayor que 0.",
-     "lenMax": "El largo debe ser 200 m o menos.",
-     "widMin": "Ingresa un ancho mayor que 0.",
-     "widMax": "El ancho debe ser 200 m o menos.",
-     "spMin": "Ingresa una separación mayor que 0.",
-     "spMax": "La separación debe ser 2 m o menos.",
-     "edgeMin": "El recubrimiento debe ser 0 o más.",
-     "edgeMax": "El recubrimiento debe ser menor que la mitad del elemento.",
-     "barLenMin": "Ingresa una longitud de barra mayor que 0.",
-     "barLenMax": "La longitud de barra debe ser 60 m o menos.",
-     "wastageRange": "El desperdicio debe estar entre 0 y 20%."
+  "calculators": {
+    "index": {
+      "meta": {
+        "title": "Calculadoras de construcción gratuitas — Cemento, concreto, ladrillo y rebar",
+        "description": "Siete calculadoras de construcción gratuitas: cemento, concreto, ladrillo, acero, rebar, pintura y azulejo. Ingresa tu trabajo y obtén un pedido exacto de material en yardas cúbicas, pies cúbicos o unidades métricas. Bolsas de cemento para una losa, ladrillos para una pared, acero para refuerzo, litros de pintura para una habitación, azulejos para un piso."
+      },
+      "eyebrow": "Herramientas",
+      "title": "Calculadoras de construcción gratuitas",
+      "subtitle": "Siete calculadoras para los pedidos de material que realmente haces: cemento, concreto, ladrillo, acero, rebar, pintura y azulejo. Ingresa tus dimensiones y obtén bolsas, ladrillos, kilogramos o litros. Funciona en yardas cúbicas, pies cúbicos y metros cúbicos.",
+      "missing": "¿Te falta una calculadora que usas a diario?",
+      "contactSoon": "Formulario de contacto próximamente."
     },
-    "examples": {
-     "fill1": "Ejemplo: losa de 6000 × 4000 mm, 150 mm c/c, barras de 12 mm, stock de 12 m."
+    "common": {
+      "eyebrow": "Calculadora",
+      "faq": "Preguntas frecuentes",
+      "other": "Otras calculadoras",
+      "how": "Cómo funciona el cálculo",
+      "customParams": "Parámetros personalizados",
+      "fillForm": "Rellena el formulario y presiona Calcular para ver tu lista de materiales.",
+      "fillFormSteel": "Rellena el formulario y presiona Calcular para ver el peso del acero.",
+      "fillFormPaint": "Rellena el formulario y presiona Calcular para ver tu cotización de pintura.",
+      "fillFormTile": "Rellena el formulario y presiona Calcular para ver tu cotización de azulejos.",
+      "shareResult": "Compartir resultado",
+      "reload": "Recargar",
+      "clearAll": "Borrar todos los cambios",
+      "didWeSolve": "¿Resolvimos tu problema hoy?"
     },
-    "placeholder": "Llena el formulario y pulsa Calcular para ver tu pedido de rebar."
-   },
-   "sizes": {
-    "heading": "Tamaños de barra",
-    "note": "Los tamaños de barra de EE. UU. dan el diámetro en octavos de pulgada hasta #8; los métricos usan el diámetro nominal en milímetros. El rebar TMT en India se vende por diámetro nominal — normalmente 8, 10, 12, 16, 20, 25 y 32 mm.",
-    "cols": {
-     "imperial": "Tamaño imperial",
-     "metric": "Tamaño métrico",
-     "diaIn": "Diámetro (pulg)",
-     "diaMm": "Diámetro (mm)"
+    "cement": {
+      "meta": {
+        "title": "Calculadora de cemento — Losa, hoyo de poste y yardas cúbicas",
+        "description": "Calculadora de cemento gratuita. Calcula cuántas bolsas de cemento necesitas para una losa de concreto, un hoyo de poste, una pared o cualquier volumen, en yardas cúbicas, pies cúbicos o metros cúbicos. Admite bolsas de 94 lb Portland, 50 kg, 40 kg, 60 lb y 80 lb, mezclas de arena y cemento (1:3, 1:4, 1:6) y mezclas estándar de losa (M15, M20, M25)."
+      },
+      "crumb": "Calculadora de cemento",
+      "title": "Calculadora de cemento",
+      "subtitle": "Calcula exactamente cuántas bolsas de cemento necesitas: para una losa de concreto, un juego de hoyos de poste o cualquier volumen húmedo en yardas cúbicas, pies cúbicos o metros cúbicos. Admite bolsas de cemento Portland de 94 lb, bolsas indias de 50 kg, 40 kg, 60 lb y 80 lb, además de mezclas de arena y cemento (1:3, 1:4, 1:6) y mezclas estándar de concreto (M15, M20, M25).",
+      "handles": "Qué maneja esta calculadora de cemento",
+      "cards": {
+        "slab": {
+          "title": "Cemento para una losa",
+          "body": "Ingresa largo, ancho y espesor en pies y pulgadas. La calculadora devuelve bolsas de cemento para mezcla M15, M20 o M25: los tres grados usados para entradas de auto, pisos de garaje y losas de casa."
+        },
+        "post": {
+          "title": "Cemento para hoyo de poste",
+          "body": "Postes de cerca, buzones, postes de señales. Ingresa el diámetro del hoyo, la profundidad y cuántos postes vas a colocar; la herramienta dimensiona un relleno de arena y cemento 1:3 para toda la corrida."
+        },
+        "cuyd": {
+          "title": "Yardas cúbicas de cemento",
+          "body": "¿Ya conoces tu volumen en yardas cúbicas? Cambia al modo Volumen libre. También se admiten metros cúbicos y pies cúbicos: la calculadora convierte entre los tres."
+        },
+        "sc": {
+          "title": "Arena y cemento",
+          "body": "Elige el preajuste de enlucido 1:4, de mampostería 1:6 o de mortero rico 1:3 cuando solo mezcles cemento con arena, sin agregado. El resultado muestra tanto bolsas de cemento como pies cúbicos de arena."
+        },
+        "portland": {
+          "title": "Bolsas de cemento Portland de 94 lb",
+          "body": "Contratistas en EE. UU. que compran cemento Portland Type I/II en bolsas de 94 lb: elige ese tamaño de bolsa y el total se redondea automáticamente a bolsas enteras."
+        },
+        "indian": {
+          "title": "Bolsas indias de 50 kg",
+          "body": "Para contratistas en India: bolsas de OPC / PPC de 50 kg, proporciones de mezcla IS 456 y resultados en pies cúbicos, las unidades en las que realmente cotiza tu godown."
+        }
+      },
+      "form": {
+        "pouring": "¿Qué vas a vaciar?",
+        "modes": {
+          "slab": "Losa de concreto",
+          "post": "Hoyo de poste",
+          "free": "Volumen libre"
+        },
+        "lengthFt": "Largo (ft)",
+        "widthFt": "Ancho (ft)",
+        "thicknessIn": "Espesor (in)",
+        "diameterIn": "Diámetro del hoyo (in)",
+        "depthFt": "Profundidad (ft)",
+        "posts": "Número de postes",
+        "wetVolume": "Volumen húmedo",
+        "unit": "Unidad",
+        "units": {
+          "yd3": "Yardas cúbicas",
+          "m3": "Metros cúbicos",
+          "ft3": "Pies cúbicos"
+        },
+        "ratio": "Proporción de mezcla",
+        "bagSize": "Tamaño de bolsa de cemento",
+        "wastage": "Desperdicio (%)",
+        "resultAria": "Resultado de la calculadora de cemento",
+        "youNeed": "Necesitarás",
+        "bags": "bolsas de cemento (",
+        "cementKg": "Cemento (kg)",
+        "cementLb": "Cemento (lb)",
+        "wetVol": "Volumen húmedo:",
+        "dry": "· Factor de volumen seco 1.54 · Desperdicio",
+        "mixLabel": "Mezcla:",
+        "empty": "Ingresa tus dimensiones para ver las bolsas de cemento y las cantidades de material."
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que debes saber sobre el cemento"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo funciona esta calculadora de cemento?",
+          "a": "Elige una forma (losa de concreto, agujero de poste o volumen libre), un ratio de mezcla y el tamaño de bolsa que compras localmente — 50 kg (India), 94 lb Portland (EE. UU.) o una bolsa minorista menor. La calculadora convierte tu trabajo en volumen seco con el factor estándar 1.54, lo divide en cemento/arena/agregado, aplica tu desperdicio y redondea el cemento a bolsas enteras."
+        },
+        {
+          "q": "¿Cuántas bolsas de cemento necesito para una losa?",
+          "a": "Para una losa típica M20 (1:1.5:3), una yarda cúbica de concreto necesita unas 5 bolsas de 94 lb Portland, o unas 8 bolsas de 50 kg. Para una losa de 10 ft × 10 ft × 4 in (≈ 1.23 cuyd) son unas 6 bolsas de 94 lb o 10 de 50 kg."
+        },
+        {
+          "q": "¿Cuánto cemento necesito para un agujero de poste?",
+          "a": "Un poste de cerca de 4 pulgadas en un agujero de 10 pulgadas de ancho y 24 de profundidad toma unos 1.1 pies cúbicos de concreto — media bolsa de premezcla de 60 lb, o unos 6 kg de cemento más arena para un relleno 1:3. Ingresa diámetro, profundidad y cantidad."
+        },
+        {
+          "q": "¿Cuánto cemento Portland hay en una bolsa de 94 lb?",
+          "a": "Una bolsa de 94 lb es el estándar de EE. UU. para cemento Portland puro y contiene exactamente un pie cúbico de cemento suelto — unos 42.6 kg. No es lo mismo que una bolsa de mezcla de 94 lb, que ya contiene arena y agregado."
+        },
+        {
+          "q": "¿Cómo calculo cemento en yardas cúbicas?",
+          "a": "Multiplica largo × ancho × espesor (todo en pies; convierte pulgadas dividiendo por 12) para obtener pies cúbicos, y divide por 27. Esta calculadora hace la conversión por ti."
+        },
+        {
+          "q": "¿Qué ratio de mezcla uso — 1:2:4 o 1:1.5:3?",
+          "a": "1:2:4 (M15) sirve para senderos, losas de patio y vertidos no estructurales. 1:1.5:3 (M20) es el estándar para losas de vivienda y RCC general. 1:1:2 (M25) para miembros estructurales. Para arena y cemento usa 1:4 o 1:6."
+        },
+        {
+          "q": "¿Funciona solo para arena y cemento (sin agregado)?",
+          "a": "Sí. Elige el preset de mortero de mampostería (1:6), mortero de enlucido (1:4) o agujero de poste (1:3). La salida muestra bolsas de cemento y arena en peso (kg) y volumen (pies cúbicos)."
+        },
+        {
+          "q": "¿Por qué el volumen seco es mayor que el húmedo?",
+          "a": "Al mezclar cemento, arena y agregado secos, las partículas finas llenan los huecos y el volumen total se reduce. El multiplicador estándar es 1.54: un metro cúbico de concreto terminado necesita unos 1.54 m³ de ingredientes secos sueltos."
+        }
+      ]
+    },
+    "concrete": {
+      "meta": {
+        "title": "Calculadora de concreto — Losa, viga, columna y zapata",
+        "description": "Calculadora de concreto gratuita. Ingresa el tamaño de tu losa, viga, columna o zapata y obtén bolsas de cemento, arena y agregado grueso, para grados M5 a M25 usando las proporciones de mezcla estándar IS 456. Funciona en yardas cúbicas, pies cúbicos y metros cúbicos."
+      },
+      "crumb": "Calculadora de concreto",
+      "title": "Calculadora de concreto — Losa, viga, columna y zapata",
+      "subtitle": "Ingresa el volumen húmedo de concreto que necesitas vaciar, elige un grado y te devolveremos bolsas de cemento, arena y agregado grueso, ajustados a la proporción de mezcla IS 456 de ese grado.",
+      "form": {
+        "grade": "Grado del concreto",
+        "customGrade": "Personalizar este grado",
+        "volume": "Volumen de concreto",
+        "wetVol": "Volumen húmedo",
+        "volAria": "Volumen de concreto",
+        "volHelp": "Ingresa el volumen final (húmedo) de concreto que necesitas vaciar.",
+        "outputs": "Unidades de salida",
+        "ratio": "Proporción de mezcla (c : s : a)",
+        "wastage": "Desperdicio",
+        "wastageAria": "Porcentaje de desperdicio",
+        "dtw": "Factor seco a húmedo",
+        "dtwAria": "Factor seco a húmedo",
+        "density": "Densidad del cemento",
+        "densityAria": "Densidad aparente del cemento",
+        "bag": "Peso de la bolsa de cemento",
+        "bagAria": "Peso de la bolsa de cemento",
+        "errors": {
+          "volMin": "Ingresa un volumen mayor que 0.",
+          "volMax": "El volumen debe ser 10,000 o menos.",
+          "ratioFmt": "Usa el formato \"a:b:c\", por ejemplo \"1:1.5:3\".",
+          "ratioPos": "Cada parte de la proporción debe ser mayor que 0.",
+          "wastageRange": "Ingresa un número entre 0 y 50.",
+          "wastageMax": "El desperdicio debe ser 50% o menos.",
+          "dtwMin": "El factor seco a húmedo debe ser mayor que 1.",
+          "dtwMax": "Un factor seco a húmedo mayor a 2 no es realista.",
+          "density": "Ingresa una densidad mayor que 0.",
+          "bag": "Ingresa un peso de bolsa mayor que 0."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que debes saber sobre el concreto"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo se calcula la cantidad de concreto?",
+          "a": "El volumen húmedo que ingresas se multiplica por un factor seco-a-húmedo de 1.54 para obtener el volumen seco suelto necesario. Ese volumen seco se divide por la proporción de mezcla en cemento, arena y agregado grueso, y luego se añade un margen de desperdicio del 3%. El cemento se convierte a bolsas de 50 kg y se redondea hacia arriba."
+        },
+        {
+          "q": "¿Qué mezcla elijo — M15, M20 o M25?",
+          "a": "M20 (1:1.5:3) es la opción general para losas, vigas y columnas con carga ligera a moderada. M25 (1:1:2) es el mínimo IS 456 para elementos RCC en la mayoría de situaciones estructurales. M15 e inferiores se usan para cimentaciones, PCC y obra no estructural. Cualquier cosa M30 o superior debería ser una mezcla de diseño, no una proporción fija como estas."
+        },
+        {
+          "q": "¿Por qué el factor seco-a-húmedo es 1.54?",
+          "a": "Cuando el cemento, la arena y el agregado secos se combinan en concreto húmedo, las partículas finas llenan los huecos de las gruesas y el volumen total se reduce. 1.54 es el multiplicador estándar de la industria que compensa esa contracción: 1 metro cúbico de concreto terminado necesita unos 1.54 metros cúbicos de ingredientes secos sueltos."
+        },
+        {
+          "q": "¿Por qué se redondean hacia arriba las bolsas de cemento?",
+          "a": "Los contratistas compran cemento en bolsas enteras de 50 kg, no en fracciones. La calculadora redondea hacia arriba a la siguiente bolsa completa para que pidas lo que realmente se vende. Los kg exactos se muestran junto si los necesitas para estimar el costo."
+        },
+        {
+          "q": "¿Puedo cambiar la proporción de mezcla o el desperdicio?",
+          "a": "Sí. Marca 'Personalizar este grado' bajo el selector y cada parámetro — proporción, porcentaje de desperdicio, densidad del cemento, peso de bolsa y factor seco-a-húmedo — se vuelve editable. Los valores por defecto son los de IS 456 para los grados comunes."
+        },
+        {
+          "q": "¿Esto incluye el refuerzo de acero?",
+          "a": "No. El acero se calcula por separado porque el despiece depende del tipo de elemento (viga, columna, losa, zapata) y su detallado, no solo del volumen de concreto. Usa la calculadora de acero o rebar para eso."
+        }
+      ]
+    },
+    "brick": {
+      "meta": {
+        "title": "Calculadora de ladrillos — Pared, patio, adoquín y fogón",
+        "description": "Calculadora de ladrillos gratuita. Calcula la cantidad exacta de ladrillos y el mortero (cemento + arena) que necesitas para cualquier pared, patio, tramo de adoquín, fogón, muro de contención o casa. Admite ladrillo rojo, ladrillo refractario, ladrillo de concreto, modular, tradicional y bloque AAC. Entradas por pies cuadrados o dimensiones de la pared."
+      },
+      "crumb": "Calculadora de ladrillos",
+      "title": "Calculadora de ladrillos — Pared, patio, adoquín y fogón",
+      "subtitle": "Ingresa las dimensiones de tu pared, una superficie total en pies cuadrados o el volumen que necesitas rellenar. Te devolveremos la cantidad de ladrillos, el volumen de mortero, las bolsas de cemento y la arena, ajustado al ladrillo que realmente usas, ya sea ladrillo rojo de arcilla, ladrillo refractario, ladrillo de concreto, modular o un bloque AAC.",
+      "form": {
+        "mode": "Modo de entrada",
+        "modes": {
+          "dims": "Por dimensiones de la pared",
+          "vol": "Por volumen total"
+        },
+        "standard": "Estándar del ladrillo",
+        "customStd": "Personalizar este estándar",
+        "wallDims": "Dimensiones de la pared",
+        "openings": "Vanos (puertas, ventanas)",
+        "addOpening": "+ Agregar vano",
+        "noOpenings": "Sin vanos: cuenta toda la pared.",
+        "labelPh": "Etiqueta (opcional)",
+        "removeOpAria": "Quitar vano {i}",
+        "defaultDoor": "Puerta",
+        "openingN": "Vano {n}",
+        "totalVol": "Volumen total",
+        "volAria": "Volumen total",
+        "mortarThickness": "Espesor del mortero",
+        "mortarThicknessAria": "Espesor de la junta de mortero",
+        "mortarRatio": "Proporción de mortero (cemento : arena)",
+        "brickWastage": "Desperdicio de ladrillo %",
+        "brickWastageAria": "Porcentaje de desperdicio de ladrillo",
+        "mortarWastage": "Desperdicio de mortero %",
+        "mortarWastageAria": "Porcentaje de desperdicio de mortero",
+        "dtw": "Factor seco a húmedo",
+        "dtwAria": "Factor de expansión seco a húmedo del mortero",
+        "brickSize": "Tamaño del ladrillo",
+        "customBrickLen": "Largo de ladrillo personalizado",
+        "customBrickWid": "Ancho de ladrillo personalizado",
+        "customBrickHt": "Alto de ladrillo personalizado",
+        "errors": {
+          "lenMin": "Ingresa un largo mayor que 0.",
+          "lenMax": "El largo debe ser 100 m o menos.",
+          "htMin": "Ingresa un alto mayor que 0.",
+          "htMax": "El alto debe ser 20 m o menos.",
+          "thickMin": "Ingresa un espesor mayor que 0.",
+          "thickTooThin": "El espesor debe ser de al menos 50 mm.",
+          "thickTooThick": "El espesor debe ser 500 mm o menos.",
+          "widMin": "Ingresa un ancho mayor que 0.",
+          "opWider": "El vano es más ancho que la pared.",
+          "opTaller": "El vano es más alto que la pared.",
+          "opExceeds": "El área total de vanos supera el área de la pared.",
+          "volMin": "Ingresa un volumen mayor que 0."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que debes saber sobre ladrillos"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo se calcula el número de ladrillos?",
+          "a": "El volumen total de mampostería se divide por el volumen nominal de un ladrillo — el ladrillo más una junta de mortero en los tres ejes. El resultado se redondea hacia arriba y se aplica un porcentaje de desperdicio (5% por defecto)."
+        },
+        {
+          "q": "¿Cuál es la diferencia entre los presets?",
+          "a": "El ladrillo modular (190×90×90 mm) sigue IS 1077 con junta de 10 mm. El ladrillo indio tradicional (230×110×75 mm) es el tamaño no modular común en obra. El bloque AAC (600×200×200 mm) es una unidad mucho mayor y ligera con junta fina de 3 mm."
+        },
+        {
+          "q": "¿Cómo se calcula el volumen de mortero?",
+          "a": "Volumen de mortero = volumen total de mampostería − volumen de ladrillos. Eso da el mortero húmedo. Un 20% de desperdicio (por defecto) cubre derrames y juntas. Multiplicar por 1.33 (húmedo a seco) da el cemento + arena secos a mezclar."
+        },
+        {
+          "q": "¿Por qué cemento en bolsas y arena en cft?",
+          "a": "Así cotizan y piden los contratistas en India — cemento en bolsas de 50 kg, arena en pies cúbicos. El cálculo interno es SI; la respuesta se presenta en las unidades reales de pedido."
+        },
+        {
+          "q": "¿Puedo usar mi propio tamaño de ladrillo y ratio de mortero?",
+          "a": "Sí. Cambia el preset a 'Personalizado' y cada parámetro — dimensiones, junta, ratio, desperdicio — se vuelve editable."
+        },
+        {
+          "q": "¿Las aberturas se restan correctamente?",
+          "a": "Puertas y ventanas se restan del área bruta como rectángulos. Para aberturas arqueadas, aproxímalas con su rectángulo envolvente. Si exceden el área del muro, la calculadora devuelve un error."
+        }
+      ]
+    },
+    "steel": {
+      "meta": {
+        "title": "Calculadora de acero — Peso de barra TMT y refuerzo",
+        "description": "Calculadora de acero gratuita. Ingresa tu programa de barras o el volumen de concreto y obtén el peso total del acero de refuerzo en kg, para losas, vigas, columnas, zapatas y escaleras. Usa D²/162, Fe 500 / Fe 550 TMT, IS 1786."
+      },
+      "crumb": "Calculadora de acero",
+      "title": "Calculadora de acero — Peso de barra TMT y refuerzo",
+      "subtitle": "Dos formas de entrada: ingresa tu programa de barras para un peso preciso, o ingresa el volumen de concreto + tipo de elemento para una estimación rápida por regla del pulgar. Ambas usan valores predeterminados IS 1786; ambas son totalmente ajustables.",
+      "form": {
+        "mode": "Modo de entrada",
+        "modes": {
+          "schedule": "Por programa de barras",
+          "thumb": "Por regla del pulgar"
+        },
+        "modeHint1": "Preciso. Úsalo cuando tengas el plano.",
+        "modeHint2": "Aproximado (±20%). Úsalo solo para estimaciones de precio.",
+        "standard": "Estándar del acero",
+        "customStd": "Personalizar este estándar",
+        "schedule": "Programa de barras",
+        "addBar": "+ Agregar barra",
+        "barPh": "Barra {i}",
+        "removeBarAria": "Quitar barra {i}",
+        "diameter": "Diámetro",
+        "count": "Cantidad",
+        "diaAria": "Diámetro de la barra {i} (mm)",
+        "lenAria": "Largo de la barra {i}",
+        "countAria": "Cantidad de la barra {i}",
+        "diaOption": "{d} mm",
+        "member": "Elemento + volumen",
+        "memberType": "Tipo de elemento",
+        "concreteVol": "Volumen de concreto",
+        "volAria": "Volumen de concreto",
+        "defaultRate": "Tasa predeterminada: {value} kg/cum para {member}. Activa Personalizar para sobrescribir.",
+        "wastage": "Desperdicio",
+        "wastageAria": "Porcentaje de desperdicio",
+        "kgPerCum": "kg / cum",
+        "kgPerCumAria": "Kilogramos por metro cúbico de concreto",
+        "barLabels": {
+          "dia": "Barra de {diameter}mm",
+          "mainBottom": "Barras principales — inferior",
+          "distribution": "Barras de distribución",
+          "generic": "Barra {n}"
+        },
+        "errors": {
+          "diaMin": "Ingresa un diámetro mayor que 0.",
+          "diaMax": "El diámetro debe ser 100 mm o menos.",
+          "lenMin": "Ingresa un largo mayor que 0.",
+          "lenMax": "El largo debe ser 50 m o menos.",
+          "countMin": "Al menos 1 barra.",
+          "volMin": "Ingresa un volumen mayor que 0."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que debes saber sobre el acero"
+      },
+      "faq": [
+        {
+          "q": "¿Qué es D²/162 y de dónde viene?",
+          "a": "Es el atajo de la industria para el peso por metro de una barra redonda de diámetro D en milímetros. Viene de π × (D/2)² × 7850 kg/cum ÷ 10⁶ ≈ D²/162.28. En obra se redondea a 162; usa 162.28 para un número algo más ajustado."
+        },
+        {
+          "q": "¿Despiece o regla práctica — cuál uso?",
+          "a": "Despiece cuando tienes el plano y puedes listar diámetro, longitud y cantidad de cada barra: la respuesta es exacta. Regla práctica en la etapa de precio, cuando solo conoces el volumen: es aproximado (±20%), bueno para un estimado, no para un pedido."
+        },
+        {
+          "q": "¿Los números incluyen solapes, dobleces, ganchos y sillas?",
+          "a": "No — la Fase 1 no modela solapes, dobleces, ganchos ni barras de soporte. En modo despiece pasa longitudes de corte ya calculadas; en regla práctica los kg/cum ya absorben una provisión bruta para solapes."
+        },
+        {
+          "q": "¿Por qué losa, viga, columna, zapata y escalera tienen kg/cum distintos?",
+          "a": "Los miembros más densos llevan más refuerzo por unidad de volumen. Columnas y escaleras ~130 kg/cum, vigas ~100, losas ~80, zapatas ~70. Son promedios indios; cámbialos si tu consultor tiene valores de proyecto."
+        }
+      ]
+    },
+    "paint": {
+      "meta": {
+        "title": "Calculadora de pintura — Interior, exterior y por habitación",
+        "description": "Calculadora de pintura gratuita. Ingresa las dimensiones de la habitación o el área de la pared y obtén los litros exactos de pintura que necesitas para emulsión interior, emulsión exterior, esmalte, imprimante y masilla. Maneja múltiples manos, techos, puertas y ventanas."
+      },
+      "crumb": "Calculadora de pintura",
+      "title": "Calculadora de pintura — Litros para paredes interiores y exteriores",
+      "subtitle": "Ingresa una habitación o un área total, elige tus productos de pintura y te devolveremos los litros que necesitas, por capa y en total. Maneja imprimante bajo emulsión, múltiples manos y ajustes de rendimiento por capa.",
+      "form": {
+        "mode": "Modo de entrada",
+        "modes": {
+          "room": "Por dimensiones de la habitación",
+          "area": "Por área total"
+        },
+        "roomDims": "Dimensiones de la habitación",
+        "includeCeiling": "Incluir techo",
+        "openings": "Vanos (puertas, ventanas)",
+        "addOpening": "+ Agregar vano",
+        "noOpenings": "Sin vanos: cuenta toda la pared.",
+        "labelPh": "Etiqueta (opcional)",
+        "totalArea": "Área total",
+        "area": "Área",
+        "areaAria": "Área total pintable",
+        "layers": "Capas de pintura",
+        "addLayer": "+ Agregar capa",
+        "layersHelp": "Una fila por aplicación de producto, por ejemplo un imprimante + un acabado para una pared nueva.",
+        "layerN": "Capa {i}",
+        "type": "Tipo",
+        "coats": "Manos",
+        "coatsAria": "Manos de la capa {i}",
+        "customLayer": "Personalizar esta capa",
+        "kgPerSqm": "kg / sqm",
+        "kgPerSqmAria": "kg por sqm de la capa {i}",
+        "coverage": "Rendimiento / L",
+        "coverageAria": "Rendimiento por litro de la capa {i}",
+        "wastage": "Desperdicio",
+        "wastageAria": "Porcentaje de desperdicio de la capa {i}",
+        "defaultDoor": "Puerta",
+        "openingN": "Vano {n}",
+        "errors": {
+          "lenMin": "Ingresa un largo mayor que 0.",
+          "lenMax": "El largo debe ser 100 m o menos.",
+          "widMin": "Ingresa un ancho mayor que 0.",
+          "widMax": "El ancho debe ser 100 m o menos.",
+          "htMin": "Ingresa un alto mayor que 0.",
+          "htMax": "El alto debe ser 20 m o menos.",
+          "opWider": "El vano es más ancho que la pared más larga.",
+          "opTaller": "El vano es más alto que la pared.",
+          "opExceeds": "El área total de vanos supera el área de la pared.",
+          "areaMin": "Ingresa un área mayor que 0.",
+          "coats": "Al menos 1 mano.",
+          "kgPerSqm": "Ingresa un kg/sqm mayor que 0.",
+          "coverage": "Ingresa un rendimiento mayor que 0."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que debes saber sobre la pintura"
+      },
+      "faq": [
+        {
+          "q": "¿Por qué la cobertura de mi ferretería difiere de la tuya?",
+          "a": "La cobertura varía mucho — marca, dilución, textura y si es primera o segunda mano. Nuestros presets son promedios del mercado indio. Si la lata lista su propia cobertura, introdúcela en el panel Personalizar."
+        },
+        {
+          "q": "¿Necesito imprimación bajo la emulsión?",
+          "a": "Para pared nueva o enmasillada, sí — la imprimación sella y evita que el acabado se absorba de forma desigual. Para repintar sobre emulsión existente, una capa es opcional si la anterior está limpia y firme."
+        },
+        {
+          "q": "¿Cuántas manos de acabado debo cotizar?",
+          "a": "Dos es lo estándar — una sola rara vez da color uniforme. Sube a tres para colores intensos (rojo oscuro, azul marino) o zonas de alto tránsito."
+        },
+        {
+          "q": "¿Por qué la masilla se cotiza por área si se vende por peso?",
+          "a": "La masilla rinde unos 20–25 m² por kg, así que expresamos su cobertura en el mismo estilo m²/L que la pintura. Trata el valor en litros como \"unidades de masilla\" y convierte a kg al comprar."
+        },
+        {
+          "q": "¿Pinto el techo en la misma capa que las paredes?",
+          "a": "Si usas el mismo acabado en ambos, sí — marca \"incluir techo\". Si la pintura del techo es distinta, haz dos cálculos separados."
+        }
+      ]
+    },
+    "tile": {
+      "meta": {
+        "title": "Calculadora de azulejos — Piso, pared, adhesivo y lechada",
+        "description": "Calculadora de azulejos gratuita. Ingresa el área del piso o la pared, elige el tamaño del azulejo y obtén la cantidad exacta de azulejos, la cantidad de adhesivo y el volumen de lechada. Admite instalación vitrificada, cerámica y con cama de mortero tradicional, con desperdicio."
+      },
+      "crumb": "Calculadora de azulejos",
+      "title": "Calculadora de azulejos — Piso, pared, adhesivo y lechada",
+      "subtitle": "Ingresa la superficie, el tamaño del azulejo y elige un preajuste: devolvemos la cantidad de azulejos con desperdicio más el adhesivo y la lechada. Maneja tanto la instalación moderna con thin-set como la cama de mortero tradicional de 20 mm.",
+      "form": {
+        "surface": "Superficie",
+        "modes": {
+          "floor": "Piso",
+          "wall": "Pared"
+        },
+        "floorDims": "Dimensiones del piso",
+        "wallDims": "Dimensiones de la pared (ancho × alto)",
+        "excluded": "Áreas excluidas (columnas, drenajes, recortes)",
+        "addEx": "+ Agregar exclusión",
+        "noEx": "Sin exclusiones: se enlosa toda la superficie.",
+        "labelPh": "Etiqueta (opcional)",
+        "cutoutN": "Recorte {n}",
+        "tileSize": "Tamaño del azulejo",
+        "standard": "Estándar del azulejo",
+        "wastage": "Desperdicio",
+        "method": "Método",
+        "methods": {
+          "thinset": "Thin-set",
+          "bed": "Cama de mortero"
+        },
+        "coveragePerKg": "Rendimiento/kg",
+        "bedThickness": "Espesor de la cama",
+        "mortarRatio": "Proporción de mortero",
+        "groutWidth": "Ancho de lechada",
+        "groutDepth": "Profundidad de lechada",
+        "groutDepthHelp": "Por defecto, el espesor del azulejo. Edita para sobrescribir.",
+        "tileThickness": "Espesor del azulejo",
+        "errors": {
+          "lenMin": "Ingresa un largo mayor que 0.",
+          "lenMax": "El largo debe ser 500 m o menos.",
+          "widMin": "Ingresa un ancho mayor que 0.",
+          "widMax": "El ancho debe ser 500 m o menos.",
+          "tileLen": "Ingresa un largo de azulejo mayor que 0.",
+          "tileWid": "Ingresa un ancho de azulejo mayor que 0.",
+          "exLen": "El largo debe ser mayor que 0.",
+          "exWid": "El ancho debe ser mayor que 0.",
+          "exAll": "Las áreas excluidas suman toda la superficie. Redúcelas.",
+          "coverage": "El rendimiento debe ser mayor que 0.",
+          "thickness": "El espesor debe ser mayor que 0.",
+          "ratio": "Formato a:b (por ejemplo, 1:4)."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que debes saber sobre azulejos"
+      },
+      "faq": [
+        {
+          "q": "¿Por qué el desperdicio por defecto es 10% — más alto que concreto o ladrillo?",
+          "a": "Los azulejos desperdician más porque los cortes en paredes y esquinas producen medios azulejos que normalmente no se reutilizan. Los diseños complejos (diagonales, bordes, habitaciones pequeñas) desperdician aún más; las habitaciones cuadradas simples pueden bajar a 5–7%. Ajusta en Personalizar."
+        },
+        {
+          "q": "¿Adhesivo thin-set o cama de mortero? ¿Cuál cotizo?",
+          "a": "El thin-set (adhesivo de azulejos) es el estándar moderno — 3–5mm, funciona con vitrificado y cerámico, se vende por bolsa. La cama de mortero es el método tradicional indio: primero 20mm de mortero cemento:arena y luego se prensan los azulejos. Edificios antiguos aún lo usan; la obra nueva es casi toda thin-set."
+        },
+        {
+          "q": "¿El estimado de lechada incluye pérdidas por derrames y mezcla?",
+          "a": "No — el volumen es el relleno geométrico de las juntas. El consumo real es 15–25% mayor tras desperdicio de mezcla, variación de profundidad y derrames. Compra al menos una bolsa más de lo estimado."
+        },
+        {
+          "q": "¿Debo incluir el grosor del azulejo en la profundidad de junta?",
+          "a": "Normalmente la lechada no llega al sustrato — rellena el ~60–80% superior. Usamos el grosor del azulejo como estándar; bájalo a 6mm si solo rellenas la capa superficial."
+        },
+        {
+          "q": "¿Cómo calculo zócalos o bordes?",
+          "a": "Son partidas separadas — piezas de tira, cortadas distinto y a menudo otro azulejo. Calcula aparte: longitud del borde × alto × 1.10 de desperdicio = área, divide entre el área del azulejo de borde."
+        }
+      ]
+    },
+    "rebar": {
+      "meta": {
+        "title": "Calculadora de Rebar — Acero para Losa, Zapata y Muro (Longitud, Piezas y Peso)",
+        "description": "Calculadora de rebar gratuita para losas, zapatas, muros y cimentaciones de concreto. Ingresa largo, ancho, separación y recubrimiento al borde para obtener el número de barras, la longitud total, las piezas de 12 m y el peso por metro o pie cuadrado. Fórmula D²/162."
+      },
+      "crumb": "Calculadora de Rebar",
+      "title": "Calculadora de Rebar — Refuerzo para Losa, Zapata, Muro y Cimentación",
+      "subtitle": "Calcula cuánto acero de refuerzo necesitas para una losa, zapata, muro o cimentación. Ingresa el tamaño del elemento, la separación c/c y el recubrimiento al borde — obtén barras por dirección, longitud total, piezas de 12 m y peso por m² y ft².",
+      "form": {
+        "section1": "Elemento + dimensiones",
+        "member": "Tipo de elemento",
+        "memberHint": "Mismo cálculo de malla — solo cambia la separación inicial sugerida.",
+        "dimHint": "Dimensiones totales vertidas del elemento (borde a borde), no la malla.",
+        "section2": "Distribución del refuerzo",
+        "spacing": "Separación barra–barra (c/c)",
+        "spacingAria": "Separación centro a centro entre barras paralelas",
+        "edgeSpacing": "Recubrimiento al borde",
+        "edgeAria": "Distancia de la barra exterior al borde del elemento",
+        "section3": "Barra + pedido",
+        "barDiameter": "Diámetro de barra",
+        "barLength": "Longitud de una barra",
+        "barLengthAria": "Longitud comercial de una barra del proveedor",
+        "wastage": "Desperdicio",
+        "wastageAria": "Porcentaje de desperdicio por corte, traslapes y solapes",
+        "lenAria": "Largo del elemento",
+        "widAria": "Ancho del elemento",
+        "errors": {
+          "lenMin": "Ingresa un largo mayor que 0.",
+          "lenMax": "El largo debe ser 200 m o menos.",
+          "widMin": "Ingresa un ancho mayor que 0.",
+          "widMax": "El ancho debe ser 200 m o menos.",
+          "spMin": "Ingresa una separación mayor que 0.",
+          "spMax": "La separación debe ser 2 m o menos.",
+          "edgeMin": "El recubrimiento debe ser 0 o más.",
+          "edgeMax": "El recubrimiento debe ser menor que la mitad del elemento.",
+          "barLenMin": "Ingresa una longitud de barra mayor que 0.",
+          "barLenMax": "La longitud de barra debe ser 60 m o menos.",
+          "wastageRange": "El desperdicio debe estar entre 0 y 20%."
+        },
+        "examples": {
+          "fill1": "Ejemplo: losa de 6000 × 4000 mm, 150 mm c/c, barras de 12 mm, stock de 12 m."
+        },
+        "placeholder": "Llena el formulario y pulsa Calcular para ver tu pedido de rebar."
+      },
+      "sizes": {
+        "heading": "Tamaños de barra",
+        "note": "Los tamaños de barra de EE. UU. dan el diámetro en octavos de pulgada hasta #8; los métricos usan el diámetro nominal en milímetros. El rebar TMT en India se vende por diámetro nominal — normalmente 8, 10, 12, 16, 20, 25 y 32 mm.",
+        "cols": {
+          "imperial": "Tamaño imperial",
+          "metric": "Tamaño métrico",
+          "diaIn": "Diámetro (pulg)",
+          "diaMm": "Diámetro (mm)"
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que debes saber sobre el rebar"
+      },
+      "faq": [
+        {
+          "q": "¿Cuánto rebar necesito para una losa de concreto?",
+          "a": "Ingresa el largo y ancho de la losa, la separación centro a centro y el recubrimiento al borde. La calculadora devuelve las barras por dirección, la longitud total en metros y las barras de stock (12 m) a pedir. Una losa de 6 × 4 m a 150 mm c/c necesita unas 66 barras y cerca de 306 m de rebar."
+        },
+        {
+          "q": "¿Cómo calculo el rebar de una losa en pies cuadrados?",
+          "a": "Halla el área de la losa en pies cuadrados, divide entre la separación de cada lado para obtener las líneas de barra y multiplica por el largo de barra. La calculadora lo hace por ti y también informa el peso por pie cuadrado — una malla residencial de una capa ronda 1 kg por pie cuadrado."
+        },
+        {
+          "q": "¿Cómo calculo el peso del rebar?",
+          "a": "Peso del rebar = longitud total × peso por metro. Para diámetro D en milímetros, peso por metro ≈ D² / 162 kg/m. Una barra de 12 mm pesa unos 0,89 kg/m; una de 16 mm unos 1,58 kg/m."
+        },
+        {
+          "q": "¿Cuántas piezas de rebar necesito?",
+          "a": "Divide la longitud total de rebar entre la longitud comercial que compras (12 m para TMT indio) y redondea hacia arriba. La calculadora lo hace sola y muestra el número de piezas."
+        },
+        {
+          "q": "¿Necesito rebar en una zapata o cimentación?",
+          "a": "Casi siempre sí. Las zapatas y cimentaciones soportan toda la carga del edificio y requieren refuerzo contra la flexión y las grietas. Guía típica: 150–200 mm c/c con barras de 12–16 mm en las mallas superior e inferior. Confirma con los planos estructurales."
+        },
+        {
+          "q": "¿Necesito rebar en un muro de concreto?",
+          "a": "Depende. Los muros de contención y de cimentación casi siempre necesitan rebar vertical más barras horizontales de reparto. Los muros simples pueden bastar con malla ligera. Usa el elemento \"wall\" y confirma con un ingeniero."
+        },
+        {
+          "q": "¿Qué es el recubrimiento al borde (separación borde–malla)?",
+          "a": "Es la distancia desde la línea de rebar más externa hasta el borde del concreto — el concreto que protege las barras del agua y la corrosión. La calculadora resta dos recubrimientos (uno por extremo) de cada dimensión para obtener el tamaño real de la malla."
+        },
+        {
+          "q": "¿Qué me dice el rebar por metro cuadrado?",
+          "a": "Es el peso total de rebar dividido entre el área del elemento — una comprobación rápida de densidad. Una malla de una capa de 12 mm a 150 mm c/c es unos 11–12 kg por m²; una doble malla con barras de 16 mm puede llegar a 20–25 kg por m²."
+        }
+      ]
     }
-   },
-   "article": {
-    "toc": "En esta página",
-    "heading": "Todo lo que debes saber sobre el rebar"
-   },
-   "faq": [
-    {
-     "q": "¿Cuánto rebar necesito para una losa de concreto?",
-     "a": "Ingresa el largo y ancho de la losa, la separación centro a centro y el recubrimiento al borde. La calculadora devuelve las barras por dirección, la longitud total en metros y las barras de stock (12 m) a pedir. Una losa de 6 × 4 m a 150 mm c/c necesita unas 66 barras y cerca de 306 m de rebar."
+  },
+  "results": {
+    "brick": {
+      "bricksRequired": "Ladrillos requeridos",
+      "beforeWastage": "{n} antes del {pct}% de desperdicio",
+      "grossWall": "Área bruta de la pared",
+      "openings": "Vanos",
+      "netArea": "Área neta",
+      "masonryVolume": "Volumen de mampostería",
+      "paramsUsed": "Parámetros usados",
+      "preset": "Predefinido",
+      "brick": "Ladrillo",
+      "joint": "Junta",
+      "mortarRatio": "Proporción de mortero",
+      "brickWastage": "Desperdicio de ladrillo",
+      "mortarWastage": "Desperdicio de mortero",
+      "mortar": "Mortero",
+      "cement": "Cemento",
+      "sand": "Arena"
     },
-    {
-     "q": "¿Cómo calculo el rebar de una losa en pies cuadrados?",
-     "a": "Halla el área de la losa en pies cuadrados, divide entre la separación de cada lado para obtener las líneas de barra y multiplica por el largo de barra. La calculadora lo hace por ti y también informa el peso por pie cuadrado — una malla residencial de una capa ronda 1 kg por pie cuadrado."
+    "concrete": {
+      "cementRequired": "Cemento requerido",
+      "sand": "Arena",
+      "aggregate": "Agregado",
+      "dryVolume": "Volumen seco",
+      "wastageApplied": "Desperdicio aplicado",
+      "paramsUsed": "Parámetros usados",
+      "preset": "Predefinido",
+      "mixRatio": "Proporción de mezcla",
+      "cementDensity": "Densidad del cemento",
+      "bagWeight": "Peso de la bolsa",
+      "dtw": "Factor seco a húmedo"
     },
-    {
-     "q": "¿Cómo calculo el peso del rebar?",
-     "a": "Peso del rebar = longitud total × peso por metro. Para diámetro D en milímetros, peso por metro ≈ D² / 162 kg/m. Una barra de 12 mm pesa unos 0,89 kg/m; una de 16 mm unos 1,58 kg/m."
+    "paint": {
+      "totalRequired": "Total requerido",
+      "putty": "{n} {unit} de masilla",
+      "wallGross": "Bruto de la pared",
+      "ceiling": "Techo",
+      "openings": "Vanos",
+      "netPaintable": "Neto pintable",
+      "byLayer": "Por capa",
+      "coats": "manos",
+      "coat": "mano"
     },
-    {
-     "q": "¿Cuántas piezas de rebar necesito?",
-     "a": "Divide la longitud total de rebar entre la longitud comercial que compras (12 m para TMT indio) y redondea hacia arriba. La calculadora lo hace sola y muestra el número de piezas."
+    "steel": {
+      "total": "Acero total requerido",
+      "beforeWastage": "Antes del desperdicio",
+      "wastage": "Desperdicio",
+      "byBar": "Por barra",
+      "genericBar": "Barra {n}"
     },
-    {
-     "q": "¿Necesito rebar en una zapata o cimentación?",
-     "a": "Casi siempre sí. Las zapatas y cimentaciones soportan toda la carga del edificio y requieren refuerzo contra la flexión y las grietas. Guía típica: 150–200 mm c/c con barras de 12–16 mm en las mallas superior e inferior. Confirma con los planos estructurales."
-    },
-    {
-     "q": "¿Necesito rebar en un muro de concreto?",
-     "a": "Depende. Los muros de contención y de cimentación casi siempre necesitan rebar vertical más barras horizontales de reparto. Los muros simples pueden bastar con malla ligera. Usa el elemento \"wall\" y confirma con un ingeniero."
-    },
-    {
-     "q": "¿Qué es el recubrimiento al borde (separación borde–malla)?",
-     "a": "Es la distancia desde la línea de rebar más externa hasta el borde del concreto — el concreto que protege las barras del agua y la corrosión. La calculadora resta dos recubrimientos (uno por extremo) de cada dimensión para obtener el tamaño real de la malla."
-    },
-    {
-     "q": "¿Qué me dice el rebar por metro cuadrado?",
-     "a": "Es el peso total de rebar dividido entre el área del elemento — una comprobación rápida de densidad. Una malla de una capa de 12 mm a 150 mm c/c es unos 11–12 kg por m²; una doble malla con barras de 16 mm puede llegar a 20–25 kg por m²."
+    "tile": {
+      "tilesToOrder": "Azulejos por pedir",
+      "tiles": "azulejos",
+      "beforeWastage": "{count} antes + {pct}% de desperdicio",
+      "grossArea": "Área bruta",
+      "excluded": "Excluido",
+      "netTileable": "Neto enlosable",
+      "tileSize": "Tamaño del azulejo",
+      "thinset": "Adhesivo thin-set",
+      "quantity": "Cantidad",
+      "mortarBed": "Cama de mortero ({thickness} {unit}, {ratio})",
+      "volumeWet": "Volumen (húmedo)",
+      "cement": "Cemento",
+      "sand": "Arena",
+      "grout": "Lechada",
+      "volume": "Volumen",
+      "estimatedWeight": "Peso estimado"
     }
-   ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "newProject": "Nuevo proyecto",
+    "editProject": "Editar proyecto",
+    "empty": "Aún no hay proyectos. Crea el primero para empezar a guardar cálculos.",
+    "filters": {
+      "active": "Activos",
+      "archived": "Archivados",
+      "all": "Todos"
+    },
+    "archivedTag": "Archivado",
+    "noClient": "Sin cliente",
+    "calc": "cálc.",
+    "material": "material",
+    "form": {
+      "name": "Nombre del proyecto",
+      "clientName": "Nombre del cliente",
+      "currency": "Moneda",
+      "currencyFixed": "La moneda queda fija al crear. Crea un nuevo proyecto para cambiarla.",
+      "taxRegion": "Región fiscal",
+      "taxRegionFixed": "La región fiscal queda fija al crear.",
+      "location": "Ubicación (opcional)",
+      "address": "Dirección",
+      "city": "Ciudad",
+      "state": "Estado",
+      "pincode": "Código postal",
+      "country": "País",
+      "notes": "Notas",
+      "create": "Crear proyecto"
+    },
+    "actions": {
+      "confirmDelete": "¿Eliminar el proyecto \"{name}\"? Esto no se puede deshacer.",
+      "unarchive": "Desarchivar",
+      "archive": "Archivar",
+      "delete": "Eliminar"
+    },
+    "materials": {
+      "title": "Materiales",
+      "add": "Agregar material",
+      "empty": "Aún no hay materiales. Agrega precios para cemento, arena, acero y cualquier otra cosa que compres.",
+      "vendor": "Proveedor: {vendor}",
+      "confirmDelete": "¿Eliminar este material? Las cotizaciones existentes no se ven afectadas.",
+      "form": {
+        "suggestedFrom": "Sugerido desde \"{source}\"",
+        "aCalculation": " un cálculo",
+        "needsHint": " · necesita ≈ {qty}",
+        "enterPrice": ". Ingresa tu precio y guarda.",
+        "type": "Tipo",
+        "typeFixed": "El tipo queda fijo tras crear.",
+        "unit": "Unidad",
+        "unitFixed": "La unidad queda fija tras crear.",
+        "brand": "Marca",
+        "unitPrice": "Precio unitario ({currency})",
+        "quantity": "Cantidad ({unit})",
+        "quantityGeneric": "Cantidad (unidad)",
+        "qtyPh": "por ejemplo, 12",
+        "pricePh": "380.00",
+        "total": "Total: {currency} {amount}",
+        "vendor": "Proveedor",
+        "notes": "Notas"
+      },
+      "modal": {
+        "title": "Agregar material",
+        "typeReq": "Tipo *",
+        "brand": "Marca (opcional)",
+        "brandPh": "por ejemplo, UltraTech, ACC",
+        "unitReq": "Unidad *",
+        "priceReq": "Precio por {unit} ({currency}) *",
+        "pricePh": "0.00",
+        "vendor": "Proveedor (opcional)",
+        "vendorPh": "por ejemplo, Proveedor local",
+        "adding": "Agregando…",
+        "priceError": "Se requiere un precio unitario válido"
+      },
+      "fromCalc": {
+        "allImported": "Todo lo de este cálculo ya está en tus materiales.",
+        "createdMsg": "Se agregaron {n} material(es) con precio provisional de ₹100",
+        "updatedMsg": "se actualizó la cantidad en {n} material(es) existente(s)",
+        "editPrices": ". Edita los precios según sea necesario.",
+        "title": "Materiales de este cálculo",
+        "help": "Haz clic en una etiqueta para agregarla con un precio, o importa todos los faltantes con precios provisionales.",
+        "importing": "Importando…",
+        "allDone": "Todos importados",
+        "addAll": "Agregar todos los faltantes ({n})"
+      }
+    },
+    "calculations": {
+      "title": "Cálculos",
+      "empty": "Aún no hay cálculos. Ejecuta una calculadora y usa \"Guardar en proyecto\" para tomar una instantánea aquí.",
+      "browse": "Explorar calculadoras",
+      "ungrouped": "Sin agrupar",
+      "openHint": "Abre para editar o recalcular →",
+      "confirmDelete": "¿Eliminar el cálculo \"{name}\"? Esto no se puede deshacer.",
+      "menu": "…",
+      "recompute": "Recalcular",
+      "edit": {
+        "label": "Etiqueta",
+        "group": "Grupo",
+        "groupPh": "por ejemplo, Planta baja, Primer piso",
+        "description": "Descripción"
+      },
+      "result": {
+        "empty": "No hay vista previa disponible para este tipo de calculadora."
+      },
+      "saveButton": {
+        "runFirst": "Ejecuta la calculadora primero",
+        "saveHint": "Guarda esta ejecución en un proyecto",
+        "cta": "Guardar en proyecto",
+        "modalTitle": "Guardar cálculo",
+        "project": "Proyecto",
+        "loadingProjects": "Cargando proyectos…",
+        "noActive": "No tienes proyectos activos. ",
+        "createOne": "Crea uno",
+        "labelPh": "por ejemplo, Ladrillos de la planta baja",
+        "group": "Grupo (opcional)",
+        "groupPh": "por ejemplo, Planta baja",
+        "save": "Guardar"
+      }
+    },
+    "boq": {
+      "title": "BOQ",
+      "generate": "Generar BOQ",
+      "generating": "Generando…",
+      "name": "Nombre del BOQ",
+      "namePh": "por ejemplo, \"BOQ v1 — según diseño\"",
+      "autoName": "Deja en blanco para nombre autogenerado",
+      "notes": "Notas",
+      "notesPh": "por ejemplo, Excluye preparación del sitio y muro perimetral.",
+      "source": "Fuente de datos",
+      "willGen": "El BOQ se generará a partir de los {n} material(es) de tu proyecto con sus cantidades y precios.",
+      "noMaterials": "Aún no se han agregado materiales. Agrega materiales a tu proyecto antes de generar un BOQ.",
+      "alsoCalcs": "Incluir también los cálculos guardados",
+      "alsoCalcsHelp": "Agrega una sección separada con cantidades de material derivadas de los resultados de tu calculadora.",
+      "pickCalcs": "Selecciona qué cálculos incluir (deja todos sin marcar para incluir todos):",
+      "confirmDelete": "¿Eliminar este BOQ? Esto no se puede deshacer.",
+      "generated": "Generado el {date}",
+      "pdf": "PDF",
+      "ungrouped": "(Sin agrupar)",
+      "cols": {
+        "material": "Material",
+        "qty": "Cant.",
+        "unit": "Unidad",
+        "pricePerUnit": "Precio/unidad",
+        "amount": "Monto"
+      },
+      "materialsSubtotal": "Subtotal de materiales:",
+      "grandTotal": "Total general:",
+      "addMaterial": "+ Agregar material",
+      "editor": {
+        "label": "Etiqueta",
+        "override": "Monto sobrescrito ({currency})",
+        "reason": "Motivo",
+        "reasonPh": "por ejemplo, Descuento por volumen del proveedor por el pedido completo",
+        "save": "Guardar sobrescritura"
+      }
+    },
+    "invoice": {
+      "title": "Facturas",
+      "new": "Nueva factura",
+      "confirmDelete": "¿Eliminar esta factura? Esto no se puede deshacer.",
+      "generate": "Generar factura",
+      "generating": "Generando…",
+      "sourceQuotation": "Cotización de origen",
+      "grandTotal": "Total general: {total}",
+      "name": "Nombre de la factura (opcional)",
+      "namePh": "Autogenerado a partir del nombre de la cotización",
+      "due": "Fecha de vencimiento (opcional)",
+      "notes": "Notas (opcional)",
+      "amountDue": "Monto adeudado",
+      "amountPaid": "Monto pagado",
+      "remaining": "Restante",
+      "recordPayment": "Registrar pago",
+      "amount": "Monto",
+      "amountPh": "0.00",
+      "paymentNotes": "Notas (opcional)",
+      "paymentRefPh": "Referencia de pago…",
+      "savePayment": "Guardar pago",
+      "paymentNotesTitle": "Notas del pago",
+      "notesLabel": "Notas",
+      "createdUpdated": "Creado el {created} · Actualizado el {updated}",
+      "paid": " · Pagado el {date}"
+    },
+    "quotation": {
+      "title": "Cotizaciones",
+      "new": "Nueva cotización",
+      "generate": "Generar cotización",
+      "generating": "Generando…",
+      "confirmDelete": "¿Eliminar esta cotización? Esto no se puede deshacer.",
+      "selectBoq": "Selecciona un BOQ",
+      "sourceBoqReq": "BOQ de origen *",
+      "clientDetails": "Datos del cliente (opcional)",
+      "name": "Nombre",
+      "namePh": "Nombre del cliente",
+      "email": "Correo electrónico",
+      "emailPh": "client@example.com",
+      "phone": "Teléfono",
+      "phonePh": "+91 98765 43210",
+      "pricing": "Precios",
+      "markup": "Margen %",
+      "discount": "Descuento %",
+      "tax": "Impuesto % (GST)",
+      "materialsSubtotal": "Subtotal de materiales",
+      "markupLine": "+ Margen ({pct}%)",
+      "discountLine": "- Descuento ({pct}%)",
+      "taxLine": "+ Impuesto ({pct}%)",
+      "grandTotal": "Total general",
+      "quoteName": "Nombre de la cotización (opcional)",
+      "quoteNamePh": "Autogenerado si se deja en blanco",
+      "validUntil": "Válido hasta (opcional)",
+      "internalNotesPh": "Notas internas",
+      "termsOpt": "Términos y condiciones (opcional)",
+      "termsPh": "Condiciones de pago, validez, etc.",
+      "noClient": "Sin cliente",
+      "validSuffix": " · Válido hasta {date}",
+      "created": "Creado el {date}",
+      "sent": " · Enviado el {date}",
+      "markSent": "Marcar como enviado",
+      "markAccepted": "Marcar como aceptado",
+      "markRejected": "Marcar como rechazado",
+      "pricingSummary": "Resumen de precios",
+      "client": "Cliente",
+      "ungrouped": "(Sin agrupar)",
+      "cols": {
+        "item": "Ítem",
+        "qty": "Cant.",
+        "unit": "Unidad",
+        "rate": "Tarifa",
+        "amount": "Monto"
+      },
+      "notes": "Notas",
+      "termsTitle": "Términos y condiciones"
+    },
+    "brandSwap": {
+      "generic": "Genérico"
+    },
+    "runCalc": "Ejecutar una calculadora"
   }
- },
- "results": {
-  "brick": {
-   "bricksRequired": "Ladrillos requeridos",
-   "beforeWastage": "{n} antes del {pct}% de desperdicio",
-   "grossWall": "Área bruta de la pared",
-   "openings": "Vanos",
-   "netArea": "Área neta",
-   "masonryVolume": "Volumen de mampostería",
-   "paramsUsed": "Parámetros usados",
-   "preset": "Predefinido",
-   "brick": "Ladrillo",
-   "joint": "Junta",
-   "mortarRatio": "Proporción de mortero",
-   "brickWastage": "Desperdicio de ladrillo",
-   "mortarWastage": "Desperdicio de mortero",
-   "mortar": "Mortero",
-   "cement": "Cemento",
-   "sand": "Arena"
-  },
-  "concrete": {
-   "cementRequired": "Cemento requerido",
-   "sand": "Arena",
-   "aggregate": "Agregado",
-   "dryVolume": "Volumen seco",
-   "wastageApplied": "Desperdicio aplicado",
-   "paramsUsed": "Parámetros usados",
-   "preset": "Predefinido",
-   "mixRatio": "Proporción de mezcla",
-   "cementDensity": "Densidad del cemento",
-   "bagWeight": "Peso de la bolsa",
-   "dtw": "Factor seco a húmedo"
-  },
-  "paint": {
-   "totalRequired": "Total requerido",
-   "putty": "{n} {unit} de masilla",
-   "wallGross": "Bruto de la pared",
-   "ceiling": "Techo",
-   "openings": "Vanos",
-   "netPaintable": "Neto pintable",
-   "byLayer": "Por capa",
-   "coats": "manos",
-   "coat": "mano"
-  },
-  "steel": {
-   "total": "Acero total requerido",
-   "beforeWastage": "Antes del desperdicio",
-   "wastage": "Desperdicio",
-   "byBar": "Por barra",
-   "genericBar": "Barra {n}"
-  },
-  "tile": {
-   "tilesToOrder": "Azulejos por pedir",
-   "tiles": "azulejos",
-   "beforeWastage": "{count} antes + {pct}% de desperdicio",
-   "grossArea": "Área bruta",
-   "excluded": "Excluido",
-   "netTileable": "Neto enlosable",
-   "tileSize": "Tamaño del azulejo",
-   "thinset": "Adhesivo thin-set",
-   "quantity": "Cantidad",
-   "mortarBed": "Cama de mortero ({thickness} {unit}, {ratio})",
-   "volumeWet": "Volumen (húmedo)",
-   "cement": "Cemento",
-   "sand": "Arena",
-   "grout": "Lechada",
-   "volume": "Volumen",
-   "estimatedWeight": "Peso estimado"
-  }
- },
- "projects": {
-  "title": "Proyectos",
-  "newProject": "Nuevo proyecto",
-  "editProject": "Editar proyecto",
-  "empty": "Aún no hay proyectos. Crea el primero para empezar a guardar cálculos.",
-  "filters": {
-   "active": "Activos",
-   "archived": "Archivados",
-   "all": "Todos"
-  },
-  "archivedTag": "Archivado",
-  "noClient": "Sin cliente",
-  "calc": "cálc.",
-  "material": "material",
-  "form": {
-   "name": "Nombre del proyecto",
-   "clientName": "Nombre del cliente",
-   "currency": "Moneda",
-   "currencyFixed": "La moneda queda fija al crear. Crea un nuevo proyecto para cambiarla.",
-   "taxRegion": "Región fiscal",
-   "taxRegionFixed": "La región fiscal queda fija al crear.",
-   "location": "Ubicación (opcional)",
-   "address": "Dirección",
-   "city": "Ciudad",
-   "state": "Estado",
-   "pincode": "Código postal",
-   "country": "País",
-   "notes": "Notas",
-   "create": "Crear proyecto"
-  },
-  "actions": {
-   "confirmDelete": "¿Eliminar el proyecto \"{name}\"? Esto no se puede deshacer.",
-   "unarchive": "Desarchivar",
-   "archive": "Archivar",
-   "delete": "Eliminar"
-  },
-  "materials": {
-   "title": "Materiales",
-   "add": "Agregar material",
-   "empty": "Aún no hay materiales. Agrega precios para cemento, arena, acero y cualquier otra cosa que compres.",
-   "vendor": "Proveedor: {vendor}",
-   "confirmDelete": "¿Eliminar este material? Las cotizaciones existentes no se ven afectadas.",
-   "form": {
-    "suggestedFrom": "Sugerido desde \"{source}\"",
-    "aCalculation": " un cálculo",
-    "needsHint": " · necesita ≈ {qty}",
-    "enterPrice": ". Ingresa tu precio y guarda.",
-    "type": "Tipo",
-    "typeFixed": "El tipo queda fijo tras crear.",
-    "unit": "Unidad",
-    "unitFixed": "La unidad queda fija tras crear.",
-    "brand": "Marca",
-    "unitPrice": "Precio unitario ({currency})",
-    "quantity": "Cantidad ({unit})",
-    "quantityGeneric": "Cantidad (unidad)",
-    "qtyPh": "por ejemplo, 12",
-    "pricePh": "380.00",
-    "total": "Total: {currency} {amount}",
-    "vendor": "Proveedor",
-    "notes": "Notas"
-   },
-   "modal": {
-    "title": "Agregar material",
-    "typeReq": "Tipo *",
-    "brand": "Marca (opcional)",
-    "brandPh": "por ejemplo, UltraTech, ACC",
-    "unitReq": "Unidad *",
-    "priceReq": "Precio por {unit} ({currency}) *",
-    "pricePh": "0.00",
-    "vendor": "Proveedor (opcional)",
-    "vendorPh": "por ejemplo, Proveedor local",
-    "adding": "Agregando…",
-    "priceError": "Se requiere un precio unitario válido"
-   },
-   "fromCalc": {
-    "allImported": "Todo lo de este cálculo ya está en tus materiales.",
-    "createdMsg": "Se agregaron {n} material(es) con precio provisional de ₹100",
-    "updatedMsg": "se actualizó la cantidad en {n} material(es) existente(s)",
-    "editPrices": ". Edita los precios según sea necesario.",
-    "title": "Materiales de este cálculo",
-    "help": "Haz clic en una etiqueta para agregarla con un precio, o importa todos los faltantes con precios provisionales.",
-    "importing": "Importando…",
-    "allDone": "Todos importados",
-    "addAll": "Agregar todos los faltantes ({n})"
-   }
-  },
-  "calculations": {
-   "title": "Cálculos",
-   "empty": "Aún no hay cálculos. Ejecuta una calculadora y usa \"Guardar en proyecto\" para tomar una instantánea aquí.",
-   "browse": "Explorar calculadoras",
-   "ungrouped": "Sin agrupar",
-   "openHint": "Abre para editar o recalcular →",
-   "confirmDelete": "¿Eliminar el cálculo \"{name}\"? Esto no se puede deshacer.",
-   "menu": "…",
-   "recompute": "Recalcular",
-   "edit": {
-    "label": "Etiqueta",
-    "group": "Grupo",
-    "groupPh": "por ejemplo, Planta baja, Primer piso",
-    "description": "Descripción"
-   },
-   "result": {
-    "empty": "No hay vista previa disponible para este tipo de calculadora."
-   },
-   "saveButton": {
-    "runFirst": "Ejecuta la calculadora primero",
-    "saveHint": "Guarda esta ejecución en un proyecto",
-    "cta": "Guardar en proyecto",
-    "modalTitle": "Guardar cálculo",
-    "project": "Proyecto",
-    "loadingProjects": "Cargando proyectos…",
-    "noActive": "No tienes proyectos activos. ",
-    "createOne": "Crea uno",
-    "labelPh": "por ejemplo, Ladrillos de la planta baja",
-    "group": "Grupo (opcional)",
-    "groupPh": "por ejemplo, Planta baja",
-    "save": "Guardar"
-   }
-  },
-  "boq": {
-   "title": "BOQ",
-   "generate": "Generar BOQ",
-   "generating": "Generando…",
-   "name": "Nombre del BOQ",
-   "namePh": "por ejemplo, \"BOQ v1 — según diseño\"",
-   "autoName": "Deja en blanco para nombre autogenerado",
-   "notes": "Notas",
-   "notesPh": "por ejemplo, Excluye preparación del sitio y muro perimetral.",
-   "source": "Fuente de datos",
-   "willGen": "El BOQ se generará a partir de los {n} material(es) de tu proyecto con sus cantidades y precios.",
-   "noMaterials": "Aún no se han agregado materiales. Agrega materiales a tu proyecto antes de generar un BOQ.",
-   "alsoCalcs": "Incluir también los cálculos guardados",
-   "alsoCalcsHelp": "Agrega una sección separada con cantidades de material derivadas de los resultados de tu calculadora.",
-   "pickCalcs": "Selecciona qué cálculos incluir (deja todos sin marcar para incluir todos):",
-   "confirmDelete": "¿Eliminar este BOQ? Esto no se puede deshacer.",
-   "generated": "Generado el {date}",
-   "pdf": "PDF",
-   "ungrouped": "(Sin agrupar)",
-   "cols": {
-    "material": "Material",
-    "qty": "Cant.",
-    "unit": "Unidad",
-    "pricePerUnit": "Precio/unidad",
-    "amount": "Monto"
-   },
-   "materialsSubtotal": "Subtotal de materiales:",
-   "grandTotal": "Total general:",
-   "addMaterial": "+ Agregar material",
-   "editor": {
-    "label": "Etiqueta",
-    "override": "Monto sobrescrito ({currency})",
-    "reason": "Motivo",
-    "reasonPh": "por ejemplo, Descuento por volumen del proveedor por el pedido completo",
-    "save": "Guardar sobrescritura"
-   }
-  },
-  "invoice": {
-   "title": "Facturas",
-   "new": "Nueva factura",
-   "confirmDelete": "¿Eliminar esta factura? Esto no se puede deshacer.",
-   "generate": "Generar factura",
-   "generating": "Generando…",
-   "sourceQuotation": "Cotización de origen",
-   "grandTotal": "Total general: {total}",
-   "name": "Nombre de la factura (opcional)",
-   "namePh": "Autogenerado a partir del nombre de la cotización",
-   "due": "Fecha de vencimiento (opcional)",
-   "notes": "Notas (opcional)",
-   "amountDue": "Monto adeudado",
-   "amountPaid": "Monto pagado",
-   "remaining": "Restante",
-   "recordPayment": "Registrar pago",
-   "amount": "Monto",
-   "amountPh": "0.00",
-   "paymentNotes": "Notas (opcional)",
-   "paymentRefPh": "Referencia de pago…",
-   "savePayment": "Guardar pago",
-   "paymentNotesTitle": "Notas del pago",
-   "notesLabel": "Notas",
-   "createdUpdated": "Creado el {created} · Actualizado el {updated}",
-   "paid": " · Pagado el {date}"
-  },
-  "quotation": {
-   "title": "Cotizaciones",
-   "new": "Nueva cotización",
-   "generate": "Generar cotización",
-   "generating": "Generando…",
-   "confirmDelete": "¿Eliminar esta cotización? Esto no se puede deshacer.",
-   "selectBoq": "Selecciona un BOQ",
-   "sourceBoqReq": "BOQ de origen *",
-   "clientDetails": "Datos del cliente (opcional)",
-   "name": "Nombre",
-   "namePh": "Nombre del cliente",
-   "email": "Correo electrónico",
-   "emailPh": "client@example.com",
-   "phone": "Teléfono",
-   "phonePh": "+91 98765 43210",
-   "pricing": "Precios",
-   "markup": "Margen %",
-   "discount": "Descuento %",
-   "tax": "Impuesto % (GST)",
-   "materialsSubtotal": "Subtotal de materiales",
-   "markupLine": "+ Margen ({pct}%)",
-   "discountLine": "- Descuento ({pct}%)",
-   "taxLine": "+ Impuesto ({pct}%)",
-   "grandTotal": "Total general",
-   "quoteName": "Nombre de la cotización (opcional)",
-   "quoteNamePh": "Autogenerado si se deja en blanco",
-   "validUntil": "Válido hasta (opcional)",
-   "internalNotesPh": "Notas internas",
-   "termsOpt": "Términos y condiciones (opcional)",
-   "termsPh": "Condiciones de pago, validez, etc.",
-   "noClient": "Sin cliente",
-   "validSuffix": " · Válido hasta {date}",
-   "created": "Creado el {date}",
-   "sent": " · Enviado el {date}",
-   "markSent": "Marcar como enviado",
-   "markAccepted": "Marcar como aceptado",
-   "markRejected": "Marcar como rechazado",
-   "pricingSummary": "Resumen de precios",
-   "client": "Cliente",
-   "ungrouped": "(Sin agrupar)",
-   "cols": {
-    "item": "Ítem",
-    "qty": "Cant.",
-    "unit": "Unidad",
-    "rate": "Tarifa",
-    "amount": "Monto"
-   },
-   "notes": "Notas",
-   "termsTitle": "Términos y condiciones"
-  },
-  "brandSwap": {
-   "generic": "Genérico"
-  },
-  "runCalc": "Ejecutar una calculadora"
- }
 }

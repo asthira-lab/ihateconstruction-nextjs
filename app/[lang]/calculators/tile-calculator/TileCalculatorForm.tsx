@@ -6,6 +6,10 @@ import { NumberSliderInput } from "@/components/ui/NumberSliderInput";
 import { QuantityInput } from "@/components/ui/QuantityInput";
 import { SaveToProjectButton } from "@/components/projects/SaveToProjectButton";
 import { TileResultCard } from "@/components/calculators/tile/ResultCard";
+import { BlockGroup } from "@/components/calculators/ui/BlockGroup";
+import { VariableRow } from "@/components/calculators/ui/VariableRow";
+import { ActionPanel } from "@/components/calculators/ui/ActionPanel";
+import { FeedbackBar } from "@/components/calculators/ui/FeedbackBar";
 import type {
   AdhesiveMethod,
   AreaQuantity,
@@ -258,195 +262,217 @@ export function TileCalculatorForm({
     });
   };
 
+  const onReload = () => {
+    if (hasErrors) return;
+    const req = toTileRequest(state);
+    startTransition(async () => {
+      const res = await submitTileCalculation(req);
+      setResult(res);
+      if (res.ok) setSavedRequest(req);
+      else setSavedRequest(null);
+    });
+  };
+
+  const onClear = () => {
+    setState(makeInitialState(initialStandards));
+    setResult(null);
+    setSavedRequest(null);
+  };
+
   const errCode = result && !result.ok ? result.error.code : null;
   const errMsg = result && !result.ok ? result.error.message : null;
 
   return (
-    <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,20rem)]">
-      <form onSubmit={onSubmit} className="space-y-8" noValidate>
-        <fieldset className="space-y-2">
-          <legend className="text-sm font-semibold">{t.surface}</legend>
-          <div className="flex gap-2">
-            {(["floor", "wall"] as const).map((s) => (
-              <button
-                key={s}
-                type="button"
-                onClick={() => set("surfaceType", s)}
-                aria-pressed={state.surfaceType === s}
-                className={`flex-1 rounded border px-3 py-2 text-sm font-medium transition-colors ${
-                  state.surfaceType === s
-                    ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black"
-                    : "border-black/15 bg-white text-black hover:bg-black/[.04] dark:border-white/20 dark:bg-black dark:text-white dark:hover:bg-white/[.06]"
-                }`}
-              >
-                {s === "floor" ? t.modes.floor : t.modes.wall}
-              </button>
-            ))}
-          </div>
-        </fieldset>
-
-        <fieldset className="space-y-4">
-          <legend className="text-sm font-semibold">
-            {state.surfaceType === "floor" ? t.floorDims : t.wallDims}
-          </legend>
-          <LabeledRow label={common.length} error={errors.surfaceLength}>
-            <QuantityInput
-              value={state.surfaceLength}
-              onChange={(q) => set("surfaceLength", q)}
-              units={LENGTH_UNITS}
-              min={0.1}
-              max={500}
-              step={0.1}
-              decimals={2}
-              ariaLabel={common.length}
-            />
-          </LabeledRow>
-          <LabeledRow
-            label={state.surfaceType === "wall" ? common.height : common.width}
-            error={errors.surfaceWidth}
-          >
-            <QuantityInput
-              value={state.surfaceWidth}
-              onChange={(q) => set("surfaceWidth", q)}
-              units={LENGTH_UNITS}
-              min={0.1}
-              max={500}
-              step={0.1}
-              decimals={2}
-              ariaLabel={common.width}
-            />
-          </LabeledRow>
-
-          <div className="space-y-2 border-t border-black/10 pt-4 dark:border-white/10">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-semibold">{t.excluded}</span>
-              <Button variant="secondary" size="sm" onClick={addExclude} type="button">
-                {t.addEx}
-              </Button>
-            </div>
-            {state.excludeAreas.length === 0 ? (
-              <p className="text-xs text-black/50 dark:text-white/50">{t.noEx}</p>
-            ) : (
-              <div className="space-y-4">
-                {errors.excludeAreasTotal ? (
-                  <p role="alert" className="text-xs text-red-600 dark:text-red-400">
-                    {errors.excludeAreasTotal}
-                  </p>
-                ) : null}
-                {state.excludeAreas.map((ex, i) => {
-                  const idx = String(i + 1);
-                  return (
-                    <div key={i} className="rounded border border-black/10 p-3 dark:border-white/10">
-                      <div className="mb-2 flex items-center justify-between">
-                        <input
-                          value={ex.label ?? ""}
-                          onChange={(e) => patchExclude(i, { label: e.target.value })}
-                          placeholder={t.labelPh}
-                          className="w-40 rounded border border-transparent bg-transparent px-1 py-0.5 text-sm focus:border-black/15 focus:outline-none dark:focus:border-white/20"
-                        />
-                        <button
-                          type="button"
-                          onClick={() => removeExclude(i)}
-                          className="text-xs text-red-600 hover:underline dark:text-red-400"
-                          aria-label={`${common.remove} ${t.cutoutN.replace("{n}", idx)}`}
-                        >
-                          {common.remove}
-                        </button>
-                      </div>
-                      <div className="space-y-2">
-                        <LabeledRow label={common.length} compact error={errors.excludeAreas?.[i]?.length}>
-                          <QuantityInput
-                            value={ex.length}
-                            onChange={(q) => patchExclude(i, { length: q })}
-                            units={LENGTH_UNITS}
-                            min={0.01}
-                            max={100}
-                            step={0.05}
-                            decimals={2}
-                            ariaLabel={`${t.cutoutN.replace("{n}", idx)} ${common.length}`}
-                          />
-                        </LabeledRow>
-                        <LabeledRow label={common.width} compact error={errors.excludeAreas?.[i]?.width}>
-                          <QuantityInput
-                            value={ex.width}
-                            onChange={(q) => patchExclude(i, { width: q })}
-                            units={LENGTH_UNITS}
-                            min={0.01}
-                            max={100}
-                            step={0.05}
-                            decimals={2}
-                            ariaLabel={`${t.cutoutN.replace("{n}", idx)} ${common.width}`}
-                          />
-                        </LabeledRow>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        </fieldset>
-
-        <fieldset className="space-y-4">
-          <legend className="text-sm font-semibold">{t.tileSize}</legend>
-          <LabeledRow label={common.length} error={errors.tileLength}>
-            <QuantityInput
-              value={state.tileLength}
-              onChange={(q) => set("tileLength", q)}
-              units={LENGTH_UNITS}
-              min={10}
-              max={2000}
-              step={10}
-              decimals={0}
-              ariaLabel={common.length}
-            />
-          </LabeledRow>
-          <LabeledRow label={common.width} error={errors.tileWidth}>
-            <QuantityInput
-              value={state.tileWidth}
-              onChange={(q) => set("tileWidth", q)}
-              units={LENGTH_UNITS}
-              min={10}
-              max={2000}
-              step={10}
-              decimals={0}
-              ariaLabel={common.width}
-            />
-          </LabeledRow>
-        </fieldset>
-
-        <fieldset className="space-y-4">
-          <legend className="text-sm font-semibold">{t.standard}</legend>
-          <LabeledRow label={common.preset}>
-            <select
-              value={state.presetId}
-              onChange={(e) => changePreset(e.target.value)}
-              className="w-full rounded border border-black/15 bg-white px-3 py-2 text-sm text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-white/20 dark:bg-black dark:text-white"
-            >
-              {initialStandards.presets.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.label}
-                </option>
+    <div className="space-y-4">
+      <form onSubmit={onSubmit} className="space-y-4" noValidate>
+        <BlockGroup title={t.surface}>
+          <div className="space-y-3">
+            <div className="flex gap-2">
+              {(["floor", "wall"] as const).map((s) => (
+                <button
+                  key={s}
+                  type="button"
+                  onClick={() => set("surfaceType", s)}
+                  aria-pressed={state.surfaceType === s}
+                  className={`flex-1 rounded border px-3 py-2 text-sm font-medium transition-colors ${
+                    state.surfaceType === s
+                      ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black"
+                      : "border-black/15 bg-white text-black hover:bg-black/[.04] dark:border-white/20 dark:bg-black dark:text-white dark:hover:bg-white/[.06]"
+                  }`}
+                >
+                  {s === "floor" ? t.modes.floor : t.modes.wall}
+                </button>
               ))}
-            </select>
-          </LabeledRow>
-          <p className="text-xs text-black/60 dark:text-white/60">
-            {initialStandards.presets.find((p) => p.id === state.presetId)?.description}
-          </p>
+            </div>
+          </div>
+        </BlockGroup>
 
-          <label className="flex cursor-pointer items-center gap-2 pt-1 text-sm">
-            <input
-              type="checkbox"
-              checked={state.useCustom}
-              onChange={(e) => set("useCustom", e.target.checked)}
-              className="accent-black dark:accent-white"
-            />
-            {cCommon.customParams}
-          </label>
+        <BlockGroup title={state.surfaceType === "floor" ? t.floorDims : t.wallDims}>
+          <div className="space-y-4">
+            <VariableRow label={common.length} error={errors.surfaceLength}>
+              <QuantityInput
+                value={state.surfaceLength}
+                onChange={(q) => set("surfaceLength", q)}
+                units={LENGTH_UNITS}
+                min={0.1}
+                max={500}
+                step={0.1}
+                decimals={2}
+                ariaLabel={common.length}
+              />
+            </VariableRow>
+            <VariableRow
+              label={state.surfaceType === "wall" ? common.height : common.width}
+              error={errors.surfaceWidth}
+            >
+              <QuantityInput
+                value={state.surfaceWidth}
+                onChange={(q) => set("surfaceWidth", q)}
+                units={LENGTH_UNITS}
+                min={0.1}
+                max={500}
+                step={0.1}
+                decimals={2}
+                ariaLabel={common.width}
+              />
+            </VariableRow>
 
-          {state.useCustom ? (
-            <div className="space-y-3 rounded border border-black/10 p-3 dark:border-white/10">
-              <LabeledRow label={t.wastage} compact>
+            <div className="space-y-3 border-t border-black/10 pt-4 dark:border-white/10">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-semibold">{t.excluded}</span>
+                <Button variant="secondary" size="sm" onClick={addExclude} type="button">
+                  {t.addEx}
+                </Button>
+              </div>
+              {state.excludeAreas.length === 0 ? (
+                <p className="text-xs text-black/50 dark:text-white/50">{t.noEx}</p>
+              ) : (
+                <div className="space-y-4">
+                  {errors.excludeAreasTotal ? (
+                    <p role="alert" className="text-xs text-red-600 dark:text-red-400">
+                      {errors.excludeAreasTotal}
+                    </p>
+                  ) : null}
+                  {state.excludeAreas.map((ex, i) => {
+                    const idx = String(i + 1);
+                    return (
+                      <div key={i} className="rounded border border-black/10 p-4 dark:border-white/10">
+                        <div className="mb-3 flex items-center justify-between">
+                          <input
+                            value={ex.label ?? ""}
+                            onChange={(e) => patchExclude(i, { label: e.target.value })}
+                            placeholder={t.labelPh}
+                            className="w-40 rounded border border-transparent bg-transparent px-1 py-0.5 text-sm focus:border-black/15 focus:outline-none dark:focus:border-white/20"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => removeExclude(i)}
+                            className="text-xs text-red-600 hover:underline dark:text-red-400"
+                            aria-label={`${common.remove} ${t.cutoutN.replace("{n}", idx)}`}
+                          >
+                            {common.remove}
+                          </button>
+                        </div>
+                        <div className="space-y-3">
+                          <VariableRow label={common.length} error={errors.excludeAreas?.[i]?.length}>
+                            <QuantityInput
+                              value={ex.length}
+                              onChange={(q) => patchExclude(i, { length: q })}
+                              units={LENGTH_UNITS}
+                              min={0.01}
+                              max={100}
+                              step={0.05}
+                              decimals={2}
+                              ariaLabel={`${t.cutoutN.replace("{n}", idx)} ${common.length}`}
+                            />
+                          </VariableRow>
+                          <VariableRow label={common.width} error={errors.excludeAreas?.[i]?.width}>
+                            <QuantityInput
+                              value={ex.width}
+                              onChange={(q) => patchExclude(i, { width: q })}
+                              units={LENGTH_UNITS}
+                              min={0.01}
+                              max={100}
+                              step={0.05}
+                              decimals={2}
+                              ariaLabel={`${t.cutoutN.replace("{n}", idx)} ${common.width}`}
+                            />
+                          </VariableRow>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          </div>
+        </BlockGroup>
+
+        <BlockGroup title={t.tileSize}>
+          <div className="space-y-4">
+            <VariableRow label={common.length} error={errors.tileLength}>
+              <QuantityInput
+                value={state.tileLength}
+                onChange={(q) => set("tileLength", q)}
+                units={LENGTH_UNITS}
+                min={10}
+                max={2000}
+                step={10}
+                decimals={0}
+                ariaLabel={common.length}
+              />
+            </VariableRow>
+            <VariableRow label={common.width} error={errors.tileWidth}>
+              <QuantityInput
+                value={state.tileWidth}
+                onChange={(q) => set("tileWidth", q)}
+                units={LENGTH_UNITS}
+                min={10}
+                max={2000}
+                step={10}
+                decimals={0}
+                ariaLabel={common.width}
+              />
+            </VariableRow>
+          </div>
+        </BlockGroup>
+
+        <BlockGroup title={t.standard}>
+          <div className="space-y-3">
+            <VariableRow label={common.preset}>
+              <select
+                value={state.presetId}
+                onChange={(e) => changePreset(e.target.value)}
+                aria-label={common.preset}
+                className="w-full rounded border border-black/15 bg-white px-2 py-1.5 text-sm text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-white/20 dark:bg-black dark:text-white"
+              >
+                {initialStandards.presets.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.label}
+                  </option>
+                ))}
+              </select>
+            </VariableRow>
+            <p className="text-xs text-black/60 dark:text-white/60">
+              {initialStandards.presets.find((p) => p.id === state.presetId)?.description}
+            </p>
+
+            <label className="flex cursor-pointer items-center gap-2 text-sm text-black/70 dark:text-white/70">
+              <input
+                type="checkbox"
+                checked={state.useCustom}
+                onChange={(e) => set("useCustom", e.target.checked)}
+                className="accent-black dark:accent-white"
+              />
+              {cCommon.customParams}
+            </label>
+          </div>
+        </BlockGroup>
+
+        {state.useCustom ? (
+          <BlockGroup title={cCommon.customParams}>
+            <div className="space-y-4">
+              <VariableRow label={t.wastage}>
                 <NumberSliderInput
                   value={Number(state.customWastagePercent)}
                   onChange={(n) => set("customWastagePercent", String(n))}
@@ -457,9 +483,9 @@ export function TileCalculatorForm({
                   suffix="%"
                   ariaLabel={t.wastage}
                 />
-              </LabeledRow>
+              </VariableRow>
 
-              <LabeledRow label={t.method} compact>
+              <VariableRow label={t.method}>
                 <div className="flex gap-2">
                   {(["thin-set", "mortar-bed"] as const).map((m) => (
                     <button
@@ -477,10 +503,10 @@ export function TileCalculatorForm({
                     </button>
                   ))}
                 </div>
-              </LabeledRow>
+              </VariableRow>
 
               {state.customAdhesiveMethod === "thin-set" ? (
-                <LabeledRow label={t.coveragePerKg} compact error={errors.customThinsetCoverage}>
+                <VariableRow label={t.coveragePerKg} error={errors.customThinsetCoverage}>
                   <QuantityInput
                     value={state.customThinsetCoverage}
                     onChange={(q) => set("customThinsetCoverage", q)}
@@ -491,10 +517,10 @@ export function TileCalculatorForm({
                     decimals={1}
                     ariaLabel={t.coveragePerKg}
                   />
-                </LabeledRow>
+                </VariableRow>
               ) : (
                 <>
-                  <LabeledRow label={t.bedThickness} compact error={errors.customMortarBedThickness}>
+                  <VariableRow label={t.bedThickness} error={errors.customMortarBedThickness}>
                     <QuantityInput
                       value={state.customMortarBedThickness}
                       onChange={(q) => set("customMortarBedThickness", q)}
@@ -505,8 +531,8 @@ export function TileCalculatorForm({
                       decimals={0}
                       ariaLabel={t.bedThickness}
                     />
-                  </LabeledRow>
-                  <LabeledRow label={t.mortarRatio} compact error={errors.customMortarRatio}>
+                  </VariableRow>
+                  <VariableRow label={t.mortarRatio} error={errors.customMortarRatio}>
                     <input
                       value={state.customMortarRatio}
                       onChange={(e) => set("customMortarRatio", e.target.value)}
@@ -514,11 +540,11 @@ export function TileCalculatorForm({
                       className="w-full rounded border border-black/15 bg-white px-3 py-2 text-sm text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-white/20 dark:bg-black dark:text-white"
                       aria-label={t.mortarRatio}
                     />
-                  </LabeledRow>
+                  </VariableRow>
                 </>
               )}
 
-              <LabeledRow label={t.groutWidth} compact>
+              <VariableRow label={t.groutWidth}>
                 <QuantityInput
                   value={state.customGroutWidth}
                   onChange={(q) => set("customGroutWidth", q)}
@@ -529,8 +555,8 @@ export function TileCalculatorForm({
                   decimals={1}
                   ariaLabel={t.groutWidth}
                 />
-              </LabeledRow>
-              <LabeledRow label={t.groutDepth} compact>
+              </VariableRow>
+              <VariableRow label={t.groutDepth} hint={t.groutDepthHelp}>
                 <QuantityInput
                   value={
                     state.customGroutDepthTouched
@@ -551,13 +577,8 @@ export function TileCalculatorForm({
                   decimals={1}
                   ariaLabel={t.groutDepth}
                 />
-                {!state.customGroutDepthTouched ? (
-                  <p className="mt-1 text-[11px] text-black/50 dark:text-white/50">
-                    {t.groutDepthHelp}
-                  </p>
-                ) : null}
-              </LabeledRow>
-              <LabeledRow label={t.tileThickness} compact>
+              </VariableRow>
+              <VariableRow label={t.tileThickness}>
                 <QuantityInput
                   value={state.customTileThickness}
                   onChange={(q) => set("customTileThickness", q)}
@@ -568,10 +589,10 @@ export function TileCalculatorForm({
                   decimals={1}
                   ariaLabel={t.tileThickness}
                 />
-              </LabeledRow>
+              </VariableRow>
             </div>
-          ) : null}
-        </fieldset>
+          </BlockGroup>
+        ) : null}
 
         <div className="space-y-3">
           {errCode ? (
@@ -596,7 +617,7 @@ export function TileCalculatorForm({
         </div>
       </form>
 
-      <aside aria-live="polite" className="md:sticky md:top-6 md:self-start">
+      <div aria-live="polite">
         {result?.ok ? (
           <>
             <TileResultCard data={result.data} />
@@ -613,33 +634,16 @@ export function TileCalculatorForm({
             {isPending ? common.calculating : cCommon.fillFormTile}
           </div>
         )}
-      </aside>
-    </div>
-  );
-}
-
-function LabeledRow({
-  label,
-  compact,
-  error,
-  children,
-}: {
-  label: string;
-  compact?: boolean;
-  error?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className={`grid gap-2 ${compact ? "sm:grid-cols-[7rem_1fr]" : "sm:grid-cols-[9rem_1fr]"} sm:items-start`}>
-      <label className="pt-2 text-sm text-black/70 dark:text-white/70">{label}</label>
-      <div>
-        {children}
-        {error ? (
-          <p className="mt-1 text-xs text-red-600 dark:text-red-400" role="alert">
-            {error}
-          </p>
-        ) : null}
       </div>
+
+      <ActionPanel
+        reloadLabel={cCommon.reload}
+        clearLabel={cCommon.clearAll}
+        onReload={onReload}
+        onClear={onClear}
+      />
+
+      <FeedbackBar question={cCommon.didWeSolve} yesLabel={common.yes} noLabel={common.no} />
     </div>
   );
 }

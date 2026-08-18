@@ -13,6 +13,7 @@ import { CalculatorPageShell } from "@/components/calculators/ui/CalculatorPageS
 import { TableOfContents } from "@/components/calculators/ui/TableOfContents";
 import { SimilarCalculators } from "@/components/calculators/ui/SimilarCalculators";
 import { RelatedCalculators } from "@/components/calculators/ui/RelatedCalculators";
+import { CalculatorAd } from "@/components/ads/CalculatorAd";
 import {
   CALCULATORS,
   calculatorHref,
@@ -223,6 +224,8 @@ export default async function RebarCalculatorPage({
                   </table>
                 </div>
               </section>
+
+              <CalculatorAd slotKey="rebarInContent" />
 
               <section className="mt-10">
                 <h2 className="text-xl font-semibold tracking-tight">{c.faq}</h2>

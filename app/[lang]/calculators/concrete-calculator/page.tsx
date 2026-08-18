@@ -1,4 +1,6 @@
 // /calculators/concrete-calculator — Server Component. Locale-aware shell.
+// Human-readable article lives as MDX in content/concrete/<locale>.mdx; the SEO
+// metadata (title/desc/FAQ JSON-LD) is kept here and in the locale dictionary.
 
 import type { Metadata } from "next";
 import { siteConfig, siteUrl } from "@/app/lib/site";
@@ -6,10 +8,39 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
-import { CONCRETE_FAQ, CONCRETE_STANDARDS } from "@/features/calculators/concrete";
+import { ArticleHeader } from "@/components/calculators/ui/ArticleHeader";
+import { CalculatorPageShell } from "@/components/calculators/ui/CalculatorPageShell";
+import { TableOfContents } from "@/components/calculators/ui/TableOfContents";
+import { SimilarCalculators } from "@/components/calculators/ui/SimilarCalculators";
+import { RelatedCalculators } from "@/components/calculators/ui/RelatedCalculators";
+import { CalculatorAd } from "@/components/ads/CalculatorAd";
+import { getToc } from "@/features/calculators/toc";
+import {
+  CALCULATORS,
+  calculatorHref,
+} from "@/features/calculators/registry";
+import { CONCRETE_STANDARDS } from "@/features/calculators/concrete";
 import { ConcreteCalculatorForm } from "./ConcreteCalculatorForm";
 import { getDictionaryFor } from "@/app/[lang]/dictionaries";
 import { isLocale, locales, defaultLocale } from "@/app/i18n-config";
+
+import ConcreteEn from "@/content/concrete/en.mdx";
+import ConcreteHi from "@/content/concrete/hi.mdx";
+import ConcreteEs from "@/content/concrete/es.mdx";
+import ConcreteFr from "@/content/concrete/fr.mdx";
+import ConcreteDe from "@/content/concrete/de.mdx";
+import ConcreteAr from "@/content/concrete/ar.mdx";
+
+const CONCRETE_ARTICLES: Record<string, typeof ConcreteEn> = {
+  en: ConcreteEn,
+  hi: ConcreteHi,
+  es: ConcreteEs,
+  fr: ConcreteFr,
+  de: ConcreteDe,
+  ar: ConcreteAr,
+};
+
+const getConcreteToc = getToc("concrete");
 
 const PAGE_PATH = "/calculators/concrete-calculator";
 
@@ -32,9 +63,9 @@ export async function generateMetadata({
   };
 }
 
-function jsonLd(locale: string, title: string, description: string, crumb: string, home: string, calcs: string) {
+function jsonLd(locale: string, title: string, description: string, faq: { q: string; a: string }[], home: string, calcs: string, crumb: string) {
   return [
-    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: CONCRETE_FAQ.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
+    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map((item) => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) },
     { "@context": "https://schema.org", "@type": "SoftwareApplication", name: title, applicationCategory: "UtilitiesApplication", operatingSystem: "Any (web)", url: `${siteUrl}/${locale}${PAGE_PATH}`, offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }, description },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
       { "@type": "ListItem", position: 1, name: home, item: `${siteUrl}/${locale}` },
@@ -54,56 +85,79 @@ export default async function ConcreteCalculatorPage({
   const dict = await getDictionaryFor(locale);
   const t = dict.calculators.concrete;
   const c = dict.calculators.common;
+  const art = t.article;
+  const Article = CONCRETE_ARTICLES[locale] ?? ConcreteEn;
+  const toc = getConcreteToc(locale);
+
+  const others = CALCULATORS.filter((e) => e.slug !== "concrete-calculator" && e.status === "live");
+  const similarLinks = others.map((e) => ({ href: calculatorHref(e, locale), label: e.title }));
+  const relatedLinks = similarLinks.slice(0, 2);
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, t.title, t.meta.description, t.crumb, dict.breadcrumbs.home, dict.breadcrumbs.calculators)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            jsonLd(locale, t.title, t.meta.description, t.faq, dict.breadcrumbs.home, dict.breadcrumbs.calculators, t.crumb),
+          ),
+        }}
       />
       <SiteHeader />
       <main className="flex-1">
         <Container className="py-12">
-          <header className="mb-10">
-            <p className="text-xs uppercase tracking-widest text-black/60 dark:text-white/60">{c.eyebrow}</p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{t.title}</h1>
-            <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">{t.subtitle}</p>
-          </header>
+          <ArticleHeader eyebrow={c.eyebrow} title={t.title} subtitle={t.subtitle} />
 
-          <section className="mb-16">
-            <ConcreteCalculatorForm
-              initialStandards={CONCRETE_STANDARDS}
-              t={t.form}
-              common={dict.common}
-              cCommon={c}
-            />
-          </section>
+          <div className="mt-10">
+            <CalculatorPageShell
+              calculator={
+                <>
+                  <ConcreteCalculatorForm
+                    initialStandards={CONCRETE_STANDARDS}
+                    t={t.form}
+                    common={dict.common}
+                    cCommon={c}
+                  />
+                  <SimilarCalculators title={c.other} links={similarLinks} />
+                </>
+              }
+            >
+              <TableOfContents title={art.toc} entries={toc} />
 
-          <section className="mb-16 rounded-lg border border-black/10 p-6 dark:border-white/10">
-            <h2 className="text-lg font-semibold">{c.how}</h2>
-            <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm text-black/75 dark:text-white/75">
-              <li><strong>Dry volume</strong> = wet volume × 1.54. The dry-to-wet factor accounts for the shrinkage that happens when dry ingredients combine into wet concrete.</li>
-              <li><strong>Wastage</strong> is applied uniformly to all three components (default 3%). Dry volume × (1 + wastage %).</li>
-              <li><strong>Split by mix ratio</strong> a : b : c. For M20 (1:1.5:3), cement takes 1/5.5 of the total, sand takes 1.5/5.5, and aggregate takes 3/5.5.</li>
-              <li><strong>Cement bags</strong> = cement volume × 1440 kg/cum ÷ 50 kg/bag, rounded up to the next whole bag.</li>
-              <li><strong>Sand &amp; aggregate</strong> are quoted in whichever unit you select — cft (default in India), cubic meters, or kilograms using standard bulk densities.</li>
-            </ol>
-          </section>
+              <article
+                aria-label={art.heading}
+                className="prose prose-neutral mt-10 max-w-3xl prose-h2:text-xl prose-h2:font-semibold prose-h2:tracking-tight prose-p:text-black/75 prose-p:dark:text-white/75 prose-li:marker:text-black/50 dark:prose-invert"
+              >
+                <Article />
+              </article>
 
-          <section className="mb-16">
-            <h2 className="mb-6 text-lg font-semibold">{c.faq}</h2>
-            <dl className="space-y-6">
-              {CONCRETE_FAQ.map((item) => (
-                <div key={item.question}>
-                  <dt className="text-sm font-semibold">{item.question}</dt>
-                  <dd className="mt-1 text-sm text-black/70 dark:text-white/70">{item.answer}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+              <CalculatorAd slotKey="concreteInContent" />
 
-          <section className="border-t border-black/10 pt-10 dark:border-white/10">
-            <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">{c.other}</h2>
-            <CalculatorGrid locale={locale} comingLabel={dict.common.coming} filter={(c) => c.slug !== "concrete-calculator"} />
+              <section className="mt-10">
+                <h2 className="text-xl font-semibold tracking-tight">{c.faq}</h2>
+                <dl className="mt-6 max-w-3xl space-y-6">
+                  {t.faq.map((item) => (
+                    <div key={item.q}>
+                      <dt className="text-sm font-semibold">{item.q}</dt>
+                      <dd className="mt-1 text-sm leading-relaxed text-black/70 dark:text-white/70">
+                        {item.a}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+
+              <div className="mt-10">
+                <RelatedCalculators title={c.other} links={relatedLinks} />
+              </div>
+            </CalculatorPageShell>
+          </div>
+
+          <section className="mt-12 border-t border-black/10 pt-10 dark:border-white/10">
+            <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
+              {c.other}
+            </h2>
+            <CalculatorGrid locale={locale} comingLabel={dict.common.coming} filter={(e) => e.slug !== "concrete-calculator"} />
           </section>
         </Container>
       </main>

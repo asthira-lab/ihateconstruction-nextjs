@@ -6,6 +6,10 @@ import { NumberSliderInput } from "@/components/ui/NumberSliderInput";
 import { QuantityInput } from "@/components/ui/QuantityInput";
 import { SaveToProjectButton } from "@/components/projects/SaveToProjectButton";
 import { BrickResultCard } from "@/components/calculators/brick/ResultCard";
+import { BlockGroup } from "@/components/calculators/ui/BlockGroup";
+import { VariableRow } from "@/components/calculators/ui/VariableRow";
+import { ActionPanel } from "@/components/calculators/ui/ActionPanel";
+import { FeedbackBar } from "@/components/calculators/ui/FeedbackBar";
 import type {
   BrickActionResult,
   BrickRequest,
@@ -246,26 +250,37 @@ export function BrickCalculatorForm({
   const [savedRequest, setSavedRequest] = useState<BrickRequest | null>(null);
   const [isPending, startTransition] = useTransition();
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (hasErrors) return;
-    const req = toBrickRequest(state);
+  const run = (req: BrickRequest) =>
     startTransition(async () => {
       const res = await submitBrickCalculation(req);
       setResult(res);
-      if (res.ok) setSavedRequest(req);
-      else setSavedRequest(null);
+      setSavedRequest(res.ok ? req : null);
     });
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (hasErrors) return;
+    run(toBrickRequest(state));
+  };
+
+  const onReload = () => {
+    if (hasErrors) return;
+    run(toBrickRequest(state));
+  };
+
+  const onClear = () => {
+    setState(makeInitialState(initialStandards, t.defaultDoor));
+    setResult(null);
+    setSavedRequest(null);
   };
 
   const errCode = result && !result.ok ? result.error.code : null;
   const errMsg = result && !result.ok ? result.error.message : null;
 
   return (
-    <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,20rem)]">
-      <form onSubmit={onSubmit} className="space-y-8" noValidate>
-        <fieldset className="space-y-2">
-          <legend className="text-sm font-semibold">{t.mode}</legend>
+    <div className="space-y-4">
+      <form onSubmit={onSubmit} className="space-y-4" noValidate>
+        <BlockGroup title={t.mode}>
           <div className="flex gap-2">
             {(["wall", "volume"] as const).map((m) => (
               <button
@@ -283,158 +298,151 @@ export function BrickCalculatorForm({
               </button>
             ))}
           </div>
-        </fieldset>
+        </BlockGroup>
 
-        <fieldset className="space-y-2">
-          <legend className="text-sm font-semibold">{t.standard}</legend>
-          <select
-            value={state.presetId}
-            onChange={(e) => changePreset(e.target.value)}
-            className="w-full rounded border border-black/15 bg-white px-3 py-2 text-sm text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-white/20 dark:bg-black dark:text-white dark:focus:border-white dark:focus:ring-white"
-          >
-            {initialStandards.presets.map((p) => (
-              <option key={p.id} value={p.id}>
-                {p.label}
-              </option>
-            ))}
-          </select>
-          <p className="text-xs text-black/60 dark:text-white/60">
-            {initialStandards.presets.find((p) => p.id === state.presetId)?.description}
-          </p>
-          <label className="flex cursor-pointer items-center gap-2 pt-1 text-xs">
-            <input
-              type="checkbox"
-              checked={state.useCustom}
-              onChange={(e) => set("useCustom", e.target.checked)}
-              className="accent-black dark:accent-white"
-            />
-            {t.customStd}
-          </label>
-        </fieldset>
+        <BlockGroup title={t.standard}>
+          <div className="space-y-3">
+            <VariableRow label={t.standard}>
+              <select
+                value={state.presetId}
+                onChange={(e) => changePreset(e.target.value)}
+                aria-label={t.standard}
+                className="w-full rounded border border-black/15 bg-white px-2 py-1.5 text-sm text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-white/20 dark:bg-black dark:text-white"
+              >
+                {initialStandards.presets.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.label}
+                  </option>
+                ))}
+              </select>
+            </VariableRow>
+            <p className="text-xs text-black/60 dark:text-white/60">
+              {initialStandards.presets.find((p) => p.id === state.presetId)?.description}
+            </p>
+            <label className="flex cursor-pointer items-center gap-2 text-sm text-black/70 dark:text-white/70">
+              <input
+                type="checkbox"
+                checked={state.useCustom}
+                onChange={(e) => set("useCustom", e.target.checked)}
+                className="accent-black dark:accent-white"
+              />
+              {t.customStd}
+            </label>
+          </div>
+        </BlockGroup>
 
         {state.mode === "wall" ? (
-          <fieldset className="space-y-4">
-            <legend className="text-sm font-semibold">{t.wallDims}</legend>
-            <LabeledRow label={common.length} error={errors.wallLength}>
-              <QuantityInput
-                value={state.wallLength}
-                onChange={(q) => set("wallLength", q)}
-                units={LENGTH_UNITS}
-                min={0.1}
-                max={100}
-                step={0.1}
-                decimals={2}
-                ariaLabel={common.length}
-              />
-            </LabeledRow>
-            <LabeledRow label={common.height} error={errors.wallHeight}>
-              <QuantityInput
-                value={state.wallHeight}
-                onChange={(q) => set("wallHeight", q)}
-                units={LENGTH_UNITS}
-                min={0.1}
-                max={20}
-                step={0.1}
-                decimals={2}
-                ariaLabel={common.height}
-              />
-            </LabeledRow>
-            <LabeledRow label={common.thickness} error={errors.wallThickness}>
-              <QuantityInput
-                value={state.wallThickness}
-                onChange={(q) => set("wallThickness", q)}
-                units={LENGTH_UNITS}
-                min={50}
-                max={500}
-                step={5}
-                decimals={0}
-                ariaLabel={common.thickness}
-              />
-            </LabeledRow>
+          <BlockGroup title={t.wallDims}>
+            <div className="space-y-4">
+              <VariableRow label={common.length} error={errors.wallLength}>
+                <QuantityInput
+                  value={state.wallLength}
+                  onChange={(q) => set("wallLength", q)}
+                  units={LENGTH_UNITS}
+                  min={0.1}
+                  max={100}
+                  step={0.1}
+                  decimals={2}
+                  ariaLabel={common.length}
+                />
+              </VariableRow>
+              <VariableRow label={common.height} error={errors.wallHeight}>
+                <QuantityInput
+                  value={state.wallHeight}
+                  onChange={(q) => set("wallHeight", q)}
+                  units={LENGTH_UNITS}
+                  min={0.1}
+                  max={20}
+                  step={0.1}
+                  decimals={2}
+                  ariaLabel={common.height}
+                />
+              </VariableRow>
+              <VariableRow label={common.thickness} error={errors.wallThickness}>
+                <QuantityInput
+                  value={state.wallThickness}
+                  onChange={(q) => set("wallThickness", q)}
+                  units={LENGTH_UNITS}
+                  min={50}
+                  max={500}
+                  step={5}
+                  decimals={0}
+                  ariaLabel={common.thickness}
+                />
+              </VariableRow>
 
-            <div className="space-y-2 border-t border-black/10 pt-4 dark:border-white/10">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-semibold">{t.openings}</span>
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  onClick={addOpening}
-                  type="button"
-                >
-                  {t.addOpening}
-                </Button>
-              </div>
-              {state.openings.length === 0 ? (
-                <p className="text-xs text-black/50 dark:text-white/50">
-                  {t.noOpenings}
-                </p>
-              ) : (
-                <div className="space-y-4">
-                  {errors.openingsTotal ? (
-                    <p
-                      role="alert"
-                      className="text-xs text-red-600 dark:text-red-400"
-                    >
-                      {errors.openingsTotal}
-                    </p>
-                  ) : null}
-                  {state.openings.map((op, i) => (
-                    <div
-                      key={i}
-                      className="rounded border border-black/10 p-3 dark:border-white/10"
-                    >
-                      <div className="mb-2 flex items-center justify-between">
-                        <input
-                          value={op.label ?? ""}
-                          onChange={(e) => patchOpening(i, { label: e.target.value })}
-                          placeholder={t.labelPh}
-                          className="w-40 rounded border border-transparent bg-transparent px-1 py-0.5 text-sm focus:border-black/15 focus:outline-none dark:focus:border-white/20"
-                        />
-                        <button
-                          type="button"
-                          onClick={() => removeOpening(i)}
-                          className="text-xs text-red-600 hover:underline dark:text-red-400"
-                          aria-label={t.removeOpAria.replace("{i}", String(i + 1))}
-                        >
-                          {common.remove}
-                        </button>
-                      </div>
-                      <div className="space-y-2">
-                        <LabeledRow label={common.width} compact error={errors.openings?.[i]?.width}>
-                          <QuantityInput
-                            value={op.width}
-                            onChange={(q) => patchOpening(i, { width: q })}
-                            units={LENGTH_UNITS}
-                            min={0.1}
-                            max={20}
-                            step={0.1}
-                            decimals={2}
-                            ariaLabel={`${t.openingN.replace("{n}", String(i + 1))} ${common.width}`}
-                          />
-                        </LabeledRow>
-                        <LabeledRow label={common.height} compact error={errors.openings?.[i]?.height}>
-                          <QuantityInput
-                            value={op.height}
-                            onChange={(q) => patchOpening(i, { height: q })}
-                            units={LENGTH_UNITS}
-                            min={0.1}
-                            max={10}
-                            step={0.1}
-                            decimals={2}
-                            ariaLabel={`${t.openingN.replace("{n}", String(i + 1))} ${common.height}`}
-                          />
-                        </LabeledRow>
-                      </div>
-                    </div>
-                  ))}
+              <div className="space-y-2 border-t border-black/10 pt-4 dark:border-white/10">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold">{t.openings}</span>
+                  <Button variant="secondary" size="sm" onClick={addOpening} type="button">
+                    {t.addOpening}
+                  </Button>
                 </div>
-              )}
+                {state.openings.length === 0 ? (
+                  <p className="text-xs text-black/50 dark:text-white/50">
+                    {t.noOpenings}
+                  </p>
+                ) : (
+                  <div className="space-y-4">
+                    {errors.openingsTotal ? (
+                      <p role="alert" className="text-xs text-red-600 dark:text-red-400">
+                        {errors.openingsTotal}
+                      </p>
+                    ) : null}
+                    {state.openings.map((op, i) => (
+                      <div key={i} className="rounded border border-black/10 p-3 dark:border-white/10">
+                        <div className="mb-2 flex items-center justify-between">
+                          <input
+                            value={op.label ?? ""}
+                            onChange={(e) => patchOpening(i, { label: e.target.value })}
+                            placeholder={t.labelPh}
+                            className="w-40 rounded border border-transparent bg-transparent px-1 py-0.5 text-sm focus:border-black/15 focus:outline-none dark:focus:border-white/20"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => removeOpening(i)}
+                            className="text-xs text-red-600 hover:underline dark:text-red-400"
+                            aria-label={t.removeOpAria.replace("{i}", String(i + 1))}
+                          >
+                            {common.remove}
+                          </button>
+                        </div>
+                        <div className="space-y-2">
+                          <VariableRow label={common.width} error={errors.openings?.[i]?.width}>
+                            <QuantityInput
+                              value={op.width}
+                              onChange={(q) => patchOpening(i, { width: q })}
+                              units={LENGTH_UNITS}
+                              min={0.1}
+                              max={20}
+                              step={0.1}
+                              decimals={2}
+                              ariaLabel={`${t.openingN.replace("{n}", String(i + 1))} ${common.width}`}
+                            />
+                          </VariableRow>
+                          <VariableRow label={common.height} error={errors.openings?.[i]?.height}>
+                            <QuantityInput
+                              value={op.height}
+                              onChange={(q) => patchOpening(i, { height: q })}
+                              units={LENGTH_UNITS}
+                              min={0.1}
+                              max={10}
+                              step={0.1}
+                              decimals={2}
+                              ariaLabel={`${t.openingN.replace("{n}", String(i + 1))} ${common.height}`}
+                            />
+                          </VariableRow>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
-          </fieldset>
+          </BlockGroup>
         ) : (
-          <fieldset className="space-y-4">
-            <legend className="text-sm font-semibold">{t.totalVol}</legend>
-            <LabeledRow label={common.volume} error={errors.volume}>
+          <BlockGroup title={t.totalVol}>
+            <VariableRow label={common.volume} error={errors.volume}>
               <QuantityInput
                 value={state.volume}
                 onChange={(q) => set("volume", q)}
@@ -445,118 +453,114 @@ export function BrickCalculatorForm({
                 decimals={2}
                 ariaLabel={t.volAria}
               />
-            </LabeledRow>
-          </fieldset>
+            </VariableRow>
+          </BlockGroup>
         )}
 
         {state.useCustom ? (
-          <fieldset className="space-y-4 rounded border border-black/10 p-4 dark:border-white/10">
-            <legend className="px-1 text-sm font-semibold">{cCommon.customParams}</legend>
+          <BlockGroup title={cCommon.customParams}>
+            <div className="space-y-4">
+              <VariableRow label={t.mortarThickness}>
+                <QuantityInput
+                  value={state.customMortarThickness}
+                  onChange={(q) => set("customMortarThickness", q)}
+                  units={LENGTH_UNITS}
+                  min={1}
+                  max={30}
+                  step={1}
+                  decimals={0}
+                  ariaLabel={t.mortarThicknessAria}
+                />
+              </VariableRow>
+              <VariableRow label={t.mortarRatio}>
+                <input
+                  value={state.customMortarRatio}
+                  onChange={(e) => set("customMortarRatio", e.target.value)}
+                  placeholder="1:6"
+                  className="w-full rounded border border-black/15 bg-white px-2 py-1.5 text-right font-mono text-sm text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-white/20 dark:bg-black dark:text-white"
+                />
+              </VariableRow>
+              <VariableRow label={t.brickWastage}>
+                <NumberSliderInput
+                  value={Number(state.customWastagePercent)}
+                  onChange={(n) => set("customWastagePercent", String(n))}
+                  min={0}
+                  max={20}
+                  step={0.5}
+                  decimals={1}
+                  suffix="%"
+                  ariaLabel={t.brickWastageAria}
+                />
+              </VariableRow>
+              <VariableRow label={t.mortarWastage}>
+                <NumberSliderInput
+                  value={Number(state.customMortarWastagePercent)}
+                  onChange={(n) => set("customMortarWastagePercent", String(n))}
+                  min={0}
+                  max={40}
+                  step={1}
+                  decimals={0}
+                  suffix="%"
+                  ariaLabel={t.mortarWastageAria}
+                />
+              </VariableRow>
+              <VariableRow label={t.dtw}>
+                <NumberSliderInput
+                  value={Number(state.customMortarDryToWetFactor)}
+                  onChange={(n) => set("customMortarDryToWetFactor", String(n))}
+                  min={1}
+                  max={1.6}
+                  step={0.01}
+                  decimals={2}
+                  ariaLabel={t.dtwAria}
+                />
+              </VariableRow>
 
-            <LabeledRow label={t.mortarThickness}>
-              <QuantityInput
-                value={state.customMortarThickness}
-                onChange={(q) => set("customMortarThickness", q)}
-                units={LENGTH_UNITS}
-                min={1}
-                max={30}
-                step={1}
-                decimals={0}
-                ariaLabel={t.mortarThicknessAria}
-              />
-            </LabeledRow>
-
-            <LabeledRow label={t.mortarRatio}>
-              <input
-                value={state.customMortarRatio}
-                onChange={(e) => set("customMortarRatio", e.target.value)}
-                placeholder="1:6"
-                className="w-24 rounded border border-black/15 bg-white px-2 py-1.5 text-right font-mono text-sm text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-white/20 dark:bg-black dark:text-white"
-              />
-            </LabeledRow>
-
-            <LabeledRow label={t.brickWastage}>
-              <NumberSliderInput
-                value={Number(state.customWastagePercent)}
-                onChange={(n) => set("customWastagePercent", String(n))}
-                min={0}
-                max={20}
-                step={0.5}
-                decimals={1}
-                suffix="%"
-                ariaLabel={t.brickWastageAria}
-              />
-            </LabeledRow>
-
-            <LabeledRow label={t.mortarWastage}>
-              <NumberSliderInput
-                value={Number(state.customMortarWastagePercent)}
-                onChange={(n) => set("customMortarWastagePercent", String(n))}
-                min={0}
-                max={40}
-                step={1}
-                decimals={0}
-                suffix="%"
-                ariaLabel={t.mortarWastageAria}
-              />
-            </LabeledRow>
-
-            <LabeledRow label={t.dtw}>
-              <NumberSliderInput
-                value={Number(state.customMortarDryToWetFactor)}
-                onChange={(n) => set("customMortarDryToWetFactor", String(n))}
-                min={1}
-                max={1.6}
-                step={0.01}
-                decimals={2}
-                ariaLabel={t.dtwAria}
-              />
-            </LabeledRow>
-
-            <div className="border-t border-black/10 pt-3 dark:border-white/10">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-black/60 dark:text-white/60">
-                {t.brickSize}
-              </p>
-              <div className="space-y-2">
-                <LabeledRow label={common.length} compact>
-                  <QuantityInput
-                    value={state.customBrickL}
-                    onChange={(q) => set("customBrickL", q)}
-                    units={LENGTH_UNITS}
-                    min={50}
-                    max={800}
-                    step={5}
-                    decimals={0}
-                    ariaLabel={t.customBrickLen}
-                  />
-                </LabeledRow>
-                <LabeledRow label={common.width} compact>
-                  <QuantityInput
-                    value={state.customBrickW}
-                    onChange={(q) => set("customBrickW", q)}
-                    units={LENGTH_UNITS}
-                    min={50}
-                    max={400}
-                    step={5}
-                    decimals={0}
-                    ariaLabel={t.customBrickWid}
-                  />
-                </LabeledRow>
-                <LabeledRow label={common.height} compact>
-                  <QuantityInput
-                    value={state.customBrickH}
-                    onChange={(q) => set("customBrickH", q)}
-                    units={LENGTH_UNITS}
-                    min={50}
-                    max={400}
-                    step={5}
-                    decimals={0}
-                    ariaLabel={t.customBrickHt}
-                  />
-                </LabeledRow>
+              <div className="border-t border-black/10 pt-3 dark:border-white/10">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-black/60 dark:text-white/60">
+                  {t.brickSize}
+                </p>
+                <div className="space-y-2">
+                  <VariableRow label={common.length}>
+                    <QuantityInput
+                      value={state.customBrickL}
+                      onChange={(q) => set("customBrickL", q)}
+                      units={LENGTH_UNITS}
+                      min={50}
+                      max={800}
+                      step={5}
+                      decimals={0}
+                      ariaLabel={t.customBrickLen}
+                    />
+                  </VariableRow>
+                  <VariableRow label={common.width}>
+                    <QuantityInput
+                      value={state.customBrickW}
+                      onChange={(q) => set("customBrickW", q)}
+                      units={LENGTH_UNITS}
+                      min={50}
+                      max={400}
+                      step={5}
+                      decimals={0}
+                      ariaLabel={t.customBrickWid}
+                    />
+                  </VariableRow>
+                  <VariableRow label={common.height}>
+                    <QuantityInput
+                      value={state.customBrickH}
+                      onChange={(q) => set("customBrickH", q)}
+                      units={LENGTH_UNITS}
+                      min={50}
+                      max={400}
+                      step={5}
+                      decimals={0}
+                      ariaLabel={t.customBrickHt}
+                    />
+                  </VariableRow>
+                </div>
               </div>
             </div>
-          </fieldset>
+          </BlockGroup>
         ) : null}
 
         <div className="space-y-3">
@@ -582,7 +586,7 @@ export function BrickCalculatorForm({
         </div>
       </form>
 
-      <aside aria-live="polite" className="md:sticky md:top-6 md:self-start">
+      <div aria-live="polite">
         {result?.ok ? (
           <>
             <BrickResultCard data={result.data} />
@@ -599,35 +603,16 @@ export function BrickCalculatorForm({
             {isPending ? common.calculating : cCommon.fillForm}
           </div>
         )}
-      </aside>
-    </div>
-  );
-}
-
-function LabeledRow({
-  label,
-  compact,
-  error,
-  children,
-}: {
-  label: string;
-  compact?: boolean;
-  error?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div
-      className={`grid gap-2 ${compact ? "sm:grid-cols-[7rem_1fr]" : "sm:grid-cols-[9rem_1fr]"} sm:items-start`}
-    >
-      <label className="pt-2 text-sm text-black/70 dark:text-white/70">{label}</label>
-      <div>
-        {children}
-        {error ? (
-          <p className="mt-1 text-xs text-red-600 dark:text-red-400" role="alert">
-            {error}
-          </p>
-        ) : null}
       </div>
+
+      <ActionPanel
+        reloadLabel={cCommon.reload}
+        clearLabel={cCommon.clearAll}
+        onReload={onReload}
+        onClear={onClear}
+      />
+
+      <FeedbackBar question={cCommon.didWeSolve} yesLabel={common.yes} noLabel={common.no} />
     </div>
   );
 }

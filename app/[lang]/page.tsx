@@ -79,7 +79,7 @@ export default async function HomePage({
       <SiteHeader />
       <main className="flex-1">
         <Hero dict={dict.home.hero} locale={locale} />
-        <FeatureGrid dict={dict.home.features} comingLabel={dict.common.coming} />
+        <FeatureGrid dict={dict.home.features} comingLabel={dict.common.coming} locale={locale} />
         <HowItWorks dict={dict.home.howItWorks} />
         <IndianSection dict={dict.home.indian} />
         <ClosingCTA dict={dict.home.closing} locale={locale} />

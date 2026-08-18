@@ -1,4 +1,5 @@
 // /calculators/tile-calculator — Server Component. Locale-aware shell.
+// Human-readable article lives as MDX in content/tile/<locale>.mdx.
 
 import type { Metadata } from "next";
 import { siteConfig, siteUrl } from "@/app/lib/site";
@@ -6,10 +7,36 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
-import { TILE_FAQ, TILE_STANDARDS } from "@/features/calculators/tile";
+import { ArticleHeader } from "@/components/calculators/ui/ArticleHeader";
+import { CalculatorPageShell } from "@/components/calculators/ui/CalculatorPageShell";
+import { TableOfContents } from "@/components/calculators/ui/TableOfContents";
+import { SimilarCalculators } from "@/components/calculators/ui/SimilarCalculators";
+import { RelatedCalculators } from "@/components/calculators/ui/RelatedCalculators";
+import { CalculatorAd } from "@/components/ads/CalculatorAd";
+import { getToc } from "@/features/calculators/toc";
+import { CALCULATORS, calculatorHref } from "@/features/calculators/registry";
+import { TILE_STANDARDS } from "@/features/calculators/tile";
 import { TileCalculatorForm } from "./TileCalculatorForm";
 import { getDictionaryFor } from "@/app/[lang]/dictionaries";
 import { isLocale, locales, defaultLocale } from "@/app/i18n-config";
+
+import TileEn from "@/content/tile/en.mdx";
+import TileHi from "@/content/tile/hi.mdx";
+import TileEs from "@/content/tile/es.mdx";
+import TileFr from "@/content/tile/fr.mdx";
+import TileDe from "@/content/tile/de.mdx";
+import TileAr from "@/content/tile/ar.mdx";
+
+const TILE_ARTICLES: Record<string, typeof TileEn> = {
+  en: TileEn,
+  hi: TileHi,
+  es: TileEs,
+  fr: TileFr,
+  de: TileDe,
+  ar: TileAr,
+};
+
+const getTileToc = getToc("tile");
 
 const PAGE_PATH = "/calculators/tile-calculator";
 
@@ -32,9 +59,9 @@ export async function generateMetadata({
   };
 }
 
-function jsonLd(locale: string, title: string, description: string, crumb: string, home: string, calcs: string) {
+function jsonLd(locale: string, title: string, description: string, faq: { q: string; a: string }[], home: string, calcs: string, crumb: string) {
   return [
-    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: TILE_FAQ.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
+    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map((item) => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) },
     { "@context": "https://schema.org", "@type": "SoftwareApplication", name: title, applicationCategory: "UtilitiesApplication", operatingSystem: "Any (web)", url: `${siteUrl}/${locale}${PAGE_PATH}`, offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }, description },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
       { "@type": "ListItem", position: 1, name: home, item: `${siteUrl}/${locale}` },
@@ -54,56 +81,79 @@ export default async function TileCalculatorPage({
   const dict = await getDictionaryFor(locale);
   const t = dict.calculators.tile;
   const c = dict.calculators.common;
+  const art = t.article;
+  const Article = TILE_ARTICLES[locale] ?? TileEn;
+  const toc = getTileToc(locale);
+
+  const others = CALCULATORS.filter((e) => e.slug !== "tile-calculator" && e.status === "live");
+  const similarLinks = others.map((e) => ({ href: calculatorHref(e, locale), label: e.title }));
+  const relatedLinks = similarLinks.slice(0, 2);
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, t.title, t.meta.description, t.crumb, dict.breadcrumbs.home, dict.breadcrumbs.calculators)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            jsonLd(locale, t.title, t.meta.description, t.faq, dict.breadcrumbs.home, dict.breadcrumbs.calculators, t.crumb),
+          ),
+        }}
       />
       <SiteHeader />
       <main className="flex-1">
         <Container className="py-12">
-          <header className="mb-10">
-            <p className="text-xs uppercase tracking-widest text-black/60 dark:text-white/60">{c.eyebrow}</p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{t.title}</h1>
-            <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">{t.subtitle}</p>
-          </header>
+          <ArticleHeader eyebrow={c.eyebrow} title={t.title} subtitle={t.subtitle} />
 
-          <section className="mb-16">
-            <TileCalculatorForm
-              initialStandards={TILE_STANDARDS}
-              t={t.form}
-              common={dict.common}
-              cCommon={c}
-            />
-          </section>
+          <div className="mt-10">
+            <CalculatorPageShell
+              calculator={
+                <>
+                  <TileCalculatorForm
+                    initialStandards={TILE_STANDARDS}
+                    t={t.form}
+                    common={dict.common}
+                    cCommon={c}
+                  />
+                  <SimilarCalculators title={c.other} links={similarLinks} />
+                </>
+              }
+            >
+              <TableOfContents title={art.toc} entries={toc} />
 
-          <section className="mb-16 rounded-lg border border-black/10 p-6 dark:border-white/10">
-            <h2 className="text-lg font-semibold">{c.how}</h2>
-            <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm text-black/75 dark:text-white/75">
-              <li><strong>Net area</strong> = length × width − sum of excluded rectangles (columns, drains, pipe cutouts).</li>
-              <li><strong>Tile count (before wastage)</strong> = ⌈net area ÷ tile area⌉. Tiles are rounded up — you can&apos;t buy half a tile.</li>
-              <li><strong>Tile count (final)</strong> = ⌈count × (1 + wastage %)⌉. Default wastage is 10% — bump higher for diagonal or border-heavy layouts.</li>
-              <li><strong>Thin-set adhesive</strong> (kg) = net area ÷ coverage (sqm/kg). Or <strong>mortar bed</strong> (cum) = net area × thickness, then cement:sand ratio splits it into bags + cft.</li>
-              <li><strong>Grout volume</strong> ≈ total joint length × joint width × joint depth. Joint depth defaults to the tile thickness (override in Customise if you only grout the top of the joint). Weight uses ~1500 kg/cum. Add 15–25% on top when actually buying grout — mixing waste is real.</li>
-            </ol>
-          </section>
+              <article
+                aria-label={art.heading}
+                className="prose prose-neutral mt-10 max-w-3xl prose-h2:text-xl prose-h2:font-semibold prose-h2:tracking-tight prose-p:text-black/75 prose-p:dark:text-white/75 prose-li:marker:text-black/50 dark:prose-invert"
+              >
+                <Article />
+              </article>
 
-          <section className="mb-16">
-            <h2 className="mb-6 text-lg font-semibold">{c.faq}</h2>
-            <dl className="space-y-6">
-              {TILE_FAQ.map((item) => (
-                <div key={item.question}>
-                  <dt className="text-sm font-semibold">{item.question}</dt>
-                  <dd className="mt-1 text-sm text-black/70 dark:text-white/70">{item.answer}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+              <CalculatorAd slotKey="tileInContent" />
 
-          <section className="border-t border-black/10 pt-10 dark:border-white/10">
-            <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">{c.other}</h2>
-            <CalculatorGrid locale={locale} comingLabel={dict.common.coming} filter={(c) => c.slug !== "tile-calculator"} />
+              <section className="mt-10">
+                <h2 className="text-xl font-semibold tracking-tight">{c.faq}</h2>
+                <dl className="mt-6 max-w-3xl space-y-6">
+                  {t.faq.map((item) => (
+                    <div key={item.q}>
+                      <dt className="text-sm font-semibold">{item.q}</dt>
+                      <dd className="mt-1 text-sm leading-relaxed text-black/70 dark:text-white/70">
+                        {item.a}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+
+              <div className="mt-10">
+                <RelatedCalculators title={c.other} links={relatedLinks} />
+              </div>
+            </CalculatorPageShell>
+          </div>
+
+          <section className="mt-12 border-t border-black/10 pt-10 dark:border-white/10">
+            <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
+              {c.other}
+            </h2>
+            <CalculatorGrid locale={locale} comingLabel={dict.common.coming} filter={(e) => e.slug !== "tile-calculator"} />
           </section>
         </Container>
       </main>

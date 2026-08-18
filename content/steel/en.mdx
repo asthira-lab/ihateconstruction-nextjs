@@ -1,0 +1,32 @@
+## How steel weight is calculated
+
+1. **Weight per metre** = D² / 162 kg/m, where D is the bar diameter in millimetres. It comes from π × (D/2)² × 7850 kg/cum ÷ 10⁶ ≈ D²/162.28.
+2. **Total length** for each bar row = length × count. Pass pre-calculated cutting lengths.
+3. **Weight per row** = weight per metre × total length. Sum across rows for the total before wastage.
+4. **Wastage** (default 3%) is added on top for cutting waste and small oversights.
+5. **Thumb rule** mode multiplies concrete volume by a kg/cum rate that depends on the member.
+
+## Bar schedule vs thumb rule
+
+- **Bar schedule** — accurate. Use when you have the drawing and can list every bar's diameter, length, and count.
+- **Thumb rule** — rough (±20%). Use for pricing estimates when you only know the concrete volume.
+
+## Member thumb-rule rates
+
+- **Slab** ≈ 80 kg/cum · **Beam** ≈ 100 · **Column** ≈ 130 · **Footing** ≈ 70 · **Staircase** ≈ 130
+
+These are Indian industry averages; override them if your consultant has a project-specific number.
+
+## Worked example
+
+A slab needs **10 cubic metres** of concrete.
+
+- Thumb rule rate for slabs is 80 kg/cum.
+- Total steel = 10 × 80 = **800 kg** (≈ 0.8 tonne) before wastage.
+- With 3% wastage → **824 kg**.
+
+For an exact figure, list each bar: 20 main bars of 12 mm × 5 m, plus 32 distribution bars of 8 mm × 3.2 m.
+
+- Main bars: 20 × 5 = 100 m × (12²/162) ≈ **88.9 kg**
+- Distribution: 32 × 3.2 = 102.4 m × (8²/162) ≈ **40.5 kg**
+- Total ≈ **129.4 kg**

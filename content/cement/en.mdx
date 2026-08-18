@@ -1,0 +1,31 @@
+## What this cement calculator handles
+
+- **Cement for a slab** — enter length, width, and thickness in feet and inches; get bags for M15, M20, or M25 mix.
+- **Post hole cement** — fence posts, mailboxes, sign posts. Enter hole diameter, depth, and count for a 1:3 sand-and-cement fill.
+- **Cubic yards of cement** — already know your volume? Switch to free volume mode in cubic yards, metres, or feet.
+- **Sand and cement** — pick the 1:4 plaster, 1:6 brickwork, or 1:3 rich mortar preset when mixing cement with sand only (no aggregate).
+- **94 lb Portland bags** — US Type I/II Portland, rounded up to whole bags.
+- **Indian 50 kg bags** — OPC/PPC, IS 456 ratios, results in cubic feet.
+
+## How the cement calculation works
+
+1. **Wet volume** comes from your inputs — a slab is length × width × thickness, a post hole is π × r² × depth × count, or you enter volume directly.
+2. **Dry volume** = wet volume × 1.54. Dry ingredients lose volume when mixed into wet concrete.
+3. **Wastage** is added uniformly (default 5%). Bump to 8–10% for tricky pours or hand-mixed work.
+4. **Mix split** by ratio — for M20 (1:1.5:3), cement is 1/5.5 of dry volume, sand 1.5/5.5, aggregate 3/5.5.
+5. **Cement bags** = cement volume × 1440 kg/m³ ÷ bag weight, rounded up to whole bags.
+
+## Mix ratio guide
+
+- **1:2:4 (M15)** — footpaths, patio slabs, and non-structural pours.
+- **1:1.5:3 (M20)** — house slabs, driveways, and general RCC work.
+- **1:1:2 (M25)** — structural members carrying real load.
+- **1:4 / 1:6** — plastering and brickwork (sand and cement only, no aggregate).
+
+## Worked example
+
+A **10 ft × 10 ft × 4 in** slab is about **1.23 cubic yards** of concrete.
+
+- Dry volume = 1.23 × 1.54 ≈ **1.89 cuyd**
+- M20 split → cement ≈ 1/5.5 of the dry volume
+- 94 lb Portland: roughly **6 bags** · 50 kg Indian: roughly **10 bags**

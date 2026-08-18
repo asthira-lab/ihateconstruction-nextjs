@@ -1,0 +1,32 @@
+## Comment le poids de l'acier est calculé
+
+1. **Poids au mètre** = D² / 162 kg/m, D étant le diamètre en millimètres. Vient de π × (D/2)² × 7850 kg/cum ÷ 10⁶ ≈ D²/162,28.
+2. **Longueur totale** par rangée = longueur × quantité. Passez des longueurs de coupe déjà calculées.
+3. **Poids par rangée** = poids au mètre × longueur totale. Sommez les rangées pour le total avant perte.
+4. **La perte** (3 % par défaut) est ajoutée pour les chutes et petits oublis.
+5. Le mode **règle empirique** multiplie le volume de béton par un kg/cum selon l'élément.
+
+## Plan de ferraillage vs règle empirique
+
+- **Plan de ferraillage** — précis. Quand vous avez le plan et pouvez lister chaque barre.
+- **Règle empirique** — approximatif (±20 %). Pour chiffrer quand seul le volume est connu.
+
+## Taux par élément (règle empirique)
+
+- **Dalle** ≈ 80 kg/cum · **Poutre** ≈ 100 · **Poteau** ≈ 130 · **Semelle** ≈ 70 · **Escalier** ≈ 130
+
+Moyennes indiennes ; modifiez-les si votre consultant a des valeurs de projet.
+
+## Exemple résolu
+
+Une dalle nécessite **10 mètres cubes** de béton.
+
+- Taux dalle : 80 kg/cum.
+- Acier total = 10 × 80 = **800 kg** avant perte.
+- Avec 3 % de perte → **824 kg**.
+
+Pour un chiffre exact, listez chaque barre : 20 barres principales de 12 mm × 5 m et 32 de répartition de 8 mm × 3,2 m.
+
+- Principales : 20 × 5 = 100 m × (12²/162) ≈ **88,9 kg**
+- Répartition : 32 × 3,2 = 102,4 m × (8²/162) ≈ **40,5 kg**
+- Total ≈ **129,4 kg**

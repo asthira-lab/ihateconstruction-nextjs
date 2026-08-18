@@ -1,0 +1,33 @@
+## How concrete quantity is calculated
+
+The wet volume you enter is converted into the loose dry volume of material you actually need to order. Concrete shrinks as the fine particles pack into the voids between the coarse ones.
+
+1. **Dry volume** = wet volume × 1.54. The dry-to-wet factor accounts for the shrinkage when dry ingredients combine into wet concrete.
+2. **Wastage** is applied uniformly to all three components (default 3%). Dry volume × (1 + wastage %).
+3. **Split by mix ratio** a : b : c. For M20 (1:1.5:3), cement takes 1/5.5 of the total, sand takes 1.5/5.5, and aggregate takes 3/5.5.
+4. **Cement bags** = cement volume × 1440 kg/cum ÷ 50 kg/bag, rounded up to the next whole bag.
+5. **Sand and aggregate** are quoted in whichever unit you select — cft (default in India), cubic metres, or kilograms using standard bulk densities.
+
+## How to use the concrete calculator
+
+1. Pick a grade — M20 (1:1.5:3) is the general-purpose default for slabs, beams, and columns.
+2. Enter the finished wet volume in cubic metres or cubic feet.
+3. Choose the output units for cement, sand, and aggregate.
+4. Optionally tick "customise this grade" to change the mix ratio, wastage, densities, and dry-to-wet factor.
+
+## Choosing a mix grade
+
+- **M5–M10** — lean or plain concrete (PCC): bedding, screed, non-structural fill.
+- **M15 (1:2:4)** — PCC in foundations and light-load RCC.
+- **M20 (1:1.5:3)** — general RCC: slabs, beams, and columns under light-to-moderate load.
+- **M25 (1:1:2)** — RCC for moderate loads; the common IS 456 minimum for structural members.
+- **M30 and above** — design mixes, lab-proportioned. Not covered by fixed volumetric ratios.
+
+## Worked example
+
+A slab needs **10 cubic metres** of M20 concrete.
+
+- Dry volume = 10 × 1.54 = **15.4 cum**
+- With 3% wastage → 15.4 × 1.03 = **15.86 cum**
+- Split 1:1.5:3 → cement ≈ **2.88 cum**, sand ≈ **4.33 cum**, aggregate ≈ **8.65 cum**
+- Cement bags = 2.88 × 1440 ÷ 50 ≈ **83 bags**

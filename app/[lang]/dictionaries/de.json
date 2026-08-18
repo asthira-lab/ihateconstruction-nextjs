@@ -1,1223 +1,1395 @@
 {
- "common": {
-  "cancel": "Abbrechen",
-  "save": "Speichern",
-  "saveChanges": "Änderungen speichern",
-  "saving": "Speichern…",
-  "delete": "Löschen",
-  "deleting": "Löschen…",
-  "back": "Zurück",
-  "loading": "Laden…",
-  "loadMore": "Mehr laden",
-  "close": "Schließen",
-  "edit": "Bearbeiten",
-  "new": "Neu",
-  "add": "Hinzufügen",
-  "remove": "Entfernen",
-  "confirm": "Bestätigen",
-  "yes": "Ja",
-  "no": "Nein",
-  "required": "*",
-  "optional": "(optional)",
-  "openings": "Öffnungen",
-  "netArea": "Nettofläche",
-  "wastage": "Verschnitt",
-  "cement": "Zement",
-  "sand": "Sand",
-  "aggregate": "Zuschlagstoff",
-  "mortar": "Mörtel",
-  "grout": "Fugenmörtel",
-  "unit": "Einheit",
-  "length": "Länge",
-  "width": "Breite",
-  "height": "Höhe",
-  "thickness": "Dicke",
-  "volume": "Volumen",
-  "quantity": "Menge",
-  "reset": "Zurücksetzen",
-  "calculate": "Berechnen",
-  "calculating": "Berechnen…",
-  "preset": "Voreinstellung",
-  "customise": "Anpassen",
-  "fixHighlighted": "Korrigieren Sie die markierten Felder, um fortzufahren.",
-  "noAccount": "Kein Konto",
-  "notFound": "—",
-  "coming": "Demnächst verfügbar"
- },
- "header": {
-  "brand": "ihateconstruction",
-  "homeAria": "ihateconstruction.co Startseite",
-  "calculators": "Rechner",
-  "projects": "Projekte",
-  "signIn": "Anmelden"
- },
- "footer": {
-  "product": "Produkt",
-  "company": "Unternehmen",
-  "legal": "Rechtliches",
-  "calculators": "Rechner",
-  "roadmap": "Roadmap",
-  "projectsBoq": "Projekte & BOQ",
-  "quotations": "Angebote",
-  "about": "Über uns",
-  "contact": "Kontakt",
-  "privacy": "Datenschutz",
-  "terms": "AGB",
-  "tagline": "Bau-Rechner und Kalkulationswerkzeuge für Bauunternehmer.",
-  "copy": "© {year} ihateconstruction.co",
-  "made": "Gemacht für indische Baustellen · en-IN"
- },
- "home": {
-  "hero": {
-   "eyebrow": "Kostenlose Werkzeuge für indische Bauunternehmer",
-   "title": "Kalkulation und Rechner, gebaut für die Praxis von Bauunternehmern.",
-   "subtitle": "Kostenlose, einheitenbewusste Rechner, die Wandabmessungen in Materialbestellungen umwandeln — Ziegel, Zement, Sand, Fliesen, Farbe, Stahl. Projekte, BOQ und GST-fertige Angebote folgen als Nächstes.",
-   "ctaPrimary": "Rechner öffnen",
-   "ctaSecondary": "Ziegelrechner ausprobieren",
-   "note": "Kein Konto erforderlich · Metrisch und imperial · Funktioniert auf dem Handy"
-  },
-  "features": {
-   "eyebrow": "Was drin ist",
-   "title": "Eine Plattform. Vom Kostenvoranschlag bis zur Rechnung.",
-   "subtitle": "Beginnen Sie heute mit den Rechnern. Speichern Sie Ergebnisse in Projekten, erstellen Sie BOQ und Angebote und senden Sie GST-fertige Rechnungen — alles unter einem Dach.",
-   "cards": {
-    "calculators": {
-     "title": "Rechner",
-     "body": "Fünf praxiserprobte Rechner für Beton, Ziegel, Farbe, Fliesen und Stahl. Geben Sie Ihren Auftrag ein und erhalten Sie exakte Materialmengen."
-    },
-    "projects": {
-     "title": "Projekte & BOQ",
-     "body": "Speichern Sie jede Berechnung in einem Projekt. Automatisch erstelltes Leistungsverzeichnis mit laufenden Summen."
-    },
-    "quotations": {
-     "title": "Angebote & Rechnungen",
-     "body": "Professionelle PDFs mit Ihrem Logo, Kundendaten, GST-Aufschlüsselung und indischen Bankdaten."
-    }
-   }
-  },
-  "howItWorks": {
-   "eyebrow": "So funktioniert es",
-   "title": "Drei Schritte, keine Tabellenkalkulation.",
-   "steps": {
-    "pick": {
-     "title": "Rechner auswählen",
-     "body": "Wählen Sie zwischen Beton, Ziegel, Farbe, Fliesen oder Stahl. Jeder kommt mit den Voreinstellungen, die Sie tatsächlich auf der Baustelle nutzen."
-    },
-    "enter": {
-     "title": "Auftrag eingeben",
-     "body": "Wandabmessungen, Mischungsverhältnisse, Verschnitt — Schieberegler für die grobe Form, direkte Eingabe für die exakte Zahl."
-    },
-    "order": {
-     "title": "Bestellliste erhalten",
-     "body": "Ziegel in Stück, Zement in 50 kg Säcken, Sand in Kubikfuß. Bereit zur Übergabe an Ihren Lieferanten."
-    }
-   }
-  },
-  "indian": {
-   "eyebrow": "Gebaut für indische Baustellen",
-   "title": "In indischen Einheiten, wie indische Bauunternehmer einkaufen.",
-   "body1": "Jeder Rechner kommt mit den Voreinstellungen, die Sie auf der Baustelle verwenden — IS 1077 Modulziegel, traditioneller 230×110×75 mm Ziegel, AAC Blöcke. Die Mengen werden in den Einheiten ausgegeben, in denen Sie bestellen, sodass das, was der Rechner sagt, genau das ist, was Sie dem Lieferanten sagen.",
-   "body2": "Keine Umrechnungstabellen. Kein „ungefähr genug\". Keine US-Import-Terminologie, die nicht zur tatsächlichen Baupraxis passt.",
-   "bullets": [
-    "Modul-, traditionelle und AAC-Block-Voreinstellungen",
-    "Zement in 50 kg Säcken, Sand in Kubikfuß",
-    "Metrische oder imperiale Eingabe, pro Feld",
-    "Verschnitt-Prozentsätze, die Bauunternehmer wirklich nutzen",
-    "GST-fertige Ausgaben (kommen mit Angeboten)",
-    "IS 1077 Modulziegel als erstklassige Voreinstellung"
-   ]
-  },
-  "closing": {
-   "title": "Starten Sie mit dem Ziegelrechner.",
-   "body": "Kein Konto nötig. Geben Sie Ihre Wandabmessungen ein und erhalten Sie in unter einer Minute eine exakte Materialbestellung — Ziegel, Zementsäcke, Sand.",
-   "cta": "Ziegelrechner öffnen"
-  }
- },
- "breadcrumbs": {
-  "home": "Startseite",
-  "calculators": "Rechner",
-  "about": "Über uns",
-  "contact": "Kontakt",
-  "privacy": "Datenschutzerklärung",
-  "terms": "Nutzungsbedingungen"
- },
- "about": {
-  "meta": {
-   "title": "Über uns — Kostenlose Bau-Rechner & Software für Bauunternehmer",
-   "description": "Über iHateConstruction — kostenlose Bau-Rechner für Zement, Beton, Ziegel, Stahl, Farbe und Fliesen, plus BOQ, Angebot und GST-Rechnung, gebaut für indische Bauunternehmer."
-  },
-  "title": "Über iHateConstruction",
-  "problem": {
-   "heading": "Das Problem",
-   "body": "Der Bau in Indien ist eine ₹13 lakh crore Industrie — und die meisten Bauunternehmer kalkulieren immer noch Kosten auf Papier, senden Angebote per WhatsApp Screenshot und verfolgen Zahlungen in einem Notizbuch. Die vorhandenen Werkzeuge sind entweder für amerikanische Generalunternehmer gebaut (Procore, Buildertrend) oder zu komplex für ein 5-Personen-Team, das Wohnungsbau macht.",
-   "intro": "Wir haben Bauunternehmer beobachtet, wie sie kämpfen mit:",
-   "items": [
-    "Materialmengen schätzen → 15-20% zu viel bestellen (₹ direkt in den Abfluss)",
-    "Angebote aus dem Gedächtnis → fehlende Posten, Unterbewertung, unangenehme Gespräche später",
-    "Zahlungen auf Papier verfolgen → „Haben sie die zweite Rate bezahlt oder nicht?\"",
-    "Dokumente teilen → WhatsApp-Weiterleitungen unscharfer PDFs, erstellt in MS Paint"
-   ]
-  },
-  "solution": {
-   "heading": "Die Lösung",
-   "body": "iHateConstruction bietet indischen Bauunternehmern einen Ort, um zu kalkulieren, anzubieten, zu fakturieren und bezahlt zu werden — ohne Enterprise-Ballast oder $300 Monatspreis.",
-   "cards": {
-    "calculators": {
-     "title": "Rechner",
-     "body": "Beton, Stahl, Ziegel, Farbe, Fliesen — mit integrierten indischen Normen (IS-Codes)."
-    },
-    "boq": {
-     "title": "BOQ & Angebote",
-     "body": "Erstellen Sie in Sekunden professionelle Leistungsverzeichnisse und kundenorientierte Angebote."
-    },
-    "invoices": {
-     "title": "Rechnungen & Zahlungen",
-     "body": "Verfolgen Sie, wer was schuldet. Teilen Sie UPI QR für sofortigen Einzug. Erfassen Sie Zahlungen mit Screenshot-OCR."
-    },
-    "pdf": {
-     "title": "PDF-Export",
-     "body": "Professionelle A4-Dokumente, die Ihre Kunden wirklich respektieren — keine WhatsApp-Weiterleitungen."
-    }
-   }
-  },
-  "audience": {
-   "heading": "Für wen es ist",
-   "items": [
-    {
-     "bold": "Selbstständige Bauunternehmer",
-     "rest": ", die Wohn- und kleine Gewerbeprojekte machen."
-    },
-    {
-     "bold": "Kleine Baufirmen",
-     "rest": " (2-15 Personen), die Struktur ohne Overhead benötigen."
-    },
-    {
-     "bold": "Bauingenieure",
-     "rest": ", die nebenbei kalkulieren und genaue, wiederholbare Berechnungen wollen."
-    },
-    {
-     "bold": "Innenarchitekten",
-     "rest": ", die Materialschätzung für Ausbauprojekte benötigen."
-    }
-   ]
-  },
-  "india": {
-   "heading": "Indien zuerst",
-   "intro": "Jede Entscheidung beginnt beim indischen Bauunternehmer:",
-   "items": [
-    "Berechnungen verwenden IS-Codes und indische Standardpraxis (nicht ASTM oder Eurocode).",
-    "Materialeinheiten entsprechen dem, was Sie im lokalen Godown kaufen — Säcke, CFT, laufende Fuß.",
-    "Währung ist INR. GST-Sätze sind eingebaut. Steuerregion zählt.",
-    "Zahlung per UPI QR — denn so zahlt Indien im Jahr 2026.",
-    "Funktioniert auf einem ₹10,000 Handy über 4G. Keine reinen Desktop-Workflows."
-   ]
-  },
-  "contact": {
-   "heading": "Kontakt",
-   "body1": "Feedback, Fehler gefunden oder Partnerschaft gewünscht? Erreichen Sie uns unter",
-   "email": "huzaif89@hotmail.com",
-   "body2": "oder nutzen Sie das",
-   "link": "Kontaktformular"
-  }
- },
- "privacy": {
-  "meta": {
-   "title": "Datenschutzerklärung — Wie wir mit Ihren Daten umgehen",
-   "description": "iHateConstruction Datenschutzerklärung. Erfahren Sie, welche personenbezogenen Daten wir erheben, wie wir sie verwenden, wo sie gespeichert werden und welche Rechte Sie über Ihr Konto, Ihre Projekte, Berechnungen und Geschäftsdaten haben."
-  },
-  "title": "Datenschutzerklärung",
-  "updated": "Zuletzt aktualisiert: 5. August 2026",
-  "s1": {
-   "heading": "1. Informationen, die wir erheben",
-   "intro": "Wenn Sie iHateConstruction nutzen, erheben wir:",
-   "items": [
-    {
-     "bold": "Kontoinformationen:",
-     "rest": " Name, E-Mail-Adresse und Authentifizierungsdaten (verwaltet über Clerk)."
-    },
-    {
-     "bold": "Projektdaten:",
-     "rest": " Projekte, Berechnungen, Materialien, BOQs, Angebote und Rechnungen, die Sie erstellen."
-    },
-    {
-     "bold": "Nutzungsdaten:",
-     "rest": " Besuchte Seiten, genutzte Funktionen, Browsertyp, Geräteinformationen und IP-Adresse."
-    },
-    {
-     "bold": "Zahlungsinformationen:",
-     "rest": " UPI-IDs und QR-Codes, die Sie freiwillig hochladen. Wir verarbeiten oder speichern keine Kreditkartennummern."
-    }
-   ]
-  },
-  "s2": {
-   "heading": "2. Wie wir Ihre Daten verwenden",
-   "items": [
-    "Bereitstellung, Wartung und Verbesserung des Dienstes.",
-    "Erstellung von Dokumenten (BOQs, Angebote, Rechnungen, PDFs) auf Ihre Anfrage.",
-    "Versand transaktionaler E-Mails (Kontobestätigung, Passwort-Zurücksetzung).",
-    "Analyse von Nutzungsmustern zur Verbesserung von Funktionen (aggregiert, niemals verkauft)."
-   ]
-  },
-  "s3": {
-   "heading": "3. Datenspeicherung & Sicherheit",
-   "body": "Ihre Daten werden in verschlüsselten Datenbanken auf sicherer Cloud-Infrastruktur gespeichert. Wir nutzen TLS für alle Daten während der Übertragung. Die Authentifizierung wird von Clerk gehandhabt, einem SOC 2 Type II konformen Anbieter."
-  },
-  "s4": {
-   "heading": "4. Datenweitergabe",
-   "intro": "Wir verkaufen Ihre Daten nicht. Wir teilen Daten nur mit:",
-   "items": [
-    {
-     "bold": "Dienstleistern:",
-     "rest": " Hosting (Vercel), Authentifizierung (Clerk), Datenbank (verwaltetes PostgreSQL) — nur was für den Betrieb notwendig ist."
-    },
-    {
-     "bold": "Ihren Kunden:",
-     "rest": " Wenn Sie einen öffentlichen Angebotslink erstellen, sind die Angebotsdetails für jeden mit dem Link sichtbar."
-    },
-    {
-     "bold": "Rechtliche Anforderungen:",
-     "rest": " Wenn dies nach indischem Recht oder durch gültige gerichtliche Anordnung erforderlich ist."
-    }
-   ]
-  },
-  "s5": {
-   "heading": "5. Ihre Rechte",
-   "items": [
-    {
-     "bold": "Zugriff:",
-     "rest": " Alle mit Ihrem Konto verbundenen Daten einsehen."
-    },
-    {
-     "bold": "Export:",
-     "rest": " Laden Sie Ihre Projekte, Berechnungen und Dokumente herunter."
-    },
-    {
-     "bold": "Löschung:",
-     "rest": " Vollständige Löschung Ihres Kontos und aller zugehörigen Daten anfordern."
-    },
-    {
-     "bold": "Berichtigung:",
-     "rest": " Unrichtige Informationen jederzeit aktualisieren."
-    }
-   ]
-  },
-  "s6": {
-   "heading": "6. Cookies",
-   "body": "Wir nutzen essenzielle Cookies für Authentifizierung und Session-Verwaltung. Keine Werbe-Cookies. Keine Tracking-Pixel Dritter."
-  },
-  "s7": {
-   "heading": "7. Datenaufbewahrung",
-   "body": "Ihre Daten werden aufbewahrt, solange Ihr Konto aktiv ist. Gelöschte Konten werden innerhalb von 30 Tagen entfernt. Audit-Logs werden aus Sicherheitsgründen 1 Jahr aufbewahrt."
-  },
-  "s8": {
-   "heading": "8. Kinder",
-   "body": "iHateConstruction ist nicht für Nutzer unter 18 Jahren bestimmt. Wir erheben wissentlich keine Daten von Minderjährigen."
-  },
-  "s9": {
-   "heading": "9. Änderungen",
-   "body": "Wir können diese Erklärung aktualisieren. Wesentliche Änderungen werden mindestens 14 Tage vor Inkrafttreten per E-Mail oder In-App-Hinweis mitgeteilt."
-  },
-  "s10": {
-   "heading": "10. Kontakt",
-   "body": "Für datenschutzbezogene Anfragen:",
-   "email": "huzaif89@hotmail.com"
-  }
- },
- "terms": {
-  "meta": {
-   "title": "Nutzungsbedingungen — Regeln für die Nutzung von iHateConstruction",
-   "description": "iHateConstruction Nutzungsbedingungen. Die Regeln für die Nutzung unserer kostenlosen Bau-Rechner, Projektverwaltung, BOQ-Ersteller, Angebots- und Rechnungstools sowie Funktionen zur Zahlungseinziehung."
-  },
-  "title": "Nutzungsbedingungen",
-  "updated": "Zuletzt aktualisiert: 5. August 2026",
-  "s1": {
-   "heading": "1. Annahme",
-   "body": "Durch Zugriff auf oder Nutzung von iHateConstruction („der Dienst\") erklären Sie sich an diese Bedingungen gebunden. Wenn Sie nicht einverstanden sind, nutzen Sie den Dienst nicht."
-  },
-  "s2": {
-   "heading": "2. Beschreibung des Dienstes",
-   "intro": "iHateConstruction ist eine Bauverwaltungs- und Kalkulationsplattform, die bietet:",
-   "items": [
-    "Baumaterial-Rechner (Beton, Stahl, Ziegel, Farbe, Fliesen).",
-    "Projektverwaltung mit gespeicherten Berechnungen und Materialpreisen.",
-    "Erstellung von Leistungsverzeichnissen (BOQ).",
-    "Angebots- und Rechnungserstellung mit PDF-Export.",
-    "Werkzeuge zur Zahlungseinziehung (UPI QR, Zahlungslinks)."
-   ]
-  },
-  "s3": {
-   "heading": "3. Nutzerkonten",
-   "items": [
-    "Sie müssen bei der Kontoerstellung genaue Informationen angeben.",
-    "Sie sind für alle Aktivitäten unter Ihrem Konto verantwortlich.",
-    "Sie dürfen Ihre Zugangsdaten nicht teilen oder anderen Zugang zu Ihrem Konto geben.",
-    "Wir können Konten sperren oder kündigen, die diese Bedingungen verletzen."
-   ]
-  },
-  "s4": {
-   "heading": "4. Ihre Daten",
-   "items": [
-    "Sie behalten das Eigentum an allen Inhalten, die Sie erstellen (Projekte, Berechnungen, Dokumente).",
-    "Sie gewähren uns eine eingeschränkte Lizenz, Ihre Daten zu speichern, zu verarbeiten und anzuzeigen, ausschließlich zur Bereitstellung des Dienstes.",
-    "Wir beanspruchen kein Eigentum an Ihren Geschäftsdaten."
-   ]
-  },
-  "s5": {
-   "heading": "5. Zulässige Nutzung",
-   "intro": "Sie stimmen zu, nicht:",
-   "items": [
-    "den Dienst für illegale Zwecke zu nutzen.",
-    "schädliche Inhalte hochzuladen oder Sicherheitsverletzungen zu versuchen.",
-    "Daten aus dem Dienst zu scrapen, zu crawlen oder in großen Mengen herunterzuladen.",
-    "sich als andere Person oder Organisation auszugeben.",
-    "die Rechner für sicherheitskritische Ingenieursentscheidungen ohne unabhängige fachliche Prüfung zu verwenden."
-   ]
-  },
-  "s6": {
-   "heading": "6. Rechner-Haftungsausschluss",
-   "boldLabel": "Wichtig:",
-   "body": " Die Rechner liefern Schätzungen basierend auf Standardformeln und regionalen Normen. Sie sind Werkzeuge zur Schätzung, kein Ersatz für professionelle Tragwerksplanung. Überprüfen Sie Mengen immer mit einem qualifizierten Ingenieur vor Beschaffung oder Bau."
-  },
-  "s7": {
-   "heading": "7. Zahlungsfunktionen",
-   "items": [
-    "Zahlungsfunktionen (UPI QR, Zahlungslinks) erleichtern die Kommunikation zwischen Ihnen und Ihren Kunden.",
-    "Wir sind kein Zahlungsdienstleister. Geld fließt direkt zwischen Ihnen und Ihrem Kunden.",
-    "Wir haften nicht für Zahlungsstreitigkeiten, fehlgeschlagene Transaktionen oder falsche Beträge.",
-    "Wenn wir Zahlungsanbieter (Razorpay) integrieren, gelten deren Bedingungen ebenfalls."
-   ]
-  },
-  "s8": {
-   "heading": "8. Verfügbarkeit",
-   "body": "Wir streben hohe Verfügbarkeit an, garantieren jedoch keinen unterbrechungsfreien Dienst. Geplante Wartung wird im Voraus angekündigt. Wir haften nicht für Verluste durch Ausfallzeiten."
-  },
-  "s9": {
-   "heading": "9. Haftungsbeschränkung",
-   "intro": "Im maximal nach indischem Recht zulässigen Umfang:",
-   "items": [
-    "Der Dienst wird „wie besehen\" ohne jegliche Gewährleistung bereitgestellt.",
-    "Wir haften nicht für indirekte, zufällige oder Folgeschäden.",
-    "Unsere Gesamthaftung ist begrenzt auf den Betrag, den Sie uns in den 12 Monaten vor der Forderung gezahlt haben (oder ₹5,000, je nachdem, was höher ist)."
-   ]
-  },
-  "s10": {
-   "heading": "10. Geistiges Eigentum",
-   "items": [
-    "Der Dienst, sein Design, Code und Branding sind unser geistiges Eigentum.",
-    "Sie dürfen keinen Teil des Dienstes kopieren, modifizieren oder weiterverbreiten.",
-    "Der Name „iHateConstruction\" und zugehörige Marken sind unsere Warenzeichen."
-   ]
-  },
-  "s11": {
-   "heading": "11. Kündigung",
-   "items": [
-    "Sie können Ihr Konto jederzeit löschen.",
-    "Wir können Ihren Zugang wegen Verstoßes gegen die Bedingungen nach Vorankündigung beenden.",
-    "Bei Kündigung haben Sie 30 Tage Zeit, Ihre Daten zu exportieren, bevor sie gelöscht werden."
-   ]
-  },
-  "s12": {
-   "heading": "12. Anwendbares Recht",
-   "body": "Diese Bedingungen unterliegen indischem Recht. Streitigkeiten unterliegen der ausschließlichen Zuständigkeit der Gerichte in Bengaluru, Karnataka."
-  },
-  "s13": {
-   "heading": "13. Änderungen",
-   "body": "Wir können diese Bedingungen ändern. Wesentliche Änderungen werden 14 Tage im Voraus mitgeteilt. Die fortgesetzte Nutzung nach Änderungen stellt eine Annahme dar."
-  },
-  "s14": {
-   "heading": "14. Kontakt",
-   "body": "Fragen zu diesen Bedingungen:",
-   "email": "legal@ihateconstruction.co"
-  }
- },
- "contact": {
-  "meta": {
-   "title": "Kontakt — Sprechen Sie mit dem iHateConstruction-Team",
-   "description": "Kontaktieren Sie iHateConstruction bei Fehlern, Funktionen, Rechneranfragen, Partnerschaften oder allgemeinen Fragen. Einer von uns liest jede Nachricht und antwortet in der Regel innerhalb von zwei Werktagen."
-  },
-  "eyebrow": "Unternehmen",
-  "title": "Kontakt aufnehmen",
-  "subtitle": "Schreiben Sie uns über einen Fehler, einen Rechner, den Sie gebaut haben möchten, eine Partnerschaft oder alles andere. Einer von uns liest jede Nachricht und antwortet in der Regel innerhalb von zwei Werktagen.",
-  "form": {
-   "name": "Name",
-   "email": "E-Mail",
-   "subject": "Betreff",
-   "message": "Nachricht",
-   "website": "Webseite",
-   "send": "Senden",
-   "sending": "Wird gesendet…",
-   "successTitle": "Nachricht gesendet",
-   "successBody": "Danke — wir haben sie erhalten.",
-   "successNote": "Einer von uns wird Ihre Nachricht lesen und an die angegebene E-Mail-Adresse antworten, in der Regel innerhalb von zwei Werktagen.",
-   "sendAnother": "Weitere senden",
-   "subjects": {
-    "general": "Allgemeine Frage",
-    "bug": "Fehlerbericht",
-    "feature": "Funktionswunsch",
-    "partnership": "Partnerschaft"
-   },
-   "errors": {
-    "nameRequired": "Bitte geben Sie Ihren Namen ein.",
-    "nameShort": "Name muss mindestens 2 Zeichen lang sein.",
-    "nameLong": "Name darf höchstens 80 Zeichen lang sein.",
-    "emailRequired": "Bitte geben Sie Ihre E-Mail ein.",
-    "emailInvalid": "Das sieht nicht wie eine gültige E-Mail aus.",
-    "messageRequired": "Bitte geben Sie eine Nachricht ein.",
-    "messageShort": "Nachricht muss mindestens 10 Zeichen lang sein.",
-    "messageLong": "Nachricht darf höchstens {max} Zeichen lang sein.",
-    "fixHighlighted": "Korrigieren Sie die markierten Felder, um fortzufahren."
-   }
-  }
- },
- "calculators": {
-  "index": {
-   "meta": {
-    "title": "Kostenlose Bau-Rechner — Zement, Beton, Ziegel & Bewehrung",
-    "description": "Sieben kostenlose Bau-Rechner — Zement, Beton, Ziegel, Stahl, Bewehrung, Farbe und Fliesen. Geben Sie Ihren Auftrag ein und erhalten Sie eine exakte Materialbestellung in Kubikyards, Kubikfuß oder metrischen Einheiten. Zementsäcke für eine Platte, Ziegel für eine Wand, Stahl für Bewehrung, Liter Farbe für einen Raum, Fliesen für einen Boden."
-   },
-   "eyebrow": "Werkzeuge",
-   "title": "Kostenlose Bau-Rechner",
-   "subtitle": "Sieben Rechner für die Materialbestellungen, die Sie tatsächlich aufgeben — Zement, Beton, Ziegel, Stahl, Bewehrung, Farbe und Fliesen. Geben Sie Ihre Abmessungen ein, erhalten Sie Säcke, Ziegel, Kilogramm oder Liter. Funktioniert in Kubikyards, Kubikfuß und Kubikmetern.",
-   "missing": "Fehlt ein Rechner, den Sie täglich nutzen?",
-   "contactSoon": "Kontaktformular kommt bald."
-  },
   "common": {
-   "eyebrow": "Rechner",
-   "faq": "Häufig gestellte Fragen",
-   "other": "Weitere Rechner",
-   "how": "Wie die Berechnung funktioniert",
-   "customParams": "Benutzerdefinierte Parameter",
-   "fillForm": "Füllen Sie das Formular aus und drücken Sie Berechnen, um Ihre Materialliste zu sehen.",
-   "fillFormSteel": "Füllen Sie das Formular aus und drücken Sie Berechnen, um das Stahlgewicht zu sehen.",
-   "fillFormPaint": "Füllen Sie das Formular aus und drücken Sie Berechnen, um Ihr Farbangebot zu sehen.",
-   "fillFormTile": "Füllen Sie das Formular aus und drücken Sie Berechnen, um Ihr Fliesenangebot zu sehen.",
-   "shareResult": "Ergebnis teilen",
-   "reload": "Neu laden",
-   "clearAll": "Alle Änderungen löschen",
-   "didWeSolve": "Haben wir Ihr Problem heute gelöst?"
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "saveChanges": "Änderungen speichern",
+    "saving": "Speichern…",
+    "delete": "Löschen",
+    "deleting": "Löschen…",
+    "back": "Zurück",
+    "loading": "Laden…",
+    "loadMore": "Mehr laden",
+    "close": "Schließen",
+    "edit": "Bearbeiten",
+    "new": "Neu",
+    "add": "Hinzufügen",
+    "remove": "Entfernen",
+    "confirm": "Bestätigen",
+    "yes": "Ja",
+    "no": "Nein",
+    "required": "*",
+    "optional": "(optional)",
+    "openings": "Öffnungen",
+    "netArea": "Nettofläche",
+    "wastage": "Verschnitt",
+    "cement": "Zement",
+    "sand": "Sand",
+    "aggregate": "Zuschlagstoff",
+    "mortar": "Mörtel",
+    "grout": "Fugenmörtel",
+    "unit": "Einheit",
+    "length": "Länge",
+    "width": "Breite",
+    "height": "Höhe",
+    "thickness": "Dicke",
+    "volume": "Volumen",
+    "quantity": "Menge",
+    "reset": "Zurücksetzen",
+    "calculate": "Berechnen",
+    "calculating": "Berechnen…",
+    "preset": "Voreinstellung",
+    "customise": "Anpassen",
+    "fixHighlighted": "Korrigieren Sie die markierten Felder, um fortzufahren.",
+    "noAccount": "Kein Konto",
+    "notFound": "—",
+    "coming": "Demnächst verfügbar"
   },
-  "cement": {
-   "meta": {
-    "title": "Zementrechner — Platte, Pfostenloch & Kubikyards",
-    "description": "Kostenloser Zementrechner. Berechnen Sie, wie viele Zementsäcke Sie für eine Betonplatte, ein Pfostenloch, eine Wand oder jedes Volumen benötigen — in Kubikyards, Kubikfuß oder Kubikmetern. Unterstützt 94 lb Portland-, 50 kg-, 40 kg-, 60 lb- und 80 lb-Säcke, Sand-Zement-Mischungen (1:3, 1:4, 1:6) und Standardplatten-Mischungen (M15, M20, M25)."
-   },
-   "crumb": "Zementrechner",
-   "title": "Zementrechner",
-   "subtitle": "Berechnen Sie genau, wie viele Zementsäcke Sie benötigen — für eine Betonplatte, eine Reihe von Pfostenlöchern oder jedes Nassvolumen in Kubikyards, Kubikfuß oder Kubikmetern. Unterstützt 94 lb Portland-Zementsäcke, 50 kg indische Säcke, 40 kg-, 60 lb- und 80 lb-Säcke, plus Sand-Zement-Mischungen (1:3, 1:4, 1:6) und Standard-Betonmischungen (M15, M20, M25).",
-   "handles": "Was dieser Zementrechner leistet",
-   "cards": {
-    "slab": {
-     "title": "Zement für eine Platte",
-     "body": "Geben Sie Länge, Breite und Dicke in Fuß und Zoll ein. Der Rechner gibt Zementsäcke für M15, M20 oder M25 Mischung zurück — die drei Güten für Einfahrten, Garagenböden und Hausplatten."
+  "header": {
+    "brand": "ihateconstruction",
+    "homeAria": "ihateconstruction.co Startseite",
+    "calculators": "Rechner",
+    "projects": "Projekte",
+    "signIn": "Anmelden"
+  },
+  "footer": {
+    "product": "Produkt",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "calculators": "Rechner",
+    "roadmap": "Roadmap",
+    "projectsBoq": "Projekte & BOQ",
+    "quotations": "Angebote",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "tagline": "Bau-Rechner und Kalkulationswerkzeuge für Bauunternehmer.",
+    "copy": "© {year} ihateconstruction.co",
+    "made": "Gemacht für indische Baustellen · en-IN"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Kostenlose Werkzeuge für indische Bauunternehmer",
+      "title": "Kalkulation und Rechner, gebaut für die Praxis von Bauunternehmern.",
+      "subtitle": "Kostenlose, einheitenbewusste Rechner, die Wandabmessungen in Materialbestellungen umwandeln — Ziegel, Zement, Sand, Fliesen, Farbe, Stahl. Projekte, BOQ und GST-fertige Angebote folgen als Nächstes.",
+      "ctaPrimary": "Rechner öffnen",
+      "ctaSecondary": "Ziegelrechner ausprobieren",
+      "note": "Kein Konto erforderlich · Metrisch und imperial · Funktioniert auf dem Handy"
     },
-    "post": {
-     "title": "Zement für Pfostenlöcher",
-     "body": "Zaunpfosten, Briefkästen, Schilderpfosten. Geben Sie Lochdurchmesser, Tiefe und Anzahl der zu setzenden Pfosten ein; das Werkzeug dimensioniert eine 1:3 Sand-Zement-Füllung für den gesamten Lauf."
+    "features": {
+      "eyebrow": "Was drin ist",
+      "title": "Eine Plattform. Vom Kostenvoranschlag bis zur Rechnung.",
+      "subtitle": "Beginnen Sie heute mit den Rechnern. Speichern Sie Ergebnisse in Projekten, erstellen Sie BOQ und Angebote und senden Sie GST-fertige Rechnungen — alles unter einem Dach.",
+      "cards": {
+        "calculators": {
+          "title": "Rechner",
+          "body": "Fünf praxiserprobte Rechner für Beton, Ziegel, Farbe, Fliesen und Stahl. Geben Sie Ihren Auftrag ein und erhalten Sie exakte Materialmengen."
+        },
+        "projects": {
+          "title": "Projekte & BOQ",
+          "body": "Speichern Sie jede Berechnung in einem Projekt. Automatisch erstelltes Leistungsverzeichnis mit laufenden Summen."
+        },
+        "quotations": {
+          "title": "Angebote & Rechnungen",
+          "body": "Professionelle PDFs mit Ihrem Logo, Kundendaten, GST-Aufschlüsselung und indischen Bankdaten."
+        }
+      }
     },
-    "cuyd": {
-     "title": "Kubikyards Zement",
-     "body": "Kennen Sie Ihr Volumen bereits in Kubikyards? Wechseln Sie in den Modus Freies Volumen. Kubikmeter und Kubikfuß werden ebenfalls unterstützt — der Rechner konvertiert zwischen allen drei."
-    },
-    "sc": {
-     "title": "Sand und Zement",
-     "body": "Wählen Sie die 1:4 Putz-, 1:6 Mauerwerks- oder 1:3 Reichmörtel-Voreinstellung, wenn Sie nur Zement mit Sand mischen — ohne Zuschlag. Die Ausgabe zeigt sowohl Zementsäcke als auch Kubikfuß Sand."
-    },
-    "portland": {
-     "title": "94 lb Portland-Zementsäcke",
-     "body": "US-Bauunternehmer, die Type I/II Portland-Zement in 94 lb Säcken kaufen: Wählen Sie diese Sackgröße und die Summe wird automatisch auf ganze Säcke aufgerundet."
+    "howItWorks": {
+      "eyebrow": "So funktioniert es",
+      "title": "Drei Schritte, keine Tabellenkalkulation.",
+      "steps": {
+        "pick": {
+          "title": "Rechner auswählen",
+          "body": "Wählen Sie zwischen Beton, Ziegel, Farbe, Fliesen oder Stahl. Jeder kommt mit den Voreinstellungen, die Sie tatsächlich auf der Baustelle nutzen."
+        },
+        "enter": {
+          "title": "Auftrag eingeben",
+          "body": "Wandabmessungen, Mischungsverhältnisse, Verschnitt — Schieberegler für die grobe Form, direkte Eingabe für die exakte Zahl."
+        },
+        "order": {
+          "title": "Bestellliste erhalten",
+          "body": "Ziegel in Stück, Zement in 50 kg Säcken, Sand in Kubikfuß. Bereit zur Übergabe an Ihren Lieferanten."
+        }
+      }
     },
     "indian": {
-     "title": "Indische 50 kg Säcke",
-     "body": "Für Bauunternehmer in Indien: 50 kg OPC / PPC Säcke, IS 456 Mischungsverhältnisse und Ergebnisse in Kubikfuß — den Einheiten, in denen Ihr Godown tatsächlich anbietet."
+      "eyebrow": "Gebaut für indische Baustellen",
+      "title": "In indischen Einheiten, wie indische Bauunternehmer einkaufen.",
+      "body1": "Jeder Rechner kommt mit den Voreinstellungen, die Sie auf der Baustelle verwenden — IS 1077 Modulziegel, traditioneller 230×110×75 mm Ziegel, AAC Blöcke. Die Mengen werden in den Einheiten ausgegeben, in denen Sie bestellen, sodass das, was der Rechner sagt, genau das ist, was Sie dem Lieferanten sagen.",
+      "body2": "Keine Umrechnungstabellen. Kein „ungefähr genug\". Keine US-Import-Terminologie, die nicht zur tatsächlichen Baupraxis passt.",
+      "bullets": [
+        "Modul-, traditionelle und AAC-Block-Voreinstellungen",
+        "Zement in 50 kg Säcken, Sand in Kubikfuß",
+        "Metrische oder imperiale Eingabe, pro Feld",
+        "Verschnitt-Prozentsätze, die Bauunternehmer wirklich nutzen",
+        "GST-fertige Ausgaben (kommen mit Angeboten)",
+        "IS 1077 Modulziegel als erstklassige Voreinstellung"
+      ]
+    },
+    "closing": {
+      "title": "Starten Sie mit dem Ziegelrechner.",
+      "body": "Kein Konto nötig. Geben Sie Ihre Wandabmessungen ein und erhalten Sie in unter einer Minute eine exakte Materialbestellung — Ziegel, Zementsäcke, Sand.",
+      "cta": "Ziegelrechner öffnen"
     }
-   },
-   "form": {
-    "pouring": "Was gießen Sie?",
-    "modes": {
-     "slab": "Betonplatte",
-     "post": "Pfostenloch",
-     "free": "Freies Volumen"
-    },
-    "lengthFt": "Länge (ft)",
-    "widthFt": "Breite (ft)",
-    "thicknessIn": "Dicke (in)",
-    "diameterIn": "Lochdurchmesser (in)",
-    "depthFt": "Tiefe (ft)",
-    "posts": "Anzahl der Pfosten",
-    "wetVolume": "Nassvolumen",
-    "unit": "Einheit",
-    "units": {
-     "yd3": "Kubikyards",
-     "m3": "Kubikmeter",
-     "ft3": "Kubikfuß"
-    },
-    "ratio": "Mischungsverhältnis",
-    "bagSize": "Zementsackgröße",
-    "wastage": "Verschnitt (%)",
-    "resultAria": "Ergebnis Zementrechner",
-    "youNeed": "Sie benötigen",
-    "bags": "Zementsäcke (",
-    "cementKg": "Zement (kg)",
-    "cementLb": "Zement (lb)",
-    "wetVol": "Nassvolumen:",
-    "dry": "· Trockenvolumenfaktor 1,54 · Verschnitt",
-    "mixLabel": "Mischung:",
-    "empty": "Geben Sie Ihre Abmessungen ein, um Zementsäcke und Materialmengen zu sehen."
-   }
   },
-  "concrete": {
-   "meta": {
-    "title": "Betonrechner — Platte, Balken, Stütze & Fundament",
-    "description": "Kostenloser Betonrechner. Geben Sie die Größe Ihrer Platte, Balken, Stütze oder Fundament ein und erhalten Sie Zementsäcke, Sand und grobe Zuschlagstoffe — für M5 bis M25 Güten nach den Standard IS 456 Mischungsverhältnissen. Funktioniert in Kubikyards, Kubikfuß und Kubikmetern."
-   },
-   "crumb": "Betonrechner",
-   "title": "Betonrechner — Platte, Balken, Stütze & Fundament",
-   "subtitle": "Geben Sie das Nassvolumen an Beton ein, das Sie gießen müssen, wählen Sie eine Güte und wir geben Zementsäcke, Sand und groben Zuschlagstoff zurück — passend zum IS 456 Mischungsverhältnis für diese Güte.",
-   "form": {
-    "grade": "Betongüte",
-    "customGrade": "Diese Güte anpassen",
-    "volume": "Betonvolumen",
-    "wetVol": "Nassvolumen",
-    "volAria": "Betonvolumen",
-    "volHelp": "Geben Sie das fertige (nasse) Volumen an Beton ein, das Sie gießen müssen.",
-    "outputs": "Ausgabeeinheiten",
-    "ratio": "Mischungsverhältnis (c : s : a)",
-    "wastage": "Verschnitt",
-    "wastageAria": "Verschnitt in Prozent",
-    "dtw": "Trocken-zu-Nass-Faktor",
-    "dtwAria": "Trocken-zu-Nass-Faktor",
-    "density": "Zementdichte",
-    "densityAria": "Zement-Schüttdichte",
-    "bag": "Zementsackgewicht",
-    "bagAria": "Zementsackgewicht",
-    "errors": {
-     "volMin": "Geben Sie ein Volumen größer als 0 ein.",
-     "volMax": "Volumen muss 10.000 oder weniger betragen.",
-     "ratioFmt": "Verwenden Sie das Format „a:b:c\" — z. B. „1:1.5:3\".",
-     "ratioPos": "Jeder Teil des Verhältnisses muss größer als 0 sein.",
-     "wastageRange": "Geben Sie eine Zahl zwischen 0 und 50 ein.",
-     "wastageMax": "Verschnitt muss 50% oder weniger betragen.",
-     "dtwMin": "Trocken-zu-Nass-Faktor muss größer als 1 sein.",
-     "dtwMax": "Trocken-zu-Nass-Faktor über 2 ist unrealistisch.",
-     "density": "Geben Sie eine Dichte größer als 0 ein.",
-     "bag": "Geben Sie ein Sackgewicht größer als 0 ein."
+  "breadcrumbs": {
+    "home": "Startseite",
+    "calculators": "Rechner",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen"
+  },
+  "about": {
+    "meta": {
+      "title": "Über uns — Kostenlose Bau-Rechner & Software für Bauunternehmer",
+      "description": "Über iHateConstruction — kostenlose Bau-Rechner für Zement, Beton, Ziegel, Stahl, Farbe und Fliesen, plus BOQ, Angebot und GST-Rechnung, gebaut für indische Bauunternehmer."
+    },
+    "title": "Über iHateConstruction",
+    "problem": {
+      "heading": "Das Problem",
+      "body": "Der Bau in Indien ist eine ₹13 lakh crore Industrie — und die meisten Bauunternehmer kalkulieren immer noch Kosten auf Papier, senden Angebote per WhatsApp Screenshot und verfolgen Zahlungen in einem Notizbuch. Die vorhandenen Werkzeuge sind entweder für amerikanische Generalunternehmer gebaut (Procore, Buildertrend) oder zu komplex für ein 5-Personen-Team, das Wohnungsbau macht.",
+      "intro": "Wir haben Bauunternehmer beobachtet, wie sie kämpfen mit:",
+      "items": [
+        "Materialmengen schätzen → 15-20% zu viel bestellen (₹ direkt in den Abfluss)",
+        "Angebote aus dem Gedächtnis → fehlende Posten, Unterbewertung, unangenehme Gespräche später",
+        "Zahlungen auf Papier verfolgen → „Haben sie die zweite Rate bezahlt oder nicht?\"",
+        "Dokumente teilen → WhatsApp-Weiterleitungen unscharfer PDFs, erstellt in MS Paint"
+      ]
+    },
+    "solution": {
+      "heading": "Die Lösung",
+      "body": "iHateConstruction bietet indischen Bauunternehmern einen Ort, um zu kalkulieren, anzubieten, zu fakturieren und bezahlt zu werden — ohne Enterprise-Ballast oder $300 Monatspreis.",
+      "cards": {
+        "calculators": {
+          "title": "Rechner",
+          "body": "Beton, Stahl, Ziegel, Farbe, Fliesen — mit integrierten indischen Normen (IS-Codes)."
+        },
+        "boq": {
+          "title": "BOQ & Angebote",
+          "body": "Erstellen Sie in Sekunden professionelle Leistungsverzeichnisse und kundenorientierte Angebote."
+        },
+        "invoices": {
+          "title": "Rechnungen & Zahlungen",
+          "body": "Verfolgen Sie, wer was schuldet. Teilen Sie UPI QR für sofortigen Einzug. Erfassen Sie Zahlungen mit Screenshot-OCR."
+        },
+        "pdf": {
+          "title": "PDF-Export",
+          "body": "Professionelle A4-Dokumente, die Ihre Kunden wirklich respektieren — keine WhatsApp-Weiterleitungen."
+        }
+      }
+    },
+    "audience": {
+      "heading": "Für wen es ist",
+      "items": [
+        {
+          "bold": "Selbstständige Bauunternehmer",
+          "rest": ", die Wohn- und kleine Gewerbeprojekte machen."
+        },
+        {
+          "bold": "Kleine Baufirmen",
+          "rest": " (2-15 Personen), die Struktur ohne Overhead benötigen."
+        },
+        {
+          "bold": "Bauingenieure",
+          "rest": ", die nebenbei kalkulieren und genaue, wiederholbare Berechnungen wollen."
+        },
+        {
+          "bold": "Innenarchitekten",
+          "rest": ", die Materialschätzung für Ausbauprojekte benötigen."
+        }
+      ]
+    },
+    "india": {
+      "heading": "Indien zuerst",
+      "intro": "Jede Entscheidung beginnt beim indischen Bauunternehmer:",
+      "items": [
+        "Berechnungen verwenden IS-Codes und indische Standardpraxis (nicht ASTM oder Eurocode).",
+        "Materialeinheiten entsprechen dem, was Sie im lokalen Godown kaufen — Säcke, CFT, laufende Fuß.",
+        "Währung ist INR. GST-Sätze sind eingebaut. Steuerregion zählt.",
+        "Zahlung per UPI QR — denn so zahlt Indien im Jahr 2026.",
+        "Funktioniert auf einem ₹10,000 Handy über 4G. Keine reinen Desktop-Workflows."
+      ]
+    },
+    "contact": {
+      "heading": "Kontakt",
+      "body1": "Feedback, Fehler gefunden oder Partnerschaft gewünscht? Erreichen Sie uns unter",
+      "email": "huzaif89@hotmail.com",
+      "body2": "oder nutzen Sie das",
+      "link": "Kontaktformular"
     }
-   }
   },
-  "brick": {
-   "meta": {
-    "title": "Ziegelrechner — Wand, Terrasse, Pflaster & Feuerstelle",
-    "description": "Kostenloser Ziegelrechner. Berechnen Sie die genaue Anzahl der Ziegel und den Mörtel (Zement + Sand), den Sie für jede Wand, Terrasse, Pflasterreihe, Feuerstelle, Stützmauer oder jedes Haus benötigen. Unterstützt roten Ziegel, Feuerziegel, Betonziegel, Modul-, traditionelle und AAC-Blöcke. Eingaben nach Quadratfuß oder Wandabmessungen."
-   },
-   "crumb": "Ziegelrechner",
-   "title": "Ziegelrechner — Wand, Terrasse, Pflaster & Feuerstelle",
-   "subtitle": "Geben Sie die Abmessungen Ihrer Wand, eine Gesamtquadratfuß-Zahl oder das zu füllende Volumen ein. Wir geben die Ziegelanzahl, das Mörtelvolumen, Zementsäcke und Sand zurück — passend zum tatsächlich verwendeten Ziegel, sei es roter Ton-, Feuer-, Beton-, Modul- oder AAC-Block.",
-   "form": {
-    "mode": "Eingabemodus",
-    "modes": {
-     "dims": "Nach Wandabmessungen",
-     "vol": "Nach Gesamtvolumen"
+  "privacy": {
+    "meta": {
+      "title": "Datenschutzerklärung — Wie wir mit Ihren Daten umgehen",
+      "description": "iHateConstruction Datenschutzerklärung. Erfahren Sie, welche personenbezogenen Daten wir erheben, wie wir sie verwenden, wo sie gespeichert werden und welche Rechte Sie über Ihr Konto, Ihre Projekte, Berechnungen und Geschäftsdaten haben."
     },
-    "standard": "Ziegelstandard",
-    "customStd": "Diesen Standard anpassen",
-    "wallDims": "Wandabmessungen",
-    "openings": "Öffnungen (Türen, Fenster)",
-    "addOpening": "+ Öffnung hinzufügen",
-    "noOpenings": "Keine Öffnungen — die ganze Wand zählt.",
-    "labelPh": "Bezeichnung (optional)",
-    "removeOpAria": "Öffnung {i} entfernen",
-    "defaultDoor": "Tür",
-    "openingN": "Öffnung {n}",
-    "totalVol": "Gesamtvolumen",
-    "volAria": "Gesamtvolumen",
-    "mortarThickness": "Mörteldicke",
-    "mortarThicknessAria": "Mörtelfugendicke",
-    "mortarRatio": "Mörtelverhältnis (Zement : Sand)",
-    "brickWastage": "Ziegel-Verschnitt %",
-    "brickWastageAria": "Ziegel-Verschnitt in Prozent",
-    "mortarWastage": "Mörtel-Verschnitt %",
-    "mortarWastageAria": "Mörtel-Verschnitt in Prozent",
-    "dtw": "Trocken-zu-Nass-Faktor",
-    "dtwAria": "Mörtel Trocken-zu-Nass Volumenfaktor",
-    "brickSize": "Ziegelgröße",
-    "customBrickLen": "Benutzerdefinierte Ziegellänge",
-    "customBrickWid": "Benutzerdefinierte Ziegelbreite",
-    "customBrickHt": "Benutzerdefinierte Ziegelhöhe",
-    "errors": {
-     "lenMin": "Geben Sie eine Länge größer als 0 ein.",
-     "lenMax": "Länge muss 100 m oder weniger betragen.",
-     "htMin": "Geben Sie eine Höhe größer als 0 ein.",
-     "htMax": "Höhe muss 20 m oder weniger betragen.",
-     "thickMin": "Geben Sie eine Dicke größer als 0 ein.",
-     "thickTooThin": "Dicke muss mindestens 50 mm betragen.",
-     "thickTooThick": "Dicke muss 500 mm oder weniger betragen.",
-     "widMin": "Geben Sie eine Breite größer als 0 ein.",
-     "opWider": "Öffnung ist breiter als die Wand.",
-     "opTaller": "Öffnung ist höher als die Wand.",
-     "opExceeds": "Gesamtöffnungsfläche überschreitet die Wandfläche.",
-     "volMin": "Geben Sie ein Volumen größer als 0 ein."
+    "title": "Datenschutzerklärung",
+    "updated": "Zuletzt aktualisiert: 5. August 2026",
+    "s1": {
+      "heading": "1. Informationen, die wir erheben",
+      "intro": "Wenn Sie iHateConstruction nutzen, erheben wir:",
+      "items": [
+        {
+          "bold": "Kontoinformationen:",
+          "rest": " Name, E-Mail-Adresse und Authentifizierungsdaten (verwaltet über Clerk)."
+        },
+        {
+          "bold": "Projektdaten:",
+          "rest": " Projekte, Berechnungen, Materialien, BOQs, Angebote und Rechnungen, die Sie erstellen."
+        },
+        {
+          "bold": "Nutzungsdaten:",
+          "rest": " Besuchte Seiten, genutzte Funktionen, Browsertyp, Geräteinformationen und IP-Adresse."
+        },
+        {
+          "bold": "Zahlungsinformationen:",
+          "rest": " UPI-IDs und QR-Codes, die Sie freiwillig hochladen. Wir verarbeiten oder speichern keine Kreditkartennummern."
+        }
+      ]
+    },
+    "s2": {
+      "heading": "2. Wie wir Ihre Daten verwenden",
+      "items": [
+        "Bereitstellung, Wartung und Verbesserung des Dienstes.",
+        "Erstellung von Dokumenten (BOQs, Angebote, Rechnungen, PDFs) auf Ihre Anfrage.",
+        "Versand transaktionaler E-Mails (Kontobestätigung, Passwort-Zurücksetzung).",
+        "Analyse von Nutzungsmustern zur Verbesserung von Funktionen (aggregiert, niemals verkauft)."
+      ]
+    },
+    "s3": {
+      "heading": "3. Datenspeicherung & Sicherheit",
+      "body": "Ihre Daten werden in verschlüsselten Datenbanken auf sicherer Cloud-Infrastruktur gespeichert. Wir nutzen TLS für alle Daten während der Übertragung. Die Authentifizierung wird von Clerk gehandhabt, einem SOC 2 Type II konformen Anbieter."
+    },
+    "s4": {
+      "heading": "4. Datenweitergabe",
+      "intro": "Wir verkaufen Ihre Daten nicht. Wir teilen Daten nur mit:",
+      "items": [
+        {
+          "bold": "Dienstleistern:",
+          "rest": " Hosting (Vercel), Authentifizierung (Clerk), Datenbank (verwaltetes PostgreSQL) — nur was für den Betrieb notwendig ist."
+        },
+        {
+          "bold": "Ihren Kunden:",
+          "rest": " Wenn Sie einen öffentlichen Angebotslink erstellen, sind die Angebotsdetails für jeden mit dem Link sichtbar."
+        },
+        {
+          "bold": "Rechtliche Anforderungen:",
+          "rest": " Wenn dies nach indischem Recht oder durch gültige gerichtliche Anordnung erforderlich ist."
+        }
+      ]
+    },
+    "s5": {
+      "heading": "5. Ihre Rechte",
+      "items": [
+        {
+          "bold": "Zugriff:",
+          "rest": " Alle mit Ihrem Konto verbundenen Daten einsehen."
+        },
+        {
+          "bold": "Export:",
+          "rest": " Laden Sie Ihre Projekte, Berechnungen und Dokumente herunter."
+        },
+        {
+          "bold": "Löschung:",
+          "rest": " Vollständige Löschung Ihres Kontos und aller zugehörigen Daten anfordern."
+        },
+        {
+          "bold": "Berichtigung:",
+          "rest": " Unrichtige Informationen jederzeit aktualisieren."
+        }
+      ]
+    },
+    "s6": {
+      "heading": "6. Cookies",
+      "body": "Wir nutzen essenzielle Cookies für Authentifizierung und Session-Verwaltung. Keine Werbe-Cookies. Keine Tracking-Pixel Dritter."
+    },
+    "s7": {
+      "heading": "7. Datenaufbewahrung",
+      "body": "Ihre Daten werden aufbewahrt, solange Ihr Konto aktiv ist. Gelöschte Konten werden innerhalb von 30 Tagen entfernt. Audit-Logs werden aus Sicherheitsgründen 1 Jahr aufbewahrt."
+    },
+    "s8": {
+      "heading": "8. Kinder",
+      "body": "iHateConstruction ist nicht für Nutzer unter 18 Jahren bestimmt. Wir erheben wissentlich keine Daten von Minderjährigen."
+    },
+    "s9": {
+      "heading": "9. Änderungen",
+      "body": "Wir können diese Erklärung aktualisieren. Wesentliche Änderungen werden mindestens 14 Tage vor Inkrafttreten per E-Mail oder In-App-Hinweis mitgeteilt."
+    },
+    "s10": {
+      "heading": "10. Kontakt",
+      "body": "Für datenschutzbezogene Anfragen:",
+      "email": "huzaif89@hotmail.com"
     }
-   }
   },
-  "steel": {
-   "meta": {
-    "title": "Stahlrechner — TMT-Stabgewicht & Bewehrung",
-    "description": "Kostenloser Stahlrechner. Geben Sie Ihre Stabliste oder Ihr Betonvolumen ein und erhalten Sie das Gesamtgewicht des Bewehrungsstahls in kg — für Platten, Balken, Stützen, Fundamente und Treppen. Verwendet D²/162, Fe 500 / Fe 550 TMT, IS 1786."
-   },
-   "crumb": "Stahlrechner",
-   "title": "Stahlrechner — TMT-Stabgewicht & Bewehrung",
-   "subtitle": "Zwei Wege — geben Sie Ihre Stabliste für ein genaues Gewicht ein, oder geben Sie Betonvolumen + Bauteiltyp für eine schnelle Faustregel-Schätzung ein. Beide verwenden IS 1786 Voreinstellungen; beide sind vollständig überschreibbar.",
-   "form": {
-    "mode": "Eingabemodus",
-    "modes": {
-     "schedule": "Nach Stabliste",
-     "thumb": "Nach Faustregel"
+  "terms": {
+    "meta": {
+      "title": "Nutzungsbedingungen — Regeln für die Nutzung von iHateConstruction",
+      "description": "iHateConstruction Nutzungsbedingungen. Die Regeln für die Nutzung unserer kostenlosen Bau-Rechner, Projektverwaltung, BOQ-Ersteller, Angebots- und Rechnungstools sowie Funktionen zur Zahlungseinziehung."
     },
-    "modeHint1": "Genau. Verwenden Sie, wenn Sie die Zeichnung haben.",
-    "modeHint2": "Grob (±20%). Nur für Preisabschätzungen verwenden.",
-    "standard": "Stahlstandard",
-    "customStd": "Diesen Standard anpassen",
-    "schedule": "Stabliste",
-    "addBar": "+ Stab hinzufügen",
-    "barPh": "Stab {i}",
-    "removeBarAria": "Stab {i} entfernen",
-    "diameter": "Durchmesser",
-    "count": "Anzahl",
-    "diaAria": "Stab {i} Durchmesser (mm)",
-    "lenAria": "Stab {i} Länge",
-    "countAria": "Stab {i} Anzahl",
-    "diaOption": "{d} mm",
-    "member": "Bauteil + Volumen",
-    "memberType": "Bauteiltyp",
-    "concreteVol": "Betonvolumen",
-    "volAria": "Betonvolumen",
-    "defaultRate": "Standardrate: {value} kg/cum für {member}. Aktivieren Sie Anpassen, um zu überschreiben.",
-    "wastage": "Verschnitt",
-    "wastageAria": "Verschnitt in Prozent",
-    "kgPerCum": "kg / cum",
-    "kgPerCumAria": "Kilogramm pro Kubikmeter Beton",
-    "barLabels": {
-     "dia": "{diameter}mm Stab",
-     "mainBottom": "Hauptstäbe — unten",
-     "distribution": "Verteilungsstäbe",
-     "generic": "Stab {n}"
+    "title": "Nutzungsbedingungen",
+    "updated": "Zuletzt aktualisiert: 5. August 2026",
+    "s1": {
+      "heading": "1. Annahme",
+      "body": "Durch Zugriff auf oder Nutzung von iHateConstruction („der Dienst\") erklären Sie sich an diese Bedingungen gebunden. Wenn Sie nicht einverstanden sind, nutzen Sie den Dienst nicht."
     },
-    "errors": {
-     "diaMin": "Geben Sie einen Durchmesser größer als 0 ein.",
-     "diaMax": "Durchmesser muss 100 mm oder weniger betragen.",
-     "lenMin": "Geben Sie eine Länge größer als 0 ein.",
-     "lenMax": "Länge muss 50 m oder weniger betragen.",
-     "countMin": "Mindestens 1 Stab.",
-     "volMin": "Geben Sie ein Volumen größer als 0 ein."
+    "s2": {
+      "heading": "2. Beschreibung des Dienstes",
+      "intro": "iHateConstruction ist eine Bauverwaltungs- und Kalkulationsplattform, die bietet:",
+      "items": [
+        "Baumaterial-Rechner (Beton, Stahl, Ziegel, Farbe, Fliesen).",
+        "Projektverwaltung mit gespeicherten Berechnungen und Materialpreisen.",
+        "Erstellung von Leistungsverzeichnissen (BOQ).",
+        "Angebots- und Rechnungserstellung mit PDF-Export.",
+        "Werkzeuge zur Zahlungseinziehung (UPI QR, Zahlungslinks)."
+      ]
+    },
+    "s3": {
+      "heading": "3. Nutzerkonten",
+      "items": [
+        "Sie müssen bei der Kontoerstellung genaue Informationen angeben.",
+        "Sie sind für alle Aktivitäten unter Ihrem Konto verantwortlich.",
+        "Sie dürfen Ihre Zugangsdaten nicht teilen oder anderen Zugang zu Ihrem Konto geben.",
+        "Wir können Konten sperren oder kündigen, die diese Bedingungen verletzen."
+      ]
+    },
+    "s4": {
+      "heading": "4. Ihre Daten",
+      "items": [
+        "Sie behalten das Eigentum an allen Inhalten, die Sie erstellen (Projekte, Berechnungen, Dokumente).",
+        "Sie gewähren uns eine eingeschränkte Lizenz, Ihre Daten zu speichern, zu verarbeiten und anzuzeigen, ausschließlich zur Bereitstellung des Dienstes.",
+        "Wir beanspruchen kein Eigentum an Ihren Geschäftsdaten."
+      ]
+    },
+    "s5": {
+      "heading": "5. Zulässige Nutzung",
+      "intro": "Sie stimmen zu, nicht:",
+      "items": [
+        "den Dienst für illegale Zwecke zu nutzen.",
+        "schädliche Inhalte hochzuladen oder Sicherheitsverletzungen zu versuchen.",
+        "Daten aus dem Dienst zu scrapen, zu crawlen oder in großen Mengen herunterzuladen.",
+        "sich als andere Person oder Organisation auszugeben.",
+        "die Rechner für sicherheitskritische Ingenieursentscheidungen ohne unabhängige fachliche Prüfung zu verwenden."
+      ]
+    },
+    "s6": {
+      "heading": "6. Rechner-Haftungsausschluss",
+      "boldLabel": "Wichtig:",
+      "body": " Die Rechner liefern Schätzungen basierend auf Standardformeln und regionalen Normen. Sie sind Werkzeuge zur Schätzung, kein Ersatz für professionelle Tragwerksplanung. Überprüfen Sie Mengen immer mit einem qualifizierten Ingenieur vor Beschaffung oder Bau."
+    },
+    "s7": {
+      "heading": "7. Zahlungsfunktionen",
+      "items": [
+        "Zahlungsfunktionen (UPI QR, Zahlungslinks) erleichtern die Kommunikation zwischen Ihnen und Ihren Kunden.",
+        "Wir sind kein Zahlungsdienstleister. Geld fließt direkt zwischen Ihnen und Ihrem Kunden.",
+        "Wir haften nicht für Zahlungsstreitigkeiten, fehlgeschlagene Transaktionen oder falsche Beträge.",
+        "Wenn wir Zahlungsanbieter (Razorpay) integrieren, gelten deren Bedingungen ebenfalls."
+      ]
+    },
+    "s8": {
+      "heading": "8. Verfügbarkeit",
+      "body": "Wir streben hohe Verfügbarkeit an, garantieren jedoch keinen unterbrechungsfreien Dienst. Geplante Wartung wird im Voraus angekündigt. Wir haften nicht für Verluste durch Ausfallzeiten."
+    },
+    "s9": {
+      "heading": "9. Haftungsbeschränkung",
+      "intro": "Im maximal nach indischem Recht zulässigen Umfang:",
+      "items": [
+        "Der Dienst wird „wie besehen\" ohne jegliche Gewährleistung bereitgestellt.",
+        "Wir haften nicht für indirekte, zufällige oder Folgeschäden.",
+        "Unsere Gesamthaftung ist begrenzt auf den Betrag, den Sie uns in den 12 Monaten vor der Forderung gezahlt haben (oder ₹5,000, je nachdem, was höher ist)."
+      ]
+    },
+    "s10": {
+      "heading": "10. Geistiges Eigentum",
+      "items": [
+        "Der Dienst, sein Design, Code und Branding sind unser geistiges Eigentum.",
+        "Sie dürfen keinen Teil des Dienstes kopieren, modifizieren oder weiterverbreiten.",
+        "Der Name „iHateConstruction\" und zugehörige Marken sind unsere Warenzeichen."
+      ]
+    },
+    "s11": {
+      "heading": "11. Kündigung",
+      "items": [
+        "Sie können Ihr Konto jederzeit löschen.",
+        "Wir können Ihren Zugang wegen Verstoßes gegen die Bedingungen nach Vorankündigung beenden.",
+        "Bei Kündigung haben Sie 30 Tage Zeit, Ihre Daten zu exportieren, bevor sie gelöscht werden."
+      ]
+    },
+    "s12": {
+      "heading": "12. Anwendbares Recht",
+      "body": "Diese Bedingungen unterliegen indischem Recht. Streitigkeiten unterliegen der ausschließlichen Zuständigkeit der Gerichte in Bengaluru, Karnataka."
+    },
+    "s13": {
+      "heading": "13. Änderungen",
+      "body": "Wir können diese Bedingungen ändern. Wesentliche Änderungen werden 14 Tage im Voraus mitgeteilt. Die fortgesetzte Nutzung nach Änderungen stellt eine Annahme dar."
+    },
+    "s14": {
+      "heading": "14. Kontakt",
+      "body": "Fragen zu diesen Bedingungen:",
+      "email": "legal@ihateconstruction.co"
     }
-   }
   },
-  "paint": {
-   "meta": {
-    "title": "Farbrechner — Innen, Außen & Raum",
-    "description": "Kostenloser Farbrechner. Geben Sie Raumabmessungen oder Wandfläche ein und erhalten Sie die genaue Litermenge Farbe, die Sie für Innen-Emulsion, Außen-Emulsion, Lack, Grundierung und Spachtel benötigen. Behandelt mehrere Anstriche, Decken, Türen und Fenster."
-   },
-   "crumb": "Farbrechner",
-   "title": "Farbrechner — Liter für Innen- und Außenwände",
-   "subtitle": "Geben Sie einen Raum oder eine Gesamtfläche ein, wählen Sie Ihre Farbprodukte und wir geben die benötigten Liter zurück — pro Schicht und insgesamt. Behandelt Grundierung unter Emulsion, mehrere Anstriche und schichtweise Deckkraft-Überschreibungen.",
-   "form": {
-    "mode": "Eingabemodus",
-    "modes": {
-     "room": "Nach Raumabmessungen",
-     "area": "Nach Gesamtfläche"
+  "contact": {
+    "meta": {
+      "title": "Kontakt — Sprechen Sie mit dem iHateConstruction-Team",
+      "description": "Kontaktieren Sie iHateConstruction bei Fehlern, Funktionen, Rechneranfragen, Partnerschaften oder allgemeinen Fragen. Einer von uns liest jede Nachricht und antwortet in der Regel innerhalb von zwei Werktagen."
     },
-    "roomDims": "Raumabmessungen",
-    "includeCeiling": "Decke einschließen",
-    "openings": "Öffnungen (Türen, Fenster)",
-    "addOpening": "+ Öffnung hinzufügen",
-    "noOpenings": "Keine Öffnungen — die ganze Wand zählt.",
-    "labelPh": "Bezeichnung (optional)",
-    "totalArea": "Gesamtfläche",
-    "area": "Fläche",
-    "areaAria": "Gesamte streichbare Fläche",
-    "layers": "Farbschichten",
-    "addLayer": "+ Schicht hinzufügen",
-    "layersHelp": "Eine Zeile pro Produktanwendung — z. B. eine Grundierung + ein Deckanstrich für eine frische Wand.",
-    "layerN": "Schicht {i}",
-    "type": "Typ",
-    "coats": "Anstriche",
-    "coatsAria": "Schicht {i} Anstriche",
-    "customLayer": "Diese Schicht anpassen",
-    "kgPerSqm": "kg / sqm",
-    "kgPerSqmAria": "Schicht {i} kg pro sqm",
-    "coverage": "Deckung / L",
-    "coverageAria": "Schicht {i} Deckung pro Liter",
-    "wastage": "Verschnitt",
-    "wastageAria": "Schicht {i} Verschnitt in Prozent",
-    "defaultDoor": "Tür",
-    "openingN": "Öffnung {n}",
-    "errors": {
-     "lenMin": "Geben Sie eine Länge größer als 0 ein.",
-     "lenMax": "Länge muss 100 m oder weniger betragen.",
-     "widMin": "Geben Sie eine Breite größer als 0 ein.",
-     "widMax": "Breite muss 100 m oder weniger betragen.",
-     "htMin": "Geben Sie eine Höhe größer als 0 ein.",
-     "htMax": "Höhe muss 20 m oder weniger betragen.",
-     "opWider": "Öffnung ist breiter als die längste Wand.",
-     "opTaller": "Öffnung ist höher als die Wand.",
-     "opExceeds": "Gesamtöffnungsfläche überschreitet die Wandfläche.",
-     "areaMin": "Geben Sie eine Fläche größer als 0 ein.",
-     "coats": "Mindestens 1 Anstrich.",
-     "kgPerSqm": "Geben Sie kg/sqm größer als 0 ein.",
-     "coverage": "Geben Sie eine Deckung größer als 0 ein."
+    "eyebrow": "Unternehmen",
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Schreiben Sie uns über einen Fehler, einen Rechner, den Sie gebaut haben möchten, eine Partnerschaft oder alles andere. Einer von uns liest jede Nachricht und antwortet in der Regel innerhalb von zwei Werktagen.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "website": "Webseite",
+      "send": "Senden",
+      "sending": "Wird gesendet…",
+      "successTitle": "Nachricht gesendet",
+      "successBody": "Danke — wir haben sie erhalten.",
+      "successNote": "Einer von uns wird Ihre Nachricht lesen und an die angegebene E-Mail-Adresse antworten, in der Regel innerhalb von zwei Werktagen.",
+      "sendAnother": "Weitere senden",
+      "subjects": {
+        "general": "Allgemeine Frage",
+        "bug": "Fehlerbericht",
+        "feature": "Funktionswunsch",
+        "partnership": "Partnerschaft"
+      },
+      "errors": {
+        "nameRequired": "Bitte geben Sie Ihren Namen ein.",
+        "nameShort": "Name muss mindestens 2 Zeichen lang sein.",
+        "nameLong": "Name darf höchstens 80 Zeichen lang sein.",
+        "emailRequired": "Bitte geben Sie Ihre E-Mail ein.",
+        "emailInvalid": "Das sieht nicht wie eine gültige E-Mail aus.",
+        "messageRequired": "Bitte geben Sie eine Nachricht ein.",
+        "messageShort": "Nachricht muss mindestens 10 Zeichen lang sein.",
+        "messageLong": "Nachricht darf höchstens {max} Zeichen lang sein.",
+        "fixHighlighted": "Korrigieren Sie die markierten Felder, um fortzufahren."
+      }
     }
-   }
   },
-  "tile": {
-   "meta": {
-    "title": "Fliesenrechner — Boden, Wand, Kleber & Fugenmörtel",
-    "description": "Kostenloser Fliesenrechner. Geben Sie Boden- oder Wandfläche ein, wählen Sie eine Fliesengröße und erhalten Sie die exakte Fliesenanzahl, Klebermenge und Fugenmörtelvolumen. Unterstützt Feinsteinzeug, Keramik und traditionelle Mörtelbettverlegung mit Verschnitt."
-   },
-   "crumb": "Fliesenrechner",
-   "title": "Fliesenrechner — Boden, Wand, Kleber & Fugenmörtel",
-   "subtitle": "Geben Sie die Oberfläche, die Fliesengröße ein und wählen Sie eine Voreinstellung — wir geben die Fliesenanzahl mit Verschnitt plus Kleber und Fugenmörtel zurück. Behandelt sowohl modernes Dünnbett als auch traditionelles 20 mm Mörtelbett.",
-   "form": {
-    "surface": "Oberfläche",
-    "modes": {
-     "floor": "Boden",
-     "wall": "Wand"
+  "calculators": {
+    "index": {
+      "meta": {
+        "title": "Kostenlose Bau-Rechner — Zement, Beton, Ziegel & Bewehrung",
+        "description": "Sieben kostenlose Bau-Rechner — Zement, Beton, Ziegel, Stahl, Bewehrung, Farbe und Fliesen. Geben Sie Ihren Auftrag ein und erhalten Sie eine exakte Materialbestellung in Kubikyards, Kubikfuß oder metrischen Einheiten. Zementsäcke für eine Platte, Ziegel für eine Wand, Stahl für Bewehrung, Liter Farbe für einen Raum, Fliesen für einen Boden."
+      },
+      "eyebrow": "Werkzeuge",
+      "title": "Kostenlose Bau-Rechner",
+      "subtitle": "Sieben Rechner für die Materialbestellungen, die Sie tatsächlich aufgeben — Zement, Beton, Ziegel, Stahl, Bewehrung, Farbe und Fliesen. Geben Sie Ihre Abmessungen ein, erhalten Sie Säcke, Ziegel, Kilogramm oder Liter. Funktioniert in Kubikyards, Kubikfuß und Kubikmetern.",
+      "missing": "Fehlt ein Rechner, den Sie täglich nutzen?",
+      "contactSoon": "Kontaktformular kommt bald."
     },
-    "floorDims": "Bodenabmessungen",
-    "wallDims": "Wandabmessungen (Breite × Höhe)",
-    "excluded": "Ausgeschlossene Bereiche (Stützen, Abläufe, Ausschnitte)",
-    "addEx": "+ Ausschluss hinzufügen",
-    "noEx": "Keine Ausschlüsse — die ganze Fläche wird gefliest.",
-    "labelPh": "Bezeichnung (optional)",
-    "cutoutN": "Ausschnitt {n}",
-    "tileSize": "Fliesengröße",
-    "standard": "Fliesenstandard",
-    "wastage": "Verschnitt",
-    "method": "Methode",
-    "methods": {
-     "thinset": "Dünnbett",
-     "bed": "Mörtelbett"
+    "common": {
+      "eyebrow": "Rechner",
+      "faq": "Häufig gestellte Fragen",
+      "other": "Weitere Rechner",
+      "how": "Wie die Berechnung funktioniert",
+      "customParams": "Benutzerdefinierte Parameter",
+      "fillForm": "Füllen Sie das Formular aus und drücken Sie Berechnen, um Ihre Materialliste zu sehen.",
+      "fillFormSteel": "Füllen Sie das Formular aus und drücken Sie Berechnen, um das Stahlgewicht zu sehen.",
+      "fillFormPaint": "Füllen Sie das Formular aus und drücken Sie Berechnen, um Ihr Farbangebot zu sehen.",
+      "fillFormTile": "Füllen Sie das Formular aus und drücken Sie Berechnen, um Ihr Fliesenangebot zu sehen.",
+      "shareResult": "Ergebnis teilen",
+      "reload": "Neu laden",
+      "clearAll": "Alle Änderungen löschen",
+      "didWeSolve": "Haben wir Ihr Problem heute gelöst?"
     },
-    "coveragePerKg": "Deckung/kg",
-    "bedThickness": "Bettdicke",
-    "mortarRatio": "Mörtelverhältnis",
-    "groutWidth": "Fugenbreite",
-    "groutDepth": "Fugentiefe",
-    "groutDepthHelp": "Standardmäßig auf Fliesendicke. Zum Überschreiben bearbeiten.",
-    "tileThickness": "Fliesendicke",
-    "errors": {
-     "lenMin": "Geben Sie eine Länge größer als 0 ein.",
-     "lenMax": "Länge muss 500 m oder weniger betragen.",
-     "widMin": "Geben Sie eine Breite größer als 0 ein.",
-     "widMax": "Breite muss 500 m oder weniger betragen.",
-     "tileLen": "Geben Sie eine Fliesenlänge größer als 0 ein.",
-     "tileWid": "Geben Sie eine Fliesenbreite größer als 0 ein.",
-     "exLen": "Länge muss größer als 0 sein.",
-     "exWid": "Breite muss größer als 0 sein.",
-     "exAll": "Ausgeschlossene Bereiche summieren sich zur ganzen Fläche. Reduzieren Sie sie.",
-     "coverage": "Deckung muss größer als 0 sein.",
-     "thickness": "Dicke muss größer als 0 sein.",
-     "ratio": "Format als a:b (z. B. 1:4)."
+    "cement": {
+      "meta": {
+        "title": "Zementrechner — Platte, Pfostenloch & Kubikyards",
+        "description": "Kostenloser Zementrechner. Berechnen Sie, wie viele Zementsäcke Sie für eine Betonplatte, ein Pfostenloch, eine Wand oder jedes Volumen benötigen — in Kubikyards, Kubikfuß oder Kubikmetern. Unterstützt 94 lb Portland-, 50 kg-, 40 kg-, 60 lb- und 80 lb-Säcke, Sand-Zement-Mischungen (1:3, 1:4, 1:6) und Standardplatten-Mischungen (M15, M20, M25)."
+      },
+      "crumb": "Zementrechner",
+      "title": "Zementrechner",
+      "subtitle": "Berechnen Sie genau, wie viele Zementsäcke Sie benötigen — für eine Betonplatte, eine Reihe von Pfostenlöchern oder jedes Nassvolumen in Kubikyards, Kubikfuß oder Kubikmetern. Unterstützt 94 lb Portland-Zementsäcke, 50 kg indische Säcke, 40 kg-, 60 lb- und 80 lb-Säcke, plus Sand-Zement-Mischungen (1:3, 1:4, 1:6) und Standard-Betonmischungen (M15, M20, M25).",
+      "handles": "Was dieser Zementrechner leistet",
+      "cards": {
+        "slab": {
+          "title": "Zement für eine Platte",
+          "body": "Geben Sie Länge, Breite und Dicke in Fuß und Zoll ein. Der Rechner gibt Zementsäcke für M15, M20 oder M25 Mischung zurück — die drei Güten für Einfahrten, Garagenböden und Hausplatten."
+        },
+        "post": {
+          "title": "Zement für Pfostenlöcher",
+          "body": "Zaunpfosten, Briefkästen, Schilderpfosten. Geben Sie Lochdurchmesser, Tiefe und Anzahl der zu setzenden Pfosten ein; das Werkzeug dimensioniert eine 1:3 Sand-Zement-Füllung für den gesamten Lauf."
+        },
+        "cuyd": {
+          "title": "Kubikyards Zement",
+          "body": "Kennen Sie Ihr Volumen bereits in Kubikyards? Wechseln Sie in den Modus Freies Volumen. Kubikmeter und Kubikfuß werden ebenfalls unterstützt — der Rechner konvertiert zwischen allen drei."
+        },
+        "sc": {
+          "title": "Sand und Zement",
+          "body": "Wählen Sie die 1:4 Putz-, 1:6 Mauerwerks- oder 1:3 Reichmörtel-Voreinstellung, wenn Sie nur Zement mit Sand mischen — ohne Zuschlag. Die Ausgabe zeigt sowohl Zementsäcke als auch Kubikfuß Sand."
+        },
+        "portland": {
+          "title": "94 lb Portland-Zementsäcke",
+          "body": "US-Bauunternehmer, die Type I/II Portland-Zement in 94 lb Säcken kaufen: Wählen Sie diese Sackgröße und die Summe wird automatisch auf ganze Säcke aufgerundet."
+        },
+        "indian": {
+          "title": "Indische 50 kg Säcke",
+          "body": "Für Bauunternehmer in Indien: 50 kg OPC / PPC Säcke, IS 456 Mischungsverhältnisse und Ergebnisse in Kubikfuß — den Einheiten, in denen Ihr Godown tatsächlich anbietet."
+        }
+      },
+      "form": {
+        "pouring": "Was gießen Sie?",
+        "modes": {
+          "slab": "Betonplatte",
+          "post": "Pfostenloch",
+          "free": "Freies Volumen"
+        },
+        "lengthFt": "Länge (ft)",
+        "widthFt": "Breite (ft)",
+        "thicknessIn": "Dicke (in)",
+        "diameterIn": "Lochdurchmesser (in)",
+        "depthFt": "Tiefe (ft)",
+        "posts": "Anzahl der Pfosten",
+        "wetVolume": "Nassvolumen",
+        "unit": "Einheit",
+        "units": {
+          "yd3": "Kubikyards",
+          "m3": "Kubikmeter",
+          "ft3": "Kubikfuß"
+        },
+        "ratio": "Mischungsverhältnis",
+        "bagSize": "Zementsackgröße",
+        "wastage": "Verschnitt (%)",
+        "resultAria": "Ergebnis Zementrechner",
+        "youNeed": "Sie benötigen",
+        "bags": "Zementsäcke (",
+        "cementKg": "Zement (kg)",
+        "cementLb": "Zement (lb)",
+        "wetVol": "Nassvolumen:",
+        "dry": "· Trockenvolumenfaktor 1,54 · Verschnitt",
+        "mixLabel": "Mischung:",
+        "empty": "Geben Sie Ihre Abmessungen ein, um Zementsäcke und Materialmengen zu sehen."
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles, was Sie über Zement wissen sollten"
+      },
+      "faq": [
+        {
+          "q": "Wie funktioniert dieser Zementrechner?",
+          "a": "Wählen Sie eine Form (Betonplatte, Pfostenloch oder freies Volumen), ein Mischungsverhältnis und die lokal gekaufte Sackgröße — 50 kg (Indien), 94 lb Portland (US) oder einen kleineren Sack. Der Rechner wandelt die Arbeit mit dem Faktor 1,54 in Trockenvolumen um, teilt es in Zement/Sand/Zuschlag, wendet den Verschnitt an und rundet Zement auf ganze Säcke."
+        },
+        {
+          "q": "Wie viele Zementsäcke brauche ich für eine Platte?",
+          "a": "Für eine typische M20-Platte (1:1,5:3) benötigt ein Kubikmeter Beton etwa 5 Säcke à 94 lb Portland oder etwa 8 Säcke à 50 kg. Für eine Platte von 10 ft × 10 ft × 4 in (≈ 1,23 cuyd) etwa 6 Säcke à 94 lb oder 10 à 50 kg."
+        },
+        {
+          "q": "Wie viel Zement brauche ich für ein Pfostenloch?",
+          "a": "Ein 4-Zoll-Pfosten in einem 10 Zoll breiten, 24 Zoll tiefen Loch benötigt etwa 1,1 Kubikfuß Beton — etwa eine halbe 60-lb-Tüte Fertigmischung oder ca. 6 kg Zement plus Sand für eine 1:3-Füllung."
+        },
+        {
+          "q": "Wie viel Portlandzement ist in einem 94-lb-Sack?",
+          "a": "Ein 94-lb-Sack ist der US-Standard für reinen Portlandzement und enthält genau einen Kubikfuß losen Zement — etwa 42,6 kg. Er ist nicht dasselbe wie ein 94-lb-Fertigbeton-Sack, der bereits Sand und Zuschlag enthält."
+        },
+        {
+          "q": "Wie berechne ich Zement in Kubikyards?",
+          "a": "Multiplizieren Sie Länge × Breite × Dicke (alles in Fuß; Zoll durch 12 teilen) für Kubikfuß, dann durch 27 für Kubikyards. Der Rechner übernimmt die Umrechnung für Sie."
+        },
+        {
+          "q": "Welches Mischungsverhältnis — 1:2:4 oder 1:1,5:3?",
+          "a": "1:2:4 (M15) für Gehwege und nichttragende Güsse. 1:1,5:3 (M20) ist der Standard für Hausplatten und allgemeinen RCC. 1:1:2 (M25) für tragende Bauteile. Für Sand-Zement verwenden Sie 1:4 oder 1:6."
+        },
+        {
+          "q": "Funktioniert der Rechner nur für Sand und Zement (ohne Zuschlag)?",
+          "a": "Ja. Wählen Sie Mauermörtel (1:6), Putzmörtel (1:4) oder Pfostenloch (1:3). Die Ausgabe zeigt Zementsäcke und Sand in Gewicht (kg) und Volumen (Kubikfuß)."
+        },
+        {
+          "q": "Warum ist das Trockenvolumen größer als das Nassvolumen?",
+          "a": "Beim Mischen füllen feine Partikel die Hohlräume der groben, und das Gesamtvolumen schrumpft. Der Standardmultiplikator ist 1,54 — ein Kubikmeter Fertigbeton benötigt etwa 1,54 Kubikmeter lose trockene Zutaten."
+        }
+      ]
+    },
+    "concrete": {
+      "meta": {
+        "title": "Betonrechner — Platte, Balken, Stütze & Fundament",
+        "description": "Kostenloser Betonrechner. Geben Sie die Größe Ihrer Platte, Balken, Stütze oder Fundament ein und erhalten Sie Zementsäcke, Sand und grobe Zuschlagstoffe — für M5 bis M25 Güten nach den Standard IS 456 Mischungsverhältnissen. Funktioniert in Kubikyards, Kubikfuß und Kubikmetern."
+      },
+      "crumb": "Betonrechner",
+      "title": "Betonrechner — Platte, Balken, Stütze & Fundament",
+      "subtitle": "Geben Sie das Nassvolumen an Beton ein, das Sie gießen müssen, wählen Sie eine Güte und wir geben Zementsäcke, Sand und groben Zuschlagstoff zurück — passend zum IS 456 Mischungsverhältnis für diese Güte.",
+      "form": {
+        "grade": "Betongüte",
+        "customGrade": "Diese Güte anpassen",
+        "volume": "Betonvolumen",
+        "wetVol": "Nassvolumen",
+        "volAria": "Betonvolumen",
+        "volHelp": "Geben Sie das fertige (nasse) Volumen an Beton ein, das Sie gießen müssen.",
+        "outputs": "Ausgabeeinheiten",
+        "ratio": "Mischungsverhältnis (c : s : a)",
+        "wastage": "Verschnitt",
+        "wastageAria": "Verschnitt in Prozent",
+        "dtw": "Trocken-zu-Nass-Faktor",
+        "dtwAria": "Trocken-zu-Nass-Faktor",
+        "density": "Zementdichte",
+        "densityAria": "Zement-Schüttdichte",
+        "bag": "Zementsackgewicht",
+        "bagAria": "Zementsackgewicht",
+        "errors": {
+          "volMin": "Geben Sie ein Volumen größer als 0 ein.",
+          "volMax": "Volumen muss 10.000 oder weniger betragen.",
+          "ratioFmt": "Verwenden Sie das Format „a:b:c\" — z. B. „1:1.5:3\".",
+          "ratioPos": "Jeder Teil des Verhältnisses muss größer als 0 sein.",
+          "wastageRange": "Geben Sie eine Zahl zwischen 0 und 50 ein.",
+          "wastageMax": "Verschnitt muss 50% oder weniger betragen.",
+          "dtwMin": "Trocken-zu-Nass-Faktor muss größer als 1 sein.",
+          "dtwMax": "Trocken-zu-Nass-Faktor über 2 ist unrealistisch.",
+          "density": "Geben Sie eine Dichte größer als 0 ein.",
+          "bag": "Geben Sie ein Sackgewicht größer als 0 ein."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles, was Sie über Beton wissen sollten"
+      },
+      "faq": [
+        {
+          "q": "Wie wird die Betonmenge berechnet?",
+          "a": "Das eingegebene Nassvolumen wird mit einem Trocken-Nass-Faktor von 1,54 multipliziert, um das benötigte lose Trockenvolumen zu erhalten. Dieses Trockenvolumen wird nach Mischungsverhältnis in Zement, Sand und groben Zuschlag aufgeteilt und anschließend ein Verschnitt von 3 % aufgeschlagen. Der Zement wird in 50-kg-Säcke umgerechnet und aufgerundet."
+        },
+        {
+          "q": "Welche Mischung soll ich wählen — M15, M20 oder M25?",
+          "a": "M20 (1:1,5:3) ist die allgemeine Wahl für Platten, Balken und Stützen bei leichter bis mittlerer Belastung. M25 (1:1:2) ist das IS-456-Minimum für RCC-Bauteile in den meisten statischen Situationen. M15 und darunter werden für Fundamente, PCC und nichttragende Arbeiten verwendet. Ab M30 sollte es eine Entwurfsmischung sein — kein festes Verhältnis wie diese Voreinstellungen."
+        },
+        {
+          "q": "Warum ist der Trocken-Nass-Faktor 1,54?",
+          "a": "Wenn trockener Zement, Sand und Zuschlag zu nassem Beton verbunden werden, füllen feine Partikel die Hohlräume der groben und das Gesamtvolumen schrumpft. 1,54 ist der branchenübliche Multiplikator, der diese Schrumpfung ausgleicht — 1 Kubikmeter Fertigbeton benötigt etwa 1,54 Kubikmeter lose trockene Zutaten."
+        },
+        {
+          "q": "Warum werden meine Zementsäcke aufgerundet?",
+          "a": "Bauunternehmer kaufen Zement in ganzen 50-kg-Säcken, nicht in Bruchteilen. Der Rechner rundet den Bedarf auf den nächsten ganzen Sack auf, damit Sie bestellen, was tatsächlich erhältlich ist. Die genauen kg werden daneben angezeigt, falls Sie sie für die Kostenkalkulation brauchen."
+        },
+        {
+          "q": "Kann ich Mischungsverhältnis oder Verschnitt ändern?",
+          "a": "Ja. Aktivieren Sie „diese Klasse anpassen“ unter der Auswahl und jeder Parameter — Mischungsverhältnis, Verschnitt, Zementdichte, Sackgewicht und Trocken-Nass-Faktor — wird editierbar. Die Voreinstellungen entsprechen den IS-456-Werten für die gängigen Klassen."
+        },
+        {
+          "q": "Beinhaltet das die Bewehrung?",
+          "a": "Nein. Stahl wird separat berechnet, da der Stahlauszug vom Bauteiltyp (Balken, Stütze, Platte, Fundament) und seiner Detailausbildung abhängt, nicht nur vom Betonvolumen. Verwenden Sie dafür den Stahl- oder Bewehrungsrechner."
+        }
+      ]
+    },
+    "brick": {
+      "meta": {
+        "title": "Ziegelrechner — Wand, Terrasse, Pflaster & Feuerstelle",
+        "description": "Kostenloser Ziegelrechner. Berechnen Sie die genaue Anzahl der Ziegel und den Mörtel (Zement + Sand), den Sie für jede Wand, Terrasse, Pflasterreihe, Feuerstelle, Stützmauer oder jedes Haus benötigen. Unterstützt roten Ziegel, Feuerziegel, Betonziegel, Modul-, traditionelle und AAC-Blöcke. Eingaben nach Quadratfuß oder Wandabmessungen."
+      },
+      "crumb": "Ziegelrechner",
+      "title": "Ziegelrechner — Wand, Terrasse, Pflaster & Feuerstelle",
+      "subtitle": "Geben Sie die Abmessungen Ihrer Wand, eine Gesamtquadratfuß-Zahl oder das zu füllende Volumen ein. Wir geben die Ziegelanzahl, das Mörtelvolumen, Zementsäcke und Sand zurück — passend zum tatsächlich verwendeten Ziegel, sei es roter Ton-, Feuer-, Beton-, Modul- oder AAC-Block.",
+      "form": {
+        "mode": "Eingabemodus",
+        "modes": {
+          "dims": "Nach Wandabmessungen",
+          "vol": "Nach Gesamtvolumen"
+        },
+        "standard": "Ziegelstandard",
+        "customStd": "Diesen Standard anpassen",
+        "wallDims": "Wandabmessungen",
+        "openings": "Öffnungen (Türen, Fenster)",
+        "addOpening": "+ Öffnung hinzufügen",
+        "noOpenings": "Keine Öffnungen — die ganze Wand zählt.",
+        "labelPh": "Bezeichnung (optional)",
+        "removeOpAria": "Öffnung {i} entfernen",
+        "defaultDoor": "Tür",
+        "openingN": "Öffnung {n}",
+        "totalVol": "Gesamtvolumen",
+        "volAria": "Gesamtvolumen",
+        "mortarThickness": "Mörteldicke",
+        "mortarThicknessAria": "Mörtelfugendicke",
+        "mortarRatio": "Mörtelverhältnis (Zement : Sand)",
+        "brickWastage": "Ziegel-Verschnitt %",
+        "brickWastageAria": "Ziegel-Verschnitt in Prozent",
+        "mortarWastage": "Mörtel-Verschnitt %",
+        "mortarWastageAria": "Mörtel-Verschnitt in Prozent",
+        "dtw": "Trocken-zu-Nass-Faktor",
+        "dtwAria": "Mörtel Trocken-zu-Nass Volumenfaktor",
+        "brickSize": "Ziegelgröße",
+        "customBrickLen": "Benutzerdefinierte Ziegellänge",
+        "customBrickWid": "Benutzerdefinierte Ziegelbreite",
+        "customBrickHt": "Benutzerdefinierte Ziegelhöhe",
+        "errors": {
+          "lenMin": "Geben Sie eine Länge größer als 0 ein.",
+          "lenMax": "Länge muss 100 m oder weniger betragen.",
+          "htMin": "Geben Sie eine Höhe größer als 0 ein.",
+          "htMax": "Höhe muss 20 m oder weniger betragen.",
+          "thickMin": "Geben Sie eine Dicke größer als 0 ein.",
+          "thickTooThin": "Dicke muss mindestens 50 mm betragen.",
+          "thickTooThick": "Dicke muss 500 mm oder weniger betragen.",
+          "widMin": "Geben Sie eine Breite größer als 0 ein.",
+          "opWider": "Öffnung ist breiter als die Wand.",
+          "opTaller": "Öffnung ist höher als die Wand.",
+          "opExceeds": "Gesamtöffnungsfläche überschreitet die Wandfläche.",
+          "volMin": "Geben Sie ein Volumen größer als 0 ein."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles, was Sie über Ziegel wissen sollten"
+      },
+      "faq": [
+        {
+          "q": "Wie wird die Ziegelzahl berechnet?",
+          "a": "Das gesamte Mauerwerksvolumen wird durch das Nennvolumen eines Ziegels geteilt — Ziegel plus Mörtelfuge auf allen drei Achsen. Das Ergebnis wird aufgerundet und ein Verschnitt (Standard 5 %) aufgeschlagen."
+        },
+        {
+          "q": "Was ist der Unterschied zwischen den Voreinstellungen?",
+          "a": "Der Modularziegel (190×90×90 mm) folgt IS 1077 mit 10-mm-Fuge. Der traditionelle indische Ziegel (230×110×75 mm) ist die gängige nichtmodulare Größe. Der AAC-Block (600×200×200 mm) ist eine viel größere, leichtere Einheit mit 3-mm-Fuge."
+        },
+        {
+          "q": "Wie wird das Mörtelvolumen berechnet?",
+          "a": "Mörtelvolumen = gesamtes Mauerwerksvolumen − Volumen der Ziegel. Das ergibt den Nassmörtel. Ein Verschnitt von 20 % (Standard) deckt Verschüttung und Fugenfüllung. Multipliziert mit 1,33 (nass → trocken) ergibt sich der trockene Zement + Sand."
+        },
+        {
+          "q": "Warum Zement in Säcken und Sand in Kubikfuß?",
+          "a": "So kalkulieren und bestellen Bauunternehmer in Indien — Zement in 50-kg-Säcken, Sand in Kubikfuß. Die interne Berechnung erfolgt in SI; die Antwort wird in den tatsächlichen Bestelleinheiten angezeigt."
+        },
+        {
+          "q": "Kann ich meine eigene Ziegelgröße und mein Verhältnis verwenden?",
+          "a": "Ja. Stellen Sie die Voreinstellung auf „Benutzerdefiniert“ und jeder Parameter wird editierbar."
+        },
+        {
+          "q": "Werden Öffnungen korrekt abgezogen?",
+          "a": "Türen und Fenster werden als Rechtecke von der Bruttofläche abgezogen. Für gewölbte Öffnungen approximieren Sie mit dem umschließenden Rechteck. Überschreiten sie die Wandfläche, gibt der Rechner einen Fehler aus."
+        }
+      ]
+    },
+    "steel": {
+      "meta": {
+        "title": "Stahlrechner — TMT-Stabgewicht & Bewehrung",
+        "description": "Kostenloser Stahlrechner. Geben Sie Ihre Stabliste oder Ihr Betonvolumen ein und erhalten Sie das Gesamtgewicht des Bewehrungsstahls in kg — für Platten, Balken, Stützen, Fundamente und Treppen. Verwendet D²/162, Fe 500 / Fe 550 TMT, IS 1786."
+      },
+      "crumb": "Stahlrechner",
+      "title": "Stahlrechner — TMT-Stabgewicht & Bewehrung",
+      "subtitle": "Zwei Wege — geben Sie Ihre Stabliste für ein genaues Gewicht ein, oder geben Sie Betonvolumen + Bauteiltyp für eine schnelle Faustregel-Schätzung ein. Beide verwenden IS 1786 Voreinstellungen; beide sind vollständig überschreibbar.",
+      "form": {
+        "mode": "Eingabemodus",
+        "modes": {
+          "schedule": "Nach Stabliste",
+          "thumb": "Nach Faustregel"
+        },
+        "modeHint1": "Genau. Verwenden Sie, wenn Sie die Zeichnung haben.",
+        "modeHint2": "Grob (±20%). Nur für Preisabschätzungen verwenden.",
+        "standard": "Stahlstandard",
+        "customStd": "Diesen Standard anpassen",
+        "schedule": "Stabliste",
+        "addBar": "+ Stab hinzufügen",
+        "barPh": "Stab {i}",
+        "removeBarAria": "Stab {i} entfernen",
+        "diameter": "Durchmesser",
+        "count": "Anzahl",
+        "diaAria": "Stab {i} Durchmesser (mm)",
+        "lenAria": "Stab {i} Länge",
+        "countAria": "Stab {i} Anzahl",
+        "diaOption": "{d} mm",
+        "member": "Bauteil + Volumen",
+        "memberType": "Bauteiltyp",
+        "concreteVol": "Betonvolumen",
+        "volAria": "Betonvolumen",
+        "defaultRate": "Standardrate: {value} kg/cum für {member}. Aktivieren Sie Anpassen, um zu überschreiben.",
+        "wastage": "Verschnitt",
+        "wastageAria": "Verschnitt in Prozent",
+        "kgPerCum": "kg / cum",
+        "kgPerCumAria": "Kilogramm pro Kubikmeter Beton",
+        "barLabels": {
+          "dia": "{diameter}mm Stab",
+          "mainBottom": "Hauptstäbe — unten",
+          "distribution": "Verteilungsstäbe",
+          "generic": "Stab {n}"
+        },
+        "errors": {
+          "diaMin": "Geben Sie einen Durchmesser größer als 0 ein.",
+          "diaMax": "Durchmesser muss 100 mm oder weniger betragen.",
+          "lenMin": "Geben Sie eine Länge größer als 0 ein.",
+          "lenMax": "Länge muss 50 m oder weniger betragen.",
+          "countMin": "Mindestens 1 Stab.",
+          "volMin": "Geben Sie ein Volumen größer als 0 ein."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles, was Sie über Stahl wissen sollten"
+      },
+      "faq": [
+        {
+          "q": "Was ist D²/162 und woher kommt es?",
+          "a": "Es ist die Branchenabkürzung für das Gewicht pro Meter eines Rundstahls mit Durchmesser D in Millimetern. Es ergibt sich aus π × (D/2)² × 7850 kg/cum ÷ 10⁶ ≈ D²/162,28. Auf der Baustelle wird auf 162 gerundet; 162,28 liefert einen etwas engeren Wert."
+        },
+        {
+          "q": "Stabauszug oder Faustregel?",
+          "a": "Stabauszug, wenn Sie die Zeichnung haben und jeden Stab listen können — die Antwort ist genau. Faustregel in der Preisphase, wenn nur das Volumen bekannt ist — grob (±20 %), gut für eine Schätzung, nicht für eine Bestellung."
+        },
+        {
+          "q": "Enthalten die Zahlen Übergreifungen, Biegungen, Haken und Abstandhalter?",
+          "a": "Nein — Phase 1 modelliert keine Übergreifungen, Biegungen, Haken oder Abstandhalter. Im Stabauszug übergeben Sie fertige Schnittlängen; in der Faustregel decken die kg/cum-Werte bereits eine grobe Übergreifungsreserve ab."
+        },
+        {
+          "q": "Warum unterscheiden sich die kg/cum-Werte je Bauteil?",
+          "a": "Dichtere Bauteile tragen mehr Bewehrung pro Volumeneinheit. Stützen und Treppen ~130 kg/cum, Balken ~100, Platten ~80, Fundamente ~70. Indische Branchenmittelwerte; überschreiben Sie sie bei Projektvorgaben."
+        }
+      ]
+    },
+    "paint": {
+      "meta": {
+        "title": "Farbrechner — Innen, Außen & Raum",
+        "description": "Kostenloser Farbrechner. Geben Sie Raumabmessungen oder Wandfläche ein und erhalten Sie die genaue Litermenge Farbe, die Sie für Innen-Emulsion, Außen-Emulsion, Lack, Grundierung und Spachtel benötigen. Behandelt mehrere Anstriche, Decken, Türen und Fenster."
+      },
+      "crumb": "Farbrechner",
+      "title": "Farbrechner — Liter für Innen- und Außenwände",
+      "subtitle": "Geben Sie einen Raum oder eine Gesamtfläche ein, wählen Sie Ihre Farbprodukte und wir geben die benötigten Liter zurück — pro Schicht und insgesamt. Behandelt Grundierung unter Emulsion, mehrere Anstriche und schichtweise Deckkraft-Überschreibungen.",
+      "form": {
+        "mode": "Eingabemodus",
+        "modes": {
+          "room": "Nach Raumabmessungen",
+          "area": "Nach Gesamtfläche"
+        },
+        "roomDims": "Raumabmessungen",
+        "includeCeiling": "Decke einschließen",
+        "openings": "Öffnungen (Türen, Fenster)",
+        "addOpening": "+ Öffnung hinzufügen",
+        "noOpenings": "Keine Öffnungen — die ganze Wand zählt.",
+        "labelPh": "Bezeichnung (optional)",
+        "totalArea": "Gesamtfläche",
+        "area": "Fläche",
+        "areaAria": "Gesamte streichbare Fläche",
+        "layers": "Farbschichten",
+        "addLayer": "+ Schicht hinzufügen",
+        "layersHelp": "Eine Zeile pro Produktanwendung — z. B. eine Grundierung + ein Deckanstrich für eine frische Wand.",
+        "layerN": "Schicht {i}",
+        "type": "Typ",
+        "coats": "Anstriche",
+        "coatsAria": "Schicht {i} Anstriche",
+        "customLayer": "Diese Schicht anpassen",
+        "kgPerSqm": "kg / sqm",
+        "kgPerSqmAria": "Schicht {i} kg pro sqm",
+        "coverage": "Deckung / L",
+        "coverageAria": "Schicht {i} Deckung pro Liter",
+        "wastage": "Verschnitt",
+        "wastageAria": "Schicht {i} Verschnitt in Prozent",
+        "defaultDoor": "Tür",
+        "openingN": "Öffnung {n}",
+        "errors": {
+          "lenMin": "Geben Sie eine Länge größer als 0 ein.",
+          "lenMax": "Länge muss 100 m oder weniger betragen.",
+          "widMin": "Geben Sie eine Breite größer als 0 ein.",
+          "widMax": "Breite muss 100 m oder weniger betragen.",
+          "htMin": "Geben Sie eine Höhe größer als 0 ein.",
+          "htMax": "Höhe muss 20 m oder weniger betragen.",
+          "opWider": "Öffnung ist breiter als die längste Wand.",
+          "opTaller": "Öffnung ist höher als die Wand.",
+          "opExceeds": "Gesamtöffnungsfläche überschreitet die Wandfläche.",
+          "areaMin": "Geben Sie eine Fläche größer als 0 ein.",
+          "coats": "Mindestens 1 Anstrich.",
+          "kgPerSqm": "Geben Sie kg/sqm größer als 0 ein.",
+          "coverage": "Geben Sie eine Deckung größer als 0 ein."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles, was Sie über Farbe wissen sollten"
+      },
+      "faq": [
+        {
+          "q": "Warum weicht die Ergiebigkeit meines Händlers von Ihrer ab?",
+          "a": "Die Ergiebigkeit variiert stark — Marke, Verdünnung, Oberflächenstruktur und Erst- oder Zweitanstrich. Unsere Voreinstellungen sind Mittelwerte für den indischen Markt. Nennt der Eimer eine eigene Ergiebigkeit, geben Sie sie im Anpassen-Bereich ein."
+        },
+        {
+          "q": "Brauche ich Grundierung unter der Emulsion?",
+          "a": "Auf neuer oder gespachtelter Wand ja — die Grundierung versiegelt und verhindert ungleichmäßiges Einsaugen. Beim Überstreichen intakter Emulsion ist eine Schicht optional."
+        },
+        {
+          "q": "Wie viele Endanstriche soll ich ansetzen?",
+          "a": "Zwei ist Standard — ein einziger ergibt selten gleichmäßige Farbe. Drei bei kräftigen Farben (Dunkelrot, Marineblau) oder stark beanspruchten Flächen."
+        },
+        {
+          "q": "Warum wird Spachtelmasse nach Fläche statt Gewicht kalkuliert?",
+          "a": "Spachtelmasse rendiert etwa 20–25 m² pro kg, daher drücken wir sie wie Farbe in m²/L aus. Behandeln Sie den Literwert als „Einheiten Spachtelmasse“ und rechnen Sie beim Kauf in kg um."
+        },
+        {
+          "q": "Decke in derselben Schicht wie die Wände streichen?",
+          "a": "Bei gleichem Produkt ja — „Decke einbeziehen“ aktivieren. Ist die Deckenfarbe ein anderes Produkt, rechnen Sie getrennt."
+        }
+      ]
+    },
+    "tile": {
+      "meta": {
+        "title": "Fliesenrechner — Boden, Wand, Kleber & Fugenmörtel",
+        "description": "Kostenloser Fliesenrechner. Geben Sie Boden- oder Wandfläche ein, wählen Sie eine Fliesengröße und erhalten Sie die exakte Fliesenanzahl, Klebermenge und Fugenmörtelvolumen. Unterstützt Feinsteinzeug, Keramik und traditionelle Mörtelbettverlegung mit Verschnitt."
+      },
+      "crumb": "Fliesenrechner",
+      "title": "Fliesenrechner — Boden, Wand, Kleber & Fugenmörtel",
+      "subtitle": "Geben Sie die Oberfläche, die Fliesengröße ein und wählen Sie eine Voreinstellung — wir geben die Fliesenanzahl mit Verschnitt plus Kleber und Fugenmörtel zurück. Behandelt sowohl modernes Dünnbett als auch traditionelles 20 mm Mörtelbett.",
+      "form": {
+        "surface": "Oberfläche",
+        "modes": {
+          "floor": "Boden",
+          "wall": "Wand"
+        },
+        "floorDims": "Bodenabmessungen",
+        "wallDims": "Wandabmessungen (Breite × Höhe)",
+        "excluded": "Ausgeschlossene Bereiche (Stützen, Abläufe, Ausschnitte)",
+        "addEx": "+ Ausschluss hinzufügen",
+        "noEx": "Keine Ausschlüsse — die ganze Fläche wird gefliest.",
+        "labelPh": "Bezeichnung (optional)",
+        "cutoutN": "Ausschnitt {n}",
+        "tileSize": "Fliesengröße",
+        "standard": "Fliesenstandard",
+        "wastage": "Verschnitt",
+        "method": "Methode",
+        "methods": {
+          "thinset": "Dünnbett",
+          "bed": "Mörtelbett"
+        },
+        "coveragePerKg": "Deckung/kg",
+        "bedThickness": "Bettdicke",
+        "mortarRatio": "Mörtelverhältnis",
+        "groutWidth": "Fugenbreite",
+        "groutDepth": "Fugentiefe",
+        "groutDepthHelp": "Standardmäßig auf Fliesendicke. Zum Überschreiben bearbeiten.",
+        "tileThickness": "Fliesendicke",
+        "errors": {
+          "lenMin": "Geben Sie eine Länge größer als 0 ein.",
+          "lenMax": "Länge muss 500 m oder weniger betragen.",
+          "widMin": "Geben Sie eine Breite größer als 0 ein.",
+          "widMax": "Breite muss 500 m oder weniger betragen.",
+          "tileLen": "Geben Sie eine Fliesenlänge größer als 0 ein.",
+          "tileWid": "Geben Sie eine Fliesenbreite größer als 0 ein.",
+          "exLen": "Länge muss größer als 0 sein.",
+          "exWid": "Breite muss größer als 0 sein.",
+          "exAll": "Ausgeschlossene Bereiche summieren sich zur ganzen Fläche. Reduzieren Sie sie.",
+          "coverage": "Deckung muss größer als 0 sein.",
+          "thickness": "Dicke muss größer als 0 sein.",
+          "ratio": "Format als a:b (z. B. 1:4)."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles, was Sie über das Fliesen wissen sollten"
+      },
+      "faq": [
+        {
+          "q": "Warum ist der Standardverschnitt 10 % — mehr als Beton oder Ziegel?",
+          "a": "Fliesen verschneiden mehr, weil Schnitte an Wänden und Ecken Halbfliesen ergeben, die meist unbrauchbar sind. Komplexe Muster (Diagonalen, Bänder, kleine Räume) verschneiden noch mehr; einfache quadratische Räume können auf 5–7 % sinken. In Anpassen justieren."
+        },
+        {
+          "q": "Dünnbett oder Mörtelbett — was ansetzen?",
+          "a": "Dünnbett (Fliesenkleber) ist der moderne Standard — 3–5mm, für Vitrifiziert und Keramik, im Sack erhältlich. Mörtelbett ist die traditionelle indische Methode: zuerst 20mm Zement-Sand-Mörtel, dann Fliesen eindrücken. Altbauten nutzen es noch; Neubau ist fast komplett Dünnbett."
+        },
+        {
+          "q": "Enthält die Fugen-Schätzung Verluste durch Mischung und Verschütten?",
+          "a": "Nein — das Volumen ist die rohe geometrische Füllung. Der reale Verbrauch liegt nach Mischverlust, Tiefenschwankung und Verschütten 15–25 % höher. Kaufen Sie mindestens einen ganzen Sack mehr."
+        },
+        {
+          "q": "Soll ich die Fliesendicke in die Fugentiefe einrechnen?",
+          "a": "Die Fuge reicht meist nicht bis zum Untergrund — sie füllt die oberen ~60–80 %. Wir setzen die Fliesendicke an; bei reiner Oberflächenverfugung auf 6mm reduzieren."
+        },
+        {
+          "q": "Wie berechne ich Sockel- oder Bordfliesen?",
+          "a": "Sockel und Bänder sind eigene Positionen — Leistenstücke, anders geschnitten, oft andere Fliese. Getrennt rechnen: Bandlänge × Höhe × 1,10 Verschnitt = Fläche, durch die Bandfliesenfläche teilen."
+        }
+      ]
+    },
+    "rebar": {
+      "meta": {
+        "title": "Bewehrungsrechner — Stahl für Platte, Fundament und Wand (Länge, Stäbe und Gewicht)",
+        "description": "Kostenloser Bewehrungsrechner für Betonplatten, Fundamente, Wände und Bodenplatten. Länge, Breite, Abstand und Randüberdeckung eingeben — erhalten Sie Stabanzahl, Gesamtlänge, 12-m-Stäbe und Gewicht pro Quadratmeter bzw. Quadratfuß. D²/162-Formel."
+      },
+      "crumb": "Bewehrungsrechner",
+      "title": "Bewehrungsrechner — Bewehrung für Platte, Fundament, Wand und Bodenplatte",
+      "subtitle": "Berechnen Sie, wie viel Bewehrungsstahl Sie für eine Platte, ein Fundament, eine Wand oder eine Bodenplatte brauchen. Elementgröße, c/c-Abstand und Randüberdeckung eingeben — Stäbe pro Richtung, Gesamtlänge, 12-m-Stäbe und Gewicht pro m² und ft² erhalten.",
+      "form": {
+        "section1": "Bauteil + Abmessungen",
+        "member": "Bauteiltyp",
+        "memberHint": "Gleiche Gitterberechnung — nur der vorgeschlagene Startabstand ändert sich.",
+        "dimHint": "Gesamte Betonabmessungen des Bauteils (Kante zu Kante), nicht das Gitter.",
+        "section2": "Bewehrungsanordnung",
+        "spacing": "Abstand Stab–Stab (c/c)",
+        "spacingAria": "Achsabstand zwischen parallelen Stäben",
+        "edgeSpacing": "Randüberdeckung",
+        "edgeAria": "Abstand des äußeren Stabs zur Bauteilkante",
+        "section3": "Stab + Bestellung",
+        "barDiameter": "Stabdurchmesser",
+        "barLength": "Länge eines Stabs",
+        "barLengthAria": "Lieferlänge eines Stabs vom Händler",
+        "wastage": "Verschnitt",
+        "wastageAria": "Verschnittprozent für Schnitt, Übergreifungen und Überlappungen",
+        "lenAria": "Bauteillänge",
+        "widAria": "Bauteilbreite",
+        "errors": {
+          "lenMin": "Geben Sie eine Länge größer als 0 ein.",
+          "lenMax": "Die Länge muss 200 m oder weniger betragen.",
+          "widMin": "Geben Sie eine Breite größer als 0 ein.",
+          "widMax": "Die Breite muss 200 m oder weniger betragen.",
+          "spMin": "Geben Sie einen Abstand größer als 0 ein.",
+          "spMax": "Der Abstand muss 2 m oder weniger betragen.",
+          "edgeMin": "Die Randüberdeckung muss 0 oder mehr sein.",
+          "edgeMax": "Die Randüberdeckung muss kleiner als die halbe Bauteilgröße sein.",
+          "barLenMin": "Geben Sie eine Stablänge größer als 0 ein.",
+          "barLenMax": "Die Stablänge muss 60 m oder weniger betragen.",
+          "wastageRange": "Der Verschnitt muss zwischen 0 und 20 % liegen."
+        },
+        "examples": {
+          "fill1": "Beispiel: Platte 6000 × 4000 mm, 150 mm c/c, 12-mm-Stäbe, 12-m-Stock."
+        },
+        "placeholder": "Füllen Sie das Formular aus und drücken Sie Berechnen, um Ihre Bewehrungsbestellung zu sehen."
+      },
+      "sizes": {
+        "heading": "Stabgrößen",
+        "note": "US-Stabgrößen geben den Durchmesser in Achtelzoll bis #8 an; metrische Größen verwenden den Nenndurchmesser in Millimetern. TMT-Bewehrung in Indien wird nach Nenndurchmesser verkauft — typisch 8, 10, 12, 16, 20, 25 und 32 mm.",
+        "cols": {
+          "imperial": "Imperiale Größe",
+          "metric": "Metrische Größe",
+          "diaIn": "Durchmesser (Zoll)",
+          "diaMm": "Durchmesser (mm)"
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles, was Sie über Bewehrung wissen sollten"
+      },
+      "faq": [
+        {
+          "q": "Wie viel Bewehrung brauche ich für eine Betonplatte?",
+          "a": "Länge und Breite der Platte, den Achsabstand und die Randüberdeckung eingeben. Der Rechner liefert die Stäbe pro Richtung, die Gesamtlänge in Metern und die zu bestellenden 12-m-Stäbe. Eine 6 × 4 m-Platte bei 150 mm c/c braucht etwa 66 Stäbe und rund 306 m Bewehrung."
+        },
+        {
+          "q": "Wie berechne ich die Bewehrung einer Platte in Quadratfuß?",
+          "a": "Fläche der Platte in Quadratfuß ermitteln, durch den Abstand jeder Seite teilen, um die Stabreihen zu erhalten, dann mit der Stablänge multiplizieren. Der Rechner macht das und gibt auch das Gewicht pro Quadratfuß an — ein einlagiges Wohngitter liegt bei etwa 1 kg pro Quadratfuß."
+        },
+        {
+          "q": "Wie berechne ich das Gewicht der Bewehrung?",
+          "a": "Bewehrungsgewicht = Gesamtlänge × Gewicht pro Meter. Für Durchmesser D in Millimetern gilt Gewicht pro Meter ≈ D² / 162 kg/m. Ein 12-mm-Stab wiegt etwa 0,89 kg/m, ein 16-mm-Stab etwa 1,58 kg/m."
+        },
+        {
+          "q": "Wie viele Bewehrungsstäbe brauche ich?",
+          "a": "Gesamtlänge der Bewehrung durch die gekaufte Lieferlänge teilen (12 m bei indischem TMT) und aufrunden. Der Rechner macht das automatisch und zeigt die Stabanzahl."
+        },
+        {
+          "q": "Braucht ein Fundament oder eine Bodenplatte Bewehrung?",
+          "a": "Fast immer ja. Fundamente tragen die gesamte Gebäudelast und brauchen Bewehrung gegen Biegung und Risse. Üblicher Richtwert: 150–200 mm c/c mit 12–16-mm-Stäben im oberen und unteren Gitter. Mit der Statik prüfen."
+        },
+        {
+          "q": "Braucht eine Betonwand Bewehrung?",
+          "a": "Kommt darauf an. Stütz- und Kellerwände brauchen fast immer vertikale Bewehrung plus horizontale Verteilungsstäbe. Einfache Trennwände kommen mit leichtem Gitter aus. Bauteil auf „Wand“ stellen und mit einem Ingenieur abstimmen."
+        },
+        {
+          "q": "Was ist die Randüberdeckung (Abstand Rand–Gitter)?",
+          "a": "Das ist der Abstand von der äußersten Stabreihe bis zur Betonkante — der Beton um die Stäbe, der sie vor Wasser und Korrosion schützt. Der Rechner zieht pro Dimension zwei Randüberdeckungen (je eine je Ende) ab, um die tatsächliche Gittergröße zu erhalten."
+        },
+        {
+          "q": "Was sagt die Bewehrung pro Quadratmeter aus?",
+          "a": "Es ist das Gesamtgewicht der Bewehrung geteilt durch die Bauteilfläche — eine schnelle Dichteprüfung. Ein einlagiges 12-mm-Gitter bei 150 mm c/c ergibt etwa 11–12 kg pro m²; ein doppeltes Gitter mit 16-mm-Stäben kann 20–25 kg pro m² erreichen."
+        }
+      ]
     }
-   }
   },
-  "rebar": {
-   "meta": {
-    "title": "Bewehrungsrechner — Stahl für Platte, Fundament und Wand (Länge, Stäbe und Gewicht)",
-    "description": "Kostenloser Bewehrungsrechner für Betonplatten, Fundamente, Wände und Bodenplatten. Länge, Breite, Abstand und Randüberdeckung eingeben — erhalten Sie Stabanzahl, Gesamtlänge, 12-m-Stäbe und Gewicht pro Quadratmeter bzw. Quadratfuß. D²/162-Formel."
-   },
-   "crumb": "Bewehrungsrechner",
-   "title": "Bewehrungsrechner — Bewehrung für Platte, Fundament, Wand und Bodenplatte",
-   "subtitle": "Berechnen Sie, wie viel Bewehrungsstahl Sie für eine Platte, ein Fundament, eine Wand oder eine Bodenplatte brauchen. Elementgröße, c/c-Abstand und Randüberdeckung eingeben — Stäbe pro Richtung, Gesamtlänge, 12-m-Stäbe und Gewicht pro m² und ft² erhalten.",
-   "form": {
-    "section1": "Bauteil + Abmessungen",
-    "member": "Bauteiltyp",
-    "memberHint": "Gleiche Gitterberechnung — nur der vorgeschlagene Startabstand ändert sich.",
-    "dimHint": "Gesamte Betonabmessungen des Bauteils (Kante zu Kante), nicht das Gitter.",
-    "section2": "Bewehrungsanordnung",
-    "spacing": "Abstand Stab–Stab (c/c)",
-    "spacingAria": "Achsabstand zwischen parallelen Stäben",
-    "edgeSpacing": "Randüberdeckung",
-    "edgeAria": "Abstand des äußeren Stabs zur Bauteilkante",
-    "section3": "Stab + Bestellung",
-    "barDiameter": "Stabdurchmesser",
-    "barLength": "Länge eines Stabs",
-    "barLengthAria": "Lieferlänge eines Stabs vom Händler",
-    "wastage": "Verschnitt",
-    "wastageAria": "Verschnittprozent für Schnitt, Übergreifungen und Überlappungen",
-    "lenAria": "Bauteillänge",
-    "widAria": "Bauteilbreite",
-    "errors": {
-     "lenMin": "Geben Sie eine Länge größer als 0 ein.",
-     "lenMax": "Die Länge muss 200 m oder weniger betragen.",
-     "widMin": "Geben Sie eine Breite größer als 0 ein.",
-     "widMax": "Die Breite muss 200 m oder weniger betragen.",
-     "spMin": "Geben Sie einen Abstand größer als 0 ein.",
-     "spMax": "Der Abstand muss 2 m oder weniger betragen.",
-     "edgeMin": "Die Randüberdeckung muss 0 oder mehr sein.",
-     "edgeMax": "Die Randüberdeckung muss kleiner als die halbe Bauteilgröße sein.",
-     "barLenMin": "Geben Sie eine Stablänge größer als 0 ein.",
-     "barLenMax": "Die Stablänge muss 60 m oder weniger betragen.",
-     "wastageRange": "Der Verschnitt muss zwischen 0 und 20 % liegen."
+  "results": {
+    "brick": {
+      "bricksRequired": "Benötigte Ziegel",
+      "beforeWastage": "{n} vor {pct}% Verschnitt",
+      "grossWall": "Bruttowandfläche",
+      "openings": "Öffnungen",
+      "netArea": "Nettofläche",
+      "masonryVolume": "Mauerwerksvolumen",
+      "paramsUsed": "Verwendete Parameter",
+      "preset": "Voreinstellung",
+      "brick": "Ziegel",
+      "joint": "Fuge",
+      "mortarRatio": "Mörtelverhältnis",
+      "brickWastage": "Ziegel-Verschnitt",
+      "mortarWastage": "Mörtel-Verschnitt",
+      "mortar": "Mörtel",
+      "cement": "Zement",
+      "sand": "Sand"
     },
-    "examples": {
-     "fill1": "Beispiel: Platte 6000 × 4000 mm, 150 mm c/c, 12-mm-Stäbe, 12-m-Stock."
+    "concrete": {
+      "cementRequired": "Benötigter Zement",
+      "sand": "Sand",
+      "aggregate": "Zuschlagstoff",
+      "dryVolume": "Trockenvolumen",
+      "wastageApplied": "Angewandter Verschnitt",
+      "paramsUsed": "Verwendete Parameter",
+      "preset": "Voreinstellung",
+      "mixRatio": "Mischungsverhältnis",
+      "cementDensity": "Zementdichte",
+      "bagWeight": "Sackgewicht",
+      "dtw": "Trocken-zu-Nass-Faktor"
     },
-    "placeholder": "Füllen Sie das Formular aus und drücken Sie Berechnen, um Ihre Bewehrungsbestellung zu sehen."
-   },
-   "sizes": {
-    "heading": "Stabgrößen",
-    "note": "US-Stabgrößen geben den Durchmesser in Achtelzoll bis #8 an; metrische Größen verwenden den Nenndurchmesser in Millimetern. TMT-Bewehrung in Indien wird nach Nenndurchmesser verkauft — typisch 8, 10, 12, 16, 20, 25 und 32 mm.",
-    "cols": {
-     "imperial": "Imperiale Größe",
-     "metric": "Metrische Größe",
-     "diaIn": "Durchmesser (Zoll)",
-     "diaMm": "Durchmesser (mm)"
+    "paint": {
+      "totalRequired": "Insgesamt benötigt",
+      "putty": "{n} {unit} Spachtel",
+      "wallGross": "Wandbrutto",
+      "ceiling": "Decke",
+      "openings": "Öffnungen",
+      "netPaintable": "Netto streichbar",
+      "byLayer": "Nach Schicht",
+      "coats": "Anstriche",
+      "coat": "Anstrich"
+    },
+    "steel": {
+      "total": "Insgesamt benötigter Stahl",
+      "beforeWastage": "Vor Verschnitt",
+      "wastage": "Verschnitt",
+      "byBar": "Nach Stab",
+      "genericBar": "Stab {n}"
+    },
+    "tile": {
+      "tilesToOrder": "Zu bestellende Fliesen",
+      "tiles": "Fliesen",
+      "beforeWastage": "{count} vor + {pct}% Verschnitt",
+      "grossArea": "Bruttofläche",
+      "excluded": "Ausgeschlossen",
+      "netTileable": "Netto fliesbar",
+      "tileSize": "Fliesengröße",
+      "thinset": "Dünnbettkleber",
+      "quantity": "Menge",
+      "mortarBed": "Mörtelbett ({thickness} {unit}, {ratio})",
+      "volumeWet": "Volumen (nass)",
+      "cement": "Zement",
+      "sand": "Sand",
+      "grout": "Fugenmörtel",
+      "volume": "Volumen",
+      "estimatedWeight": "Geschätztes Gewicht"
     }
-   },
-   "article": {
-    "toc": "Auf dieser Seite",
-    "heading": "Alles, was Sie über Bewehrung wissen sollten"
-   },
-   "faq": [
-    {
-     "q": "Wie viel Bewehrung brauche ich für eine Betonplatte?",
-     "a": "Länge und Breite der Platte, den Achsabstand und die Randüberdeckung eingeben. Der Rechner liefert die Stäbe pro Richtung, die Gesamtlänge in Metern und die zu bestellenden 12-m-Stäbe. Eine 6 × 4 m-Platte bei 150 mm c/c braucht etwa 66 Stäbe und rund 306 m Bewehrung."
+  },
+  "projects": {
+    "title": "Projekte",
+    "newProject": "Neues Projekt",
+    "editProject": "Projekt bearbeiten",
+    "empty": "Noch keine Projekte. Erstellen Sie Ihr erstes, um Berechnungen zu speichern.",
+    "filters": {
+      "active": "Aktiv",
+      "archived": "Archiviert",
+      "all": "Alle"
     },
-    {
-     "q": "Wie berechne ich die Bewehrung einer Platte in Quadratfuß?",
-     "a": "Fläche der Platte in Quadratfuß ermitteln, durch den Abstand jeder Seite teilen, um die Stabreihen zu erhalten, dann mit der Stablänge multiplizieren. Der Rechner macht das und gibt auch das Gewicht pro Quadratfuß an — ein einlagiges Wohngitter liegt bei etwa 1 kg pro Quadratfuß."
-    },
-    {
-     "q": "Wie berechne ich das Gewicht der Bewehrung?",
-     "a": "Bewehrungsgewicht = Gesamtlänge × Gewicht pro Meter. Für Durchmesser D in Millimetern gilt Gewicht pro Meter ≈ D² / 162 kg/m. Ein 12-mm-Stab wiegt etwa 0,89 kg/m, ein 16-mm-Stab etwa 1,58 kg/m."
-    },
-    {
-     "q": "Wie viele Bewehrungsstäbe brauche ich?",
-     "a": "Gesamtlänge der Bewehrung durch die gekaufte Lieferlänge teilen (12 m bei indischem TMT) und aufrunden. Der Rechner macht das automatisch und zeigt die Stabanzahl."
-    },
-    {
-     "q": "Braucht ein Fundament oder eine Bodenplatte Bewehrung?",
-     "a": "Fast immer ja. Fundamente tragen die gesamte Gebäudelast und brauchen Bewehrung gegen Biegung und Risse. Üblicher Richtwert: 150–200 mm c/c mit 12–16-mm-Stäben im oberen und unteren Gitter. Mit der Statik prüfen."
-    },
-    {
-     "q": "Braucht eine Betonwand Bewehrung?",
-     "a": "Kommt darauf an. Stütz- und Kellerwände brauchen fast immer vertikale Bewehrung plus horizontale Verteilungsstäbe. Einfache Trennwände kommen mit leichtem Gitter aus. Bauteil auf „Wand“ stellen und mit einem Ingenieur abstimmen."
-    },
-    {
-     "q": "Was ist die Randüberdeckung (Abstand Rand–Gitter)?",
-     "a": "Das ist der Abstand von der äußersten Stabreihe bis zur Betonkante — der Beton um die Stäbe, der sie vor Wasser und Korrosion schützt. Der Rechner zieht pro Dimension zwei Randüberdeckungen (je eine je Ende) ab, um die tatsächliche Gittergröße zu erhalten."
-    },
-    {
-     "q": "Was sagt die Bewehrung pro Quadratmeter aus?",
-     "a": "Es ist das Gesamtgewicht der Bewehrung geteilt durch die Bauteilfläche — eine schnelle Dichteprüfung. Ein einlagiges 12-mm-Gitter bei 150 mm c/c ergibt etwa 11–12 kg pro m²; ein doppeltes Gitter mit 16-mm-Stäben kann 20–25 kg pro m² erreichen."
-    }
-   ]
-  }
- },
- "results": {
-  "brick": {
-   "bricksRequired": "Benötigte Ziegel",
-   "beforeWastage": "{n} vor {pct}% Verschnitt",
-   "grossWall": "Bruttowandfläche",
-   "openings": "Öffnungen",
-   "netArea": "Nettofläche",
-   "masonryVolume": "Mauerwerksvolumen",
-   "paramsUsed": "Verwendete Parameter",
-   "preset": "Voreinstellung",
-   "brick": "Ziegel",
-   "joint": "Fuge",
-   "mortarRatio": "Mörtelverhältnis",
-   "brickWastage": "Ziegel-Verschnitt",
-   "mortarWastage": "Mörtel-Verschnitt",
-   "mortar": "Mörtel",
-   "cement": "Zement",
-   "sand": "Sand"
-  },
-  "concrete": {
-   "cementRequired": "Benötigter Zement",
-   "sand": "Sand",
-   "aggregate": "Zuschlagstoff",
-   "dryVolume": "Trockenvolumen",
-   "wastageApplied": "Angewandter Verschnitt",
-   "paramsUsed": "Verwendete Parameter",
-   "preset": "Voreinstellung",
-   "mixRatio": "Mischungsverhältnis",
-   "cementDensity": "Zementdichte",
-   "bagWeight": "Sackgewicht",
-   "dtw": "Trocken-zu-Nass-Faktor"
-  },
-  "paint": {
-   "totalRequired": "Insgesamt benötigt",
-   "putty": "{n} {unit} Spachtel",
-   "wallGross": "Wandbrutto",
-   "ceiling": "Decke",
-   "openings": "Öffnungen",
-   "netPaintable": "Netto streichbar",
-   "byLayer": "Nach Schicht",
-   "coats": "Anstriche",
-   "coat": "Anstrich"
-  },
-  "steel": {
-   "total": "Insgesamt benötigter Stahl",
-   "beforeWastage": "Vor Verschnitt",
-   "wastage": "Verschnitt",
-   "byBar": "Nach Stab",
-   "genericBar": "Stab {n}"
-  },
-  "tile": {
-   "tilesToOrder": "Zu bestellende Fliesen",
-   "tiles": "Fliesen",
-   "beforeWastage": "{count} vor + {pct}% Verschnitt",
-   "grossArea": "Bruttofläche",
-   "excluded": "Ausgeschlossen",
-   "netTileable": "Netto fliesbar",
-   "tileSize": "Fliesengröße",
-   "thinset": "Dünnbettkleber",
-   "quantity": "Menge",
-   "mortarBed": "Mörtelbett ({thickness} {unit}, {ratio})",
-   "volumeWet": "Volumen (nass)",
-   "cement": "Zement",
-   "sand": "Sand",
-   "grout": "Fugenmörtel",
-   "volume": "Volumen",
-   "estimatedWeight": "Geschätztes Gewicht"
-  }
- },
- "projects": {
-  "title": "Projekte",
-  "newProject": "Neues Projekt",
-  "editProject": "Projekt bearbeiten",
-  "empty": "Noch keine Projekte. Erstellen Sie Ihr erstes, um Berechnungen zu speichern.",
-  "filters": {
-   "active": "Aktiv",
-   "archived": "Archiviert",
-   "all": "Alle"
-  },
-  "archivedTag": "Archiviert",
-  "noClient": "Kein Kunde",
-  "calc": "Berechnung",
-  "material": "Material",
-  "form": {
-   "name": "Projektname",
-   "clientName": "Kundenname",
-   "currency": "Währung",
-   "currencyFixed": "Währung ist bei Erstellung festgelegt. Erstellen Sie ein neues Projekt, um sie zu ändern.",
-   "taxRegion": "Steuerregion",
-   "taxRegionFixed": "Steuerregion ist bei Erstellung festgelegt.",
-   "location": "Standort (optional)",
-   "address": "Adresse",
-   "city": "Stadt",
-   "state": "Bundesland",
-   "pincode": "Postleitzahl",
-   "country": "Land",
-   "notes": "Notizen",
-   "create": "Projekt erstellen"
-  },
-  "actions": {
-   "confirmDelete": "Projekt „{name}\" löschen? Dies kann nicht rückgängig gemacht werden.",
-   "unarchive": "Aus Archiv holen",
-   "archive": "Archivieren",
-   "delete": "Löschen"
-  },
-  "materials": {
-   "title": "Materialien",
-   "add": "Material hinzufügen",
-   "empty": "Noch keine Materialien. Fügen Sie Preise für Zement, Sand, Stahl und alles andere hinzu, was Sie kaufen.",
-   "vendor": "Lieferant: {vendor}",
-   "confirmDelete": "Dieses Material löschen? Bestehende Angebote bleiben unberührt.",
-   "form": {
-    "suggestedFrom": "Vorgeschlagen aus „{source}\"",
-    "aCalculation": " einer Berechnung",
-    "needsHint": " · benötigt ≈ {qty}",
-    "enterPrice": ". Geben Sie Ihren Preis ein und speichern Sie.",
-    "type": "Typ",
-    "typeFixed": "Typ ist nach Erstellung festgelegt.",
-    "unit": "Einheit",
-    "unitFixed": "Einheit ist nach Erstellung festgelegt.",
-    "brand": "Marke",
-    "unitPrice": "Einzelpreis ({currency})",
-    "quantity": "Menge ({unit})",
-    "quantityGeneric": "Menge (Einheit)",
-    "qtyPh": "z. B. 12",
-    "pricePh": "380.00",
-    "total": "Gesamt: {currency} {amount}",
-    "vendor": "Lieferant",
-    "notes": "Notizen"
-   },
-   "modal": {
-    "title": "Material hinzufügen",
-    "typeReq": "Typ *",
-    "brand": "Marke (optional)",
-    "brandPh": "z. B. UltraTech, ACC",
-    "unitReq": "Einheit *",
-    "priceReq": "Preis pro {unit} ({currency}) *",
-    "pricePh": "0.00",
-    "vendor": "Lieferant (optional)",
-    "vendorPh": "z. B. Lokaler Lieferant",
-    "adding": "Hinzufügen…",
-    "priceError": "Gültiger Einzelpreis erforderlich"
-   },
-   "fromCalc": {
-    "allImported": "Alles aus dieser Berechnung ist bereits in Ihren Materialien.",
-    "createdMsg": "{n} Material(ien) mit Platzhalterpreis ₹100 hinzugefügt",
-    "updatedMsg": "Menge bei {n} bestehenden Material(ien) aktualisiert",
-    "editPrices": ". Preise nach Bedarf bearbeiten.",
-    "title": "Materialien aus dieser Berechnung",
-    "help": "Klicken Sie auf einen Chip, um es mit einem Preis hinzuzufügen, oder importieren Sie alle fehlenden mit Platzhalterpreisen.",
-    "importing": "Importieren…",
-    "allDone": "Alle importiert",
-    "addAll": "Alle fehlenden hinzufügen ({n})"
-   }
-  },
-  "calculations": {
-   "title": "Berechnungen",
-   "empty": "Noch keine Berechnungen. Starten Sie einen Rechner und nutzen Sie „Zum Projekt speichern\", um eine Momentaufnahme hier abzulegen.",
-   "browse": "Rechner durchsuchen",
-   "ungrouped": "Nicht gruppiert",
-   "openHint": "Öffnen zum Bearbeiten oder Neuberechnen →",
-   "confirmDelete": "Berechnung „{name}\" löschen? Dies kann nicht rückgängig gemacht werden.",
-   "menu": "…",
-   "recompute": "Neu berechnen",
-   "edit": {
-    "label": "Bezeichnung",
-    "group": "Gruppe",
-    "groupPh": "z. B. Erdgeschoss, Erster Stock",
-    "description": "Beschreibung"
-   },
-   "result": {
-    "empty": "Keine Vorschau für diesen Rechnertyp verfügbar."
-   },
-   "saveButton": {
-    "runFirst": "Zuerst den Rechner ausführen",
-    "saveHint": "Diesen Lauf zu einem Projekt speichern",
-    "cta": "Zum Projekt speichern",
-    "modalTitle": "Berechnung speichern",
-    "project": "Projekt",
-    "loadingProjects": "Projekte laden…",
-    "noActive": "Sie haben keine aktiven Projekte. ",
-    "createOne": "Eins erstellen",
-    "labelPh": "z. B. Erdgeschoss Ziegel",
-    "group": "Gruppe (optional)",
-    "groupPh": "z. B. Erdgeschoss",
-    "save": "Speichern"
-   }
-  },
-  "boq": {
-   "title": "BOQ",
-   "generate": "BOQ erstellen",
-   "generating": "Erstellen…",
-   "name": "BOQ-Name",
-   "namePh": "z. B. „BOQ v1 — wie geplant\"",
-   "autoName": "Leer lassen für automatisch generierten Namen",
-   "notes": "Notizen",
-   "notesPh": "z. B. Ohne Baustellenvorbereitung und Grenzmauer.",
-   "source": "Datenquelle",
-   "willGen": "BOQ wird aus den {n} Material(ien) Ihres Projekts mit deren Mengen und Preisen erstellt.",
-   "noMaterials": "Noch keine Materialien hinzugefügt. Fügen Sie Materialien zu Ihrem Projekt hinzu, bevor Sie ein BOQ erstellen.",
-   "alsoCalcs": "Auch gespeicherte Berechnungen einschließen",
-   "alsoCalcsHelp": "Fügt einen separaten Abschnitt mit Materialmengen aus Ihren Rechnerergebnissen hinzu.",
-   "pickCalcs": "Wählen Sie, welche Berechnungen einbezogen werden sollen (leer lassen für alle):",
-   "confirmDelete": "Dieses BOQ löschen? Dies kann nicht rückgängig gemacht werden.",
-   "generated": "Erstellt {date}",
-   "pdf": "PDF",
-   "ungrouped": "(Nicht gruppiert)",
-   "cols": {
+    "archivedTag": "Archiviert",
+    "noClient": "Kein Kunde",
+    "calc": "Berechnung",
     "material": "Material",
-    "qty": "Menge",
-    "unit": "Einheit",
-    "pricePerUnit": "Preis/Einheit",
-    "amount": "Betrag"
-   },
-   "materialsSubtotal": "Materialien Zwischensumme:",
-   "grandTotal": "Gesamtsumme:",
-   "addMaterial": "+ Material hinzufügen",
-   "editor": {
-    "label": "Bezeichnung",
-    "override": "Betrag überschreiben ({currency})",
-    "reason": "Grund",
-    "reasonPh": "z. B. Mengenrabatt vom Lieferanten für Gesamtbestellung",
-    "save": "Überschreibung speichern"
-   }
-  },
-  "invoice": {
-   "title": "Rechnungen",
-   "new": "Neue Rechnung",
-   "confirmDelete": "Diese Rechnung löschen? Dies kann nicht rückgängig gemacht werden.",
-   "generate": "Rechnung erstellen",
-   "generating": "Erstellen…",
-   "sourceQuotation": "Quellangebot",
-   "grandTotal": "Gesamtsumme: {total}",
-   "name": "Rechnungsname (optional)",
-   "namePh": "Automatisch aus dem Angebotsnamen erstellt",
-   "due": "Fälligkeitsdatum (optional)",
-   "notes": "Notizen (optional)",
-   "amountDue": "Fälliger Betrag",
-   "amountPaid": "Gezahlter Betrag",
-   "remaining": "Verbleibend",
-   "recordPayment": "Zahlung erfassen",
-   "amount": "Betrag",
-   "amountPh": "0.00",
-   "paymentNotes": "Notizen (optional)",
-   "paymentRefPh": "Zahlungsreferenz…",
-   "savePayment": "Zahlung speichern",
-   "paymentNotesTitle": "Zahlungsnotizen",
-   "notesLabel": "Notizen",
-   "createdUpdated": "Erstellt {created} · Aktualisiert {updated}",
-   "paid": " · Bezahlt {date}"
-  },
-  "quotation": {
-   "title": "Angebote",
-   "new": "Neues Angebot",
-   "generate": "Angebot erstellen",
-   "generating": "Erstellen…",
-   "confirmDelete": "Dieses Angebot löschen? Dies kann nicht rückgängig gemacht werden.",
-   "selectBoq": "BOQ auswählen",
-   "sourceBoqReq": "Quell-BOQ *",
-   "clientDetails": "Kundendaten (optional)",
-   "name": "Name",
-   "namePh": "Kundenname",
-   "email": "E-Mail",
-   "emailPh": "client@example.com",
-   "phone": "Telefon",
-   "phonePh": "+91 98765 43210",
-   "pricing": "Preisgestaltung",
-   "markup": "Aufschlag %",
-   "discount": "Rabatt %",
-   "tax": "Steuer % (GST)",
-   "materialsSubtotal": "Materialien Zwischensumme",
-   "markupLine": "+ Aufschlag ({pct}%)",
-   "discountLine": "- Rabatt ({pct}%)",
-   "taxLine": "+ Steuer ({pct}%)",
-   "grandTotal": "Gesamtsumme",
-   "quoteName": "Angebotsname (optional)",
-   "quoteNamePh": "Automatisch erstellt, wenn leer gelassen",
-   "validUntil": "Gültig bis (optional)",
-   "internalNotesPh": "Interne Notizen",
-   "termsOpt": "Bedingungen (optional)",
-   "termsPh": "Zahlungsbedingungen, Gültigkeit usw.",
-   "noClient": "Kein Kunde",
-   "validSuffix": " · Gültig bis {date}",
-   "created": "Erstellt {date}",
-   "sent": " · Gesendet {date}",
-   "markSent": "Als gesendet markieren",
-   "markAccepted": "Als angenommen markieren",
-   "markRejected": "Als abgelehnt markieren",
-   "pricingSummary": "Preisübersicht",
-   "client": "Kunde",
-   "ungrouped": "(Nicht gruppiert)",
-   "cols": {
-    "item": "Position",
-    "qty": "Menge",
-    "unit": "Einheit",
-    "rate": "Satz",
-    "amount": "Betrag"
-   },
-   "notes": "Notizen",
-   "termsTitle": "Bedingungen"
-  },
-  "brandSwap": {
-   "generic": "Generisch"
-  },
-  "runCalc": "Rechner ausführen"
- }
+    "form": {
+      "name": "Projektname",
+      "clientName": "Kundenname",
+      "currency": "Währung",
+      "currencyFixed": "Währung ist bei Erstellung festgelegt. Erstellen Sie ein neues Projekt, um sie zu ändern.",
+      "taxRegion": "Steuerregion",
+      "taxRegionFixed": "Steuerregion ist bei Erstellung festgelegt.",
+      "location": "Standort (optional)",
+      "address": "Adresse",
+      "city": "Stadt",
+      "state": "Bundesland",
+      "pincode": "Postleitzahl",
+      "country": "Land",
+      "notes": "Notizen",
+      "create": "Projekt erstellen"
+    },
+    "actions": {
+      "confirmDelete": "Projekt „{name}\" löschen? Dies kann nicht rückgängig gemacht werden.",
+      "unarchive": "Aus Archiv holen",
+      "archive": "Archivieren",
+      "delete": "Löschen"
+    },
+    "materials": {
+      "title": "Materialien",
+      "add": "Material hinzufügen",
+      "empty": "Noch keine Materialien. Fügen Sie Preise für Zement, Sand, Stahl und alles andere hinzu, was Sie kaufen.",
+      "vendor": "Lieferant: {vendor}",
+      "confirmDelete": "Dieses Material löschen? Bestehende Angebote bleiben unberührt.",
+      "form": {
+        "suggestedFrom": "Vorgeschlagen aus „{source}\"",
+        "aCalculation": " einer Berechnung",
+        "needsHint": " · benötigt ≈ {qty}",
+        "enterPrice": ". Geben Sie Ihren Preis ein und speichern Sie.",
+        "type": "Typ",
+        "typeFixed": "Typ ist nach Erstellung festgelegt.",
+        "unit": "Einheit",
+        "unitFixed": "Einheit ist nach Erstellung festgelegt.",
+        "brand": "Marke",
+        "unitPrice": "Einzelpreis ({currency})",
+        "quantity": "Menge ({unit})",
+        "quantityGeneric": "Menge (Einheit)",
+        "qtyPh": "z. B. 12",
+        "pricePh": "380.00",
+        "total": "Gesamt: {currency} {amount}",
+        "vendor": "Lieferant",
+        "notes": "Notizen"
+      },
+      "modal": {
+        "title": "Material hinzufügen",
+        "typeReq": "Typ *",
+        "brand": "Marke (optional)",
+        "brandPh": "z. B. UltraTech, ACC",
+        "unitReq": "Einheit *",
+        "priceReq": "Preis pro {unit} ({currency}) *",
+        "pricePh": "0.00",
+        "vendor": "Lieferant (optional)",
+        "vendorPh": "z. B. Lokaler Lieferant",
+        "adding": "Hinzufügen…",
+        "priceError": "Gültiger Einzelpreis erforderlich"
+      },
+      "fromCalc": {
+        "allImported": "Alles aus dieser Berechnung ist bereits in Ihren Materialien.",
+        "createdMsg": "{n} Material(ien) mit Platzhalterpreis ₹100 hinzugefügt",
+        "updatedMsg": "Menge bei {n} bestehenden Material(ien) aktualisiert",
+        "editPrices": ". Preise nach Bedarf bearbeiten.",
+        "title": "Materialien aus dieser Berechnung",
+        "help": "Klicken Sie auf einen Chip, um es mit einem Preis hinzuzufügen, oder importieren Sie alle fehlenden mit Platzhalterpreisen.",
+        "importing": "Importieren…",
+        "allDone": "Alle importiert",
+        "addAll": "Alle fehlenden hinzufügen ({n})"
+      }
+    },
+    "calculations": {
+      "title": "Berechnungen",
+      "empty": "Noch keine Berechnungen. Starten Sie einen Rechner und nutzen Sie „Zum Projekt speichern\", um eine Momentaufnahme hier abzulegen.",
+      "browse": "Rechner durchsuchen",
+      "ungrouped": "Nicht gruppiert",
+      "openHint": "Öffnen zum Bearbeiten oder Neuberechnen →",
+      "confirmDelete": "Berechnung „{name}\" löschen? Dies kann nicht rückgängig gemacht werden.",
+      "menu": "…",
+      "recompute": "Neu berechnen",
+      "edit": {
+        "label": "Bezeichnung",
+        "group": "Gruppe",
+        "groupPh": "z. B. Erdgeschoss, Erster Stock",
+        "description": "Beschreibung"
+      },
+      "result": {
+        "empty": "Keine Vorschau für diesen Rechnertyp verfügbar."
+      },
+      "saveButton": {
+        "runFirst": "Zuerst den Rechner ausführen",
+        "saveHint": "Diesen Lauf zu einem Projekt speichern",
+        "cta": "Zum Projekt speichern",
+        "modalTitle": "Berechnung speichern",
+        "project": "Projekt",
+        "loadingProjects": "Projekte laden…",
+        "noActive": "Sie haben keine aktiven Projekte. ",
+        "createOne": "Eins erstellen",
+        "labelPh": "z. B. Erdgeschoss Ziegel",
+        "group": "Gruppe (optional)",
+        "groupPh": "z. B. Erdgeschoss",
+        "save": "Speichern"
+      }
+    },
+    "boq": {
+      "title": "BOQ",
+      "generate": "BOQ erstellen",
+      "generating": "Erstellen…",
+      "name": "BOQ-Name",
+      "namePh": "z. B. „BOQ v1 — wie geplant\"",
+      "autoName": "Leer lassen für automatisch generierten Namen",
+      "notes": "Notizen",
+      "notesPh": "z. B. Ohne Baustellenvorbereitung und Grenzmauer.",
+      "source": "Datenquelle",
+      "willGen": "BOQ wird aus den {n} Material(ien) Ihres Projekts mit deren Mengen und Preisen erstellt.",
+      "noMaterials": "Noch keine Materialien hinzugefügt. Fügen Sie Materialien zu Ihrem Projekt hinzu, bevor Sie ein BOQ erstellen.",
+      "alsoCalcs": "Auch gespeicherte Berechnungen einschließen",
+      "alsoCalcsHelp": "Fügt einen separaten Abschnitt mit Materialmengen aus Ihren Rechnerergebnissen hinzu.",
+      "pickCalcs": "Wählen Sie, welche Berechnungen einbezogen werden sollen (leer lassen für alle):",
+      "confirmDelete": "Dieses BOQ löschen? Dies kann nicht rückgängig gemacht werden.",
+      "generated": "Erstellt {date}",
+      "pdf": "PDF",
+      "ungrouped": "(Nicht gruppiert)",
+      "cols": {
+        "material": "Material",
+        "qty": "Menge",
+        "unit": "Einheit",
+        "pricePerUnit": "Preis/Einheit",
+        "amount": "Betrag"
+      },
+      "materialsSubtotal": "Materialien Zwischensumme:",
+      "grandTotal": "Gesamtsumme:",
+      "addMaterial": "+ Material hinzufügen",
+      "editor": {
+        "label": "Bezeichnung",
+        "override": "Betrag überschreiben ({currency})",
+        "reason": "Grund",
+        "reasonPh": "z. B. Mengenrabatt vom Lieferanten für Gesamtbestellung",
+        "save": "Überschreibung speichern"
+      }
+    },
+    "invoice": {
+      "title": "Rechnungen",
+      "new": "Neue Rechnung",
+      "confirmDelete": "Diese Rechnung löschen? Dies kann nicht rückgängig gemacht werden.",
+      "generate": "Rechnung erstellen",
+      "generating": "Erstellen…",
+      "sourceQuotation": "Quellangebot",
+      "grandTotal": "Gesamtsumme: {total}",
+      "name": "Rechnungsname (optional)",
+      "namePh": "Automatisch aus dem Angebotsnamen erstellt",
+      "due": "Fälligkeitsdatum (optional)",
+      "notes": "Notizen (optional)",
+      "amountDue": "Fälliger Betrag",
+      "amountPaid": "Gezahlter Betrag",
+      "remaining": "Verbleibend",
+      "recordPayment": "Zahlung erfassen",
+      "amount": "Betrag",
+      "amountPh": "0.00",
+      "paymentNotes": "Notizen (optional)",
+      "paymentRefPh": "Zahlungsreferenz…",
+      "savePayment": "Zahlung speichern",
+      "paymentNotesTitle": "Zahlungsnotizen",
+      "notesLabel": "Notizen",
+      "createdUpdated": "Erstellt {created} · Aktualisiert {updated}",
+      "paid": " · Bezahlt {date}"
+    },
+    "quotation": {
+      "title": "Angebote",
+      "new": "Neues Angebot",
+      "generate": "Angebot erstellen",
+      "generating": "Erstellen…",
+      "confirmDelete": "Dieses Angebot löschen? Dies kann nicht rückgängig gemacht werden.",
+      "selectBoq": "BOQ auswählen",
+      "sourceBoqReq": "Quell-BOQ *",
+      "clientDetails": "Kundendaten (optional)",
+      "name": "Name",
+      "namePh": "Kundenname",
+      "email": "E-Mail",
+      "emailPh": "client@example.com",
+      "phone": "Telefon",
+      "phonePh": "+91 98765 43210",
+      "pricing": "Preisgestaltung",
+      "markup": "Aufschlag %",
+      "discount": "Rabatt %",
+      "tax": "Steuer % (GST)",
+      "materialsSubtotal": "Materialien Zwischensumme",
+      "markupLine": "+ Aufschlag ({pct}%)",
+      "discountLine": "- Rabatt ({pct}%)",
+      "taxLine": "+ Steuer ({pct}%)",
+      "grandTotal": "Gesamtsumme",
+      "quoteName": "Angebotsname (optional)",
+      "quoteNamePh": "Automatisch erstellt, wenn leer gelassen",
+      "validUntil": "Gültig bis (optional)",
+      "internalNotesPh": "Interne Notizen",
+      "termsOpt": "Bedingungen (optional)",
+      "termsPh": "Zahlungsbedingungen, Gültigkeit usw.",
+      "noClient": "Kein Kunde",
+      "validSuffix": " · Gültig bis {date}",
+      "created": "Erstellt {date}",
+      "sent": " · Gesendet {date}",
+      "markSent": "Als gesendet markieren",
+      "markAccepted": "Als angenommen markieren",
+      "markRejected": "Als abgelehnt markieren",
+      "pricingSummary": "Preisübersicht",
+      "client": "Kunde",
+      "ungrouped": "(Nicht gruppiert)",
+      "cols": {
+        "item": "Position",
+        "qty": "Menge",
+        "unit": "Einheit",
+        "rate": "Satz",
+        "amount": "Betrag"
+      },
+      "notes": "Notizen",
+      "termsTitle": "Bedingungen"
+    },
+    "brandSwap": {
+      "generic": "Generisch"
+    },
+    "runCalc": "Rechner ausführen"
+  }
 }

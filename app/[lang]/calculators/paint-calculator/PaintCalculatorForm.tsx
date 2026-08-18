@@ -6,6 +6,10 @@ import { NumberSliderInput } from "@/components/ui/NumberSliderInput";
 import { QuantityInput } from "@/components/ui/QuantityInput";
 import { SaveToProjectButton } from "@/components/projects/SaveToProjectButton";
 import { PaintResultCard } from "@/components/calculators/paint/ResultCard";
+import { BlockGroup } from "@/components/calculators/ui/BlockGroup";
+import { VariableRow } from "@/components/calculators/ui/VariableRow";
+import { ActionPanel } from "@/components/calculators/ui/ActionPanel";
+import { FeedbackBar } from "@/components/calculators/ui/FeedbackBar";
 import type {
   AreaQuantity,
   LayerType,
@@ -344,26 +348,37 @@ export function PaintCalculatorForm({
   const [savedRequest, setSavedRequest] = useState<PaintRequest | null>(null);
   const [isPending, startTransition] = useTransition();
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (hasErrors) return;
-    const req = toPaintRequest(state);
+  const run = (req: PaintRequest) =>
     startTransition(async () => {
       const res = await submitPaintCalculation(req);
       setResult(res);
-      if (res.ok) setSavedRequest(req);
-      else setSavedRequest(null);
+      setSavedRequest(res.ok ? req : null);
     });
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (hasErrors) return;
+    run(toPaintRequest(state));
+  };
+
+  const onReload = () => {
+    if (hasErrors) return;
+    run(toPaintRequest(state));
+  };
+
+  const onClear = () => {
+    setState(makeInitialState(initialStandards, t.defaultDoor));
+    setResult(null);
+    setSavedRequest(null);
   };
 
   const errCode = result && !result.ok ? result.error.code : null;
   const errMsg = result && !result.ok ? result.error.message : null;
 
   return (
-    <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,20rem)]">
-      <form onSubmit={onSubmit} className="space-y-8" noValidate>
-        <fieldset className="space-y-2">
-          <legend className="text-sm font-semibold">{t.mode}</legend>
+    <div className="space-y-4">
+      <form onSubmit={onSubmit} className="space-y-4" noValidate>
+        <BlockGroup title={t.mode}>
           <div className="flex gap-2">
             {(["room", "area"] as const).map((m) => (
               <button
@@ -381,153 +396,132 @@ export function PaintCalculatorForm({
               </button>
             ))}
           </div>
-        </fieldset>
+        </BlockGroup>
 
         {state.mode === "room" ? (
-          <fieldset className="space-y-4">
-            <legend className="text-sm font-semibold">{t.roomDims}</legend>
-            <LabeledRow label={common.length} error={errors.roomLength}>
-              <QuantityInput
-                value={state.roomLength}
-                onChange={(q) => set("roomLength", q)}
-                units={LENGTH_UNITS}
-                min={0.1}
-                max={100}
-                step={0.1}
-                decimals={2}
-                ariaLabel={common.length}
-              />
-            </LabeledRow>
-            <LabeledRow label={common.width} error={errors.roomWidth}>
-              <QuantityInput
-                value={state.roomWidth}
-                onChange={(q) => set("roomWidth", q)}
-                units={LENGTH_UNITS}
-                min={0.1}
-                max={100}
-                step={0.1}
-                decimals={2}
-                ariaLabel={common.width}
-              />
-            </LabeledRow>
-            <LabeledRow label={common.height} error={errors.roomHeight}>
-              <QuantityInput
-                value={state.roomHeight}
-                onChange={(q) => set("roomHeight", q)}
-                units={LENGTH_UNITS}
-                min={0.1}
-                max={20}
-                step={0.1}
-                decimals={2}
-                ariaLabel={common.height}
-              />
-            </LabeledRow>
-            <label className="flex cursor-pointer items-center gap-2 pt-1 text-sm">
-              <input
-                type="checkbox"
-                checked={state.includeCeiling}
-                onChange={(e) => set("includeCeiling", e.target.checked)}
-                className="accent-black dark:accent-white"
-              />
-              {t.includeCeiling}
-            </label>
+          <BlockGroup title={t.roomDims}>
+            <div className="space-y-4">
+              <VariableRow label={common.length} error={errors.roomLength}>
+                <QuantityInput
+                  value={state.roomLength}
+                  onChange={(q) => set("roomLength", q)}
+                  units={LENGTH_UNITS}
+                  min={0.1}
+                  max={100}
+                  step={0.1}
+                  decimals={2}
+                  ariaLabel={common.length}
+                />
+              </VariableRow>
+              <VariableRow label={common.width} error={errors.roomWidth}>
+                <QuantityInput
+                  value={state.roomWidth}
+                  onChange={(q) => set("roomWidth", q)}
+                  units={LENGTH_UNITS}
+                  min={0.1}
+                  max={100}
+                  step={0.1}
+                  decimals={2}
+                  ariaLabel={common.width}
+                />
+              </VariableRow>
+              <VariableRow label={common.height} error={errors.roomHeight}>
+                <QuantityInput
+                  value={state.roomHeight}
+                  onChange={(q) => set("roomHeight", q)}
+                  units={LENGTH_UNITS}
+                  min={0.1}
+                  max={20}
+                  step={0.1}
+                  decimals={2}
+                  ariaLabel={common.height}
+                />
+              </VariableRow>
+              <label className="flex cursor-pointer items-center gap-2 text-sm text-black/70 dark:text-white/70">
+                <input
+                  type="checkbox"
+                  checked={state.includeCeiling}
+                  onChange={(e) => set("includeCeiling", e.target.checked)}
+                  className="accent-black dark:accent-white"
+                />
+                {t.includeCeiling}
+              </label>
 
-            <div className="space-y-2 border-t border-black/10 pt-4 dark:border-white/10">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-semibold">{t.openings}</span>
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  onClick={addOpening}
-                  type="button"
-                >
-                  {t.addOpening}
-                </Button>
-              </div>
-              {state.openings.length === 0 ? (
-                <p className="text-xs text-black/50 dark:text-white/50">
-                  {t.noOpenings}
-                </p>
-              ) : (
-                <div className="space-y-4">
-                  {errors.openingsTotal ? (
-                    <p
-                      role="alert"
-                      className="text-xs text-red-600 dark:text-red-400"
-                    >
-                      {errors.openingsTotal}
-                    </p>
-                  ) : null}
-                  {state.openings.map((op, i) => {
-                    const idx = String(i + 1);
-                    return (
-                      <div
-                        key={i}
-                        className="rounded border border-black/10 p-3 dark:border-white/10"
-                      >
-                        <div className="mb-2 flex items-center justify-between">
-                          <input
-                            value={op.label ?? ""}
-                            onChange={(e) =>
-                              patchOpening(i, { label: e.target.value })
-                            }
-                            placeholder={t.labelPh}
-                            className="w-40 rounded border border-transparent bg-transparent px-1 py-0.5 text-sm focus:border-black/15 focus:outline-none dark:focus:border-white/20"
-                          />
-                          <button
-                            type="button"
-                            onClick={() => removeOpening(i)}
-                            className="text-xs text-red-600 hover:underline dark:text-red-400"
-                            aria-label={`${common.remove} ${t.openingN.replace("{n}", idx)}`}
-                          >
-                            {common.remove}
-                          </button>
-                        </div>
-                        <div className="space-y-2">
-                          <LabeledRow
-                            label={common.width}
-                            compact
-                            error={errors.openings?.[i]?.width}
-                          >
-                            <QuantityInput
-                              value={op.width}
-                              onChange={(q) => patchOpening(i, { width: q })}
-                              units={LENGTH_UNITS}
-                              min={0.05}
-                              max={10}
-                              step={0.05}
-                              decimals={2}
-                              ariaLabel={`${t.openingN.replace("{n}", idx)} ${common.width}`}
-                            />
-                          </LabeledRow>
-                          <LabeledRow
-                            label={common.height}
-                            compact
-                            error={errors.openings?.[i]?.height}
-                          >
-                            <QuantityInput
-                              value={op.height}
-                              onChange={(q) => patchOpening(i, { height: q })}
-                              units={LENGTH_UNITS}
-                              min={0.05}
-                              max={10}
-                              step={0.05}
-                              decimals={2}
-                              ariaLabel={`${t.openingN.replace("{n}", idx)} ${common.height}`}
-                            />
-                          </LabeledRow>
-                        </div>
-                      </div>
-                    );
-                  })}
+              <div className="space-y-2 border-t border-black/10 pt-4 dark:border-white/10">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold">{t.openings}</span>
+                  <Button variant="secondary" size="sm" onClick={addOpening} type="button">
+                    {t.addOpening}
+                  </Button>
                 </div>
-              )}
+                {state.openings.length === 0 ? (
+                  <p className="text-xs text-black/50 dark:text-white/50">
+                    {t.noOpenings}
+                  </p>
+                ) : (
+                  <div className="space-y-4">
+                    {errors.openingsTotal ? (
+                      <p role="alert" className="text-xs text-red-600 dark:text-red-400">
+                        {errors.openingsTotal}
+                      </p>
+                    ) : null}
+                    {state.openings.map((op, i) => {
+                      const idx = String(i + 1);
+                      return (
+                        <div key={i} className="rounded border border-black/10 p-3 dark:border-white/10">
+                          <div className="mb-2 flex items-center justify-between">
+                            <input
+                              value={op.label ?? ""}
+                              onChange={(e) => patchOpening(i, { label: e.target.value })}
+                              placeholder={t.labelPh}
+                              className="w-40 rounded border border-transparent bg-transparent px-1 py-0.5 text-sm focus:border-black/15 focus:outline-none dark:focus:border-white/20"
+                            />
+                            <button
+                              type="button"
+                              onClick={() => removeOpening(i)}
+                              className="text-xs text-red-600 hover:underline dark:text-red-400"
+                              aria-label={`${common.remove} ${t.openingN.replace("{n}", idx)}`}
+                            >
+                              {common.remove}
+                            </button>
+                          </div>
+                          <div className="space-y-2">
+                            <VariableRow label={common.width} error={errors.openings?.[i]?.width}>
+                              <QuantityInput
+                                value={op.width}
+                                onChange={(q) => patchOpening(i, { width: q })}
+                                units={LENGTH_UNITS}
+                                min={0.05}
+                                max={10}
+                                step={0.05}
+                                decimals={2}
+                                ariaLabel={`${t.openingN.replace("{n}", idx)} ${common.width}`}
+                              />
+                            </VariableRow>
+                            <VariableRow label={common.height} error={errors.openings?.[i]?.height}>
+                              <QuantityInput
+                                value={op.height}
+                                onChange={(q) => patchOpening(i, { height: q })}
+                                units={LENGTH_UNITS}
+                                min={0.05}
+                                max={10}
+                                step={0.05}
+                                decimals={2}
+                                ariaLabel={`${t.openingN.replace("{n}", idx)} ${common.height}`}
+                              />
+                            </VariableRow>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             </div>
-          </fieldset>
+          </BlockGroup>
         ) : (
-          <fieldset className="space-y-4">
-            <legend className="text-sm font-semibold">{t.totalArea}</legend>
-            <LabeledRow label={t.area} error={errors.area}>
+          <BlockGroup title={t.totalArea}>
+            <VariableRow label={t.area} error={errors.area}>
               <QuantityInput
                 value={state.area}
                 onChange={(q) => set("area", q)}
@@ -538,26 +532,21 @@ export function PaintCalculatorForm({
                 decimals={2}
                 ariaLabel={t.areaAria}
               />
-            </LabeledRow>
-          </fieldset>
+            </VariableRow>
+          </BlockGroup>
         )}
 
-        <fieldset className="space-y-4">
-          <div className="flex items-center justify-between">
-            <legend className="text-sm font-semibold">{t.layers}</legend>
-            <Button
-              variant="secondary"
-              size="sm"
-              onClick={addLayer}
-              type="button"
-            >
-              {t.addLayer}
-            </Button>
-          </div>
-          <p className="text-xs text-black/60 dark:text-white/60">
-            {t.layersHelp}
-          </p>
+        <BlockGroup title={t.layers}>
           <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <span />
+              <Button variant="secondary" size="sm" onClick={addLayer} type="button">
+                {t.addLayer}
+              </Button>
+            </div>
+            <p className="text-xs text-black/60 dark:text-white/60">
+              {t.layersHelp}
+            </p>
             {state.layers.map((layer, i) => {
               const idx = String(i + 1);
               const preset = initialStandards.presets.find(
@@ -584,12 +573,10 @@ export function PaintCalculatorForm({
                     ) : null}
                   </div>
 
-                  <LabeledRow label={t.type} compact>
+                  <VariableRow label={t.type}>
                     <select
                       value={layer.type}
-                      onChange={(e) =>
-                        changeLayerType(i, e.target.value as LayerType)
-                      }
+                      onChange={(e) => changeLayerType(i, e.target.value as LayerType)}
                       className="w-32 rounded border border-black/15 bg-white px-2 py-1.5 text-sm text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-white/20 dark:bg-black dark:text-white"
                     >
                       {LAYER_TYPES.map((ty) => (
@@ -598,13 +585,9 @@ export function PaintCalculatorForm({
                         </option>
                       ))}
                     </select>
-                  </LabeledRow>
+                  </VariableRow>
 
-                  <LabeledRow
-                    label={t.coats}
-                    compact
-                    error={errors.layers?.[i]?.coats}
-                  >
+                  <VariableRow label={t.coats} error={errors.layers?.[i]?.coats}>
                     <NumberSliderInput
                       value={layer.coats}
                       onChange={(n) => patchLayer(i, { coats: n })}
@@ -614,9 +597,9 @@ export function PaintCalculatorForm({
                       decimals={0}
                       ariaLabel={t.coatsAria.replace("{i}", idx)}
                     />
-                  </LabeledRow>
+                  </VariableRow>
 
-                  <LabeledRow label={common.preset} compact>
+                  <VariableRow label={common.preset}>
                     <select
                       value={layer.presetId}
                       onChange={(e) => changeLayerPreset(i, e.target.value)}
@@ -628,20 +611,18 @@ export function PaintCalculatorForm({
                         </option>
                       ))}
                     </select>
-                  </LabeledRow>
+                  </VariableRow>
                   {preset ? (
                     <p className="text-xs text-black/60 dark:text-white/60">
                       {preset.description}
                     </p>
                   ) : null}
 
-                  <label className="flex cursor-pointer items-center gap-2 text-xs">
+                  <label className="flex cursor-pointer items-center gap-2 text-sm text-black/70 dark:text-white/70">
                     <input
                       type="checkbox"
                       checked={layer.useCustom}
-                      onChange={(e) =>
-                        patchLayer(i, { useCustom: e.target.checked })
-                      }
+                      onChange={(e) => patchLayer(i, { useCustom: e.target.checked })}
                       className="accent-black dark:accent-white"
                     />
                     {t.customLayer}
@@ -650,35 +631,23 @@ export function PaintCalculatorForm({
                   {layer.useCustom ? (
                     <div className="space-y-3 rounded border border-black/10 p-3 dark:border-white/10">
                       {preset?.kind === "putty" ? (
-                        <LabeledRow
-                          label={t.kgPerSqm}
-                          compact
-                          error={errors.layers?.[i]?.customCoverage}
-                        >
+                        <VariableRow label={t.kgPerSqm} error={errors.layers?.[i]?.customCoverage}>
                           <input
                             type="number"
                             value={layer.customKgPerSqm}
-                            onChange={(e) =>
-                              patchLayer(i, { customKgPerSqm: e.target.value })
-                            }
+                            onChange={(e) => patchLayer(i, { customKgPerSqm: e.target.value })}
                             min={0.1}
                             max={5}
                             step={0.1}
                             className="w-32 rounded border border-black/15 bg-white px-2 py-1.5 text-sm text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-white/20 dark:bg-black dark:text-white"
                             aria-label={t.kgPerSqmAria.replace("{i}", idx)}
                           />
-                        </LabeledRow>
+                        </VariableRow>
                       ) : (
-                        <LabeledRow
-                          label={t.coverage}
-                          compact
-                          error={errors.layers?.[i]?.customCoverage}
-                        >
+                        <VariableRow label={t.coverage} error={errors.layers?.[i]?.customCoverage}>
                           <QuantityInput
                             value={layer.customCoverage}
-                            onChange={(q) =>
-                              patchLayer(i, { customCoverage: q })
-                            }
+                            onChange={(q) => patchLayer(i, { customCoverage: q })}
                             units={AREA_UNITS}
                             min={1}
                             max={100}
@@ -686,16 +655,12 @@ export function PaintCalculatorForm({
                             decimals={1}
                             ariaLabel={t.coverageAria.replace("{i}", idx)}
                           />
-                        </LabeledRow>
+                        </VariableRow>
                       )}
-                      <LabeledRow label={t.wastage} compact>
+                      <VariableRow label={t.wastage}>
                         <NumberSliderInput
                           value={Number(layer.customWastagePercent)}
-                          onChange={(n) =>
-                            patchLayer(i, {
-                              customWastagePercent: String(n),
-                            })
-                          }
+                          onChange={(n) => patchLayer(i, { customWastagePercent: String(n) })}
                           min={0}
                           max={50}
                           step={0.5}
@@ -703,14 +668,14 @@ export function PaintCalculatorForm({
                           suffix="%"
                           ariaLabel={t.wastageAria.replace("{i}", idx)}
                         />
-                      </LabeledRow>
+                      </VariableRow>
                     </div>
                   ) : null}
                 </div>
               );
             })}
           </div>
-        </fieldset>
+        </BlockGroup>
 
         <div className="space-y-3">
           {errCode ? (
@@ -735,7 +700,7 @@ export function PaintCalculatorForm({
         </div>
       </form>
 
-      <aside aria-live="polite" className="md:sticky md:top-6 md:self-start">
+      <div aria-live="polite">
         {result?.ok ? (
           <>
             <PaintResultCard data={result.data} />
@@ -752,35 +717,16 @@ export function PaintCalculatorForm({
             {isPending ? common.calculating : cCommon.fillFormPaint}
           </div>
         )}
-      </aside>
-    </div>
-  );
-}
-
-function LabeledRow({
-  label,
-  compact,
-  error,
-  children,
-}: {
-  label: string;
-  compact?: boolean;
-  error?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div
-      className={`grid gap-2 ${compact ? "sm:grid-cols-[7rem_1fr]" : "sm:grid-cols-[9rem_1fr]"} sm:items-start`}
-    >
-      <label className="pt-2 text-sm text-black/70 dark:text-white/70">{label}</label>
-      <div>
-        {children}
-        {error ? (
-          <p className="mt-1 text-xs text-red-600 dark:text-red-400" role="alert">
-            {error}
-          </p>
-        ) : null}
       </div>
+
+      <ActionPanel
+        reloadLabel={cCommon.reload}
+        clearLabel={cCommon.clearAll}
+        onReload={onReload}
+        onClear={onClear}
+      />
+
+      <FeedbackBar question={cCommon.didWeSolve} yesLabel={common.yes} noLabel={common.no} />
     </div>
   );
 }

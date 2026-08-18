@@ -1,0 +1,32 @@
+## Cómo se calcula el peso del acero
+
+1. **Peso por metro** = D² / 162 kg/m, con D el diámetro en milímetros. Viene de π × (D/2)² × 7850 kg/cum ÷ 10⁶ ≈ D²/162.28.
+2. **Longitud total** por fila = longitud × cantidad. Pasa longitudes de corte ya calculadas.
+3. **Peso por fila** = peso por metro × longitud total. Suma las filas para el total antes del desperdicio.
+4. **Desperdicio** (3% por defecto) se añade encima por cortes y descuidos.
+5. El modo **regla práctica** multiplica el volumen de concreto por kg/cum según el elemento.
+
+## Despiece vs regla práctica
+
+- **Despiece** — exacto. Úsalo cuando tienes el plano y puedes listar diámetro, longitud y cantidad de cada barra.
+- **Regla práctica** — aproximado (±20%). Para estimaciones de precio cuando solo conoces el volumen.
+
+## Tasas por elemento (regla práctica)
+
+- **Losa** ≈ 80 kg/cum · **Viga** ≈ 100 · **Columna** ≈ 130 · **Zapata** ≈ 70 · **Escalera** ≈ 130
+
+Son promedios de la industria india; cámbialos si tu consultor tiene valores de proyecto.
+
+## Ejemplo resuelto
+
+Una losa necesita **10 metros cúbicos** de concreto.
+
+- Tasa para losas: 80 kg/cum.
+- Acero total = 10 × 80 = **800 kg** antes del desperdicio.
+- Con 3% de desperdicio → **824 kg**.
+
+Para una cifra exacta, lista cada barra: 20 barras principales de 12 mm × 5 m y 32 de reparto de 8 mm × 3.2 m.
+
+- Principales: 20 × 5 = 100 m × (12²/162) ≈ **88.9 kg**
+- Reparto: 32 × 3.2 = 102.4 m × (8²/162) ≈ **40.5 kg**
+- Total ≈ **129.4 kg**

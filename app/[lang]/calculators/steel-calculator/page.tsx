@@ -1,4 +1,5 @@
 // /calculators/steel-calculator — Server Component. Locale-aware shell.
+// Human-readable article lives as MDX in content/steel/<locale>.mdx.
 
 import type { Metadata } from "next";
 import { siteConfig, siteUrl } from "@/app/lib/site";
@@ -6,10 +7,36 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
-import { STEEL_FAQ, STEEL_STANDARDS } from "@/features/calculators/steel";
+import { ArticleHeader } from "@/components/calculators/ui/ArticleHeader";
+import { CalculatorPageShell } from "@/components/calculators/ui/CalculatorPageShell";
+import { TableOfContents } from "@/components/calculators/ui/TableOfContents";
+import { SimilarCalculators } from "@/components/calculators/ui/SimilarCalculators";
+import { RelatedCalculators } from "@/components/calculators/ui/RelatedCalculators";
+import { CalculatorAd } from "@/components/ads/CalculatorAd";
+import { getToc } from "@/features/calculators/toc";
+import { CALCULATORS, calculatorHref } from "@/features/calculators/registry";
+import { STEEL_STANDARDS } from "@/features/calculators/steel";
 import { SteelCalculatorForm } from "./SteelCalculatorForm";
 import { getDictionaryFor } from "@/app/[lang]/dictionaries";
 import { isLocale, locales, defaultLocale } from "@/app/i18n-config";
+
+import SteelEn from "@/content/steel/en.mdx";
+import SteelHi from "@/content/steel/hi.mdx";
+import SteelEs from "@/content/steel/es.mdx";
+import SteelFr from "@/content/steel/fr.mdx";
+import SteelDe from "@/content/steel/de.mdx";
+import SteelAr from "@/content/steel/ar.mdx";
+
+const STEEL_ARTICLES: Record<string, typeof SteelEn> = {
+  en: SteelEn,
+  hi: SteelHi,
+  es: SteelEs,
+  fr: SteelFr,
+  de: SteelDe,
+  ar: SteelAr,
+};
+
+const getSteelToc = getToc("steel");
 
 const PAGE_PATH = "/calculators/steel-calculator";
 
@@ -32,9 +59,9 @@ export async function generateMetadata({
   };
 }
 
-function jsonLd(locale: string, title: string, description: string, crumb: string, home: string, calcs: string) {
+function jsonLd(locale: string, title: string, description: string, faq: { q: string; a: string }[], home: string, calcs: string, crumb: string) {
   return [
-    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: STEEL_FAQ.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
+    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map((item) => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) },
     { "@context": "https://schema.org", "@type": "SoftwareApplication", name: title, applicationCategory: "UtilitiesApplication", operatingSystem: "Any (web)", url: `${siteUrl}/${locale}${PAGE_PATH}`, offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }, description },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
       { "@type": "ListItem", position: 1, name: home, item: `${siteUrl}/${locale}` },
@@ -54,56 +81,79 @@ export default async function SteelCalculatorPage({
   const dict = await getDictionaryFor(locale);
   const t = dict.calculators.steel;
   const c = dict.calculators.common;
+  const art = t.article;
+  const Article = STEEL_ARTICLES[locale] ?? SteelEn;
+  const toc = getSteelToc(locale);
+
+  const others = CALCULATORS.filter((e) => e.slug !== "steel-calculator" && e.status === "live");
+  const similarLinks = others.map((e) => ({ href: calculatorHref(e, locale), label: e.title }));
+  const relatedLinks = similarLinks.slice(0, 2);
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, t.title, t.meta.description, t.crumb, dict.breadcrumbs.home, dict.breadcrumbs.calculators)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            jsonLd(locale, t.title, t.meta.description, t.faq, dict.breadcrumbs.home, dict.breadcrumbs.calculators, t.crumb),
+          ),
+        }}
       />
       <SiteHeader />
       <main className="flex-1">
         <Container className="py-12">
-          <header className="mb-10">
-            <p className="text-xs uppercase tracking-widest text-black/60 dark:text-white/60">{c.eyebrow}</p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{t.title}</h1>
-            <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">{t.subtitle}</p>
-          </header>
+          <ArticleHeader eyebrow={c.eyebrow} title={t.title} subtitle={t.subtitle} />
 
-          <section className="mb-16">
-            <SteelCalculatorForm
-              initialStandards={STEEL_STANDARDS}
-              t={t.form}
-              common={dict.common}
-              cCommon={c}
-            />
-          </section>
+          <div className="mt-10">
+            <CalculatorPageShell
+              calculator={
+                <>
+                  <SteelCalculatorForm
+                    initialStandards={STEEL_STANDARDS}
+                    t={t.form}
+                    common={dict.common}
+                    cCommon={c}
+                  />
+                  <SimilarCalculators title={c.other} links={similarLinks} />
+                </>
+              }
+            >
+              <TableOfContents title={art.toc} entries={toc} />
 
-          <section className="mb-16 rounded-lg border border-black/10 p-6 dark:border-white/10">
-            <h2 className="text-lg font-semibold">{c.how}</h2>
-            <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm text-black/75 dark:text-white/75">
-              <li><strong>Weight per metre</strong> = D² / 162 kg/m, where D is the bar diameter in mm. Comes from π × (D/2)² × 7850 kg/cum ÷ 10⁶ — the standard site shortcut.</li>
-              <li><strong>Total length</strong> for each bar row = length × count. Cutting length includes hooks / bends if you enter it that way; laps and chairs aren&apos;t modeled separately.</li>
-              <li><strong>Weight per row</strong> = weight per metre × total length. Sum across rows for the total before wastage.</li>
-              <li><strong>Wastage</strong> (default 3%) is added on top for cutting waste and small oversights.</li>
-              <li><strong>Thumb rule</strong> mode multiplies concrete volume by a kg/cum rate that depends on the member (80 for slabs, 100 for beams, 130 for columns, 70 for footings, 130 for staircases). Rough — ±20% — use only for pricing, not procurement.</li>
-            </ol>
-          </section>
+              <article
+                aria-label={art.heading}
+                className="prose prose-neutral mt-10 max-w-3xl prose-h2:text-xl prose-h2:font-semibold prose-h2:tracking-tight prose-p:text-black/75 prose-p:dark:text-white/75 prose-li:marker:text-black/50 dark:prose-invert"
+              >
+                <Article />
+              </article>
 
-          <section className="mb-16">
-            <h2 className="mb-6 text-lg font-semibold">{c.faq}</h2>
-            <dl className="space-y-6">
-              {STEEL_FAQ.map((item) => (
-                <div key={item.question}>
-                  <dt className="text-sm font-semibold">{item.question}</dt>
-                  <dd className="mt-1 text-sm text-black/70 dark:text-white/70">{item.answer}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+              <CalculatorAd slotKey="steelInContent" />
 
-          <section className="border-t border-black/10 pt-10 dark:border-white/10">
-            <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">{c.other}</h2>
-            <CalculatorGrid locale={locale} comingLabel={dict.common.coming} filter={(c) => c.slug !== "steel-calculator"} />
+              <section className="mt-10">
+                <h2 className="text-xl font-semibold tracking-tight">{c.faq}</h2>
+                <dl className="mt-6 max-w-3xl space-y-6">
+                  {t.faq.map((item) => (
+                    <div key={item.q}>
+                      <dt className="text-sm font-semibold">{item.q}</dt>
+                      <dd className="mt-1 text-sm leading-relaxed text-black/70 dark:text-white/70">
+                        {item.a}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+
+              <div className="mt-10">
+                <RelatedCalculators title={c.other} links={relatedLinks} />
+              </div>
+            </CalculatorPageShell>
+          </div>
+
+          <section className="mt-12 border-t border-black/10 pt-10 dark:border-white/10">
+            <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
+              {c.other}
+            </h2>
+            <CalculatorGrid locale={locale} comingLabel={dict.common.coming} filter={(e) => e.slug !== "steel-calculator"} />
           </section>
         </Container>
       </main>

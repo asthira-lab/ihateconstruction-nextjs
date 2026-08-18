@@ -1,0 +1,29 @@
+## How the tile calculation works
+
+1. **Net area** = length × width − sum of excluded rectangles (columns, drains, pipe cutouts).
+2. **Tile count (before wastage)** = net area ÷ tile area, rounded up. You can't buy half a tile.
+3. **Tile count (final)** = count × (1 + wastage %), rounded up again. Default wastage is 10%.
+4. **Thin-set adhesive** (kg) = net area ÷ coverage (sqm/kg). Or **mortar bed** (cum) = net area × thickness, then the cement:sand ratio splits it into bags + cft.
+5. **Grout volume** ≈ total joint length × joint width × joint depth. Depth defaults to the tile thickness (override it if you only grout the top of the joint). Weight uses ~1500 kg/cum.
+
+## Tile types
+
+- **Vitrified floor tile** — 600×600mm and larger. Thin-set adhesive, 3mm grout. The most common floor tile in India.
+- **Ceramic wall tile** — typically 300×450mm, bathrooms and kitchens. Thin-set, 2mm grout.
+- **Traditional mortar bed** — 20mm of cement:sand mortar laid first, then tiles pressed in. Older method, still common for outdoor and structural work.
+
+## Wastage guidance
+
+- **10%** is the default — tiles waste more than concrete or brick because cuts at walls and corners produce half-tiles that usually can't be reused.
+- Diagonal layouts and borders push wastage to 12–15%.
+- Simple square rooms with tiles that fit the module cleanly can go down to 5–7%.
+
+## Worked example
+
+A **5.0 m × 3.6 m** room with a **0.9 m × 0.9 m** column, using **600×600mm** vitrified tiles.
+
+- Gross area = 5.0 × 3.6 = **18 m²**
+- Net area = 18 − (0.9 × 0.9) = **17.19 m²**
+- Tile area = 0.6 × 0.6 = **0.36 m²**
+- Count before wastage = ⌈17.19 ÷ 0.36⌉ = **48 tiles**
+- Final count = ⌈48 × 1.10⌉ = **53 tiles**

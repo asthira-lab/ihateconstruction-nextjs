@@ -1,0 +1,33 @@
+## Comment la quantité de béton est calculée
+
+Le volume humide que vous saisissez est converti en volume sec de matériau en vrac que vous devez réellement commander. Le béton se contracte lorsque les particules fines comblent les vides entre les particules grossières.
+
+1. **Volume sec** = volume humide × 1,54. Le facteur sec/humide compense la contraction lorsque les ingrédients secs se mélangent en béton humide.
+2. **La perte** est appliquée uniformément aux trois composants (3 % par défaut). Volume sec × (1 + % de perte).
+3. **Répartition par dosage** a : b : c. Pour M20 (1:1,5:3), le ciment prend 1/5,5 du total, le sable 1,5/5,5 et le granulat 3/5,5.
+4. **Sacs de ciment** = volume de ciment × 1440 kg/cum ÷ 50 kg/sac, arrondi au sac supérieur.
+5. **Sable et granulat** sont affichés dans l'unité choisie — cft (par défaut en Inde), mètres cubes ou kilogrammes selon les densités apparentes standard.
+
+## Comment utiliser la calculatrice de béton
+
+1. Choisissez un dosage — M20 (1:1,5:3) est le défaut polyvalent pour dalles, poutres et poteaux.
+2. Saisissez le volume humide fini en mètres cubes ou pieds cubes.
+3. Choisissez les unités de sortie pour le ciment, le sable et le granulat.
+4. Cochez éventuellement « personnaliser ce dosage » pour modifier la proportion, la perte, les densités et le facteur sec/humide.
+
+## Choisir un dosage
+
+- **M5–M10** — béton maigre ou simple (PCC) : forme, chape, remplissage non structurel.
+- **M15 (1:2:4)** — PCC en fondations et RCC à charge légère.
+- **M20 (1:1,5:3)** — RCC général : dalles, poutres et poteaux sous charge légère à modérée.
+- **M25 (1:1:2)** — RCC pour charges modérées ; le minimum courant IS 456 pour les éléments structurels.
+- **M30 et plus** — bétons de conception, dosés en laboratoire. Non couverts par des proportions volumétriques fixes.
+
+## Exemple résolu
+
+Une dalle nécessite **10 mètres cubes** de béton M20.
+
+- Volume sec = 10 × 1,54 = **15,4 cum**
+- Avec 3 % de perte → 15,4 × 1,03 = **15,86 cum**
+- Répartition 1:1,5:3 → ciment ≈ **2,88 cum**, sable ≈ **4,33 cum**, granulat ≈ **8,65 cum**
+- Sacs de ciment = 2,88 × 1440 ÷ 50 ≈ **83 sacs**
