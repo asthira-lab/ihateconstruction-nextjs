@@ -87,7 +87,7 @@ export const NumberSliderInput = forwardRef<HTMLInputElement, NumberSliderInputP
     };
 
     return (
-      <div className="flex items-center gap-3">
+      <div className="flex min-w-0 items-center gap-3">
         <input
           type="range"
           min={min}
@@ -97,7 +97,7 @@ export const NumberSliderInput = forwardRef<HTMLInputElement, NumberSliderInputP
           onChange={handleSlider}
           disabled={disabled}
           aria-label={ariaLabel}
-          className="h-2 flex-1 cursor-pointer appearance-none rounded-full bg-black/10 accent-black disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white/15 dark:accent-white"
+          className="h-2 w-full min-w-0 flex-1 cursor-pointer appearance-none rounded-full bg-black/10 accent-black disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white/15 dark:accent-white"
         />
         <div className="relative">
           <input
@@ -111,7 +111,7 @@ export const NumberSliderInput = forwardRef<HTMLInputElement, NumberSliderInputP
             onBlur={handleBlur}
             disabled={disabled}
             aria-label={ariaLabel}
-            className={`w-24 rounded border border-black/15 bg-white px-2 py-1.5 text-right font-mono text-sm tabular-nums text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black disabled:opacity-50 dark:border-white/20 dark:bg-black dark:text-white dark:focus:border-white dark:focus:ring-white ${
+            className={`w-20 shrink-0 rounded border border-black/15 bg-white px-2 py-1.5 text-right font-mono text-sm tabular-nums text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black disabled:opacity-50 sm:w-24 dark:border-white/20 dark:bg-black dark:text-white dark:focus:border-white dark:focus:ring-white ${
               suffix ? "pr-7" : ""
             }`}
           />

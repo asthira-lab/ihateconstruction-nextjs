@@ -17,7 +17,9 @@ type IconName =
   | "receipt"
   | "arrow-right"
   | "check"
-  | "hammer";
+  | "hammer"
+  | "menu"
+  | "x";
 
 interface IconProps extends Omit<SVGProps<SVGSVGElement>, "name"> {
   name: IconName;
@@ -67,6 +69,19 @@ const paths: Record<IconName, ReactElement> = {
     <>
       <path d="m15 4-3 3 5 5 3-3-5-5Z" />
       <path d="m12 7-9 9 3 3 9-9" />
+    </>
+  ),
+  menu: (
+    <>
+      <path d="M4 6h16" />
+      <path d="M4 12h16" />
+      <path d="M4 18h16" />
+    </>
+  ),
+  x: (
+    <>
+      <path d="M6 6l12 12" />
+      <path d="M18 6L6 18" />
     </>
   ),
 };
