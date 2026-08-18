@@ -1,24 +1,9 @@
 import type { MetadataRoute } from "next";
 import { siteUrl } from "./lib/site";
 import { locales } from "./i18n-config";
+import { CALCULATORS } from "@/features/calculators/registry";
 
 // One entry per (locale × path); each carries alternates.languages for hreflang.
-
-// Keep in sync with features/calculators/registry.ts.
-const CALCULATOR_SLUGS = [
-  "cement-calculator",
-  "concrete-calculator",
-  "brick-calculator",
-  "paint-calculator",
-  "tile-calculator",
-  "steel-calculator",
-  "rebar-calculator",
-  "concrete-volume-calculator",
-  "concrete-slab-calculator",
-  "concrete-footing-calculator",
-  "concrete-foundation-calculator",
-  "concrete-wall-calculator",
-] as const;
 
 // Marketing / SEO pages — priority + freq reflect how often each really changes.
 const STATIC_PAGES: Array<{
@@ -58,7 +43,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  for (const slug of CALCULATOR_SLUGS) {
+  // Derived from registry — sitemap stays in sync when calculators ship.
+  const liveSlugs = CALCULATORS.filter((c) => c.status === "live").map((c) => c.slug);
+  for (const slug of liveSlugs) {
     const path = `/calculators/${slug}`;
     for (const locale of locales) {
       out.push({

@@ -1459,6 +1459,159 @@
           "a": "Añade 5–10% por derrames del encofrado, caras irregulares y sobrevertido. El 5% por defecto sirve para un encofrado bien montado; usa el 10% para muros rugosos o al pedir por sacos."
         }
       ]
+    },
+    "concrete-driveway": {
+      "meta": {
+        "title": "Calculadora de Entrada de Hormigón — Yardas, Sacos y Cargas de Camión",
+        "description": "Calculadora gratuita de hormigón para entradas de vehículos. Introduce largo, ancho y grosor para obtener el volumen de hormigón en yardas cúbicas y metros, sacos de mezcla (80 lb / 60 lb), malla de alambre, barras de refuerzo, juntas de control y cargas de camión de hormigón premezclado."
+      },
+      "crumb": "Calculadora de Entrada de Hormigón",
+      "title": "Calculadora de Entrada de Hormigón",
+      "subtitle": "Calcula cuánto hormigón necesita una entrada de vehículos — metros cúbicos, yardas cúbicas, sacos de mezcla, malla de alambre, barras de refuerzo, juntas de control y cargas de camión — a partir del largo, ancho y grosor.",
+      "form": {
+        "section1": "Dimensiones de la entrada",
+        "thickness": "Grosor (profundidad de la entrada)",
+        "lenAria": "Largo de la entrada",
+        "widAria": "Ancho de la entrada",
+        "thkAria": "Grosor de la entrada",
+        "dimHint": "El largo × ancho × grosor da el volumen. Las entradas residenciales típicas tienen 100–150 mm (4–6 pulgadas) de grosor; 150 mm para uso normal de coche, hasta 200 mm para vehículos pesados.",
+        "section2": "Refuerzo y juntas",
+        "reinforcement": "Refuerzo",
+        "reinfHint": "La malla de alambre y las barras de refuerzo controlan las grietas. Ninguno es suficiente para losas ligeras con buen drenaje.",
+        "reinfNone": "Ninguno",
+        "reinfMesh": "Malla de alambre",
+        "reinfRebar": "Barras de refuerzo",
+        "rebarSize": "Tamaño de la barra",
+        "rebarSpacing": "Separación de barras (c/c)",
+        "rebarSpacingAria": "Separación de centro a centro entre barras",
+        "rebarHint": "Las barras van en ambas direcciones. La separación típica es de 300–600 mm con recubrimiento de borde de 50–75 mm.",
+        "jointSpacing": "Separación de juntas de control",
+        "jointSpacingAria": "Separación entre juntas de control cortadas con sierra",
+        "jointHint": "Las juntas de control son ranuras cortadas con sierra que guían dónde se agrieta el hormigón. La separación coincide aproximadamente con el grosor de la losa en pies (p. ej. 5 m para una losa de 150 mm).",
+        "section3": "Desperdicio",
+        "wastage": "Desperdicio (%)",
+        "wastageAria": "Porcentaje de desperdicio por derrames y encofrado",
+        "wastageHint": "El 5–10% cubre terreno irregular, sobreexcavación y derrames de encofrado. El 5% es el valor por defecto.",
+        "placeholder": "Introduce las dimensiones de tu entrada y pulsa Calcular.",
+        "errors": {
+          "lenMin": "Introduce un largo mayor que 0.",
+          "lenMax": "El largo debe ser 200 m o menos.",
+          "widMin": "Introduce un ancho mayor que 0.",
+          "widMax": "El ancho debe ser 200 m o menos.",
+          "thkMin": "Introduce un grosor mayor que 0.",
+          "thkMax": "El grosor debe ser 5 m o menos.",
+          "rebarSpacingMin": "Introduce una separación de barras mayor que 0.",
+          "rebarSpacingMax": "La separación de barras debe ser 1 m o menos.",
+          "jointSpacingMin": "Introduce una separación de juntas mayor que 0.",
+          "jointSpacingMax": "La separación de juntas debe ser 20 m o menos.",
+          "wastageRange": "El desperdicio debe estar entre 0 y 50%."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que necesitas saber sobre entradas de hormigón"
+      },
+      "faq": [
+        {
+          "q": "¿Cuánto hormigón necesito para una entrada de vehículos?",
+          "a": "Multiplica largo × ancho × grosor. Una entrada de 6 m × 4 m con 150 mm de grosor es 6 × 4 × 0.15 = 3.6 m³ (unas 4.7 yardas cúbicas). Con un 5% de desperdicio son unos 3.78 m³ — unos 222 sacos de 80 lb y unas 0.7 cargas de camión de 7 yd³."
+        },
+        {
+          "q": "¿Cuántos sacos de 80 lb de hormigón necesito para una entrada?",
+          "a": "Un saco de mezcla de 80 lb rinde unos 0.6 pies³ de hormigón (0.0222 yd³). Divide el volumen total de la entrada — incluido el desperdicio — entre 0.0222 yd³ y redondea hacia arriba. La calculadora lo hace por ti y también muestra el número de sacos de 60 lb."
+        },
+        {
+          "q": "¿Cómo calculo las yardas de hormigón para una entrada?",
+          "a": "Multiplica largo × ancho × grosor, todo en pies (convierte las pulgadas dividiendo entre 12), para obtener pies cúbicos, luego divide entre 27 para obtener yardas cúbicas. Esta calculadora convierte cualquier mezcla de unidades y también informa metros cúbicos."
+        },
+        {
+          "q": "¿Qué grosor debe tener una entrada de hormigón?",
+          "a": "100–125 mm (4–5 pulgadas) sirve para caminos y estacionamiento ligero; 150 mm (6 pulgadas) es estándar para uso normal de coche; 175–200 mm (7–8 pulgadas) para vehículos pesados o acceso frecuente de camiones. Confirma las cargas de vehículos con un ingeniero estructural."
+        },
+        {
+          "q": "¿Necesito barras de refuerzo o malla de alambre en una entrada?",
+          "a": "Para una base bien compactada, la malla de alambre o las barras ligeras ayudan a controlar las grietas por asentamiento. Usa malla de alambre de 6 mm para losas ligeras; barras de 10–12 mm a 300–600 mm para entradas que soportan cargas de vehículos regulares."
+        },
+        {
+          "q": "¿Por qué necesito juntas de control en una entrada de hormigón?",
+          "a": "El hormigón se contrae al curar y se agrietará en alguna parte. Las juntas de control son ranuras cortadas con sierra que crean líneas débiles, guiando la grieta a una línea recta y oculta en lugar de una irregular y aleatoria. Sepáralas aproximadamente según el grosor de la losa en pies."
+        },
+        {
+          "q": "¿Cuántos camiones de hormigón premezclado necesito para una entrada?",
+          "a": "Un camión de hormigón premezclado estándar lleva unas 7 yd³. Divide tu volumen pedido entre 7 para obtener el número de cargas. Una entrada de 6 m × 4 m a 150 mm son unas 4.7 yd³ — la mayor parte de una sola carga."
+        },
+        {
+          "q": "¿Cuánto desperdicio debo añadir para una entrada de hormigón?",
+          "a": "Añade un 5–10% para subgrado irregular, mezcla derramada y residuos de encofrado. El 5% por defecto sirve para un sitio plano preparado; usa un 10% para terreno irregular o al pedir por sacos."
+        }
+      ]
+    },
+    "concrete-staircase": {
+      "meta": {
+        "title": "Calculadora de escaleras de hormigón — volumen, sacos y materiales",
+        "description": "Calculadora gratuita de escaleras de hormigón. Introduce contrahuella, huella, ancho y número de escalones para obtener el volumen de hormigón en metros y yardas cúbicas, sacos de cemento, arena y agregado para una mezcla 1:2:4."
+      },
+      "crumb": "Calculadora de escaleras de hormigón",
+      "title": "Calculadora de escaleras de hormigón",
+      "subtitle": "Calcula cuánto hormigón necesita una escalera recta — volumen, sacos de cemento, arena y agregado — a partir de contrahuella, huella, ancho y número de escalones.",
+      "form": {
+        "section1": "Dimensiones de la escalera",
+        "rise": "Contrahuella (alto del escalón)",
+        "riseAria": "Altura vertical de cada escalón",
+        "run": "Huella (fondo del escalón)",
+        "runAria": "Profundidad horizontal de cada escalón",
+        "width": "Ancho",
+        "widthAria": "Ancho horizontal de la escalera",
+        "stepCount": "Número de escalones",
+        "stepsAria": "Número total de escalones del tramo",
+        "dimHint": "Cada escalón es un prisma rectangular. Volumen total = contrahuella × huella × ancho × número de escalones. Contrahuella residencial 150–200 mm, huella 250–300 mm.",
+        "section2": "Desperdicio",
+        "wastage": "Desperdicio (%)",
+        "wastageAria": "Porcentaje de desperdicio por derrames y encofrado",
+        "wastageHint": "5–10% cubre derrames del encofrado, terreno irregular y colocación con bomba. 5% es el valor por defecto.",
+        "placeholder": "Introduce las dimensiones de tu escalera y pulsa Calcular.",
+        "errors": {
+          "riseMin": "Introduce una contrahuella mayor que 0.",
+          "riseMax": "La contrahuella debe ser de 500 mm o menos.",
+          "runMin": "Introduce una huella mayor que 0.",
+          "runMax": "La huella debe ser de 1 m o menos.",
+          "widthMin": "Introduce un ancho mayor que 0.",
+          "widthMax": "El ancho debe ser de 10 m o menos.",
+          "stepsInvalid": "Introduce un número de escalones válido (entero positivo).",
+          "stepsMax": "El número de escalones debe ser 100 o menos.",
+          "wastageRange": "El desperdicio debe estar entre 0 y 50%."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que necesitas saber sobre las escaleras de hormigón"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo se calcula el volumen de hormigón de las escaleras?",
+          "a": "Cada escalón se trata como un prisma rectangular: volumen = contrahuella × huella × ancho. El total se multiplica por el número de escalones. Una escalera de 12 escalones con 175 mm de contrahuella, 280 mm de huella y 1 m de ancho tiene un volumen de 0,175 × 0,28 × 1 × 12 = 0,588 m³ antes del desperdicio."
+        },
+        {
+          "q": "¿Qué proporción de mezcla usa la calculadora?",
+          "a": "El valor por defecto es 1:2:4 (cemento:arena:agregado) en volumen, una mezcla nominal común para escaleras residenciales. No es una mezcla de diseño — para escaleras estructurales, confirma el grado y la proporción con un ingeniero estructural."
+        },
+        {
+          "q": "¿Esto incluye descansillos y zancas?",
+          "a": "No. Esta calculadora solo maneja los escalones rectos. Los descansillos, vigas de zanca y losas de pendiente necesitan cálculos de volumen aparte. Añade sus volúmenes manualmente si tu diseño los incluye."
+        },
+        {
+          "q": "¿Por qué se redondean al alza los sacos de cemento?",
+          "a": "El cemento se vende en sacos enteros (25 kg o 50 kg). La calculadora redondea al alza para que pidas lo que está disponible. El kg exacto se muestra al lado para estimar costes."
+        },
+        {
+          "q": "¿Cuánto desperdicio debo añadir para escaleras?",
+          "a": "5% es el valor por defecto para un encofrado bien montado sobre terreno nivelado. Usa 10% si el subgrado es irregular, el encofrado es complejo o colocas el hormigón con bomba."
+        },
+        {
+          "q": "¿Puedo usarla para escaleras de caracol o curvas?",
+          "a": "No. Esta calculadora es solo para escalones rectangulares rectos. Las escaleras de caracol, curvas o abanico requieren otra geometría y deben calcularse por separado o con un ingeniero estructural."
+        }
+      ]
     }
   },
   "results": {

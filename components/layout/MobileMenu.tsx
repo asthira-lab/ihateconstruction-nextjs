@@ -19,7 +19,9 @@ export function MobileMenu({
   const pathname = usePathname();
 
   // Close on route change so tapping a link dismisses the panel.
+  // Intentional setState in effect — pathname is external state we're syncing to.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOpen(false);
   }, [pathname]);
 

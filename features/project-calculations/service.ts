@@ -47,6 +47,10 @@ import { concreteFoundationRequestSchema } from "@/features/calculators/concrete
 import { computeConcreteFoundation } from "@/features/calculators/concrete-foundation/compute";
 import { concreteWallRequestSchema } from "@/features/calculators/concrete-wall/schema";
 import { computeConcreteWall } from "@/features/calculators/concrete-wall/compute";
+import { concreteDrivewayRequestSchema } from "@/features/calculators/concrete-driveway/schema";
+import { computeConcreteDriveway } from "@/features/calculators/concrete-driveway/compute";
+import { concreteStaircaseRequestSchema } from "@/features/calculators/concrete-staircase/schema";
+import { computeConcreteStaircase } from "@/features/calculators/concrete-staircase/compute";
 
 const IMMUTABLE_KEYS = new Set([
   "id", "projectId", "calculator", "request", "result", "computedAt", "createdAt", "updatedAt",
@@ -109,6 +113,14 @@ async function runCalculator(
       case "concrete-wall": {
         const req = concreteWallRequestSchema.parse(rawRequest);
         return (await computeConcreteWall(req)) as unknown as Record<string, unknown>;
+      }
+      case "concrete-driveway": {
+        const req = concreteDrivewayRequestSchema.parse(rawRequest);
+        return (await computeConcreteDriveway(req)) as unknown as Record<string, unknown>;
+      }
+      case "concrete-staircase": {
+        const req = concreteStaircaseRequestSchema.parse(rawRequest);
+        return (await computeConcreteStaircase(req)) as unknown as Record<string, unknown>;
       }
       default: {
         const _exhaustive: never = slug;

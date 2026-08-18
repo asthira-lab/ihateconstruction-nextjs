@@ -1459,6 +1459,159 @@
           "a": "Rechnen Sie 5–10 % für Schalungsverlust, unebene Flächen und Überlauf ein. Die 5 % Standard passen zu einer sauber aufgestellten Schalung; verwenden Sie 10 % bei rauen Wänden oder bei Bestellung in Säcken."
         }
       ]
+    },
+    "concrete-driveway": {
+      "meta": {
+        "title": "Beton-Einfahrt-Rechner — Yards, Säcke & LKW-Ladungen",
+        "description": "Kostenloser Beton-Einfahrt-Rechner. Geben Sie Länge, Breite und Dicke ein, um das Betonvolumen in Kubik-Yards und Metern zu erhalten — plus Fertigmisch-Säcke (80 lb / 60 lb), Bewehrungsmatten, Bewehrungsstäbe, Kontrollfugen und LKW-Ladungen."
+      },
+      "crumb": "Beton-Einfahrt-Rechner",
+      "title": "Beton-Einfahrt-Rechner",
+      "subtitle": "Berechnen Sie, wie viel Beton eine Einfahrt benötigt — Kubikmeter, Kubik-Yards, Fertigmisch-Säcke, Bewehrungsmatten, Bewehrungsstäbe, Kontrollfugen und LKW-Ladungen — aus Länge, Breite und Dicke.",
+      "form": {
+        "section1": "Maße der Einfahrt",
+        "thickness": "Dicke (Tiefe der Einfahrt)",
+        "lenAria": "Länge der Einfahrt",
+        "widAria": "Breite der Einfahrt",
+        "thkAria": "Dicke der Einfahrt",
+        "dimHint": "Länge × Breite × Dicke ergibt das Volumen. Typische Wohn-Einfahrten sind 100–150 mm (4–6 Zoll) dick; 150 mm für normale Autonutzung, bis zu 200 mm für schwere Fahrzeuge.",
+        "section2": "Bewehrung und Fugen",
+        "reinforcement": "Bewehrung",
+        "reinfHint": "Bewehrungsmatten und -stäbe kontrollieren Risse. Keine reicht für leichte, gut entwässerte Platten.",
+        "reinfNone": "Keine",
+        "reinfMesh": "Bewehrungsmatte",
+        "reinfRebar": "Bewehrungsstäbe",
+        "rebarSize": "Stabdurchmesser",
+        "rebarSpacing": "Stababstand (M-M)",
+        "rebarSpacingAria": "Abstand von Mitte zu Mitte zwischen den Stäben",
+        "rebarHint": "Die Stäbe verlaufen in beide Richtungen. Typischer Abstand ist 300–600 mm mit einer Randüberdeckung von 50–75 mm.",
+        "jointSpacing": "Abstand der Kontrollfugen",
+        "jointSpacingAria": "Abstand zwischen gesägten Kontrollfugen",
+        "jointHint": "Kontrollfugen sind gesägte Rillen, die vorgeben, wo der Beton reißt. Der Abstand entspricht in etwa der Plattendicke in Fuß (z. B. 5 m für eine 150-mm-Platte).",
+        "section3": "Verschnitt",
+        "wastage": "Verschnitt (%)",
+        "wastageAria": "Verschnittprozentsatz für Verlust und Schalung",
+        "wastageHint": "5–10 % decken unebenen Untergrund, Überaushub und Schalungsverlust ab. 5 % ist die Standardeinstellung.",
+        "placeholder": "Geben Sie die Maße Ihrer Einfahrt ein und drücken Sie dann Berechnen.",
+        "errors": {
+          "lenMin": "Geben Sie eine Länge größer als 0 ein.",
+          "lenMax": "Die Länge muss 200 m oder weniger betragen.",
+          "widMin": "Geben Sie eine Breite größer als 0 ein.",
+          "widMax": "Die Breite muss 200 m oder weniger betragen.",
+          "thkMin": "Geben Sie eine Dicke größer als 0 ein.",
+          "thkMax": "Die Dicke muss 5 m oder weniger betragen.",
+          "rebarSpacingMin": "Geben Sie einen Stababstand größer als 0 ein.",
+          "rebarSpacingMax": "Der Stababstand muss 1 m oder weniger betragen.",
+          "jointSpacingMin": "Geben Sie einen Fugenabstand größer als 0 ein.",
+          "jointSpacingMax": "Der Fugenabstand muss 20 m oder weniger betragen.",
+          "wastageRange": "Der Verschnitt muss zwischen 0 und 50 % liegen."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles Wissenswerte über Beton-Einfahrten"
+      },
+      "faq": [
+        {
+          "q": "Wie viel Beton brauche ich für eine Einfahrt?",
+          "a": "Multiplizieren Sie Länge × Breite × Dicke. Eine Einfahrt von 6 m × 4 m mit 150 mm Dicke ist 6 × 4 × 0,15 = 3,6 m³ (etwa 4,7 Kubik-Yards). Mit 5 % Verschnitt sind das rund 3,78 m³ — etwa 222 Säcke à 80 lb und 0,7 Ladungen eines 7-yd³-LKWs."
+        },
+        {
+          "q": "Wie viele 80-lb-Säcke Beton brauche ich für eine Einfahrt?",
+          "a": "Ein 80-lb-Fertigmisch-Sack ergibt etwa 0,6 ft³ Beton (0,0222 yd³). Teilen Sie das Gesamtvolumen der Einfahrt — einschließlich Verschnitt — durch 0,0222 yd³ und runden Sie auf. Der Rechner macht das für Sie und zeigt auch die Anzahl der 60-lb-Säcke."
+        },
+        {
+          "q": "Wie berechne ich die Beton-Yards für eine Einfahrt?",
+          "a": "Multiplizieren Sie Länge × Breite × Dicke, alles in Fuß (Zoll durch 12 dividieren), um Kubikfuß zu erhalten, dann teilen Sie durch 27, um Kubik-Yards zu erhalten. Dieser Rechner wandelt jede Einheitenkombination um und gibt auch Kubikmeter an."
+        },
+        {
+          "q": "Wie dick sollte eine Beton-Einfahrt sein?",
+          "a": "100–125 mm (4–5 Zoll) eignen sich für Wege und leichtes Parken; 150 mm (6 Zoll) ist Standard für normale Autonutzung; 175–200 mm (7–8 Zoll) für schwere Fahrzeuge oder häufigen LKW-Verkehr. Bestätigen Sie Fahrzeuglasten mit einem Statiker."
+        },
+        {
+          "q": "Brauche ich Bewehrungsstäbe oder eine Matte in einer Einfahrt?",
+          "a": "Für einen gut verdichteten Untergrund helfen Bewehrungsmatten oder leichte Stäbe, Risse durch Setzungen zu kontrollieren. Verwenden Sie 6-mm-Matten für leichte Platten; 10–12-mm-Stäbe im Abstand von 300–600 mm für Einfahrten mit regelmäßiger Fahrzeuglast."
+        },
+        {
+          "q": "Warum brauche ich Kontrollfugen in einer Beton-Einfahrt?",
+          "a": "Beton schrumpft beim Aushärten und reißt irgendwo. Kontrollfugen sind gesägte Rillen, die Schwachstellen erzeugen und den Riss zu einer geraden, versteckten Linie lenken statt zu einer zufälligen, gezackten. Abstand etwa entsprechend der Plattendicke in Fuß."
+        },
+        {
+          "q": "Wie viele LKW-Ladungen Fertigbeton brauche ich für eine Einfahrt?",
+          "a": "Ein Standard-LKW für Fertigbeton transportiert etwa 7 yd³. Teilen Sie Ihre bestellte Menge durch 7, um die Anzahl der Ladungen zu erhalten. Eine Einfahrt von 6 m × 4 m bei 150 mm sind etwa 4,7 yd³ — der größte Teil einer einzigen Ladung."
+        },
+        {
+          "q": "Wie viel Verschnitt sollte ich bei einer Beton-Einfahrt einplanen?",
+          "a": "Addieren Sie 5–10 % für unebenen Untergrund, verschüttete Mischung und Schalungsabfall. Die Standardeinstellung von 5 % passt für einen ebenen, vorbereiteten Standort; verwenden Sie 10 % bei unebenem Gelände oder wenn Sie in Säcken bestellen."
+        }
+      ]
+    },
+    "concrete-staircase": {
+      "meta": {
+        "title": "Beton-Treppen-Rechner — Volumen, Säcke und Materialmengen",
+        "description": "Kostenloser Beton-Treppen-Rechner. Geben Sie Steigung, Auftritt, Breite und Stufenzahl ein, um das Betonvolumen in Kubikmetern und -yards, Zementsäcke, Sand und Zuschlag für ein 1:2:4-Gemisch zu erhalten."
+      },
+      "crumb": "Beton-Treppen-Rechner",
+      "title": "Beton-Treppen-Rechner",
+      "subtitle": "Berechnen Sie, wie viel Beton eine gerade Treppe braucht — Volumen, Zementsäcke, Sand und Zuschlag — aus Steigung, Auftritt, Breite und Stufenzahl.",
+      "form": {
+        "section1": "Treppenabmessungen",
+        "rise": "Steigung (Stufenhöhe)",
+        "riseAria": "Vertikale Höhe jeder Stufe",
+        "run": "Auftritt (Stufentiefe)",
+        "runAria": "Horizontale Tiefe jeder Stufe",
+        "width": "Breite",
+        "widthAria": "Horizontale Breite der Treppe",
+        "stepCount": "Stufenzahl",
+        "stepsAria": "Gesamtzahl der Stufen im Treppenlauf",
+        "dimHint": "Jede Stufe ist ein rechteckiges Prisma. Gesamtvolumen = Steigung × Auftritt × Breite × Stufenzahl. Wohn-Steigung 150–200 mm, Auftritt 250–300 mm.",
+        "section2": "Verschnitt",
+        "wastage": "Verschnitt (%)",
+        "wastageAria": "Verschnittprozent für Verschütten und Schalung",
+        "wastageHint": "5–10 % deckt Schalungsverschütten, unebenen Untergrund und Pumpenplatzierung ab. 5 % ist die Standardeinstellung.",
+        "placeholder": "Geben Sie Ihre Treppenabmessungen ein und klicken Sie dann auf Berechnen.",
+        "errors": {
+          "riseMin": "Geben Sie eine Steigung größer als 0 ein.",
+          "riseMax": "Die Steigung muss 500 mm oder weniger betragen.",
+          "runMin": "Geben Sie einen Auftritt größer als 0 ein.",
+          "runMax": "Der Auftritt muss 1 m oder weniger betragen.",
+          "widthMin": "Geben Sie eine Breite größer als 0 ein.",
+          "widthMax": "Die Breite muss 10 m oder weniger betragen.",
+          "stepsInvalid": "Geben Sie eine gültige Stufenzahl ein (positive ganze Zahl).",
+          "stepsMax": "Die Stufenzahl muss 100 oder weniger betragen.",
+          "wastageRange": "Der Verschnitt muss zwischen 0 und 50 % liegen."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles, was Sie über Beton-Treppen wissen müssen"
+      },
+      "faq": [
+        {
+          "q": "Wie wird das Betonvolumen von Treppen berechnet?",
+          "a": "Jede Stufe wird als rechteckiges Prisma behandelt: Volumen = Steigung × Auftritt × Breite. Die Gesamtsumme wird mit der Stufenzahl multipliziert. Eine Treppe mit 12 Stufen, 175 mm Steigung, 280 mm Auftritt und 1 m Breite hat ein Volumen von 0,175 × 0,28 × 1 × 12 = 0,588 m³ vor Verschnitt."
+        },
+        {
+          "q": "Welches Mischungsverhältnis verwendet der Rechner?",
+          "a": "Die Standardeinstellung ist 1:2:4 (Zement:Sand:Zuschlag) nach Volumen, ein übliches Nennmischverhältnis für Wohnungstreppen. Es ist kein Bemessungsgemisch — für tragende Treppen bestätigen Sie Güteklasse und Verhältnis mit einem Statiker."
+        },
+        {
+          "q": "Sind Absätze und Wangen enthalten?",
+          "a": "Nein. Dieser Rechner behandelt nur gerade Stufen. Podeste, Wangenträger und geneigte Deckenplatten erfordern separate Volumenberechnungen. Fügen Sie deren Volumen manuell hinzu, wenn Ihr Entwurf sie enthält."
+        },
+        {
+          "q": "Warum werden die Zementsäcke aufgerundet?",
+          "a": "Zement wird in ganzen Säcken (25 kg oder 50 kg) verkauft. Der Rechner rundet auf, damit Sie bestellen, was verfügbar ist. Das exakte kg wird daneben für die Kostenschätzung angezeigt."
+        },
+        {
+          "q": "Wie viel Verschnitt sollte ich für Treppen einplanen?",
+          "a": "5 % ist die Standardeinstellung für eine gut gebaute Schalung auf ebenem Gelände. Verwenden Sie 10 % bei unebenem Untergrund, komplexer Schalung oder beim Einbringen mit der Pumpe."
+        },
+        {
+          "q": "Kann ich es für Wendel- oder gebogene Treppen verwenden?",
+          "a": "Nein. Dieser Rechner ist nur für gerade, rechteckige Stufen gedacht. Wendel-, geschwungene oder konisch zulaufende Treppen erfordern andere Geometrie und sollten separat oder mit einem Statiker berechnet werden."
+        }
+      ]
     }
   },
   "results": {

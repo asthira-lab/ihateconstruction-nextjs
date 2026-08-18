@@ -116,6 +116,22 @@ export const CALCULATORS: CalculatorEntry[] = [
     status: "live",
     keywords: ["wall concrete", "retaining wall", "concrete wall volume", "wall yardage", "concrete wall bags", "wall thickness"],
   },
+  {
+    slug: "concrete-driveway-calculator",
+    title: "Concrete driveway calculator",
+    description:
+      "Concrete for a driveway from length, width, and thickness — cubic yards, premix bags (80 lb / 60 lb), weight, wire mesh, rebar, control joints, and ready-mix truck loads.",
+    status: "live",
+    keywords: ["driveway concrete", "concrete driveway", "driveway yardage", "driveway thickness", "driveway reinforcement", "wire mesh driveway", "rebar driveway", "control joints concrete", "driveway premix bags"],
+  },
+  {
+    slug: "concrete-staircase-calculator",
+    title: "Concrete staircase calculator",
+    description:
+      "Concrete volume and material quantities for a straight-run staircase — rise, run, width, and step count. Returns cubic metres, cement bags (25/50 kg), sand, and aggregate for a 1:2:4 mix.",
+    status: "live",
+    keywords: ["stair concrete", "staircase concrete", "concrete stairs", "step concrete", "staircase volume", "concrete stair material", "rise run stairs"],
+  },
 ];
 
 export function calculatorHref(entry: CalculatorEntry, locale?: string): string {

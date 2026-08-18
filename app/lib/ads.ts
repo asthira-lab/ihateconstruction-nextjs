@@ -18,6 +18,8 @@ export const AD_SLOTS = {
   concreteFootingInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_FOOTING_IN_CONTENT ?? "",
   concreteFoundationInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_FOUNDATION_IN_CONTENT ?? "",
   concreteWallInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_WALL_IN_CONTENT ?? "",
+  concreteDrivewayInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_DRIVEWAY_IN_CONTENT ?? "",
+  concreteStaircaseInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_STAIRCASE_IN_CONTENT ?? "",
 } as const;
 
 export type AdSlotKey = keyof typeof AD_SLOTS;

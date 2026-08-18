@@ -1459,6 +1459,159 @@
           "a": "Add 5–10% for formwork spill, uneven faces, and over-pour. The default of 5% suits a well-set form; use 10% for rough walls or when ordering by the bag."
         }
       ]
+    },
+    "concrete-staircase": {
+      "meta": {
+        "title": "Concrete Staircase Calculator — Volume, Bags & Material Quantities",
+        "description": "Free concrete staircase calculator. Enter rise, run, width, and step count to get concrete volume in cubic metres and yards, plus cement bags, sand, and aggregate for a 1:2:4 mix."
+      },
+      "crumb": "Concrete Staircase Calculator",
+      "title": "Concrete Staircase Calculator",
+      "subtitle": "Work out how much concrete a straight-run staircase needs — volume, cement bags, sand, and aggregate — from rise, run, width, and number of steps.",
+      "form": {
+        "section1": "Stair dimensions",
+        "rise": "Rise (step height)",
+        "riseAria": "Vertical height of each step",
+        "run": "Run (step depth)",
+        "runAria": "Horizontal depth of each step",
+        "width": "Width",
+        "widthAria": "Horizontal width of the staircase",
+        "stepCount": "Number of steps",
+        "stepsAria": "Total number of steps in the flight",
+        "dimHint": "Each step is a rectangular prism. Total volume = rise × run × width × step count. Residential rise 150–200 mm, run 250–300 mm.",
+        "section2": "Wastage",
+        "wastage": "Wastage (%)",
+        "wastageAria": "Wastage percent for spillage and formwork",
+        "wastageHint": "5–10% covers formwork spill, uneven ground, and pump placement. 5% is the default.",
+        "placeholder": "Enter your stair dimensions, then hit Calculate.",
+        "errors": {
+          "riseMin": "Enter a rise greater than 0.",
+          "riseMax": "Rise must be 500 mm or less.",
+          "runMin": "Enter a run greater than 0.",
+          "runMax": "Run must be 1 m or less.",
+          "widthMin": "Enter a width greater than 0.",
+          "widthMax": "Width must be 10 m or less.",
+          "stepsInvalid": "Enter a valid step count (positive integer).",
+          "stepsMax": "Step count must be 100 or less.",
+          "wastageRange": "Wastage should be between 0 and 50%."
+        }
+      },
+      "article": {
+        "toc": "On this page",
+        "heading": "Everything you need to know about concrete staircases"
+      },
+      "faq": [
+        {
+          "q": "How is the concrete volume for stairs calculated?",
+          "a": "Each step is treated as a rectangular prism: volume = rise × run × width. The total is multiplied by the number of steps. A 12-step staircase with 175 mm rise, 280 mm run, and 1 m width has a volume of 0.175 × 0.28 × 1 × 12 = 0.588 m³ before wastage."
+        },
+        {
+          "q": "What mix ratio does the calculator use?",
+          "a": "The default is 1:2:4 (cement:sand:aggregate) by volume, a common nominal mix for residential stairs. This is not a design mix — for structural stairs, confirm the grade and ratio with a structural engineer."
+        },
+        {
+          "q": "Does this include landings and stringers?",
+          "a": "No. This calculator only handles the straight-run steps. Landings, stringer beams, and waist slabs need separate volume calculations. Add their volumes manually if your design includes them."
+        },
+        {
+          "q": "Why are cement bags rounded up?",
+          "a": "Cement is sold in whole bags (25 kg or 50 kg). The calculator rounds up so you order what's available. The exact kg is shown alongside for cost estimation."
+        },
+        {
+          "q": "What wastage should I add for stairs?",
+          "a": "5% is the default for a well-built form on level ground. Use 10% if the subgrade is uneven, the formwork is complex, or you're placing concrete by pump."
+        },
+        {
+          "q": "Can I use this for spiral or curved stairs?",
+          "a": "No. This calculator is for straight-run rectangular steps only. Spiral, curved, or tapered stairs require different geometry and should be calculated separately or with a structural engineer."
+        }
+      ]
+    },
+    "concrete-driveway": {
+      "meta": {
+        "title": "Concrete Driveway Calculator — Yards, Bags & Truck Loads",
+        "description": "Free concrete driveway calculator. Enter length, width, and thickness to get concrete volume in cubic yards and metres, premix bags (80 lb / 60 lb), wire mesh, rebar, control joints, and ready-mix truck loads."
+      },
+      "crumb": "Concrete Driveway Calculator",
+      "title": "Concrete Driveway Calculator",
+      "subtitle": "Work out how much concrete a driveway needs — cubic metres, cubic yards, premix bags, wire mesh, rebar, control joints, and ready-mix truck loads — from length, width, and thickness.",
+      "form": {
+        "section1": "Driveway dimensions",
+        "thickness": "Thickness (driveway depth)",
+        "lenAria": "Driveway length",
+        "widAria": "Driveway width",
+        "thkAria": "Driveway thickness",
+        "dimHint": "Length × width × thickness gives the volume. Typical residential driveways are 100–150 mm (4–6 in) thick; 150 mm for regular car use, up to 200 mm for heavy vehicles.",
+        "section2": "Reinforcement & joints",
+        "reinforcement": "Reinforcement",
+        "reinfHint": "Wire mesh and rebar control cracking. None is fine for light, well-drained slabs.",
+        "reinfNone": "None",
+        "reinfMesh": "Wire mesh",
+        "reinfRebar": "Rebar",
+        "rebarSize": "Rebar size",
+        "rebarSpacing": "Rebar spacing (c/c)",
+        "rebarSpacingAria": "Centre-to-centre spacing between rebars",
+        "rebarHint": "Rebar runs in both directions. Typical spacing is 300–600 mm with edge cover 50–75 mm.",
+        "jointSpacing": "Control joint spacing",
+        "jointSpacingAria": "Spacing between saw-cut control joints",
+        "jointHint": "Control joints are saw-cut grooves that guide where the concrete cracks. Spacing roughly matches the slab thickness in feet (e.g. 5 m for a 150 mm slab).",
+        "section3": "Wastage",
+        "wastage": "Wastage (%)",
+        "wastageAria": "Wastage percent for spillage and formwork",
+        "wastageHint": "5–10% covers uneven ground, over-dig, and formwork spill. 5% is the default.",
+        "placeholder": "Enter your driveway dimensions, then hit Calculate.",
+        "errors": {
+          "lenMin": "Enter a length greater than 0.",
+          "lenMax": "Length must be 200 m or less.",
+          "widMin": "Enter a width greater than 0.",
+          "widMax": "Width must be 200 m or less.",
+          "thkMin": "Enter a thickness greater than 0.",
+          "thkMax": "Thickness must be 5 m or less.",
+          "rebarSpacingMin": "Enter a rebar spacing greater than 0.",
+          "rebarSpacingMax": "Rebar spacing must be 1 m or less.",
+          "jointSpacingMin": "Enter a joint spacing greater than 0.",
+          "jointSpacingMax": "Joint spacing must be 20 m or less.",
+          "wastageRange": "Wastage should be between 0 and 50%."
+        }
+      },
+      "article": {
+        "toc": "On this page",
+        "heading": "Everything you need to know about concrete driveways"
+      },
+      "faq": [
+        {
+          "q": "How much concrete do I need for a driveway?",
+          "a": "Multiply length × width × thickness. A 6 m × 4 m driveway, 150 mm thick, is 6 × 4 × 0.15 = 3.6 m³ (about 4.7 yd³). With 5% wastage that's roughly 3.78 m³ — about 222 bags of 80 lb premix and 0.7 of a 7 yd³ ready-mix truck."
+        },
+        {
+          "q": "How many 80 lb bags of concrete do I need for a driveway?",
+          "a": "One 80 lb premix bag yields about 0.6 ft³ of concrete (0.0222 yd³). Divide the driveway's total volume — including wastage — by 0.0222 yd³ and round up. The calculator does this for you and also shows the 60 lb bag count."
+        },
+        {
+          "q": "How do I calculate concrete yards for a driveway?",
+          "a": "Multiply length × width × thickness, all in feet (convert inches by dividing by 12), to get cubic feet, then divide by 27 to get cubic yards. This calculator converts any mix of units for you and reports cubic metres too."
+        },
+        {
+          "q": "How thick should a concrete driveway be?",
+          "a": "100–125 mm (4–5 in) suits paths and light parking; 150 mm (6 in) is standard for regular car use; 175–200 mm (7–8 in) for heavy vehicles or frequent truck access. Confirm with a structural engineer for vehicle loads."
+        },
+        {
+          "q": "Do I need rebar or wire mesh in a driveway?",
+          "a": "For a well-compacted base, wire mesh or light rebar helps control cracking from settlement. Use 6 mm wire mesh for light slabs; 10–12 mm rebar at 300–600 mm spacing for driveways that carry regular vehicle loads."
+        },
+        {
+          "q": "Why do I need control joints in a concrete driveway?",
+          "a": "Concrete shrinks as it cures and will crack somewhere. Control joints are saw-cut grooves that create weak lines, guiding the crack to a straight, hidden line instead of a random jagged one. Space them roughly equal to the slab thickness in feet."
+        },
+        {
+          "q": "How many ready-mix trucks do I need for a driveway?",
+          "a": "A standard ready-mix truck carries about 7 yd³. Divide your ordered volume by 7 to get the number of loads. A 6 m × 4 m driveway at 150 mm is roughly 4.7 yd³ — most of a single load."
+        },
+        {
+          "q": "How much wastage should I add for a concrete driveway?",
+          "a": "Add 5–10% for an uneven subgrade, spilled mix, and formwork waste. The default of 5% suits a flat prepared site; use 10% for rough ground or when ordering by the bag."
+        }
+      ]
     }
   },
   "results": {

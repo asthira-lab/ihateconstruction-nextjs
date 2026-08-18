@@ -1459,6 +1459,159 @@
           "a": "Ajoutez 5–10 % pour les débordements de coffrage, les faces irrégulières et les surversements. Les 5 % par défaut conviennent à un coffrage bien dressé ; utilisez 10 % pour les murs rugueux ou en commandant par sacs."
         }
       ]
+    },
+    "concrete-driveway": {
+      "meta": {
+        "title": "Calculateur d'Allée en Béton — Verges, Sacs et Camions",
+        "description": "Calculateur gratuit de béton pour allée. Saisissez longueur, largeur et épaisseur pour obtenir le volume de béton en verges cubes et mètres, les sacs de mélange (80 lb / 60 lb), le treillis soudé, les barres d'armature, les joints de contrôle et les camions de béton prêt à l'emploi."
+      },
+      "crumb": "Calculateur d'Allée en Béton",
+      "title": "Calculateur d'Allée en Béton",
+      "subtitle": "Calculez la quantité de béton dont une allée a besoin — mètres cubes, verges cubes, sacs de mélange, treillis soudé, barres d'armature, joints de contrôle et camions de béton prêt à l'emploi — à partir de la longueur, de la largeur et de l'épaisseur.",
+      "form": {
+        "section1": "Dimensions de l'allée",
+        "thickness": "Épaisseur (profondeur de l'allée)",
+        "lenAria": "Longueur de l'allée",
+        "widAria": "Largeur de l'allée",
+        "thkAria": "Épaisseur de l'allée",
+        "dimHint": "La longueur × largeur × épaisseur donne le volume. Les allées résidentielles typiques font 100–150 mm (4–6 po) d'épaisseur ; 150 mm pour un usage normal de voiture, jusqu'à 200 mm pour les véhicules lourds.",
+        "section2": "Armature et joints",
+        "reinforcement": "Armature",
+        "reinfHint": "Le treillis soudé et les barres d'armature contrôlent la fissuration. Aucun convient aux dalles légères bien drainées.",
+        "reinfNone": "Aucun",
+        "reinfMesh": "Treillis soudé",
+        "reinfRebar": "Barres d'armature",
+        "rebarSize": "Diamètre des barres",
+        "rebarSpacing": "Espacement des barres (c/c)",
+        "rebarSpacingAria": "Espacement de centre à centre entre les barres",
+        "rebarHint": "Les barres vont dans les deux directions. L'espacement typique est de 300–600 mm avec un enrobage de bord de 50–75 mm.",
+        "jointSpacing": "Espacement des joints de contrôle",
+        "jointSpacingAria": "Espacement entre les joints de contrôle sciés",
+        "jointHint": "Les joints de contrôle sont des rainures sciées qui guident la fissuration du béton. L'espacement correspond environ à l'épaisseur de la dalle en pieds (p. ex. 5 m pour une dalle de 150 mm).",
+        "section3": "Gaspillage",
+        "wastage": "Gaspillage (%)",
+        "wastageAria": "Pourcentage de gaspillage pour les éclaboussures et le coffrage",
+        "wastageHint": "5 à 10 % couvrent le terrain irrégulier, le surcreusement et les éclaboussures de coffrage. 5 % est la valeur par défaut.",
+        "placeholder": "Saisissez les dimensions de votre allée, puis appuyez sur Calculer.",
+        "errors": {
+          "lenMin": "Saisissez une longueur supérieure à 0.",
+          "lenMax": "La longueur doit être de 200 m ou moins.",
+          "widMin": "Saisissez une largeur supérieure à 0.",
+          "widMax": "La largeur doit être de 200 m ou moins.",
+          "thkMin": "Saisissez une épaisseur supérieure à 0.",
+          "thkMax": "L'épaisseur doit être de 5 m ou moins.",
+          "rebarSpacingMin": "Saisissez un espacement de barres supérieur à 0.",
+          "rebarSpacingMax": "L'espacement des barres doit être de 1 m ou moins.",
+          "jointSpacingMin": "Saisissez un espacement de joints supérieur à 0.",
+          "jointSpacingMax": "L'espacement des joints doit être de 20 m ou moins.",
+          "wastageRange": "Le gaspillage doit être entre 0 et 50 %."
+        }
+      },
+      "article": {
+        "toc": "Sur cette page",
+        "heading": "Tout savoir sur les allées en béton"
+      },
+      "faq": [
+        {
+          "q": "De combien de béton ai-je besoin pour une allée ?",
+          "a": "Multipliez la longueur × largeur × épaisseur. Une allée de 6 m × 4 m avec 150 mm d'épaisseur fait 6 × 4 × 0,15 = 3,6 m³ (environ 4,7 verges cubes). Avec 5 % de gaspillage, cela fait environ 3,78 m³ — environ 222 sacs de 80 lb et 0,7 chargement de camion de 7 yd³."
+        },
+        {
+          "q": "De combien de sacs de 80 lb de béton ai-je besoin pour une allée ?",
+          "a": "Un sac de mélange de 80 lb donne environ 0,6 pi³ de béton (0,0222 yd³). Divisez le volume total de l'allée — gaspillage compris — par 0,0222 yd³ et arrondissez au supérieur. Le calculateur le fait pour vous et affiche aussi le nombre de sacs de 60 lb."
+        },
+        {
+          "q": "Comment calculer les verges de béton pour une allée ?",
+          "a": "Multipliez la longueur × largeur × épaisseur, tout en pieds (convertissez les pouces en divisant par 12), pour obtenir des pieds cubes, puis divisez par 27 pour obtenir des verges cubes. Ce calculateur convertit tout mélange d'unités et indique aussi les mètres cubes."
+        },
+        {
+          "q": "Quelle épaisseur doit avoir une allée en béton ?",
+          "a": "100–125 mm (4–5 po) convient aux chemins et au stationnement léger ; 150 mm (6 po) est standard pour un usage normal de voiture ; 175–200 mm (7–8 po) pour les véhicules lourds ou un accès fréquent de camions. Confirmez les charges de véhicules avec un ingénieur en structure."
+        },
+        {
+          "q": "Ai-je besoin de barres d'armature ou de treillis soudé dans une allée ?",
+          "a": "Pour une base bien compactée, le treillis soudé ou une armature légère aide à contrôler la fissuration due au tassement. Utilisez du treillis de 6 mm pour les dalles légères ; des barres de 10–12 mm à 300–600 mm pour les allées qui supportent des charges de véhicules régulières."
+        },
+        {
+          "q": "Pourquoi ai-je besoin de joints de contrôle dans une allée en béton ?",
+          "a": "Le béton se rétracte en durcissant et se fissurera quelque part. Les joints de contrôle sont des rainures sciées qui créent des lignes de faiblesse, guidant la fissure vers une ligne droite et discrète au lieu d'une ligne irrégulière aléatoire. Espacez-les approximativement selon l'épaisseur de la dalle en pieds."
+        },
+        {
+          "q": "Combien de camions de béton prêt à l'emploi me faut-il pour une allée ?",
+          "a": "Un camion de béton prêt à l'emploi standard transporte environ 7 yd³. Divisez votre volume commandé par 7 pour obtenir le nombre de chargements. Une allée de 6 m × 4 m à 150 mm fait environ 4,7 yd³ — la plus grande partie d'un seul chargement."
+        },
+        {
+          "q": "Quelle marge de gaspillage prévoir pour une allée en béton ?",
+          "a": "Ajoutez 5 à 10 % pour une sous-couche irrégulière, le béton renversé et les déchets de coffrage. La valeur par défaut de 5 % convient à un site plat préparé ; utilisez 10 % pour un terrain irrégulier ou lors d'une commande en sacs."
+        }
+      ]
+    },
+    "concrete-staircase": {
+      "meta": {
+        "title": "Calculatrice d'escalier en béton — volume, sacs et matériaux",
+        "description": "Calculatrice gratuite d'escalier en béton. Saisissez contremarche, giron, largeur et nombre de marches pour obtenir le volume de béton en mètres et yards cubes, les sacs de ciment, le sable et le gravier pour un mélange 1:2:4."
+      },
+      "crumb": "Calculatrice d'escalier en béton",
+      "title": "Calculatrice d'escalier en béton",
+      "subtitle": "Calculez le béton nécessaire pour un escalier droit — volume, sacs de ciment, sable et gravier — à partir de la contremarche, du giron, de la largeur et du nombre de marches.",
+      "form": {
+        "section1": "Dimensions de l'escalier",
+        "rise": "Contremarche (hauteur de marche)",
+        "riseAria": "Hauteur verticale de chaque marche",
+        "run": "Giron (profondeur de marche)",
+        "runAria": "Profondeur horizontale de chaque marche",
+        "width": "Largeur",
+        "widthAria": "Largeur horizontale de l'escalier",
+        "stepCount": "Nombre de marches",
+        "stepsAria": "Nombre total de marches de la volée",
+        "dimHint": "Chaque marche est un prisme rectangulaire. Volume total = contremarche × giron × largeur × nombre de marches. Contremarche résidentielle 150–200 mm, giron 250–300 mm.",
+        "section2": "Gaspillage",
+        "wastage": "Gaspillage (%)",
+        "wastageAria": "Pourcentage de gaspillage pour les déversements et le coffrage",
+        "wastageHint": "5 à 10 % couvre les déversements de coffrage, le terrain irrégulier et la pose à la pompe. 5 % est la valeur par défaut.",
+        "placeholder": "Saisissez les dimensions de votre escalier, puis appuyez sur Calculer.",
+        "errors": {
+          "riseMin": "Saisissez une contremarche supérieure à 0.",
+          "riseMax": "La contremarche doit être de 500 mm ou moins.",
+          "runMin": "Saisissez un giron supérieur à 0.",
+          "runMax": "Le giron doit être de 1 m ou moins.",
+          "widthMin": "Saisissez une largeur supérieure à 0.",
+          "widthMax": "La largeur doit être de 10 m ou moins.",
+          "stepsInvalid": "Saisissez un nombre de marches valide (entier positif).",
+          "stepsMax": "Le nombre de marches doit être de 100 ou moins.",
+          "wastageRange": "Le gaspillage doit être entre 0 et 50 %."
+        }
+      },
+      "article": {
+        "toc": "Sur cette page",
+        "heading": "Tout ce qu'il faut savoir sur les escaliers en béton"
+      },
+      "faq": [
+        {
+          "q": "Comment le volume de béton des escaliers est-il calculé ?",
+          "a": "Chaque marche est traitée comme un prisme rectangulaire : volume = contremarche × giron × largeur. Le total est multiplié par le nombre de marches. Un escalier de 12 marches avec une contremarche de 175 mm, un giron de 280 mm et 1 m de largeur a un volume de 0,175 × 0,28 × 1 × 12 = 0,588 m³ avant gaspillage."
+        },
+        {
+          "q": "Quel mélange la calculatrice utilise-t-elle ?",
+          "a": "La valeur par défaut est 1:2:4 (ciment:sable:gravier) en volume, un mélange nominal courant pour les escaliers résidentiels. Ce n'est pas un mélange de conception — pour les escaliers structurels, confirmez le grade et le mélange avec un ingénieur en structure."
+        },
+        {
+          "q": "Cela inclut-il les paliers et les limons ?",
+          "a": "Non. Cette calculatrice ne gère que les marches droites. Les paliers, poutres de limon et dalles de pente nécessitent des calculs de volume séparés. Ajoutez leurs volumes manuellement si votre conception les inclut."
+        },
+        {
+          "q": "Pourquoi les sacs de ciment sont-ils arrondis au supérieur ?",
+          "a": "Le ciment est vendu en sacs entiers (25 kg ou 50 kg). La calculatrice arrondit au supérieur pour que vous commandiez ce qui est disponible. Le kg exact est affiché à côté pour l'estimation des coûts."
+        },
+        {
+          "q": "Quelle marge de gaspillage prévoir pour des escaliers ?",
+          "a": "5 % est la valeur par défaut pour un coffrage bien monté sur un terrain nivelé. Utilisez 10 % si le sous-sol est irrégulier, si le coffrage est complexe ou si vous placez le béton à la pompe."
+        },
+        {
+          "q": "Puis-je l'utiliser pour des escaliers en colimaçon ou courbes ?",
+          "a": "Non. Cette calculatrice est réservée aux marches rectangulaires droites. Les escaliers en colimaçon, courbes ou en éventail nécessitent une géométrie différente et doivent être calculés séparément ou avec un ingénieur en structure."
+        }
+      ]
     }
   },
   "results": {

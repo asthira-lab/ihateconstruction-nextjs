@@ -75,6 +75,20 @@ const jobs = [
       "Cubic yards &#183; Premix bags &#183; Ready-mix trucks &#8212; length, height &amp; thickness",
     ),
   },
+  {
+    file: "concrete-driveway-calculator-og.png",
+    svg: card(
+      "Concrete Driveway Calculator",
+      "Cubic yards &#183; Premix bags &#183; Wire mesh &#183; Rebar &#8212; length, width &amp; thickness",
+    ),
+  },
+  {
+    file: "concrete-staircase-calculator-og.png",
+    svg: card(
+      "Concrete Staircase Calculator",
+      "Cement bags &#183; Sand &#183; Aggregate &#8212; rise, run, width &amp; step count",
+    ),
+  },
 ];
 
 await mkdir(outDir, { recursive: true });

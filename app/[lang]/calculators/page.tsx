@@ -31,17 +31,22 @@ export async function generateMetadata({
   };
 }
 
-function jsonLd(locale: string, home: string, crumb: string) {
+function jsonLd(
+  locale: string,
+  home: string,
+  crumb: string,
+  entries: Array<{ slug: string; title: string; href: string }>,
+) {
   return [
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
       name: "Construction calculators",
-      itemListElement: CALCULATORS.map((c, i) => ({
+      itemListElement: entries.map((c, i) => ({
         "@type": "ListItem",
         position: i + 1,
         name: c.title,
-        url: `${siteUrl}${calculatorHref(c, locale)}`,
+        url: `${siteUrl}${c.href}`,
       })),
     },
     {
@@ -90,7 +95,7 @@ export default async function CalculatorsPage({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, dict.breadcrumbs.home, dict.breadcrumbs.calculators)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, dict.breadcrumbs.home, dict.breadcrumbs.calculators, entries)) }}
       />
       <SiteHeader />
       <main className="flex-1">
