@@ -317,12 +317,12 @@
   "calculators": {
     "index": {
       "meta": {
-        "title": "Free Construction Calculators — Cement, Concrete, Brick",
-        "description": "Six free construction calculators — cement, concrete, brick, steel, paint, and tile. Enter your job and get an exact material order in cubic yards, cubic feet, or metric units. Bags of cement for a slab, bricks for a wall, steel for reinforcement, litres of paint for a room, tiles for a floor."
+        "title": "Free Construction Calculators — Cement, Concrete, Brick & Rebar",
+        "description": "Seven free construction calculators — cement, concrete, brick, steel, paint, tile, and rebar. Enter your job and get an exact material order in cubic yards, cubic feet, or metric units. Bags of cement for a slab, bricks for a wall, steel for reinforcement, litres of paint for a room, tiles for a floor."
       },
       "eyebrow": "Tools",
       "title": "Free construction calculators",
-      "subtitle": "Six calculators for the material orders you actually place — cement, concrete, brick, steel, paint, and tile. Enter your dimensions, get bags, bricks, kilograms, or litres. Works in cubic yards, cubic feet, and cubic metres.",
+      "subtitle": "Seven calculators for the material orders you actually place — cement, concrete, brick, steel, paint, tile, and rebar. Enter your dimensions, get bags, bricks, kilograms, or litres. Works in cubic yards, cubic feet, and cubic metres.",
       "missing": "Missing a calculator you use daily?",
       "contactSoon": "Contact form coming soon."
     },
@@ -601,6 +601,41 @@
           "ratio": "Format as a:b (e.g. 1:4)."
         }
       }
+    },
+    "rebar": {
+      "meta": {"title": "Rebar Calculator — Rebar for Slab, Footing & Wall (Length, Pieces & Weight)", "description": "Free rebar calculator for concrete slabs, footings, walls, and foundations. Enter length, width, rebar spacing, and edge cover to get rebar count, total rebar length, number of 12 m pieces, and rebar weight per square metre or square foot. D²/162 weight formula."},
+      "crumb": "Rebar Calculator",
+      "title": "Rebar Calculator — Slab, Footing, Wall & Foundation Reinforcement",
+      "subtitle": "Work out how much rebar you need for a concrete slab, footing, wall, or foundation. Enter the member size, the centre-to-centre rebar spacing, and the edge cover — get the number of bars each way, total rebar length, pieces of 12 m rebar, and weight per m² and ft².",
+      "form": {
+        "section1": "Member + dimensions",
+        "member": "Member type",
+        "memberHint": "Same grid math — only the suggested starting spacing changes.",
+        "dimHint": "Overall poured dimensions of the member (edge to edge), not the grid.",
+        "section2": "Reinforcement layout",
+        "spacing": "Rebar–rebar spacing (c/c)",
+        "spacingAria": "Centre-to-centre spacing between parallel rebars",
+        "edgeSpacing": "Edge cover",
+        "edgeAria": "Distance from the outermost bar to the member edge",
+        "section3": "Bar + ordering",
+        "barDiameter": "Bar diameter",
+        "barLength": "Single rebar length",
+        "barLengthAria": "Stock length of one rebar from the supplier",
+        "wastage": "Wastage",
+        "wastageAria": "Wastage percent for cutting, laps, and overlaps",
+        "lenAria": "Member length",
+        "widAria": "Member width",
+        "errors": {"lenMin": "Enter a length greater than 0.", "lenMax": "Length must be 200 m or less.", "widMin": "Enter a width greater than 0.", "widMax": "Width must be 200 m or less.", "spMin": "Enter a spacing greater than 0.", "spMax": "Spacing must be 2 m or less.", "edgeMin": "Edge cover must be 0 or more.", "edgeMax": "Edge cover must be less than half the member size.", "barLenMin": "Enter a rebar length greater than 0.", "barLenMax": "Rebar length must be 60 m or less.", "wastageRange": "Wastage should be between 0 and 20%."},
+        "examples": {"fill1": "Example: 6000 × 4000 mm slab, 150 mm c/c, 12 mm bars, 12 m stock."},
+        "placeholder": "Fill the form and press Calculate to see your rebar order."
+      },
+      "sizes": {
+        "heading": "Rebar sizes",
+        "note": "US bar sizes give the diameter in eighths of an inch up to #8; metric sizes use the nominal diameter in millimetres. TMT rebar in India is sold by nominal diameter — typically 8, 10, 12, 16, 20, 25, and 32 mm.",
+        "cols": {"imperial": "Imperial bar size", "metric": "Metric size", "diaIn": "Diameter (inch)", "diaMm": "Diameter (mm)"}
+      },
+      "article": {"toc": "On this page", "heading": "Everything you need to know about rebar"},
+      "faq": [{"q": "How much rebar do I need for a concrete slab?", "a": "Enter the slab length and width, the centre-to-centre spacing, and the edge cover. The calculator returns the bars in each direction, the total rebar length in metres, and the number of stock bars (12 m) to order. A 6 × 4 m slab at 150 mm c/c needs roughly 66 bars and about 306 m of rebar."}, {"q": "How do I calculate rebar for a slab in square feet?", "a": "Find the slab area in square feet, divide by the spacing on each side to get the bar lines, then multiply by the bar length. The calculator does this for you and also reports rebar weight per square foot — a typical single-layer residential mesh works out to roughly 1 kg per sq ft."}, {"q": "How do I calculate rebar weight?", "a": "Rebar weight = total length × weight per metre. For diameter D in millimetres, weight per metre ≈ D² / 162 kg/m (from π × (D/2)² × 7850 kg/cum). A 12 mm bar weighs about 0.89 kg/m; a 16 mm bar about 1.58 kg/m."}, {"q": "How many rebar pieces do I need for my project?", "a": "Divide the total rebar length by the stock bar length you buy (12 m for Indian TMT) and round up. The calculator does this automatically and shows the pieces count."}, {"q": "Do I need rebar in a footing or foundation?", "a": "Almost always yes. Footings and foundations carry the full building load and need reinforcement against bending and cracking. Typical guidance: 150–200 mm c/c with 12–16 mm bars in the top and bottom meshes. Confirm against your structural drawings."}, {"q": "Do I need rebar in a concrete wall?", "a": "It depends. Retaining and foundation walls almost always need vertical rebar plus horizontal distribution bars. Simple partition walls may only need light mesh. Set the member to \"wall\" and confirm with an engineer."}, {"q": "What is edge cover (edge-grid spacing)?", "a": "Edge cover is the distance from the outermost rebar line to the concrete edge — the concrete around the bars that protects them from water and corrosion. The calculator subtracts two edge covers (one per end) from each dimension to get the actual grid size."}, {"q": "What does rebar-per-square-metre tell me?", "a": "It is the total rebar weight divided by the member area — a quick density check for an estimate. A single-layer 150 mm c/c 12 mm mesh is about 11–12 kg per m²; a double mesh with 16 mm bars can reach 20–25 kg per m²."}]
     }
   },
   "results": {

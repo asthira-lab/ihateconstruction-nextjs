@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 // Legacy calculator slugs → new -calculator slugs. 301 (permanent) so search
 // engines transfer link equity from any old URL that got indexed or shared.
@@ -30,6 +31,8 @@ const NOINDEX_HEADERS = [
 ];
 
 const nextConfig: NextConfig = {
+  // Allow .mdx imports so long-form SEO content can ship as Markdown (see content/).
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   async redirects() {
     return CALCULATOR_REDIRECTS;
   },
@@ -38,4 +41,7 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Compile .mdx imports (App Router) — no remark/rehype plugins for now.
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);

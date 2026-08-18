@@ -317,12 +317,12 @@
   "calculators": {
     "index": {
       "meta": {
-        "title": "Kostenlose Bau-Rechner — Zement, Beton, Ziegel",
-        "description": "Sechs kostenlose Bau-Rechner — Zement, Beton, Ziegel, Stahl, Farbe und Fliesen. Geben Sie Ihren Auftrag ein und erhalten Sie eine exakte Materialbestellung in Kubikyards, Kubikfuß oder metrischen Einheiten. Zementsäcke für eine Platte, Ziegel für eine Wand, Stahl für Bewehrung, Liter Farbe für einen Raum, Fliesen für einen Boden."
+        "title": "Kostenlose Bau-Rechner — Zement, Beton, Ziegel & Bewehrung",
+        "description": "Sieben kostenlose Bau-Rechner — Zement, Beton, Ziegel, Stahl, Bewehrung, Farbe und Fliesen. Geben Sie Ihren Auftrag ein und erhalten Sie eine exakte Materialbestellung in Kubikyards, Kubikfuß oder metrischen Einheiten. Zementsäcke für eine Platte, Ziegel für eine Wand, Stahl für Bewehrung, Liter Farbe für einen Raum, Fliesen für einen Boden."
       },
       "eyebrow": "Werkzeuge",
       "title": "Kostenlose Bau-Rechner",
-      "subtitle": "Sechs Rechner für die Materialbestellungen, die Sie tatsächlich aufgeben — Zement, Beton, Ziegel, Stahl, Farbe und Fliesen. Geben Sie Ihre Abmessungen ein, erhalten Sie Säcke, Ziegel, Kilogramm oder Liter. Funktioniert in Kubikyards, Kubikfuß und Kubikmetern.",
+      "subtitle": "Sieben Rechner für die Materialbestellungen, die Sie tatsächlich aufgeben — Zement, Beton, Ziegel, Stahl, Bewehrung, Farbe und Fliesen. Geben Sie Ihre Abmessungen ein, erhalten Sie Säcke, Ziegel, Kilogramm oder Liter. Funktioniert in Kubikyards, Kubikfuß und Kubikmetern.",
       "missing": "Fehlt ein Rechner, den Sie täglich nutzen?",
       "contactSoon": "Kontaktformular kommt bald."
     },
@@ -601,6 +601,41 @@
           "ratio": "Format als a:b (z. B. 1:4)."
         }
       }
+    },
+    "rebar": {
+      "meta": {"title": "Bewehrungsrechner — Stahl für Platte, Fundament und Wand (Länge, Stäbe und Gewicht)", "description": "Kostenloser Bewehrungsrechner für Betonplatten, Fundamente, Wände und Bodenplatten. Länge, Breite, Abstand und Randüberdeckung eingeben — erhalten Sie Stabanzahl, Gesamtlänge, 12-m-Stäbe und Gewicht pro Quadratmeter bzw. Quadratfuß. D²/162-Formel."},
+      "crumb": "Bewehrungsrechner",
+      "title": "Bewehrungsrechner — Bewehrung für Platte, Fundament, Wand und Bodenplatte",
+      "subtitle": "Berechnen Sie, wie viel Bewehrungsstahl Sie für eine Platte, ein Fundament, eine Wand oder eine Bodenplatte brauchen. Elementgröße, c/c-Abstand und Randüberdeckung eingeben — Stäbe pro Richtung, Gesamtlänge, 12-m-Stäbe und Gewicht pro m² und ft² erhalten.",
+      "form": {
+        "section1": "Bauteil + Abmessungen",
+        "member": "Bauteiltyp",
+        "memberHint": "Gleiche Gitterberechnung — nur der vorgeschlagene Startabstand ändert sich.",
+        "dimHint": "Gesamte Betonabmessungen des Bauteils (Kante zu Kante), nicht das Gitter.",
+        "section2": "Bewehrungsanordnung",
+        "spacing": "Abstand Stab–Stab (c/c)",
+        "spacingAria": "Achsabstand zwischen parallelen Stäben",
+        "edgeSpacing": "Randüberdeckung",
+        "edgeAria": "Abstand des äußeren Stabs zur Bauteilkante",
+        "section3": "Stab + Bestellung",
+        "barDiameter": "Stabdurchmesser",
+        "barLength": "Länge eines Stabs",
+        "barLengthAria": "Lieferlänge eines Stabs vom Händler",
+        "wastage": "Verschnitt",
+        "wastageAria": "Verschnittprozent für Schnitt, Übergreifungen und Überlappungen",
+        "lenAria": "Bauteillänge",
+        "widAria": "Bauteilbreite",
+        "errors": {"lenMin": "Geben Sie eine Länge größer als 0 ein.", "lenMax": "Die Länge muss 200 m oder weniger betragen.", "widMin": "Geben Sie eine Breite größer als 0 ein.", "widMax": "Die Breite muss 200 m oder weniger betragen.", "spMin": "Geben Sie einen Abstand größer als 0 ein.", "spMax": "Der Abstand muss 2 m oder weniger betragen.", "edgeMin": "Die Randüberdeckung muss 0 oder mehr sein.", "edgeMax": "Die Randüberdeckung muss kleiner als die halbe Bauteilgröße sein.", "barLenMin": "Geben Sie eine Stablänge größer als 0 ein.", "barLenMax": "Die Stablänge muss 60 m oder weniger betragen.", "wastageRange": "Der Verschnitt muss zwischen 0 und 20 % liegen."},
+        "examples": {"fill1": "Beispiel: Platte 6000 × 4000 mm, 150 mm c/c, 12-mm-Stäbe, 12-m-Stock."},
+        "placeholder": "Füllen Sie das Formular aus und drücken Sie Berechnen, um Ihre Bewehrungsbestellung zu sehen."
+      },
+      "sizes": {
+        "heading": "Stabgrößen",
+        "note": "US-Stabgrößen geben den Durchmesser in Achtelzoll bis #8 an; metrische Größen verwenden den Nenndurchmesser in Millimetern. TMT-Bewehrung in Indien wird nach Nenndurchmesser verkauft — typisch 8, 10, 12, 16, 20, 25 und 32 mm.",
+        "cols": {"imperial": "Imperiale Größe", "metric": "Metrische Größe", "diaIn": "Durchmesser (Zoll)", "diaMm": "Durchmesser (mm)"}
+      },
+      "article": {"toc": "Auf dieser Seite", "heading": "Alles, was Sie über Bewehrung wissen sollten"},
+      "faq": [{"q": "Wie viel Bewehrung brauche ich für eine Betonplatte?", "a": "Länge und Breite der Platte, den Achsabstand und die Randüberdeckung eingeben. Der Rechner liefert die Stäbe pro Richtung, die Gesamtlänge in Metern und die zu bestellenden 12-m-Stäbe. Eine 6 × 4 m-Platte bei 150 mm c/c braucht etwa 66 Stäbe und rund 306 m Bewehrung."}, {"q": "Wie berechne ich die Bewehrung einer Platte in Quadratfuß?", "a": "Fläche der Platte in Quadratfuß ermitteln, durch den Abstand jeder Seite teilen, um die Stabreihen zu erhalten, dann mit der Stablänge multiplizieren. Der Rechner macht das und gibt auch das Gewicht pro Quadratfuß an — ein einlagiges Wohngitter liegt bei etwa 1 kg pro Quadratfuß."}, {"q": "Wie berechne ich das Gewicht der Bewehrung?", "a": "Bewehrungsgewicht = Gesamtlänge × Gewicht pro Meter. Für Durchmesser D in Millimetern gilt Gewicht pro Meter ≈ D² / 162 kg/m. Ein 12-mm-Stab wiegt etwa 0,89 kg/m, ein 16-mm-Stab etwa 1,58 kg/m."}, {"q": "Wie viele Bewehrungsstäbe brauche ich?", "a": "Gesamtlänge der Bewehrung durch die gekaufte Lieferlänge teilen (12 m bei indischem TMT) und aufrunden. Der Rechner macht das automatisch und zeigt die Stabanzahl."}, {"q": "Braucht ein Fundament oder eine Bodenplatte Bewehrung?", "a": "Fast immer ja. Fundamente tragen die gesamte Gebäudelast und brauchen Bewehrung gegen Biegung und Risse. Üblicher Richtwert: 150–200 mm c/c mit 12–16-mm-Stäben im oberen und unteren Gitter. Mit der Statik prüfen."}, {"q": "Braucht eine Betonwand Bewehrung?", "a": "Kommt darauf an. Stütz- und Kellerwände brauchen fast immer vertikale Bewehrung plus horizontale Verteilungsstäbe. Einfache Trennwände kommen mit leichtem Gitter aus. Bauteil auf „Wand“ stellen und mit einem Ingenieur abstimmen."}, {"q": "Was ist die Randüberdeckung (Abstand Rand–Gitter)?", "a": "Das ist der Abstand von der äußersten Stabreihe bis zur Betonkante — der Beton um die Stäbe, der sie vor Wasser und Korrosion schützt. Der Rechner zieht pro Dimension zwei Randüberdeckungen (je eine je Ende) ab, um die tatsächliche Gittergröße zu erhalten."}, {"q": "Was sagt die Bewehrung pro Quadratmeter aus?", "a": "Es ist das Gesamtgewicht der Bewehrung geteilt durch die Bauteilfläche — eine schnelle Dichteprüfung. Ein einlagiges 12-mm-Gitter bei 150 mm c/c ergibt etwa 11–12 kg pro m²; ein doppeltes Gitter mit 16-mm-Stäben kann 20–25 kg pro m² erreichen."}]
     }
   },
   "results": {

@@ -8,11 +8,13 @@ import { ConcreteResultCard, concreteHeadline } from "@/components/calculators/c
 import { SteelResultCard, steelHeadline } from "@/components/calculators/steel/ResultCard";
 import { PaintResultCard, paintHeadline } from "@/components/calculators/paint/ResultCard";
 import { TileResultCard, tileHeadline } from "@/components/calculators/tile/ResultCard";
+import { RebarResultCard, rebarHeadline } from "@/components/calculators/rebar/ResultCard";
 import type { BrickResponse } from "@/features/calculators/brick/types";
 import type { ConcreteResponse } from "@/features/calculators/concrete/types";
 import type { SteelResponse } from "@/features/calculators/steel/types";
 import type { PaintResponse } from "@/features/calculators/paint/types";
 import type { TileResponse } from "@/features/calculators/tile/types";
+import type { RebarResponse } from "@/features/calculators/rebar/types";
 
 // Renders the pretty ResultCard for whichever calculator produced this row.
 export function CalculationResult({ calc }: { calc: SavedCalculation }) {
@@ -27,6 +29,8 @@ export function CalculationResult({ calc }: { calc: SavedCalculation }) {
       return <PaintResultCard data={calc.result as unknown as PaintResponse} />;
     case "tile":
       return <TileResultCard data={calc.result as unknown as TileResponse} />;
+    case "rebar":
+      return <RebarResultCard data={calc.result as unknown as RebarResponse} />;
     default:
       return (
         <div className="rounded border border-dashed border-black/15 p-4 text-xs text-black/60 dark:border-white/20 dark:text-white/60">
@@ -50,6 +54,8 @@ export function calculationHeadline(calc: SavedCalculation): string {
         return paintHeadline(calc.result as unknown as PaintResponse);
       case "tile":
         return tileHeadline(calc.result as unknown as TileResponse);
+      case "rebar":
+        return rebarHeadline(calc.result as unknown as RebarResponse);
       default:
         return "";
     }

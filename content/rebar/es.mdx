@@ -1,0 +1,36 @@
+## ¿Qué es el acero de refuerzo (rebar)?
+
+El acero de refuerzo es una barra de acero incrustada en el concreto para soportar la tracción. El concreto es fuerte a la compresión pero débil a la tracción — añadir refuerzo convierte una losa frágil en una losa armada que resiste flexión y grietas durante décadas.
+
+El refuerzo se coloca en forma de cuadrícula y se amarra con alambre antes de vaciar el concreto. Cuánto necesitas depende del área, del diámetro de la barra y de la separación centro a centro (c/c) entre barras paralelas en ambas direcciones.
+
+## Cómo usar la calculadora de rebar
+
+Con cuatro números bastan para planear el pedido de refuerzo de una losa, zapata, muro o cimentación:
+
+1. Mide el elemento — ingresa el **largo** y el **ancho** del área de concreto a vaciar.
+2. Elige la distribución — la separación c/c entre barras paralelas y el **recubrimiento al borde** hasta las barras externas.
+3. Elige el **diámetro de barra** — 8, 10, 12 o 16 mm son los más comunes para losas y zapatas.
+4. Ingresa la **longitud comercial** que compras (en India las barras TMT vienen de 12 m) y el desperdicio por corte.
+
+La calculadora obtiene el número de líneas de barra en cada dirección, la longitud total en metros, las piezas de barra a pedir y el peso estimado del acero.
+
+## Ejemplo resuelto
+
+Losa de **6,0 m × 4,0 m**, separación de **150 mm c/c**, **recubrimiento de 75 mm**, barras de **12 mm**, barras comerciales de **12 m**.
+
+La cuadrícula es de 5,85 m × 3,85 m. Eso da 26 barras a lo largo y 40 a lo ancho — 66 en total, unos **306 m de refuerzo**, cortados en 26 piezas de 12 m. Con 12 mm (0,89 kg/m según D²/162) son unos **272 kg** antes del desperdicio — cerca de 11 kg por m², o 76 kg por m³ de losa de 150 mm, dentro del rango típico.
+
+- Barras principales (a lo largo): floor(3,85 m ÷ 0,15 m) + 1 = **26 barras de 5,85 m**
+- Barras de reparto: floor(5,85 m ÷ 0,15 m) + 1 = **40 barras de 3,85 m**
+- Longitud total = 26 × 5,85 + 40 × 3,85 = **306 m** → ceil(306 ÷ 12) = **26 piezas**
+- Peso = 306 m × (12² ÷ 162) kg/m = **272 kg**
+
+## Orientación común sobre separación
+
+Puntos de partida prácticos, no valores de diseño — confirma siempre la separación y el diámetro con los planos estructurales de tu obra.
+
+- **Losa de casa:** 150–200 mm c/c con barras de 8–12 mm, una sola capa
+- **Zapata / platea:** 150–200 mm c/c con barras de 12–16 mm, malla superior e inferior
+- **Muro de cimentación:** 150–200 mm c/c verticales más barras horizontales
+- **Entrada / patio:** 16–18 pulg (400–450 mm) c/c con barras #3–#4 suele bastar

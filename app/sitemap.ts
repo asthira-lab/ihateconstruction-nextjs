@@ -12,6 +12,7 @@ const CALCULATOR_SLUGS = [
   "paint-calculator",
   "tile-calculator",
   "steel-calculator",
+  "rebar-calculator",
 ] as const;
 
 // Marketing / SEO pages — priority + freq reflect how often each really changes.

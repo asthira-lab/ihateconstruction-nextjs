@@ -1,0 +1,36 @@
+## Qu'est-ce que le ferraillage (armature) ?
+
+Le ferraillage est une barre d'acier noyée dans le béton pour reprendre la traction. Le béton est fort en compression mais faible en traction — ajouter des armatures transforme une dalle fragile en dalle armée qui résiste à la flexion et aux fissures pendant des décennies.
+
+Les armatures sont posées en grille et attachées au fil de fer avant le coulage du béton. La quantité nécessaire dépend de la surface, du diamètre de la barre et de l'espacement centre à centre (c/c) entre barres parallèles dans les deux sens.
+
+## Comment utiliser le calculateur de ferraillage
+
+Quatre chiffres suffisent pour planifier une commande de ferraillage pour une dalle, une semelle, un mur ou une fondation :
+
+1. Mesurez l'élément — saisissez la **longueur** et la **largeur** de la zone bétonnée.
+2. Choisissez la disposition — l'espacement c/c entre barres parallèles et l'**enrobage au bord** jusqu'aux barres extérieures.
+3. Choisissez le **diamètre de barre** — 8, 10, 12 ou 16 mm sont les plus courants pour dalles et semelles.
+4. Saisissez la **longueur de stock** achetée (les barres TMT indiennes sont livrées en 12 m) et le taux de chute de coupe.
+
+Le calculateur obtient le nombre de lignes de barres dans chaque sens, la longueur totale en mètres, le nombre de barres de stock à commander et le poids estimé.
+
+## Exemple de calcul
+
+Dalle de **6,0 m × 4,0 m**, espacement de **150 mm c/c**, **enrobage de 75 mm**, barres de **12 mm**, barres de stock de **12 m**.
+
+La grille fait 5,85 m × 3,85 m. Cela donne 26 barres dans la longueur et 40 dans la largeur — 66 barres au total, environ **306 m de ferraillage**, découpés en 26 barres de 12 m. En 12 mm (0,89 kg/m via D²/162), cela représente environ **272 kg** avant chute — près de 11 kg par m², soit 76 kg par m³ de dalle de 150 mm, dans la fourchette habituelle.
+
+- Barres principales (dans la longueur) : floor(3,85 m ÷ 0,15 m) + 1 = **26 barres de 5,85 m**
+- Barres de répartition : floor(5,85 m ÷ 0,15 m) + 1 = **40 barres de 3,85 m**
+- Longueur totale = 26 × 5,85 + 40 × 3,85 = **306 m** → ceil(306 ÷ 12) = **26 barres**
+- Poids = 306 m × (12² ÷ 162) kg/m = **272 kg**
+
+## Recommandations d'espacement courantes
+
+Points de départ pratiques, pas des valeurs de calcul — validez toujours l'espacement et le diamètre avec les plans de structure de votre chantier.
+
+- **Dalle de maison :** 150–200 mm c/c avec barres de 8–12 mm, une seule couche
+- **Semelle / radier :** 150–200 mm c/c avec barres de 12–16 mm, treillis supérieur et inférieur
+- **Mur de fondation :** 150–200 mm c/c verticaux plus barres horizontales
+- **Allée / terrasse :** 16–18 pouces (400–450 mm) c/c avec des barres #3–#4 suffit souvent

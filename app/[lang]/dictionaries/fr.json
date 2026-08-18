@@ -317,12 +317,12 @@
   "calculators": {
     "index": {
       "meta": {
-        "title": "Calculateurs de construction gratuits — Ciment, béton, brique",
-        "description": "Six calculateurs de construction gratuits — ciment, béton, brique, acier, peinture et carrelage. Saisissez votre chantier et obtenez une commande exacte de matériaux en yards cubes, pieds cubes ou unités métriques. Sacs de ciment pour une dalle, briques pour un mur, acier pour une armature, litres de peinture pour une pièce, carreaux pour un sol."
+        "title": "Calculateurs de construction gratuits — Ciment, béton, brique et ferraillage",
+        "description": "Sept calculateurs de construction gratuits — ciment, béton, brique, acier, ferraillage, peinture et carrelage. Saisissez votre chantier et obtenez une commande exacte de matériaux en yards cubes, pieds cubes ou unités métriques. Sacs de ciment pour une dalle, briques pour un mur, acier pour une armature, litres de peinture pour une pièce, carreaux pour un sol."
       },
       "eyebrow": "Outils",
       "title": "Calculateurs de construction gratuits",
-      "subtitle": "Six calculateurs pour les commandes de matériaux que vous passez réellement — ciment, béton, brique, acier, peinture et carrelage. Saisissez vos dimensions, obtenez des sacs, des briques, des kilogrammes ou des litres. Fonctionne en yards cubes, pieds cubes et mètres cubes.",
+      "subtitle": "Sept calculateurs pour les commandes de matériaux que vous passez réellement — ciment, béton, brique, acier, ferraillage, peinture et carrelage. Saisissez vos dimensions, obtenez des sacs, des briques, des kilogrammes ou des litres. Fonctionne en yards cubes, pieds cubes et mètres cubes.",
       "missing": "Il manque un calculateur que vous utilisez au quotidien ?",
       "contactSoon": "Formulaire de contact bientôt disponible."
     },
@@ -601,6 +601,41 @@
           "ratio": "Formatez comme a:b (par exemple 1:4)."
         }
       }
+    },
+    "rebar": {
+      "meta": {"title": "Calculateur de Ferraillage — Acier pour Dalle, Semelle et Mur (Longueur, Barres et Poids)", "description": "Calculateur de ferraillage gratuit pour dalles, semelles, murs et fondations en béton. Saisissez longueur, largeur, espacement et enrobage au bord pour obtenir le nombre de barres, la longueur totale, les barres de 12 m et le poids au mètre ou pied carré. Formule D²/162."},
+      "crumb": "Calculateur de Ferraillage",
+      "title": "Calculateur de Ferraillage — Renfort pour Dalle, Semelle, Mur et Fondation",
+      "subtitle": "Calculez la quantité d'acier d'armature pour une dalle, une semelle, un mur ou une fondation. Saisissez la taille de l'élément, l'espacement c/c et l'enrobage au bord — obtenez les barres par sens, la longueur totale, les barres de 12 m et le poids par m² et pi².",
+      "form": {
+        "section1": "Élément + dimensions",
+        "member": "Type d'élément",
+        "memberHint": "Même calcul de grille — seul l'espacement de départ suggéré change.",
+        "dimHint": "Dimensions totales coulées de l'élément (bord à bord), pas la grille.",
+        "section2": "Disposition de l'armature",
+        "spacing": "Espacement barre–barre (c/c)",
+        "spacingAria": "Espacement centre à centre entre barres parallèles",
+        "edgeSpacing": "Enrobage au bord",
+        "edgeAria": "Distance de la barre extérieure au bord de l'élément",
+        "section3": "Barre + commande",
+        "barDiameter": "Diamètre de barre",
+        "barLength": "Longueur d'une barre",
+        "barLengthAria": "Longueur de stock d'une barre du fournisseur",
+        "wastage": "Chute",
+        "wastageAria": "Pourcentage de chute pour coupe, recouvrements et chevauchements",
+        "lenAria": "Longueur de l'élément",
+        "widAria": "Largeur de l'élément",
+        "errors": {"lenMin": "Saisissez une longueur supérieure à 0.", "lenMax": "La longueur doit être de 200 m ou moins.", "widMin": "Saisissez une largeur supérieure à 0.", "widMax": "La largeur doit être de 200 m ou moins.", "spMin": "Saisissez un espacement supérieur à 0.", "spMax": "L'espacement doit être de 2 m ou moins.", "edgeMin": "L'enrobage doit être de 0 ou plus.", "edgeMax": "L'enrobage doit être inférieur à la moitié de l'élément.", "barLenMin": "Saisissez une longueur de barre supérieure à 0.", "barLenMax": "La longueur de barre doit être de 60 m ou moins.", "wastageRange": "La chute doit être entre 0 et 20%."},
+        "examples": {"fill1": "Exemple : dalle 6000 × 4000 mm, 150 mm c/c, barres 12 mm, stock 12 m."},
+        "placeholder": "Remplissez le formulaire et appuyez sur Calculer pour voir votre commande de ferraillage."
+      },
+      "sizes": {
+        "heading": "Tailles de barres",
+        "note": "Les tailles de barres américaines donnent le diamètre en huitièmes de pouce jusqu'à #8 ; les tailles métriques utilisent le diamètre nominal en millimètres. Le ferraillage TMT en Inde se vend par diamètre nominal — typiquement 8, 10, 12, 16, 20, 25 et 32 mm.",
+        "cols": {"imperial": "Taille impériale", "metric": "Taille métrique", "diaIn": "Diamètre (pouce)", "diaMm": "Diamètre (mm)"}
+      },
+      "article": {"toc": "Sur cette page", "heading": "Tout savoir sur le ferraillage"},
+      "faq": [{"q": "De combien de ferraillage ai-je besoin pour une dalle en béton ?", "a": "Saisissez la longueur et la largeur de la dalle, l'espacement centre à centre et l'enrobage au bord. Le calculateur renvoie les barres par sens, la longueur totale en mètres et les barres de stock (12 m) à commander. Une dalle de 6 × 4 m à 150 mm c/c demande environ 66 barres et près de 306 m de ferraillage."}, {"q": "Comment calculer le ferraillage d'une dalle en pieds carrés ?", "a": "Trouvez la surface de la dalle en pieds carrés, divisez par l'espacement de chaque côté pour obtenir les lignes de barres, puis multipliez par la longueur de barre. Le calculateur le fait pour vous et indique aussi le poids par pied carré — un treillis résidentiel simple vaut environ 1 kg par pied carré."}, {"q": "Comment calculer le poids du ferraillage ?", "a": "Poids du ferraillage = longueur totale × poids au mètre. Pour un diamètre D en millimètres, poids au mètre ≈ D² / 162 kg/m. Une barre de 12 mm pèse environ 0,89 kg/m ; une barre de 16 mm environ 1,58 kg/m."}, {"q": "De combien de barres de ferraillage ai-je besoin ?", "a": "Divisez la longueur totale de ferraillage par la longueur de stock achetée (12 m pour le TMT indien) et arrondissez au supérieur. Le calculateur le fait automatiquement et affiche le nombre de barres."}, {"q": "Faut-il du ferraillage dans une semelle ou une fondation ?", "a": "Quasiment toujours oui. Les semelles et fondations supportent toute la charge du bâtiment et ont besoin d'armatures contre la flexion et les fissures. Guide type : 150–200 mm c/c avec des barres de 12–16 mm dans les treillis supérieur et inférieur. Validez avec les plans de structure."}, {"q": "Faut-il du ferraillage dans un mur en béton ?", "a": "Cela dépend. Les murs de soutènement et de fondation ont presque toujours besoin de barres verticales plus des barres de répartition horizontales. Les cloisons simples peuvent se contenter d'un treillis léger. Réglez l'élément sur « mur » et validez avec un ingénieur."}, {"q": "Qu'est-ce que l'enrobage au bord (espacement bord–grille) ?", "a": "C'est la distance entre la ligne de barre la plus externe et le bord du béton — le béton autour des barres qui les protège de l'eau et de la corrosion. Le calculateur soustrait deux enrobages (un par extrémité) de chaque dimension pour obtenir la taille réelle de la grille."}, {"q": "Que m'indique le ferraillage au mètre carré ?", "a": "C'est le poids total de ferraillage divisé par la surface de l'élément — une vérification rapide de densité. Un treillis simple de 12 mm à 150 mm c/c fait environ 11–12 kg par m² ; un double treillis avec barres de 16 mm peut atteindre 20–25 kg par m²."}]
     }
   },
   "results": {

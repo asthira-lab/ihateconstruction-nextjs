@@ -317,12 +317,12 @@
   "calculators": {
     "index": {
       "meta": {
-        "title": "Calculadoras de construcción gratuitas — Cemento, concreto, ladrillo",
-        "description": "Seis calculadoras de construcción gratuitas: cemento, concreto, ladrillo, acero, pintura y azulejo. Ingresa tu trabajo y obtén un pedido exacto de material en yardas cúbicas, pies cúbicos o unidades métricas. Bolsas de cemento para una losa, ladrillos para una pared, acero para refuerzo, litros de pintura para una habitación, azulejos para un piso."
+        "title": "Calculadoras de construcción gratuitas — Cemento, concreto, ladrillo y rebar",
+        "description": "Siete calculadoras de construcción gratuitas: cemento, concreto, ladrillo, acero, rebar, pintura y azulejo. Ingresa tu trabajo y obtén un pedido exacto de material en yardas cúbicas, pies cúbicos o unidades métricas. Bolsas de cemento para una losa, ladrillos para una pared, acero para refuerzo, litros de pintura para una habitación, azulejos para un piso."
       },
       "eyebrow": "Herramientas",
       "title": "Calculadoras de construcción gratuitas",
-      "subtitle": "Seis calculadoras para los pedidos de material que realmente haces: cemento, concreto, ladrillo, acero, pintura y azulejo. Ingresa tus dimensiones y obtén bolsas, ladrillos, kilogramos o litros. Funciona en yardas cúbicas, pies cúbicos y metros cúbicos.",
+      "subtitle": "Siete calculadoras para los pedidos de material que realmente haces: cemento, concreto, ladrillo, acero, rebar, pintura y azulejo. Ingresa tus dimensiones y obtén bolsas, ladrillos, kilogramos o litros. Funciona en yardas cúbicas, pies cúbicos y metros cúbicos.",
       "missing": "¿Te falta una calculadora que usas a diario?",
       "contactSoon": "Formulario de contacto próximamente."
     },
@@ -601,6 +601,41 @@
           "ratio": "Formato a:b (por ejemplo, 1:4)."
         }
       }
+    },
+    "rebar": {
+      "meta": {"title": "Calculadora de Rebar — Acero para Losa, Zapata y Muro (Longitud, Piezas y Peso)", "description": "Calculadora de rebar gratuita para losas, zapatas, muros y cimentaciones de concreto. Ingresa largo, ancho, separación y recubrimiento al borde para obtener el número de barras, la longitud total, las piezas de 12 m y el peso por metro o pie cuadrado. Fórmula D²/162."},
+      "crumb": "Calculadora de Rebar",
+      "title": "Calculadora de Rebar — Refuerzo para Losa, Zapata, Muro y Cimentación",
+      "subtitle": "Calcula cuánto acero de refuerzo necesitas para una losa, zapata, muro o cimentación. Ingresa el tamaño del elemento, la separación c/c y el recubrimiento al borde — obtén barras por dirección, longitud total, piezas de 12 m y peso por m² y ft².",
+      "form": {
+        "section1": "Elemento + dimensiones",
+        "member": "Tipo de elemento",
+        "memberHint": "Mismo cálculo de malla — solo cambia la separación inicial sugerida.",
+        "dimHint": "Dimensiones totales vertidas del elemento (borde a borde), no la malla.",
+        "section2": "Distribución del refuerzo",
+        "spacing": "Separación barra–barra (c/c)",
+        "spacingAria": "Separación centro a centro entre barras paralelas",
+        "edgeSpacing": "Recubrimiento al borde",
+        "edgeAria": "Distancia de la barra exterior al borde del elemento",
+        "section3": "Barra + pedido",
+        "barDiameter": "Diámetro de barra",
+        "barLength": "Longitud de una barra",
+        "barLengthAria": "Longitud comercial de una barra del proveedor",
+        "wastage": "Desperdicio",
+        "wastageAria": "Porcentaje de desperdicio por corte, traslapes y solapes",
+        "lenAria": "Largo del elemento",
+        "widAria": "Ancho del elemento",
+        "errors": {"lenMin": "Ingresa un largo mayor que 0.", "lenMax": "El largo debe ser 200 m o menos.", "widMin": "Ingresa un ancho mayor que 0.", "widMax": "El ancho debe ser 200 m o menos.", "spMin": "Ingresa una separación mayor que 0.", "spMax": "La separación debe ser 2 m o menos.", "edgeMin": "El recubrimiento debe ser 0 o más.", "edgeMax": "El recubrimiento debe ser menor que la mitad del elemento.", "barLenMin": "Ingresa una longitud de barra mayor que 0.", "barLenMax": "La longitud de barra debe ser 60 m o menos.", "wastageRange": "El desperdicio debe estar entre 0 y 20%."},
+        "examples": {"fill1": "Ejemplo: losa de 6000 × 4000 mm, 150 mm c/c, barras de 12 mm, stock de 12 m."},
+        "placeholder": "Llena el formulario y pulsa Calcular para ver tu pedido de rebar."
+      },
+      "sizes": {
+        "heading": "Tamaños de barra",
+        "note": "Los tamaños de barra de EE. UU. dan el diámetro en octavos de pulgada hasta #8; los métricos usan el diámetro nominal en milímetros. El rebar TMT en India se vende por diámetro nominal — normalmente 8, 10, 12, 16, 20, 25 y 32 mm.",
+        "cols": {"imperial": "Tamaño imperial", "metric": "Tamaño métrico", "diaIn": "Diámetro (pulg)", "diaMm": "Diámetro (mm)"}
+      },
+      "article": {"toc": "En esta página", "heading": "Todo lo que debes saber sobre el rebar"},
+      "faq": [{"q": "¿Cuánto rebar necesito para una losa de concreto?", "a": "Ingresa el largo y ancho de la losa, la separación centro a centro y el recubrimiento al borde. La calculadora devuelve las barras por dirección, la longitud total en metros y las barras de stock (12 m) a pedir. Una losa de 6 × 4 m a 150 mm c/c necesita unas 66 barras y cerca de 306 m de rebar."}, {"q": "¿Cómo calculo el rebar de una losa en pies cuadrados?", "a": "Halla el área de la losa en pies cuadrados, divide entre la separación de cada lado para obtener las líneas de barra y multiplica por el largo de barra. La calculadora lo hace por ti y también informa el peso por pie cuadrado — una malla residencial de una capa ronda 1 kg por pie cuadrado."}, {"q": "¿Cómo calculo el peso del rebar?", "a": "Peso del rebar = longitud total × peso por metro. Para diámetro D en milímetros, peso por metro ≈ D² / 162 kg/m. Una barra de 12 mm pesa unos 0,89 kg/m; una de 16 mm unos 1,58 kg/m."}, {"q": "¿Cuántas piezas de rebar necesito?", "a": "Divide la longitud total de rebar entre la longitud comercial que compras (12 m para TMT indio) y redondea hacia arriba. La calculadora lo hace sola y muestra el número de piezas."}, {"q": "¿Necesito rebar en una zapata o cimentación?", "a": "Casi siempre sí. Las zapatas y cimentaciones soportan toda la carga del edificio y requieren refuerzo contra la flexión y las grietas. Guía típica: 150–200 mm c/c con barras de 12–16 mm en las mallas superior e inferior. Confirma con los planos estructurales."}, {"q": "¿Necesito rebar en un muro de concreto?", "a": "Depende. Los muros de contención y de cimentación casi siempre necesitan rebar vertical más barras horizontales de reparto. Los muros simples pueden bastar con malla ligera. Usa el elemento \"wall\" y confirma con un ingeniero."}, {"q": "¿Qué es el recubrimiento al borde (separación borde–malla)?", "a": "Es la distancia desde la línea de rebar más externa hasta el borde del concreto — el concreto que protege las barras del agua y la corrosión. La calculadora resta dos recubrimientos (uno por extremo) de cada dimensión para obtener el tamaño real de la malla."}, {"q": "¿Qué me dice el rebar por metro cuadrado?", "a": "Es el peso total de rebar dividido entre el área del elemento — una comprobación rápida de densidad. Una malla de una capa de 12 mm a 150 mm c/c es unos 11–12 kg por m²; una doble malla con barras de 16 mm puede llegar a 20–25 kg por m²."}]
     }
   },
   "results": {

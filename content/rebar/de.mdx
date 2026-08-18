@@ -1,0 +1,36 @@
+## Was ist Bewehrungsstahl?
+
+Bewehrungsstahl (auch Armierung oder Rebar) ist eine Stahlstange, die in Beton eingebettet wird, um Zugkräfte aufzunehmen. Beton ist druckfest, aber zugschwach — Bewehrung macht aus einer spröden Platte eine bewehrte Platte, die Biegung und Rissen jahrzehntelang standhält.
+
+Die Bewehrung wird vor dem Betonieren als Gitter verlegt und mit Draht gebunden. Wie viel Sie brauchen, hängt von der Fläche, dem Stabdurchmesser und dem Achsabstand (c/c) zwischen parallelen Stäben in beiden Richtungen ab.
+
+## So verwenden Sie den Bewehrungsrechner
+
+Vier Angaben genügen, um die Bewehrungsbestellung für eine Platte (Decke/Bodenplatte), ein Fundament, eine Wand oder ein Streifenfundament zu planen:
+
+1. Bauteil messen — **Länge** und **Breite** der betonierten Fläche eingeben.
+2. Bewehrungsanordnung wählen — den c/c-Abstand zwischen parallelen Stäben und die **Randüberdeckung** bis zu den äußeren Stäben.
+3. **Stabdurchmesser** wählen — 8, 10, 12 oder 16 mm sind für Platten und Fundamente am üblichsten.
+4. **Lieferlänge** eingeben (indische TMT-Stäbe gibt es in 12-m-Längen) und den Verschnittzuschlag.
+
+Der Rechner ermittelt die Anzahl der Stabreihen pro Richtung, die Gesamtlänge in Metern, die benötigten Stablängen zum Bestellen und das geschätzte Stahlgewicht.
+
+## Rechenbeispiel
+
+Platte **6,0 m × 4,0 m**, **150 mm c/c-Abstand**, **75 mm Randüberdeckung**, **12-mm-Stäbe**, Lieferlänge **12 m**.
+
+Das Gitter ist 5,85 m × 3,85 m. Das ergibt 26 Stäbe in der Länge und 40 in der Breite — insgesamt 66 Stäbe, etwa **306 m Bewehrung**, aufgeteilt in 26 Stäbe à 12 m. Bei 12 mm (0,89 kg/m nach D²/162) sind das rund **272 kg** vor Verschnitt — etwa 11 kg pro m² bzw. 76 kg pro m³ einer 150-mm-Platte, also im üblichen Bereich.
+
+- Hauptstäbe (in Längsrichtung): floor(3,85 m ÷ 0,15 m) + 1 = **26 Stäbe à 5,85 m**
+- Verteilungsstäbe: floor(5,85 m ÷ 0,15 m) + 1 = **40 Stäbe à 3,85 m**
+- Gesamtlänge = 26 × 5,85 + 40 × 3,85 = **306 m** → ceil(306 ÷ 12) = **26 Stäbe**
+- Gewicht = 306 m × (12² ÷ 162) kg/m = **272 kg**
+
+## Übliche Abstandsempfehlungen
+
+Praktische Ausgangswerte, keine Bemessungswerte — bestätigen Sie Abstand und Durchmesser immer anhand der Statikpläne Ihrer Baustelle.
+
+- **Wohnhausplatte:** 150–200 mm c/c mit 8–12-mm-Stäben, einlagig
+- **Fundament / Bodenplatte:** 150–200 mm c/c mit 12–16-mm-Stäben, oberes und unteres Gitter
+- **Kellerwand:** 150–200 mm c/c vertikal plus horizontale Stäbe
+- **Einfahrt / Terrasse:** 16–18 Zoll (400–450 mm) c/c mit Stäben #3–#4 reicht oft

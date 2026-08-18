@@ -35,6 +35,8 @@ import { steelRequestSchema } from "@/features/calculators/steel/schema";
 import { computeSteel } from "@/features/calculators/steel/compute";
 import { tileRequestSchema } from "@/features/calculators/tile/schema";
 import { computeTile } from "@/features/calculators/tile/compute";
+import { rebarRequestSchema } from "@/features/calculators/rebar/schema";
+import { computeRebar } from "@/features/calculators/rebar/compute";
 
 const IMMUTABLE_KEYS = new Set([
   "id", "projectId", "calculator", "request", "result", "computedAt", "createdAt", "updatedAt",
@@ -73,6 +75,10 @@ async function runCalculator(
       case "tile": {
         const req = tileRequestSchema.parse(rawRequest);
         return (await computeTile(req)) as unknown as Record<string, unknown>;
+      }
+      case "rebar": {
+        const req = rebarRequestSchema.parse(rawRequest);
+        return (await computeRebar(req)) as unknown as Record<string, unknown>;
       }
       default: {
         const _exhaustive: never = slug;

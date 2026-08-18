@@ -1,0 +1,36 @@
+## What is rebar?
+
+Rebar (reinforcement bar) is a steel bar embedded in concrete to carry tension. Concrete is strong in compression but weak in tension — adding rebar turns a brittle slab into a reinforced slab that resists bending and cracking for decades.
+
+Rebar is laid in a grid and tied with wire before the concrete is poured. How much you need depends on the area, the bar diameter, and the centre-to-centre (c/c) spacing between parallel bars in both directions.
+
+## How to use the rebar calculator
+
+Four numbers are enough to plan a rebar order for a slab, footing, wall, or foundation:
+
+1. Measure the member — enter the **length** and **width** of the poured concrete area.
+2. Choose the rebar layout — the c/c spacing between parallel bars and the **edge cover** to the outer bars.
+3. Pick the **bar size** — 8, 10, 12, or 16 mm are the most common diameters for slabs and footings.
+4. Enter the **stock length** you buy (Indian TMT bars ship in 12 m lengths) and any cutting wastage.
+
+The calculator then works out the number of bar lines in each direction, the total rebar length in metres, the pieces of stock rebar to order, and the estimated rebar weight.
+
+## Worked example
+
+Slab **6.0 m × 4.0 m**, **150 mm c/c spacing**, **75 mm edge cover**, **12 mm bars**, stock bars of **12 m**.
+
+The grid is 5.85 m × 3.85 m. That gives 26 bars along the length and 40 across the width — 66 bars in total, about **306 m of rebar**, cut into 26 pieces of 12 m. At 12 mm diameter (0.89 kg/m via D²/162) that is roughly **272 kg** before wastage — about 11 kg per m², or 76 kg per cubic metre of a 150 mm slab, right in the typical slab reinforcement range.
+
+- Main bars (along length): floor(3.85 m ÷ 0.15 m) + 1 = **26 bars of 5.85 m**
+- Distribution bars: floor(5.85 m ÷ 0.15 m) + 1 = **40 bars of 3.85 m**
+- Total length = 26 × 5.85 + 40 × 3.85 = **306 m** → ceil(306 ÷ 12) = **26 pieces**
+- Weight = 306 m × (12² ÷ 162) kg/m = **272 kg**
+
+## Common rebar spacing guidance
+
+Practical starting points, not design values — always confirm spacing and bar size against the structural drawings for your site.
+
+- **House slab:** 150–200 mm c/c with 8–12 mm bars, single layer
+- **Footing / raft:** 150–200 mm c/c with 12–16 mm bars, top and bottom mesh
+- **Foundation wall:** 150–200 mm c/c vertical plus horizontal bars
+- **Driveway / patio:** 16–18 in (400–450 mm) c/c with #3–#4 bars is often enough

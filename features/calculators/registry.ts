@@ -61,6 +61,13 @@ export const CALCULATORS: CalculatorEntry[] = [
       "Tile count, adhesive, and grout for any floor or wall. Handles tile size, joint width, and wastage.",
     status: "live",
   },
+  {
+    slug: "rebar-calculator",
+    title: "Rebar calculator",
+    description:
+      "Rebar grid for a slab, footing, wall, or foundation — bar count each way, total length, pieces, and weight from size, spacing, and edge cover.",
+    status: "live",
+  },
 ];
 
 export function calculatorHref(entry: CalculatorEntry, locale?: string): string {
