@@ -5,7 +5,7 @@ import { siteConfig, siteUrl } from "@/app/lib/site";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
-import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
+import { CalculatorSearch } from "@/components/marketing/CalculatorSearch";
 import { CALCULATORS, calculatorHref } from "@/features/calculators/registry";
 import { getDictionaryFor } from "@/app/[lang]/dictionaries";
 import { isLocale, locales, defaultLocale } from "@/app/i18n-config";
@@ -55,6 +55,15 @@ function jsonLd(locale: string, home: string, crumb: string) {
   ];
 }
 
+interface LocalizedEntry {
+  slug: string;
+  href: string;
+  title: string;
+  description: string;
+  keywords: string[];
+  status: "live" | "coming";
+}
+
 export default async function CalculatorsPage({
   params,
 }: {
@@ -64,6 +73,19 @@ export default async function CalculatorsPage({
   const locale = isLocale(lang) ? lang : defaultLocale;
   const dict = await getDictionaryFor(locale);
   const t = dict.calculators.index;
+
+  const entries: LocalizedEntry[] = CALCULATORS.map((e) => {
+    const calcDict = (dict.calculators as Record<string, { title?: string; meta?: { description?: string } }>)[e.slug];
+    return {
+      slug: e.slug,
+      href: calculatorHref(e, locale),
+      title: calcDict?.title ?? e.title,
+      description: calcDict?.meta?.description ?? e.description,
+      keywords: e.keywords ?? [],
+      status: e.status,
+    };
+  });
+
   return (
     <>
       <script
@@ -85,7 +107,15 @@ export default async function CalculatorsPage({
             </p>
           </header>
 
-          <CalculatorGrid locale={locale} comingLabel={dict.common.coming} />
+          <CalculatorSearch
+            entries={entries}
+            locale={locale}
+            comingLabel={dict.common.coming}
+            placeholder={t.search.placeholder}
+            emptyLabel={t.search.empty}
+            clearLabel={t.search.clear}
+            resultsLabelTemplate={t.search.results}
+          />
 
           <p className="mt-12 text-xs text-black/50 dark:text-white/50">
             {t.missing}

@@ -8,9 +8,24 @@ import {
   type CalculatorEntry,
 } from "@/features/calculators/registry";
 
-function LiveCard({ entry, locale }: { entry: CalculatorEntry; locale: string }) {
+interface LocalizedEntry {
+  slug: string;
+  href: string;
+  title: string;
+  description: string;
+  keywords: string[];
+  status: "live" | "coming";
+}
+
+interface LiveCardProps {
+  entry: CalculatorEntry | LocalizedEntry;
+  locale: string;
+}
+
+function LiveCard({ entry, locale }: LiveCardProps) {
+  const href = "href" in entry ? entry.href : calculatorHref(entry, locale);
   return (
-    <Card as="a" href={calculatorHref(entry, locale)} interactive className="group">
+    <Card as="a" href={href} interactive className="group">
       <div className="flex items-center justify-between">
         <span
           aria-hidden="true"
@@ -33,7 +48,7 @@ function LiveCard({ entry, locale }: { entry: CalculatorEntry; locale: string })
   );
 }
 
-function ComingCard({ entry, comingLabel }: { entry: CalculatorEntry; comingLabel: string }) {
+function ComingCard({ entry, comingLabel }: { entry: CalculatorEntry | LocalizedEntry; comingLabel: string }) {
   return (
     <Card as="div" aria-disabled="true" className="opacity-70">
       <div className="flex items-center justify-between">
@@ -57,17 +72,34 @@ function ComingCard({ entry, comingLabel }: { entry: CalculatorEntry; comingLabe
   );
 }
 
+type DisplayEntry = CalculatorEntry | LocalizedEntry;
+
 interface CalculatorGridProps {
   locale: string;
   comingLabel: string;
   filter?: (entry: CalculatorEntry) => boolean;
+  entries?: LocalizedEntry[];
+  emptyState?: React.ReactNode;
+  id?: string;
 }
 
-export function CalculatorGrid({ locale, comingLabel, filter }: CalculatorGridProps) {
-  const entries = filter ? CALCULATORS.filter(filter) : CALCULATORS;
+export function CalculatorGrid({
+  locale,
+  comingLabel,
+  filter,
+  entries,
+  emptyState,
+  id,
+}: CalculatorGridProps) {
+  const displayEntries: DisplayEntry[] = entries ?? (filter ? CALCULATORS.filter(filter) : CALCULATORS);
+
+  if (displayEntries.length === 0 && emptyState) {
+    return <div id={id} role="listbox">{emptyState}</div>;
+  }
+
   return (
-    <ul className="grid gap-4 md:grid-cols-2">
-      {entries.map((entry) => (
+    <ul id={id} className="grid gap-4 md:grid-cols-2" role="listbox">
+      {displayEntries.map((entry) => (
         <li key={entry.slug}>
           {entry.status === "live" ? (
             <LiveCard entry={entry} locale={locale} />

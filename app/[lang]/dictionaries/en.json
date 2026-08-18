@@ -479,7 +479,13 @@
       "title": "Free construction calculators",
       "subtitle": "Eight calculators for the material orders you actually place — cement, concrete, concrete slab, brick, steel, paint, tile, and rebar. Enter your dimensions, get bags, bricks, kilograms, or litres. Works in cubic yards, cubic feet, and cubic metres.",
       "missing": "Missing a calculator you use daily?",
-      "contactSoon": "Contact form coming soon."
+      "contactSoon": "Contact form coming soon.",
+      "search": {
+        "placeholder": "Search calculators…",
+        "empty": "No calculators match \"{q}\".",
+        "clear": "Clear search",
+        "results": "{n} results"
+      }
     },
     "common": {
       "eyebrow": "Calculator",

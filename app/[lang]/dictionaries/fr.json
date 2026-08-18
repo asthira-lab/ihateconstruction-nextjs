@@ -479,7 +479,13 @@
       "title": "Calculateurs de construction gratuits",
       "subtitle": "Sept calculateurs pour les commandes de matériaux que vous passez réellement — ciment, béton, brique, acier, ferraillage, peinture et carrelage. Saisissez vos dimensions, obtenez des sacs, des briques, des kilogrammes ou des litres. Fonctionne en yards cubes, pieds cubes et mètres cubes.",
       "missing": "Il manque un calculateur que vous utilisez au quotidien ?",
-      "contactSoon": "Formulaire de contact bientôt disponible."
+      "contactSoon": "Formulaire de contact bientôt disponible.",
+      "search": {
+        "placeholder": "Rechercher des calculateurs…",
+        "empty": "Aucun calculateur ne correspond à « {q} ».",
+        "clear": "Effacer la recherche",
+        "results": "{n} résultats"
+      }
     },
     "common": {
       "eyebrow": "Calculateur",

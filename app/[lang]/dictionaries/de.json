@@ -479,7 +479,13 @@
       "title": "Kostenlose Bau-Rechner",
       "subtitle": "Sieben Rechner für die Materialbestellungen, die Sie tatsächlich aufgeben — Zement, Beton, Ziegel, Stahl, Bewehrung, Farbe und Fliesen. Geben Sie Ihre Abmessungen ein, erhalten Sie Säcke, Ziegel, Kilogramm oder Liter. Funktioniert in Kubikyards, Kubikfuß und Kubikmetern.",
       "missing": "Fehlt ein Rechner, den Sie täglich nutzen?",
-      "contactSoon": "Kontaktformular kommt bald."
+      "contactSoon": "Kontaktformular kommt bald.",
+      "search": {
+        "placeholder": "Rechner suchen…",
+        "empty": "Kein Rechner stimmt mit \"{q}\" überein.",
+        "clear": "Suche löschen",
+        "results": "{n} Ergebnisse"
+      }
     },
     "common": {
       "eyebrow": "Rechner",

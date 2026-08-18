@@ -479,7 +479,13 @@
       "title": "Calculadoras de construcción gratuitas",
       "subtitle": "Siete calculadoras para los pedidos de material que realmente haces: cemento, concreto, ladrillo, acero, rebar, pintura y azulejo. Ingresa tus dimensiones y obtén bolsas, ladrillos, kilogramos o litros. Funciona en yardas cúbicas, pies cúbicos y metros cúbicos.",
       "missing": "¿Te falta una calculadora que usas a diario?",
-      "contactSoon": "Formulario de contacto próximamente."
+      "contactSoon": "Formulario de contacto próximamente.",
+      "search": {
+        "placeholder": "Buscar calculadoras…",
+        "empty": "Ninguna calculadora coincide con \"{q}\".",
+        "clear": "Limpiar búsqueda",
+        "results": "{n} resultados"
+      }
     },
     "common": {
       "eyebrow": "Calculadora",
