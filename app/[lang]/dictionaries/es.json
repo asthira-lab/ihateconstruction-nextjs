@@ -71,7 +71,7 @@
     "hero": {
       "eyebrow": "Herramientas gratuitas para contratistas indios",
       "title": "Presupuestos y calculadoras hechas para la forma en que los contratistas realmente trabajan.",
-      "subtitle": "Calculadoras gratuitas y con unidades integradas que convierten las dimensiones de una pared en pedidos de materiales: ladrillos, cemento, arena, azulejos, pintura, acero. Proyectos, BOQ y cotizaciones listas para GST vienen a continuación.",
+      "subtitle": "Calculadoras gratuitas y con unidades integradas que convierten las dimensiones de una pared en pedidos de materiales: ladrillos, cemento, arena, azulejos, pintura, acero, armadura y volumen de concreto. Los proyectos, BOQ y cotizaciones con GST llegan pronto.",
       "ctaPrimary": "Abrir calculadoras",
       "ctaSecondary": "Prueba la calculadora de ladrillos",
       "note": "No se requiere cuenta · Métrico e imperial · Funciona en el móvil"
@@ -83,7 +83,7 @@
       "cards": {
         "calculators": {
           "title": "Calculadoras",
-          "body": "Cinco calculadoras probadas en obra para concreto, ladrillo, pintura, azulejo y acero. Ingresa tu trabajo y obtén las cantidades exactas de material."
+          "body": "Calculadoras probadas en obra para concreto, volumen de concreto, ladrillo, pintura, azulejo, acero y armadura. Ingresa tu trabajo y obtén las cantidades exactas de material."
         },
         "projects": {
           "title": "Proyectos y BOQ",
@@ -101,7 +101,7 @@
       "steps": {
         "pick": {
           "title": "Elige una calculadora",
-          "body": "Elige entre concreto, ladrillo, pintura, azulejo o acero. Cada una viene con los preajustes que realmente usas en obra."
+          "body": "Elige entre concreto, volumen de concreto, ladrillo, pintura, azulejo, acero o armadura. Cada una viene con los preajustes que realmente usas en obra."
         },
         "enter": {
           "title": "Ingresa tu trabajo",
@@ -1082,6 +1082,153 @@
         {
           "q": "¿Qué me dice el rebar por metro cuadrado?",
           "a": "Es el peso total de rebar dividido entre el área del elemento — una comprobación rápida de densidad. Una malla de una capa de 12 mm a 150 mm c/c es unos 11–12 kg por m²; una doble malla con barras de 16 mm puede llegar a 20–25 kg por m²."
+        }
+      ]
+    },
+    "concrete-volume": {
+      "meta": {
+        "title": "Calculadora de Volumen de Hormigón — Yardas, Pies y Metros Cúbicos",
+        "description": "Calculadora gratuita de volumen de hormigón — yardas cúbicas, pies cúbicos y metros cúbicos para losas, zapatas, muros y agujeros para postes."
+      },
+      "crumb": "Calculadora de Volumen de Hormigón",
+      "title": "Calculadora de Volumen de Hormigón — Yardas Cúbicas, Pies Cúbicos y Metros Cúbicos",
+      "subtitle": "Averigua cuánto hormigón necesitas en yardas cúbicas, pies cúbicos o metros cúbicos. Introduce la forma y dimensiones de la colada — losa, zapata, muro o agujero para poste — más un margen de desperdicio, y obtén el volumen exacto.",
+      "form": {
+        "section1": "Forma de la colada",
+        "shape": "Forma",
+        "shapeHint": "Rectangular para losas y zapatas; cilíndrica para agujeros de poste.",
+        "shapeRect": "Rectangular (losa / zapata)",
+        "shapeCylinder": "Cilíndrica (agujero de poste)",
+        "section2": "Dimensiones",
+        "thickness": "Espesor / profundidad",
+        "thkAria": "Espesor o profundidad de la colada",
+        "diameter": "Diámetro",
+        "diaAria": "Diámetro del agujero de poste redondo",
+        "depth": "Profundidad",
+        "lenAria": "Longitud de la colada",
+        "widAria": "Ancho de la colada",
+        "rectHint": "Largo × ancho × profundidad da el volumen. Deja 50–75 mm extra de profundidad sobre relleno compactado.",
+        "cylHint": "Un agujero de poste es un cilindro: volumen = π × (diámetro/2)² × profundidad.",
+        "section3": "Pedido",
+        "wastage": "Desperdicio",
+        "wastageAria": "Porcentaje de desperdicio por derrames, sobre-excavación y encofrado",
+        "errors": {
+          "lenMin": "Introduce una longitud mayor que 0.",
+          "lenMax": "La longitud debe ser 200 m o menos.",
+          "widMin": "Introduce un ancho mayor que 0.",
+          "widMax": "El ancho debe ser 200 m o menos.",
+          "thkMin": "Introduce un espesor mayor que 0.",
+          "thkMax": "El espesor debe ser 5 m o menos.",
+          "diaMin": "Introduce un diámetro mayor que 0.",
+          "diaMax": "El diámetro debe ser 10 m o menos.",
+          "wastageRange": "El desperdicio debe estar entre 0 y 50%."
+        },
+        "examples": {
+          "fill1": "Ejemplo: losa de 6 × 4 m, 150 mm de profundidad, 5% de desperdicio."
+        },
+        "placeholder": "Rellena el formulario y pulsa Calculate para ver el volumen de hormigón."
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que debes saber sobre el volumen de hormigón"
+      },
+      "faq": [
+        {
+          "q": "¿Cómo calculo el volumen de hormigón de una losa?",
+          "a": "Multiplica largo × ancho × profundidad. Una losa de 6 × 4 m vertida a 150 mm es 6 × 4 × 0.15 = 3.6 metros cúbicos, unas 4.7 yardas cúbicas. La calculadora lo hace en cualquier unidad."
+        },
+        {
+          "q": "¿Cuántas yardas cúbicas de hormigón necesito?",
+          "a": "Multiplica el área por el espesor en la misma unidad y convierte a yardas cúbicas (1 yd³ = 0.7646 m³). Un patio de 10 × 10 ft de 4 pulgadas es ≈ 1.23 yd³ — redondea a 1.3–1.5 yd³."
+        },
+        {
+          "q": "¿Cuánto hormigón necesito para un agujero de poste?",
+          "a": "Un agujero de poste es un cilindro: volumen = π × (diámetro/2)² × profundidad. Un agujero de 300 mm de 600 mm de profundidad ≈ 0.042 m³. El modo cilíndrico lo calcula por ti."
+        },
+        {
+          "q": "¿Cómo convierto el volumen entre metros, pies y yardas cúbicas?",
+          "a": "1 yarda cúbica = 27 pies cúbicos = 0.7646 metros cúbicos. A la inversa, 1 m³ = 1.308 yd³ = 35.31 ft³. La calculadora muestra las tres unidades a la vez."
+        },
+        {
+          "q": "¿Cuánto pesa un metro cúbico de hormigón?",
+          "a": "El hormigón armado pesa unos 2400 kg por m³ (≈150 lb por ft³). La calculadora usa 2400 kg/m³ para estimar el peso."
+        },
+        {
+          "q": "¿Qué desperdicio debo añadir al pedir hormigón?",
+          "a": "Añade 5–10% por terreno irregular, sobre-excavación, derrames y encofrado. Los proveedores cotizan en yardas completas. La calculadora incluye un deslizador de desperdicio."
+        },
+        {
+          "q": "¿Cuánto hormigón necesito para una zapata o cimentación?",
+          "a": "Usa la misma fórmula largo × ancho × profundidad. Una zapata corrida es un rectángulo largo: introduce largo, ancho y espesor. Obtén el volumen en metros, pies y yardas."
+        },
+        {
+          "q": "¿Puedo pedir hormigón por camión?",
+          "a": "La mayoría de los camiones de hormigón premezclado cargan 9–12 yd³. Divide tu pedido por la capacidad del camión. Un pedido de 10 yd³ cabe en un solo camión."
+        }
+      ]
+    },
+    "concrete-slab": {
+      "meta": {
+        "title": "Calculadora de losa de hormigón — bolsas, yardas y camiones",
+        "description": "Calculadora gratuita de losa de hormigón. Introduce largo, ancho y grosor para obtener el volumen en yardas cúbicas y metros, bolsas de mezcla (80 lb / 60 lb) y camiones de hormigón premezclado."
+      },
+      "crumb": "Calculadora de losa de hormigón",
+      "title": "Calculadora de losa de hormigón",
+      "subtitle": "Calcula cuánto hormigón necesita una losa — metros cúbicos, yardas cúbicas, bolsas de mezcla y camiones — a partir del largo, ancho y grosor.",
+      "form": {
+        "section1": "Dimensiones de la losa",
+        "thickness": "Grosor (profundidad de la losa)",
+        "lenAria": "Largo de la losa",
+        "widAria": "Ancho de la losa",
+        "thkAria": "Grosor de la losa",
+        "dimHint": "Largo × ancho × grosor da el volumen. Las losas residenciales típicas tienen 100–150 mm (4–6 pulg.) de grosor.",
+        "section2": "Desperdicio",
+        "wastage": "Desperdicio (%)",
+        "wastageAria": "Porcentaje de desperdicio por derrames y encofrado",
+        "wastageHint": "El 5–10% cubre terreno irregular, excavación excesiva y derrames. El 5% es el valor por defecto.",
+        "placeholder": "Introduce las dimensiones de tu losa y pulsa Calcular.",
+        "errors": {
+          "lenMin": "Introduce un largo mayor que 0.",
+          "lenMax": "El largo debe ser de 200 m o menos.",
+          "widMin": "Introduce un ancho mayor que 0.",
+          "widMax": "El ancho debe ser de 200 m o menos.",
+          "thkMin": "Introduce un grosor mayor que 0.",
+          "thkMax": "El grosor debe ser de 5 m o menos.",
+          "wastageRange": "El desperdicio debe estar entre 0 y 50%."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que necesitas saber sobre losas de hormigón"
+      },
+      "faq": [
+        {
+          "q": "¿Cuánto hormigón necesito para una losa de 10×10?",
+          "a": "Una losa de 10 pies × 10 pies y 4 pulgadas de profundidad son 33,3 pies³ — unas 1,23 yd³ (0,94 m³). Con un 5% de desperdicio son unas 1,30 yd³, unas 58 bolsas de 80 lb y unos 0,2 camiones de 7 yd³."
+        },
+        {
+          "q": "¿Cuántas bolsas de 80 lb de hormigón necesito para una losa?",
+          "a": "Una bolsa de 80 lb rinde unos 0,6 pies³ (0,0222 yd³) de hormigón. Divide el volumen total de la losa, incluido el desperdicio, entre 0,0222 yd³ y redondea. La calculadora lo hace por ti y también muestra las bolsas de 60 lb."
+        },
+        {
+          "q": "¿Cómo calculo las yardas de hormigón de una losa?",
+          "a": "Multiplica largo × ancho × grosor, todo en pies (convierte las pulgadas dividiendo por 12), para obtener pies cúbicos y divide por 27 para obtener yardas cúbicas. La calculadora convierte cualquier combinación de unidades y también muestra metros cúbicos."
+        },
+        {
+          "q": "¿Qué grosor debe tener una losa de hormigón?",
+          "a": "100–125 mm (4–5 pulg.) sirven para caminos, patios y suelos de cobertizos; 150 mm (6 pulg.) es lo estándar para entradas de vehículos y garajes. Cargas de vehículos más pesadas necesitan más grosor o refuerzo — confírmalo con un ingeniero."
+        },
+        {
+          "q": "¿Cuánto pesa una losa de hormigón?",
+          "a": "Una losa de 6 m × 4 m y 150 mm de grosor son 3,6 m³ de hormigón. A 2400 kg/m³ son unos 8640 kg (8,64 toneladas). La calculadora muestra el peso estimado de tu volumen pedido."
+        },
+        {
+          "q": "¿Cuántos camiones de hormigón premezclado necesito?",
+          "a": "Un camión premezclado estándar lleva unas 7 yd³. Divide tu volumen pedido entre 7 para obtener el número de cargas. Una losa de 6 m × 4 m a 150 mm son unas 4,7 yd³ — casi una carga completa."
+        },
+        {
+          "q": "¿Cuánto desperdicio debo añadir para una losa de hormigón?",
+          "a": "Añade 5–10% por subbase irregular, mezcla derramada y residuos de encofrado. El 5% por defecto sirve para una superficie plana preparada; usa 10% para terreno irregular o al pedir por bolsas."
         }
       ]
     }

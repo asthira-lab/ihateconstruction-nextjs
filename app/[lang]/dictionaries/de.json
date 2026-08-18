@@ -71,7 +71,7 @@
     "hero": {
       "eyebrow": "Kostenlose Werkzeuge für indische Bauunternehmer",
       "title": "Kalkulation und Rechner, gebaut für die Praxis von Bauunternehmern.",
-      "subtitle": "Kostenlose, einheitenbewusste Rechner, die Wandabmessungen in Materialbestellungen umwandeln — Ziegel, Zement, Sand, Fliesen, Farbe, Stahl. Projekte, BOQ und GST-fertige Angebote folgen als Nächstes.",
+      "subtitle": "Kostenlose, einheitenbewusste Rechner, die Wandabmessungen in Materialbestellungen umwandeln — Ziegel, Zement, Sand, Fliesen, Farbe, Stahl, Bewehrung und Betonvolumen. Projekte, BOQ und GST-fähige Angebote folgen bald.",
       "ctaPrimary": "Rechner öffnen",
       "ctaSecondary": "Ziegelrechner ausprobieren",
       "note": "Kein Konto erforderlich · Metrisch und imperial · Funktioniert auf dem Handy"
@@ -83,7 +83,7 @@
       "cards": {
         "calculators": {
           "title": "Rechner",
-          "body": "Fünf praxiserprobte Rechner für Beton, Ziegel, Farbe, Fliesen und Stahl. Geben Sie Ihren Auftrag ein und erhalten Sie exakte Materialmengen."
+          "body": "Praxiserprobte Rechner für Beton, Betonvolumen, Ziegel, Farbe, Fliesen, Stahl und Bewehrung. Geben Sie Ihren Auftrag ein und erhalten Sie exakte Materialmengen."
         },
         "projects": {
           "title": "Projekte & BOQ",
@@ -101,7 +101,7 @@
       "steps": {
         "pick": {
           "title": "Rechner auswählen",
-          "body": "Wählen Sie zwischen Beton, Ziegel, Farbe, Fliesen oder Stahl. Jeder kommt mit den Voreinstellungen, die Sie tatsächlich auf der Baustelle nutzen."
+          "body": "Wählen Sie zwischen Beton, Betonvolumen, Ziegel, Farbe, Fliesen, Stahl oder Bewehrung. Jeder kommt mit den Voreinstellungen, die Sie tatsächlich auf der Baustelle nutzen."
         },
         "enter": {
           "title": "Auftrag eingeben",
@@ -1082,6 +1082,153 @@
         {
           "q": "Was sagt die Bewehrung pro Quadratmeter aus?",
           "a": "Es ist das Gesamtgewicht der Bewehrung geteilt durch die Bauteilfläche — eine schnelle Dichteprüfung. Ein einlagiges 12-mm-Gitter bei 150 mm c/c ergibt etwa 11–12 kg pro m²; ein doppeltes Gitter mit 16-mm-Stäben kann 20–25 kg pro m² erreichen."
+        }
+      ]
+    },
+    "concrete-volume": {
+      "meta": {
+        "title": "Betonvolumen-Rechner — Kubikyards, -Fuß und -Meter",
+        "description": "Kostenloser Betonvolumen-Rechner — Kubikyards, Kubikfuß und Kubikmeter für Platten, Fundamente, Wände und Pfostenlöcher."
+      },
+      "crumb": "Betonvolumen-Rechner",
+      "title": "Betonvolumen-Rechner — Kubikyards, Kubikfuß und Kubikmeter",
+      "subtitle": "Berechnen Sie, wie viel Beton Sie in Kubikyards, Kubikfuß oder Kubikmetern benötigen. Geben Sie die Form und Maße des Gusses ein — Platte, Fundament, Wand oder Pfostenloch — plus einen Verschnitt, und erhalten Sie das exakte Volumen.",
+      "form": {
+        "section1": "Form des Gusses",
+        "shape": "Form",
+        "shapeHint": "Rechteckig für Platten und Fundamente; zylindrisch für runde Pfostenlöcher.",
+        "shapeRect": "Rechteckig (Platte / Fundament)",
+        "shapeCylinder": "Zylindrisch (Pfostenloch)",
+        "section2": "Maße",
+        "thickness": "Stärke / Tiefe",
+        "thkAria": "Stärke oder Tiefe des Gusses",
+        "diameter": "Durchmesser",
+        "diaAria": "Durchmesser des runden Pfostenlochs",
+        "depth": "Tiefe",
+        "lenAria": "Länge des Gusses",
+        "widAria": "Breite des Gusses",
+        "rectHint": "Länge × Breite × Tiefe ergibt das Volumen. Lassen Sie 50–75 mm zusätzliche Tiefe auf verdichtetem Füllmaterial.",
+        "cylHint": "Ein Pfostenloch ist ein Zylinder: Volumen = π × (Durchmesser/2)² × Tiefe.",
+        "section3": "Bestellung",
+        "wastage": "Verschnitt",
+        "wastageAria": "Verschnitt für Überschwappen, Überaushub und Schalung",
+        "errors": {
+          "lenMin": "Geben Sie eine Länge größer als 0 ein.",
+          "lenMax": "Die Länge muss 200 m oder weniger betragen.",
+          "widMin": "Geben Sie eine Breite größer als 0 ein.",
+          "widMax": "Die Breite muss 200 m oder weniger betragen.",
+          "thkMin": "Geben Sie eine Stärke größer als 0 ein.",
+          "thkMax": "Die Stärke muss 5 m oder weniger betragen.",
+          "diaMin": "Geben Sie einen Durchmesser größer als 0 ein.",
+          "diaMax": "Der Durchmesser muss 10 m oder weniger betragen.",
+          "wastageRange": "Der Verschnitt muss zwischen 0 und 50 % liegen."
+        },
+        "examples": {
+          "fill1": "Beispiel: 6 × 4 m Platte, 150 mm tief, 5 % Verschnitt."
+        },
+        "placeholder": "Füllen Sie das Formular aus und drücken Sie Calculate, um Ihr Betonvolumen zu sehen."
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles über Betonvolumen"
+      },
+      "faq": [
+        {
+          "q": "Wie berechne ich das Betonvolumen einer Platte?",
+          "a": "Multiplizieren Sie Länge × Breite × Tiefe. Eine 6 × 4 m Platte bei 150 mm ergibt 6 × 4 × 0,15 = 3,6 m³ — etwa 4,7 Kubikyards. Der Rechner arbeitet in jeder Einheit."
+        },
+        {
+          "q": "Wie viele Kubikyards Beton brauche ich?",
+          "a": "Multiplizieren Sie Fläche × Stärke in derselben Einheit und rechnen Sie in Kubikyards um (1 yd³ = 0,7646 m³). Eine 10 × 10 ft Terrasse, 4 Zoll dick ≈ 1,23 yd³ — runden Sie auf 1,3–1,5 yd³ auf."
+        },
+        {
+          "q": "Wie viel Beton brauche ich für ein Pfostenloch?",
+          "a": "Ein Pfostenloch ist ein Zylinder: Volumen = π × (Durchmesser/2)² × Tiefe. Ein 300 mm Loch, 600 mm tief ≈ 0,042 m³. Der Zylindermodus rechnet es für Sie."
+        },
+        {
+          "q": "Wie rechne ich Volumen zwischen Kubikmeter, -fuß und -yard um?",
+          "a": "1 Kubikyard = 27 Kubikfuß = 0,7646 m³. Umgekehrt: 1 m³ = 1,308 yd³ = 35,31 ft³. Der Rechner zeigt alle drei Einheiten gleichzeitig."
+        },
+        {
+          "q": "Wie viel wiegt ein Kubikmeter Beton?",
+          "a": "Stahlbeton wiegt etwa 2400 kg pro m³ (≈150 lb pro ft³). Der Rechner verwendet 2400 kg/m³ für die Gewichtsschätzung."
+        },
+        {
+          "q": "Wie viel Verschnitt sollte ich beim Bestellen einplanen?",
+          "a": "Addieren Sie 5–10 % für unebenen Boden, Überaushub, Überschwappen und Schalung. Lieferanten kalkulieren in ganzen Yards. Der Rechner hat einen Verschnitt-Regler."
+        },
+        {
+          "q": "Wie viel Beton brauche ich für ein Fundament?",
+          "a": "Verwenden Sie dieselbe Formel Länge × Breite × Tiefe. Ein Streifenfundament ist ein langes Rechteck — geben Sie Länge, Breite und Stärke ein. Ergebnis in Metern, Fuß und Yards."
+        },
+        {
+          "q": "Kann ich Beton per LKW bestellen?",
+          "a": "Die meisten Fahrmischer transportieren 9–12 yd³. Teilen Sie Ihre Bestellung durch die LKW-Kapazität. Eine 10 yd³-Bestellung passt in einen einzigen LKW."
+        }
+      ]
+    },
+    "concrete-slab": {
+      "meta": {
+        "title": "Betonplatten-Rechner — Säcke, Yards und LKW-Ladungen",
+        "description": "Kostenloser Betonplatten-Rechner. Länge, Breite und Dicke eingeben, um das Volumen in Kubikyards und Metern, Fertigmisch-Säcke (80 lb / 60 lb) und LKW-Ladungen zu erhalten."
+      },
+      "crumb": "Betonplatten-Rechner",
+      "title": "Betonplatten-Rechner",
+      "subtitle": "Berechnen Sie, wie viel Beton eine Platte benötigt — Kubikmeter, Kubikyards, Fertigmisch-Säcke und LKW-Ladungen — aus Länge, Breite und Dicke.",
+      "form": {
+        "section1": "Plattenmaße",
+        "thickness": "Dicke (Plattentiefe)",
+        "lenAria": "Plattenlänge",
+        "widAria": "Plattenbreite",
+        "thkAria": "Plattendicke",
+        "dimHint": "Länge × Breite × Dicke ergibt das Volumen. Übliche Wohnplatten sind 100–150 mm (4–6 Zoll) dick.",
+        "section2": "Verschnitt",
+        "wastage": "Verschnitt (%)",
+        "wastageAria": "Verschnitt in Prozent für Übergelaufenes und Schalung",
+        "wastageHint": "5–10% deckt unebenen Untergrund, Überaushub und Übergelaufenes ab. 5% ist der Standardwert.",
+        "placeholder": "Geben Sie Ihre Plattenmaße ein und klicken Sie auf Berechnen.",
+        "errors": {
+          "lenMin": "Geben Sie eine Länge größer als 0 ein.",
+          "lenMax": "Die Länge muss 200 m oder weniger betragen.",
+          "widMin": "Geben Sie eine Breite größer als 0 ein.",
+          "widMax": "Die Breite muss 200 m oder weniger betragen.",
+          "thkMin": "Geben Sie eine Dicke größer als 0 ein.",
+          "thkMax": "Die Dicke muss 5 m oder weniger betragen.",
+          "wastageRange": "Der Verschnitt muss zwischen 0 und 50% liegen."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles Wissenswerte über Betonplatten"
+      },
+      "faq": [
+        {
+          "q": "Wie viel Beton brauche ich für eine 10×10-Platte?",
+          "a": "Eine 10 ft × 10 ft große, 4 Zoll dicke Platte hat 33,3 ft³ — etwa 1,23 yd³ (0,94 m³). Mit 5% Verschnitt etwa 1,30 yd³, rund 58 Säcke zu 80 lb und etwa 0,2 LKW zu 7 yd³."
+        },
+        {
+          "q": "Wie viele 80-lb-Säcke Beton brauche ich für eine Platte?",
+          "a": "Ein 80-lb-Sack ergibt etwa 0,6 ft³ (0,0222 yd³) Beton. Teilen Sie das Gesamtvolumen der Platte inklusive Verschnitt durch 0,0222 yd³ und runden Sie auf. Der Rechner übernimmt das und zeigt auch die 60-lb-Säcke."
+        },
+        {
+          "q": "Wie berechne ich die Beton-Yards einer Platte?",
+          "a": "Multiplizieren Sie Länge × Breite × Dicke, alles in Fuß (Zoll durch 12 teilen), um Kubikfuß zu erhalten, dann durch 27 für Kubikyards. Der Rechner konvertiert jede Einheitenkombination und zeigt auch Kubikmeter."
+        },
+        {
+          "q": "Wie dick sollte eine Betonplatte sein?",
+          "a": "100–125 mm (4–5 Zoll) eignet sich für Wege, Terrassen und Schuppenböden; 150 mm (6 Zoll) ist Standard für Einfahrten und Garagen. Schwerere Fahrzeuglasten erfordern mehr Dicke oder Bewehrung — mit einem Statiker abstimmen."
+        },
+        {
+          "q": "Wie schwer ist eine Betonplatte?",
+          "a": "Eine 6 m × 4 m große, 150 mm dicke Platte ergibt 3,6 m³ Beton. Bei 2400 kg/m³ sind das etwa 8640 kg (8,64 Tonnen). Der Rechner zeigt das geschätzte Gewicht Ihrer Bestellmenge."
+        },
+        {
+          "q": "Wie viele Fertigbeton-LKW brauche ich?",
+          "a": "Ein Standard-LKW transportiert etwa 7 yd³. Teilen Sie Ihre Bestellmenge durch 7. Eine 6 m × 4 m große Platte bei 150 mm ergibt etwa 4,7 yd³ — fast eine komplette Ladung."
+        },
+        {
+          "q": "Wie viel Verschnitt sollte ich für eine Betonplatte einplanen?",
+          "a": "Planen Sie 5–10% für unebenen Untergrund, übergelaufenes Gemisch und Schalungsabfall ein. Die 5% Standard passen für einen ebenen vorbereiteten Untergrund; 10% bei rauem Gelände oder Sackkauf."
         }
       ]
     }

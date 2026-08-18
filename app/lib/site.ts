@@ -14,12 +14,15 @@ export const siteConfig = {
   // contractor foreman, buildxact. Target: construction management + estimating.
   title: "Free Construction Calculators & Contractor Software",
   description:
-    "Free construction calculators for cement, concrete, brick, steel, paint, and tile. Work out how many bags of cement you need for a slab, post hole, or wall — then build BOQs, GST-ready quotations, and invoices for your contracting business.",
+    "Free construction calculators for cement, concrete, concrete volume, brick, steel, rebar, paint, and tile. Work out how many bags of cement you need for a slab, cubic yards of concrete for a footing, or bricks for a wall — then build BOQs, GST-ready quotations, and invoices for your contracting business.",
   keywords: [
     "cement calculator",
     "concrete calculator",
+    "concrete volume calculator",
+    "concrete yard calculator",
     "brick calculator",
     "steel calculator",
+    "rebar calculator",
     "paint calculator",
     "tile calculator",
     "cement calculator for slab",

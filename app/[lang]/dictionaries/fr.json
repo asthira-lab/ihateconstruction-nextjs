@@ -71,7 +71,7 @@
     "hero": {
       "eyebrow": "Outils gratuits pour les entrepreneurs indiens",
       "title": "Estimation et calculateurs conçus pour la façon dont les entrepreneurs travaillent réellement.",
-      "subtitle": "Calculateurs gratuits, compatibles avec toutes les unités, qui transforment les dimensions d'un mur en commandes de matériaux — briques, ciment, sable, carrelage, peinture, acier. Projets, BOQ et devis prêts pour la GST arrivent bientôt.",
+      "subtitle": "Calculateurs gratuits, compatibles avec toutes les unités, qui transforment les dimensions d'un mur en commandes de matériaux : briques, ciment, sable, carrelage, peinture, acier, armature et volume de béton. Projets, BOQ et devis avec GST bientôt disponibles.",
       "ctaPrimary": "Ouvrir les calculateurs",
       "ctaSecondary": "Essayer le calculateur de briques",
       "note": "Aucun compte requis · Métrique et impérial · Fonctionne sur mobile"
@@ -83,7 +83,7 @@
       "cards": {
         "calculators": {
           "title": "Calculateurs",
-          "body": "Cinq calculateurs éprouvés sur le terrain pour le béton, la brique, la peinture, le carrelage et l'acier. Saisissez votre chantier, obtenez des quantités exactes de matériaux."
+          "body": "Calculateurs éprouvés sur le terrain pour le béton, le volume de béton, la brique, la peinture, le carrelage, l'acier et l'armature. Saisissez votre chantier, obtenez des quantités exactes."
         },
         "projects": {
           "title": "Projets et BOQ",
@@ -101,7 +101,7 @@
       "steps": {
         "pick": {
           "title": "Choisissez un calculateur",
-          "body": "Béton, brique, peinture, carrelage ou acier. Chacun est livré avec les préréglages que vous utilisez réellement sur le chantier."
+          "body": "Béton, volume de béton, brique, peinture, carrelage, acier ou armature. Chacun est livré avec les préréglages que vous utilisez réellement sur le chantier."
         },
         "enter": {
           "title": "Saisissez votre chantier",
@@ -1082,6 +1082,153 @@
         {
           "q": "Que m'indique le ferraillage au mètre carré ?",
           "a": "C'est le poids total de ferraillage divisé par la surface de l'élément — une vérification rapide de densité. Un treillis simple de 12 mm à 150 mm c/c fait environ 11–12 kg par m² ; un double treillis avec barres de 16 mm peut atteindre 20–25 kg par m²."
+        }
+      ]
+    },
+    "concrete-volume": {
+      "meta": {
+        "title": "Calculateur de Volume de Béton — Yards, Pieds et Mètres Cubes",
+        "description": "Calculateur gratuit de volume de béton — yards cubes, pieds cubes et mètres cubes pour dalles, semelles, murs et trous de poteau."
+      },
+      "crumb": "Calculateur de Volume de Béton",
+      "title": "Calculateur de Volume de Béton — Yards Cubes, Pieds Cubes et Mètres Cubes",
+      "subtitle": "Calculez la quantité de béton en yards cubes, pieds cubes ou mètres cubes. Saisissez la forme et les dimensions de la coulée — dalle, semelle, mur ou trou de poteau — plus un taux de gaspillage, et obtenez le volume exact.",
+      "form": {
+        "section1": "Forme de la coulée",
+        "shape": "Forme",
+        "shapeHint": "Rectangulaire pour dalles et semelles ; cylindrique pour les trous de poteau.",
+        "shapeRect": "Rectangulaire (dalle / semelle)",
+        "shapeCylinder": "Cylindrique (trou de poteau)",
+        "section2": "Dimensions",
+        "thickness": "Épaisseur / profondeur",
+        "thkAria": "Épaisseur ou profondeur de la coulée",
+        "diameter": "Diamètre",
+        "diaAria": "Diamètre du trou de poteau rond",
+        "depth": "Profondeur",
+        "lenAria": "Longueur de la coulée",
+        "widAria": "Largeur de la coulée",
+        "rectHint": "Longueur × largeur × profondeur donne le volume. Laissez 50–75 mm de profondeur supplémentaire sur le remblai compacté.",
+        "cylHint": "Un trou de poteau est un cylindre : volume = π × (diamètre/2)² × profondeur.",
+        "section3": "Commande",
+        "wastage": "Gaspillage",
+        "wastageAria": "Pourcentage de gaspillage pour les débordements, le sur-creusement et le coffrage",
+        "errors": {
+          "lenMin": "Saisissez une longueur supérieure à 0.",
+          "lenMax": "La longueur doit être de 200 m ou moins.",
+          "widMin": "Saisissez une largeur supérieure à 0.",
+          "widMax": "La largeur doit être de 200 m ou moins.",
+          "thkMin": "Saisissez une épaisseur supérieure à 0.",
+          "thkMax": "L'épaisseur doit être de 5 m ou moins.",
+          "diaMin": "Saisissez un diamètre supérieur à 0.",
+          "diaMax": "Le diamètre doit être de 10 m ou moins.",
+          "wastageRange": "Le gaspillage doit être entre 0 et 50 %."
+        },
+        "examples": {
+          "fill1": "Exemple : dalle de 6 × 4 m, 150 mm de profondeur, 5 % de gaspillage."
+        },
+        "placeholder": "Remplissez le formulaire et appuyez sur Calculate pour voir votre volume de béton."
+      },
+      "article": {
+        "toc": "Sur cette page",
+        "heading": "Tout savoir sur le volume de béton"
+      },
+      "faq": [
+        {
+          "q": "Comment calculer le volume de béton d'une dalle ?",
+          "a": "Multipliez longueur × largeur × profondeur. Une dalle de 6 × 4 m coulée à 150 mm fait 6 × 4 × 0,15 = 3,6 m³, soit environ 4,7 yards cubes. La calculatrice le fait dans n'importe quelle unité."
+        },
+        {
+          "q": "De combien de yards cubes de béton ai-je besoin ?",
+          "a": "Multipliez la surface par l'épaisseur dans la même unité, puis convertissez en yards cubes (1 yd³ = 0,7646 m³). Une terrasse de 10 × 10 ft de 4 pouces ≈ 1,23 yd³ — arrondissez à 1,3–1,5 yd³."
+        },
+        {
+          "q": "Combien de béton faut-il pour un trou de poteau ?",
+          "a": "Un trou de poteau est un cylindre : volume = π × (diamètre/2)² × profondeur. Un trou de 300 mm de 600 mm de profondeur ≈ 0,042 m³. Le mode cylindrique fait le calcul."
+        },
+        {
+          "q": "Comment convertir le volume entre mètres, pieds et yards cubes ?",
+          "a": "1 yard cube = 27 pieds cubes = 0,7646 m³. Inversement, 1 m³ = 1,308 yd³ = 35,31 ft³. La calculatrice affiche les trois unités à la fois."
+        },
+        {
+          "q": "Combien pèse un mètre cube de béton ?",
+          "a": "Le béton armé pèse environ 2400 kg par m³ (≈150 lb par ft³). La calculatrice utilise 2400 kg/m³ pour estimer le poids."
+        },
+        {
+          "q": "Quel gaspillage faut-il ajouter à la commande ?",
+          "a": "Ajoutez 5–10 % pour le terrain irrégulier, le sur-creusement, les débordements et le coffrage. Les fournisseurs facturent en yards entiers. La calculatrice inclut un curseur de gaspillage."
+        },
+        {
+          "q": "Combien de béton pour une semelle ou une fondation ?",
+          "a": "Utilisez la même formule longueur × largeur × profondeur. Une semelle filante est un long rectangle : saisissez longueur, largeur et épaisseur. Obtenez le volume en mètres, pieds et yards."
+        },
+        {
+          "q": "Puis-je commander le béton par camion ?",
+          "a": "La plupart des camions toupie transportent 9–12 yd³. Divisez votre commande par la capacité du camion. Une commande de 10 yd³ tient dans un seul camion."
+        }
+      ]
+    },
+    "concrete-slab": {
+      "meta": {
+        "title": "Calculateur de dalle en béton — sacs, yards et camions",
+        "description": "Calculateur gratuit de dalle en béton. Entrez longueur, largeur et épaisseur pour obtenir le volume en yards cubes et mètres, les sacs de mélange (80 lb / 60 lb) et les camions de béton prêt à l'emploi."
+      },
+      "crumb": "Calculateur de dalle en béton",
+      "title": "Calculateur de dalle en béton",
+      "subtitle": "Calculez le béton nécessaire à une dalle — mètres cubes, yards cubes, sacs de mélange et camions — à partir de la longueur, de la largeur et de l'épaisseur.",
+      "form": {
+        "section1": "Dimensions de la dalle",
+        "thickness": "Épaisseur (profondeur de la dalle)",
+        "lenAria": "Longueur de la dalle",
+        "widAria": "Largeur de la dalle",
+        "thkAria": "Épaisseur de la dalle",
+        "dimHint": "Longueur × largeur × épaisseur donne le volume. Les dalles résidentielles font généralement 100–150 mm (4–6 po) d'épaisseur.",
+        "section2": "Perte",
+        "wastage": "Perte (%)",
+        "wastageAria": "Pourcentage de perte pour coulures et coffrage",
+        "wastageHint": "5–10% couvre un sol irrégulier, le sur-creusement et les coulures. 5% est la valeur par défaut.",
+        "placeholder": "Entrez les dimensions de votre dalle, puis cliquez sur Calculer.",
+        "errors": {
+          "lenMin": "Entrez une longueur supérieure à 0.",
+          "lenMax": "La longueur doit être de 200 m ou moins.",
+          "widMin": "Entrez une largeur supérieure à 0.",
+          "widMax": "La largeur doit être de 200 m ou moins.",
+          "thkMin": "Entrez une épaisseur supérieure à 0.",
+          "thkMax": "L'épaisseur doit être de 5 m ou moins.",
+          "wastageRange": "La perte doit être comprise entre 0 et 50%."
+        }
+      },
+      "article": {
+        "toc": "Sur cette page",
+        "heading": "Tout savoir sur les dalles en béton"
+      },
+      "faq": [
+        {
+          "q": "De combien de béton ai-je besoin pour une dalle de 10×10 ?",
+          "a": "Une dalle de 10 pi × 10 pi, épaisse de 4 po, fait 33,3 pi³ — environ 1,23 yd³ (0,94 m³). Avec 5% de perte, environ 1,30 yd³, soit ~58 sacs de 80 lb et environ 0,2 camion de 7 yd³."
+        },
+        {
+          "q": "Combien de sacs de 80 lb de béton me faut-il pour une dalle ?",
+          "a": "Un sac de 80 lb rend environ 0,6 pi³ (0,0222 yd³) de béton. Divisez le volume total de la dalle, perte comprise, par 0,0222 yd³ et arrondissez. Le calculateur le fait pour vous et affiche aussi le nombre de sacs de 60 lb."
+        },
+        {
+          "q": "Comment calculer les yards de béton d'une dalle ?",
+          "a": "Multipliez longueur × largeur × épaisseur, tout en pieds (convertissez les pouces en divisant par 12), pour obtenir des pieds cubes, puis divisez par 27 pour des yards cubes. Le calculateur convertit toutes les unités et affiche aussi les mètres cubes."
+        },
+        {
+          "q": "Quelle épaisseur pour une dalle en béton ?",
+          "a": "100–125 mm (4–5 po) convient aux chemins, terrasses et sols de cabanon ; 150 mm (6 po) est standard pour les entrées et garages. Des charges de véhicules plus lourdes exigent plus d'épaisseur ou un renfort — à confirmer avec un ingénieur."
+        },
+        {
+          "q": "Combien pèse une dalle en béton ?",
+          "a": "Une dalle de 6 m × 4 m, épaisse de 150 mm, fait 3,6 m³ de béton. À 2400 kg/m³, cela fait environ 8640 kg (8,64 tonnes). Le calculateur affiche le poids estimé du volume commandé."
+        },
+        {
+          "q": "Combien de camions de béton prêt à l'emploi me faut-il ?",
+          "a": "Un camion standard transporte environ 7 yd³. Divisez le volume commandé par 7 pour obtenir le nombre de livraisons. Une dalle de 6 m × 4 m à 150 mm fait environ 4,7 yd³ — presque une charge complète."
+        },
+        {
+          "q": "Quelle perte ajouter pour une dalle en béton ?",
+          "a": "Ajoutez 5–10% pour un sol de fondation irrégulier, le béton renversé et les déchets de coffrage. Les 5% par défaut conviennent à un terrain plat préparé ; utilisez 10% pour un sol irrégulier ou un achat en sacs."
         }
       ]
     }

@@ -9,12 +9,16 @@ import { SteelResultCard, steelHeadline } from "@/components/calculators/steel/R
 import { PaintResultCard, paintHeadline } from "@/components/calculators/paint/ResultCard";
 import { TileResultCard, tileHeadline } from "@/components/calculators/tile/ResultCard";
 import { RebarResultCard, rebarHeadline } from "@/components/calculators/rebar/ResultCard";
+import { ConcreteVolumeResultCard, concreteVolumeHeadline } from "@/components/calculators/concrete-volume/ResultCard";
+import { ConcreteSlabResultCard, concreteSlabHeadline } from "@/components/calculators/concrete-slab/ResultCard";
 import type { BrickResponse } from "@/features/calculators/brick/types";
 import type { ConcreteResponse } from "@/features/calculators/concrete/types";
 import type { SteelResponse } from "@/features/calculators/steel/types";
 import type { PaintResponse } from "@/features/calculators/paint/types";
 import type { TileResponse } from "@/features/calculators/tile/types";
 import type { RebarResponse } from "@/features/calculators/rebar/types";
+import type { ConcreteVolumeResponse } from "@/features/calculators/concrete-volume/types";
+import type { ConcreteSlabResponse } from "@/features/calculators/concrete-slab/types";
 
 // Renders the pretty ResultCard for whichever calculator produced this row.
 export function CalculationResult({ calc }: { calc: SavedCalculation }) {
@@ -31,6 +35,10 @@ export function CalculationResult({ calc }: { calc: SavedCalculation }) {
       return <TileResultCard data={calc.result as unknown as TileResponse} />;
     case "rebar":
       return <RebarResultCard data={calc.result as unknown as RebarResponse} />;
+    case "concrete-volume":
+      return <ConcreteVolumeResultCard data={calc.result as unknown as ConcreteVolumeResponse} />;
+    case "concrete-slab":
+      return <ConcreteSlabResultCard data={calc.result as unknown as ConcreteSlabResponse} />;
     default:
       return (
         <div className="rounded border border-dashed border-black/15 p-4 text-xs text-black/60 dark:border-white/20 dark:text-white/60">
@@ -56,6 +64,10 @@ export function calculationHeadline(calc: SavedCalculation): string {
         return tileHeadline(calc.result as unknown as TileResponse);
       case "rebar":
         return rebarHeadline(calc.result as unknown as RebarResponse);
+      case "concrete-volume":
+        return concreteVolumeHeadline(calc.result as unknown as ConcreteVolumeResponse);
+      case "concrete-slab":
+        return concreteSlabHeadline(calc.result as unknown as ConcreteSlabResponse);
       default:
         return "";
     }

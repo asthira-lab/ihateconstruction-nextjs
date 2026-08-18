@@ -30,7 +30,7 @@ const jobs = [
     file: "og-default.png",
     svg: card(
       "Free Construction Calculators",
-      "Cement &#183; Concrete &#183; Brick &#183; Steel &#183; Paint &#183; Tile &#183; Rebar",
+      "Cement &#183; Concrete &#183; Concrete Volume &#183; Brick &#183; Steel &#183; Rebar &#183; Paint &#183; Tile",
     ),
   },
   {
@@ -38,6 +38,20 @@ const jobs = [
     svg: card(
       "Rebar Calculator",
       "Slab &#183; Footing &#183; Wall &#183; Foundation &#8212; length, pieces &amp; weight",
+    ),
+  },
+  {
+    file: "concrete-volume-calculator-og.png",
+    svg: card(
+      "Concrete Volume Calculator",
+      "Cubic yards &#183; Cubic feet &#183; Cubic metres &#8212; slab, footing &amp; post hole",
+    ),
+  },
+  {
+    file: "concrete-slab-calculator-og.png",
+    svg: card(
+      "Concrete Slab Calculator",
+      "Cubic yards &#183; Premix bags &#183; Ready-mix trucks &#8212; length, width &amp; thickness",
     ),
   },
 ];

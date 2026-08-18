@@ -25,7 +25,7 @@ export async function generateMetadata({
     title: { absolute: t.title },
     description: t.description,
     alternates: { canonical: `/${locale}${PAGE_PATH}`, languages: { ...languages, "x-default": `/en${PAGE_PATH}` } },
-    keywords: ["construction calculator", "cement calculator", "concrete calculator", "brick calculator", "steel calculator", "rebar calculator", "paint calculator", "tile calculator", "free construction calculator", "building material calculator", "contractor calculator"],
+    keywords: ["construction calculator", "cement calculator", "concrete calculator", "concrete volume calculator", "concrete yard calculator", "brick calculator", "steel calculator", "rebar calculator", "paint calculator", "tile calculator", "free construction calculator", "building material calculator", "contractor calculator"],
     openGraph: { type: "website", url: `${siteUrl}/${locale}${PAGE_PATH}`, title: t.title, description: t.description, siteName: siteConfig.shortName, images: [siteConfig.ogImage] },
     twitter: { card: "summary_large_image", title: t.title, description: t.description, images: [siteConfig.ogImage] },
   };

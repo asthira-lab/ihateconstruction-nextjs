@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Scaffolding templates contain unfilled placeholders by design.
+    "roadmap/**",
   ]),
 ]);
 

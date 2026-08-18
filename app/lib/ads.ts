@@ -13,6 +13,8 @@ export const AD_SLOTS = {
   paintInContent: process.env.NEXT_PUBLIC_AD_PAINT_IN_CONTENT ?? "",
   tileInContent: process.env.NEXT_PUBLIC_AD_TILE_IN_CONTENT ?? "",
   rebarInContent: process.env.NEXT_PUBLIC_AD_REBAR_IN_CONTENT ?? "",
+  concreteVolumeInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_VOLUME_IN_CONTENT ?? "",
+  concreteSlabInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_SLAB_IN_CONTENT ?? "",
 } as const;
 
 export type AdSlotKey = keyof typeof AD_SLOTS;

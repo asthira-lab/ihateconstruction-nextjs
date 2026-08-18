@@ -71,7 +71,7 @@
     "hero": {
       "eyebrow": "Free tools for Indian contractors",
       "title": "Estimating and calculators built for how contractors actually work.",
-      "subtitle": "Free, unit-aware calculators that turn wall dimensions into material orders — bricks, cement, sand, tile, paint, steel. Projects, BOQ, and GST-ready quotations are coming next.",
+      "subtitle": "Free, unit-aware calculators that turn wall dimensions into material orders — bricks, cement, sand, tile, paint, steel, rebar, and concrete volume. Projects, BOQ, and GST-ready quotations are coming next.",
       "ctaPrimary": "Open calculators",
       "ctaSecondary": "Try the brick calculator",
       "note": "No account required · Metric and imperial · Works on mobile"
@@ -83,7 +83,7 @@
       "cards": {
         "calculators": {
           "title": "Calculators",
-          "body": "Five field-tested calculators for concrete, brick, paint, tile, and steel. Enter your job, get exact material quantities."
+          "body": "Field-tested calculators for concrete, concrete volume, brick, paint, tile, steel, and rebar. Enter your job, get exact material quantities."
         },
         "projects": {
           "title": "Projects & BOQ",
@@ -101,7 +101,7 @@
       "steps": {
         "pick": {
           "title": "Pick a calculator",
-          "body": "Choose from concrete, brick, paint, tile, or steel. Each one ships with the presets you actually use on site."
+          "body": "Choose from concrete, concrete volume, brick, paint, tile, steel, or rebar. Each one ships with the presets you actually use on site."
         },
         "enter": {
           "title": "Enter your job",
@@ -473,11 +473,11 @@
     "index": {
       "meta": {
         "title": "Construction Calculators — Cement, Concrete, Brick & Rebar",
-        "description": "Seven free construction calculators — cement, concrete, brick, steel, paint, tile, and rebar. Enter your job and get an exact material order in cubic yards, cubic feet, or metric units. Bags of cement for a slab, bricks for a wall, steel for reinforcement, litres of paint for a room, tiles for a floor."
+        "description": "Eight free construction calculators — cement, concrete, concrete slab, brick, steel, paint, tile, and rebar. Enter your job and get an exact material order in cubic yards, cubic feet, or metric units. Bags of cement for a slab, concrete for a slab pour, bricks for a wall, steel for reinforcement, litres of paint for a room, tiles for a floor."
       },
       "eyebrow": "Tools",
       "title": "Free construction calculators",
-      "subtitle": "Seven calculators for the material orders you actually place — cement, concrete, brick, steel, paint, tile, and rebar. Enter your dimensions, get bags, bricks, kilograms, or litres. Works in cubic yards, cubic feet, and cubic metres.",
+      "subtitle": "Eight calculators for the material orders you actually place — cement, concrete, concrete slab, brick, steel, paint, tile, and rebar. Enter your dimensions, get bags, bricks, kilograms, or litres. Works in cubic yards, cubic feet, and cubic metres.",
       "missing": "Missing a calculator you use daily?",
       "contactSoon": "Contact form coming soon."
     },
@@ -1082,6 +1082,153 @@
         {
           "q": "What does rebar-per-square-metre tell me?",
           "a": "It is the total rebar weight divided by the member area — a quick density check for an estimate. A single-layer 150 mm c/c 12 mm mesh is about 11–12 kg per m²; a double mesh with 16 mm bars can reach 20–25 kg per m²."
+        }
+      ]
+    },
+    "concrete-volume": {
+      "meta": {
+        "title": "Concrete Volume Calculator — Cubic Yards, Feet & Metres",
+        "description": "Free concrete volume calculator — cubic yards, cubic feet, and cubic metres for slabs, footings, walls, and post holes from length, width, and depth."
+      },
+      "crumb": "Concrete Volume Calculator",
+      "title": "Concrete Volume Calculator — Cubic Yards, Cubic Feet & Cubic Metres",
+      "subtitle": "Work out how much concrete you need in cubic yards, cubic feet, or cubic metres. Enter the shape and dimensions of the pour — a slab, footing, wall, or post hole — plus a wastage allowance, and get the exact volume to order.",
+      "form": {
+        "section1": "Pour shape",
+        "shape": "Shape",
+        "shapeHint": "Rectangular for slabs and footings; cylindrical for round post holes.",
+        "shapeRect": "Rectangular (slab / footing)",
+        "shapeCylinder": "Cylindrical (post hole)",
+        "section2": "Dimensions",
+        "thickness": "Thickness / depth",
+        "thkAria": "Thickness or depth of the pour",
+        "diameter": "Diameter",
+        "diaAria": "Diameter of the round post hole",
+        "depth": "Depth",
+        "lenAria": "Pour length",
+        "widAria": "Pour width",
+        "rectHint": "Length × width × depth gives the volume. Leave 50–75 mm extra depth on compacted fill.",
+        "cylHint": "A round post hole is a cylinder: volume = π × (diameter/2)² × depth.",
+        "section3": "Ordering",
+        "wastage": "Wastage",
+        "wastageAria": "Wastage percent for spillage, over-dig, and formwork",
+        "errors": {
+          "lenMin": "Enter a length greater than 0.",
+          "lenMax": "Length must be 200 m or less.",
+          "widMin": "Enter a width greater than 0.",
+          "widMax": "Width must be 200 m or less.",
+          "thkMin": "Enter a thickness greater than 0.",
+          "thkMax": "Thickness must be 5 m or less.",
+          "diaMin": "Enter a diameter greater than 0.",
+          "diaMax": "Diameter must be 10 m or less.",
+          "wastageRange": "Wastage should be between 0 and 50%."
+        },
+        "examples": {
+          "fill1": "Example: 6 × 4 m slab, 150 mm deep, 5% wastage."
+        },
+        "placeholder": "Fill the form and press Calculate to see your concrete volume."
+      },
+      "article": {
+        "toc": "On this page",
+        "heading": "Everything you need to know about concrete volume"
+      },
+      "faq": [
+        {
+          "q": "How do I calculate the volume of concrete for a slab?",
+          "a": "Multiply length × width × depth. A 6 m × 4 m slab poured 150 mm thick is 6 × 4 × 0.15 = 3.6 cubic metres — about 4.7 cubic yards. The calculator does this in any length unit and reports cubic metres, cubic feet, and cubic yards."
+        },
+        {
+          "q": "How many cubic yards of concrete do I need?",
+          "a": "Multiply the area by the thickness, all in the same unit, then convert to cubic yards (1 yd³ = 0.7646 m³). A 10 ft × 10 ft patio 4 inches thick is 10 × 10 × 0.333 = 33.3 ft³ ≈ 1.23 yd³ — round up to 1.3–1.5 yd³ to cover wastage."
+        },
+        {
+          "q": "How much concrete do I need for a post hole?",
+          "a": "A post hole is a cylinder: volume = π × (diameter/2)² × depth. A 300 mm hole 600 mm deep holds about 0.042 m³ of concrete. The calculator's cylindrical mode works this out for you."
+        },
+        {
+          "q": "How do I convert concrete volume between cubic metres, feet, and yards?",
+          "a": "1 cubic yard = 27 cubic feet = 0.7646 cubic metres. To go the other way, 1 cubic metre = 1.308 cubic yards = 35.31 cubic feet. The calculator shows all three at once, so you never need to convert by hand."
+        },
+        {
+          "q": "How much does a cubic metre of concrete weigh?",
+          "a": "Standard reinforced concrete weighs about 2400 kg per cubic metre (≈ 150 lb per cubic foot, ≈ 4050 lb per cubic yard). The calculator uses 2400 kg/m³ to estimate weight from the ordered volume."
+        },
+        {
+          "q": "What wastage should I add when ordering concrete?",
+          "a": "Add 5–10% for uneven ground, over-dig, spilled mix, and formwork waste. Ready-mix suppliers quote in whole cubic yards, so a 1.23 yd³ pour usually means ordering 1.5 yd³. The calculator includes a wastage slider and applies it to the volume."
+        },
+        {
+          "q": "How much concrete do I need for a footing or foundation?",
+          "a": "Use the same length × width × depth formula as a slab. A continuous footing is just a long rectangle — enter its length, width, and thickness. The calculator handles any unit combination and gives the volume in cubic metres, feet, and yards."
+        },
+        {
+          "q": "Can I order concrete by the truck?",
+          "a": "Most ready-mix trucks carry 9–12 yd³. Divide your order by the truck capacity to estimate the number of loads. A 10 yd³ order fits in a single truck; larger pours need a schedule so the mix doesn't set between loads."
+        }
+      ]
+    },
+    "concrete-slab": {
+      "meta": {
+        "title": "Concrete Slab Calculator — Bags, Yards & Truck Loads",
+        "description": "Free concrete slab calculator. Enter length, width, and thickness to get concrete volume in cubic yards and metres, premix bag counts (80 lb / 60 lb), and ready-mix truck loads."
+      },
+      "crumb": "Concrete Slab Calculator",
+      "title": "Concrete Slab Calculator",
+      "subtitle": "Work out how much concrete a slab needs — cubic metres, cubic yards, premix bags, and ready-mix truck loads — from length, width, and thickness.",
+      "form": {
+        "section1": "Slab dimensions",
+        "thickness": "Thickness (slab depth)",
+        "lenAria": "Slab length",
+        "widAria": "Slab width",
+        "thkAria": "Slab thickness",
+        "dimHint": "Length × width × thickness gives the volume. Typical residential slabs are 100–150 mm (4–6 in) thick.",
+        "section2": "Wastage",
+        "wastage": "Wastage (%)",
+        "wastageAria": "Wastage percent for spillage and formwork",
+        "wastageHint": "5–10% covers uneven ground, over-dig, and formwork spill. 5% is the default.",
+        "placeholder": "Enter your slab dimensions, then hit Calculate.",
+        "errors": {
+          "lenMin": "Enter a length greater than 0.",
+          "lenMax": "Length must be 200 m or less.",
+          "widMin": "Enter a width greater than 0.",
+          "widMax": "Width must be 200 m or less.",
+          "thkMin": "Enter a thickness greater than 0.",
+          "thkMax": "Thickness must be 5 m or less.",
+          "wastageRange": "Wastage should be between 0 and 50%."
+        }
+      },
+      "article": {
+        "toc": "On this page",
+        "heading": "Everything you need to know about concrete slabs"
+      },
+      "faq": [
+        {
+          "q": "How much concrete do I need for a 10×10 slab?",
+          "a": "A 10 ft × 10 ft slab, 4 in deep, is 33.3 ft³ — about 1.23 yd³ (0.94 m³). With 5% wastage that's roughly 1.30 yd³, about 58 bags of 80 lb premix, and about 0.2 of a 7 yd³ ready-mix truck."
+        },
+        {
+          "q": "How many 80 lb bags of concrete do I need for a slab?",
+          "a": "One 80 lb premix bag yields about 0.6 ft³ of concrete (0.0222 yd³). Divide the slab's total volume — including wastage — by 0.0222 yd³ and round up. The calculator does this for you and also shows the 60 lb bag count."
+        },
+        {
+          "q": "How do I calculate concrete yards for a slab?",
+          "a": "Multiply length × width × thickness, all in feet (convert inches by dividing by 12), to get cubic feet, then divide by 27 to get cubic yards. This calculator converts any mix of units for you and reports cubic metres too."
+        },
+        {
+          "q": "How thick should a concrete slab be?",
+          "a": "100–125 mm (4–5 in) suits paths, patios, and shed floors; 150 mm (6 in) is standard for driveways and garage floors. Heavier vehicle loads need a thicker slab or reinforcement — confirm with a structural engineer."
+        },
+        {
+          "q": "How much does a concrete slab weigh?",
+          "a": "A 6 m × 4 m slab, 150 mm thick, is 3.6 m³ of concrete. At 2400 kg/m³ that's about 8640 kg (8.64 tonnes). The calculator shows the estimated weight of your ordered volume."
+        },
+        {
+          "q": "How many ready-mix trucks do I need?",
+          "a": "A standard ready-mix truck carries about 7 yd³. Divide your ordered volume by 7 to get the number of loads. A 6 m × 4 m slab at 150 mm is roughly 4.7 yd³ — most of a single load."
+        },
+        {
+          "q": "How much wastage should I add for a concrete slab?",
+          "a": "Add 5–10% for an uneven subgrade, spilled mix, and formwork waste. The default of 5% suits a flat prepared site; use 10% for rough ground or when ordering by the bag."
         }
       ]
     }

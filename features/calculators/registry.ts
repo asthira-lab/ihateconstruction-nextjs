@@ -68,6 +68,20 @@ export const CALCULATORS: CalculatorEntry[] = [
       "Rebar grid for a slab, footing, wall, or foundation — bar count each way, total length, pieces, and weight from size, spacing, and edge cover.",
     status: "live",
   },
+  {
+    slug: "concrete-volume-calculator",
+    title: "Concrete volume calculator",
+    description:
+      "Cubic yards, cubic feet, or cubic metres of concrete for a slab, footing, wall, or post hole from length, width, and depth.",
+    status: "live",
+  },
+  {
+    slug: "concrete-slab-calculator",
+    title: "Concrete slab calculator",
+    description:
+      "Concrete for a rectangular slab from length, width, and thickness — cubic yards, premix bags (80 lb / 60 lb), weight, and ready-mix truck loads.",
+    status: "live",
+  },
 ];
 
 export function calculatorHref(entry: CalculatorEntry, locale?: string): string {

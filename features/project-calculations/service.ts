@@ -37,6 +37,10 @@ import { tileRequestSchema } from "@/features/calculators/tile/schema";
 import { computeTile } from "@/features/calculators/tile/compute";
 import { rebarRequestSchema } from "@/features/calculators/rebar/schema";
 import { computeRebar } from "@/features/calculators/rebar/compute";
+import { concreteVolumeRequestSchema } from "@/features/calculators/concrete-volume/schema";
+import { computeConcreteVolume } from "@/features/calculators/concrete-volume/compute";
+import { concreteSlabRequestSchema } from "@/features/calculators/concrete-slab/schema";
+import { computeConcreteSlab } from "@/features/calculators/concrete-slab/compute";
 
 const IMMUTABLE_KEYS = new Set([
   "id", "projectId", "calculator", "request", "result", "computedAt", "createdAt", "updatedAt",
@@ -79,6 +83,14 @@ async function runCalculator(
       case "rebar": {
         const req = rebarRequestSchema.parse(rawRequest);
         return (await computeRebar(req)) as unknown as Record<string, unknown>;
+      }
+      case "concrete-volume": {
+        const req = concreteVolumeRequestSchema.parse(rawRequest);
+        return (await computeConcreteVolume(req)) as unknown as Record<string, unknown>;
+      }
+      case "concrete-slab": {
+        const req = concreteSlabRequestSchema.parse(rawRequest);
+        return (await computeConcreteSlab(req)) as unknown as Record<string, unknown>;
       }
       default: {
         const _exhaustive: never = slug;
