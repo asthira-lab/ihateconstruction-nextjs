@@ -16,3 +16,9 @@ export const AD_SLOTS = {
 } as const;
 
 export type AdSlotKey = keyof typeof AD_SLOTS;
+
+// True only when at least one in-content slot is configured — used to skip
+// loading the AdSense script entirely until ad units exist.
+export function hasConfiguredAdSlots(): boolean {
+  return Object.values(AD_SLOTS).some((slot) => slot.length > 0);
+}

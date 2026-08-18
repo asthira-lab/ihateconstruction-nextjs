@@ -4,7 +4,7 @@ import Script from "next/script";
 import { ClerkProvider } from "@clerk/nextjs";
 import { notFound } from "next/navigation";
 import { siteConfig, siteUrl } from "../lib/site";
-import { ADSENSE_CLIENT } from "../lib/ads";
+import { ADSENSE_CLIENT, hasConfiguredAdSlots } from "../lib/ads";
 import { isLocale, locales, rtlLocales, type Locale } from "../i18n-config";
 import "../globals.css";
 
@@ -84,12 +84,14 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        {hasConfiguredAdSlots() ? (
+          <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        ) : null}
         <ClerkProvider dynamic>{children}</ClerkProvider>
       </body>
     </html>

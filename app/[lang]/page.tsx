@@ -11,6 +11,7 @@ import { IndianSection } from "@/components/marketing/IndianSection";
 import { ClosingCTA } from "@/components/marketing/ClosingCTA";
 import { getDictionaryFor } from "@/app/[lang]/dictionaries";
 import { isLocale, locales, defaultLocale } from "@/app/i18n-config";
+import { CALCULATORS, calculatorHref } from "@/features/calculators/registry";
 
 export async function generateMetadata({
   params,
@@ -36,28 +37,14 @@ function jsonLd(locale: string) {
     },
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: siteConfig.shortName,
-      url: siteUrl,
-      inLanguage: locale,
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${siteUrl}/${locale}/calculators?q={search_term_string}`,
-        "query-input": "required name=search_term_string",
-      },
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "ItemList",
       name: "Construction calculators",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Cement Calculator", url: `${siteUrl}/${locale}/calculators/cement-calculator` },
-        { "@type": "ListItem", position: 2, name: "Concrete Calculator", url: `${siteUrl}/${locale}/calculators/concrete-calculator` },
-        { "@type": "ListItem", position: 3, name: "Brick Calculator", url: `${siteUrl}/${locale}/calculators/brick-calculator` },
-        { "@type": "ListItem", position: 4, name: "Steel Calculator", url: `${siteUrl}/${locale}/calculators/steel-calculator` },
-        { "@type": "ListItem", position: 5, name: "Paint Calculator", url: `${siteUrl}/${locale}/calculators/paint-calculator` },
-        { "@type": "ListItem", position: 6, name: "Tile Calculator", url: `${siteUrl}/${locale}/calculators/tile-calculator` },
-      ],
+      itemListElement: CALCULATORS.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.title,
+        url: `${siteUrl}${calculatorHref(c, locale)}`,
+      })),
     },
   ];
 }

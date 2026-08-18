@@ -472,7 +472,7 @@
   "calculators": {
     "index": {
       "meta": {
-        "title": "Calculateurs de construction gratuits — Ciment, béton, brique et ferraillage",
+        "title": "Calculateurs de construction — Ciment, béton, brique et ferraillage",
         "description": "Sept calculateurs de construction gratuits — ciment, béton, brique, acier, ferraillage, peinture et carrelage. Saisissez votre chantier et obtenez une commande exacte de matériaux en yards cubes, pieds cubes ou unités métriques. Sacs de ciment pour une dalle, briques pour un mur, acier pour une armature, litres de peinture pour une pièce, carreaux pour un sol."
       },
       "eyebrow": "Outils",
@@ -994,7 +994,7 @@
     },
     "rebar": {
       "meta": {
-        "title": "Calculateur de Ferraillage — Acier pour Dalle, Semelle et Mur (Longueur, Barres et Poids)",
+        "title": "Calculateur de Ferraillage — Dalle, Semelle et Mur",
         "description": "Calculateur de ferraillage gratuit pour dalles, semelles, murs et fondations en béton. Saisissez longueur, largeur, espacement et enrobage au bord pour obtenir le nombre de barres, la longueur totale, les barres de 12 m et le poids au mètre ou pied carré. Formule D²/162."
       },
       "crumb": "Calculateur de Ferraillage",

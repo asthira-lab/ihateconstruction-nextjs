@@ -472,7 +472,7 @@
   "calculators": {
     "index": {
       "meta": {
-        "title": "Kostenlose Bau-Rechner — Zement, Beton, Ziegel & Bewehrung",
+        "title": "Bau-Rechner — Zement, Beton, Ziegel & Bewehrung",
         "description": "Sieben kostenlose Bau-Rechner — Zement, Beton, Ziegel, Stahl, Bewehrung, Farbe und Fliesen. Geben Sie Ihren Auftrag ein und erhalten Sie eine exakte Materialbestellung in Kubikyards, Kubikfuß oder metrischen Einheiten. Zementsäcke für eine Platte, Ziegel für eine Wand, Stahl für Bewehrung, Liter Farbe für einen Raum, Fliesen für einen Boden."
       },
       "eyebrow": "Werkzeuge",
@@ -994,7 +994,7 @@
     },
     "rebar": {
       "meta": {
-        "title": "Bewehrungsrechner — Stahl für Platte, Fundament und Wand (Länge, Stäbe und Gewicht)",
+        "title": "Bewehrungsrechner — Platte, Fundament und Wand",
         "description": "Kostenloser Bewehrungsrechner für Betonplatten, Fundamente, Wände und Bodenplatten. Länge, Breite, Abstand und Randüberdeckung eingeben — erhalten Sie Stabanzahl, Gesamtlänge, 12-m-Stäbe und Gewicht pro Quadratmeter bzw. Quadratfuß. D²/162-Formel."
       },
       "crumb": "Bewehrungsrechner",

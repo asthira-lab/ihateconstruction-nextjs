@@ -472,7 +472,7 @@
   "calculators": {
     "index": {
       "meta": {
-        "title": "Calculadoras de construcción gratuitas — Cemento, concreto, ladrillo y rebar",
+        "title": "Calculadoras de construcción — Cemento, concreto, ladrillo y rebar",
         "description": "Siete calculadoras de construcción gratuitas: cemento, concreto, ladrillo, acero, rebar, pintura y azulejo. Ingresa tu trabajo y obtén un pedido exacto de material en yardas cúbicas, pies cúbicos o unidades métricas. Bolsas de cemento para una losa, ladrillos para una pared, acero para refuerzo, litros de pintura para una habitación, azulejos para un piso."
       },
       "eyebrow": "Herramientas",
@@ -994,7 +994,7 @@
     },
     "rebar": {
       "meta": {
-        "title": "Calculadora de Rebar — Acero para Losa, Zapata y Muro (Longitud, Piezas y Peso)",
+        "title": "Calculadora de Rebar — Losa, Zapata y Muro",
         "description": "Calculadora de rebar gratuita para losas, zapatas, muros y cimentaciones de concreto. Ingresa largo, ancho, separación y recubrimiento al borde para obtener el número de barras, la longitud total, las piezas de 12 m y el peso por metro o pie cuadrado. Fórmula D²/162."
       },
       "crumb": "Calculadora de Rebar",

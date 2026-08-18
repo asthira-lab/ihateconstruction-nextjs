@@ -12,8 +12,7 @@ export const siteConfig = {
   shortName: "ihateconstruction.co",
   // Keywords from seo.md — competitors ranking here: buildertrend, fieldwire,
   // contractor foreman, buildxact. Target: construction management + estimating.
-  title:
-    "iHateConstruction — Free Cement, Concrete & Brick Calculators + Contractor Software",
+  title: "Free Construction Calculators & Contractor Software",
   description:
     "Free construction calculators for cement, concrete, brick, steel, paint, and tile. Work out how many bags of cement you need for a slab, post hole, or wall — then build BOQs, GST-ready quotations, and invoices for your contracting business.",
   keywords: [
