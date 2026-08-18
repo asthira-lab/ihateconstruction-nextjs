@@ -11,6 +11,9 @@ import { TileResultCard, tileHeadline } from "@/components/calculators/tile/Resu
 import { RebarResultCard, rebarHeadline } from "@/components/calculators/rebar/ResultCard";
 import { ConcreteVolumeResultCard, concreteVolumeHeadline } from "@/components/calculators/concrete-volume/ResultCard";
 import { ConcreteSlabResultCard, concreteSlabHeadline } from "@/components/calculators/concrete-slab/ResultCard";
+import { ConcreteFootingResultCard, concreteFootingHeadline } from "@/components/calculators/concrete-footing/ResultCard";
+import { ConcreteFoundationResultCard, concreteFoundationHeadline } from "@/components/calculators/concrete-foundation/ResultCard";
+import { ConcreteWallResultCard, concreteWallHeadline } from "@/components/calculators/concrete-wall/ResultCard";
 import type { BrickResponse } from "@/features/calculators/brick/types";
 import type { ConcreteResponse } from "@/features/calculators/concrete/types";
 import type { SteelResponse } from "@/features/calculators/steel/types";
@@ -19,6 +22,9 @@ import type { TileResponse } from "@/features/calculators/tile/types";
 import type { RebarResponse } from "@/features/calculators/rebar/types";
 import type { ConcreteVolumeResponse } from "@/features/calculators/concrete-volume/types";
 import type { ConcreteSlabResponse } from "@/features/calculators/concrete-slab/types";
+import type { ConcreteFootingResponse } from "@/features/calculators/concrete-footing/types";
+import type { ConcreteFoundationResponse } from "@/features/calculators/concrete-foundation/types";
+import type { ConcreteWallResponse } from "@/features/calculators/concrete-wall/types";
 
 // Renders the pretty ResultCard for whichever calculator produced this row.
 export function CalculationResult({ calc }: { calc: SavedCalculation }) {
@@ -39,6 +45,12 @@ export function CalculationResult({ calc }: { calc: SavedCalculation }) {
       return <ConcreteVolumeResultCard data={calc.result as unknown as ConcreteVolumeResponse} />;
     case "concrete-slab":
       return <ConcreteSlabResultCard data={calc.result as unknown as ConcreteSlabResponse} />;
+    case "concrete-footing":
+      return <ConcreteFootingResultCard data={calc.result as unknown as ConcreteFootingResponse} />;
+    case "concrete-foundation":
+      return <ConcreteFoundationResultCard data={calc.result as unknown as ConcreteFoundationResponse} />;
+    case "concrete-wall":
+      return <ConcreteWallResultCard data={calc.result as unknown as ConcreteWallResponse} />;
     default:
       return (
         <div className="rounded border border-dashed border-black/15 p-4 text-xs text-black/60 dark:border-white/20 dark:text-white/60">
@@ -68,6 +80,12 @@ export function calculationHeadline(calc: SavedCalculation): string {
         return concreteVolumeHeadline(calc.result as unknown as ConcreteVolumeResponse);
       case "concrete-slab":
         return concreteSlabHeadline(calc.result as unknown as ConcreteSlabResponse);
+      case "concrete-footing":
+        return concreteFootingHeadline(calc.result as unknown as ConcreteFootingResponse);
+      case "concrete-foundation":
+        return concreteFoundationHeadline(calc.result as unknown as ConcreteFoundationResponse);
+      case "concrete-wall":
+        return concreteWallHeadline(calc.result as unknown as ConcreteWallResponse);
       default:
         return "";
     }

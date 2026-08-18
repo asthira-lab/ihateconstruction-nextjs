@@ -41,6 +41,12 @@ import { concreteVolumeRequestSchema } from "@/features/calculators/concrete-vol
 import { computeConcreteVolume } from "@/features/calculators/concrete-volume/compute";
 import { concreteSlabRequestSchema } from "@/features/calculators/concrete-slab/schema";
 import { computeConcreteSlab } from "@/features/calculators/concrete-slab/compute";
+import { concreteFootingRequestSchema } from "@/features/calculators/concrete-footing/schema";
+import { computeConcreteFooting } from "@/features/calculators/concrete-footing/compute";
+import { concreteFoundationRequestSchema } from "@/features/calculators/concrete-foundation/schema";
+import { computeConcreteFoundation } from "@/features/calculators/concrete-foundation/compute";
+import { concreteWallRequestSchema } from "@/features/calculators/concrete-wall/schema";
+import { computeConcreteWall } from "@/features/calculators/concrete-wall/compute";
 
 const IMMUTABLE_KEYS = new Set([
   "id", "projectId", "calculator", "request", "result", "computedAt", "createdAt", "updatedAt",
@@ -91,6 +97,18 @@ async function runCalculator(
       case "concrete-slab": {
         const req = concreteSlabRequestSchema.parse(rawRequest);
         return (await computeConcreteSlab(req)) as unknown as Record<string, unknown>;
+      }
+      case "concrete-footing": {
+        const req = concreteFootingRequestSchema.parse(rawRequest);
+        return (await computeConcreteFooting(req)) as unknown as Record<string, unknown>;
+      }
+      case "concrete-foundation": {
+        const req = concreteFoundationRequestSchema.parse(rawRequest);
+        return (await computeConcreteFoundation(req)) as unknown as Record<string, unknown>;
+      }
+      case "concrete-wall": {
+        const req = concreteWallRequestSchema.parse(rawRequest);
+        return (await computeConcreteWall(req)) as unknown as Record<string, unknown>;
       }
       default: {
         const _exhaustive: never = slug;

@@ -1231,6 +1231,228 @@
           "a": "Ajoutez 5–10% pour un sol de fondation irrégulier, le béton renversé et les déchets de coffrage. Les 5% par défaut conviennent à un terrain plat préparé ; utilisez 10% pour un sol irrégulier ou un achat en sacs."
         }
       ]
+    },
+    "concrete-footing": {
+      "meta": {
+        "title": "Calculateur de semelles en béton — filantes, isolées et de pieux",
+        "description": "Calculateur gratuit de semelles en béton — yards cubes, pieds et mètres pour semelles filantes, isolées et de pieux, avec sacs, poids et camions."
+      },
+      "crumb": "Calculateur de semelles en béton",
+      "title": "Calculateur de semelles en béton",
+      "subtitle": "Calculez le béton nécessaire à une semelle — mètres cubes, yards cubes, sacs de mélange et camions — pour les semelles filantes, isolées et de pieux.",
+      "form": {
+        "section1": "Type de semelle",
+        "footingType": "Type de semelle",
+        "typeContinuous": "Filante (sous mur)",
+        "typeSpread": "Isolée (dalle de fondation)",
+        "typePier": "Circulaire (pieu / dalle ronde)",
+        "typeHint": "Les semelles filantes courent sous les murs ; les dalles isolées et les pieux soutiennent les poteaux et colonnes isolés.",
+        "section2": "Dimensions",
+        "height": "Hauteur (profondeur de la semelle)",
+        "hgtAria": "Hauteur ou profondeur de la semelle",
+        "diameter": "Diamètre",
+        "diaAria": "Diamètre de la semelle circulaire de pieu",
+        "lenAria": "Longueur de la semelle",
+        "widAria": "Largeur de la semelle",
+        "quantity": "Quantité",
+        "qtyAria": "Nombre de semelles identiques",
+        "qtyHint": "Pour plusieurs semelles identiques, réglez la quantité ici.",
+        "continuousHint": "Les semelles filantes font généralement 200–300 mm d'épaisseur et 300–600 mm de largeur, sur toute la longueur du mur.",
+        "spreadHint": "Une semelle isolée est longueur × largeur × hauteur, puis multipliez par le nombre de dalles.",
+        "pierHint": "Une semelle de pieu circulaire est un cylindre : volume = π × (diamètre/2)² × hauteur.",
+        "section3": "Commande",
+        "wastage": "Perte (%)",
+        "wastageAria": "Pourcentage de perte pour coulage, sur-excavation et coffrage",
+        "wastageHint": "5–10% couvre l'excavation irrégulière, la sur-excavation et les pertes. 5% est la valeur par défaut.",
+        "placeholder": "Saisissez les dimensions de la semelle, puis appuyez sur Calculer.",
+        "errors": {
+          "lenMin": "Saisissez une longueur supérieure à 0.",
+          "lenMax": "La longueur doit être de 200 m ou moins.",
+          "widMin": "Saisissez une largeur supérieure à 0.",
+          "widMax": "La largeur doit être de 5 m ou moins pour une semelle filante, 10 m pour une semelle isolée.",
+          "hgtMin": "Saisissez une hauteur supérieure à 0.",
+          "hgtMax": "La hauteur doit être de 3 m ou moins (5 m pour les pieux).",
+          "diaMin": "Saisissez un diamètre supérieur à 0.",
+          "diaMax": "Le diamètre doit être de 10 m ou moins.",
+          "qtyMin": "La quantité doit être d'au moins 1.",
+          "qtyMax": "La quantité doit être de 1000 ou moins.",
+          "wastageRange": "La perte doit être comprise entre 0 et 50%."
+        }
+      },
+      "article": {
+        "toc": "Sur cette page",
+        "heading": "Tout savoir sur les semelles en béton"
+      },
+      "faq": [
+        {
+          "q": "De combien de béton ai-je besoin pour une semelle ?",
+          "a": "Multipliez l'emprise de la semelle par son épaisseur. Une semelle filante de 8 m de long, 0,6 m de large et 0,5 m de profondeur fait 8 × 0,6 × 0,5 = 2,4 m³ (environ 3,1 yd³) avant perte. Ce calculateur fonctionne pour les semelles filantes, isolées et de pieux."
+        },
+        {
+          "q": "Comment calculer le béton d'une semelle filante ?",
+          "a": "Une semelle filante est un prisme long : longueur × largeur × hauteur. Une semelle de 10 m avec 0,5 m de large et 0,3 m d'épaisseur fait 10 × 0,5 × 0,3 = 1,5 m³ (environ 2 yd³). Ajoutez 5–10% de perte à la commande."
+        },
+        {
+          "q": "Combien de sacs de 80 lb me faut-il pour une semelle ?",
+          "a": "Un sac de 80 lb rend environ 0,6 ft³ de béton. Divisez le volume total de la semelle, pertes incluses, par 0,6 et arrondissez au supérieur. Une semelle filante de 1,5 m³ demande environ 88 sacs."
+        },
+        {
+          "q": "Quelle profondeur pour une semelle en béton ?",
+          "a": "Une semelle filante fait généralement 200–300 mm (8–12 po) et une semelle isolée 300–500 mm (12–20 po). La bonne taille dépend de la charge et du sol — confirmez toujours avec un ingénieur en structure."
+        },
+        {
+          "q": "Quelle largeur pour une semelle filante ?",
+          "a": "En règle générale, une semelle filante fait environ le double de l'épaisseur du mur : 300–600 mm (12–24 po) pour les murs en maçonnerie. Le calculateur utilise votre largeur, hauteur et longueur pour trouver le volume exact."
+        },
+        {
+          "q": "Commander du béton prêt à l'emploi ou des sacs pour une semelle ?",
+          "a": "Pour les grandes semelles, le prêt à l'emploi est souvent moins cher et plus rapide — un camion standard transporte environ 7 yd³. Les sacs conviennent aux petits pieux et dalles. Le calculateur affiche les deux options."
+        }
+      ]
+    },
+    "concrete-foundation": {
+      "meta": {
+        "title": "Calculateur de fondation en béton — semelle et mur de soubassement",
+        "description": "Calculateur gratuit de fondation en béton. Saisissez la longueur, la largeur et la profondeur de la semelle — plus un mur de soubassement optionnel — pour obtenir le béton en mètres et yards cubes, sacs (80 lb / 60 lb), poids et camions."
+      },
+      "crumb": "Calculateur de fondation en béton",
+      "title": "Calculateur de fondation en béton",
+      "subtitle": "Calculez le béton nécessaire à une semelle filante — mètres cubes, yards cubes, sacs de béton prémélangé et camions toupie — à partir de la longueur, la largeur et la profondeur de la semelle, plus un mur de soubassement optionnel.",
+      "form": {
+        "section1": "Semelle",
+        "runLength": "Longueur du tracé",
+        "runAria": "Longueur totale du tracé de la semelle",
+        "footingWidth": "Largeur de la semelle",
+        "widAria": "Largeur de la tranchée de la semelle",
+        "footingDepth": "Profondeur de la semelle",
+        "depAria": "Profondeur ou épaisseur de la semelle",
+        "dimHint": "Volume de la semelle = longueur du tracé × largeur × profondeur. Les semelles filantes courantes font 300–600 mm de large et 200–300 mm de profondeur.",
+        "section2": "Mur de soubassement",
+        "stemLabel": "Inclure un mur de soubassement sur la semelle",
+        "stemHint": "Le mur de soubassement est la bande verticale de béton entre la semelle et le niveau du sol. Décochez pour l'ignorer.",
+        "stemHeight": "Hauteur du mur de soubassement",
+        "htAria": "Hauteur du mur de soubassement",
+        "stemThickness": "Épaisseur du mur de soubassement",
+        "thkAria": "Épaisseur du mur de soubassement",
+        "section3": "Gaspillage",
+        "wastage": "Gaspillage (%)",
+        "wastageAria": "Pourcentage de gaspillage pour pertes, sur-creusement et coffrage",
+        "wastageHint": "5–10 % couvre le creusement irrégulier, le sur-creusement et les pertes de coffrage. 5 % est la valeur par défaut.",
+        "placeholder": "Saisissez les dimensions de votre fondation, puis appuyez sur Calculer.",
+        "errors": {
+          "lenMin": "Saisissez une longueur de tracé supérieure à 0.",
+          "lenMax": "La longueur du tracé doit être de 500 m ou moins.",
+          "widMin": "Saisissez une largeur de semelle supérieure à 0.",
+          "widMax": "La largeur de la semelle doit être de 10 m ou moins.",
+          "depMin": "Saisissez une profondeur de semelle supérieure à 0.",
+          "depMax": "La profondeur de la semelle doit être de 5 m ou moins.",
+          "htMin": "Saisissez une hauteur de mur de soubassement supérieure à 0.",
+          "htMax": "La hauteur du mur de soubassement doit être de 10 m ou moins.",
+          "thkMin": "Saisissez une épaisseur de mur de soubassement supérieure à 0.",
+          "thkMax": "L'épaisseur du mur de soubassement doit être de 5 m ou moins.",
+          "wastageRange": "Le gaspillage doit être compris entre 0 et 50 %."
+        }
+      },
+      "article": {
+        "toc": "Sur cette page",
+        "heading": "Tout savoir sur les fondations en béton"
+      },
+      "faq": [
+        {
+          "q": "De quelle quantité de béton ai-je besoin pour une fondation ?",
+          "a": "Additionnez les volumes de la semelle et du mur de soubassement. Un tracé de 10 m, 0,45 m de large et 0,3 m de profond, c'est 1,35 m³ ; un mur de soubassement de 0,23 m × 0,6 m ajoute 1,38 m³ — soit 2,73 m³ avant gaspillage (environ 3,6 yd³). Le calculateur additionne les deux et indique le volume à commander."
+        },
+        {
+          "q": "Quelle différence entre une semelle et une fondation ?",
+          "a": "La fondation est l'ensemble du système d'appui souterrain ; la semelle est la base élargie en béton qui répartit la charge sur le sol. Ce calculateur dimensionne la semelle plus un mur de soubassement optionnel — la partie béton d'une fondation filante."
+        },
+        {
+          "q": "Comment calculer le béton d'une semelle filante ?",
+          "a": "Une semelle filante est un prisme long : longueur du tracé × largeur × profondeur. Un tracé de 10 m, 0,45 m de large et 0,3 m de profond, c'est 1,35 m³ (1,77 yd³). Ajoutez 5–10 % de gaspillage à la commande."
+        },
+        {
+          "q": "Combien de sacs de 80 lb faut-il pour une fondation ?",
+          "a": "Un sac de béton prémélangé de 80 lb produit environ 0,6 ft³ (0,0222 yd³). Divisez votre volume total, gaspillage inclus, par 0,0222 yd³ et arrondissez au supérieur. Une fondation de 2,87 m³ (semelle + mur de soubassement, 5 % de gaspillage) nécessite environ 169 sacs."
+        },
+        {
+          "q": "Quelle profondeur pour la semelle d'une fondation ?",
+          "a": "Une semelle filante fait généralement 200–300 mm (8–12 po) de profondeur, et dans les climats froids elle doit aussi descendre sous la ligne de gel locale. La bonne taille dépend de la charge et du sol — confirmez avec un ingénieur en structure."
+        },
+        {
+          "q": "Quelle largeur pour une semelle filante ?",
+          "a": "En règle générale, environ le double de l'épaisseur du mur — 300–600 mm (12–24 po) pour les murs en maçonnerie et en blocs courants. Ce calculateur utilise votre largeur pour trouver le volume exact."
+        },
+        {
+          "q": "Qu'est-ce qu'un mur de soubassement ?",
+          "a": "C'est la bande verticale de béton qui repose sur la semelle et monte juste au-dessus du niveau du sol, supportant les murs. Il fait généralement la largeur du mur (200–300 mm) et ajoute longueur × épaisseur × hauteur au volume de béton."
+        }
+      ]
+    },
+    "concrete-wall": {
+      "meta": {
+        "title": "Calculateur de mur en béton — sacs, yards et camions",
+        "description": "Calculateur gratuit de mur en béton. Saisissez la longueur, la hauteur et l'épaisseur du mur pour obtenir le béton en yards cubes, pieds et mètres, plus les sacs de mélange de 80 lb / 60 lb, le poids et les camions."
+      },
+      "crumb": "Calculateur de mur en béton",
+      "title": "Calculateur de mur en béton",
+      "subtitle": "Calculez le béton nécessaire à un mur — mètres cubes, yards cubes, sacs de mélange et camions — à partir de la longueur, la hauteur et l'épaisseur du mur.",
+      "form": {
+        "section1": "Dimensions du mur",
+        "height": "Hauteur",
+        "hgtAria": "Hauteur du mur",
+        "thickness": "Épaisseur (largeur du mur)",
+        "thkAria": "Épaisseur du mur",
+        "lenAria": "Longueur du mur",
+        "dimHint": "Longueur × hauteur × épaisseur donne le volume. Les murs résidentiels font généralement 100–200 mm d'épaisseur ; les murs de sous-sol et de soutènement, 200–300 mm.",
+        "section2": "Perte",
+        "wastage": "Perte (%)",
+        "wastageAria": "Pourcentage de perte pour débordements et coffrage",
+        "wastageHint": "5–10 % couvre les débordements de coffrage, les faces irrégulières et les surversements. 5 % par défaut.",
+        "placeholder": "Entrez les dimensions de votre mur, puis cliquez sur Calculer.",
+        "errors": {
+          "lenMin": "Saisissez une longueur supérieure à 0.",
+          "lenMax": "La longueur doit être de 200 m ou moins.",
+          "hgtMin": "Saisissez une hauteur supérieure à 0.",
+          "hgtMax": "La hauteur doit être de 30 m ou moins.",
+          "thkMin": "Saisissez une épaisseur supérieure à 0.",
+          "thkMax": "L'épaisseur doit être de 5 m ou moins.",
+          "wastageRange": "La perte doit être comprise entre 0 et 50 %."
+        }
+      },
+      "article": {
+        "toc": "Sur cette page",
+        "heading": "Tout savoir sur les murs en béton"
+      },
+      "faq": [
+        {
+          "q": "De combien de béton ai-je besoin pour un mur en béton ?",
+          "a": "Multipliez longueur × hauteur × épaisseur. Un mur de 10 m, 3 m de haut et 150 mm d'épaisseur représente 10 × 3 × 0,15 = 4,5 m³ (environ 5,9 yd³). Avec 5 % de perte, environ 4,73 m³ — près de 278 sacs de mélange de 80 lb et 0,9 d'un camion de 7 yd³."
+        },
+        {
+          "q": "Combien de sacs de 80 lb de béton me faut-il pour un mur ?",
+          "a": "Un sac de mélange de 80 lb donne environ 0,6 pi³ (0,0222 yd³). Divisez le volume total du mur, perte comprise, par 0,0222 yd³ et arrondissez au supérieur. Le calculateur le fait pour vous et affiche aussi le nombre de sacs de 60 lb."
+        },
+        {
+          "q": "Comment calculer les yards de béton pour un mur ?",
+          "a": "Multipliez longueur × hauteur × épaisseur, le tout en pieds (convertissez les pouces en divisant par 12), pour obtenir des pieds cubes, puis divisez par 27 pour obtenir des yards cubes. Ce calculateur convertit n'importe quel mélange d'unités et indique aussi les mètres cubes."
+        },
+        {
+          "q": "Quelle épaisseur pour un mur en béton ?",
+          "a": "Les murs de cloison font généralement 100–150 mm (4–6 po) d'épaisseur, tandis que les murs de sous-sol et de soutènement vont de 200–300 mm (8–12 po). L'épaisseur dépend de la hauteur du mur et de la charge portée — confirmez avec un ingénieur en structure."
+        },
+        {
+          "q": "Combien pèse un mur en béton ?",
+          "a": "Un mur de 10 m × 3 m et 150 mm d'épaisseur représente 4,5 m³ de béton. À 2400 kg/m³, cela fait environ 10 800 kg (10,8 tonnes). Le calculateur affiche le poids estimé de votre volume commandé."
+        },
+        {
+          "q": "De combien de camions de béton prêt à l'emploi ai-je besoin pour un mur ?",
+          "a": "Un camion de béton prêt à l'emploi transporte environ 7 yd³. Divisez votre volume commandé par 7 pour obtenir le nombre de livraisons. Un mur de 10 m × 3 m à 150 mm représente environ 6,2 yd³ — l'essentiel d'une seule livraison."
+        },
+        {
+          "q": "Quelle perte dois-je ajouter pour un mur en béton ?",
+          "a": "Ajoutez 5–10 % pour les débordements de coffrage, les faces irrégulières et les surversements. Les 5 % par défaut conviennent à un coffrage bien dressé ; utilisez 10 % pour les murs rugueux ou en commandant par sacs."
+        }
+      ]
     }
   },
   "results": {

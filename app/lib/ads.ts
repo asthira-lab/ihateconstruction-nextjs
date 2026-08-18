@@ -15,6 +15,9 @@ export const AD_SLOTS = {
   rebarInContent: process.env.NEXT_PUBLIC_AD_REBAR_IN_CONTENT ?? "",
   concreteVolumeInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_VOLUME_IN_CONTENT ?? "",
   concreteSlabInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_SLAB_IN_CONTENT ?? "",
+  concreteFootingInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_FOOTING_IN_CONTENT ?? "",
+  concreteFoundationInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_FOUNDATION_IN_CONTENT ?? "",
+  concreteWallInContent: process.env.NEXT_PUBLIC_AD_CONCRETE_WALL_IN_CONTENT ?? "",
 } as const;
 
 export type AdSlotKey = keyof typeof AD_SLOTS;

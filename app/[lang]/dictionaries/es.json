@@ -1231,6 +1231,228 @@
           "a": "Añade 5–10% por subbase irregular, mezcla derramada y residuos de encofrado. El 5% por defecto sirve para una superficie plana preparada; usa 10% para terreno irregular o al pedir por bolsas."
         }
       ]
+    },
+    "concrete-footing": {
+      "meta": {
+        "title": "Calculadora de zapatas de hormigón — corridas, aisladas y de pilote",
+        "description": "Calculadora gratuita de zapatas de hormigón — yardas cúbicas, pies y metros para zapatas corridas, aisladas y de pilote, con sacos, peso y camiones."
+      },
+      "crumb": "Calculadora de zapatas de hormigón",
+      "title": "Calculadora de zapatas de hormigón",
+      "subtitle": "Calcula cuánto hormigón necesita una zapata — metros cúbicos, yardas cúbicas, sacos de mezcla y camiones — para zapatas corridas, aisladas y de pilote.",
+      "form": {
+        "section1": "Tipo de zapata",
+        "footingType": "Tipo de zapata",
+        "typeContinuous": "Corrida (franja de muro)",
+        "typeSpread": "Aislada (dado)",
+        "typePier": "Circular (pilote / dado redondo)",
+        "typeHint": "Las zapatas corridas van bajo los muros; los dados y pilotes sostienen postes y columnas aislados.",
+        "section2": "Dimensiones",
+        "height": "Altura (profundidad de la zapata)",
+        "hgtAria": "Altura o profundidad de la zapata",
+        "diameter": "Diámetro",
+        "diaAria": "Diámetro de la zapata circular de pilote",
+        "lenAria": "Largo de la zapata",
+        "widAria": "Ancho de la zapata",
+        "quantity": "Cantidad",
+        "qtyAria": "Número de zapatas idénticas",
+        "qtyHint": "Para más de una zapata idéntica, ajusta aquí la cantidad.",
+        "continuousHint": "Las zapatas corridas suelen tener 200–300 mm de espesor y 300–600 mm de ancho, a lo largo de todo el muro.",
+        "spreadHint": "Una zapata aislada es largo × ancho × alto, luego multiplica por el número de dados.",
+        "pierHint": "Una zapata de pilote circular es un cilindro: volumen = π × (diámetro/2)² × altura.",
+        "section3": "Pedido",
+        "wastage": "Desperdicio (%)",
+        "wastageAria": "Porcentaje de desperdicio por derrames, sobre-excavación y encofrado",
+        "wastageHint": "5–10% cubre excavación irregular, sobre-excavación y derrames. 5% es el valor por defecto.",
+        "placeholder": "Introduce las dimensiones de la zapata y pulsa Calcular.",
+        "errors": {
+          "lenMin": "Introduce un largo mayor que 0.",
+          "lenMax": "El largo debe ser de 200 m o menos.",
+          "widMin": "Introduce un ancho mayor que 0.",
+          "widMax": "El ancho debe ser de 5 m o menos para una zapata corrida y de 10 m para un dado.",
+          "hgtMin": "Introduce una altura mayor que 0.",
+          "hgtMax": "La altura debe ser de 3 m o menos (5 m para pilotes).",
+          "diaMin": "Introduce un diámetro mayor que 0.",
+          "diaMax": "El diámetro debe ser de 10 m o menos.",
+          "qtyMin": "La cantidad debe ser al menos 1.",
+          "qtyMax": "La cantidad debe ser de 1000 o menos.",
+          "wastageRange": "El desperdicio debe estar entre 0 y 50%."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que necesitas saber sobre las zapatas de hormigón"
+      },
+      "faq": [
+        {
+          "q": "¿Cuánto hormigón necesito para una zapata?",
+          "a": "Multiplica la huella de la zapata por su espesor. Una zapata corrida de 8 m de largo, 0,6 m de ancho y 0,5 m de profundidad es 8 × 0,6 × 0,5 = 2,4 m³ (unos 3,1 yd³) antes del desperdicio. Esta calculadora funciona para zapatas corridas, aisladas y de pilote."
+        },
+        {
+          "q": "¿Cómo calculo el hormigón de una zapata corrida?",
+          "a": "Una zapata corrida es un prisma largo: largo × ancho × alto. Una zapata de 10 m con 0,5 m de ancho y 0,3 m de espesor es 10 × 0,5 × 0,3 = 1,5 m³ (unos 2 yd³). Añade 5–10% de desperdicio al pedir."
+        },
+        {
+          "q": "¿Cuántos sacos de 80 lb necesito para una zapata?",
+          "a": "Un saco de 80 lb rinde unos 0,6 ft³ de hormigón. Divide el volumen total de la zapata, incluido el desperdicio, entre 0,6 y redondea hacia arriba. Una zapata corrida de 1,5 m³ necesita unos 88 sacos."
+        },
+        {
+          "q": "¿Qué profundidad debe tener una zapata de hormigón?",
+          "a": "Una zapata corrida suele tener 200–300 mm (8–12 pulgadas) y un dado aislado 300–500 mm (12–20 pulgadas). El tamaño correcto depende de la carga y del suelo — confírmalo siempre con un ingeniero estructural."
+        },
+        {
+          "q": "¿Qué ancho debe tener una zapata corrida?",
+          "a": "Como regla general, una zapata corrida tiene el doble del espesor del muro: 300–600 mm (12–24 pulgadas) para muros de mampostería. La calculadora usa tu ancho, altura y largo para hallar el volumen exacto."
+        },
+        {
+          "q": "¿Pido hormigón premezclado o sacos para la zapata?",
+          "a": "Para zapatas grandes, la premezcla suele ser más barata y rápida — un camión estándar lleva unos 7 yd³. Los sacos son ideales para pilotes y dados pequeños. La calculadora muestra ambas opciones."
+        }
+      ]
+    },
+    "concrete-foundation": {
+      "meta": {
+        "title": "Calculadora de cimientos de hormigón — zapata y muro de arranque",
+        "description": "Calculadora gratuita de cimientos de hormigón. Introduce la longitud de la zapata, el ancho y la profundidad — más un muro de arranque opcional — para obtener el hormigón en yardas y metros cúbicos, sacos (80 lb / 60 lb), peso y camiones."
+      },
+      "crumb": "Calculadora de cimientos de hormigón",
+      "title": "Calculadora de cimientos de hormigón",
+      "subtitle": "Averigua cuánto hormigón necesita una zapata corrida — metros cúbicos, yardas cúbicas, sacos y camiones de mezcla — a partir de la longitud, el ancho y la profundidad de la zapata, más un muro de arranque opcional.",
+      "form": {
+        "section1": "Zapata",
+        "runLength": "Longitud del tramo",
+        "runAria": "Longitud total del tramo de zapata",
+        "footingWidth": "Ancho de la zapata",
+        "widAria": "Ancho de la zanja de la zapata",
+        "footingDepth": "Profundidad de la zapata",
+        "depAria": "Profundidad o espesor de la zapata",
+        "dimHint": "Volumen de la zapata = longitud del tramo × ancho × profundidad. Las zapatas corridas típicas miden 300–600 mm de ancho y 200–300 mm de profundidad.",
+        "section2": "Muro de arranque",
+        "stemLabel": "Incluir un muro de arranque sobre la zapata",
+        "stemHint": "El muro de arranque es la banda vertical de hormigón entre la zapata y el nivel del suelo. Desmárcalo para omitirlo.",
+        "stemHeight": "Altura del muro de arranque",
+        "htAria": "Altura del muro de arranque",
+        "stemThickness": "Espesor del muro de arranque",
+        "thkAria": "Espesor del muro de arranque",
+        "section3": "Desperdicio",
+        "wastage": "Desperdicio (%)",
+        "wastageAria": "Porcentaje de desperdicio por derrames, sobre-excavación y encofrado",
+        "wastageHint": "El 5–10% cubre excavación irregular, sobre-excavación y derrames del encofrado. El 5% es el valor por defecto.",
+        "placeholder": "Introduce las dimensiones de tu cimiento y pulsa Calcular.",
+        "errors": {
+          "lenMin": "Introduce una longitud de tramo mayor que 0.",
+          "lenMax": "La longitud del tramo debe ser de 500 m o menos.",
+          "widMin": "Introduce un ancho de zapata mayor que 0.",
+          "widMax": "El ancho de la zapata debe ser de 10 m o menos.",
+          "depMin": "Introduce una profundidad de zapata mayor que 0.",
+          "depMax": "La profundidad de la zapata debe ser de 5 m o menos.",
+          "htMin": "Introduce una altura de muro de arranque mayor que 0.",
+          "htMax": "La altura del muro de arranque debe ser de 10 m o menos.",
+          "thkMin": "Introduce un espesor de muro de arranque mayor que 0.",
+          "thkMax": "El espesor del muro de arranque debe ser de 5 m o menos.",
+          "wastageRange": "El desperdicio debe estar entre 0 y 50%."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que debes saber sobre cimientos de hormigón"
+      },
+      "faq": [
+        {
+          "q": "¿Cuánto hormigón necesito para un cimiento?",
+          "a": "Suma los volúmenes de la zapata y del muro de arranque. Un tramo de 10 m, 0,45 m de ancho y 0,3 m de profundidad son 1,35 m³; un muro de arranque de 0,23 m × 0,6 m añade 1,38 m³ — 2,73 m³ en total antes del desperdicio (unos 3,6 yd³). La calculadora suma ambos y te da el volumen pedido."
+        },
+        {
+          "q": "¿Qué diferencia hay entre una zapata y un cimiento?",
+          "a": "El cimiento es todo el sistema de soporte subterráneo; la zapata es la base ancha de hormigón que reparte la carga sobre el suelo. Esta calculadora dimensiona la zapata más un muro de arranque opcional — la parte de hormigón de un cimiento corrido."
+        },
+        {
+          "q": "¿Cómo calculo el hormigón de una zapata corrida?",
+          "a": "Una zapata corrida es un prisma largo: longitud del tramo × ancho × profundidad. Un tramo de 10 m, 0,45 m de ancho y 0,3 m de profundidad son 1,35 m³ (1,77 yd³). Añade un 5–10% de desperdicio al pedir."
+        },
+        {
+          "q": "¿Cuántos sacos de 80 lb necesito para un cimiento?",
+          "a": "Un saco de mezcla de 80 lb rinde unos 0,6 ft³ (0,0222 yd³). Divide tu volumen total, con desperdicio incluido, entre 0,0222 yd³ y redondea hacia arriba. Un cimiento de 2,87 m³ (zapata + muro de arranque, 5% de desperdicio) necesita unos 169 sacos."
+        },
+        {
+          "q": "¿Qué profundidad debe tener la zapata de un cimiento?",
+          "a": "Una zapata corrida suele tener 200–300 mm (8–12 pulgadas) de profundidad, y en climas fríos también debe quedar por debajo de la línea de congelación local. El tamaño correcto depende de la carga y del suelo — confírmalo con un ingeniero estructural."
+        },
+        {
+          "q": "¿Qué ancho debe tener una zapata corrida?",
+          "a": "Como regla general, unos dos veces el espesor del muro — 300–600 mm (12–24 pulgadas) para muros de mampostería y bloques típicos. Esta calculadora usa tu ancho para hallar el volumen exacto."
+        },
+        {
+          "q": "¿Qué es un muro de arranque?",
+          "a": "Es la banda vertical de hormigón que se apoya en la zapata y sube hasta justo por encima del nivel del suelo, sosteniendo los muros. Suele tener el ancho del muro (200–300 mm) y añade longitud × espesor × altura al volumen de hormigón."
+        }
+      ]
+    },
+    "concrete-wall": {
+      "meta": {
+        "title": "Calculadora de muros de hormigón — sacos, yardas y camiones",
+        "description": "Calculadora gratuita de muros de hormigón. Introduce largo, alto y grosor del muro para obtener hormigón en yardas cúbicas, pies y metros, más sacos de mezcla de 80 lb / 60 lb, peso y cargas de camión."
+      },
+      "crumb": "Calculadora de muros de hormigón",
+      "title": "Calculadora de muros de hormigón",
+      "subtitle": "Calcula cuánto hormigón necesita un muro — metros cúbicos, yardas cúbicas, sacos de mezcla y cargas de camión — a partir del largo, alto y grosor del muro.",
+      "form": {
+        "section1": "Dimensiones del muro",
+        "height": "Altura",
+        "hgtAria": "Altura del muro",
+        "thickness": "Grosor (ancho del muro)",
+        "thkAria": "Grosor del muro",
+        "lenAria": "Largo del muro",
+        "dimHint": "Largo × alto × grosor da el volumen. Los muros residenciales típicos tienen 100–200 mm de grosor; los de sótano y contención, 200–300 mm.",
+        "section2": "Desperdicio",
+        "wastage": "Desperdicio (%)",
+        "wastageAria": "Porcentaje de desperdicio por derrames y encofrado",
+        "wastageHint": "5–10% cubre derrames del encofrado, caras irregulares y sobrevertido. 5% es el valor por defecto.",
+        "placeholder": "Introduce las dimensiones de tu muro y pulsa Calcular.",
+        "errors": {
+          "lenMin": "Introduce un largo mayor que 0.",
+          "lenMax": "El largo debe ser de 200 m o menos.",
+          "hgtMin": "Introduce una altura mayor que 0.",
+          "hgtMax": "La altura debe ser de 30 m o menos.",
+          "thkMin": "Introduce un grosor mayor que 0.",
+          "thkMax": "El grosor debe ser de 5 m o menos.",
+          "wastageRange": "El desperdicio debe estar entre 0 y 50%."
+        }
+      },
+      "article": {
+        "toc": "En esta página",
+        "heading": "Todo lo que necesitas saber sobre los muros de hormigón"
+      },
+      "faq": [
+        {
+          "q": "¿Cuánto hormigón necesito para un muro de hormigón?",
+          "a": "Multiplica largo × alto × grosor. Un muro de 10 m, 3 m de alto y 150 mm de grosor es 10 × 3 × 0,15 = 4,5 m³ (unos 5,9 yd³). Con un 5% de desperdicio son unos 4,73 m³ — cerca de 278 sacos de mezcla de 80 lb y 0,9 de un camión de 7 yd³."
+        },
+        {
+          "q": "¿Cuántos sacos de 80 lb de hormigón necesito para un muro?",
+          "a": "Un saco de mezcla de 80 lb rinde unos 0,6 ft³ (0,0222 yd³). Divide el volumen total del muro, incluido el desperdicio, entre 0,0222 yd³ y redondea hacia arriba. La calculadora lo hace por ti y también muestra el número de sacos de 60 lb."
+        },
+        {
+          "q": "¿Cómo calculo las yardas de hormigón para un muro?",
+          "a": "Multiplica largo × alto × grosor, todo en pies (convierte las pulgadas dividiendo entre 12), para obtener pies cúbicos, y luego divide entre 27 para obtener yardas cúbicas. Esta calculadora convierte cualquier mezcla de unidades y también informa metros cúbicos."
+        },
+        {
+          "q": "¿Qué grosor debe tener un muro de hormigón?",
+          "a": "Los muros divisorios suelen tener 100–150 mm (4–6 pulg.) de grosor, mientras que los de sótano y contención van de 200–300 mm (8–12 pulg.). El grosor depende de la altura y la carga que soporta — confírmalo con un ingeniero estructural."
+        },
+        {
+          "q": "¿Cuánto pesa un muro de hormigón?",
+          "a": "Un muro de 10 m × 3 m y 150 mm de grosor son 4,5 m³ de hormigón. A 2400 kg/m³ son unos 10 800 kg (10,8 toneladas). La calculadora muestra el peso estimado de tu volumen pedido."
+        },
+        {
+          "q": "¿Cuántos camiones de hormigón prefabricado necesito para un muro?",
+          "a": "Un camión de hormigón prefabricado lleva unos 7 yd³. Divide tu volumen pedido entre 7 para obtener el número de cargas. Un muro de 10 m × 3 m a 150 mm son unas 6,2 yd³ — la mayor parte de una sola carga."
+        },
+        {
+          "q": "¿Cuánto desperdicio debo añadir para un muro de hormigón?",
+          "a": "Añade 5–10% por derrames del encofrado, caras irregulares y sobrevertido. El 5% por defecto sirve para un encofrado bien montado; usa el 10% para muros rugosos o al pedir por sacos."
+        }
+      ]
     }
   },
   "results": {

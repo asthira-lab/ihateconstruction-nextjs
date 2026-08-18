@@ -54,6 +54,27 @@ const jobs = [
       "Cubic yards &#183; Premix bags &#183; Ready-mix trucks &#8212; length, width &amp; thickness",
     ),
   },
+  {
+    file: "concrete-footing-calculator-og.png",
+    svg: card(
+      "Concrete Footing Calculator",
+      "Continuous &#183; Spread &#183; Pier &#8212; cubic yards, premix bags &amp; weight",
+    ),
+  },
+  {
+    file: "concrete-foundation-calculator-og.png",
+    svg: card(
+      "Concrete Foundation Calculator",
+      "Strip footing &#183; Stem wall &#8212; cubic yards, premix bags &amp; weight",
+    ),
+  },
+  {
+    file: "concrete-wall-calculator-og.png",
+    svg: card(
+      "Concrete Wall Calculator",
+      "Cubic yards &#183; Premix bags &#183; Ready-mix trucks &#8212; length, height &amp; thickness",
+    ),
+  },
 ];
 
 await mkdir(outDir, { recursive: true });

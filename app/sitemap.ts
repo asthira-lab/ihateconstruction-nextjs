@@ -15,6 +15,9 @@ const CALCULATOR_SLUGS = [
   "rebar-calculator",
   "concrete-volume-calculator",
   "concrete-slab-calculator",
+  "concrete-footing-calculator",
+  "concrete-foundation-calculator",
+  "concrete-wall-calculator",
 ] as const;
 
 // Marketing / SEO pages — priority + freq reflect how often each really changes.

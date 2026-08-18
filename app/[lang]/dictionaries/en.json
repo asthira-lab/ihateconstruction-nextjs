@@ -1231,6 +1231,228 @@
           "a": "Add 5–10% for an uneven subgrade, spilled mix, and formwork waste. The default of 5% suits a flat prepared site; use 10% for rough ground or when ordering by the bag."
         }
       ]
+    },
+    "concrete-footing": {
+      "meta": {
+        "title": "Concrete Footing Calculator — Continuous, Spread & Pier",
+        "description": "Free concrete footing calculator — cubic yards, feet, and metres for continuous, spread, and pier footings, plus premix bags, weight, and truck loads."
+      },
+      "crumb": "Concrete Footing Calculator",
+      "title": "Concrete Footing Calculator",
+      "subtitle": "Work out how much concrete a footing needs — cubic metres, cubic yards, premix bags, and ready-mix truck loads — for continuous wall footings, spread pads, and circular piers.",
+      "form": {
+        "section1": "Footing type",
+        "footingType": "Footing type",
+        "typeContinuous": "Continuous (wall strip)",
+        "typeSpread": "Spread (isolated pad)",
+        "typePier": "Circular (pier / round pad)",
+        "typeHint": "Continuous footings run under walls; spread pads and piers support isolated posts and columns.",
+        "section2": "Dimensions",
+        "height": "Height (footing depth)",
+        "hgtAria": "Height or depth of the footing",
+        "diameter": "Diameter",
+        "diaAria": "Diameter of the circular pier footing",
+        "lenAria": "Footing length",
+        "widAria": "Footing width",
+        "quantity": "Quantity",
+        "qtyAria": "Number of identical footings",
+        "qtyHint": "For more than one identical footing, set the quantity here.",
+        "continuousHint": "Continuous footings are usually 200–300 mm thick and 300–600 mm wide, running the full wall length.",
+        "spreadHint": "A spread pad footing is length × width × height, then multiply by the number of pads.",
+        "pierHint": "A circular pier footing is a cylinder: volume = π × (diameter/2)² × height.",
+        "section3": "Ordering",
+        "wastage": "Wastage (%)",
+        "wastageAria": "Wastage percent for spillage, over-dig, and formwork",
+        "wastageHint": "5–10% covers uneven excavation, over-dig, and formwork spill. 5% is the default.",
+        "placeholder": "Enter your footing dimensions, then hit Calculate.",
+        "errors": {
+          "lenMin": "Enter a length greater than 0.",
+          "lenMax": "Length must be 200 m or less.",
+          "widMin": "Enter a width greater than 0.",
+          "widMax": "Width must be 5 m or less for a continuous footing, 10 m for a spread pad.",
+          "hgtMin": "Enter a height greater than 0.",
+          "hgtMax": "Height must be 3 m or less (5 m for piers).",
+          "diaMin": "Enter a diameter greater than 0.",
+          "diaMax": "Diameter must be 10 m or less.",
+          "qtyMin": "Quantity must be at least 1.",
+          "qtyMax": "Quantity must be 1000 or less.",
+          "wastageRange": "Wastage should be between 0 and 50%."
+        }
+      },
+      "article": {
+        "toc": "On this page",
+        "heading": "Everything you need to know about concrete footings"
+      },
+      "faq": [
+        {
+          "q": "How much concrete do I need for a footing?",
+          "a": "Multiply the footing's footprint by its thickness. A continuous footing 8 m long, 0.6 m wide, and 0.5 m deep is 8 × 0.6 × 0.5 = 2.4 m³ (about 3.1 yd³) before wastage. This calculator works for continuous, spread, and pier footings and reports cubic metres, cubic feet, and cubic yards."
+        },
+        {
+          "q": "How do I calculate concrete for a continuous wall footing?",
+          "a": "A wall (strip) footing is a long prism: length × width × height. A 10 m wall footing 0.5 m wide and 0.3 m thick is 10 × 0.5 × 0.3 = 1.5 m³ (about 2 yd³). Add 5–10% wastage for over-dig and spill when ordering."
+        },
+        {
+          "q": "How many 80 lb bags of concrete do I need for a footing?",
+          "a": "One 80 lb premix bag yields about 0.6 ft³ of concrete. Divide the footing's total volume, including wastage, by 0.6 and round up. A 1.5 m³ continuous footing needs roughly 88 bags of 80 lb premix."
+        },
+        {
+          "q": "How deep should a concrete footing be?",
+          "a": "A continuous footing is typically 200–300 mm (8–12 in) deep; a spread pad 300–500 mm (12–20 in). The right size depends on the wall or column load and the soil — always confirm footing dimensions with a structural engineer."
+        },
+        {
+          "q": "How wide should a continuous footing be?",
+          "a": "As a rule of thumb, a continuous footing is about twice the wall's thickness: 300–600 mm (12–24 in) for typical masonry and block walls. The calculator uses your width, height, and length to find the exact concrete volume."
+        },
+        {
+          "q": "Should I order ready-mix concrete or bags for a footing?",
+          "a": "For large footings, ready-mix is usually cheaper and faster — a standard truck carries about 7 yd³. Bags of premix make sense for small piers and pads where a full delivery is impractical. The calculator shows both bag counts and truck loads."
+        }
+      ]
+    },
+    "concrete-foundation": {
+      "meta": {
+        "title": "Concrete Foundation Calculator — Footing & Stem Wall",
+        "description": "Free concrete foundation calculator. Enter the footing run, width, and depth — plus an optional stem wall — to get concrete in cubic yards and metres, premix bags (80 lb / 60 lb), weight, and truck loads."
+      },
+      "crumb": "Concrete Foundation Calculator",
+      "title": "Concrete Foundation Calculator",
+      "subtitle": "Work out how much concrete a continuous strip foundation needs — cubic metres, cubic yards, premix bags, and ready-mix truck loads — from the footing run, width, depth, and an optional stem wall.",
+      "form": {
+        "section1": "Footing",
+        "runLength": "Run length",
+        "runAria": "Total length of the footing run",
+        "footingWidth": "Footing width",
+        "widAria": "Width of the footing trench",
+        "footingDepth": "Footing depth",
+        "depAria": "Depth or thickness of the footing",
+        "dimHint": "Footing volume = run length × width × depth. Typical continuous footings are 300–600 mm wide and 200–300 mm deep.",
+        "section2": "Stem wall",
+        "stemLabel": "Include a stem wall on top of the footing",
+        "stemHint": "The stem wall is the vertical concrete band between the footing and ground level. Untick to skip it.",
+        "stemHeight": "Stem wall height",
+        "htAria": "Height of the stem wall",
+        "stemThickness": "Stem wall thickness",
+        "thkAria": "Thickness of the stem wall",
+        "section3": "Wastage",
+        "wastage": "Wastage (%)",
+        "wastageAria": "Wastage percent for spillage, over-dig, and formwork",
+        "wastageHint": "5–10% covers uneven excavation, over-dig, and formwork spill. 5% is the default.",
+        "placeholder": "Enter your foundation dimensions, then hit Calculate.",
+        "errors": {
+          "lenMin": "Enter a run length greater than 0.",
+          "lenMax": "Run length must be 500 m or less.",
+          "widMin": "Enter a footing width greater than 0.",
+          "widMax": "Footing width must be 10 m or less.",
+          "depMin": "Enter a footing depth greater than 0.",
+          "depMax": "Footing depth must be 5 m or less.",
+          "htMin": "Enter a stem wall height greater than 0.",
+          "htMax": "Stem wall height must be 10 m or less.",
+          "thkMin": "Enter a stem wall thickness greater than 0.",
+          "thkMax": "Stem wall thickness must be 5 m or less.",
+          "wastageRange": "Wastage should be between 0 and 50%."
+        }
+      },
+      "article": {
+        "toc": "On this page",
+        "heading": "Everything you need to know about concrete foundations"
+      },
+      "faq": [
+        {
+          "q": "How much concrete do I need for a foundation?",
+          "a": "Add the footing and stem wall volumes. A 10 m run, 0.45 m wide and 0.3 m deep, is 1.35 m³; a 0.23 m × 0.6 m stem wall adds 1.38 m³ — 2.73 m³ total before wastage (about 3.6 yd³). The calculator adds both and reports the ordered volume."
+        },
+        {
+          "q": "What's the difference between a footing and a foundation?",
+          "a": "The foundation is the whole underground support system; the footing is the widened concrete base that spreads the load onto the soil. This calculator sizes the footing plus an optional stem wall — the concrete part of a strip foundation."
+        },
+        {
+          "q": "How do I calculate concrete for a continuous footing?",
+          "a": "A continuous (strip) footing is a long prism: run length × width × depth. A 10 m run, 0.45 m wide and 0.3 m deep, is 1.35 m³ (1.77 yd³). Add 5–10% wastage when ordering."
+        },
+        {
+          "q": "How many 80 lb bags of concrete do I need for a foundation?",
+          "a": "One 80 lb premix bag yields about 0.6 ft³ (0.0222 yd³). Divide your total volume, including wastage, by 0.0222 yd³ and round up. A 2.87 m³ foundation (footing + stem wall, 5% wastage) needs about 169 bags."
+        },
+        {
+          "q": "How deep should a foundation footing be?",
+          "a": "A continuous footing is typically 200–300 mm (8–12 in) deep, and in cold climates it must also clear the local frost line. The right size depends on the wall load and the soil — confirm with a structural engineer."
+        },
+        {
+          "q": "How wide should a continuous footing be?",
+          "a": "As a rule of thumb, about twice the wall thickness — 300–600 mm (12–24 in) for typical masonry and block walls. This calculator uses your width to find the exact volume."
+        },
+        {
+          "q": "What is a stem wall?",
+          "a": "A stem wall is the vertical concrete band that sits on the footing and rises to just above ground level, supporting the walls above. It's usually a wall thickness wide (200–300 mm) and adds length × thickness × height to the concrete volume."
+        }
+      ]
+    },
+    "concrete-wall": {
+      "meta": {
+        "title": "Concrete Wall Calculator — Bags, Yards & Truck Loads",
+        "description": "Free concrete wall calculator. Enter wall length, height, and thickness to get concrete in cubic yards, feet, and metres, plus 80 lb / 60 lb premix bags, weight, and ready-mix truck loads."
+      },
+      "crumb": "Concrete Wall Calculator",
+      "title": "Concrete Wall Calculator",
+      "subtitle": "Work out how much concrete a wall needs — cubic metres, cubic yards, premix bags, and ready-mix truck loads — from wall length, height, and thickness.",
+      "form": {
+        "section1": "Wall dimensions",
+        "height": "Height",
+        "hgtAria": "Wall height",
+        "thickness": "Thickness (wall width)",
+        "thkAria": "Wall thickness",
+        "lenAria": "Wall length",
+        "dimHint": "Length × height × thickness gives the volume. Typical residential walls are 100–200 mm thick; basement and retaining walls run 200–300 mm.",
+        "section2": "Wastage",
+        "wastage": "Wastage (%)",
+        "wastageAria": "Wastage percent for spillage and formwork",
+        "wastageHint": "5–10% covers formwork spill, uneven faces, and over-pour. 5% is the default.",
+        "placeholder": "Enter your wall dimensions, then hit Calculate.",
+        "errors": {
+          "lenMin": "Enter a length greater than 0.",
+          "lenMax": "Length must be 200 m or less.",
+          "hgtMin": "Enter a height greater than 0.",
+          "hgtMax": "Height must be 30 m or less.",
+          "thkMin": "Enter a thickness greater than 0.",
+          "thkMax": "Thickness must be 5 m or less.",
+          "wastageRange": "Wastage should be between 0 and 50%."
+        }
+      },
+      "article": {
+        "toc": "On this page",
+        "heading": "Everything you need to know about concrete walls"
+      },
+      "faq": [
+        {
+          "q": "How much concrete do I need for a concrete wall?",
+          "a": "Multiply length × height × thickness. A 10 m wall, 3 m high and 150 mm thick, is 10 × 3 × 0.15 = 4.5 m³ (about 5.9 yd³). With 5% wastage that's roughly 4.73 m³ — about 278 bags of 80 lb premix and 0.9 of a 7 yd³ ready-mix truck."
+        },
+        {
+          "q": "How many 80 lb bags of concrete do I need for a wall?",
+          "a": "One 80 lb premix bag yields about 0.6 ft³ of concrete (0.0222 yd³). Divide the wall's total volume — including wastage — by 0.0222 yd³ and round up. The calculator does this for you and also shows the 60 lb bag count."
+        },
+        {
+          "q": "How do I calculate concrete yards for a wall?",
+          "a": "Multiply length × height × thickness, all in feet (convert inches by dividing by 12), to get cubic feet, then divide by 27 to get cubic yards. This calculator converts any mix of units for you and reports cubic metres too."
+        },
+        {
+          "q": "How thick should a concrete wall be?",
+          "a": "Partition walls are usually 100–150 mm (4–6 in) thick, while basement and retaining walls run 200–300 mm (8–12 in). Thickness depends on wall height and the load it carries — confirm with a structural engineer."
+        },
+        {
+          "q": "How much does a concrete wall weigh?",
+          "a": "A 10 m × 3 m wall, 150 mm thick, is 4.5 m³ of concrete. At 2400 kg/m³ that's about 10,800 kg (10.8 tonnes). The calculator shows the estimated weight of your ordered volume."
+        },
+        {
+          "q": "How many ready-mix trucks do I need for a wall?",
+          "a": "A standard ready-mix truck carries about 7 yd³. Divide your ordered volume by 7 to get the number of loads. A 10 m × 3 m wall at 150 mm is roughly 6.2 yd³ — most of a single load."
+        },
+        {
+          "q": "How much wastage should I add for a concrete wall?",
+          "a": "Add 5–10% for formwork spill, uneven faces, and over-pour. The default of 5% suits a well-set form; use 10% for rough walls or when ordering by the bag."
+        }
+      ]
     }
   },
   "results": {

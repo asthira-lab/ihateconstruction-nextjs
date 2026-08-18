@@ -1231,6 +1231,228 @@
           "a": "Planen Sie 5–10% für unebenen Untergrund, übergelaufenes Gemisch und Schalungsabfall ein. Die 5% Standard passen für einen ebenen vorbereiteten Untergrund; 10% bei rauem Gelände oder Sackkauf."
         }
       ]
+    },
+    "concrete-footing": {
+      "meta": {
+        "title": "Betonfundament-Rechner — Streifen-, Einzel- und Rundfundamente",
+        "description": "Kostenloser Betonfundament-Rechner — Kubikyards, Kubikfuß und Kubikmeter für Streifen-, Einzel- und Rundfundamente, mit Säcken, Gewicht und LKW-Ladungen."
+      },
+      "crumb": "Betonfundament-Rechner",
+      "title": "Betonfundament-Rechner",
+      "subtitle": "Berechnen Sie, wie viel Beton ein Fundament benötigt — Kubikmeter, Kubikyards, Fertigmisch-Säcke und LKW-Ladungen — für Streifenfundamente, Einzelfundamente und Rundfundamente.",
+      "form": {
+        "section1": "Fundamenttyp",
+        "footingType": "Fundamenttyp",
+        "typeContinuous": "Streifenfundament (unter Mauer)",
+        "typeSpread": "Einzelfundament (Platte)",
+        "typePier": "Rund (Pfahl / runde Platte)",
+        "typeHint": "Streifenfundamente verlaufen unter Mauern; Einzel- und Pfahlfundamente stützen einzelne Pfosten und Stützen.",
+        "section2": "Maße",
+        "height": "Höhe (Fundamenttiefe)",
+        "hgtAria": "Höhe oder Tiefe des Fundaments",
+        "diameter": "Durchmesser",
+        "diaAria": "Durchmesser des runden Pfahlfundaments",
+        "lenAria": "Fundamentlänge",
+        "widAria": "Fundamentbreite",
+        "quantity": "Anzahl",
+        "qtyAria": "Anzahl identischer Fundamente",
+        "qtyHint": "Für mehr als ein identisches Fundament die Anzahl hier einstellen.",
+        "continuousHint": "Streifenfundamente sind üblich 200–300 mm dick und 300–600 mm breit, über die volle Mauerlänge.",
+        "spreadHint": "Ein Einzelfundament ist Länge × Breite × Höhe, multipliziert mit der Anzahl der Platten.",
+        "pierHint": "Ein Rundpfahlfundament ist ein Zylinder: Volumen = π × (Durchmesser/2)² × Höhe.",
+        "section3": "Bestellung",
+        "wastage": "Verschnitt (%)",
+        "wastageAria": "Verschnitt-Prozentsatz für Spritzer, Überaushub und Schalung",
+        "wastageHint": "5–10% deckt unebenen Aushub, Überaushub und Schalungsverlust ab. Standard sind 5%.",
+        "placeholder": "Geben Sie die Fundamentmaße ein und klicken Sie auf Berechnen.",
+        "errors": {
+          "lenMin": "Geben Sie eine Länge größer als 0 ein.",
+          "lenMax": "Die Länge muss 200 m oder weniger betragen.",
+          "widMin": "Geben Sie eine Breite größer als 0 ein.",
+          "widMax": "Die Breite muss 5 m oder weniger für ein Streifenfundament und 10 m für ein Einzelfundament betragen.",
+          "hgtMin": "Geben Sie eine Höhe größer als 0 ein.",
+          "hgtMax": "Die Höhe muss 3 m oder weniger betragen (5 m für Pfahlfundamente).",
+          "diaMin": "Geben Sie einen Durchmesser größer als 0 ein.",
+          "diaMax": "Der Durchmesser muss 10 m oder weniger betragen.",
+          "qtyMin": "Die Anzahl muss mindestens 1 betragen.",
+          "qtyMax": "Die Anzahl muss 1000 oder weniger betragen.",
+          "wastageRange": "Der Verschnitt sollte zwischen 0 und 50% liegen."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles Wissenswerte über Betonfundamente"
+      },
+      "faq": [
+        {
+          "q": "Wie viel Beton brauche ich für ein Fundament?",
+          "a": "Multiplizieren Sie die Grundfläche des Fundaments mit seiner Dicke. Ein Streifenfundament von 8 m Länge, 0,6 m Breite und 0,5 m Tiefe ergibt 8 × 0,6 × 0,5 = 2,4 m³ (etwa 3,1 yd³) vor Verschnitt. Dieser Rechner funktioniert für Streifen-, Einzel- und Pfahlfundamente."
+        },
+        {
+          "q": "Wie berechne ich Beton für ein Streifenfundament?",
+          "a": "Ein Streifenfundament ist ein langes Prisma: Länge × Breite × Höhe. Ein 10-m-Fundament mit 0,5 m Breite und 0,3 m Dicke ergibt 10 × 0,5 × 0,3 = 1,5 m³ (etwa 2 yd³). Fügen Sie 5–10% Verschnitt hinzu."
+        },
+        {
+          "q": "Wie viele 80-lb-Säcke brauche ich für ein Fundament?",
+          "a": "Ein 80-lb-Sack ergibt etwa 0,6 ft³ Beton. Teilen Sie das Gesamtvolumen inklusive Verschnitt durch 0,6 und runden Sie auf. Ein 1,5-m³-Streifenfundament benötigt etwa 88 Säcke."
+        },
+        {
+          "q": "Wie tief sollte ein Betonfundament sein?",
+          "a": "Ein Streifenfundament ist üblich 200–300 mm (8–12 Zoll) tief, ein Einzelfundament 300–500 mm (12–20 Zoll). Die richtige Größe hängt von der Last und dem Boden ab — bestätigen Sie sie immer mit einem Statiker."
+        },
+        {
+          "q": "Wie breit sollte ein Streifenfundament sein?",
+          "a": "Faustregel: Ein Streifenfundament ist etwa doppelt so breit wie die Mauer — 300–600 mm (12–24 Zoll) für typische Mauerwerkswände. Der Rechner ermittelt das genaue Volumen aus Breite, Höhe und Länge."
+        },
+        {
+          "q": "Transportbeton oder Säcke für das Fundament?",
+          "a": "Für große Fundamente ist Transportbeton meist günstiger und schneller — ein Standard-LKW fasst etwa 7 yd³. Säcke eignen sich für kleine Pfahl- und Einzelfundamente. Der Rechner zeigt beide Optionen."
+        }
+      ]
+    },
+    "concrete-foundation": {
+      "meta": {
+        "title": "Betonfundament-Rechner — Streifenfundament & aufgehende Wand",
+        "description": "Kostenloser Betonfundament-Rechner. Geben Sie Länge, Breite und Tiefe des Fundaments ein — plus optional eine aufgehende Wand — und erhalten Sie Beton in Kubikmetern und -yards, Sackware (80 lb / 60 lb), Gewicht und Fahrmischer."
+      },
+      "crumb": "Betonfundament-Rechner",
+      "title": "Betonfundament-Rechner",
+      "subtitle": "Ermitteln Sie, wie viel Beton ein Streifenfundament benötigt — Kubikmeter, Kubikyards, Sackware und Fahrmischer — aus Fundamentlänge, -breite, -tiefe und optionaler aufgehender Wand.",
+      "form": {
+        "section1": "Fundament",
+        "runLength": "Länge des Strangs",
+        "runAria": "Gesamtlänge des Fundamentstrangs",
+        "footingWidth": "Fundamentbreite",
+        "widAria": "Breite des Fundamentgrabens",
+        "footingDepth": "Fundamenttiefe",
+        "depAria": "Tiefe oder Dicke des Fundaments",
+        "dimHint": "Fundamentvolumen = Stranglänge × Breite × Tiefe. Übliche Streifenfundamente sind 300–600 mm breit und 200–300 mm tief.",
+        "section2": "Aufgehende Wand",
+        "stemLabel": "Aufgehende Wand auf dem Fundament einbeziehen",
+        "stemHint": "Die aufgehende Wand ist der vertikale Betonstreifen zwischen Fundament und Bodenniveau. Abwählen, um sie zu überspringen.",
+        "stemHeight": "Höhe der aufgehenden Wand",
+        "htAria": "Höhe der aufgehenden Wand",
+        "stemThickness": "Dicke der aufgehenden Wand",
+        "thkAria": "Dicke der aufgehenden Wand",
+        "section3": "Verschnitt",
+        "wastage": "Verschnitt (%)",
+        "wastageAria": "Verschnitt in Prozent für Verlust, Überaushub und Schalung",
+        "wastageHint": "5–10 % deckt unebenen Aushub, Überaushub und Schalungsverlust ab. 5 % ist die Standardeinstellung.",
+        "placeholder": "Geben Sie Ihre Fundamentmaße ein und klicken Sie auf Berechnen.",
+        "errors": {
+          "lenMin": "Geben Sie eine Stranglänge größer als 0 ein.",
+          "lenMax": "Die Stranglänge darf höchstens 500 m betragen.",
+          "widMin": "Geben Sie eine Fundamentbreite größer als 0 ein.",
+          "widMax": "Die Fundamentbreite darf höchstens 10 m betragen.",
+          "depMin": "Geben Sie eine Fundamenttiefe größer als 0 ein.",
+          "depMax": "Die Fundamenttiefe darf höchstens 5 m betragen.",
+          "htMin": "Geben Sie eine Höhe der aufgehenden Wand größer als 0 ein.",
+          "htMax": "Die Höhe der aufgehenden Wand darf höchstens 10 m betragen.",
+          "thkMin": "Geben Sie eine Dicke der aufgehenden Wand größer als 0 ein.",
+          "thkMax": "Die Dicke der aufgehenden Wand darf höchstens 5 m betragen.",
+          "wastageRange": "Der Verschnitt muss zwischen 0 und 50 % liegen."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles über Betonfundamente"
+      },
+      "faq": [
+        {
+          "q": "Wie viel Beton brauche ich für ein Fundament?",
+          "a": "Addieren Sie das Volumen von Fundament und aufgehender Wand. Ein Strang von 10 m, 0,45 m breit und 0,3 m tief ergibt 1,35 m³; eine aufgehende Wand von 0,23 m × 0,6 m addiert 1,38 m³ — insgesamt 2,73 m³ vor Verschnitt (etwa 3,6 yd³). Der Rechner addiert beide und nennt das Bestellvolumen."
+        },
+        {
+          "q": "Was ist der Unterschied zwischen Fundament und Streifenfundament?",
+          "a": "Das Fundament ist das gesamte unterirdische Tragsystem; das Streifenfundament ist die verbreiterte Betonbasis, die die Last auf den Boden verteilt. Dieser Rechner dimensioniert das Fundament plus eine optionale aufgehende Wand — den Betonteil eines Streifenfundaments."
+        },
+        {
+          "q": "Wie berechne ich Beton für ein Streifenfundament?",
+          "a": "Ein Streifenfundament ist ein langes Prisma: Stranglänge × Breite × Tiefe. Ein Strang von 10 m, 0,45 m breit und 0,3 m tief ergibt 1,35 m³ (1,77 yd³). Bestellen Sie 5–10 % Verschnitt zusätzlich."
+        },
+        {
+          "q": "Wie viele 80-lb-Säcke brauche ich für ein Fundament?",
+          "a": "Ein 80-lb-Sack Trockenbeton ergibt etwa 0,6 ft³ (0,0222 yd³). Teilen Sie Ihr Gesamtvolumen inklusive Verschnitt durch 0,0222 yd³ und runden Sie auf. Ein Fundament von 2,87 m³ (Fundament + Wand, 5 % Verschnitt) braucht etwa 169 Säcke."
+        },
+        {
+          "q": "Wie tief muss ein Fundament sein?",
+          "a": "Ein Streifenfundament ist üblicherweise 200–300 mm (8–12 Zoll) tief und muss in kalten Klimazonen außerdem unter der örtlichen Frostgrenze liegen. Die richtige Größe hängt von Last und Boden ab — bestätigen Sie sie mit einem Tragwerksplaner."
+        },
+        {
+          "q": "Wie breit muss ein Streifenfundament sein?",
+          "a": "Faustregel: etwa doppelt so breit wie die Wand — 300–600 mm (12–24 Zoll) für übliche Mauerwerks- und Blockwände. Dieser Rechner nutzt Ihre Breite für das exakte Volumen."
+        },
+        {
+          "q": "Was ist eine aufgehende Wand?",
+          "a": "Eine aufgehende Wand ist der vertikale Betonstreifen, der auf dem Fundament sitzt und knapp über Bodenniveau hochsteigt und die Wände trägt. Sie ist meist wanddick (200–300 mm) und addiert Länge × Dicke × Höhe zum Betonvolumen."
+        }
+      ]
+    },
+    "concrete-wall": {
+      "meta": {
+        "title": "Betonwand-Rechner — Säcke, Yards und LKW-Ladungen",
+        "description": "Kostenloser Betonwand-Rechner. Geben Sie Länge, Höhe und Dicke der Wand ein, um Beton in Kubikyards, -fuß und -metern zu erhalten, plus Fertigmischsäcke (80 lb / 60 lb), Gewicht und LKW-Ladungen."
+      },
+      "crumb": "Betonwand-Rechner",
+      "title": "Betonwand-Rechner",
+      "subtitle": "Berechnen Sie, wie viel Beton eine Wand benötigt — Kubikmeter, Kubikyards, Fertigmischsäcke und LKW-Ladungen — aus Länge, Höhe und Dicke der Wand.",
+      "form": {
+        "section1": "Wandmaße",
+        "height": "Höhe",
+        "hgtAria": "Höhe der Wand",
+        "thickness": "Dicke (Wandstärke)",
+        "thkAria": "Dicke der Wand",
+        "lenAria": "Länge der Wand",
+        "dimHint": "Länge × Höhe × Dicke ergibt das Volumen. Übliche Wohnwände sind 100–200 mm dick; Keller- und Stützwände 200–300 mm.",
+        "section2": "Verschnitt",
+        "wastage": "Verschnitt (%)",
+        "wastageAria": "Verschnitt in Prozent für Spritzer und Schalung",
+        "wastageHint": "5–10 % decken Schalungsverlust, unebene Flächen und Überlauf ab. 5 % ist der Standard.",
+        "placeholder": "Geben Sie Ihre Wandmaße ein und klicken Sie auf Berechnen.",
+        "errors": {
+          "lenMin": "Geben Sie eine Länge größer als 0 ein.",
+          "lenMax": "Die Länge darf höchstens 200 m betragen.",
+          "hgtMin": "Geben Sie eine Höhe größer als 0 ein.",
+          "hgtMax": "Die Höhe darf höchstens 30 m betragen.",
+          "thkMin": "Geben Sie eine Dicke größer als 0 ein.",
+          "thkMax": "Die Dicke darf höchstens 5 m betragen.",
+          "wastageRange": "Der Verschnitt sollte zwischen 0 und 50 % liegen."
+        }
+      },
+      "article": {
+        "toc": "Auf dieser Seite",
+        "heading": "Alles, was Sie über Betonwände wissen müssen"
+      },
+      "faq": [
+        {
+          "q": "Wie viel Beton brauche ich für eine Betonwand?",
+          "a": "Multiplizieren Sie Länge × Höhe × Dicke. Eine 10 m lange, 3 m hohe und 150 mm dicke Wand ergibt 10 × 3 × 0,15 = 4,5 m³ (etwa 5,9 yd³). Mit 5 % Verschnitt sind das rund 4,73 m³ — etwa 278 Säcke Fertigmischung (80 lb) und 0,9 eines 7-yd³-LKWs."
+        },
+        {
+          "q": "Wie viele 80-lb-Säcke Beton brauche ich für eine Wand?",
+          "a": "Ein 80-lb-Fertigmischsack ergibt etwa 0,6 ft³ (0,0222 yd³). Teilen Sie das Gesamtvolumen der Wand — inklusive Verschnitt — durch 0,0222 yd³ und runden Sie auf. Der Rechner erledigt das für Sie und zeigt auch die Anzahl der 60-lb-Säcke."
+        },
+        {
+          "q": "Wie berechne ich Beton-Yards für eine Wand?",
+          "a": "Multiplizieren Sie Länge × Höhe × Dicke, alles in Fuß (Zoll durch 12 teilen), um Kubikfuß zu erhalten, und teilen Sie dann durch 27 für Kubikyards. Dieser Rechner rechnet jede Einheitenkombination um und gibt auch Kubikmeter an."
+        },
+        {
+          "q": "Wie dick sollte eine Betonwand sein?",
+          "a": "Trennwände sind meist 100–150 mm (4–6 Zoll) dick, während Keller- und Stützwände 200–300 mm (8–12 Zoll) messen. Die Dicke hängt von Wandhöhe und Last ab — bestätigen Sie das mit einem Statiker."
+        },
+        {
+          "q": "Wie schwer ist eine Betonwand?",
+          "a": "Eine 10 m × 3 m Wand mit 150 mm Dicke entspricht 4,5 m³ Beton. Bei 2400 kg/m³ sind das etwa 10 800 kg (10,8 Tonnen). Der Rechner zeigt das geschätzte Gewicht Ihrer Bestellmenge."
+        },
+        {
+          "q": "Wie viele Fertigbeton-LKWs brauche ich für eine Wand?",
+          "a": "Ein üblicher Fertigbeton-LKW fasst etwa 7 yd³. Teilen Sie Ihre Bestellmenge durch 7, um die Anzahl der Lieferungen zu erhalten. Eine 10 m × 3 m Wand bei 150 mm sind etwa 6,2 yd³ — der Großteil einer einzigen Lieferung."
+        },
+        {
+          "q": "Wie viel Verschnitt sollte ich für eine Betonwand einplanen?",
+          "a": "Rechnen Sie 5–10 % für Schalungsverlust, unebene Flächen und Überlauf ein. Die 5 % Standard passen zu einer sauber aufgestellten Schalung; verwenden Sie 10 % bei rauen Wänden oder bei Bestellung in Säcken."
+        }
+      ]
     }
   },
   "results": {

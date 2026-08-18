@@ -82,6 +82,27 @@ export const CALCULATORS: CalculatorEntry[] = [
       "Concrete for a rectangular slab from length, width, and thickness — cubic yards, premix bags (80 lb / 60 lb), weight, and ready-mix truck loads.",
     status: "live",
   },
+  {
+    slug: "concrete-foundation-calculator",
+    title: "Concrete foundation calculator",
+    description:
+      "Concrete for a continuous strip footing — plus an optional stem wall — from run length, footing width and depth. Cubic yards, premix bags, weight, and ready-mix truck loads.",
+    status: "live",
+  },
+  {
+    slug: "concrete-footing-calculator",
+    title: "Concrete footing calculator",
+    description:
+      "Concrete for continuous wall footings, spread pad footings, and circular pier footings — cubic yards, premix bags (80 lb / 60 lb), weight, and truck loads.",
+    status: "live",
+  },
+  {
+    slug: "concrete-wall-calculator",
+    title: "Concrete wall calculator",
+    description:
+      "Concrete for a wall from length, height, and thickness — cubic yards, premix bags (80 lb / 60 lb), weight, and ready-mix truck loads.",
+    status: "live",
+  },
 ];
 
 export function calculatorHref(entry: CalculatorEntry, locale?: string): string {

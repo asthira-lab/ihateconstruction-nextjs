@@ -2,7 +2,7 @@
 
 import { z } from "zod";
 
-export const CALCULATOR_SLUGS = ["brick", "concrete", "paint", "steel", "tile", "rebar", "concrete-volume", "concrete-slab"] as const;
+export const CALCULATOR_SLUGS = ["brick", "concrete", "paint", "steel", "tile", "rebar", "concrete-volume", "concrete-slab", "concrete-footing", "concrete-foundation", "concrete-wall"] as const;
 export type CalculatorSlug = (typeof CALCULATOR_SLUGS)[number];
 export const calculatorSlugSchema = z.enum(CALCULATOR_SLUGS);
 
