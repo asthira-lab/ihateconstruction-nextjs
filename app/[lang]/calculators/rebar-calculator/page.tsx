@@ -8,6 +8,15 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 import { CalculatorGrid } from "@/components/marketing/CalculatorGrid";
+import { ArticleHeader } from "@/components/calculators/ui/ArticleHeader";
+import { CalculatorPageShell } from "@/components/calculators/ui/CalculatorPageShell";
+import { TableOfContents } from "@/components/calculators/ui/TableOfContents";
+import { SimilarCalculators } from "@/components/calculators/ui/SimilarCalculators";
+import { RelatedCalculators } from "@/components/calculators/ui/RelatedCalculators";
+import {
+  CALCULATORS,
+  calculatorHref,
+} from "@/features/calculators/registry";
 import { REBAR_SIZES } from "@/features/calculators/rebar";
 import { getRebarToc } from "@/features/calculators/rebar/toc";
 import { RebarCalculatorForm } from "./RebarCalculatorForm";
@@ -148,6 +157,13 @@ export default async function RebarCalculatorPage({
   const Article = REBAR_ARTICLES[locale] ?? RebarEn;
   const toc = getRebarToc(locale);
 
+  const others = CALCULATORS.filter((e) => e.slug !== "rebar-calculator" && e.status === "live");
+  const similarLinks = others.map((e) => ({
+    href: calculatorHref(e, locale),
+    label: e.title,
+  }));
+  const relatedLinks = similarLinks.slice(0, 2);
+
   return (
     <>
       <script
@@ -161,87 +177,74 @@ export default async function RebarCalculatorPage({
       <SiteHeader />
       <main className="flex-1">
         <Container className="py-12">
-          <header className="mb-10 max-w-3xl">
-            <p className="text-xs uppercase tracking-widest text-black/60 dark:text-white/60">
-              {c.eyebrow}
-            </p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              {t.title}
-            </h1>
-            <p className="mt-3 max-w-2xl text-base text-black/70 dark:text-white/70">
-              {t.subtitle}
-            </p>
-          </header>
+          <ArticleHeader eyebrow={c.eyebrow} title={t.title} subtitle={t.subtitle} />
 
-          <section className="mb-16">
-            <RebarCalculatorForm t={t.form} common={dict.common} cCommon={c} />
-          </section>
+          <div className="mt-10">
+            <CalculatorPageShell
+              calculator={
+                <>
+                  <RebarCalculatorForm t={t.form} common={dict.common} cCommon={c} />
+                  <SimilarCalculators title={c.other} links={similarLinks} />
+                </>
+              }
+            >
+              <TableOfContents title={art.toc} entries={toc} />
 
-          {/* Localised TOC — generated from the MDX article's own headings. */}
-          <nav aria-label={art.toc} className="mb-10 rounded-lg border border-black/10 p-5 dark:border-white/10">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
-              {art.toc}
-            </p>
-            <ol className="list-decimal space-y-1.5 pl-5 text-sm text-black/75 dark:text-white/75">
-              {toc.map((entry) => (
-                <li key={entry.id}>
-                  <a href={`#${entry.id}`} className="underline decoration-black/20 underline-offset-2 hover:decoration-black/60 dark:decoration-white/20 dark:hover:decoration-white/60">
-                    {entry.label}
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </nav>
+              <article
+                aria-label={art.heading}
+                className="prose prose-neutral mt-10 max-w-3xl prose-h2:text-xl prose-h2:font-semibold prose-h2:tracking-tight prose-p:text-black/75 prose-p:dark:text-white/75 prose-li:marker:text-black/50 dark:prose-invert"
+              >
+                <Article />
+              </article>
 
-          <section className="mb-16" aria-label={t.article.heading}>
-            <div className="prose prose-neutral max-w-3xl prose-h2:text-xl prose-h2:font-semibold prose-h2:tracking-tight prose-p:text-black/75 prose-p:dark:text-white/75 prose-li:marker:text-black/50 dark:prose-invert">
-              <Article />
-            </div>
-          </section>
-
-          {/* Rebar size reference table — data-driven, localized headers. */}
-          <section className="mb-16">
-            <h2 className="text-xl font-semibold tracking-tight">{t.sizes.heading}</h2>
-            <p className="mt-3 max-w-3xl text-sm text-black/75 dark:text-white/75">{t.sizes.note}</p>
-            <div className="mt-5 overflow-x-auto rounded-lg border border-black/10 dark:border-white/10">
-              <table className="w-full min-w-[34rem] text-left text-sm">
-                <thead>
-                  <tr className="border-b border-black/10 text-xs uppercase tracking-widest text-black/60 dark:border-white/10 dark:text-white/60">
-                    <th className="px-4 py-3 font-medium">{t.sizes.cols.imperial}</th>
-                    <th className="px-4 py-3 font-medium">{t.sizes.cols.metric}</th>
-                    <th className="px-4 py-3 font-medium">{t.sizes.cols.diaIn}</th>
-                    <th className="px-4 py-3 font-medium">{t.sizes.cols.diaMm}</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-black/5 dark:divide-white/5">
-                  {REBAR_SIZES.map((s) => (
-                    <tr key={s.imperial} className="text-black/80 dark:text-white/80">
-                      <td className="px-4 py-2 font-medium">{s.imperial}</td>
-                      <td className="px-4 py-2">{s.metric}</td>
-                      <td className="px-4 py-2 tabular-nums">{s.diameterIn}″</td>
-                      <td className="px-4 py-2 tabular-nums">{s.diameterMm} mm</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section className="mb-16">
-            <h2 className="text-xl font-semibold tracking-tight">{c.faq}</h2>
-            <dl className="mt-6 max-w-3xl space-y-6">
-              {t.faq.map((item) => (
-                <div key={item.q}>
-                  <dt className="text-sm font-semibold">{item.q}</dt>
-                  <dd className="mt-1 text-sm leading-relaxed text-black/70 dark:text-white/70">
-                    {item.a}
-                  </dd>
+              <section className="mt-10">
+                <h2 className="text-xl font-semibold tracking-tight">{t.sizes.heading}</h2>
+                <p className="mt-3 max-w-3xl text-sm text-black/75 dark:text-white/75">{t.sizes.note}</p>
+                <div className="mt-5 overflow-x-auto rounded-lg border border-black/10 dark:border-white/10">
+                  <table className="w-full min-w-[34rem] text-left text-sm">
+                    <thead>
+                      <tr className="border-b border-black/10 text-xs uppercase tracking-widest text-black/60 dark:border-white/10 dark:text-white/60">
+                        <th className="px-4 py-3 font-medium">{t.sizes.cols.imperial}</th>
+                        <th className="px-4 py-3 font-medium">{t.sizes.cols.metric}</th>
+                        <th className="px-4 py-3 font-medium">{t.sizes.cols.diaIn}</th>
+                        <th className="px-4 py-3 font-medium">{t.sizes.cols.diaMm}</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-black/5 dark:divide-white/5">
+                      {REBAR_SIZES.map((s) => (
+                        <tr key={s.imperial} className="text-black/80 dark:text-white/80">
+                          <td className="px-4 py-2 font-medium">{s.imperial}</td>
+                          <td className="px-4 py-2">{s.metric}</td>
+                          <td className="px-4 py-2 tabular-nums">{s.diameterIn}″</td>
+                          <td className="px-4 py-2 tabular-nums">{s.diameterMm} mm</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
-              ))}
-            </dl>
-          </section>
+              </section>
 
-          <section className="border-t border-black/10 pt-10 dark:border-white/10">
+              <section className="mt-10">
+                <h2 className="text-xl font-semibold tracking-tight">{c.faq}</h2>
+                <dl className="mt-6 max-w-3xl space-y-6">
+                  {t.faq.map((item) => (
+                    <div key={item.q}>
+                      <dt className="text-sm font-semibold">{item.q}</dt>
+                      <dd className="mt-1 text-sm leading-relaxed text-black/70 dark:text-white/70">
+                        {item.a}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+
+              <div className="mt-10">
+                <RelatedCalculators title={c.other} links={relatedLinks} />
+              </div>
+            </CalculatorPageShell>
+          </div>
+
+          <section className="mt-12 border-t border-black/10 pt-10 dark:border-white/10">
             <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
               {c.other}
             </h2>

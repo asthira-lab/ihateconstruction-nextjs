@@ -1,937 +1,1223 @@
 {
-  "common": {
-    "cancel": "Annuler",
-    "save": "Enregistrer",
-    "saveChanges": "Enregistrer les modifications",
-    "saving": "Enregistrement…",
-    "delete": "Supprimer",
-    "deleting": "Suppression…",
-    "back": "Retour",
-    "loading": "Chargement…",
-    "loadMore": "Charger plus",
-    "close": "Fermer",
-    "edit": "Modifier",
-    "new": "Nouveau",
-    "add": "Ajouter",
-    "remove": "Retirer",
-    "confirm": "Confirmer",
-    "yes": "Oui",
-    "no": "Non",
-    "required": "*",
-    "optional": "(facultatif)",
-    "openings": "Ouvertures",
-    "netArea": "Surface nette",
-    "wastage": "Perte",
-    "cement": "Ciment",
-    "sand": "Sable",
-    "aggregate": "Granulat",
-    "mortar": "Mortier",
-    "grout": "Coulis",
-    "unit": "Unité",
-    "length": "Longueur",
-    "width": "Largeur",
-    "height": "Hauteur",
-    "thickness": "Épaisseur",
-    "volume": "Volume",
-    "quantity": "Quantité",
-    "reset": "Réinitialiser",
-    "calculate": "Calculer",
-    "calculating": "Calcul en cours…",
-    "preset": "Préréglage",
-    "customise": "Personnaliser",
-    "fixHighlighted": "Corrigez les champs surlignés pour continuer.",
-    "noAccount": "Aucun compte",
-    "notFound": "—",
-    "coming": "Bientôt disponible"
+ "common": {
+  "cancel": "Annuler",
+  "save": "Enregistrer",
+  "saveChanges": "Enregistrer les modifications",
+  "saving": "Enregistrement…",
+  "delete": "Supprimer",
+  "deleting": "Suppression…",
+  "back": "Retour",
+  "loading": "Chargement…",
+  "loadMore": "Charger plus",
+  "close": "Fermer",
+  "edit": "Modifier",
+  "new": "Nouveau",
+  "add": "Ajouter",
+  "remove": "Retirer",
+  "confirm": "Confirmer",
+  "yes": "Oui",
+  "no": "Non",
+  "required": "*",
+  "optional": "(facultatif)",
+  "openings": "Ouvertures",
+  "netArea": "Surface nette",
+  "wastage": "Perte",
+  "cement": "Ciment",
+  "sand": "Sable",
+  "aggregate": "Granulat",
+  "mortar": "Mortier",
+  "grout": "Coulis",
+  "unit": "Unité",
+  "length": "Longueur",
+  "width": "Largeur",
+  "height": "Hauteur",
+  "thickness": "Épaisseur",
+  "volume": "Volume",
+  "quantity": "Quantité",
+  "reset": "Réinitialiser",
+  "calculate": "Calculer",
+  "calculating": "Calcul en cours…",
+  "preset": "Préréglage",
+  "customise": "Personnaliser",
+  "fixHighlighted": "Corrigez les champs surlignés pour continuer.",
+  "noAccount": "Aucun compte",
+  "notFound": "—",
+  "coming": "Bientôt disponible"
+ },
+ "header": {
+  "brand": "ihateconstruction",
+  "homeAria": "Accueil ihateconstruction.co",
+  "calculators": "Calculateurs",
+  "projects": "Projets",
+  "signIn": "Se connecter"
+ },
+ "footer": {
+  "product": "Produit",
+  "company": "Entreprise",
+  "legal": "Mentions légales",
+  "calculators": "Calculateurs",
+  "roadmap": "Feuille de route",
+  "projectsBoq": "Projets et BOQ",
+  "quotations": "Devis",
+  "about": "À propos",
+  "contact": "Contact",
+  "privacy": "Confidentialité",
+  "terms": "Conditions",
+  "tagline": "Calculateurs de construction et outils d'estimation pour les entrepreneurs.",
+  "copy": "© {year} ihateconstruction.co",
+  "made": "Conçu pour les chantiers indiens · en-IN"
+ },
+ "home": {
+  "hero": {
+   "eyebrow": "Outils gratuits pour les entrepreneurs indiens",
+   "title": "Estimation et calculateurs conçus pour la façon dont les entrepreneurs travaillent réellement.",
+   "subtitle": "Calculateurs gratuits, compatibles avec toutes les unités, qui transforment les dimensions d'un mur en commandes de matériaux — briques, ciment, sable, carrelage, peinture, acier. Projets, BOQ et devis prêts pour la GST arrivent bientôt.",
+   "ctaPrimary": "Ouvrir les calculateurs",
+   "ctaSecondary": "Essayer le calculateur de briques",
+   "note": "Aucun compte requis · Métrique et impérial · Fonctionne sur mobile"
   },
-  "header": {
-    "brand": "ihateconstruction",
-    "homeAria": "Accueil ihateconstruction.co",
-    "calculators": "Calculateurs",
-    "projects": "Projets",
-    "signIn": "Se connecter"
-  },
-  "footer": {
-    "product": "Produit",
-    "company": "Entreprise",
-    "legal": "Mentions légales",
-    "calculators": "Calculateurs",
-    "roadmap": "Feuille de route",
-    "projectsBoq": "Projets et BOQ",
-    "quotations": "Devis",
-    "about": "À propos",
-    "contact": "Contact",
-    "privacy": "Confidentialité",
-    "terms": "Conditions",
-    "tagline": "Calculateurs de construction et outils d'estimation pour les entrepreneurs.",
-    "copy": "© {year} ihateconstruction.co",
-    "made": "Conçu pour les chantiers indiens · en-IN"
-  },
-  "home": {
-    "hero": {
-      "eyebrow": "Outils gratuits pour les entrepreneurs indiens",
-      "title": "Estimation et calculateurs conçus pour la façon dont les entrepreneurs travaillent réellement.",
-      "subtitle": "Calculateurs gratuits, compatibles avec toutes les unités, qui transforment les dimensions d'un mur en commandes de matériaux — briques, ciment, sable, carrelage, peinture, acier. Projets, BOQ et devis prêts pour la GST arrivent bientôt.",
-      "ctaPrimary": "Ouvrir les calculateurs",
-      "ctaSecondary": "Essayer le calculateur de briques",
-      "note": "Aucun compte requis · Métrique et impérial · Fonctionne sur mobile"
+  "features": {
+   "eyebrow": "Ce qui est inclus",
+   "title": "Une seule plateforme. De l'estimation à la facture.",
+   "subtitle": "Commencez par les calculateurs dès aujourd'hui. Enregistrez les résultats dans des projets, générez des BOQ et des devis, et envoyez des factures prêtes pour la GST — le tout au même endroit.",
+   "cards": {
+    "calculators": {
+     "title": "Calculateurs",
+     "body": "Cinq calculateurs éprouvés sur le terrain pour le béton, la brique, la peinture, le carrelage et l'acier. Saisissez votre chantier, obtenez des quantités exactes de matériaux."
     },
-    "features": {
-      "eyebrow": "Ce qui est inclus",
-      "title": "Une seule plateforme. De l'estimation à la facture.",
-      "subtitle": "Commencez par les calculateurs dès aujourd'hui. Enregistrez les résultats dans des projets, générez des BOQ et des devis, et envoyez des factures prêtes pour la GST — le tout au même endroit.",
-      "cards": {
-        "calculators": { "title": "Calculateurs", "body": "Cinq calculateurs éprouvés sur le terrain pour le béton, la brique, la peinture, le carrelage et l'acier. Saisissez votre chantier, obtenez des quantités exactes de matériaux." },
-        "projects": { "title": "Projets et BOQ", "body": "Enregistrez chaque calcul dans un projet. Construisez automatiquement un bordereau de quantités avec totaux cumulés." },
-        "quotations": { "title": "Devis et factures", "body": "PDF professionnels avec votre logo, coordonnées du client, ventilation GST et coordonnées bancaires indiennes." }
-      }
+    "projects": {
+     "title": "Projets et BOQ",
+     "body": "Enregistrez chaque calcul dans un projet. Construisez automatiquement un bordereau de quantités avec totaux cumulés."
     },
-    "howItWorks": {
-      "eyebrow": "Comment ça marche",
-      "title": "Trois étapes, sans tableur.",
-      "steps": {
-        "pick": { "title": "Choisissez un calculateur", "body": "Béton, brique, peinture, carrelage ou acier. Chacun est livré avec les préréglages que vous utilisez réellement sur le chantier." },
-        "enter": { "title": "Saisissez votre chantier", "body": "Dimensions des murs, ratios de mélange, perte — curseurs pour la forme souhaitée, saisie directe pour la valeur exacte." },
-        "order": { "title": "Obtenez votre liste de commande", "body": "Briques à l'unité, ciment en sacs de 50 kg, sable en pieds cubes. Prêt à remettre à votre fournisseur." }
-      }
-    },
-    "indian": {
-      "eyebrow": "Conçu pour les chantiers indiens",
-      "title": "Dans les unités indiennes, pour la façon dont les entrepreneurs indiens achètent.",
-      "body1": "Chaque calculateur est livré avec les préréglages utilisés sur le chantier — brique modulaire IS 1077, brique traditionnelle 230×110×75 mm, blocs AAC. Les quantités sont exprimées dans les unités que vous commanderez, ainsi ce que dit le calculateur est exactement ce que vous transmettez au fournisseur.",
-      "body2": "Pas de tables de conversion. Pas d'« à peu près ». Pas de terminologie importée des États-Unis qui ne correspond pas à la réalité du chantier.",
-      "bullets": [
-        "Préréglages modulaire, traditionnel et bloc AAC",
-        "Ciment en sacs de 50 kg, sable en pieds cubes",
-        "Saisie métrique ou impérial, par champ",
-        "Pourcentages de perte réellement utilisés par les entrepreneurs",
-        "Sorties prêtes pour la GST (à venir avec les devis)",
-        "Brique modulaire IS 1077 comme réglage par défaut de premier plan"
-      ]
-    },
-    "closing": {
-      "title": "Commencez par le calculateur de briques.",
-      "body": "Aucun compte requis. Entrez les dimensions de votre mur et obtenez une commande exacte de matériaux — briques, sacs de ciment, sable — en moins d'une minute.",
-      "cta": "Ouvrir le calculateur de briques"
+    "quotations": {
+     "title": "Devis et factures",
+     "body": "PDF professionnels avec votre logo, coordonnées du client, ventilation GST et coordonnées bancaires indiennes."
     }
+   }
   },
-  "breadcrumbs": {
-    "home": "Accueil",
-    "calculators": "Calculateurs",
-    "about": "À propos",
-    "contact": "Contact",
-    "privacy": "Politique de confidentialité",
-    "terms": "Conditions d'utilisation"
-  },
-  "about": {
-    "meta": {
-      "title": "À propos — Calculateurs de construction et logiciels gratuits pour entrepreneurs",
-      "description": "À propos de iHateConstruction — calculateurs de construction gratuits pour le ciment, le béton, la brique, l'acier, la peinture et le carrelage, avec BOQ, devis et facturation GST conçus pour les entrepreneurs indiens."
+  "howItWorks": {
+   "eyebrow": "Comment ça marche",
+   "title": "Trois étapes, sans tableur.",
+   "steps": {
+    "pick": {
+     "title": "Choisissez un calculateur",
+     "body": "Béton, brique, peinture, carrelage ou acier. Chacun est livré avec les préréglages que vous utilisez réellement sur le chantier."
     },
-    "title": "À propos de iHateConstruction",
-    "problem": {
-      "heading": "Le problème",
-      "body": "La construction en Inde est une industrie de ₹13 lakh crore — et la plupart des entrepreneurs estiment encore les coûts sur papier, envoient des devis par captures d'écran WhatsApp et suivent les paiements dans un carnet. Les outils existants sont soit conçus pour les entrepreneurs généraux américains (Procore, Buildertrend), soit trop complexes pour une équipe de 5 personnes travaillant dans le résidentiel.",
-      "intro": "Nous avons vu les entrepreneurs se débattre avec :",
-      "items": [
-        "Deviner les quantités de matériaux → surcommande de 15-20% (₹ jetés à la poubelle)",
-        "Établir un devis de mémoire → oublis d'articles, prix sous-évalués, conversations gênantes plus tard",
-        "Suivre les paiements sur papier → « Ont-ils payé la deuxième tranche ou non ? »",
-        "Partager des documents → transferts WhatsApp de PDF flous réalisés sous MS Paint"
-      ]
+    "enter": {
+     "title": "Saisissez votre chantier",
+     "body": "Dimensions des murs, ratios de mélange, perte — curseurs pour la forme souhaitée, saisie directe pour la valeur exacte."
     },
-    "solution": {
-      "heading": "La solution",
-      "body": "iHateConstruction offre aux entrepreneurs indiens un endroit unique pour estimer, chiffrer, facturer et se faire payer — sans la lourdeur des logiciels d'entreprise ni l'étiquette à $300 par mois.",
-      "cards": {
-        "calculators": { "title": "Calculateurs", "body": "Béton, acier, brique, peinture, carrelage — avec les normes indiennes (codes IS) intégrées." },
-        "boq": { "title": "BOQ et devis", "body": "Générez des bordereaux de quantités professionnels et des devis destinés aux clients en quelques secondes." },
-        "invoices": { "title": "Factures et paiements", "body": "Suivez qui doit quoi. Partagez un QR UPI pour un encaissement instantané. Enregistrez les paiements par OCR de captures d'écran." },
-        "pdf": { "title": "Export PDF", "body": "Documents A4 professionnels que vos clients respectent vraiment — pas des transferts WhatsApp." }
-      }
-    },
-    "audience": {
-      "heading": "À qui cela s'adresse",
-      "items": [
-        { "bold": "Entrepreneurs indépendants", "rest": " réalisant des projets résidentiels et de petit commercial." },
-        { "bold": "Petites entreprises de construction", "rest": " (2 à 15 personnes) qui ont besoin de structure sans lourdeur administrative." },
-        { "bold": "Ingénieurs civils", "rest": " qui font de l'estimation en parallèle et souhaitent des calculs précis et reproductibles." },
-        { "bold": "Architectes d'intérieur", "rest": " ayant besoin d'estimer les matériaux pour des projets d'aménagement." }
-      ]
-    },
-    "india": {
-      "heading": "L'Inde d'abord",
-      "intro": "Chaque décision que nous prenons commence par l'entrepreneur indien :",
-      "items": [
-        "Les calculs utilisent les codes IS et les pratiques standards indiennes (pas ASTM ni Eurocode).",
-        "Les unités de matériaux correspondent à ce que vous achetez au godown local — sacs, CFT, mètres linéaires.",
-        "La devise est l'INR. Les taux de GST sont intégrés. La région fiscale compte.",
-        "Paiement par QR UPI — parce que c'est ainsi que l'Inde paie en 2026.",
-        "Fonctionne sur un téléphone à ₹10,000 en 4G. Aucun flux de travail réservé au bureau."
-      ]
-    },
-    "contact": {
-      "heading": "Contact",
-      "body1": "Un retour, un bug détecté ou envie d'un partenariat ? Contactez-nous à",
-      "email": "huzaif89@hotmail.com",
-      "body2": "ou utilisez le",
-      "link": "formulaire de contact"
+    "order": {
+     "title": "Obtenez votre liste de commande",
+     "body": "Briques à l'unité, ciment en sacs de 50 kg, sable en pieds cubes. Prêt à remettre à votre fournisseur."
     }
+   }
   },
-  "privacy": {
-    "meta": {
-      "title": "Politique de confidentialité — Comment nous traitons vos données",
-      "description": "Politique de confidentialité de iHateConstruction. Découvrez quelles données personnelles nous collectons, comment nous les utilisons, où elles sont stockées et vos droits sur votre compte, vos projets, vos calculs et vos données professionnelles."
-    },
-    "title": "Politique de confidentialité",
-    "updated": "Dernière mise à jour : 5 août 2026",
-    "s1": { "heading": "1. Informations que nous collectons", "intro": "Lorsque vous utilisez iHateConstruction, nous collectons :", "items": [
-      { "bold": "Informations de compte :", "rest": " Nom, adresse e-mail et identifiants d'authentification (gérés par Clerk)." },
-      { "bold": "Données de projet :", "rest": " Projets, calculs, matériaux, BOQ, devis et factures que vous créez." },
-      { "bold": "Données d'utilisation :", "rest": " Pages visitées, fonctionnalités utilisées, type de navigateur, informations sur l'appareil et adresse IP." },
-      { "bold": "Informations de paiement :", "rest": " Identifiants UPI et QR codes que vous téléchargez volontairement. Nous ne traitons ni ne stockons les numéros de carte bancaire." }
-    ]},
-    "s2": { "heading": "2. Comment nous utilisons vos données", "items": [
-      "Fournir, maintenir et améliorer le service.",
-      "Générer des documents (BOQ, devis, factures, PDF) à votre demande.",
-      "Envoyer des e-mails transactionnels (vérification de compte, réinitialisation de mot de passe).",
-      "Analyser les schémas d'utilisation pour améliorer les fonctionnalités (données agrégées, jamais vendues)."
-    ]},
-    "s3": { "heading": "3. Stockage et sécurité des données", "body": "Vos données sont stockées dans des bases de données chiffrées hébergées sur une infrastructure cloud sécurisée. Nous utilisons TLS pour toutes les données en transit. L'authentification est gérée par Clerk, un fournisseur conforme SOC 2 Type II." },
-    "s4": { "heading": "4. Partage des données", "intro": "Nous ne vendons pas vos données. Nous les partageons uniquement avec :", "items": [
-      { "bold": "Prestataires de services :", "rest": " Hébergement (Vercel), authentification (Clerk), base de données (PostgreSQL géré) — uniquement ce qui est nécessaire au fonctionnement." },
-      { "bold": "Vos clients :", "rest": " Lorsque vous générez un lien public de devis, les détails du devis sont visibles pour quiconque possède le lien." },
-      { "bold": "Obligations légales :", "rest": " Si requis par la loi indienne ou par une décision de justice valide." }
-    ]},
-    "s5": { "heading": "5. Vos droits", "items": [
-      { "bold": "Accès :", "rest": " Consulter toutes les données associées à votre compte." },
-      { "bold": "Export :", "rest": " Télécharger vos projets, calculs et documents." },
-      { "bold": "Suppression :", "rest": " Demander la suppression complète de votre compte et de toutes les données associées." },
-      { "bold": "Correction :", "rest": " Mettre à jour les informations inexactes à tout moment." }
-    ]},
-    "s6": { "heading": "6. Cookies", "body": "Nous utilisons des cookies essentiels pour l'authentification et la gestion de session. Aucun cookie publicitaire. Aucun pixel de suivi tiers." },
-    "s7": { "heading": "7. Conservation des données", "body": "Vos données sont conservées tant que votre compte est actif. Les comptes supprimés sont purgés sous 30 jours. Les journaux d'audit sont conservés pendant 1 an à des fins de sécurité." },
-    "s8": { "heading": "8. Mineurs", "body": "iHateConstruction n'est pas destiné aux utilisateurs de moins de 18 ans. Nous ne collectons pas sciemment de données auprès de mineurs." },
-    "s9": { "heading": "9. Modifications", "body": "Nous pouvons mettre à jour cette politique. Les changements substantiels seront notifiés par e-mail ou par un avis dans l'application au moins 14 jours avant leur entrée en vigueur." },
-    "s10": { "heading": "10. Contact", "body": "Pour les questions liées à la confidentialité :", "email": "huzaif89@hotmail.com" }
+  "indian": {
+   "eyebrow": "Conçu pour les chantiers indiens",
+   "title": "Dans les unités indiennes, pour la façon dont les entrepreneurs indiens achètent.",
+   "body1": "Chaque calculateur est livré avec les préréglages utilisés sur le chantier — brique modulaire IS 1077, brique traditionnelle 230×110×75 mm, blocs AAC. Les quantités sont exprimées dans les unités que vous commanderez, ainsi ce que dit le calculateur est exactement ce que vous transmettez au fournisseur.",
+   "body2": "Pas de tables de conversion. Pas d'« à peu près ». Pas de terminologie importée des États-Unis qui ne correspond pas à la réalité du chantier.",
+   "bullets": [
+    "Préréglages modulaire, traditionnel et bloc AAC",
+    "Ciment en sacs de 50 kg, sable en pieds cubes",
+    "Saisie métrique ou impérial, par champ",
+    "Pourcentages de perte réellement utilisés par les entrepreneurs",
+    "Sorties prêtes pour la GST (à venir avec les devis)",
+    "Brique modulaire IS 1077 comme réglage par défaut de premier plan"
+   ]
   },
-  "terms": {
-    "meta": {
-      "title": "Conditions d'utilisation — Règles d'utilisation de iHateConstruction",
-      "description": "Conditions d'utilisation de iHateConstruction. Les règles d'utilisation de nos calculateurs de construction gratuits, de la gestion de projet, du générateur de BOQ, des outils de devis et de facturation et des fonctionnalités d'encaissement."
-    },
-    "title": "Conditions d'utilisation",
-    "updated": "Dernière mise à jour : 5 août 2026",
-    "s1": { "heading": "1. Acceptation", "body": "En accédant à iHateConstruction (« le Service ») ou en l'utilisant, vous acceptez d'être lié par les présentes Conditions. Si vous n'acceptez pas, n'utilisez pas le Service." },
-    "s2": { "heading": "2. Description du service", "intro": "iHateConstruction est une plateforme de gestion de construction et d'estimation qui fournit :", "items": [
-      "Calculateurs de matériaux de construction (béton, acier, brique, peinture, carrelage).",
-      "Gestion de projet avec calculs enregistrés et prix des matériaux.",
-      "Génération de bordereaux de quantités (BOQ).",
-      "Création de devis et factures avec export PDF.",
-      "Outils d'encaissement (QR UPI, liens de paiement)."
-    ]},
-    "s3": { "heading": "3. Comptes utilisateur", "items": [
-      "Vous devez fournir des informations exactes lors de la création d'un compte.",
-      "Vous êtes responsable de toute activité sous votre compte.",
-      "Vous ne devez pas partager vos identifiants ni laisser d'autres accéder à votre compte.",
-      "Nous pouvons suspendre ou résilier les comptes qui violent les présentes Conditions."
-    ]},
-    "s4": { "heading": "4. Vos données", "items": [
-      "Vous conservez la propriété de tout le contenu que vous créez (projets, calculs, documents).",
-      "Vous nous accordez une licence limitée pour stocker, traiter et afficher vos données uniquement afin de fournir le Service.",
-      "Nous ne revendiquons pas la propriété de vos données professionnelles."
-    ]},
-    "s5": { "heading": "5. Utilisation acceptable", "intro": "Vous vous engagez à ne pas :", "items": [
-      "Utiliser le Service à des fins illégales.",
-      "Téléverser du contenu malveillant ou tenter de compromettre la sécurité.",
-      "Extraire, explorer ou télécharger en masse des données du Service.",
-      "Usurper l'identité d'une autre personne ou entité.",
-      "Utiliser les calculateurs pour des décisions d'ingénierie critiques pour la sécurité sans vérification professionnelle indépendante."
-    ]},
-    "s6": { "heading": "6. Avertissement sur les calculateurs", "boldLabel": "Important :", "body": " Les calculateurs fournissent des estimations basées sur des formules standards et des normes régionales. Ce sont des outils d'estimation, pas des substituts à l'ingénierie structurelle professionnelle. Vérifiez toujours les quantités auprès d'un ingénieur qualifié avant tout approvisionnement ou construction." },
-    "s7": { "heading": "7. Fonctionnalités de paiement", "items": [
-      "Les fonctionnalités d'encaissement (QR UPI, liens de paiement) facilitent la communication entre vous et vos clients.",
-      "Nous ne sommes pas un processeur de paiement. Les fonds circulent directement entre vous et votre client.",
-      "Nous ne sommes pas responsables des litiges de paiement, des transactions échouées ou des montants incorrects.",
-      "Lorsque nous intégrons des passerelles de paiement (Razorpay), leurs conditions s'appliquent également."
-    ]},
-    "s8": { "heading": "8. Disponibilité", "body": "Nous visons une haute disponibilité mais ne garantissons pas un service ininterrompu. La maintenance planifiée sera annoncée à l'avance. Nous ne sommes pas responsables des pertes dues aux interruptions." },
-    "s9": { "heading": "9. Limitation de responsabilité", "intro": "Dans toute la mesure permise par le droit indien :", "items": [
-      "Le Service est fourni « en l'état » sans garantie d'aucune sorte.",
-      "Nous ne sommes pas responsables des dommages indirects, accessoires ou consécutifs.",
-      "Notre responsabilité totale est limitée au montant que vous nous avez payé au cours des 12 mois précédant la réclamation (ou ₹5,000, selon le montant le plus élevé)."
-    ]},
-    "s10": { "heading": "10. Propriété intellectuelle", "items": [
-      "Le Service, sa conception, son code et sa marque sont notre propriété intellectuelle.",
-      "Vous ne pouvez pas copier, modifier ou redistribuer une partie du Service.",
-      "Le nom « iHateConstruction » et les marques associées sont nos marques commerciales."
-    ]},
-    "s11": { "heading": "11. Résiliation", "items": [
-      "Vous pouvez supprimer votre compte à tout moment.",
-      "Nous pouvons résilier votre accès en cas de violation des Conditions, avec préavis.",
-      "En cas de résiliation, vous disposez de 30 jours pour exporter vos données avant leur suppression."
-    ]},
-    "s12": { "heading": "12. Loi applicable", "body": "Les présentes Conditions sont régies par les lois de l'Inde. Les litiges seront soumis à la compétence exclusive des tribunaux de Bengaluru, Karnataka." },
-    "s13": { "heading": "13. Modifications", "body": "Nous pouvons modifier ces Conditions. Les changements substantiels seront communiqués 14 jours à l'avance. La poursuite de l'utilisation après modifications vaut acceptation." },
-    "s14": { "heading": "14. Contact", "body": "Questions concernant ces Conditions :", "email": "legal@ihateconstruction.co" }
+  "closing": {
+   "title": "Commencez par le calculateur de briques.",
+   "body": "Aucun compte requis. Entrez les dimensions de votre mur et obtenez une commande exacte de matériaux — briques, sacs de ciment, sable — en moins d'une minute.",
+   "cta": "Ouvrir le calculateur de briques"
+  }
+ },
+ "breadcrumbs": {
+  "home": "Accueil",
+  "calculators": "Calculateurs",
+  "about": "À propos",
+  "contact": "Contact",
+  "privacy": "Politique de confidentialité",
+  "terms": "Conditions d'utilisation"
+ },
+ "about": {
+  "meta": {
+   "title": "À propos — Calculateurs de construction et logiciels gratuits pour entrepreneurs",
+   "description": "À propos de iHateConstruction — calculateurs de construction gratuits pour le ciment, le béton, la brique, l'acier, la peinture et le carrelage, avec BOQ, devis et facturation GST conçus pour les entrepreneurs indiens."
   },
-  "contact": {
-    "meta": {
-      "title": "Contact — Parlez à l'équipe iHateConstruction",
-      "description": "Contactez iHateConstruction au sujet de bugs, fonctionnalités, demandes de calculateurs, partenariats ou questions générales. L'un de nous lit chaque message et répond généralement sous deux jours ouvrés."
-    },
-    "eyebrow": "Entreprise",
-    "title": "Nous contacter",
-    "subtitle": "Écrivez-nous pour signaler un bug, demander un calculateur, proposer un partenariat ou tout autre sujet. L'un de nous lit chaque message et répond généralement sous deux jours ouvrés.",
-    "form": {
-      "name": "Nom",
-      "email": "E-mail",
-      "subject": "Objet",
-      "message": "Message",
-      "website": "Site web",
-      "send": "Envoyer",
-      "sending": "Envoi…",
-      "successTitle": "Message envoyé",
-      "successBody": "Merci — nous l'avons bien reçu.",
-      "successNote": "L'un de nous lira votre message et répondra à l'adresse e-mail que vous nous avez fournie, généralement sous deux jours ouvrés.",
-      "sendAnother": "Envoyer un autre message",
-      "subjects": {
-        "general": "Question générale",
-        "bug": "Rapport de bug",
-        "feature": "Demande de fonctionnalité",
-        "partnership": "Partenariat"
-      },
-      "errors": {
-        "nameRequired": "Veuillez saisir votre nom.",
-        "nameShort": "Le nom doit contenir au moins 2 caractères.",
-        "nameLong": "Le nom doit contenir 80 caractères ou moins.",
-        "emailRequired": "Veuillez saisir votre e-mail.",
-        "emailInvalid": "Cela ne ressemble pas à un e-mail valide.",
-        "messageRequired": "Veuillez saisir un message.",
-        "messageShort": "Le message doit contenir au moins 10 caractères.",
-        "messageLong": "Le message doit contenir {max} caractères ou moins.",
-        "fixHighlighted": "Corrigez les champs surlignés pour continuer."
-      }
-    }
+  "title": "À propos de iHateConstruction",
+  "problem": {
+   "heading": "Le problème",
+   "body": "La construction en Inde est une industrie de ₹13 lakh crore — et la plupart des entrepreneurs estiment encore les coûts sur papier, envoient des devis par captures d'écran WhatsApp et suivent les paiements dans un carnet. Les outils existants sont soit conçus pour les entrepreneurs généraux américains (Procore, Buildertrend), soit trop complexes pour une équipe de 5 personnes travaillant dans le résidentiel.",
+   "intro": "Nous avons vu les entrepreneurs se débattre avec :",
+   "items": [
+    "Deviner les quantités de matériaux → surcommande de 15-20% (₹ jetés à la poubelle)",
+    "Établir un devis de mémoire → oublis d'articles, prix sous-évalués, conversations gênantes plus tard",
+    "Suivre les paiements sur papier → « Ont-ils payé la deuxième tranche ou non ? »",
+    "Partager des documents → transferts WhatsApp de PDF flous réalisés sous MS Paint"
+   ]
   },
-  "calculators": {
-    "index": {
-      "meta": {
-        "title": "Calculateurs de construction gratuits — Ciment, béton, brique et ferraillage",
-        "description": "Sept calculateurs de construction gratuits — ciment, béton, brique, acier, ferraillage, peinture et carrelage. Saisissez votre chantier et obtenez une commande exacte de matériaux en yards cubes, pieds cubes ou unités métriques. Sacs de ciment pour une dalle, briques pour un mur, acier pour une armature, litres de peinture pour une pièce, carreaux pour un sol."
-      },
-      "eyebrow": "Outils",
-      "title": "Calculateurs de construction gratuits",
-      "subtitle": "Sept calculateurs pour les commandes de matériaux que vous passez réellement — ciment, béton, brique, acier, ferraillage, peinture et carrelage. Saisissez vos dimensions, obtenez des sacs, des briques, des kilogrammes ou des litres. Fonctionne en yards cubes, pieds cubes et mètres cubes.",
-      "missing": "Il manque un calculateur que vous utilisez au quotidien ?",
-      "contactSoon": "Formulaire de contact bientôt disponible."
-    },
-    "common": {
-      "eyebrow": "Calculateur",
-      "faq": "Questions fréquentes",
-      "other": "Autres calculateurs",
-      "how": "Comment fonctionne le calcul",
-      "customParams": "Paramètres personnalisés",
-      "fillForm": "Remplissez le formulaire et appuyez sur Calculer pour voir votre liste de matériaux.",
-      "fillFormSteel": "Remplissez le formulaire et appuyez sur Calculer pour voir le poids d'acier.",
-      "fillFormPaint": "Remplissez le formulaire et appuyez sur Calculer pour voir votre estimation de peinture.",
-      "fillFormTile": "Remplissez le formulaire et appuyez sur Calculer pour voir votre estimation de carrelage."
-    },
-    "cement": {
-      "meta": { "title": "Calculateur de ciment — Dalle, trou de poteau et yards cubes", "description": "Calculateur de ciment gratuit. Déterminez combien de sacs de ciment il vous faut pour une dalle de béton, un trou de poteau, un mur ou tout volume — en yards cubes, pieds cubes ou mètres cubes. Compatible avec les sacs 94 lb Portland, 50 kg, 40 kg, 60 lb et 80 lb, les mélanges sable et ciment (1:3, 1:4, 1:6), et les mélanges de dalle standards (M15, M20, M25)." },
-      "crumb": "Calculateur de ciment",
-      "title": "Calculateur de ciment",
-      "subtitle": "Déterminez exactement combien de sacs de ciment il vous faut — pour une dalle de béton, une série de trous de poteaux ou tout volume humide en yards cubes, pieds cubes ou mètres cubes. Compatible avec les sacs de ciment Portland 94 lb, les sacs indiens 50 kg, 40 kg, 60 lb et 80 lb, ainsi que les mélanges sable-ciment (1:3, 1:4, 1:6) et les mélanges de béton standards (M15, M20, M25).",
-      "handles": "Ce que ce calculateur de ciment gère",
-      "cards": {
-        "slab": { "title": "Ciment pour une dalle", "body": "Saisissez longueur, largeur et épaisseur en pieds et pouces. Le calculateur renvoie les sacs de ciment pour un mélange M15, M20 ou M25 — les trois grades utilisés pour les allées, les sols de garage et les dalles de maison." },
-        "post": { "title": "Ciment pour trou de poteau", "body": "Poteaux de clôture, boîtes aux lettres, panneaux. Saisissez le diamètre du trou, la profondeur et le nombre de poteaux à sceller ; l'outil dimensionne un remplissage sable-ciment 1:3 pour l'ensemble." },
-        "cuyd": { "title": "Yards cubes de ciment", "body": "Vous connaissez déjà votre volume en yards cubes ? Passez en mode Volume libre. Les mètres cubes et pieds cubes sont également pris en charge — le calculateur convertit entre les trois." },
-        "sc": { "title": "Sable et ciment", "body": "Choisissez le préréglage plâtre 1:4, maçonnerie 1:6 ou mortier riche 1:3 lorsque vous ne mélangez que du ciment et du sable — sans granulat. La sortie indique à la fois les sacs de ciment et les pieds cubes de sable." },
-        "portland": { "title": "Sacs de ciment Portland 94 lb", "body": "Entrepreneurs américains achetant du ciment Portland Type I/II en sacs 94 lb : choisissez cette taille de sac et le total est arrondi automatiquement au sac entier." },
-        "indian": { "title": "Sacs indiens 50 kg", "body": "Pour les entrepreneurs en Inde : sacs OPC / PPC de 50 kg, ratios de mélange IS 456 et résultats en pieds cubes — les unités que votre godown propose réellement." }
-      },
-      "form": {
-        "pouring": "Que coulez-vous ?",
-        "modes": { "slab": "Dalle de béton", "post": "Trou de poteau", "free": "Volume libre" },
-        "lengthFt": "Longueur (ft)",
-        "widthFt": "Largeur (ft)",
-        "thicknessIn": "Épaisseur (in)",
-        "diameterIn": "Diamètre du trou (in)",
-        "depthFt": "Profondeur (ft)",
-        "posts": "Nombre de poteaux",
-        "wetVolume": "Volume humide",
-        "unit": "Unité",
-        "units": { "yd3": "Yards cubes", "m3": "Mètres cubes", "ft3": "Pieds cubes" },
-        "ratio": "Ratio de mélange",
-        "bagSize": "Taille du sac de ciment",
-        "wastage": "Perte (%)",
-        "resultAria": "Résultat du calculateur de ciment",
-        "youNeed": "Il vous faudra",
-        "bags": "sacs de ciment (",
-        "cementKg": "Ciment (kg)",
-        "cementLb": "Ciment (lb)",
-        "wetVol": "Volume humide :",
-        "dry": "· Facteur de volume sec 1,54 · Perte",
-        "mixLabel": "Mélange :",
-        "empty": "Saisissez vos dimensions pour voir les sacs de ciment et les quantités de matériaux."
-      }
-    },
-    "concrete": {
-      "meta": { "title": "Calculateur de béton — Dalle, poutre, poteau et semelle", "description": "Calculateur de béton gratuit. Saisissez les dimensions de votre dalle, poutre, poteau ou semelle et obtenez les sacs de ciment, le sable et le granulat grossier — pour les grades M5 à M25 selon les ratios de mélange standards IS 456. Fonctionne en yards cubes, pieds cubes et mètres cubes." },
-      "crumb": "Calculateur de béton",
-      "title": "Calculateur de béton — Dalle, poutre, poteau et semelle",
-      "subtitle": "Saisissez le volume humide de béton à couler, choisissez un grade, et nous renverrons les sacs de ciment, le sable et le granulat grossier — conformes au ratio de mélange IS 456 pour ce grade.",
-      "form": {
-        "grade": "Grade de béton",
-        "customGrade": "Personnaliser ce grade",
-        "volume": "Volume de béton",
-        "wetVol": "Volume humide",
-        "volAria": "Volume de béton",
-        "volHelp": "Saisissez le volume fini (humide) de béton à couler.",
-        "outputs": "Unités de sortie",
-        "ratio": "Ratio de mélange (c : s : a)",
-        "wastage": "Perte",
-        "wastageAria": "Pourcentage de perte",
-        "dtw": "Facteur sec-à-humide",
-        "dtwAria": "Facteur sec-à-humide",
-        "density": "Densité du ciment",
-        "densityAria": "Densité apparente du ciment",
-        "bag": "Poids du sac de ciment",
-        "bagAria": "Poids du sac de ciment",
-        "errors": {
-          "volMin": "Saisissez un volume supérieur à 0.",
-          "volMax": "Le volume doit être inférieur ou égal à 10 000.",
-          "ratioFmt": "Utilisez le format « a:b:c » — par exemple « 1:1.5:3 ».",
-          "ratioPos": "Chaque partie du ratio doit être supérieure à 0.",
-          "wastageRange": "Saisissez un nombre entre 0 et 50.",
-          "wastageMax": "La perte doit être inférieure ou égale à 50%.",
-          "dtwMin": "Le facteur sec-à-humide doit être supérieur à 1.",
-          "dtwMax": "Un facteur sec-à-humide supérieur à 2 est irréaliste.",
-          "density": "Saisissez une densité supérieure à 0.",
-          "bag": "Saisissez un poids de sac supérieur à 0."
-        }
-      }
-    },
-    "brick": {
-      "meta": { "title": "Calculateur de briques — Mur, terrasse, pavage et brasero", "description": "Calculateur de briques gratuit. Déterminez le nombre exact de briques et le mortier (ciment + sable) qu'il vous faut pour n'importe quel mur, terrasse, pavage, brasero, mur de soutènement ou maison. Compatible avec briques rouges, briques réfractaires, briques en béton, modulaires, traditionnelles et blocs AAC. Saisie en pieds carrés ou en dimensions de mur." },
-      "crumb": "Calculateur de briques",
-      "title": "Calculateur de briques — Mur, terrasse, pavage et brasero",
-      "subtitle": "Saisissez les dimensions de votre mur, une surface totale en pieds carrés ou le volume à remplir. Nous renverrons le nombre de briques, le volume de mortier, les sacs de ciment et le sable — conformes à la brique que vous utilisez réellement, qu'il s'agisse de brique rouge en argile, de brique réfractaire, de brique en béton, modulaire ou d'un bloc AAC.",
-      "form": {
-        "mode": "Mode de saisie",
-        "modes": { "dims": "Par dimensions du mur", "vol": "Par volume total" },
-        "standard": "Standard de brique",
-        "customStd": "Personnaliser ce standard",
-        "wallDims": "Dimensions du mur",
-        "openings": "Ouvertures (portes, fenêtres)",
-        "addOpening": "+ Ajouter une ouverture",
-        "noOpenings": "Aucune ouverture — tout le mur compte.",
-        "labelPh": "Libellé (facultatif)",
-        "removeOpAria": "Supprimer l'ouverture {i}",
-        "defaultDoor": "Porte",
-        "openingN": "Ouverture {n}",
-        "totalVol": "Volume total",
-        "volAria": "Volume total",
-        "mortarThickness": "Épaisseur du mortier",
-        "mortarThicknessAria": "Épaisseur du joint de mortier",
-        "mortarRatio": "Ratio de mortier (ciment : sable)",
-        "brickWastage": "Perte de briques %",
-        "brickWastageAria": "Pourcentage de perte de briques",
-        "mortarWastage": "Perte de mortier %",
-        "mortarWastageAria": "Pourcentage de perte de mortier",
-        "dtw": "Facteur sec-à-humide",
-        "dtwAria": "Facteur de foisonnement sec-à-humide du mortier",
-        "brickSize": "Taille de brique",
-        "customBrickLen": "Longueur de brique personnalisée",
-        "customBrickWid": "Largeur de brique personnalisée",
-        "customBrickHt": "Hauteur de brique personnalisée",
-        "errors": {
-          "lenMin": "Saisissez une longueur supérieure à 0.",
-          "lenMax": "La longueur doit être inférieure ou égale à 100 m.",
-          "htMin": "Saisissez une hauteur supérieure à 0.",
-          "htMax": "La hauteur doit être inférieure ou égale à 20 m.",
-          "thickMin": "Saisissez une épaisseur supérieure à 0.",
-          "thickTooThin": "L'épaisseur doit être d'au moins 50 mm.",
-          "thickTooThick": "L'épaisseur doit être inférieure ou égale à 500 mm.",
-          "widMin": "Saisissez une largeur supérieure à 0.",
-          "opWider": "L'ouverture est plus large que le mur.",
-          "opTaller": "L'ouverture est plus haute que le mur.",
-          "opExceeds": "La surface totale des ouvertures dépasse la surface du mur.",
-          "volMin": "Saisissez un volume supérieur à 0."
-        }
-      }
-    },
-    "steel": {
-      "meta": { "title": "Calculateur d'acier — Poids des barres TMT et armatures", "description": "Calculateur d'acier gratuit. Saisissez votre nomenclature d'armatures ou le volume de béton et obtenez le poids total de l'acier d'armature en kg — pour dalles, poutres, poteaux, semelles et escaliers. Utilise D²/162, Fe 500 / Fe 550 TMT, IS 1786." },
-      "crumb": "Calculateur d'acier",
-      "title": "Calculateur d'acier — Poids des barres TMT et armatures",
-      "subtitle": "Deux façons de saisir — entrez votre nomenclature d'armatures pour un poids précis, ou entrez le volume de béton + le type d'élément pour une estimation rapide par règle empirique. Les deux utilisent les valeurs par défaut IS 1786 ; les deux sont entièrement modifiables.",
-      "form": {
-        "mode": "Mode de saisie",
-        "modes": { "schedule": "Par nomenclature d'armatures", "thumb": "Par règle empirique" },
-        "modeHint1": "Précis. À utiliser lorsque vous avez le plan.",
-        "modeHint2": "Approximatif (±20%). À utiliser uniquement pour les estimations de prix.",
-        "standard": "Standard d'acier",
-        "customStd": "Personnaliser ce standard",
-        "schedule": "Nomenclature d'armatures",
-        "addBar": "+ Ajouter une barre",
-        "barPh": "Barre {i}",
-        "removeBarAria": "Supprimer la barre {i}",
-        "diameter": "Diamètre",
-        "count": "Nombre",
-        "diaAria": "Diamètre de la barre {i} (mm)",
-        "lenAria": "Longueur de la barre {i}",
-        "countAria": "Nombre de la barre {i}",
-        "diaOption": "{d} mm",
-        "member": "Élément + volume",
-        "memberType": "Type d'élément",
-        "concreteVol": "Volume de béton",
-        "volAria": "Volume de béton",
-        "defaultRate": "Taux par défaut : {value} kg/cum pour {member}. Activez Personnaliser pour remplacer.",
-        "wastage": "Perte",
-        "wastageAria": "Pourcentage de perte",
-        "kgPerCum": "kg / cum",
-        "kgPerCumAria": "Kilogrammes par mètre cube de béton",
-        "barLabels": {
-          "dia": "Barre {diameter}mm",
-          "mainBottom": "Barres principales — bas",
-          "distribution": "Barres de répartition",
-          "generic": "Barre {n}"
-        },
-        "errors": {
-          "diaMin": "Saisissez un diamètre supérieur à 0.",
-          "diaMax": "Le diamètre doit être inférieur ou égal à 100 mm.",
-          "lenMin": "Saisissez une longueur supérieure à 0.",
-          "lenMax": "La longueur doit être inférieure ou égale à 50 m.",
-          "countMin": "Au moins 1 barre.",
-          "volMin": "Saisissez un volume supérieur à 0."
-        }
-      }
-    },
-    "paint": {
-      "meta": { "title": "Calculateur de peinture — Intérieur, extérieur et pièce", "description": "Calculateur de peinture gratuit. Saisissez les dimensions d'une pièce ou la surface des murs et obtenez les litres exacts de peinture nécessaires pour émulsion intérieure, émulsion extérieure, émail, apprêt et enduit. Gère plusieurs couches, plafonds, portes et fenêtres." },
-      "crumb": "Calculateur de peinture",
-      "title": "Calculateur de peinture — Litres pour murs intérieurs et extérieurs",
-      "subtitle": "Saisissez une pièce ou une surface totale, choisissez vos produits de peinture, et nous renverrons les litres nécessaires — par couche et au total. Gère l'apprêt sous l'émulsion, les couches multiples et les remplacements de rendement par couche.",
-      "form": {
-        "mode": "Mode de saisie",
-        "modes": { "room": "Par dimensions de la pièce", "area": "Par surface totale" },
-        "roomDims": "Dimensions de la pièce",
-        "includeCeiling": "Inclure le plafond",
-        "openings": "Ouvertures (portes, fenêtres)",
-        "addOpening": "+ Ajouter une ouverture",
-        "noOpenings": "Aucune ouverture — tout le mur compte.",
-        "labelPh": "Libellé (facultatif)",
-        "totalArea": "Surface totale",
-        "area": "Surface",
-        "areaAria": "Surface totale peignable",
-        "layers": "Couches de peinture",
-        "addLayer": "+ Ajouter une couche",
-        "layersHelp": "Une ligne par application de produit — par exemple un apprêt + une finition pour un mur neuf.",
-        "layerN": "Couche {i}",
-        "type": "Type",
-        "coats": "Couches",
-        "coatsAria": "Nombre de couches pour la couche {i}",
-        "customLayer": "Personnaliser cette couche",
-        "kgPerSqm": "kg / sqm",
-        "kgPerSqmAria": "kg par sqm pour la couche {i}",
-        "coverage": "Rendement / L",
-        "coverageAria": "Rendement par litre pour la couche {i}",
-        "wastage": "Perte",
-        "wastageAria": "Pourcentage de perte pour la couche {i}",
-        "defaultDoor": "Porte",
-        "openingN": "Ouverture {n}",
-        "errors": {
-          "lenMin": "Saisissez une longueur supérieure à 0.",
-          "lenMax": "La longueur doit être inférieure ou égale à 100 m.",
-          "widMin": "Saisissez une largeur supérieure à 0.",
-          "widMax": "La largeur doit être inférieure ou égale à 100 m.",
-          "htMin": "Saisissez une hauteur supérieure à 0.",
-          "htMax": "La hauteur doit être inférieure ou égale à 20 m.",
-          "opWider": "L'ouverture est plus large que le mur le plus long.",
-          "opTaller": "L'ouverture est plus haute que le mur.",
-          "opExceeds": "La surface totale des ouvertures dépasse la surface du mur.",
-          "areaMin": "Saisissez une surface supérieure à 0.",
-          "coats": "Au moins 1 couche.",
-          "kgPerSqm": "Saisissez un kg/sqm supérieur à 0.",
-          "coverage": "Saisissez un rendement supérieur à 0."
-        }
-      }
-    },
-    "tile": {
-      "meta": { "title": "Calculateur de carrelage — Sol, mur, adhésif et coulis", "description": "Calculateur de carrelage gratuit. Saisissez la surface du sol ou du mur, choisissez une taille de carreau et obtenez le nombre exact de carreaux, la quantité d'adhésif et le volume de coulis. Compatible avec la pose vitrifiée, céramique et sur lit de mortier traditionnel, avec perte." },
-      "crumb": "Calculateur de carrelage",
-      "title": "Calculateur de carrelage — Sol, mur, adhésif et coulis",
-      "subtitle": "Saisissez la surface, la taille de carreau et choisissez un préréglage — nous renvoyons le nombre de carreaux avec la perte plus l'adhésif et le coulis. Gère à la fois la pose en couche mince moderne et le lit de mortier traditionnel de 20 mm.",
-      "form": {
-        "surface": "Surface",
-        "modes": { "floor": "Sol", "wall": "Mur" },
-        "floorDims": "Dimensions du sol",
-        "wallDims": "Dimensions du mur (largeur × hauteur)",
-        "excluded": "Zones exclues (poteaux, drains, découpes)",
-        "addEx": "+ Ajouter une exclusion",
-        "noEx": "Aucune exclusion — toute la surface est carrelée.",
-        "labelPh": "Libellé (facultatif)",
-        "cutoutN": "Découpe {n}",
-        "tileSize": "Taille de carreau",
-        "standard": "Standard de carreau",
-        "wastage": "Perte",
-        "method": "Méthode",
-        "methods": { "thinset": "Couche mince", "bed": "Lit de mortier" },
-        "coveragePerKg": "Rendement/kg",
-        "bedThickness": "Épaisseur du lit",
-        "mortarRatio": "Ratio de mortier",
-        "groutWidth": "Largeur du joint",
-        "groutDepth": "Profondeur du joint",
-        "groutDepthHelp": "Par défaut, l'épaisseur du carreau. Modifiez pour remplacer.",
-        "tileThickness": "Épaisseur du carreau",
-        "errors": {
-          "lenMin": "Saisissez une longueur supérieure à 0.",
-          "lenMax": "La longueur doit être inférieure ou égale à 500 m.",
-          "widMin": "Saisissez une largeur supérieure à 0.",
-          "widMax": "La largeur doit être inférieure ou égale à 500 m.",
-          "tileLen": "Saisissez une longueur de carreau supérieure à 0.",
-          "tileWid": "Saisissez une largeur de carreau supérieure à 0.",
-          "exLen": "La longueur doit être supérieure à 0.",
-          "exWid": "La largeur doit être supérieure à 0.",
-          "exAll": "Les zones exclues couvrent toute la surface. Réduisez-les.",
-          "coverage": "Le rendement doit être supérieur à 0.",
-          "thickness": "L'épaisseur doit être supérieure à 0.",
-          "ratio": "Formatez comme a:b (par exemple 1:4)."
-        }
-      }
-    },
-    "rebar": {
-      "meta": {"title": "Calculateur de Ferraillage — Acier pour Dalle, Semelle et Mur (Longueur, Barres et Poids)", "description": "Calculateur de ferraillage gratuit pour dalles, semelles, murs et fondations en béton. Saisissez longueur, largeur, espacement et enrobage au bord pour obtenir le nombre de barres, la longueur totale, les barres de 12 m et le poids au mètre ou pied carré. Formule D²/162."},
-      "crumb": "Calculateur de Ferraillage",
-      "title": "Calculateur de Ferraillage — Renfort pour Dalle, Semelle, Mur et Fondation",
-      "subtitle": "Calculez la quantité d'acier d'armature pour une dalle, une semelle, un mur ou une fondation. Saisissez la taille de l'élément, l'espacement c/c et l'enrobage au bord — obtenez les barres par sens, la longueur totale, les barres de 12 m et le poids par m² et pi².",
-      "form": {
-        "section1": "Élément + dimensions",
-        "member": "Type d'élément",
-        "memberHint": "Même calcul de grille — seul l'espacement de départ suggéré change.",
-        "dimHint": "Dimensions totales coulées de l'élément (bord à bord), pas la grille.",
-        "section2": "Disposition de l'armature",
-        "spacing": "Espacement barre–barre (c/c)",
-        "spacingAria": "Espacement centre à centre entre barres parallèles",
-        "edgeSpacing": "Enrobage au bord",
-        "edgeAria": "Distance de la barre extérieure au bord de l'élément",
-        "section3": "Barre + commande",
-        "barDiameter": "Diamètre de barre",
-        "barLength": "Longueur d'une barre",
-        "barLengthAria": "Longueur de stock d'une barre du fournisseur",
-        "wastage": "Chute",
-        "wastageAria": "Pourcentage de chute pour coupe, recouvrements et chevauchements",
-        "lenAria": "Longueur de l'élément",
-        "widAria": "Largeur de l'élément",
-        "errors": {"lenMin": "Saisissez une longueur supérieure à 0.", "lenMax": "La longueur doit être de 200 m ou moins.", "widMin": "Saisissez une largeur supérieure à 0.", "widMax": "La largeur doit être de 200 m ou moins.", "spMin": "Saisissez un espacement supérieur à 0.", "spMax": "L'espacement doit être de 2 m ou moins.", "edgeMin": "L'enrobage doit être de 0 ou plus.", "edgeMax": "L'enrobage doit être inférieur à la moitié de l'élément.", "barLenMin": "Saisissez une longueur de barre supérieure à 0.", "barLenMax": "La longueur de barre doit être de 60 m ou moins.", "wastageRange": "La chute doit être entre 0 et 20%."},
-        "examples": {"fill1": "Exemple : dalle 6000 × 4000 mm, 150 mm c/c, barres 12 mm, stock 12 m."},
-        "placeholder": "Remplissez le formulaire et appuyez sur Calculer pour voir votre commande de ferraillage."
-      },
-      "sizes": {
-        "heading": "Tailles de barres",
-        "note": "Les tailles de barres américaines donnent le diamètre en huitièmes de pouce jusqu'à #8 ; les tailles métriques utilisent le diamètre nominal en millimètres. Le ferraillage TMT en Inde se vend par diamètre nominal — typiquement 8, 10, 12, 16, 20, 25 et 32 mm.",
-        "cols": {"imperial": "Taille impériale", "metric": "Taille métrique", "diaIn": "Diamètre (pouce)", "diaMm": "Diamètre (mm)"}
-      },
-      "article": {"toc": "Sur cette page", "heading": "Tout savoir sur le ferraillage"},
-      "faq": [{"q": "De combien de ferraillage ai-je besoin pour une dalle en béton ?", "a": "Saisissez la longueur et la largeur de la dalle, l'espacement centre à centre et l'enrobage au bord. Le calculateur renvoie les barres par sens, la longueur totale en mètres et les barres de stock (12 m) à commander. Une dalle de 6 × 4 m à 150 mm c/c demande environ 66 barres et près de 306 m de ferraillage."}, {"q": "Comment calculer le ferraillage d'une dalle en pieds carrés ?", "a": "Trouvez la surface de la dalle en pieds carrés, divisez par l'espacement de chaque côté pour obtenir les lignes de barres, puis multipliez par la longueur de barre. Le calculateur le fait pour vous et indique aussi le poids par pied carré — un treillis résidentiel simple vaut environ 1 kg par pied carré."}, {"q": "Comment calculer le poids du ferraillage ?", "a": "Poids du ferraillage = longueur totale × poids au mètre. Pour un diamètre D en millimètres, poids au mètre ≈ D² / 162 kg/m. Une barre de 12 mm pèse environ 0,89 kg/m ; une barre de 16 mm environ 1,58 kg/m."}, {"q": "De combien de barres de ferraillage ai-je besoin ?", "a": "Divisez la longueur totale de ferraillage par la longueur de stock achetée (12 m pour le TMT indien) et arrondissez au supérieur. Le calculateur le fait automatiquement et affiche le nombre de barres."}, {"q": "Faut-il du ferraillage dans une semelle ou une fondation ?", "a": "Quasiment toujours oui. Les semelles et fondations supportent toute la charge du bâtiment et ont besoin d'armatures contre la flexion et les fissures. Guide type : 150–200 mm c/c avec des barres de 12–16 mm dans les treillis supérieur et inférieur. Validez avec les plans de structure."}, {"q": "Faut-il du ferraillage dans un mur en béton ?", "a": "Cela dépend. Les murs de soutènement et de fondation ont presque toujours besoin de barres verticales plus des barres de répartition horizontales. Les cloisons simples peuvent se contenter d'un treillis léger. Réglez l'élément sur « mur » et validez avec un ingénieur."}, {"q": "Qu'est-ce que l'enrobage au bord (espacement bord–grille) ?", "a": "C'est la distance entre la ligne de barre la plus externe et le bord du béton — le béton autour des barres qui les protège de l'eau et de la corrosion. Le calculateur soustrait deux enrobages (un par extrémité) de chaque dimension pour obtenir la taille réelle de la grille."}, {"q": "Que m'indique le ferraillage au mètre carré ?", "a": "C'est le poids total de ferraillage divisé par la surface de l'élément — une vérification rapide de densité. Un treillis simple de 12 mm à 150 mm c/c fait environ 11–12 kg par m² ; un double treillis avec barres de 16 mm peut atteindre 20–25 kg par m²."}]
-    }
-  },
-  "results": {
-    "brick": {
-      "bricksRequired": "Briques requises",
-      "beforeWastage": "{n} avant {pct}% de perte",
-      "grossWall": "Surface brute du mur",
-      "openings": "Ouvertures",
-      "netArea": "Surface nette",
-      "masonryVolume": "Volume de maçonnerie",
-      "paramsUsed": "Paramètres utilisés",
-      "preset": "Préréglage",
-      "brick": "Brique",
-      "joint": "Joint",
-      "mortarRatio": "Ratio de mortier",
-      "brickWastage": "Perte de briques",
-      "mortarWastage": "Perte de mortier",
-      "mortar": "Mortier",
-      "cement": "Ciment",
-      "sand": "Sable"
-    },
-    "concrete": {
-      "cementRequired": "Ciment requis",
-      "sand": "Sable",
-      "aggregate": "Granulat",
-      "dryVolume": "Volume sec",
-      "wastageApplied": "Perte appliquée",
-      "paramsUsed": "Paramètres utilisés",
-      "preset": "Préréglage",
-      "mixRatio": "Ratio de mélange",
-      "cementDensity": "Densité du ciment",
-      "bagWeight": "Poids du sac",
-      "dtw": "Facteur sec-à-humide"
-    },
-    "paint": {
-      "totalRequired": "Total requis",
-      "putty": "{n} {unit} d'enduit",
-      "wallGross": "Mur brut",
-      "ceiling": "Plafond",
-      "openings": "Ouvertures",
-      "netPaintable": "Surface peignable nette",
-      "byLayer": "Par couche",
-      "coats": "couches",
-      "coat": "couche"
-    },
-    "steel": {
-      "total": "Total d'acier requis",
-      "beforeWastage": "Avant perte",
-      "wastage": "Perte",
-      "byBar": "Par barre",
-      "genericBar": "Barre {n}"
-    },
-    "tile": {
-      "tilesToOrder": "Carreaux à commander",
-      "tiles": "carreaux",
-      "beforeWastage": "{count} avant + {pct}% de perte",
-      "grossArea": "Surface brute",
-      "excluded": "Exclus",
-      "netTileable": "Surface carrelable nette",
-      "tileSize": "Taille de carreau",
-      "thinset": "Adhésif couche mince",
-      "quantity": "Quantité",
-      "mortarBed": "Lit de mortier ({thickness} {unit}, {ratio})",
-      "volumeWet": "Volume (humide)",
-      "cement": "Ciment",
-      "sand": "Sable",
-      "grout": "Coulis",
-      "volume": "Volume",
-      "estimatedWeight": "Poids estimé"
-    }
-  },
-  "projects": {
-    "title": "Projets",
-    "newProject": "Nouveau projet",
-    "editProject": "Modifier le projet",
-    "empty": "Aucun projet pour le moment. Créez le premier pour commencer à enregistrer des calculs.",
-    "filters": { "active": "Actifs", "archived": "Archivés", "all": "Tous" },
-    "archivedTag": "Archivé",
-    "noClient": "Aucun client",
-    "calc": "calc",
-    "material": "matériau",
-    "form": {
-      "name": "Nom du projet",
-      "clientName": "Nom du client",
-      "currency": "Devise",
-      "currencyFixed": "La devise est fixée à la création. Créez un nouveau projet pour la modifier.",
-      "taxRegion": "Région fiscale",
-      "taxRegionFixed": "La région fiscale est fixée à la création.",
-      "location": "Localisation (facultatif)",
-      "address": "Adresse",
-      "city": "Ville",
-      "state": "État",
-      "pincode": "Code postal",
-      "country": "Pays",
-      "notes": "Notes",
-      "create": "Créer le projet"
-    },
-    "actions": {
-      "confirmDelete": "Supprimer le projet « {name} » ? Cette action est irréversible.",
-      "unarchive": "Désarchiver",
-      "archive": "Archiver",
-      "delete": "Supprimer"
-    },
-    "materials": {
-      "title": "Matériaux",
-      "add": "Ajouter un matériau",
-      "empty": "Aucun matériau pour le moment. Ajoutez des prix pour le ciment, le sable, l'acier et tout ce que vous achetez.",
-      "vendor": "Fournisseur : {vendor}",
-      "confirmDelete": "Supprimer ce matériau ? Les devis existants ne seront pas affectés.",
-      "form": {
-        "suggestedFrom": "Suggéré depuis « {source} »",
-        "aCalculation": " un calcul",
-        "needsHint": " · nécessite ≈ {qty}",
-        "enterPrice": ". Saisissez votre prix et enregistrez.",
-        "type": "Type",
-        "typeFixed": "Le type est fixé après création.",
-        "unit": "Unité",
-        "unitFixed": "L'unité est fixée après création.",
-        "brand": "Marque",
-        "unitPrice": "Prix unitaire ({currency})",
-        "quantity": "Quantité ({unit})",
-        "quantityGeneric": "Quantité (unité)",
-        "qtyPh": "par ex. 12",
-        "pricePh": "380.00",
-        "total": "Total : {currency} {amount}",
-        "vendor": "Fournisseur",
-        "notes": "Notes"
-      },
-      "modal": {
-        "title": "Ajouter un matériau",
-        "typeReq": "Type *",
-        "brand": "Marque (facultatif)",
-        "brandPh": "par ex. UltraTech, ACC",
-        "unitReq": "Unité *",
-        "priceReq": "Prix par {unit} ({currency}) *",
-        "pricePh": "0.00",
-        "vendor": "Fournisseur (facultatif)",
-        "vendorPh": "par ex. Fournisseur local",
-        "adding": "Ajout en cours…",
-        "priceError": "Prix unitaire valide requis"
-      },
-      "fromCalc": {
-        "allImported": "Tout ce qui provient de ce calcul est déjà dans vos matériaux.",
-        "createdMsg": "{n} matériau(x) ajouté(s) avec un prix par défaut de ₹100",
-        "updatedMsg": "quantité mise à jour sur {n} matériau(x) existant(s)",
-        "editPrices": ". Modifiez les prix selon vos besoins.",
-        "title": "Matériaux issus de ce calcul",
-        "help": "Cliquez sur une puce pour l'ajouter avec un prix, ou importez tous les manquants avec des prix par défaut.",
-        "importing": "Importation…",
-        "allDone": "Tout importé",
-        "addAll": "Ajouter tous les manquants ({n})"
-      }
-    },
-    "calculations": {
-      "title": "Calculs",
-      "empty": "Aucun calcul pour le moment. Lancez un calculateur et utilisez « Enregistrer dans le projet » pour en faire un instantané ici.",
-      "browse": "Parcourir les calculateurs",
-      "ungrouped": "Non groupés",
-      "openHint": "Ouvrir pour modifier ou recalculer →",
-      "confirmDelete": "Supprimer le calcul « {name} » ? Cette action est irréversible.",
-      "menu": "…",
-      "recompute": "Recalculer",
-      "edit": {
-        "label": "Libellé",
-        "group": "Groupe",
-        "groupPh": "par ex. Rez-de-chaussée, Premier étage",
-        "description": "Description"
-      },
-      "result": {
-        "empty": "Aucun aperçu disponible pour ce type de calculateur."
-      },
-      "saveButton": {
-        "runFirst": "Exécutez d'abord le calculateur",
-        "saveHint": "Enregistrer cette exécution dans un projet",
-        "cta": "Enregistrer dans le projet",
-        "modalTitle": "Enregistrer le calcul",
-        "project": "Projet",
-        "loadingProjects": "Chargement des projets…",
-        "noActive": "Vous n'avez aucun projet actif. ",
-        "createOne": "En créer un",
-        "labelPh": "par ex. Briques du rez-de-chaussée",
-        "group": "Groupe (facultatif)",
-        "groupPh": "par ex. Rez-de-chaussée",
-        "save": "Enregistrer"
-      }
+  "solution": {
+   "heading": "La solution",
+   "body": "iHateConstruction offre aux entrepreneurs indiens un endroit unique pour estimer, chiffrer, facturer et se faire payer — sans la lourdeur des logiciels d'entreprise ni l'étiquette à $300 par mois.",
+   "cards": {
+    "calculators": {
+     "title": "Calculateurs",
+     "body": "Béton, acier, brique, peinture, carrelage — avec les normes indiennes (codes IS) intégrées."
     },
     "boq": {
-      "title": "BOQ",
-      "generate": "Générer le BOQ",
-      "generating": "Génération…",
-      "name": "Nom du BOQ",
-      "namePh": "par ex. « BOQ v1 — tel que conçu »",
-      "autoName": "Laissez vide pour un nom généré automatiquement",
-      "notes": "Notes",
-      "notesPh": "par ex. Exclut la préparation du site et le mur d'enceinte.",
-      "source": "Source des données",
-      "willGen": "Le BOQ sera généré à partir des {n} matériau(x) de votre projet avec leurs quantités et prix.",
-      "noMaterials": "Aucun matériau ajouté pour le moment. Ajoutez des matériaux à votre projet avant de générer un BOQ.",
-      "alsoCalcs": "Inclure aussi les calculs enregistrés",
-      "alsoCalcsHelp": "Ajoute une section séparée avec les quantités de matériaux issues de vos résultats de calculateur.",
-      "pickCalcs": "Sélectionnez les calculs à inclure (laissez tout décoché pour tous) :",
-      "confirmDelete": "Supprimer ce BOQ ? Cette action est irréversible.",
-      "generated": "Généré le {date}",
-      "pdf": "PDF",
-      "ungrouped": "(Non groupés)",
-      "cols": {
-        "material": "Matériau",
-        "qty": "Qté",
-        "unit": "Unité",
-        "pricePerUnit": "Prix/unité",
-        "amount": "Montant"
-      },
-      "materialsSubtotal": "Sous-total matériaux :",
-      "grandTotal": "Total général :",
-      "addMaterial": "+ Ajouter un matériau",
-      "editor": {
-        "label": "Libellé",
-        "override": "Montant remplacé ({currency})",
-        "reason": "Raison",
-        "reasonPh": "par ex. Remise en gros du fournisseur pour la commande complète",
-        "save": "Enregistrer le remplacement"
-      }
+     "title": "BOQ et devis",
+     "body": "Générez des bordereaux de quantités professionnels et des devis destinés aux clients en quelques secondes."
     },
-    "invoice": {
-      "title": "Factures",
-      "new": "Nouvelle facture",
-      "confirmDelete": "Supprimer cette facture ? Cette action est irréversible.",
-      "generate": "Générer la facture",
-      "generating": "Génération…",
-      "sourceQuotation": "Devis source",
-      "grandTotal": "Total général : {total}",
-      "name": "Nom de la facture (facultatif)",
-      "namePh": "Généré automatiquement à partir du nom du devis",
-      "due": "Date d'échéance (facultatif)",
-      "notes": "Notes (facultatif)",
-      "amountDue": "Montant dû",
-      "amountPaid": "Montant payé",
-      "remaining": "Restant",
-      "recordPayment": "Enregistrer un paiement",
-      "amount": "Montant",
-      "amountPh": "0.00",
-      "paymentNotes": "Notes (facultatif)",
-      "paymentRefPh": "Référence de paiement…",
-      "savePayment": "Enregistrer le paiement",
-      "paymentNotesTitle": "Notes de paiement",
-      "notesLabel": "Notes",
-      "createdUpdated": "Créé le {created} · Mis à jour le {updated}",
-      "paid": " · Payé le {date}"
+    "invoices": {
+     "title": "Factures et paiements",
+     "body": "Suivez qui doit quoi. Partagez un QR UPI pour un encaissement instantané. Enregistrez les paiements par OCR de captures d'écran."
     },
-    "quotation": {
-      "title": "Devis",
-      "new": "Nouveau devis",
-      "generate": "Générer le devis",
-      "generating": "Génération…",
-      "confirmDelete": "Supprimer ce devis ? Cette action est irréversible.",
-      "selectBoq": "Sélectionnez un BOQ",
-      "sourceBoqReq": "BOQ source *",
-      "clientDetails": "Coordonnées du client (facultatif)",
-      "name": "Nom",
-      "namePh": "Nom du client",
-      "email": "E-mail",
-      "emailPh": "client@example.com",
-      "phone": "Téléphone",
-      "phonePh": "+91 98765 43210",
-      "pricing": "Tarification",
-      "markup": "Marge %",
-      "discount": "Remise %",
-      "tax": "Taxe % (GST)",
-      "materialsSubtotal": "Sous-total matériaux",
-      "markupLine": "+ Marge ({pct}%)",
-      "discountLine": "- Remise ({pct}%)",
-      "taxLine": "+ Taxe ({pct}%)",
-      "grandTotal": "Total général",
-      "quoteName": "Nom du devis (facultatif)",
-      "quoteNamePh": "Généré automatiquement si laissé vide",
-      "validUntil": "Valide jusqu'au (facultatif)",
-      "internalNotesPh": "Notes internes",
-      "termsOpt": "Conditions générales (facultatif)",
-      "termsPh": "Conditions de paiement, validité, etc.",
-      "noClient": "Aucun client",
-      "validSuffix": " · Valide jusqu'au {date}",
-      "created": "Créé le {date}",
-      "sent": " · Envoyé le {date}",
-      "markSent": "Marquer comme envoyé",
-      "markAccepted": "Marquer accepté",
-      "markRejected": "Marquer refusé",
-      "pricingSummary": "Récapitulatif tarifaire",
-      "client": "Client",
-      "ungrouped": "(Non groupés)",
-      "cols": { "item": "Article", "qty": "Qté", "unit": "Unité", "rate": "Prix", "amount": "Montant" },
-      "notes": "Notes",
-      "termsTitle": "Conditions générales"
+    "pdf": {
+     "title": "Export PDF",
+     "body": "Documents A4 professionnels que vos clients respectent vraiment — pas des transferts WhatsApp."
+    }
+   }
+  },
+  "audience": {
+   "heading": "À qui cela s'adresse",
+   "items": [
+    {
+     "bold": "Entrepreneurs indépendants",
+     "rest": " réalisant des projets résidentiels et de petit commercial."
     },
-    "brandSwap": {
-      "generic": "Générique"
+    {
+     "bold": "Petites entreprises de construction",
+     "rest": " (2 à 15 personnes) qui ont besoin de structure sans lourdeur administrative."
     },
-    "runCalc": "Lancer un calculateur"
+    {
+     "bold": "Ingénieurs civils",
+     "rest": " qui font de l'estimation en parallèle et souhaitent des calculs précis et reproductibles."
+    },
+    {
+     "bold": "Architectes d'intérieur",
+     "rest": " ayant besoin d'estimer les matériaux pour des projets d'aménagement."
+    }
+   ]
+  },
+  "india": {
+   "heading": "L'Inde d'abord",
+   "intro": "Chaque décision que nous prenons commence par l'entrepreneur indien :",
+   "items": [
+    "Les calculs utilisent les codes IS et les pratiques standards indiennes (pas ASTM ni Eurocode).",
+    "Les unités de matériaux correspondent à ce que vous achetez au godown local — sacs, CFT, mètres linéaires.",
+    "La devise est l'INR. Les taux de GST sont intégrés. La région fiscale compte.",
+    "Paiement par QR UPI — parce que c'est ainsi que l'Inde paie en 2026.",
+    "Fonctionne sur un téléphone à ₹10,000 en 4G. Aucun flux de travail réservé au bureau."
+   ]
+  },
+  "contact": {
+   "heading": "Contact",
+   "body1": "Un retour, un bug détecté ou envie d'un partenariat ? Contactez-nous à",
+   "email": "huzaif89@hotmail.com",
+   "body2": "ou utilisez le",
+   "link": "formulaire de contact"
   }
+ },
+ "privacy": {
+  "meta": {
+   "title": "Politique de confidentialité — Comment nous traitons vos données",
+   "description": "Politique de confidentialité de iHateConstruction. Découvrez quelles données personnelles nous collectons, comment nous les utilisons, où elles sont stockées et vos droits sur votre compte, vos projets, vos calculs et vos données professionnelles."
+  },
+  "title": "Politique de confidentialité",
+  "updated": "Dernière mise à jour : 5 août 2026",
+  "s1": {
+   "heading": "1. Informations que nous collectons",
+   "intro": "Lorsque vous utilisez iHateConstruction, nous collectons :",
+   "items": [
+    {
+     "bold": "Informations de compte :",
+     "rest": " Nom, adresse e-mail et identifiants d'authentification (gérés par Clerk)."
+    },
+    {
+     "bold": "Données de projet :",
+     "rest": " Projets, calculs, matériaux, BOQ, devis et factures que vous créez."
+    },
+    {
+     "bold": "Données d'utilisation :",
+     "rest": " Pages visitées, fonctionnalités utilisées, type de navigateur, informations sur l'appareil et adresse IP."
+    },
+    {
+     "bold": "Informations de paiement :",
+     "rest": " Identifiants UPI et QR codes que vous téléchargez volontairement. Nous ne traitons ni ne stockons les numéros de carte bancaire."
+    }
+   ]
+  },
+  "s2": {
+   "heading": "2. Comment nous utilisons vos données",
+   "items": [
+    "Fournir, maintenir et améliorer le service.",
+    "Générer des documents (BOQ, devis, factures, PDF) à votre demande.",
+    "Envoyer des e-mails transactionnels (vérification de compte, réinitialisation de mot de passe).",
+    "Analyser les schémas d'utilisation pour améliorer les fonctionnalités (données agrégées, jamais vendues)."
+   ]
+  },
+  "s3": {
+   "heading": "3. Stockage et sécurité des données",
+   "body": "Vos données sont stockées dans des bases de données chiffrées hébergées sur une infrastructure cloud sécurisée. Nous utilisons TLS pour toutes les données en transit. L'authentification est gérée par Clerk, un fournisseur conforme SOC 2 Type II."
+  },
+  "s4": {
+   "heading": "4. Partage des données",
+   "intro": "Nous ne vendons pas vos données. Nous les partageons uniquement avec :",
+   "items": [
+    {
+     "bold": "Prestataires de services :",
+     "rest": " Hébergement (Vercel), authentification (Clerk), base de données (PostgreSQL géré) — uniquement ce qui est nécessaire au fonctionnement."
+    },
+    {
+     "bold": "Vos clients :",
+     "rest": " Lorsque vous générez un lien public de devis, les détails du devis sont visibles pour quiconque possède le lien."
+    },
+    {
+     "bold": "Obligations légales :",
+     "rest": " Si requis par la loi indienne ou par une décision de justice valide."
+    }
+   ]
+  },
+  "s5": {
+   "heading": "5. Vos droits",
+   "items": [
+    {
+     "bold": "Accès :",
+     "rest": " Consulter toutes les données associées à votre compte."
+    },
+    {
+     "bold": "Export :",
+     "rest": " Télécharger vos projets, calculs et documents."
+    },
+    {
+     "bold": "Suppression :",
+     "rest": " Demander la suppression complète de votre compte et de toutes les données associées."
+    },
+    {
+     "bold": "Correction :",
+     "rest": " Mettre à jour les informations inexactes à tout moment."
+    }
+   ]
+  },
+  "s6": {
+   "heading": "6. Cookies",
+   "body": "Nous utilisons des cookies essentiels pour l'authentification et la gestion de session. Aucun cookie publicitaire. Aucun pixel de suivi tiers."
+  },
+  "s7": {
+   "heading": "7. Conservation des données",
+   "body": "Vos données sont conservées tant que votre compte est actif. Les comptes supprimés sont purgés sous 30 jours. Les journaux d'audit sont conservés pendant 1 an à des fins de sécurité."
+  },
+  "s8": {
+   "heading": "8. Mineurs",
+   "body": "iHateConstruction n'est pas destiné aux utilisateurs de moins de 18 ans. Nous ne collectons pas sciemment de données auprès de mineurs."
+  },
+  "s9": {
+   "heading": "9. Modifications",
+   "body": "Nous pouvons mettre à jour cette politique. Les changements substantiels seront notifiés par e-mail ou par un avis dans l'application au moins 14 jours avant leur entrée en vigueur."
+  },
+  "s10": {
+   "heading": "10. Contact",
+   "body": "Pour les questions liées à la confidentialité :",
+   "email": "huzaif89@hotmail.com"
+  }
+ },
+ "terms": {
+  "meta": {
+   "title": "Conditions d'utilisation — Règles d'utilisation de iHateConstruction",
+   "description": "Conditions d'utilisation de iHateConstruction. Les règles d'utilisation de nos calculateurs de construction gratuits, de la gestion de projet, du générateur de BOQ, des outils de devis et de facturation et des fonctionnalités d'encaissement."
+  },
+  "title": "Conditions d'utilisation",
+  "updated": "Dernière mise à jour : 5 août 2026",
+  "s1": {
+   "heading": "1. Acceptation",
+   "body": "En accédant à iHateConstruction (« le Service ») ou en l'utilisant, vous acceptez d'être lié par les présentes Conditions. Si vous n'acceptez pas, n'utilisez pas le Service."
+  },
+  "s2": {
+   "heading": "2. Description du service",
+   "intro": "iHateConstruction est une plateforme de gestion de construction et d'estimation qui fournit :",
+   "items": [
+    "Calculateurs de matériaux de construction (béton, acier, brique, peinture, carrelage).",
+    "Gestion de projet avec calculs enregistrés et prix des matériaux.",
+    "Génération de bordereaux de quantités (BOQ).",
+    "Création de devis et factures avec export PDF.",
+    "Outils d'encaissement (QR UPI, liens de paiement)."
+   ]
+  },
+  "s3": {
+   "heading": "3. Comptes utilisateur",
+   "items": [
+    "Vous devez fournir des informations exactes lors de la création d'un compte.",
+    "Vous êtes responsable de toute activité sous votre compte.",
+    "Vous ne devez pas partager vos identifiants ni laisser d'autres accéder à votre compte.",
+    "Nous pouvons suspendre ou résilier les comptes qui violent les présentes Conditions."
+   ]
+  },
+  "s4": {
+   "heading": "4. Vos données",
+   "items": [
+    "Vous conservez la propriété de tout le contenu que vous créez (projets, calculs, documents).",
+    "Vous nous accordez une licence limitée pour stocker, traiter et afficher vos données uniquement afin de fournir le Service.",
+    "Nous ne revendiquons pas la propriété de vos données professionnelles."
+   ]
+  },
+  "s5": {
+   "heading": "5. Utilisation acceptable",
+   "intro": "Vous vous engagez à ne pas :",
+   "items": [
+    "Utiliser le Service à des fins illégales.",
+    "Téléverser du contenu malveillant ou tenter de compromettre la sécurité.",
+    "Extraire, explorer ou télécharger en masse des données du Service.",
+    "Usurper l'identité d'une autre personne ou entité.",
+    "Utiliser les calculateurs pour des décisions d'ingénierie critiques pour la sécurité sans vérification professionnelle indépendante."
+   ]
+  },
+  "s6": {
+   "heading": "6. Avertissement sur les calculateurs",
+   "boldLabel": "Important :",
+   "body": " Les calculateurs fournissent des estimations basées sur des formules standards et des normes régionales. Ce sont des outils d'estimation, pas des substituts à l'ingénierie structurelle professionnelle. Vérifiez toujours les quantités auprès d'un ingénieur qualifié avant tout approvisionnement ou construction."
+  },
+  "s7": {
+   "heading": "7. Fonctionnalités de paiement",
+   "items": [
+    "Les fonctionnalités d'encaissement (QR UPI, liens de paiement) facilitent la communication entre vous et vos clients.",
+    "Nous ne sommes pas un processeur de paiement. Les fonds circulent directement entre vous et votre client.",
+    "Nous ne sommes pas responsables des litiges de paiement, des transactions échouées ou des montants incorrects.",
+    "Lorsque nous intégrons des passerelles de paiement (Razorpay), leurs conditions s'appliquent également."
+   ]
+  },
+  "s8": {
+   "heading": "8. Disponibilité",
+   "body": "Nous visons une haute disponibilité mais ne garantissons pas un service ininterrompu. La maintenance planifiée sera annoncée à l'avance. Nous ne sommes pas responsables des pertes dues aux interruptions."
+  },
+  "s9": {
+   "heading": "9. Limitation de responsabilité",
+   "intro": "Dans toute la mesure permise par le droit indien :",
+   "items": [
+    "Le Service est fourni « en l'état » sans garantie d'aucune sorte.",
+    "Nous ne sommes pas responsables des dommages indirects, accessoires ou consécutifs.",
+    "Notre responsabilité totale est limitée au montant que vous nous avez payé au cours des 12 mois précédant la réclamation (ou ₹5,000, selon le montant le plus élevé)."
+   ]
+  },
+  "s10": {
+   "heading": "10. Propriété intellectuelle",
+   "items": [
+    "Le Service, sa conception, son code et sa marque sont notre propriété intellectuelle.",
+    "Vous ne pouvez pas copier, modifier ou redistribuer une partie du Service.",
+    "Le nom « iHateConstruction » et les marques associées sont nos marques commerciales."
+   ]
+  },
+  "s11": {
+   "heading": "11. Résiliation",
+   "items": [
+    "Vous pouvez supprimer votre compte à tout moment.",
+    "Nous pouvons résilier votre accès en cas de violation des Conditions, avec préavis.",
+    "En cas de résiliation, vous disposez de 30 jours pour exporter vos données avant leur suppression."
+   ]
+  },
+  "s12": {
+   "heading": "12. Loi applicable",
+   "body": "Les présentes Conditions sont régies par les lois de l'Inde. Les litiges seront soumis à la compétence exclusive des tribunaux de Bengaluru, Karnataka."
+  },
+  "s13": {
+   "heading": "13. Modifications",
+   "body": "Nous pouvons modifier ces Conditions. Les changements substantiels seront communiqués 14 jours à l'avance. La poursuite de l'utilisation après modifications vaut acceptation."
+  },
+  "s14": {
+   "heading": "14. Contact",
+   "body": "Questions concernant ces Conditions :",
+   "email": "legal@ihateconstruction.co"
+  }
+ },
+ "contact": {
+  "meta": {
+   "title": "Contact — Parlez à l'équipe iHateConstruction",
+   "description": "Contactez iHateConstruction au sujet de bugs, fonctionnalités, demandes de calculateurs, partenariats ou questions générales. L'un de nous lit chaque message et répond généralement sous deux jours ouvrés."
+  },
+  "eyebrow": "Entreprise",
+  "title": "Nous contacter",
+  "subtitle": "Écrivez-nous pour signaler un bug, demander un calculateur, proposer un partenariat ou tout autre sujet. L'un de nous lit chaque message et répond généralement sous deux jours ouvrés.",
+  "form": {
+   "name": "Nom",
+   "email": "E-mail",
+   "subject": "Objet",
+   "message": "Message",
+   "website": "Site web",
+   "send": "Envoyer",
+   "sending": "Envoi…",
+   "successTitle": "Message envoyé",
+   "successBody": "Merci — nous l'avons bien reçu.",
+   "successNote": "L'un de nous lira votre message et répondra à l'adresse e-mail que vous nous avez fournie, généralement sous deux jours ouvrés.",
+   "sendAnother": "Envoyer un autre message",
+   "subjects": {
+    "general": "Question générale",
+    "bug": "Rapport de bug",
+    "feature": "Demande de fonctionnalité",
+    "partnership": "Partenariat"
+   },
+   "errors": {
+    "nameRequired": "Veuillez saisir votre nom.",
+    "nameShort": "Le nom doit contenir au moins 2 caractères.",
+    "nameLong": "Le nom doit contenir 80 caractères ou moins.",
+    "emailRequired": "Veuillez saisir votre e-mail.",
+    "emailInvalid": "Cela ne ressemble pas à un e-mail valide.",
+    "messageRequired": "Veuillez saisir un message.",
+    "messageShort": "Le message doit contenir au moins 10 caractères.",
+    "messageLong": "Le message doit contenir {max} caractères ou moins.",
+    "fixHighlighted": "Corrigez les champs surlignés pour continuer."
+   }
+  }
+ },
+ "calculators": {
+  "index": {
+   "meta": {
+    "title": "Calculateurs de construction gratuits — Ciment, béton, brique et ferraillage",
+    "description": "Sept calculateurs de construction gratuits — ciment, béton, brique, acier, ferraillage, peinture et carrelage. Saisissez votre chantier et obtenez une commande exacte de matériaux en yards cubes, pieds cubes ou unités métriques. Sacs de ciment pour une dalle, briques pour un mur, acier pour une armature, litres de peinture pour une pièce, carreaux pour un sol."
+   },
+   "eyebrow": "Outils",
+   "title": "Calculateurs de construction gratuits",
+   "subtitle": "Sept calculateurs pour les commandes de matériaux que vous passez réellement — ciment, béton, brique, acier, ferraillage, peinture et carrelage. Saisissez vos dimensions, obtenez des sacs, des briques, des kilogrammes ou des litres. Fonctionne en yards cubes, pieds cubes et mètres cubes.",
+   "missing": "Il manque un calculateur que vous utilisez au quotidien ?",
+   "contactSoon": "Formulaire de contact bientôt disponible."
+  },
+  "common": {
+   "eyebrow": "Calculateur",
+   "faq": "Questions fréquentes",
+   "other": "Autres calculateurs",
+   "how": "Comment fonctionne le calcul",
+   "customParams": "Paramètres personnalisés",
+   "fillForm": "Remplissez le formulaire et appuyez sur Calculer pour voir votre liste de matériaux.",
+   "fillFormSteel": "Remplissez le formulaire et appuyez sur Calculer pour voir le poids d'acier.",
+   "fillFormPaint": "Remplissez le formulaire et appuyez sur Calculer pour voir votre estimation de peinture.",
+   "fillFormTile": "Remplissez le formulaire et appuyez sur Calculer pour voir votre estimation de carrelage.",
+   "shareResult": "Partager le résultat",
+   "reload": "Recharger",
+   "clearAll": "Effacer tous les changements",
+   "didWeSolve": "Avons-nous résolu votre problème aujourd’hui ?"
+  },
+  "cement": {
+   "meta": {
+    "title": "Calculateur de ciment — Dalle, trou de poteau et yards cubes",
+    "description": "Calculateur de ciment gratuit. Déterminez combien de sacs de ciment il vous faut pour une dalle de béton, un trou de poteau, un mur ou tout volume — en yards cubes, pieds cubes ou mètres cubes. Compatible avec les sacs 94 lb Portland, 50 kg, 40 kg, 60 lb et 80 lb, les mélanges sable et ciment (1:3, 1:4, 1:6), et les mélanges de dalle standards (M15, M20, M25)."
+   },
+   "crumb": "Calculateur de ciment",
+   "title": "Calculateur de ciment",
+   "subtitle": "Déterminez exactement combien de sacs de ciment il vous faut — pour une dalle de béton, une série de trous de poteaux ou tout volume humide en yards cubes, pieds cubes ou mètres cubes. Compatible avec les sacs de ciment Portland 94 lb, les sacs indiens 50 kg, 40 kg, 60 lb et 80 lb, ainsi que les mélanges sable-ciment (1:3, 1:4, 1:6) et les mélanges de béton standards (M15, M20, M25).",
+   "handles": "Ce que ce calculateur de ciment gère",
+   "cards": {
+    "slab": {
+     "title": "Ciment pour une dalle",
+     "body": "Saisissez longueur, largeur et épaisseur en pieds et pouces. Le calculateur renvoie les sacs de ciment pour un mélange M15, M20 ou M25 — les trois grades utilisés pour les allées, les sols de garage et les dalles de maison."
+    },
+    "post": {
+     "title": "Ciment pour trou de poteau",
+     "body": "Poteaux de clôture, boîtes aux lettres, panneaux. Saisissez le diamètre du trou, la profondeur et le nombre de poteaux à sceller ; l'outil dimensionne un remplissage sable-ciment 1:3 pour l'ensemble."
+    },
+    "cuyd": {
+     "title": "Yards cubes de ciment",
+     "body": "Vous connaissez déjà votre volume en yards cubes ? Passez en mode Volume libre. Les mètres cubes et pieds cubes sont également pris en charge — le calculateur convertit entre les trois."
+    },
+    "sc": {
+     "title": "Sable et ciment",
+     "body": "Choisissez le préréglage plâtre 1:4, maçonnerie 1:6 ou mortier riche 1:3 lorsque vous ne mélangez que du ciment et du sable — sans granulat. La sortie indique à la fois les sacs de ciment et les pieds cubes de sable."
+    },
+    "portland": {
+     "title": "Sacs de ciment Portland 94 lb",
+     "body": "Entrepreneurs américains achetant du ciment Portland Type I/II en sacs 94 lb : choisissez cette taille de sac et le total est arrondi automatiquement au sac entier."
+    },
+    "indian": {
+     "title": "Sacs indiens 50 kg",
+     "body": "Pour les entrepreneurs en Inde : sacs OPC / PPC de 50 kg, ratios de mélange IS 456 et résultats en pieds cubes — les unités que votre godown propose réellement."
+    }
+   },
+   "form": {
+    "pouring": "Que coulez-vous ?",
+    "modes": {
+     "slab": "Dalle de béton",
+     "post": "Trou de poteau",
+     "free": "Volume libre"
+    },
+    "lengthFt": "Longueur (ft)",
+    "widthFt": "Largeur (ft)",
+    "thicknessIn": "Épaisseur (in)",
+    "diameterIn": "Diamètre du trou (in)",
+    "depthFt": "Profondeur (ft)",
+    "posts": "Nombre de poteaux",
+    "wetVolume": "Volume humide",
+    "unit": "Unité",
+    "units": {
+     "yd3": "Yards cubes",
+     "m3": "Mètres cubes",
+     "ft3": "Pieds cubes"
+    },
+    "ratio": "Ratio de mélange",
+    "bagSize": "Taille du sac de ciment",
+    "wastage": "Perte (%)",
+    "resultAria": "Résultat du calculateur de ciment",
+    "youNeed": "Il vous faudra",
+    "bags": "sacs de ciment (",
+    "cementKg": "Ciment (kg)",
+    "cementLb": "Ciment (lb)",
+    "wetVol": "Volume humide :",
+    "dry": "· Facteur de volume sec 1,54 · Perte",
+    "mixLabel": "Mélange :",
+    "empty": "Saisissez vos dimensions pour voir les sacs de ciment et les quantités de matériaux."
+   }
+  },
+  "concrete": {
+   "meta": {
+    "title": "Calculateur de béton — Dalle, poutre, poteau et semelle",
+    "description": "Calculateur de béton gratuit. Saisissez les dimensions de votre dalle, poutre, poteau ou semelle et obtenez les sacs de ciment, le sable et le granulat grossier — pour les grades M5 à M25 selon les ratios de mélange standards IS 456. Fonctionne en yards cubes, pieds cubes et mètres cubes."
+   },
+   "crumb": "Calculateur de béton",
+   "title": "Calculateur de béton — Dalle, poutre, poteau et semelle",
+   "subtitle": "Saisissez le volume humide de béton à couler, choisissez un grade, et nous renverrons les sacs de ciment, le sable et le granulat grossier — conformes au ratio de mélange IS 456 pour ce grade.",
+   "form": {
+    "grade": "Grade de béton",
+    "customGrade": "Personnaliser ce grade",
+    "volume": "Volume de béton",
+    "wetVol": "Volume humide",
+    "volAria": "Volume de béton",
+    "volHelp": "Saisissez le volume fini (humide) de béton à couler.",
+    "outputs": "Unités de sortie",
+    "ratio": "Ratio de mélange (c : s : a)",
+    "wastage": "Perte",
+    "wastageAria": "Pourcentage de perte",
+    "dtw": "Facteur sec-à-humide",
+    "dtwAria": "Facteur sec-à-humide",
+    "density": "Densité du ciment",
+    "densityAria": "Densité apparente du ciment",
+    "bag": "Poids du sac de ciment",
+    "bagAria": "Poids du sac de ciment",
+    "errors": {
+     "volMin": "Saisissez un volume supérieur à 0.",
+     "volMax": "Le volume doit être inférieur ou égal à 10 000.",
+     "ratioFmt": "Utilisez le format « a:b:c » — par exemple « 1:1.5:3 ».",
+     "ratioPos": "Chaque partie du ratio doit être supérieure à 0.",
+     "wastageRange": "Saisissez un nombre entre 0 et 50.",
+     "wastageMax": "La perte doit être inférieure ou égale à 50%.",
+     "dtwMin": "Le facteur sec-à-humide doit être supérieur à 1.",
+     "dtwMax": "Un facteur sec-à-humide supérieur à 2 est irréaliste.",
+     "density": "Saisissez une densité supérieure à 0.",
+     "bag": "Saisissez un poids de sac supérieur à 0."
+    }
+   }
+  },
+  "brick": {
+   "meta": {
+    "title": "Calculateur de briques — Mur, terrasse, pavage et brasero",
+    "description": "Calculateur de briques gratuit. Déterminez le nombre exact de briques et le mortier (ciment + sable) qu'il vous faut pour n'importe quel mur, terrasse, pavage, brasero, mur de soutènement ou maison. Compatible avec briques rouges, briques réfractaires, briques en béton, modulaires, traditionnelles et blocs AAC. Saisie en pieds carrés ou en dimensions de mur."
+   },
+   "crumb": "Calculateur de briques",
+   "title": "Calculateur de briques — Mur, terrasse, pavage et brasero",
+   "subtitle": "Saisissez les dimensions de votre mur, une surface totale en pieds carrés ou le volume à remplir. Nous renverrons le nombre de briques, le volume de mortier, les sacs de ciment et le sable — conformes à la brique que vous utilisez réellement, qu'il s'agisse de brique rouge en argile, de brique réfractaire, de brique en béton, modulaire ou d'un bloc AAC.",
+   "form": {
+    "mode": "Mode de saisie",
+    "modes": {
+     "dims": "Par dimensions du mur",
+     "vol": "Par volume total"
+    },
+    "standard": "Standard de brique",
+    "customStd": "Personnaliser ce standard",
+    "wallDims": "Dimensions du mur",
+    "openings": "Ouvertures (portes, fenêtres)",
+    "addOpening": "+ Ajouter une ouverture",
+    "noOpenings": "Aucune ouverture — tout le mur compte.",
+    "labelPh": "Libellé (facultatif)",
+    "removeOpAria": "Supprimer l'ouverture {i}",
+    "defaultDoor": "Porte",
+    "openingN": "Ouverture {n}",
+    "totalVol": "Volume total",
+    "volAria": "Volume total",
+    "mortarThickness": "Épaisseur du mortier",
+    "mortarThicknessAria": "Épaisseur du joint de mortier",
+    "mortarRatio": "Ratio de mortier (ciment : sable)",
+    "brickWastage": "Perte de briques %",
+    "brickWastageAria": "Pourcentage de perte de briques",
+    "mortarWastage": "Perte de mortier %",
+    "mortarWastageAria": "Pourcentage de perte de mortier",
+    "dtw": "Facteur sec-à-humide",
+    "dtwAria": "Facteur de foisonnement sec-à-humide du mortier",
+    "brickSize": "Taille de brique",
+    "customBrickLen": "Longueur de brique personnalisée",
+    "customBrickWid": "Largeur de brique personnalisée",
+    "customBrickHt": "Hauteur de brique personnalisée",
+    "errors": {
+     "lenMin": "Saisissez une longueur supérieure à 0.",
+     "lenMax": "La longueur doit être inférieure ou égale à 100 m.",
+     "htMin": "Saisissez une hauteur supérieure à 0.",
+     "htMax": "La hauteur doit être inférieure ou égale à 20 m.",
+     "thickMin": "Saisissez une épaisseur supérieure à 0.",
+     "thickTooThin": "L'épaisseur doit être d'au moins 50 mm.",
+     "thickTooThick": "L'épaisseur doit être inférieure ou égale à 500 mm.",
+     "widMin": "Saisissez une largeur supérieure à 0.",
+     "opWider": "L'ouverture est plus large que le mur.",
+     "opTaller": "L'ouverture est plus haute que le mur.",
+     "opExceeds": "La surface totale des ouvertures dépasse la surface du mur.",
+     "volMin": "Saisissez un volume supérieur à 0."
+    }
+   }
+  },
+  "steel": {
+   "meta": {
+    "title": "Calculateur d'acier — Poids des barres TMT et armatures",
+    "description": "Calculateur d'acier gratuit. Saisissez votre nomenclature d'armatures ou le volume de béton et obtenez le poids total de l'acier d'armature en kg — pour dalles, poutres, poteaux, semelles et escaliers. Utilise D²/162, Fe 500 / Fe 550 TMT, IS 1786."
+   },
+   "crumb": "Calculateur d'acier",
+   "title": "Calculateur d'acier — Poids des barres TMT et armatures",
+   "subtitle": "Deux façons de saisir — entrez votre nomenclature d'armatures pour un poids précis, ou entrez le volume de béton + le type d'élément pour une estimation rapide par règle empirique. Les deux utilisent les valeurs par défaut IS 1786 ; les deux sont entièrement modifiables.",
+   "form": {
+    "mode": "Mode de saisie",
+    "modes": {
+     "schedule": "Par nomenclature d'armatures",
+     "thumb": "Par règle empirique"
+    },
+    "modeHint1": "Précis. À utiliser lorsque vous avez le plan.",
+    "modeHint2": "Approximatif (±20%). À utiliser uniquement pour les estimations de prix.",
+    "standard": "Standard d'acier",
+    "customStd": "Personnaliser ce standard",
+    "schedule": "Nomenclature d'armatures",
+    "addBar": "+ Ajouter une barre",
+    "barPh": "Barre {i}",
+    "removeBarAria": "Supprimer la barre {i}",
+    "diameter": "Diamètre",
+    "count": "Nombre",
+    "diaAria": "Diamètre de la barre {i} (mm)",
+    "lenAria": "Longueur de la barre {i}",
+    "countAria": "Nombre de la barre {i}",
+    "diaOption": "{d} mm",
+    "member": "Élément + volume",
+    "memberType": "Type d'élément",
+    "concreteVol": "Volume de béton",
+    "volAria": "Volume de béton",
+    "defaultRate": "Taux par défaut : {value} kg/cum pour {member}. Activez Personnaliser pour remplacer.",
+    "wastage": "Perte",
+    "wastageAria": "Pourcentage de perte",
+    "kgPerCum": "kg / cum",
+    "kgPerCumAria": "Kilogrammes par mètre cube de béton",
+    "barLabels": {
+     "dia": "Barre {diameter}mm",
+     "mainBottom": "Barres principales — bas",
+     "distribution": "Barres de répartition",
+     "generic": "Barre {n}"
+    },
+    "errors": {
+     "diaMin": "Saisissez un diamètre supérieur à 0.",
+     "diaMax": "Le diamètre doit être inférieur ou égal à 100 mm.",
+     "lenMin": "Saisissez une longueur supérieure à 0.",
+     "lenMax": "La longueur doit être inférieure ou égale à 50 m.",
+     "countMin": "Au moins 1 barre.",
+     "volMin": "Saisissez un volume supérieur à 0."
+    }
+   }
+  },
+  "paint": {
+   "meta": {
+    "title": "Calculateur de peinture — Intérieur, extérieur et pièce",
+    "description": "Calculateur de peinture gratuit. Saisissez les dimensions d'une pièce ou la surface des murs et obtenez les litres exacts de peinture nécessaires pour émulsion intérieure, émulsion extérieure, émail, apprêt et enduit. Gère plusieurs couches, plafonds, portes et fenêtres."
+   },
+   "crumb": "Calculateur de peinture",
+   "title": "Calculateur de peinture — Litres pour murs intérieurs et extérieurs",
+   "subtitle": "Saisissez une pièce ou une surface totale, choisissez vos produits de peinture, et nous renverrons les litres nécessaires — par couche et au total. Gère l'apprêt sous l'émulsion, les couches multiples et les remplacements de rendement par couche.",
+   "form": {
+    "mode": "Mode de saisie",
+    "modes": {
+     "room": "Par dimensions de la pièce",
+     "area": "Par surface totale"
+    },
+    "roomDims": "Dimensions de la pièce",
+    "includeCeiling": "Inclure le plafond",
+    "openings": "Ouvertures (portes, fenêtres)",
+    "addOpening": "+ Ajouter une ouverture",
+    "noOpenings": "Aucune ouverture — tout le mur compte.",
+    "labelPh": "Libellé (facultatif)",
+    "totalArea": "Surface totale",
+    "area": "Surface",
+    "areaAria": "Surface totale peignable",
+    "layers": "Couches de peinture",
+    "addLayer": "+ Ajouter une couche",
+    "layersHelp": "Une ligne par application de produit — par exemple un apprêt + une finition pour un mur neuf.",
+    "layerN": "Couche {i}",
+    "type": "Type",
+    "coats": "Couches",
+    "coatsAria": "Nombre de couches pour la couche {i}",
+    "customLayer": "Personnaliser cette couche",
+    "kgPerSqm": "kg / sqm",
+    "kgPerSqmAria": "kg par sqm pour la couche {i}",
+    "coverage": "Rendement / L",
+    "coverageAria": "Rendement par litre pour la couche {i}",
+    "wastage": "Perte",
+    "wastageAria": "Pourcentage de perte pour la couche {i}",
+    "defaultDoor": "Porte",
+    "openingN": "Ouverture {n}",
+    "errors": {
+     "lenMin": "Saisissez une longueur supérieure à 0.",
+     "lenMax": "La longueur doit être inférieure ou égale à 100 m.",
+     "widMin": "Saisissez une largeur supérieure à 0.",
+     "widMax": "La largeur doit être inférieure ou égale à 100 m.",
+     "htMin": "Saisissez une hauteur supérieure à 0.",
+     "htMax": "La hauteur doit être inférieure ou égale à 20 m.",
+     "opWider": "L'ouverture est plus large que le mur le plus long.",
+     "opTaller": "L'ouverture est plus haute que le mur.",
+     "opExceeds": "La surface totale des ouvertures dépasse la surface du mur.",
+     "areaMin": "Saisissez une surface supérieure à 0.",
+     "coats": "Au moins 1 couche.",
+     "kgPerSqm": "Saisissez un kg/sqm supérieur à 0.",
+     "coverage": "Saisissez un rendement supérieur à 0."
+    }
+   }
+  },
+  "tile": {
+   "meta": {
+    "title": "Calculateur de carrelage — Sol, mur, adhésif et coulis",
+    "description": "Calculateur de carrelage gratuit. Saisissez la surface du sol ou du mur, choisissez une taille de carreau et obtenez le nombre exact de carreaux, la quantité d'adhésif et le volume de coulis. Compatible avec la pose vitrifiée, céramique et sur lit de mortier traditionnel, avec perte."
+   },
+   "crumb": "Calculateur de carrelage",
+   "title": "Calculateur de carrelage — Sol, mur, adhésif et coulis",
+   "subtitle": "Saisissez la surface, la taille de carreau et choisissez un préréglage — nous renvoyons le nombre de carreaux avec la perte plus l'adhésif et le coulis. Gère à la fois la pose en couche mince moderne et le lit de mortier traditionnel de 20 mm.",
+   "form": {
+    "surface": "Surface",
+    "modes": {
+     "floor": "Sol",
+     "wall": "Mur"
+    },
+    "floorDims": "Dimensions du sol",
+    "wallDims": "Dimensions du mur (largeur × hauteur)",
+    "excluded": "Zones exclues (poteaux, drains, découpes)",
+    "addEx": "+ Ajouter une exclusion",
+    "noEx": "Aucune exclusion — toute la surface est carrelée.",
+    "labelPh": "Libellé (facultatif)",
+    "cutoutN": "Découpe {n}",
+    "tileSize": "Taille de carreau",
+    "standard": "Standard de carreau",
+    "wastage": "Perte",
+    "method": "Méthode",
+    "methods": {
+     "thinset": "Couche mince",
+     "bed": "Lit de mortier"
+    },
+    "coveragePerKg": "Rendement/kg",
+    "bedThickness": "Épaisseur du lit",
+    "mortarRatio": "Ratio de mortier",
+    "groutWidth": "Largeur du joint",
+    "groutDepth": "Profondeur du joint",
+    "groutDepthHelp": "Par défaut, l'épaisseur du carreau. Modifiez pour remplacer.",
+    "tileThickness": "Épaisseur du carreau",
+    "errors": {
+     "lenMin": "Saisissez une longueur supérieure à 0.",
+     "lenMax": "La longueur doit être inférieure ou égale à 500 m.",
+     "widMin": "Saisissez une largeur supérieure à 0.",
+     "widMax": "La largeur doit être inférieure ou égale à 500 m.",
+     "tileLen": "Saisissez une longueur de carreau supérieure à 0.",
+     "tileWid": "Saisissez une largeur de carreau supérieure à 0.",
+     "exLen": "La longueur doit être supérieure à 0.",
+     "exWid": "La largeur doit être supérieure à 0.",
+     "exAll": "Les zones exclues couvrent toute la surface. Réduisez-les.",
+     "coverage": "Le rendement doit être supérieur à 0.",
+     "thickness": "L'épaisseur doit être supérieure à 0.",
+     "ratio": "Formatez comme a:b (par exemple 1:4)."
+    }
+   }
+  },
+  "rebar": {
+   "meta": {
+    "title": "Calculateur de Ferraillage — Acier pour Dalle, Semelle et Mur (Longueur, Barres et Poids)",
+    "description": "Calculateur de ferraillage gratuit pour dalles, semelles, murs et fondations en béton. Saisissez longueur, largeur, espacement et enrobage au bord pour obtenir le nombre de barres, la longueur totale, les barres de 12 m et le poids au mètre ou pied carré. Formule D²/162."
+   },
+   "crumb": "Calculateur de Ferraillage",
+   "title": "Calculateur de Ferraillage — Renfort pour Dalle, Semelle, Mur et Fondation",
+   "subtitle": "Calculez la quantité d'acier d'armature pour une dalle, une semelle, un mur ou une fondation. Saisissez la taille de l'élément, l'espacement c/c et l'enrobage au bord — obtenez les barres par sens, la longueur totale, les barres de 12 m et le poids par m² et pi².",
+   "form": {
+    "section1": "Élément + dimensions",
+    "member": "Type d'élément",
+    "memberHint": "Même calcul de grille — seul l'espacement de départ suggéré change.",
+    "dimHint": "Dimensions totales coulées de l'élément (bord à bord), pas la grille.",
+    "section2": "Disposition de l'armature",
+    "spacing": "Espacement barre–barre (c/c)",
+    "spacingAria": "Espacement centre à centre entre barres parallèles",
+    "edgeSpacing": "Enrobage au bord",
+    "edgeAria": "Distance de la barre extérieure au bord de l'élément",
+    "section3": "Barre + commande",
+    "barDiameter": "Diamètre de barre",
+    "barLength": "Longueur d'une barre",
+    "barLengthAria": "Longueur de stock d'une barre du fournisseur",
+    "wastage": "Chute",
+    "wastageAria": "Pourcentage de chute pour coupe, recouvrements et chevauchements",
+    "lenAria": "Longueur de l'élément",
+    "widAria": "Largeur de l'élément",
+    "errors": {
+     "lenMin": "Saisissez une longueur supérieure à 0.",
+     "lenMax": "La longueur doit être de 200 m ou moins.",
+     "widMin": "Saisissez une largeur supérieure à 0.",
+     "widMax": "La largeur doit être de 200 m ou moins.",
+     "spMin": "Saisissez un espacement supérieur à 0.",
+     "spMax": "L'espacement doit être de 2 m ou moins.",
+     "edgeMin": "L'enrobage doit être de 0 ou plus.",
+     "edgeMax": "L'enrobage doit être inférieur à la moitié de l'élément.",
+     "barLenMin": "Saisissez une longueur de barre supérieure à 0.",
+     "barLenMax": "La longueur de barre doit être de 60 m ou moins.",
+     "wastageRange": "La chute doit être entre 0 et 20%."
+    },
+    "examples": {
+     "fill1": "Exemple : dalle 6000 × 4000 mm, 150 mm c/c, barres 12 mm, stock 12 m."
+    },
+    "placeholder": "Remplissez le formulaire et appuyez sur Calculer pour voir votre commande de ferraillage."
+   },
+   "sizes": {
+    "heading": "Tailles de barres",
+    "note": "Les tailles de barres américaines donnent le diamètre en huitièmes de pouce jusqu'à #8 ; les tailles métriques utilisent le diamètre nominal en millimètres. Le ferraillage TMT en Inde se vend par diamètre nominal — typiquement 8, 10, 12, 16, 20, 25 et 32 mm.",
+    "cols": {
+     "imperial": "Taille impériale",
+     "metric": "Taille métrique",
+     "diaIn": "Diamètre (pouce)",
+     "diaMm": "Diamètre (mm)"
+    }
+   },
+   "article": {
+    "toc": "Sur cette page",
+    "heading": "Tout savoir sur le ferraillage"
+   },
+   "faq": [
+    {
+     "q": "De combien de ferraillage ai-je besoin pour une dalle en béton ?",
+     "a": "Saisissez la longueur et la largeur de la dalle, l'espacement centre à centre et l'enrobage au bord. Le calculateur renvoie les barres par sens, la longueur totale en mètres et les barres de stock (12 m) à commander. Une dalle de 6 × 4 m à 150 mm c/c demande environ 66 barres et près de 306 m de ferraillage."
+    },
+    {
+     "q": "Comment calculer le ferraillage d'une dalle en pieds carrés ?",
+     "a": "Trouvez la surface de la dalle en pieds carrés, divisez par l'espacement de chaque côté pour obtenir les lignes de barres, puis multipliez par la longueur de barre. Le calculateur le fait pour vous et indique aussi le poids par pied carré — un treillis résidentiel simple vaut environ 1 kg par pied carré."
+    },
+    {
+     "q": "Comment calculer le poids du ferraillage ?",
+     "a": "Poids du ferraillage = longueur totale × poids au mètre. Pour un diamètre D en millimètres, poids au mètre ≈ D² / 162 kg/m. Une barre de 12 mm pèse environ 0,89 kg/m ; une barre de 16 mm environ 1,58 kg/m."
+    },
+    {
+     "q": "De combien de barres de ferraillage ai-je besoin ?",
+     "a": "Divisez la longueur totale de ferraillage par la longueur de stock achetée (12 m pour le TMT indien) et arrondissez au supérieur. Le calculateur le fait automatiquement et affiche le nombre de barres."
+    },
+    {
+     "q": "Faut-il du ferraillage dans une semelle ou une fondation ?",
+     "a": "Quasiment toujours oui. Les semelles et fondations supportent toute la charge du bâtiment et ont besoin d'armatures contre la flexion et les fissures. Guide type : 150–200 mm c/c avec des barres de 12–16 mm dans les treillis supérieur et inférieur. Validez avec les plans de structure."
+    },
+    {
+     "q": "Faut-il du ferraillage dans un mur en béton ?",
+     "a": "Cela dépend. Les murs de soutènement et de fondation ont presque toujours besoin de barres verticales plus des barres de répartition horizontales. Les cloisons simples peuvent se contenter d'un treillis léger. Réglez l'élément sur « mur » et validez avec un ingénieur."
+    },
+    {
+     "q": "Qu'est-ce que l'enrobage au bord (espacement bord–grille) ?",
+     "a": "C'est la distance entre la ligne de barre la plus externe et le bord du béton — le béton autour des barres qui les protège de l'eau et de la corrosion. Le calculateur soustrait deux enrobages (un par extrémité) de chaque dimension pour obtenir la taille réelle de la grille."
+    },
+    {
+     "q": "Que m'indique le ferraillage au mètre carré ?",
+     "a": "C'est le poids total de ferraillage divisé par la surface de l'élément — une vérification rapide de densité. Un treillis simple de 12 mm à 150 mm c/c fait environ 11–12 kg par m² ; un double treillis avec barres de 16 mm peut atteindre 20–25 kg par m²."
+    }
+   ]
+  }
+ },
+ "results": {
+  "brick": {
+   "bricksRequired": "Briques requises",
+   "beforeWastage": "{n} avant {pct}% de perte",
+   "grossWall": "Surface brute du mur",
+   "openings": "Ouvertures",
+   "netArea": "Surface nette",
+   "masonryVolume": "Volume de maçonnerie",
+   "paramsUsed": "Paramètres utilisés",
+   "preset": "Préréglage",
+   "brick": "Brique",
+   "joint": "Joint",
+   "mortarRatio": "Ratio de mortier",
+   "brickWastage": "Perte de briques",
+   "mortarWastage": "Perte de mortier",
+   "mortar": "Mortier",
+   "cement": "Ciment",
+   "sand": "Sable"
+  },
+  "concrete": {
+   "cementRequired": "Ciment requis",
+   "sand": "Sable",
+   "aggregate": "Granulat",
+   "dryVolume": "Volume sec",
+   "wastageApplied": "Perte appliquée",
+   "paramsUsed": "Paramètres utilisés",
+   "preset": "Préréglage",
+   "mixRatio": "Ratio de mélange",
+   "cementDensity": "Densité du ciment",
+   "bagWeight": "Poids du sac",
+   "dtw": "Facteur sec-à-humide"
+  },
+  "paint": {
+   "totalRequired": "Total requis",
+   "putty": "{n} {unit} d'enduit",
+   "wallGross": "Mur brut",
+   "ceiling": "Plafond",
+   "openings": "Ouvertures",
+   "netPaintable": "Surface peignable nette",
+   "byLayer": "Par couche",
+   "coats": "couches",
+   "coat": "couche"
+  },
+  "steel": {
+   "total": "Total d'acier requis",
+   "beforeWastage": "Avant perte",
+   "wastage": "Perte",
+   "byBar": "Par barre",
+   "genericBar": "Barre {n}"
+  },
+  "tile": {
+   "tilesToOrder": "Carreaux à commander",
+   "tiles": "carreaux",
+   "beforeWastage": "{count} avant + {pct}% de perte",
+   "grossArea": "Surface brute",
+   "excluded": "Exclus",
+   "netTileable": "Surface carrelable nette",
+   "tileSize": "Taille de carreau",
+   "thinset": "Adhésif couche mince",
+   "quantity": "Quantité",
+   "mortarBed": "Lit de mortier ({thickness} {unit}, {ratio})",
+   "volumeWet": "Volume (humide)",
+   "cement": "Ciment",
+   "sand": "Sable",
+   "grout": "Coulis",
+   "volume": "Volume",
+   "estimatedWeight": "Poids estimé"
+  }
+ },
+ "projects": {
+  "title": "Projets",
+  "newProject": "Nouveau projet",
+  "editProject": "Modifier le projet",
+  "empty": "Aucun projet pour le moment. Créez le premier pour commencer à enregistrer des calculs.",
+  "filters": {
+   "active": "Actifs",
+   "archived": "Archivés",
+   "all": "Tous"
+  },
+  "archivedTag": "Archivé",
+  "noClient": "Aucun client",
+  "calc": "calc",
+  "material": "matériau",
+  "form": {
+   "name": "Nom du projet",
+   "clientName": "Nom du client",
+   "currency": "Devise",
+   "currencyFixed": "La devise est fixée à la création. Créez un nouveau projet pour la modifier.",
+   "taxRegion": "Région fiscale",
+   "taxRegionFixed": "La région fiscale est fixée à la création.",
+   "location": "Localisation (facultatif)",
+   "address": "Adresse",
+   "city": "Ville",
+   "state": "État",
+   "pincode": "Code postal",
+   "country": "Pays",
+   "notes": "Notes",
+   "create": "Créer le projet"
+  },
+  "actions": {
+   "confirmDelete": "Supprimer le projet « {name} » ? Cette action est irréversible.",
+   "unarchive": "Désarchiver",
+   "archive": "Archiver",
+   "delete": "Supprimer"
+  },
+  "materials": {
+   "title": "Matériaux",
+   "add": "Ajouter un matériau",
+   "empty": "Aucun matériau pour le moment. Ajoutez des prix pour le ciment, le sable, l'acier et tout ce que vous achetez.",
+   "vendor": "Fournisseur : {vendor}",
+   "confirmDelete": "Supprimer ce matériau ? Les devis existants ne seront pas affectés.",
+   "form": {
+    "suggestedFrom": "Suggéré depuis « {source} »",
+    "aCalculation": " un calcul",
+    "needsHint": " · nécessite ≈ {qty}",
+    "enterPrice": ". Saisissez votre prix et enregistrez.",
+    "type": "Type",
+    "typeFixed": "Le type est fixé après création.",
+    "unit": "Unité",
+    "unitFixed": "L'unité est fixée après création.",
+    "brand": "Marque",
+    "unitPrice": "Prix unitaire ({currency})",
+    "quantity": "Quantité ({unit})",
+    "quantityGeneric": "Quantité (unité)",
+    "qtyPh": "par ex. 12",
+    "pricePh": "380.00",
+    "total": "Total : {currency} {amount}",
+    "vendor": "Fournisseur",
+    "notes": "Notes"
+   },
+   "modal": {
+    "title": "Ajouter un matériau",
+    "typeReq": "Type *",
+    "brand": "Marque (facultatif)",
+    "brandPh": "par ex. UltraTech, ACC",
+    "unitReq": "Unité *",
+    "priceReq": "Prix par {unit} ({currency}) *",
+    "pricePh": "0.00",
+    "vendor": "Fournisseur (facultatif)",
+    "vendorPh": "par ex. Fournisseur local",
+    "adding": "Ajout en cours…",
+    "priceError": "Prix unitaire valide requis"
+   },
+   "fromCalc": {
+    "allImported": "Tout ce qui provient de ce calcul est déjà dans vos matériaux.",
+    "createdMsg": "{n} matériau(x) ajouté(s) avec un prix par défaut de ₹100",
+    "updatedMsg": "quantité mise à jour sur {n} matériau(x) existant(s)",
+    "editPrices": ". Modifiez les prix selon vos besoins.",
+    "title": "Matériaux issus de ce calcul",
+    "help": "Cliquez sur une puce pour l'ajouter avec un prix, ou importez tous les manquants avec des prix par défaut.",
+    "importing": "Importation…",
+    "allDone": "Tout importé",
+    "addAll": "Ajouter tous les manquants ({n})"
+   }
+  },
+  "calculations": {
+   "title": "Calculs",
+   "empty": "Aucun calcul pour le moment. Lancez un calculateur et utilisez « Enregistrer dans le projet » pour en faire un instantané ici.",
+   "browse": "Parcourir les calculateurs",
+   "ungrouped": "Non groupés",
+   "openHint": "Ouvrir pour modifier ou recalculer →",
+   "confirmDelete": "Supprimer le calcul « {name} » ? Cette action est irréversible.",
+   "menu": "…",
+   "recompute": "Recalculer",
+   "edit": {
+    "label": "Libellé",
+    "group": "Groupe",
+    "groupPh": "par ex. Rez-de-chaussée, Premier étage",
+    "description": "Description"
+   },
+   "result": {
+    "empty": "Aucun aperçu disponible pour ce type de calculateur."
+   },
+   "saveButton": {
+    "runFirst": "Exécutez d'abord le calculateur",
+    "saveHint": "Enregistrer cette exécution dans un projet",
+    "cta": "Enregistrer dans le projet",
+    "modalTitle": "Enregistrer le calcul",
+    "project": "Projet",
+    "loadingProjects": "Chargement des projets…",
+    "noActive": "Vous n'avez aucun projet actif. ",
+    "createOne": "En créer un",
+    "labelPh": "par ex. Briques du rez-de-chaussée",
+    "group": "Groupe (facultatif)",
+    "groupPh": "par ex. Rez-de-chaussée",
+    "save": "Enregistrer"
+   }
+  },
+  "boq": {
+   "title": "BOQ",
+   "generate": "Générer le BOQ",
+   "generating": "Génération…",
+   "name": "Nom du BOQ",
+   "namePh": "par ex. « BOQ v1 — tel que conçu »",
+   "autoName": "Laissez vide pour un nom généré automatiquement",
+   "notes": "Notes",
+   "notesPh": "par ex. Exclut la préparation du site et le mur d'enceinte.",
+   "source": "Source des données",
+   "willGen": "Le BOQ sera généré à partir des {n} matériau(x) de votre projet avec leurs quantités et prix.",
+   "noMaterials": "Aucun matériau ajouté pour le moment. Ajoutez des matériaux à votre projet avant de générer un BOQ.",
+   "alsoCalcs": "Inclure aussi les calculs enregistrés",
+   "alsoCalcsHelp": "Ajoute une section séparée avec les quantités de matériaux issues de vos résultats de calculateur.",
+   "pickCalcs": "Sélectionnez les calculs à inclure (laissez tout décoché pour tous) :",
+   "confirmDelete": "Supprimer ce BOQ ? Cette action est irréversible.",
+   "generated": "Généré le {date}",
+   "pdf": "PDF",
+   "ungrouped": "(Non groupés)",
+   "cols": {
+    "material": "Matériau",
+    "qty": "Qté",
+    "unit": "Unité",
+    "pricePerUnit": "Prix/unité",
+    "amount": "Montant"
+   },
+   "materialsSubtotal": "Sous-total matériaux :",
+   "grandTotal": "Total général :",
+   "addMaterial": "+ Ajouter un matériau",
+   "editor": {
+    "label": "Libellé",
+    "override": "Montant remplacé ({currency})",
+    "reason": "Raison",
+    "reasonPh": "par ex. Remise en gros du fournisseur pour la commande complète",
+    "save": "Enregistrer le remplacement"
+   }
+  },
+  "invoice": {
+   "title": "Factures",
+   "new": "Nouvelle facture",
+   "confirmDelete": "Supprimer cette facture ? Cette action est irréversible.",
+   "generate": "Générer la facture",
+   "generating": "Génération…",
+   "sourceQuotation": "Devis source",
+   "grandTotal": "Total général : {total}",
+   "name": "Nom de la facture (facultatif)",
+   "namePh": "Généré automatiquement à partir du nom du devis",
+   "due": "Date d'échéance (facultatif)",
+   "notes": "Notes (facultatif)",
+   "amountDue": "Montant dû",
+   "amountPaid": "Montant payé",
+   "remaining": "Restant",
+   "recordPayment": "Enregistrer un paiement",
+   "amount": "Montant",
+   "amountPh": "0.00",
+   "paymentNotes": "Notes (facultatif)",
+   "paymentRefPh": "Référence de paiement…",
+   "savePayment": "Enregistrer le paiement",
+   "paymentNotesTitle": "Notes de paiement",
+   "notesLabel": "Notes",
+   "createdUpdated": "Créé le {created} · Mis à jour le {updated}",
+   "paid": " · Payé le {date}"
+  },
+  "quotation": {
+   "title": "Devis",
+   "new": "Nouveau devis",
+   "generate": "Générer le devis",
+   "generating": "Génération…",
+   "confirmDelete": "Supprimer ce devis ? Cette action est irréversible.",
+   "selectBoq": "Sélectionnez un BOQ",
+   "sourceBoqReq": "BOQ source *",
+   "clientDetails": "Coordonnées du client (facultatif)",
+   "name": "Nom",
+   "namePh": "Nom du client",
+   "email": "E-mail",
+   "emailPh": "client@example.com",
+   "phone": "Téléphone",
+   "phonePh": "+91 98765 43210",
+   "pricing": "Tarification",
+   "markup": "Marge %",
+   "discount": "Remise %",
+   "tax": "Taxe % (GST)",
+   "materialsSubtotal": "Sous-total matériaux",
+   "markupLine": "+ Marge ({pct}%)",
+   "discountLine": "- Remise ({pct}%)",
+   "taxLine": "+ Taxe ({pct}%)",
+   "grandTotal": "Total général",
+   "quoteName": "Nom du devis (facultatif)",
+   "quoteNamePh": "Généré automatiquement si laissé vide",
+   "validUntil": "Valide jusqu'au (facultatif)",
+   "internalNotesPh": "Notes internes",
+   "termsOpt": "Conditions générales (facultatif)",
+   "termsPh": "Conditions de paiement, validité, etc.",
+   "noClient": "Aucun client",
+   "validSuffix": " · Valide jusqu'au {date}",
+   "created": "Créé le {date}",
+   "sent": " · Envoyé le {date}",
+   "markSent": "Marquer comme envoyé",
+   "markAccepted": "Marquer accepté",
+   "markRejected": "Marquer refusé",
+   "pricingSummary": "Récapitulatif tarifaire",
+   "client": "Client",
+   "ungrouped": "(Non groupés)",
+   "cols": {
+    "item": "Article",
+    "qty": "Qté",
+    "unit": "Unité",
+    "rate": "Prix",
+    "amount": "Montant"
+   },
+   "notes": "Notes",
+   "termsTitle": "Conditions générales"
+  },
+  "brandSwap": {
+   "generic": "Générique"
+  },
+  "runCalc": "Lancer un calculateur"
+ }
 }

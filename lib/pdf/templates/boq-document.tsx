@@ -1,5 +1,5 @@
 // BOQ PDF template
-import { Document, Page, View, Text } from "@react-pdf/renderer";
+import { Document, Page, View } from "@react-pdf/renderer";
 import { styles } from "../styles";
 import { formatCurrency, formatDate } from "../format";
 import { PdfHeader, PdfFooter, PdfSectionHeader, PdfTableHeader, PdfTableRow, PdfTotalsBlock, PdfNotes } from "../components";

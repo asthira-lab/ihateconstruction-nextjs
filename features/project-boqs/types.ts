@@ -10,6 +10,12 @@ export interface BoqMaterial {
   priceUnknown: boolean;
 }
 
+export interface BoqLineOverride {
+  label?: string;
+  amount?: string;
+  reason?: string;
+}
+
 export interface BoqLine {
   id: string;
   sourceCalculationId: string;
@@ -18,7 +24,7 @@ export interface BoqLine {
   description: string | null;
   materials: BoqMaterial[];
   subtotal: string;
-  override: { label?: string; amount?: string; reason?: string } | null;
+  override: BoqLineOverride | null;
 }
 
 export interface BoqSection {

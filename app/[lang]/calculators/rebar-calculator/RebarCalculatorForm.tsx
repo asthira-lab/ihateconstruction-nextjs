@@ -6,6 +6,10 @@ import { NumberSliderInput } from "@/components/ui/NumberSliderInput";
 import { QuantityInput } from "@/components/ui/QuantityInput";
 import { SaveToProjectButton } from "@/components/projects/SaveToProjectButton";
 import { RebarResultCard } from "@/components/calculators/rebar/ResultCard";
+import { BlockGroup } from "@/components/calculators/ui/BlockGroup";
+import { VariableRow } from "@/components/calculators/ui/VariableRow";
+import { ActionPanel } from "@/components/calculators/ui/ActionPanel";
+import { FeedbackBar } from "@/components/calculators/ui/FeedbackBar";
 import type {
   LengthQuantity,
   Member,
@@ -129,28 +133,39 @@ export function RebarCalculatorForm({ t, common, cCommon }: RebarCalculatorFormP
   const [savedRequest, setSavedRequest] = useState<RebarRequest | null>(null);
   const [isPending, startTransition] = useTransition();
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (hasErrors) return;
-    const req = toRebarRequest(state);
+  const run = (req: RebarRequest) =>
     startTransition(async () => {
       const res = await submitRebarCalculation(req);
       setResult(res);
-      if (res.ok) setSavedRequest(req);
-      else setSavedRequest(null);
+      setSavedRequest(res.ok ? req : null);
     });
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (hasErrors) return;
+    run(toRebarRequest(state));
+  };
+
+  const onReload = () => {
+    if (hasErrors) return;
+    run(toRebarRequest(state));
+  };
+
+  const onClear = () => {
+    setState(makeInitialState());
+    setResult(null);
+    setSavedRequest(null);
   };
 
   const errCode = result && !result.ok ? result.error.code : null;
   const errMsg = result && !result.ok ? result.error.message : null;
 
   return (
-    <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,20rem)]">
-      <form onSubmit={onSubmit} className="space-y-8" noValidate>
-        <fieldset className="space-y-4 rounded border border-black/10 p-4 dark:border-white/10">
-          <legend className="px-1 text-sm font-semibold">{t.section1}</legend>
-          <div className="grid gap-4 sm:grid-cols-[1fr_1fr]">
-            <LabeledRow label={t.member} hint={t.memberHint}>
+    <div className="space-y-4">
+      <form onSubmit={onSubmit} className="space-y-4" noValidate>
+        <BlockGroup title={t.section1}>
+          <div className="space-y-4">
+            <VariableRow label={t.member} hint={t.memberHint}>
               <select
                 value={state.member}
                 onChange={(e) => set("member", e.target.value as Member)}
@@ -163,9 +178,8 @@ export function RebarCalculatorForm({ t, common, cCommon }: RebarCalculatorFormP
                   </option>
                 ))}
               </select>
-            </LabeledRow>
-            <div className="hidden sm:block" />
-            <LabeledRow label={common.length} error={errors.length}>
+            </VariableRow>
+            <VariableRow label={common.length} error={errors.length}>
               <QuantityInput
                 value={state.length}
                 onChange={(q) => set("length", q)}
@@ -176,8 +190,8 @@ export function RebarCalculatorForm({ t, common, cCommon }: RebarCalculatorFormP
                 decimals={2}
                 ariaLabel={t.lenAria}
               />
-            </LabeledRow>
-            <LabeledRow label={common.width} error={errors.width}>
+            </VariableRow>
+            <VariableRow label={common.width} error={errors.width}>
               <QuantityInput
                 value={state.width}
                 onChange={(q) => set("width", q)}
@@ -188,15 +202,14 @@ export function RebarCalculatorForm({ t, common, cCommon }: RebarCalculatorFormP
                 decimals={2}
                 ariaLabel={t.widAria}
               />
-            </LabeledRow>
+            </VariableRow>
+            <p className="text-xs text-black/60 dark:text-white/60">{t.dimHint}</p>
           </div>
-          <p className="text-xs text-black/60 dark:text-white/60">{t.dimHint}</p>
-        </fieldset>
+        </BlockGroup>
 
-        <fieldset className="space-y-4 rounded border border-black/10 p-4 dark:border-white/10">
-          <legend className="px-1 text-sm font-semibold">{t.section2}</legend>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <LabeledRow label={t.spacing} error={errors.spacing}>
+        <BlockGroup title={t.section2}>
+          <div className="space-y-4">
+            <VariableRow label={t.spacing} error={errors.spacing}>
               <QuantityInput
                 value={state.spacing}
                 onChange={(q) => set("spacing", q)}
@@ -207,8 +220,8 @@ export function RebarCalculatorForm({ t, common, cCommon }: RebarCalculatorFormP
                 decimals={0}
                 ariaLabel={t.spacingAria}
               />
-            </LabeledRow>
-            <LabeledRow label={t.edgeSpacing} error={errors.edgeSpacing}>
+            </VariableRow>
+            <VariableRow label={t.edgeSpacing} error={errors.edgeSpacing}>
               <QuantityInput
                 value={state.edgeSpacing}
                 onChange={(q) => set("edgeSpacing", q)}
@@ -219,14 +232,13 @@ export function RebarCalculatorForm({ t, common, cCommon }: RebarCalculatorFormP
                 decimals={0}
                 ariaLabel={t.edgeAria}
               />
-            </LabeledRow>
+            </VariableRow>
           </div>
-        </fieldset>
+        </BlockGroup>
 
-        <fieldset className="space-y-4 rounded border border-black/10 p-4 dark:border-white/10">
-          <legend className="px-1 text-sm font-semibold">{t.section3}</legend>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <LabeledRow label={t.barDiameter}>
+        <BlockGroup title={t.section3}>
+          <div className="space-y-4">
+            <VariableRow label={t.barDiameter}>
               <select
                 value={state.barDiameter}
                 onChange={(e) => set("barDiameter", e.target.value)}
@@ -239,8 +251,8 @@ export function RebarCalculatorForm({ t, common, cCommon }: RebarCalculatorFormP
                   </option>
                 ))}
               </select>
-            </LabeledRow>
-            <LabeledRow label={t.barLength} error={errors.barLength}>
+            </VariableRow>
+            <VariableRow label={t.barLength} error={errors.barLength}>
               <QuantityInput
                 value={state.barLength}
                 onChange={(q) => set("barLength", q)}
@@ -251,25 +263,24 @@ export function RebarCalculatorForm({ t, common, cCommon }: RebarCalculatorFormP
                 decimals={1}
                 ariaLabel={t.barLengthAria}
               />
-            </LabeledRow>
-          </div>
-          <fieldset className="space-y-3 rounded border border-black/10 p-4 dark:border-white/10">
-            <legend className="px-1 text-sm font-semibold">{cCommon.customParams}</legend>
-            <LabeledRow label={t.wastage}>
-              <NumberSliderInput
-                value={Number(state.wastagePercent)}
-                onChange={(n) => set("wastagePercent", String(n))}
-                min={0}
-                max={20}
-                step={0.5}
-                decimals={1}
-                suffix="%"
-                ariaLabel={t.wastageAria}
-              />
-            </LabeledRow>
+            </VariableRow>
+            <div className="rounded border border-black/10 p-3 dark:border-white/10">
+              <VariableRow label={cCommon.customParams}>
+                <NumberSliderInput
+                  value={Number(state.wastagePercent)}
+                  onChange={(n) => set("wastagePercent", String(n))}
+                  min={0}
+                  max={20}
+                  step={0.5}
+                  decimals={1}
+                  suffix="%"
+                  ariaLabel={t.wastageAria}
+                />
+              </VariableRow>
+            </div>
             <p className="text-xs text-black/60 dark:text-white/60">{t.examples.fill1}</p>
-          </fieldset>
-        </fieldset>
+          </div>
+        </BlockGroup>
 
         <div className="space-y-3">
           {errCode ? (
@@ -294,7 +305,7 @@ export function RebarCalculatorForm({ t, common, cCommon }: RebarCalculatorFormP
         </div>
       </form>
 
-      <aside aria-live="polite" className="md:sticky md:top-6 md:self-start">
+      <div aria-live="polite">
         {result?.ok ? (
           <>
             <RebarResultCard data={result.data} />
@@ -311,36 +322,20 @@ export function RebarCalculatorForm({ t, common, cCommon }: RebarCalculatorFormP
             {isPending ? common.calculating : t.placeholder}
           </div>
         )}
-      </aside>
-    </div>
-  );
-}
-
-function LabeledRow({
-  label,
-  hint,
-  error,
-  children,
-}: {
-  label: string;
-  hint?: string;
-  error?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="space-y-1.5">
-      <div>
-        <label className="text-sm text-black/70 dark:text-white/70">{label}</label>
-        {hint ? (
-          <p className="mt-0.5 text-[11px] text-black/50 dark:text-white/50">{hint}</p>
-        ) : null}
       </div>
-      {children}
-      {error ? (
-        <p className="mt-1 text-xs text-red-600 dark:text-red-400" role="alert">
-          {error}
-        </p>
-      ) : null}
+
+      <ActionPanel
+        reloadLabel={cCommon.reload}
+        clearLabel={cCommon.clearAll}
+        onReload={onReload}
+        onClear={onClear}
+      />
+
+      <FeedbackBar
+        question={cCommon.didWeSolve}
+        yesLabel={common.yes}
+        noLabel={common.no}
+      />
     </div>
   );
 }

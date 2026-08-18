@@ -7,7 +7,7 @@ import { requireUserId } from "@/lib/auth/require-user";
 import { ensureProjectsSchema } from "@/lib/db/projects-schema";
 import { decodeCursor, encodeCursor } from "@/lib/cursor";
 import { boqGenerateSchema, boqPatchSchema, listBoqsQuerySchema, boqSwapBrandSchema } from "./schema";
-import type { BoqGenerateInput, BoqPatchInput, ListBoqsQuery, Boq } from ".";
+import type { BoqGenerateInput, BoqPatchInput, ListBoqsQuery, Boq, BoqLineOverride } from ".";
 import {
   insertBoq,
   findBoqByIdForUser,
@@ -40,6 +40,18 @@ async function tx<T>(fn: (c: PoolClient) => Promise<T>): Promise<T> {
   } finally {
     client.release();
   }
+}
+
+// Narrow an override_json (JSONB) value into a typed BoqLineOverride.
+function asOverride(v: unknown): BoqLineOverride | null {
+  if (v === null || v === undefined) return null;
+  if (typeof v !== "object" || Array.isArray(v)) return null;
+  const o = v as Record<string, unknown>;
+  const out: BoqLineOverride = {};
+  if (typeof o.label === "string") out.label = o.label;
+  if (typeof o.amount === "string") out.amount = o.amount;
+  if (typeof o.reason === "string") out.reason = o.reason;
+  return out;
 }
 
 // Helper: look up material price by (type, brand) or fallback to (type, null brand)
@@ -93,7 +105,7 @@ export async function generateBoq(projectId: string, raw: unknown): Promise<Boq>
   const materials = matRes.rows;
 
   // Optionally load calculations
-  let calcLines: { label: string; group: string | null; materials: { type: string; quantity: string; unit: string }[] }[] = [];
+  const calcLines: { label: string; group: string | null; materials: { type: string; quantity: string; unit: string }[] }[] = [];
   if (input.includeCalculations) {
     const allCalcs = await listCalculations(projectId, { limit: 100 });
     let calcs = allCalcs.items;
@@ -146,7 +158,6 @@ export async function generateBoq(projectId: string, raw: unknown): Promise<Boq>
 
     let lineNum = 1;
     let materialsSubtotal = "0";
-    let unknownPriceCount = 0;
     let sectionOrder = 0;
 
     // Section 1: Materials (primary)
@@ -254,7 +265,8 @@ export async function generateBoq(projectId: string, raw: unknown): Promise<Boq>
     }
 
     // Insert totals cache
-    await insertBoqTotalsCache(boq.id, materialsSubtotal, unknownPriceCount, materialsSubtotal, client);
+    // Unknown-price tracking isn't wired yet — priceUnknown is hardcoded false, so the count is 0.
+    await insertBoqTotalsCache(boq.id, materialsSubtotal, 0, materialsSubtotal, client);
 
     // Update project counts
     await client.query(
@@ -288,26 +300,27 @@ export async function getBoq(id: string): Promise<Boq> {
     generatedAt: boq.generated_at,
     sections: sections.map((sec) => ({
       group: sec.group_name,
-      lines: sec.lines.map((line) => ({
-        id: line.id,
-        sourceCalculationId: line.source_calculation_id,
-        calculator: line.calculator,
-        label: line.label,
-        description: line.description,
-        materials: line.materials.map((m) => ({
-          id: m.id,
-          type: m.material_type,
-          brand: m.brand,
-          quantity: { value: m.quantity_value, unit: m.quantity_unit },
-          unitPrice: m.unit_price,
-          amount: m.amount,
-          priceUnknown: m.price_unknown,
-        })),
-        subtotal: line.override_json && (line.override_json as any).amount
-          ? (line.override_json as any).amount
-          : line.line_subtotal,
-        override: line.override_json as any,
-      })),
+      lines: sec.lines.map((line) => {
+        const override = asOverride(line.override_json);
+        return {
+          id: line.id,
+          sourceCalculationId: line.source_calculation_id,
+          calculator: line.calculator,
+          label: line.label,
+          description: line.description,
+          materials: line.materials.map((m) => ({
+            id: m.id,
+            type: m.material_type,
+            brand: m.brand,
+            quantity: { value: m.quantity_value, unit: m.quantity_unit },
+            unitPrice: m.unit_price,
+            amount: m.amount,
+            priceUnknown: m.price_unknown,
+          })),
+          subtotal: override?.amount ? override.amount : line.line_subtotal,
+          override,
+        };
+      }),
       sectionSubtotal: sec.section_subtotal,
     })),
     totals: {
@@ -370,13 +383,6 @@ export async function patchBoq(id: string, raw: unknown): Promise<Boq> {
 
     // Apply line overrides
     if (input.lineOverrides && input.lineOverrides.length > 0) {
-      // Load all lines in this BOQ to verify they exist
-      const linesRes = await client.query<{ id: string }>(
-        `SELECT id FROM boq_lines WHERE boq_id = $1`,
-        [id],
-      );
-      const validLineIds = new Set(linesRes.rows.map((r) => r.id));
-
       let newMaterialsSubtotal = "0";
       let newGrandTotal = "0";
 
@@ -409,18 +415,12 @@ export async function patchBoq(id: string, raw: unknown): Promise<Boq> {
 
       newGrandTotal = "0";
       for (const line of allLinesRes.rows) {
-        const amt = line.override_json && (line.override_json as any).amount
-          ? (line.override_json as any).amount
-          : line.line_subtotal;
+        const override = asOverride(line.override_json);
+        const amt = override?.amount ? override.amount : line.line_subtotal;
         newGrandTotal = (Number(newGrandTotal) + Number(amt)).toFixed(2);
       }
 
       // Update totals cache
-      const totalsRes = await client.query<{ unknown_price_count: number }>(
-        `SELECT unknown_price_count FROM boq_totals_cache WHERE boq_id = $1`,
-        [id],
-      );
-
       await client.query(
         `UPDATE boq_totals_cache SET materials_subtotal = $1::numeric, grand_total = $2::numeric, updated_at = NOW()
          WHERE boq_id = $3`,
@@ -456,7 +456,9 @@ export async function regenerateBoq(id: string, raw?: unknown): Promise<Boq> {
   }
 
   const originalFilters = boq.filters_json ? (typeof boq.filters_json === "string" ? JSON.parse(boq.filters_json) : boq.filters_json) as Record<string, unknown> : null;
-  const project = await getProject(boq.project_id);
+
+  // Ownership check — throws NOT_FOUND if the project isn't the user's.
+  await getProject(boq.project_id);
 
   // Determine if calculations should be included (from original or override)
   const includeCalcs = input?.includeCalculations ?? (originalFilters?.includeCalculations === true);
@@ -470,7 +472,7 @@ export async function regenerateBoq(id: string, raw?: unknown): Promise<Boq> {
   const materials = matRes.rows;
 
   // Optionally load calculations
-  let calcLines: { label: string; group: string | null; materials: { type: string; quantity: string; unit: string }[] }[] = [];
+  const calcLines: { label: string; group: string | null; materials: { type: string; quantity: string; unit: string }[] }[] = [];
   if (includeCalcs) {
     const allCalcs = await listCalculations(boq.project_id, { limit: 100 });
     let calcs = allCalcs.items;
@@ -517,7 +519,6 @@ export async function regenerateBoq(id: string, raw?: unknown): Promise<Boq> {
 
     let lineNum = 1;
     let materialsSubtotal = "0";
-    let unknownPriceCount = 0;
     let sectionOrder = 0;
 
     // Section: Materials
@@ -587,7 +588,8 @@ export async function regenerateBoq(id: string, raw?: unknown): Promise<Boq> {
       }
     }
 
-    await insertBoqTotalsCache(id, materialsSubtotal, unknownPriceCount, materialsSubtotal, client);
+    // Unknown-price tracking isn't wired yet — priceUnknown is hardcoded false, so the count is 0.
+    await insertBoqTotalsCache(id, materialsSubtotal, 0, materialsSubtotal, client);
 
     await logAudit(client, { projectId: boq.project_id, userId, entityType: "boq", entityId: id, action: "regenerated", summary: `Regenerated BOQ: ${input?.name ?? boq.name}` });
 

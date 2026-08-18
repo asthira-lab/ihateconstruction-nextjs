@@ -1,937 +1,1223 @@
 {
-  "common": {
-    "cancel": "Cancel",
-    "save": "Save",
-    "saveChanges": "Save changes",
-    "saving": "Saving…",
-    "delete": "Delete",
-    "deleting": "Deleting…",
-    "back": "Back",
-    "loading": "Loading…",
-    "loadMore": "Load more",
-    "close": "Close",
-    "edit": "Edit",
-    "new": "New",
-    "add": "Add",
-    "remove": "Remove",
-    "confirm": "Confirm",
-    "yes": "Yes",
-    "no": "No",
-    "required": "*",
-    "optional": "(optional)",
-    "openings": "Openings",
-    "netArea": "Net area",
-    "wastage": "Wastage",
-    "cement": "Cement",
-    "sand": "Sand",
-    "aggregate": "Aggregate",
-    "mortar": "Mortar",
-    "grout": "Grout",
-    "unit": "Unit",
-    "length": "Length",
-    "width": "Width",
-    "height": "Height",
-    "thickness": "Thickness",
-    "volume": "Volume",
-    "quantity": "Quantity",
-    "reset": "Reset",
-    "calculate": "Calculate",
-    "calculating": "Calculating…",
-    "preset": "Preset",
-    "customise": "Customise",
-    "fixHighlighted": "Fix the highlighted fields to continue.",
-    "noAccount": "No account",
-    "notFound": "—",
-    "coming": "Coming soon"
+ "common": {
+  "cancel": "Cancel",
+  "save": "Save",
+  "saveChanges": "Save changes",
+  "saving": "Saving…",
+  "delete": "Delete",
+  "deleting": "Deleting…",
+  "back": "Back",
+  "loading": "Loading…",
+  "loadMore": "Load more",
+  "close": "Close",
+  "edit": "Edit",
+  "new": "New",
+  "add": "Add",
+  "remove": "Remove",
+  "confirm": "Confirm",
+  "yes": "Yes",
+  "no": "No",
+  "required": "*",
+  "optional": "(optional)",
+  "openings": "Openings",
+  "netArea": "Net area",
+  "wastage": "Wastage",
+  "cement": "Cement",
+  "sand": "Sand",
+  "aggregate": "Aggregate",
+  "mortar": "Mortar",
+  "grout": "Grout",
+  "unit": "Unit",
+  "length": "Length",
+  "width": "Width",
+  "height": "Height",
+  "thickness": "Thickness",
+  "volume": "Volume",
+  "quantity": "Quantity",
+  "reset": "Reset",
+  "calculate": "Calculate",
+  "calculating": "Calculating…",
+  "preset": "Preset",
+  "customise": "Customise",
+  "fixHighlighted": "Fix the highlighted fields to continue.",
+  "noAccount": "No account",
+  "notFound": "—",
+  "coming": "Coming soon"
+ },
+ "header": {
+  "brand": "ihateconstruction",
+  "homeAria": "ihateconstruction.co home",
+  "calculators": "Calculators",
+  "projects": "Projects",
+  "signIn": "Sign in"
+ },
+ "footer": {
+  "product": "Product",
+  "company": "Company",
+  "legal": "Legal",
+  "calculators": "Calculators",
+  "roadmap": "Roadmap",
+  "projectsBoq": "Projects & BOQ",
+  "quotations": "Quotations",
+  "about": "About",
+  "contact": "Contact",
+  "privacy": "Privacy",
+  "terms": "Terms",
+  "tagline": "Construction calculators and estimating tools for contractors.",
+  "copy": "© {year} ihateconstruction.co",
+  "made": "Made for Indian construction sites · en-IN"
+ },
+ "home": {
+  "hero": {
+   "eyebrow": "Free tools for Indian contractors",
+   "title": "Estimating and calculators built for how contractors actually work.",
+   "subtitle": "Free, unit-aware calculators that turn wall dimensions into material orders — bricks, cement, sand, tile, paint, steel. Projects, BOQ, and GST-ready quotations are coming next.",
+   "ctaPrimary": "Open calculators",
+   "ctaSecondary": "Try the brick calculator",
+   "note": "No account required · Metric and imperial · Works on mobile"
   },
-  "header": {
-    "brand": "ihateconstruction",
-    "homeAria": "ihateconstruction.co home",
-    "calculators": "Calculators",
-    "projects": "Projects",
-    "signIn": "Sign in"
-  },
-  "footer": {
-    "product": "Product",
-    "company": "Company",
-    "legal": "Legal",
-    "calculators": "Calculators",
-    "roadmap": "Roadmap",
-    "projectsBoq": "Projects & BOQ",
-    "quotations": "Quotations",
-    "about": "About",
-    "contact": "Contact",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "tagline": "Construction calculators and estimating tools for contractors.",
-    "copy": "© {year} ihateconstruction.co",
-    "made": "Made for Indian construction sites · en-IN"
-  },
-  "home": {
-    "hero": {
-      "eyebrow": "Free tools for Indian contractors",
-      "title": "Estimating and calculators built for how contractors actually work.",
-      "subtitle": "Free, unit-aware calculators that turn wall dimensions into material orders — bricks, cement, sand, tile, paint, steel. Projects, BOQ, and GST-ready quotations are coming next.",
-      "ctaPrimary": "Open calculators",
-      "ctaSecondary": "Try the brick calculator",
-      "note": "No account required · Metric and imperial · Works on mobile"
+  "features": {
+   "eyebrow": "What's inside",
+   "title": "One platform. From estimate to invoice.",
+   "subtitle": "Start with the calculators today. Save results to projects, generate BOQ and quotations, and send GST-ready invoices — all under one roof.",
+   "cards": {
+    "calculators": {
+     "title": "Calculators",
+     "body": "Five field-tested calculators for concrete, brick, paint, tile, and steel. Enter your job, get exact material quantities."
     },
-    "features": {
-      "eyebrow": "What's inside",
-      "title": "One platform. From estimate to invoice.",
-      "subtitle": "Start with the calculators today. Save results to projects, generate BOQ and quotations, and send GST-ready invoices — all under one roof.",
-      "cards": {
-        "calculators": { "title": "Calculators", "body": "Five field-tested calculators for concrete, brick, paint, tile, and steel. Enter your job, get exact material quantities." },
-        "projects": { "title": "Projects & BOQ", "body": "Save every calculation to a project. Auto-build a bill of quantities with running totals." },
-        "quotations": { "title": "Quotations & invoices", "body": "Professional PDFs with your logo, client details, GST breakdown, and Indian bank details." }
-      }
+    "projects": {
+     "title": "Projects & BOQ",
+     "body": "Save every calculation to a project. Auto-build a bill of quantities with running totals."
     },
-    "howItWorks": {
-      "eyebrow": "How it works",
-      "title": "Three steps, no spreadsheet.",
-      "steps": {
-        "pick": { "title": "Pick a calculator", "body": "Choose from concrete, brick, paint, tile, or steel. Each one ships with the presets you actually use on site." },
-        "enter": { "title": "Enter your job", "body": "Wall dimensions, mix ratios, wastage — sliders for the shape you want, direct entry for the exact number." },
-        "order": { "title": "Get your order list", "body": "Bricks in pieces, cement in 50 kg bags, sand in cubic feet. Ready to hand to your supplier." }
-      }
-    },
-    "indian": {
-      "eyebrow": "Built for Indian sites",
-      "title": "In Indian units, for how Indian contractors buy.",
-      "body1": "Every calculator ships with the presets you use on site — IS 1077 modular brick, traditional 230×110×75 mm brick, AAC blocks. Quantities come out in the units you'll order in, so what the calculator says is what you tell the supplier.",
-      "body2": "No conversion tables. No \"close enough\". No US-import terminology that doesn't match how the job actually runs.",
-      "bullets": [
-        "Modular, traditional, and AAC block presets",
-        "Cement in 50 kg bags, sand in cubic feet",
-        "Metric or imperial input, per field",
-        "Wastage percentages contractors actually use",
-        "GST-ready outputs (coming with quotations)",
-        "IS 1077 modular brick as a first-class default"
-      ]
-    },
-    "closing": {
-      "title": "Start with the brick calculator.",
-      "body": "No account needed. Enter your wall dimensions and get an exact material order — bricks, cement bags, sand — in under a minute.",
-      "cta": "Open brick calculator"
+    "quotations": {
+     "title": "Quotations & invoices",
+     "body": "Professional PDFs with your logo, client details, GST breakdown, and Indian bank details."
     }
+   }
   },
-  "breadcrumbs": {
-    "home": "Home",
-    "calculators": "Calculators",
-    "about": "About",
-    "contact": "Contact",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
-  },
-  "about": {
-    "meta": {
-      "title": "About — Free Construction Calculators & Contractor Software",
-      "description": "About iHateConstruction — free construction calculators for cement, concrete, brick, steel, paint, and tile, plus BOQ, quotation, and GST invoicing built for Indian contractors."
+  "howItWorks": {
+   "eyebrow": "How it works",
+   "title": "Three steps, no spreadsheet.",
+   "steps": {
+    "pick": {
+     "title": "Pick a calculator",
+     "body": "Choose from concrete, brick, paint, tile, or steel. Each one ships with the presets you actually use on site."
     },
-    "title": "About iHateConstruction",
-    "problem": {
-      "heading": "The Problem",
-      "body": "Construction in India is a ₹13 lakh crore industry — and most contractors still estimate costs on paper, send quotations via WhatsApp screenshots, and track payments in a notebook. The tools that exist are either built for American general contractors (Procore, Buildertrend) or too complex for a 5-person team doing residential work.",
-      "intro": "We've watched contractors struggle with:",
-      "items": [
-        "Guessing material quantities → over-ordering by 15-20% (₹ straight into the drain)",
-        "Quoting from memory → missing items, underpricing, awkward conversations later",
-        "Tracking payments on paper → \"Did they pay the second installment or not?\"",
-        "Sharing documents → WhatsApp forwards of blurry PDFs made in MS Paint"
-      ]
+    "enter": {
+     "title": "Enter your job",
+     "body": "Wall dimensions, mix ratios, wastage — sliders for the shape you want, direct entry for the exact number."
     },
-    "solution": {
-      "heading": "The Solution",
-      "body": "iHateConstruction gives Indian contractors a single place to estimate, quote, invoice, and get paid — without the enterprise bloat or the $300/month price tag.",
-      "cards": {
-        "calculators": { "title": "Calculators", "body": "Concrete, steel, brick, paint, tile — with Indian standards (IS codes) baked in." },
-        "boq": { "title": "BOQ & Quotations", "body": "Generate professional Bills of Quantities and client-facing quotations in seconds." },
-        "invoices": { "title": "Invoices & Payments", "body": "Track who owes what. Share UPI QR for instant collection. Record payments with screenshot OCR." },
-        "pdf": { "title": "PDF Export", "body": "Professional A4 documents your clients actually respect — not WhatsApp forwards." }
-      }
-    },
-    "audience": {
-      "heading": "Who It's For",
-      "items": [
-        { "bold": "Independent contractors", "rest": " doing residential and small commercial projects." },
-        { "bold": "Small construction firms", "rest": " (2-15 people) who need structure without overhead." },
-        { "bold": "Civil engineers", "rest": " who estimate on the side and want accurate, repeatable calculations." },
-        { "bold": "Interior designers", "rest": " who need material estimation for fit-out projects." }
-      ]
-    },
-    "india": {
-      "heading": "India First",
-      "intro": "Every decision we make starts with the Indian contractor:",
-      "items": [
-        "Calculations use IS codes and Indian standard practices (not ASTM or Eurocode).",
-        "Material units match what you buy at the local godown — bags, CFT, running feet.",
-        "Currency is INR. GST rates are built in. Tax region matters.",
-        "Payment via UPI QR — because that's how India pays in 2026.",
-        "Works on a ₹10,000 phone over 4G. No desktop-only workflows."
-      ]
-    },
-    "contact": {
-      "heading": "Contact",
-      "body1": "Have feedback, found a bug, or want to partner? Reach us at",
-      "email": "huzaif89@hotmail.com",
-      "body2": "or use the",
-      "link": "contact form"
+    "order": {
+     "title": "Get your order list",
+     "body": "Bricks in pieces, cement in 50 kg bags, sand in cubic feet. Ready to hand to your supplier."
     }
+   }
   },
-  "privacy": {
-    "meta": {
-      "title": "Privacy Policy — How We Handle Your Data",
-      "description": "iHateConstruction privacy policy. Learn what personal data we collect, how we use it, where it's stored, and your rights over your account, projects, calculations, and business data."
-    },
-    "title": "Privacy Policy",
-    "updated": "Last updated: 5 August 2026",
-    "s1": { "heading": "1. Information We Collect", "intro": "When you use iHateConstruction, we collect:", "items": [
-      { "bold": "Account information:", "rest": " Name, email address, and authentication credentials (managed via Clerk)." },
-      { "bold": "Project data:", "rest": " Projects, calculations, materials, BOQs, quotations, and invoices you create." },
-      { "bold": "Usage data:", "rest": " Pages visited, features used, browser type, device info, and IP address." },
-      { "bold": "Payment information:", "rest": " UPI IDs and QR codes you voluntarily upload. We do not process or store credit card numbers." }
-    ]},
-    "s2": { "heading": "2. How We Use Your Data", "items": [
-      "Provide, maintain, and improve the service.",
-      "Generate documents (BOQs, quotations, invoices, PDFs) as you request.",
-      "Send transactional emails (account verification, password resets).",
-      "Analyze usage patterns to improve features (aggregated, never sold)."
-    ]},
-    "s3": { "heading": "3. Data Storage & Security", "body": "Your data is stored in encrypted databases hosted on secure cloud infrastructure. We use TLS for all data in transit. Authentication is handled by Clerk, a SOC 2 Type II compliant provider." },
-    "s4": { "heading": "4. Data Sharing", "intro": "We do not sell your data. We share data only with:", "items": [
-      { "bold": "Service providers:", "rest": " Hosting (Vercel), authentication (Clerk), database (managed PostgreSQL) — only what's necessary for operations." },
-      { "bold": "Your clients:", "rest": " When you generate a public quotation link, the quotation details are visible to anyone with the link." },
-      { "bold": "Legal requirements:", "rest": " If required by Indian law or valid court order." }
-    ]},
-    "s5": { "heading": "5. Your Rights", "items": [
-      { "bold": "Access:", "rest": " View all data associated with your account." },
-      { "bold": "Export:", "rest": " Download your projects, calculations, and documents." },
-      { "bold": "Deletion:", "rest": " Request complete deletion of your account and all associated data." },
-      { "bold": "Correction:", "rest": " Update inaccurate information at any time." }
-    ]},
-    "s6": { "heading": "6. Cookies", "body": "We use essential cookies for authentication and session management. No advertising cookies. No third-party tracking pixels." },
-    "s7": { "heading": "7. Data Retention", "body": "Your data is retained as long as your account is active. Deleted accounts are purged within 30 days. Audit logs are retained for 1 year for security purposes." },
-    "s8": { "heading": "8. Children", "body": "iHateConstruction is not intended for users under 18. We do not knowingly collect data from minors." },
-    "s9": { "heading": "9. Changes", "body": "We may update this policy. Material changes will be notified via email or in-app notice at least 14 days before taking effect." },
-    "s10": { "heading": "10. Contact", "body": "For privacy-related queries:", "email": "huzaif89@hotmail.com" }
+  "indian": {
+   "eyebrow": "Built for Indian sites",
+   "title": "In Indian units, for how Indian contractors buy.",
+   "body1": "Every calculator ships with the presets you use on site — IS 1077 modular brick, traditional 230×110×75 mm brick, AAC blocks. Quantities come out in the units you'll order in, so what the calculator says is what you tell the supplier.",
+   "body2": "No conversion tables. No \"close enough\". No US-import terminology that doesn't match how the job actually runs.",
+   "bullets": [
+    "Modular, traditional, and AAC block presets",
+    "Cement in 50 kg bags, sand in cubic feet",
+    "Metric or imperial input, per field",
+    "Wastage percentages contractors actually use",
+    "GST-ready outputs (coming with quotations)",
+    "IS 1077 modular brick as a first-class default"
+   ]
   },
-  "terms": {
-    "meta": {
-      "title": "Terms of Service — Rules for Using iHateConstruction",
-      "description": "iHateConstruction terms of service. The rules for using our free construction calculators, project management, BOQ builder, quotation and invoice tools, and payment collection features."
-    },
-    "title": "Terms of Service",
-    "updated": "Last updated: 5 August 2026",
-    "s1": { "heading": "1. Acceptance", "body": "By accessing or using iHateConstruction (\"the Service\"), you agree to be bound by these Terms. If you do not agree, do not use the Service." },
-    "s2": { "heading": "2. Description of Service", "intro": "iHateConstruction is a construction management and estimating platform that provides:", "items": [
-      "Construction material calculators (concrete, steel, brick, paint, tile).",
-      "Project management with saved calculations and material pricing.",
-      "Bill of Quantities (BOQ) generation.",
-      "Quotation and invoice creation with PDF export.",
-      "Payment collection tools (UPI QR, payment links)."
-    ]},
-    "s3": { "heading": "3. User Accounts", "items": [
-      "You must provide accurate information when creating an account.",
-      "You are responsible for all activity under your account.",
-      "You must not share your credentials or let others access your account.",
-      "We may suspend or terminate accounts that violate these Terms."
-    ]},
-    "s4": { "heading": "4. Your Data", "items": [
-      "You retain ownership of all content you create (projects, calculations, documents).",
-      "You grant us a limited license to store, process, and display your data solely to provide the Service.",
-      "We do not claim ownership of your business data."
-    ]},
-    "s5": { "heading": "5. Acceptable Use", "intro": "You agree not to:", "items": [
-      "Use the Service for illegal purposes.",
-      "Upload malicious content or attempt to breach security.",
-      "Scrape, crawl, or bulk-download data from the Service.",
-      "Impersonate another person or entity.",
-      "Use the calculators for safety-critical engineering decisions without independent professional verification."
-    ]},
-    "s6": { "heading": "6. Calculator Disclaimer", "boldLabel": "Important:", "body": " The calculators provide estimates based on standard formulas and regional standards. They are tools for estimation, not substitutes for professional structural engineering. Always verify quantities with a qualified engineer before procurement or construction." },
-    "s7": { "heading": "7. Payment Features", "items": [
-      "Payment collection features (UPI QR, payment links) facilitate communication between you and your clients.",
-      "We are not a payment processor. Money flows directly between you and your client.",
-      "We are not liable for payment disputes, failed transactions, or incorrect amounts.",
-      "Where we integrate payment gateways (Razorpay), their terms also apply."
-    ]},
-    "s8": { "heading": "8. Availability", "body": "We aim for high availability but do not guarantee uninterrupted service. Scheduled maintenance will be announced in advance. We are not liable for losses due to downtime." },
-    "s9": { "heading": "9. Limitation of Liability", "intro": "To the maximum extent permitted by Indian law:", "items": [
-      "The Service is provided \"as is\" without warranties of any kind.",
-      "We are not liable for indirect, incidental, or consequential damages.",
-      "Our total liability is limited to the amount you paid us in the 12 months preceding the claim (or ₹5,000, whichever is higher)."
-    ]},
-    "s10": { "heading": "10. Intellectual Property", "items": [
-      "The Service, its design, code, and branding are our intellectual property.",
-      "You may not copy, modify, or redistribute any part of the Service.",
-      "The name \"iHateConstruction\" and associated marks are our trademarks."
-    ]},
-    "s11": { "heading": "11. Termination", "items": [
-      "You may delete your account at any time.",
-      "We may terminate your access for Terms violations with notice.",
-      "On termination, you have 30 days to export your data before it is deleted."
-    ]},
-    "s12": { "heading": "12. Governing Law", "body": "These Terms are governed by the laws of India. Disputes shall be subject to the exclusive jurisdiction of courts in Bengaluru, Karnataka." },
-    "s13": { "heading": "13. Changes", "body": "We may modify these Terms. Material changes will be communicated 14 days in advance. Continued use after changes constitutes acceptance." },
-    "s14": { "heading": "14. Contact", "body": "Questions about these Terms:", "email": "legal@ihateconstruction.co" }
+  "closing": {
+   "title": "Start with the brick calculator.",
+   "body": "No account needed. Enter your wall dimensions and get an exact material order — bricks, cement bags, sand — in under a minute.",
+   "cta": "Open brick calculator"
+  }
+ },
+ "breadcrumbs": {
+  "home": "Home",
+  "calculators": "Calculators",
+  "about": "About",
+  "contact": "Contact",
+  "privacy": "Privacy Policy",
+  "terms": "Terms of Service"
+ },
+ "about": {
+  "meta": {
+   "title": "About — Free Construction Calculators & Contractor Software",
+   "description": "About iHateConstruction — free construction calculators for cement, concrete, brick, steel, paint, and tile, plus BOQ, quotation, and GST invoicing built for Indian contractors."
   },
-  "contact": {
-    "meta": {
-      "title": "Contact — Talk to the iHateConstruction Team",
-      "description": "Contact iHateConstruction about bugs, features, calculator requests, partnerships, or general questions. One of us reads every message and usually replies within two business days."
-    },
-    "eyebrow": "Company",
-    "title": "Contact us",
-    "subtitle": "Write to us about a bug, a calculator you want built, a partnership, or anything else. One of us reads every message and usually replies within two business days.",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "subject": "Subject",
-      "message": "Message",
-      "website": "Website",
-      "send": "Send",
-      "sending": "Submitting…",
-      "successTitle": "Message sent",
-      "successBody": "Thanks — we've got it.",
-      "successNote": "One of us will read your note and reply to the email you gave us, usually within two business days.",
-      "sendAnother": "Send another",
-      "subjects": {
-        "general": "General question",
-        "bug": "Bug report",
-        "feature": "Feature request",
-        "partnership": "Partnership"
-      },
-      "errors": {
-        "nameRequired": "Please enter your name.",
-        "nameShort": "Name must be at least 2 characters.",
-        "nameLong": "Name must be 80 characters or fewer.",
-        "emailRequired": "Please enter your email.",
-        "emailInvalid": "That doesn't look like a valid email.",
-        "messageRequired": "Please enter a message.",
-        "messageShort": "Message must be at least 10 characters.",
-        "messageLong": "Message must be {max} characters or fewer.",
-        "fixHighlighted": "Fix the highlighted fields to continue."
-      }
-    }
+  "title": "About iHateConstruction",
+  "problem": {
+   "heading": "The Problem",
+   "body": "Construction in India is a ₹13 lakh crore industry — and most contractors still estimate costs on paper, send quotations via WhatsApp screenshots, and track payments in a notebook. The tools that exist are either built for American general contractors (Procore, Buildertrend) or too complex for a 5-person team doing residential work.",
+   "intro": "We've watched contractors struggle with:",
+   "items": [
+    "Guessing material quantities → over-ordering by 15-20% (₹ straight into the drain)",
+    "Quoting from memory → missing items, underpricing, awkward conversations later",
+    "Tracking payments on paper → \"Did they pay the second installment or not?\"",
+    "Sharing documents → WhatsApp forwards of blurry PDFs made in MS Paint"
+   ]
   },
-  "calculators": {
-    "index": {
-      "meta": {
-        "title": "Free Construction Calculators — Cement, Concrete, Brick & Rebar",
-        "description": "Seven free construction calculators — cement, concrete, brick, steel, paint, tile, and rebar. Enter your job and get an exact material order in cubic yards, cubic feet, or metric units. Bags of cement for a slab, bricks for a wall, steel for reinforcement, litres of paint for a room, tiles for a floor."
-      },
-      "eyebrow": "Tools",
-      "title": "Free construction calculators",
-      "subtitle": "Seven calculators for the material orders you actually place — cement, concrete, brick, steel, paint, tile, and rebar. Enter your dimensions, get bags, bricks, kilograms, or litres. Works in cubic yards, cubic feet, and cubic metres.",
-      "missing": "Missing a calculator you use daily?",
-      "contactSoon": "Contact form coming soon."
-    },
-    "common": {
-      "eyebrow": "Calculator",
-      "faq": "Frequently asked questions",
-      "other": "Other calculators",
-      "how": "How the calculation works",
-      "customParams": "Custom parameters",
-      "fillForm": "Fill the form and press Calculate to see your material list.",
-      "fillFormSteel": "Fill the form and press Calculate to see the steel weight.",
-      "fillFormPaint": "Fill the form and press Calculate to see your paint quote.",
-      "fillFormTile": "Fill the form and press Calculate to see your tile quote."
-    },
-    "cement": {
-      "meta": { "title": "Cement Calculator — Slab, Post Hole & Cubic Yards", "description": "Free cement calculator. Work out how many bags of cement you need for a concrete slab, post hole, wall, or any volume — in cubic yards, cubic feet, or cubic metres. Supports 94 lb Portland, 50 kg, 40 kg, 60 lb, and 80 lb bags, sand and cement mixes (1:3, 1:4, 1:6), and standard slab mixes (M15, M20, M25)." },
-      "crumb": "Cement Calculator",
-      "title": "Cement Calculator",
-      "subtitle": "Work out exactly how many bags of cement you need — for a concrete slab, a set of post holes, or any wet volume in cubic yards, cubic feet, or cubic metres. Supports 94 lb Portland cement bags, 50 kg Indian bags, 40 kg, 60 lb, and 80 lb bags, plus sand-and-cement mixes (1:3, 1:4, 1:6) and standard concrete mixes (M15, M20, M25).",
-      "handles": "What this cement calculator handles",
-      "cards": {
-        "slab": { "title": "Cement for a slab", "body": "Enter length, width, and thickness in feet and inches. The calculator returns bags of cement for M15, M20, or M25 mix — the three grades used for driveways, garage floors, and house slabs." },
-        "post": { "title": "Post hole cement", "body": "Fence posts, mailboxes, sign posts. Enter hole diameter, depth, and how many posts you're setting; the tool sizes a 1:3 sand-and-cement fill for the full run." },
-        "cuyd": { "title": "Cubic yards of cement", "body": "Already know your volume in cubic yards? Switch to Free volume mode. Cubic metres and cubic feet also supported — the calculator converts between all three." },
-        "sc": { "title": "Sand and cement", "body": "Pick the 1:4 plaster, 1:6 brickwork, or 1:3 rich mortar preset when you're only mixing cement with sand — no aggregate. Output shows both bags of cement and cubic feet of sand." },
-        "portland": { "title": "94 lb Portland cement bags", "body": "US contractors buying Type I/II Portland cement in 94 lb bags: pick that bag size and the total rounds up to whole bags automatically." },
-        "indian": { "title": "Indian 50 kg bags", "body": "For contractors in India: 50 kg OPC / PPC bags, IS 456 mix ratios, and results in cubic feet — the units your godown actually quotes." }
-      },
-      "form": {
-        "pouring": "What are you pouring?",
-        "modes": { "slab": "Concrete slab", "post": "Post hole", "free": "Free volume" },
-        "lengthFt": "Length (ft)",
-        "widthFt": "Width (ft)",
-        "thicknessIn": "Thickness (in)",
-        "diameterIn": "Hole diameter (in)",
-        "depthFt": "Depth (ft)",
-        "posts": "Number of posts",
-        "wetVolume": "Wet volume",
-        "unit": "Unit",
-        "units": { "yd3": "Cubic yards", "m3": "Cubic metres", "ft3": "Cubic feet" },
-        "ratio": "Mix ratio",
-        "bagSize": "Cement bag size",
-        "wastage": "Wastage (%)",
-        "resultAria": "Cement calculator result",
-        "youNeed": "You'll need",
-        "bags": "bags of cement (",
-        "cementKg": "Cement (kg)",
-        "cementLb": "Cement (lb)",
-        "wetVol": "Wet volume:",
-        "dry": "· Dry volume factor 1.54 · Wastage",
-        "mixLabel": "Mix:",
-        "empty": "Enter your dimensions to see cement bags and material quantities."
-      }
-    },
-    "concrete": {
-      "meta": { "title": "Concrete Calculator — Slab, Beam, Column & Footing", "description": "Free concrete calculator. Enter your slab, beam, column, or footing size and get cement bags, sand, and coarse aggregate — for M5 to M25 grades using the standard IS 456 mix ratios. Works in cubic yards, cubic feet, and cubic metres." },
-      "crumb": "Concrete Calculator",
-      "title": "Concrete Calculator — Slab, Beam, Column & Footing",
-      "subtitle": "Enter the wet volume of concrete you need to pour, pick a grade, and we'll return cement bags, sand, and coarse aggregate — matched to the IS 456 mix ratio for that grade.",
-      "form": {
-        "grade": "Concrete grade",
-        "customGrade": "Customise this grade",
-        "volume": "Concrete volume",
-        "wetVol": "Wet volume",
-        "volAria": "Concrete volume",
-        "volHelp": "Enter the finished (wet) volume of concrete you need to pour.",
-        "outputs": "Output units",
-        "ratio": "Mix ratio (c : s : a)",
-        "wastage": "Wastage",
-        "wastageAria": "Wastage percent",
-        "dtw": "Dry-to-wet factor",
-        "dtwAria": "Dry-to-wet factor",
-        "density": "Cement density",
-        "densityAria": "Cement bulk density",
-        "bag": "Cement bag weight",
-        "bagAria": "Cement bag weight",
-        "errors": {
-          "volMin": "Enter a volume greater than 0.",
-          "volMax": "Volume must be 10,000 or less.",
-          "ratioFmt": "Use the format \"a:b:c\" — e.g. \"1:1.5:3\".",
-          "ratioPos": "Every part of the ratio must be greater than 0.",
-          "wastageRange": "Enter a number between 0 and 50.",
-          "wastageMax": "Wastage must be 50% or less.",
-          "dtwMin": "Dry-to-wet factor must be greater than 1.",
-          "dtwMax": "Dry-to-wet factor above 2 is unrealistic.",
-          "density": "Enter a density greater than 0.",
-          "bag": "Enter a bag weight greater than 0."
-        }
-      }
-    },
-    "brick": {
-      "meta": { "title": "Brick Calculator — Wall, Patio, Paver & Fire Pit", "description": "Free brick calculator. Work out the exact number of bricks and the mortar (cement + sand) you need for any wall, patio, paver run, fire pit, retaining wall, or house. Supports red brick, fire brick, concrete brick, modular, traditional, and AAC block. Inputs by square feet or wall dimensions." },
-      "crumb": "Brick Calculator",
-      "title": "Brick Calculator — Wall, Patio, Paver & Fire Pit",
-      "subtitle": "Enter your wall's dimensions, a total square footage, or the volume you need to fill. We'll return the brick count, mortar volume, cement bags, and sand — matched to the brick you actually use, whether that's red clay brick, fire brick, concrete brick, modular, or an AAC block.",
-      "form": {
-        "mode": "Input mode",
-        "modes": { "dims": "By wall dimensions", "vol": "By total volume" },
-        "standard": "Brick standard",
-        "customStd": "Customise this standard",
-        "wallDims": "Wall dimensions",
-        "openings": "Openings (doors, windows)",
-        "addOpening": "+ Add opening",
-        "noOpenings": "No openings — the whole wall counts.",
-        "labelPh": "Label (optional)",
-        "removeOpAria": "Remove opening {i}",
-        "defaultDoor": "Door",
-        "openingN": "Opening {n}",
-        "totalVol": "Total volume",
-        "volAria": "Total volume",
-        "mortarThickness": "Mortar thickness",
-        "mortarThicknessAria": "Mortar joint thickness",
-        "mortarRatio": "Mortar ratio (cement : sand)",
-        "brickWastage": "Brick wastage %",
-        "brickWastageAria": "Brick wastage percent",
-        "mortarWastage": "Mortar wastage %",
-        "mortarWastageAria": "Mortar wastage percent",
-        "dtw": "Dry-to-wet factor",
-        "dtwAria": "Mortar dry-to-wet bulking factor",
-        "brickSize": "Brick size",
-        "customBrickLen": "Custom brick length",
-        "customBrickWid": "Custom brick width",
-        "customBrickHt": "Custom brick height",
-        "errors": {
-          "lenMin": "Enter a length greater than 0.",
-          "lenMax": "Length must be 100 m or less.",
-          "htMin": "Enter a height greater than 0.",
-          "htMax": "Height must be 20 m or less.",
-          "thickMin": "Enter a thickness greater than 0.",
-          "thickTooThin": "Thickness must be at least 50 mm.",
-          "thickTooThick": "Thickness must be 500 mm or less.",
-          "widMin": "Enter a width greater than 0.",
-          "opWider": "Opening is wider than the wall.",
-          "opTaller": "Opening is taller than the wall.",
-          "opExceeds": "Total openings area exceeds the wall area.",
-          "volMin": "Enter a volume greater than 0."
-        }
-      }
-    },
-    "steel": {
-      "meta": { "title": "Steel Calculator — TMT Bar Weight & Reinforcement", "description": "Free steel calculator. Enter your bar schedule or concrete volume and get the total weight of reinforcement steel in kg — for slabs, beams, columns, footings, and staircases. Uses D²/162, Fe 500 / Fe 550 TMT, IS 1786." },
-      "crumb": "Steel Calculator",
-      "title": "Steel Calculator — TMT Bar Weight & Reinforcement",
-      "subtitle": "Two ways in — enter your bar schedule for an accurate weight, or enter concrete volume + member type for a quick thumb-rule estimate. Both use IS 1786 defaults; both are fully overridable.",
-      "form": {
-        "mode": "Input mode",
-        "modes": { "schedule": "By bar schedule", "thumb": "By thumb rule" },
-        "modeHint1": "Accurate. Use when you have the drawing.",
-        "modeHint2": "Rough (±20%). Use for pricing estimates only.",
-        "standard": "Steel standard",
-        "customStd": "Customise this standard",
-        "schedule": "Bar schedule",
-        "addBar": "+ Add bar",
-        "barPh": "Bar {i}",
-        "removeBarAria": "Remove bar {i}",
-        "diameter": "Diameter",
-        "count": "Count",
-        "diaAria": "Bar {i} diameter (mm)",
-        "lenAria": "Bar {i} length",
-        "countAria": "Bar {i} count",
-        "diaOption": "{d} mm",
-        "member": "Member + volume",
-        "memberType": "Member type",
-        "concreteVol": "Concrete volume",
-        "volAria": "Concrete volume",
-        "defaultRate": "Default rate: {value} kg/cum for {member}. Turn on Customise to override.",
-        "wastage": "Wastage",
-        "wastageAria": "Wastage percent",
-        "kgPerCum": "kg / cum",
-        "kgPerCumAria": "Kilograms per cubic metre of concrete",
-        "barLabels": {
-          "dia": "{diameter}mm bar",
-          "mainBottom": "Main bars — bottom",
-          "distribution": "Distribution bars",
-          "generic": "Bar {n}"
-        },
-        "errors": {
-          "diaMin": "Enter a diameter greater than 0.",
-          "diaMax": "Diameter must be 100 mm or less.",
-          "lenMin": "Enter a length greater than 0.",
-          "lenMax": "Length must be 50 m or less.",
-          "countMin": "At least 1 bar.",
-          "volMin": "Enter a volume greater than 0."
-        }
-      }
-    },
-    "paint": {
-      "meta": { "title": "Paint Calculator — Interior, Exterior & Room", "description": "Free paint calculator. Enter room dimensions or wall area and get the exact litres of paint you need for interior emulsion, exterior emulsion, enamel, primer, and putty. Handles multiple coats, ceilings, doors, and windows." },
-      "crumb": "Paint Calculator",
-      "title": "Paint Calculator — Litres for Interior & Exterior Walls",
-      "subtitle": "Enter a room or a total area, pick your paint products, and we'll return the litres you need — per layer and in total. Handles primer under emulsion, multiple coats, and per-layer coverage overrides.",
-      "form": {
-        "mode": "Input mode",
-        "modes": { "room": "By room dimensions", "area": "By total area" },
-        "roomDims": "Room dimensions",
-        "includeCeiling": "Include ceiling",
-        "openings": "Openings (doors, windows)",
-        "addOpening": "+ Add opening",
-        "noOpenings": "No openings — the whole wall counts.",
-        "labelPh": "Label (optional)",
-        "totalArea": "Total area",
-        "area": "Area",
-        "areaAria": "Total paintable area",
-        "layers": "Paint layers",
-        "addLayer": "+ Add layer",
-        "layersHelp": "One row per product application — e.g. one primer + one finish for a fresh wall.",
-        "layerN": "Layer {i}",
-        "type": "Type",
-        "coats": "Coats",
-        "coatsAria": "Layer {i} coats",
-        "customLayer": "Customise this layer",
-        "kgPerSqm": "kg / sqm",
-        "kgPerSqmAria": "Layer {i} kg per sqm",
-        "coverage": "Coverage / L",
-        "coverageAria": "Layer {i} coverage per litre",
-        "wastage": "Wastage",
-        "wastageAria": "Layer {i} wastage percent",
-        "defaultDoor": "Door",
-        "openingN": "Opening {n}",
-        "errors": {
-          "lenMin": "Enter a length greater than 0.",
-          "lenMax": "Length must be 100 m or less.",
-          "widMin": "Enter a width greater than 0.",
-          "widMax": "Width must be 100 m or less.",
-          "htMin": "Enter a height greater than 0.",
-          "htMax": "Height must be 20 m or less.",
-          "opWider": "Opening is wider than the longest wall.",
-          "opTaller": "Opening is taller than the wall.",
-          "opExceeds": "Total openings area exceeds the wall area.",
-          "areaMin": "Enter an area greater than 0.",
-          "coats": "At least 1 coat.",
-          "kgPerSqm": "Enter a kg/sqm greater than 0.",
-          "coverage": "Enter a coverage greater than 0."
-        }
-      }
-    },
-    "tile": {
-      "meta": { "title": "Tile Calculator — Floor, Wall, Adhesive & Grout", "description": "Free tile calculator. Enter floor or wall area, pick a tile size, and get the exact tile count, adhesive quantity, and grout volume. Supports vitrified, ceramic, and traditional mortar-bed installation with wastage." },
-      "crumb": "Tile Calculator",
-      "title": "Tile Calculator — Floor, Wall, Adhesive & Grout",
-      "subtitle": "Enter the surface, the tile size, and pick a preset — we return tile count with wastage plus adhesive and grout. Handles both modern thin-set and traditional 20 mm mortar bed.",
-      "form": {
-        "surface": "Surface",
-        "modes": { "floor": "Floor", "wall": "Wall" },
-        "floorDims": "Floor dimensions",
-        "wallDims": "Wall dimensions (width × height)",
-        "excluded": "Excluded areas (columns, drains, cutouts)",
-        "addEx": "+ Add exclusion",
-        "noEx": "No exclusions — the whole surface is tiled.",
-        "labelPh": "Label (optional)",
-        "cutoutN": "Cutout {n}",
-        "tileSize": "Tile size",
-        "standard": "Tile standard",
-        "wastage": "Wastage",
-        "method": "Method",
-        "methods": { "thinset": "Thin-set", "bed": "Mortar bed" },
-        "coveragePerKg": "Coverage/kg",
-        "bedThickness": "Bed thickness",
-        "mortarRatio": "Mortar ratio",
-        "groutWidth": "Grout width",
-        "groutDepth": "Grout depth",
-        "groutDepthHelp": "Defaults to tile thickness. Edit to override.",
-        "tileThickness": "Tile thickness",
-        "errors": {
-          "lenMin": "Enter a length greater than 0.",
-          "lenMax": "Length must be 500 m or less.",
-          "widMin": "Enter a width greater than 0.",
-          "widMax": "Width must be 500 m or less.",
-          "tileLen": "Enter a tile length greater than 0.",
-          "tileWid": "Enter a tile width greater than 0.",
-          "exLen": "Length must be greater than 0.",
-          "exWid": "Width must be greater than 0.",
-          "exAll": "Excluded areas add up to the whole surface. Reduce them.",
-          "coverage": "Coverage must be greater than 0.",
-          "thickness": "Thickness must be greater than 0.",
-          "ratio": "Format as a:b (e.g. 1:4)."
-        }
-      }
-    },
-    "rebar": {
-      "meta": {"title": "Rebar Calculator — Rebar for Slab, Footing & Wall (Length, Pieces & Weight)", "description": "Free rebar calculator for concrete slabs, footings, walls, and foundations. Enter length, width, rebar spacing, and edge cover to get rebar count, total rebar length, number of 12 m pieces, and rebar weight per square metre or square foot. D²/162 weight formula."},
-      "crumb": "Rebar Calculator",
-      "title": "Rebar Calculator — Slab, Footing, Wall & Foundation Reinforcement",
-      "subtitle": "Work out how much rebar you need for a concrete slab, footing, wall, or foundation. Enter the member size, the centre-to-centre rebar spacing, and the edge cover — get the number of bars each way, total rebar length, pieces of 12 m rebar, and weight per m² and ft².",
-      "form": {
-        "section1": "Member + dimensions",
-        "member": "Member type",
-        "memberHint": "Same grid math — only the suggested starting spacing changes.",
-        "dimHint": "Overall poured dimensions of the member (edge to edge), not the grid.",
-        "section2": "Reinforcement layout",
-        "spacing": "Rebar–rebar spacing (c/c)",
-        "spacingAria": "Centre-to-centre spacing between parallel rebars",
-        "edgeSpacing": "Edge cover",
-        "edgeAria": "Distance from the outermost bar to the member edge",
-        "section3": "Bar + ordering",
-        "barDiameter": "Bar diameter",
-        "barLength": "Single rebar length",
-        "barLengthAria": "Stock length of one rebar from the supplier",
-        "wastage": "Wastage",
-        "wastageAria": "Wastage percent for cutting, laps, and overlaps",
-        "lenAria": "Member length",
-        "widAria": "Member width",
-        "errors": {"lenMin": "Enter a length greater than 0.", "lenMax": "Length must be 200 m or less.", "widMin": "Enter a width greater than 0.", "widMax": "Width must be 200 m or less.", "spMin": "Enter a spacing greater than 0.", "spMax": "Spacing must be 2 m or less.", "edgeMin": "Edge cover must be 0 or more.", "edgeMax": "Edge cover must be less than half the member size.", "barLenMin": "Enter a rebar length greater than 0.", "barLenMax": "Rebar length must be 60 m or less.", "wastageRange": "Wastage should be between 0 and 20%."},
-        "examples": {"fill1": "Example: 6000 × 4000 mm slab, 150 mm c/c, 12 mm bars, 12 m stock."},
-        "placeholder": "Fill the form and press Calculate to see your rebar order."
-      },
-      "sizes": {
-        "heading": "Rebar sizes",
-        "note": "US bar sizes give the diameter in eighths of an inch up to #8; metric sizes use the nominal diameter in millimetres. TMT rebar in India is sold by nominal diameter — typically 8, 10, 12, 16, 20, 25, and 32 mm.",
-        "cols": {"imperial": "Imperial bar size", "metric": "Metric size", "diaIn": "Diameter (inch)", "diaMm": "Diameter (mm)"}
-      },
-      "article": {"toc": "On this page", "heading": "Everything you need to know about rebar"},
-      "faq": [{"q": "How much rebar do I need for a concrete slab?", "a": "Enter the slab length and width, the centre-to-centre spacing, and the edge cover. The calculator returns the bars in each direction, the total rebar length in metres, and the number of stock bars (12 m) to order. A 6 × 4 m slab at 150 mm c/c needs roughly 66 bars and about 306 m of rebar."}, {"q": "How do I calculate rebar for a slab in square feet?", "a": "Find the slab area in square feet, divide by the spacing on each side to get the bar lines, then multiply by the bar length. The calculator does this for you and also reports rebar weight per square foot — a typical single-layer residential mesh works out to roughly 1 kg per sq ft."}, {"q": "How do I calculate rebar weight?", "a": "Rebar weight = total length × weight per metre. For diameter D in millimetres, weight per metre ≈ D² / 162 kg/m (from π × (D/2)² × 7850 kg/cum). A 12 mm bar weighs about 0.89 kg/m; a 16 mm bar about 1.58 kg/m."}, {"q": "How many rebar pieces do I need for my project?", "a": "Divide the total rebar length by the stock bar length you buy (12 m for Indian TMT) and round up. The calculator does this automatically and shows the pieces count."}, {"q": "Do I need rebar in a footing or foundation?", "a": "Almost always yes. Footings and foundations carry the full building load and need reinforcement against bending and cracking. Typical guidance: 150–200 mm c/c with 12–16 mm bars in the top and bottom meshes. Confirm against your structural drawings."}, {"q": "Do I need rebar in a concrete wall?", "a": "It depends. Retaining and foundation walls almost always need vertical rebar plus horizontal distribution bars. Simple partition walls may only need light mesh. Set the member to \"wall\" and confirm with an engineer."}, {"q": "What is edge cover (edge-grid spacing)?", "a": "Edge cover is the distance from the outermost rebar line to the concrete edge — the concrete around the bars that protects them from water and corrosion. The calculator subtracts two edge covers (one per end) from each dimension to get the actual grid size."}, {"q": "What does rebar-per-square-metre tell me?", "a": "It is the total rebar weight divided by the member area — a quick density check for an estimate. A single-layer 150 mm c/c 12 mm mesh is about 11–12 kg per m²; a double mesh with 16 mm bars can reach 20–25 kg per m²."}]
-    }
-  },
-  "results": {
-    "brick": {
-      "bricksRequired": "Bricks required",
-      "beforeWastage": "{n} before {pct}% wastage",
-      "grossWall": "Gross wall area",
-      "openings": "Openings",
-      "netArea": "Net area",
-      "masonryVolume": "Masonry volume",
-      "paramsUsed": "Parameters used",
-      "preset": "Preset",
-      "brick": "Brick",
-      "joint": "Joint",
-      "mortarRatio": "Mortar ratio",
-      "brickWastage": "Brick wastage",
-      "mortarWastage": "Mortar wastage",
-      "mortar": "Mortar",
-      "cement": "Cement",
-      "sand": "Sand"
-    },
-    "concrete": {
-      "cementRequired": "Cement required",
-      "sand": "Sand",
-      "aggregate": "Aggregate",
-      "dryVolume": "Dry volume",
-      "wastageApplied": "Wastage applied",
-      "paramsUsed": "Parameters used",
-      "preset": "Preset",
-      "mixRatio": "Mix ratio",
-      "cementDensity": "Cement density",
-      "bagWeight": "Bag weight",
-      "dtw": "Dry-to-wet factor"
-    },
-    "paint": {
-      "totalRequired": "Total required",
-      "putty": "{n} {unit} putty",
-      "wallGross": "Wall gross",
-      "ceiling": "Ceiling",
-      "openings": "Openings",
-      "netPaintable": "Net paintable",
-      "byLayer": "By layer",
-      "coats": "coats",
-      "coat": "coat"
-    },
-    "steel": {
-      "total": "Total steel required",
-      "beforeWastage": "Before wastage",
-      "wastage": "Wastage",
-      "byBar": "By bar",
-      "genericBar": "Bar {n}"
-    },
-    "tile": {
-      "tilesToOrder": "Tiles to order",
-      "tiles": "tiles",
-      "beforeWastage": "{count} before + {pct}% wastage",
-      "grossArea": "Gross area",
-      "excluded": "Excluded",
-      "netTileable": "Net tileable",
-      "tileSize": "Tile size",
-      "thinset": "Thin-set adhesive",
-      "quantity": "Quantity",
-      "mortarBed": "Mortar bed ({thickness} {unit}, {ratio})",
-      "volumeWet": "Volume (wet)",
-      "cement": "Cement",
-      "sand": "Sand",
-      "grout": "Grout",
-      "volume": "Volume",
-      "estimatedWeight": "Estimated weight"
-    }
-  },
-  "projects": {
-    "title": "Projects",
-    "newProject": "New project",
-    "editProject": "Edit project",
-    "empty": "No projects yet. Create your first one to start saving calculations.",
-    "filters": { "active": "Active", "archived": "Archived", "all": "All" },
-    "archivedTag": "Archived",
-    "noClient": "No client",
-    "calc": "calc",
-    "material": "material",
-    "form": {
-      "name": "Project name",
-      "clientName": "Client name",
-      "currency": "Currency",
-      "currencyFixed": "Currency is fixed at creation. Create a new project to change it.",
-      "taxRegion": "Tax region",
-      "taxRegionFixed": "Tax region is fixed at creation.",
-      "location": "Location (optional)",
-      "address": "Address",
-      "city": "City",
-      "state": "State",
-      "pincode": "Pincode",
-      "country": "Country",
-      "notes": "Notes",
-      "create": "Create project"
-    },
-    "actions": {
-      "confirmDelete": "Delete project \"{name}\"? This cannot be undone.",
-      "unarchive": "Unarchive",
-      "archive": "Archive",
-      "delete": "Delete"
-    },
-    "materials": {
-      "title": "Materials",
-      "add": "Add material",
-      "empty": "No materials yet. Add prices for cement, sand, steel, and anything else you buy.",
-      "vendor": "Vendor: {vendor}",
-      "confirmDelete": "Delete this material? Existing quotations remain unaffected.",
-      "form": {
-        "suggestedFrom": "Suggested from \"{source}\"",
-        "aCalculation": " a calculation",
-        "needsHint": " · needs ≈ {qty}",
-        "enterPrice": ". Enter your price and save.",
-        "type": "Type",
-        "typeFixed": "Type is fixed after creation.",
-        "unit": "Unit",
-        "unitFixed": "Unit is fixed after creation.",
-        "brand": "Brand",
-        "unitPrice": "Unit price ({currency})",
-        "quantity": "Quantity ({unit})",
-        "quantityGeneric": "Quantity (unit)",
-        "qtyPh": "e.g. 12",
-        "pricePh": "380.00",
-        "total": "Total: {currency} {amount}",
-        "vendor": "Vendor",
-        "notes": "Notes"
-      },
-      "modal": {
-        "title": "Add Material",
-        "typeReq": "Type *",
-        "brand": "Brand (optional)",
-        "brandPh": "e.g. UltraTech, ACC",
-        "unitReq": "Unit *",
-        "priceReq": "Price per {unit} ({currency}) *",
-        "pricePh": "0.00",
-        "vendor": "Vendor (optional)",
-        "vendorPh": "e.g. Local supplier",
-        "adding": "Adding…",
-        "priceError": "Valid unit price required"
-      },
-      "fromCalc": {
-        "allImported": "Everything from this calculation is already in your materials.",
-        "createdMsg": "Added {n} material(s) with placeholder price ₹100",
-        "updatedMsg": "updated quantity on {n} existing material(s)",
-        "editPrices": ". Edit prices as needed.",
-        "title": "Materials from this calculation",
-        "help": "Click a chip to add it with a price, or import all missing with placeholder prices.",
-        "importing": "Importing…",
-        "allDone": "All imported",
-        "addAll": "Add all missing ({n})"
-      }
-    },
-    "calculations": {
-      "title": "Calculations",
-      "empty": "No calculations yet. Run a calculator and use \"Save to project\" to snapshot it here.",
-      "browse": "Browse calculators",
-      "ungrouped": "Ungrouped",
-      "openHint": "Open to edit or recompute →",
-      "confirmDelete": "Delete calculation \"{name}\"? This cannot be undone.",
-      "menu": "…",
-      "recompute": "Recompute",
-      "edit": {
-        "label": "Label",
-        "group": "Group",
-        "groupPh": "e.g. Ground floor, First floor",
-        "description": "Description"
-      },
-      "result": {
-        "empty": "No preview available for this calculator type."
-      },
-      "saveButton": {
-        "runFirst": "Run the calculator first",
-        "saveHint": "Save this run to a project",
-        "cta": "Save to project",
-        "modalTitle": "Save calculation",
-        "project": "Project",
-        "loadingProjects": "Loading projects…",
-        "noActive": "You have no active projects. ",
-        "createOne": "Create one",
-        "labelPh": "e.g. Ground floor bricks",
-        "group": "Group (optional)",
-        "groupPh": "e.g. Ground floor",
-        "save": "Save"
-      }
+  "solution": {
+   "heading": "The Solution",
+   "body": "iHateConstruction gives Indian contractors a single place to estimate, quote, invoice, and get paid — without the enterprise bloat or the $300/month price tag.",
+   "cards": {
+    "calculators": {
+     "title": "Calculators",
+     "body": "Concrete, steel, brick, paint, tile — with Indian standards (IS codes) baked in."
     },
     "boq": {
-      "title": "BOQ",
-      "generate": "Generate BOQ",
-      "generating": "Generating…",
-      "name": "BOQ Name",
-      "namePh": "e.g. \"BOQ v1 — as-designed\"",
-      "autoName": "Leave blank for auto-generated name",
-      "notes": "Notes",
-      "notesPh": "e.g. Excludes site preparation and boundary wall.",
-      "source": "Data Source",
-      "willGen": "BOQ will be generated from your project's {n} material(s) with their quantities and prices.",
-      "noMaterials": "No materials added yet. Add materials to your project before generating a BOQ.",
-      "alsoCalcs": "Also include saved calculations",
-      "alsoCalcsHelp": "Adds a separate section with material quantities derived from your calculator results.",
-      "pickCalcs": "Select which calculations to include (leave all unchecked for all):",
-      "confirmDelete": "Delete this BOQ? This cannot be undone.",
-      "generated": "Generated {date}",
-      "pdf": "PDF",
-      "ungrouped": "(Ungrouped)",
-      "cols": {
-        "material": "Material",
-        "qty": "Qty",
-        "unit": "Unit",
-        "pricePerUnit": "Price/unit",
-        "amount": "Amount"
-      },
-      "materialsSubtotal": "Materials Subtotal:",
-      "grandTotal": "Grand Total:",
-      "addMaterial": "+ Add Material",
-      "editor": {
-        "label": "Label",
-        "override": "Override Amount ({currency})",
-        "reason": "Reason",
-        "reasonPh": "e.g. Bulk discount from vendor for full order",
-        "save": "Save override"
-      }
+     "title": "BOQ & Quotations",
+     "body": "Generate professional Bills of Quantities and client-facing quotations in seconds."
     },
-    "invoice": {
-      "title": "Invoices",
-      "new": "New Invoice",
-      "confirmDelete": "Delete this invoice? This cannot be undone.",
-      "generate": "Generate Invoice",
-      "generating": "Generating…",
-      "sourceQuotation": "Source Quotation",
-      "grandTotal": "Grand total: {total}",
-      "name": "Invoice Name (optional)",
-      "namePh": "Auto-generated from quotation name",
-      "due": "Due Date (optional)",
-      "notes": "Notes (optional)",
-      "amountDue": "Amount Due",
-      "amountPaid": "Amount Paid",
-      "remaining": "Remaining",
-      "recordPayment": "Record Payment",
-      "amount": "Amount",
-      "amountPh": "0.00",
-      "paymentNotes": "Notes (optional)",
-      "paymentRefPh": "Payment reference…",
-      "savePayment": "Save Payment",
-      "paymentNotesTitle": "Payment Notes",
-      "notesLabel": "Notes",
-      "createdUpdated": "Created {created} · Updated {updated}",
-      "paid": " · Paid {date}"
+    "invoices": {
+     "title": "Invoices & Payments",
+     "body": "Track who owes what. Share UPI QR for instant collection. Record payments with screenshot OCR."
     },
-    "quotation": {
-      "title": "Quotations",
-      "new": "New Quotation",
-      "generate": "Generate Quotation",
-      "generating": "Generating…",
-      "confirmDelete": "Delete this quotation? This cannot be undone.",
-      "selectBoq": "Select a BOQ",
-      "sourceBoqReq": "Source BOQ *",
-      "clientDetails": "Client Details (optional)",
-      "name": "Name",
-      "namePh": "Client name",
-      "email": "Email",
-      "emailPh": "client@example.com",
-      "phone": "Phone",
-      "phonePh": "+91 98765 43210",
-      "pricing": "Pricing",
-      "markup": "Markup %",
-      "discount": "Discount %",
-      "tax": "Tax % (GST)",
-      "materialsSubtotal": "Materials subtotal",
-      "markupLine": "+ Markup ({pct}%)",
-      "discountLine": "- Discount ({pct}%)",
-      "taxLine": "+ Tax ({pct}%)",
-      "grandTotal": "Grand Total",
-      "quoteName": "Quotation Name (optional)",
-      "quoteNamePh": "Auto-generated if left blank",
-      "validUntil": "Valid Until (optional)",
-      "internalNotesPh": "Internal notes",
-      "termsOpt": "Terms & Conditions (optional)",
-      "termsPh": "Payment terms, validity, etc.",
-      "noClient": "No client",
-      "validSuffix": " · Valid until {date}",
-      "created": "Created {date}",
-      "sent": " · Sent {date}",
-      "markSent": "Mark as Sent",
-      "markAccepted": "Mark Accepted",
-      "markRejected": "Mark Rejected",
-      "pricingSummary": "Pricing Summary",
-      "client": "Client",
-      "ungrouped": "(Ungrouped)",
-      "cols": { "item": "Item", "qty": "Qty", "unit": "Unit", "rate": "Rate", "amount": "Amount" },
-      "notes": "Notes",
-      "termsTitle": "Terms & Conditions"
+    "pdf": {
+     "title": "PDF Export",
+     "body": "Professional A4 documents your clients actually respect — not WhatsApp forwards."
+    }
+   }
+  },
+  "audience": {
+   "heading": "Who It's For",
+   "items": [
+    {
+     "bold": "Independent contractors",
+     "rest": " doing residential and small commercial projects."
     },
-    "brandSwap": {
-      "generic": "Generic"
+    {
+     "bold": "Small construction firms",
+     "rest": " (2-15 people) who need structure without overhead."
     },
-    "runCalc": "Run a calculator"
+    {
+     "bold": "Civil engineers",
+     "rest": " who estimate on the side and want accurate, repeatable calculations."
+    },
+    {
+     "bold": "Interior designers",
+     "rest": " who need material estimation for fit-out projects."
+    }
+   ]
+  },
+  "india": {
+   "heading": "India First",
+   "intro": "Every decision we make starts with the Indian contractor:",
+   "items": [
+    "Calculations use IS codes and Indian standard practices (not ASTM or Eurocode).",
+    "Material units match what you buy at the local godown — bags, CFT, running feet.",
+    "Currency is INR. GST rates are built in. Tax region matters.",
+    "Payment via UPI QR — because that's how India pays in 2026.",
+    "Works on a ₹10,000 phone over 4G. No desktop-only workflows."
+   ]
+  },
+  "contact": {
+   "heading": "Contact",
+   "body1": "Have feedback, found a bug, or want to partner? Reach us at",
+   "email": "huzaif89@hotmail.com",
+   "body2": "or use the",
+   "link": "contact form"
   }
+ },
+ "privacy": {
+  "meta": {
+   "title": "Privacy Policy — How We Handle Your Data",
+   "description": "iHateConstruction privacy policy. Learn what personal data we collect, how we use it, where it's stored, and your rights over your account, projects, calculations, and business data."
+  },
+  "title": "Privacy Policy",
+  "updated": "Last updated: 5 August 2026",
+  "s1": {
+   "heading": "1. Information We Collect",
+   "intro": "When you use iHateConstruction, we collect:",
+   "items": [
+    {
+     "bold": "Account information:",
+     "rest": " Name, email address, and authentication credentials (managed via Clerk)."
+    },
+    {
+     "bold": "Project data:",
+     "rest": " Projects, calculations, materials, BOQs, quotations, and invoices you create."
+    },
+    {
+     "bold": "Usage data:",
+     "rest": " Pages visited, features used, browser type, device info, and IP address."
+    },
+    {
+     "bold": "Payment information:",
+     "rest": " UPI IDs and QR codes you voluntarily upload. We do not process or store credit card numbers."
+    }
+   ]
+  },
+  "s2": {
+   "heading": "2. How We Use Your Data",
+   "items": [
+    "Provide, maintain, and improve the service.",
+    "Generate documents (BOQs, quotations, invoices, PDFs) as you request.",
+    "Send transactional emails (account verification, password resets).",
+    "Analyze usage patterns to improve features (aggregated, never sold)."
+   ]
+  },
+  "s3": {
+   "heading": "3. Data Storage & Security",
+   "body": "Your data is stored in encrypted databases hosted on secure cloud infrastructure. We use TLS for all data in transit. Authentication is handled by Clerk, a SOC 2 Type II compliant provider."
+  },
+  "s4": {
+   "heading": "4. Data Sharing",
+   "intro": "We do not sell your data. We share data only with:",
+   "items": [
+    {
+     "bold": "Service providers:",
+     "rest": " Hosting (Vercel), authentication (Clerk), database (managed PostgreSQL) — only what's necessary for operations."
+    },
+    {
+     "bold": "Your clients:",
+     "rest": " When you generate a public quotation link, the quotation details are visible to anyone with the link."
+    },
+    {
+     "bold": "Legal requirements:",
+     "rest": " If required by Indian law or valid court order."
+    }
+   ]
+  },
+  "s5": {
+   "heading": "5. Your Rights",
+   "items": [
+    {
+     "bold": "Access:",
+     "rest": " View all data associated with your account."
+    },
+    {
+     "bold": "Export:",
+     "rest": " Download your projects, calculations, and documents."
+    },
+    {
+     "bold": "Deletion:",
+     "rest": " Request complete deletion of your account and all associated data."
+    },
+    {
+     "bold": "Correction:",
+     "rest": " Update inaccurate information at any time."
+    }
+   ]
+  },
+  "s6": {
+   "heading": "6. Cookies",
+   "body": "We use essential cookies for authentication and session management. No advertising cookies. No third-party tracking pixels."
+  },
+  "s7": {
+   "heading": "7. Data Retention",
+   "body": "Your data is retained as long as your account is active. Deleted accounts are purged within 30 days. Audit logs are retained for 1 year for security purposes."
+  },
+  "s8": {
+   "heading": "8. Children",
+   "body": "iHateConstruction is not intended for users under 18. We do not knowingly collect data from minors."
+  },
+  "s9": {
+   "heading": "9. Changes",
+   "body": "We may update this policy. Material changes will be notified via email or in-app notice at least 14 days before taking effect."
+  },
+  "s10": {
+   "heading": "10. Contact",
+   "body": "For privacy-related queries:",
+   "email": "huzaif89@hotmail.com"
+  }
+ },
+ "terms": {
+  "meta": {
+   "title": "Terms of Service — Rules for Using iHateConstruction",
+   "description": "iHateConstruction terms of service. The rules for using our free construction calculators, project management, BOQ builder, quotation and invoice tools, and payment collection features."
+  },
+  "title": "Terms of Service",
+  "updated": "Last updated: 5 August 2026",
+  "s1": {
+   "heading": "1. Acceptance",
+   "body": "By accessing or using iHateConstruction (\"the Service\"), you agree to be bound by these Terms. If you do not agree, do not use the Service."
+  },
+  "s2": {
+   "heading": "2. Description of Service",
+   "intro": "iHateConstruction is a construction management and estimating platform that provides:",
+   "items": [
+    "Construction material calculators (concrete, steel, brick, paint, tile).",
+    "Project management with saved calculations and material pricing.",
+    "Bill of Quantities (BOQ) generation.",
+    "Quotation and invoice creation with PDF export.",
+    "Payment collection tools (UPI QR, payment links)."
+   ]
+  },
+  "s3": {
+   "heading": "3. User Accounts",
+   "items": [
+    "You must provide accurate information when creating an account.",
+    "You are responsible for all activity under your account.",
+    "You must not share your credentials or let others access your account.",
+    "We may suspend or terminate accounts that violate these Terms."
+   ]
+  },
+  "s4": {
+   "heading": "4. Your Data",
+   "items": [
+    "You retain ownership of all content you create (projects, calculations, documents).",
+    "You grant us a limited license to store, process, and display your data solely to provide the Service.",
+    "We do not claim ownership of your business data."
+   ]
+  },
+  "s5": {
+   "heading": "5. Acceptable Use",
+   "intro": "You agree not to:",
+   "items": [
+    "Use the Service for illegal purposes.",
+    "Upload malicious content or attempt to breach security.",
+    "Scrape, crawl, or bulk-download data from the Service.",
+    "Impersonate another person or entity.",
+    "Use the calculators for safety-critical engineering decisions without independent professional verification."
+   ]
+  },
+  "s6": {
+   "heading": "6. Calculator Disclaimer",
+   "boldLabel": "Important:",
+   "body": " The calculators provide estimates based on standard formulas and regional standards. They are tools for estimation, not substitutes for professional structural engineering. Always verify quantities with a qualified engineer before procurement or construction."
+  },
+  "s7": {
+   "heading": "7. Payment Features",
+   "items": [
+    "Payment collection features (UPI QR, payment links) facilitate communication between you and your clients.",
+    "We are not a payment processor. Money flows directly between you and your client.",
+    "We are not liable for payment disputes, failed transactions, or incorrect amounts.",
+    "Where we integrate payment gateways (Razorpay), their terms also apply."
+   ]
+  },
+  "s8": {
+   "heading": "8. Availability",
+   "body": "We aim for high availability but do not guarantee uninterrupted service. Scheduled maintenance will be announced in advance. We are not liable for losses due to downtime."
+  },
+  "s9": {
+   "heading": "9. Limitation of Liability",
+   "intro": "To the maximum extent permitted by Indian law:",
+   "items": [
+    "The Service is provided \"as is\" without warranties of any kind.",
+    "We are not liable for indirect, incidental, or consequential damages.",
+    "Our total liability is limited to the amount you paid us in the 12 months preceding the claim (or ₹5,000, whichever is higher)."
+   ]
+  },
+  "s10": {
+   "heading": "10. Intellectual Property",
+   "items": [
+    "The Service, its design, code, and branding are our intellectual property.",
+    "You may not copy, modify, or redistribute any part of the Service.",
+    "The name \"iHateConstruction\" and associated marks are our trademarks."
+   ]
+  },
+  "s11": {
+   "heading": "11. Termination",
+   "items": [
+    "You may delete your account at any time.",
+    "We may terminate your access for Terms violations with notice.",
+    "On termination, you have 30 days to export your data before it is deleted."
+   ]
+  },
+  "s12": {
+   "heading": "12. Governing Law",
+   "body": "These Terms are governed by the laws of India. Disputes shall be subject to the exclusive jurisdiction of courts in Bengaluru, Karnataka."
+  },
+  "s13": {
+   "heading": "13. Changes",
+   "body": "We may modify these Terms. Material changes will be communicated 14 days in advance. Continued use after changes constitutes acceptance."
+  },
+  "s14": {
+   "heading": "14. Contact",
+   "body": "Questions about these Terms:",
+   "email": "legal@ihateconstruction.co"
+  }
+ },
+ "contact": {
+  "meta": {
+   "title": "Contact — Talk to the iHateConstruction Team",
+   "description": "Contact iHateConstruction about bugs, features, calculator requests, partnerships, or general questions. One of us reads every message and usually replies within two business days."
+  },
+  "eyebrow": "Company",
+  "title": "Contact us",
+  "subtitle": "Write to us about a bug, a calculator you want built, a partnership, or anything else. One of us reads every message and usually replies within two business days.",
+  "form": {
+   "name": "Name",
+   "email": "Email",
+   "subject": "Subject",
+   "message": "Message",
+   "website": "Website",
+   "send": "Send",
+   "sending": "Submitting…",
+   "successTitle": "Message sent",
+   "successBody": "Thanks — we've got it.",
+   "successNote": "One of us will read your note and reply to the email you gave us, usually within two business days.",
+   "sendAnother": "Send another",
+   "subjects": {
+    "general": "General question",
+    "bug": "Bug report",
+    "feature": "Feature request",
+    "partnership": "Partnership"
+   },
+   "errors": {
+    "nameRequired": "Please enter your name.",
+    "nameShort": "Name must be at least 2 characters.",
+    "nameLong": "Name must be 80 characters or fewer.",
+    "emailRequired": "Please enter your email.",
+    "emailInvalid": "That doesn't look like a valid email.",
+    "messageRequired": "Please enter a message.",
+    "messageShort": "Message must be at least 10 characters.",
+    "messageLong": "Message must be {max} characters or fewer.",
+    "fixHighlighted": "Fix the highlighted fields to continue."
+   }
+  }
+ },
+ "calculators": {
+  "index": {
+   "meta": {
+    "title": "Free Construction Calculators — Cement, Concrete, Brick & Rebar",
+    "description": "Seven free construction calculators — cement, concrete, brick, steel, paint, tile, and rebar. Enter your job and get an exact material order in cubic yards, cubic feet, or metric units. Bags of cement for a slab, bricks for a wall, steel for reinforcement, litres of paint for a room, tiles for a floor."
+   },
+   "eyebrow": "Tools",
+   "title": "Free construction calculators",
+   "subtitle": "Seven calculators for the material orders you actually place — cement, concrete, brick, steel, paint, tile, and rebar. Enter your dimensions, get bags, bricks, kilograms, or litres. Works in cubic yards, cubic feet, and cubic metres.",
+   "missing": "Missing a calculator you use daily?",
+   "contactSoon": "Contact form coming soon."
+  },
+  "common": {
+   "eyebrow": "Calculator",
+   "faq": "Frequently asked questions",
+   "other": "Other calculators",
+   "how": "How the calculation works",
+   "customParams": "Custom parameters",
+   "fillForm": "Fill the form and press Calculate to see your material list.",
+   "fillFormSteel": "Fill the form and press Calculate to see the steel weight.",
+   "fillFormPaint": "Fill the form and press Calculate to see your paint quote.",
+   "fillFormTile": "Fill the form and press Calculate to see your tile quote.",
+   "shareResult": "Share result",
+   "reload": "Reload",
+   "clearAll": "Clear all changes",
+   "didWeSolve": "Did we solve your problem today?"
+  },
+  "cement": {
+   "meta": {
+    "title": "Cement Calculator — Slab, Post Hole & Cubic Yards",
+    "description": "Free cement calculator. Work out how many bags of cement you need for a concrete slab, post hole, wall, or any volume — in cubic yards, cubic feet, or cubic metres. Supports 94 lb Portland, 50 kg, 40 kg, 60 lb, and 80 lb bags, sand and cement mixes (1:3, 1:4, 1:6), and standard slab mixes (M15, M20, M25)."
+   },
+   "crumb": "Cement Calculator",
+   "title": "Cement Calculator",
+   "subtitle": "Work out exactly how many bags of cement you need — for a concrete slab, a set of post holes, or any wet volume in cubic yards, cubic feet, or cubic metres. Supports 94 lb Portland cement bags, 50 kg Indian bags, 40 kg, 60 lb, and 80 lb bags, plus sand-and-cement mixes (1:3, 1:4, 1:6) and standard concrete mixes (M15, M20, M25).",
+   "handles": "What this cement calculator handles",
+   "cards": {
+    "slab": {
+     "title": "Cement for a slab",
+     "body": "Enter length, width, and thickness in feet and inches. The calculator returns bags of cement for M15, M20, or M25 mix — the three grades used for driveways, garage floors, and house slabs."
+    },
+    "post": {
+     "title": "Post hole cement",
+     "body": "Fence posts, mailboxes, sign posts. Enter hole diameter, depth, and how many posts you're setting; the tool sizes a 1:3 sand-and-cement fill for the full run."
+    },
+    "cuyd": {
+     "title": "Cubic yards of cement",
+     "body": "Already know your volume in cubic yards? Switch to Free volume mode. Cubic metres and cubic feet also supported — the calculator converts between all three."
+    },
+    "sc": {
+     "title": "Sand and cement",
+     "body": "Pick the 1:4 plaster, 1:6 brickwork, or 1:3 rich mortar preset when you're only mixing cement with sand — no aggregate. Output shows both bags of cement and cubic feet of sand."
+    },
+    "portland": {
+     "title": "94 lb Portland cement bags",
+     "body": "US contractors buying Type I/II Portland cement in 94 lb bags: pick that bag size and the total rounds up to whole bags automatically."
+    },
+    "indian": {
+     "title": "Indian 50 kg bags",
+     "body": "For contractors in India: 50 kg OPC / PPC bags, IS 456 mix ratios, and results in cubic feet — the units your godown actually quotes."
+    }
+   },
+   "form": {
+    "pouring": "What are you pouring?",
+    "modes": {
+     "slab": "Concrete slab",
+     "post": "Post hole",
+     "free": "Free volume"
+    },
+    "lengthFt": "Length (ft)",
+    "widthFt": "Width (ft)",
+    "thicknessIn": "Thickness (in)",
+    "diameterIn": "Hole diameter (in)",
+    "depthFt": "Depth (ft)",
+    "posts": "Number of posts",
+    "wetVolume": "Wet volume",
+    "unit": "Unit",
+    "units": {
+     "yd3": "Cubic yards",
+     "m3": "Cubic metres",
+     "ft3": "Cubic feet"
+    },
+    "ratio": "Mix ratio",
+    "bagSize": "Cement bag size",
+    "wastage": "Wastage (%)",
+    "resultAria": "Cement calculator result",
+    "youNeed": "You'll need",
+    "bags": "bags of cement (",
+    "cementKg": "Cement (kg)",
+    "cementLb": "Cement (lb)",
+    "wetVol": "Wet volume:",
+    "dry": "· Dry volume factor 1.54 · Wastage",
+    "mixLabel": "Mix:",
+    "empty": "Enter your dimensions to see cement bags and material quantities."
+   }
+  },
+  "concrete": {
+   "meta": {
+    "title": "Concrete Calculator — Slab, Beam, Column & Footing",
+    "description": "Free concrete calculator. Enter your slab, beam, column, or footing size and get cement bags, sand, and coarse aggregate — for M5 to M25 grades using the standard IS 456 mix ratios. Works in cubic yards, cubic feet, and cubic metres."
+   },
+   "crumb": "Concrete Calculator",
+   "title": "Concrete Calculator — Slab, Beam, Column & Footing",
+   "subtitle": "Enter the wet volume of concrete you need to pour, pick a grade, and we'll return cement bags, sand, and coarse aggregate — matched to the IS 456 mix ratio for that grade.",
+   "form": {
+    "grade": "Concrete grade",
+    "customGrade": "Customise this grade",
+    "volume": "Concrete volume",
+    "wetVol": "Wet volume",
+    "volAria": "Concrete volume",
+    "volHelp": "Enter the finished (wet) volume of concrete you need to pour.",
+    "outputs": "Output units",
+    "ratio": "Mix ratio (c : s : a)",
+    "wastage": "Wastage",
+    "wastageAria": "Wastage percent",
+    "dtw": "Dry-to-wet factor",
+    "dtwAria": "Dry-to-wet factor",
+    "density": "Cement density",
+    "densityAria": "Cement bulk density",
+    "bag": "Cement bag weight",
+    "bagAria": "Cement bag weight",
+    "errors": {
+     "volMin": "Enter a volume greater than 0.",
+     "volMax": "Volume must be 10,000 or less.",
+     "ratioFmt": "Use the format \"a:b:c\" — e.g. \"1:1.5:3\".",
+     "ratioPos": "Every part of the ratio must be greater than 0.",
+     "wastageRange": "Enter a number between 0 and 50.",
+     "wastageMax": "Wastage must be 50% or less.",
+     "dtwMin": "Dry-to-wet factor must be greater than 1.",
+     "dtwMax": "Dry-to-wet factor above 2 is unrealistic.",
+     "density": "Enter a density greater than 0.",
+     "bag": "Enter a bag weight greater than 0."
+    }
+   }
+  },
+  "brick": {
+   "meta": {
+    "title": "Brick Calculator — Wall, Patio, Paver & Fire Pit",
+    "description": "Free brick calculator. Work out the exact number of bricks and the mortar (cement + sand) you need for any wall, patio, paver run, fire pit, retaining wall, or house. Supports red brick, fire brick, concrete brick, modular, traditional, and AAC block. Inputs by square feet or wall dimensions."
+   },
+   "crumb": "Brick Calculator",
+   "title": "Brick Calculator — Wall, Patio, Paver & Fire Pit",
+   "subtitle": "Enter your wall's dimensions, a total square footage, or the volume you need to fill. We'll return the brick count, mortar volume, cement bags, and sand — matched to the brick you actually use, whether that's red clay brick, fire brick, concrete brick, modular, or an AAC block.",
+   "form": {
+    "mode": "Input mode",
+    "modes": {
+     "dims": "By wall dimensions",
+     "vol": "By total volume"
+    },
+    "standard": "Brick standard",
+    "customStd": "Customise this standard",
+    "wallDims": "Wall dimensions",
+    "openings": "Openings (doors, windows)",
+    "addOpening": "+ Add opening",
+    "noOpenings": "No openings — the whole wall counts.",
+    "labelPh": "Label (optional)",
+    "removeOpAria": "Remove opening {i}",
+    "defaultDoor": "Door",
+    "openingN": "Opening {n}",
+    "totalVol": "Total volume",
+    "volAria": "Total volume",
+    "mortarThickness": "Mortar thickness",
+    "mortarThicknessAria": "Mortar joint thickness",
+    "mortarRatio": "Mortar ratio (cement : sand)",
+    "brickWastage": "Brick wastage %",
+    "brickWastageAria": "Brick wastage percent",
+    "mortarWastage": "Mortar wastage %",
+    "mortarWastageAria": "Mortar wastage percent",
+    "dtw": "Dry-to-wet factor",
+    "dtwAria": "Mortar dry-to-wet bulking factor",
+    "brickSize": "Brick size",
+    "customBrickLen": "Custom brick length",
+    "customBrickWid": "Custom brick width",
+    "customBrickHt": "Custom brick height",
+    "errors": {
+     "lenMin": "Enter a length greater than 0.",
+     "lenMax": "Length must be 100 m or less.",
+     "htMin": "Enter a height greater than 0.",
+     "htMax": "Height must be 20 m or less.",
+     "thickMin": "Enter a thickness greater than 0.",
+     "thickTooThin": "Thickness must be at least 50 mm.",
+     "thickTooThick": "Thickness must be 500 mm or less.",
+     "widMin": "Enter a width greater than 0.",
+     "opWider": "Opening is wider than the wall.",
+     "opTaller": "Opening is taller than the wall.",
+     "opExceeds": "Total openings area exceeds the wall area.",
+     "volMin": "Enter a volume greater than 0."
+    }
+   }
+  },
+  "steel": {
+   "meta": {
+    "title": "Steel Calculator — TMT Bar Weight & Reinforcement",
+    "description": "Free steel calculator. Enter your bar schedule or concrete volume and get the total weight of reinforcement steel in kg — for slabs, beams, columns, footings, and staircases. Uses D²/162, Fe 500 / Fe 550 TMT, IS 1786."
+   },
+   "crumb": "Steel Calculator",
+   "title": "Steel Calculator — TMT Bar Weight & Reinforcement",
+   "subtitle": "Two ways in — enter your bar schedule for an accurate weight, or enter concrete volume + member type for a quick thumb-rule estimate. Both use IS 1786 defaults; both are fully overridable.",
+   "form": {
+    "mode": "Input mode",
+    "modes": {
+     "schedule": "By bar schedule",
+     "thumb": "By thumb rule"
+    },
+    "modeHint1": "Accurate. Use when you have the drawing.",
+    "modeHint2": "Rough (±20%). Use for pricing estimates only.",
+    "standard": "Steel standard",
+    "customStd": "Customise this standard",
+    "schedule": "Bar schedule",
+    "addBar": "+ Add bar",
+    "barPh": "Bar {i}",
+    "removeBarAria": "Remove bar {i}",
+    "diameter": "Diameter",
+    "count": "Count",
+    "diaAria": "Bar {i} diameter (mm)",
+    "lenAria": "Bar {i} length",
+    "countAria": "Bar {i} count",
+    "diaOption": "{d} mm",
+    "member": "Member + volume",
+    "memberType": "Member type",
+    "concreteVol": "Concrete volume",
+    "volAria": "Concrete volume",
+    "defaultRate": "Default rate: {value} kg/cum for {member}. Turn on Customise to override.",
+    "wastage": "Wastage",
+    "wastageAria": "Wastage percent",
+    "kgPerCum": "kg / cum",
+    "kgPerCumAria": "Kilograms per cubic metre of concrete",
+    "barLabels": {
+     "dia": "{diameter}mm bar",
+     "mainBottom": "Main bars — bottom",
+     "distribution": "Distribution bars",
+     "generic": "Bar {n}"
+    },
+    "errors": {
+     "diaMin": "Enter a diameter greater than 0.",
+     "diaMax": "Diameter must be 100 mm or less.",
+     "lenMin": "Enter a length greater than 0.",
+     "lenMax": "Length must be 50 m or less.",
+     "countMin": "At least 1 bar.",
+     "volMin": "Enter a volume greater than 0."
+    }
+   }
+  },
+  "paint": {
+   "meta": {
+    "title": "Paint Calculator — Interior, Exterior & Room",
+    "description": "Free paint calculator. Enter room dimensions or wall area and get the exact litres of paint you need for interior emulsion, exterior emulsion, enamel, primer, and putty. Handles multiple coats, ceilings, doors, and windows."
+   },
+   "crumb": "Paint Calculator",
+   "title": "Paint Calculator — Litres for Interior & Exterior Walls",
+   "subtitle": "Enter a room or a total area, pick your paint products, and we'll return the litres you need — per layer and in total. Handles primer under emulsion, multiple coats, and per-layer coverage overrides.",
+   "form": {
+    "mode": "Input mode",
+    "modes": {
+     "room": "By room dimensions",
+     "area": "By total area"
+    },
+    "roomDims": "Room dimensions",
+    "includeCeiling": "Include ceiling",
+    "openings": "Openings (doors, windows)",
+    "addOpening": "+ Add opening",
+    "noOpenings": "No openings — the whole wall counts.",
+    "labelPh": "Label (optional)",
+    "totalArea": "Total area",
+    "area": "Area",
+    "areaAria": "Total paintable area",
+    "layers": "Paint layers",
+    "addLayer": "+ Add layer",
+    "layersHelp": "One row per product application — e.g. one primer + one finish for a fresh wall.",
+    "layerN": "Layer {i}",
+    "type": "Type",
+    "coats": "Coats",
+    "coatsAria": "Layer {i} coats",
+    "customLayer": "Customise this layer",
+    "kgPerSqm": "kg / sqm",
+    "kgPerSqmAria": "Layer {i} kg per sqm",
+    "coverage": "Coverage / L",
+    "coverageAria": "Layer {i} coverage per litre",
+    "wastage": "Wastage",
+    "wastageAria": "Layer {i} wastage percent",
+    "defaultDoor": "Door",
+    "openingN": "Opening {n}",
+    "errors": {
+     "lenMin": "Enter a length greater than 0.",
+     "lenMax": "Length must be 100 m or less.",
+     "widMin": "Enter a width greater than 0.",
+     "widMax": "Width must be 100 m or less.",
+     "htMin": "Enter a height greater than 0.",
+     "htMax": "Height must be 20 m or less.",
+     "opWider": "Opening is wider than the longest wall.",
+     "opTaller": "Opening is taller than the wall.",
+     "opExceeds": "Total openings area exceeds the wall area.",
+     "areaMin": "Enter an area greater than 0.",
+     "coats": "At least 1 coat.",
+     "kgPerSqm": "Enter a kg/sqm greater than 0.",
+     "coverage": "Enter a coverage greater than 0."
+    }
+   }
+  },
+  "tile": {
+   "meta": {
+    "title": "Tile Calculator — Floor, Wall, Adhesive & Grout",
+    "description": "Free tile calculator. Enter floor or wall area, pick a tile size, and get the exact tile count, adhesive quantity, and grout volume. Supports vitrified, ceramic, and traditional mortar-bed installation with wastage."
+   },
+   "crumb": "Tile Calculator",
+   "title": "Tile Calculator — Floor, Wall, Adhesive & Grout",
+   "subtitle": "Enter the surface, the tile size, and pick a preset — we return tile count with wastage plus adhesive and grout. Handles both modern thin-set and traditional 20 mm mortar bed.",
+   "form": {
+    "surface": "Surface",
+    "modes": {
+     "floor": "Floor",
+     "wall": "Wall"
+    },
+    "floorDims": "Floor dimensions",
+    "wallDims": "Wall dimensions (width × height)",
+    "excluded": "Excluded areas (columns, drains, cutouts)",
+    "addEx": "+ Add exclusion",
+    "noEx": "No exclusions — the whole surface is tiled.",
+    "labelPh": "Label (optional)",
+    "cutoutN": "Cutout {n}",
+    "tileSize": "Tile size",
+    "standard": "Tile standard",
+    "wastage": "Wastage",
+    "method": "Method",
+    "methods": {
+     "thinset": "Thin-set",
+     "bed": "Mortar bed"
+    },
+    "coveragePerKg": "Coverage/kg",
+    "bedThickness": "Bed thickness",
+    "mortarRatio": "Mortar ratio",
+    "groutWidth": "Grout width",
+    "groutDepth": "Grout depth",
+    "groutDepthHelp": "Defaults to tile thickness. Edit to override.",
+    "tileThickness": "Tile thickness",
+    "errors": {
+     "lenMin": "Enter a length greater than 0.",
+     "lenMax": "Length must be 500 m or less.",
+     "widMin": "Enter a width greater than 0.",
+     "widMax": "Width must be 500 m or less.",
+     "tileLen": "Enter a tile length greater than 0.",
+     "tileWid": "Enter a tile width greater than 0.",
+     "exLen": "Length must be greater than 0.",
+     "exWid": "Width must be greater than 0.",
+     "exAll": "Excluded areas add up to the whole surface. Reduce them.",
+     "coverage": "Coverage must be greater than 0.",
+     "thickness": "Thickness must be greater than 0.",
+     "ratio": "Format as a:b (e.g. 1:4)."
+    }
+   }
+  },
+  "rebar": {
+   "meta": {
+    "title": "Rebar Calculator — Rebar for Slab, Footing & Wall (Length, Pieces & Weight)",
+    "description": "Free rebar calculator for concrete slabs, footings, walls, and foundations. Enter length, width, rebar spacing, and edge cover to get rebar count, total rebar length, number of 12 m pieces, and rebar weight per square metre or square foot. D²/162 weight formula."
+   },
+   "crumb": "Rebar Calculator",
+   "title": "Rebar Calculator — Slab, Footing, Wall & Foundation Reinforcement",
+   "subtitle": "Work out how much rebar you need for a concrete slab, footing, wall, or foundation. Enter the member size, the centre-to-centre rebar spacing, and the edge cover — get the number of bars each way, total rebar length, pieces of 12 m rebar, and weight per m² and ft².",
+   "form": {
+    "section1": "Member + dimensions",
+    "member": "Member type",
+    "memberHint": "Same grid math — only the suggested starting spacing changes.",
+    "dimHint": "Overall poured dimensions of the member (edge to edge), not the grid.",
+    "section2": "Reinforcement layout",
+    "spacing": "Rebar–rebar spacing (c/c)",
+    "spacingAria": "Centre-to-centre spacing between parallel rebars",
+    "edgeSpacing": "Edge cover",
+    "edgeAria": "Distance from the outermost bar to the member edge",
+    "section3": "Bar + ordering",
+    "barDiameter": "Bar diameter",
+    "barLength": "Single rebar length",
+    "barLengthAria": "Stock length of one rebar from the supplier",
+    "wastage": "Wastage",
+    "wastageAria": "Wastage percent for cutting, laps, and overlaps",
+    "lenAria": "Member length",
+    "widAria": "Member width",
+    "errors": {
+     "lenMin": "Enter a length greater than 0.",
+     "lenMax": "Length must be 200 m or less.",
+     "widMin": "Enter a width greater than 0.",
+     "widMax": "Width must be 200 m or less.",
+     "spMin": "Enter a spacing greater than 0.",
+     "spMax": "Spacing must be 2 m or less.",
+     "edgeMin": "Edge cover must be 0 or more.",
+     "edgeMax": "Edge cover must be less than half the member size.",
+     "barLenMin": "Enter a rebar length greater than 0.",
+     "barLenMax": "Rebar length must be 60 m or less.",
+     "wastageRange": "Wastage should be between 0 and 20%."
+    },
+    "examples": {
+     "fill1": "Example: 6000 × 4000 mm slab, 150 mm c/c, 12 mm bars, 12 m stock."
+    },
+    "placeholder": "Fill the form and press Calculate to see your rebar order."
+   },
+   "sizes": {
+    "heading": "Rebar sizes",
+    "note": "US bar sizes give the diameter in eighths of an inch up to #8; metric sizes use the nominal diameter in millimetres. TMT rebar in India is sold by nominal diameter — typically 8, 10, 12, 16, 20, 25, and 32 mm.",
+    "cols": {
+     "imperial": "Imperial bar size",
+     "metric": "Metric size",
+     "diaIn": "Diameter (inch)",
+     "diaMm": "Diameter (mm)"
+    }
+   },
+   "article": {
+    "toc": "On this page",
+    "heading": "Everything you need to know about rebar"
+   },
+   "faq": [
+    {
+     "q": "How much rebar do I need for a concrete slab?",
+     "a": "Enter the slab length and width, the centre-to-centre spacing, and the edge cover. The calculator returns the bars in each direction, the total rebar length in metres, and the number of stock bars (12 m) to order. A 6 × 4 m slab at 150 mm c/c needs roughly 66 bars and about 306 m of rebar."
+    },
+    {
+     "q": "How do I calculate rebar for a slab in square feet?",
+     "a": "Find the slab area in square feet, divide by the spacing on each side to get the bar lines, then multiply by the bar length. The calculator does this for you and also reports rebar weight per square foot — a typical single-layer residential mesh works out to roughly 1 kg per sq ft."
+    },
+    {
+     "q": "How do I calculate rebar weight?",
+     "a": "Rebar weight = total length × weight per metre. For diameter D in millimetres, weight per metre ≈ D² / 162 kg/m (from π × (D/2)² × 7850 kg/cum). A 12 mm bar weighs about 0.89 kg/m; a 16 mm bar about 1.58 kg/m."
+    },
+    {
+     "q": "How many rebar pieces do I need for my project?",
+     "a": "Divide the total rebar length by the stock bar length you buy (12 m for Indian TMT) and round up. The calculator does this automatically and shows the pieces count."
+    },
+    {
+     "q": "Do I need rebar in a footing or foundation?",
+     "a": "Almost always yes. Footings and foundations carry the full building load and need reinforcement against bending and cracking. Typical guidance: 150–200 mm c/c with 12–16 mm bars in the top and bottom meshes. Confirm against your structural drawings."
+    },
+    {
+     "q": "Do I need rebar in a concrete wall?",
+     "a": "It depends. Retaining and foundation walls almost always need vertical rebar plus horizontal distribution bars. Simple partition walls may only need light mesh. Set the member to \"wall\" and confirm with an engineer."
+    },
+    {
+     "q": "What is edge cover (edge-grid spacing)?",
+     "a": "Edge cover is the distance from the outermost rebar line to the concrete edge — the concrete around the bars that protects them from water and corrosion. The calculator subtracts two edge covers (one per end) from each dimension to get the actual grid size."
+    },
+    {
+     "q": "What does rebar-per-square-metre tell me?",
+     "a": "It is the total rebar weight divided by the member area — a quick density check for an estimate. A single-layer 150 mm c/c 12 mm mesh is about 11–12 kg per m²; a double mesh with 16 mm bars can reach 20–25 kg per m²."
+    }
+   ]
+  }
+ },
+ "results": {
+  "brick": {
+   "bricksRequired": "Bricks required",
+   "beforeWastage": "{n} before {pct}% wastage",
+   "grossWall": "Gross wall area",
+   "openings": "Openings",
+   "netArea": "Net area",
+   "masonryVolume": "Masonry volume",
+   "paramsUsed": "Parameters used",
+   "preset": "Preset",
+   "brick": "Brick",
+   "joint": "Joint",
+   "mortarRatio": "Mortar ratio",
+   "brickWastage": "Brick wastage",
+   "mortarWastage": "Mortar wastage",
+   "mortar": "Mortar",
+   "cement": "Cement",
+   "sand": "Sand"
+  },
+  "concrete": {
+   "cementRequired": "Cement required",
+   "sand": "Sand",
+   "aggregate": "Aggregate",
+   "dryVolume": "Dry volume",
+   "wastageApplied": "Wastage applied",
+   "paramsUsed": "Parameters used",
+   "preset": "Preset",
+   "mixRatio": "Mix ratio",
+   "cementDensity": "Cement density",
+   "bagWeight": "Bag weight",
+   "dtw": "Dry-to-wet factor"
+  },
+  "paint": {
+   "totalRequired": "Total required",
+   "putty": "{n} {unit} putty",
+   "wallGross": "Wall gross",
+   "ceiling": "Ceiling",
+   "openings": "Openings",
+   "netPaintable": "Net paintable",
+   "byLayer": "By layer",
+   "coats": "coats",
+   "coat": "coat"
+  },
+  "steel": {
+   "total": "Total steel required",
+   "beforeWastage": "Before wastage",
+   "wastage": "Wastage",
+   "byBar": "By bar",
+   "genericBar": "Bar {n}"
+  },
+  "tile": {
+   "tilesToOrder": "Tiles to order",
+   "tiles": "tiles",
+   "beforeWastage": "{count} before + {pct}% wastage",
+   "grossArea": "Gross area",
+   "excluded": "Excluded",
+   "netTileable": "Net tileable",
+   "tileSize": "Tile size",
+   "thinset": "Thin-set adhesive",
+   "quantity": "Quantity",
+   "mortarBed": "Mortar bed ({thickness} {unit}, {ratio})",
+   "volumeWet": "Volume (wet)",
+   "cement": "Cement",
+   "sand": "Sand",
+   "grout": "Grout",
+   "volume": "Volume",
+   "estimatedWeight": "Estimated weight"
+  }
+ },
+ "projects": {
+  "title": "Projects",
+  "newProject": "New project",
+  "editProject": "Edit project",
+  "empty": "No projects yet. Create your first one to start saving calculations.",
+  "filters": {
+   "active": "Active",
+   "archived": "Archived",
+   "all": "All"
+  },
+  "archivedTag": "Archived",
+  "noClient": "No client",
+  "calc": "calc",
+  "material": "material",
+  "form": {
+   "name": "Project name",
+   "clientName": "Client name",
+   "currency": "Currency",
+   "currencyFixed": "Currency is fixed at creation. Create a new project to change it.",
+   "taxRegion": "Tax region",
+   "taxRegionFixed": "Tax region is fixed at creation.",
+   "location": "Location (optional)",
+   "address": "Address",
+   "city": "City",
+   "state": "State",
+   "pincode": "Pincode",
+   "country": "Country",
+   "notes": "Notes",
+   "create": "Create project"
+  },
+  "actions": {
+   "confirmDelete": "Delete project \"{name}\"? This cannot be undone.",
+   "unarchive": "Unarchive",
+   "archive": "Archive",
+   "delete": "Delete"
+  },
+  "materials": {
+   "title": "Materials",
+   "add": "Add material",
+   "empty": "No materials yet. Add prices for cement, sand, steel, and anything else you buy.",
+   "vendor": "Vendor: {vendor}",
+   "confirmDelete": "Delete this material? Existing quotations remain unaffected.",
+   "form": {
+    "suggestedFrom": "Suggested from \"{source}\"",
+    "aCalculation": " a calculation",
+    "needsHint": " · needs ≈ {qty}",
+    "enterPrice": ". Enter your price and save.",
+    "type": "Type",
+    "typeFixed": "Type is fixed after creation.",
+    "unit": "Unit",
+    "unitFixed": "Unit is fixed after creation.",
+    "brand": "Brand",
+    "unitPrice": "Unit price ({currency})",
+    "quantity": "Quantity ({unit})",
+    "quantityGeneric": "Quantity (unit)",
+    "qtyPh": "e.g. 12",
+    "pricePh": "380.00",
+    "total": "Total: {currency} {amount}",
+    "vendor": "Vendor",
+    "notes": "Notes"
+   },
+   "modal": {
+    "title": "Add Material",
+    "typeReq": "Type *",
+    "brand": "Brand (optional)",
+    "brandPh": "e.g. UltraTech, ACC",
+    "unitReq": "Unit *",
+    "priceReq": "Price per {unit} ({currency}) *",
+    "pricePh": "0.00",
+    "vendor": "Vendor (optional)",
+    "vendorPh": "e.g. Local supplier",
+    "adding": "Adding…",
+    "priceError": "Valid unit price required"
+   },
+   "fromCalc": {
+    "allImported": "Everything from this calculation is already in your materials.",
+    "createdMsg": "Added {n} material(s) with placeholder price ₹100",
+    "updatedMsg": "updated quantity on {n} existing material(s)",
+    "editPrices": ". Edit prices as needed.",
+    "title": "Materials from this calculation",
+    "help": "Click a chip to add it with a price, or import all missing with placeholder prices.",
+    "importing": "Importing…",
+    "allDone": "All imported",
+    "addAll": "Add all missing ({n})"
+   }
+  },
+  "calculations": {
+   "title": "Calculations",
+   "empty": "No calculations yet. Run a calculator and use \"Save to project\" to snapshot it here.",
+   "browse": "Browse calculators",
+   "ungrouped": "Ungrouped",
+   "openHint": "Open to edit or recompute →",
+   "confirmDelete": "Delete calculation \"{name}\"? This cannot be undone.",
+   "menu": "…",
+   "recompute": "Recompute",
+   "edit": {
+    "label": "Label",
+    "group": "Group",
+    "groupPh": "e.g. Ground floor, First floor",
+    "description": "Description"
+   },
+   "result": {
+    "empty": "No preview available for this calculator type."
+   },
+   "saveButton": {
+    "runFirst": "Run the calculator first",
+    "saveHint": "Save this run to a project",
+    "cta": "Save to project",
+    "modalTitle": "Save calculation",
+    "project": "Project",
+    "loadingProjects": "Loading projects…",
+    "noActive": "You have no active projects. ",
+    "createOne": "Create one",
+    "labelPh": "e.g. Ground floor bricks",
+    "group": "Group (optional)",
+    "groupPh": "e.g. Ground floor",
+    "save": "Save"
+   }
+  },
+  "boq": {
+   "title": "BOQ",
+   "generate": "Generate BOQ",
+   "generating": "Generating…",
+   "name": "BOQ Name",
+   "namePh": "e.g. \"BOQ v1 — as-designed\"",
+   "autoName": "Leave blank for auto-generated name",
+   "notes": "Notes",
+   "notesPh": "e.g. Excludes site preparation and boundary wall.",
+   "source": "Data Source",
+   "willGen": "BOQ will be generated from your project's {n} material(s) with their quantities and prices.",
+   "noMaterials": "No materials added yet. Add materials to your project before generating a BOQ.",
+   "alsoCalcs": "Also include saved calculations",
+   "alsoCalcsHelp": "Adds a separate section with material quantities derived from your calculator results.",
+   "pickCalcs": "Select which calculations to include (leave all unchecked for all):",
+   "confirmDelete": "Delete this BOQ? This cannot be undone.",
+   "generated": "Generated {date}",
+   "pdf": "PDF",
+   "ungrouped": "(Ungrouped)",
+   "cols": {
+    "material": "Material",
+    "qty": "Qty",
+    "unit": "Unit",
+    "pricePerUnit": "Price/unit",
+    "amount": "Amount"
+   },
+   "materialsSubtotal": "Materials Subtotal:",
+   "grandTotal": "Grand Total:",
+   "addMaterial": "+ Add Material",
+   "editor": {
+    "label": "Label",
+    "override": "Override Amount ({currency})",
+    "reason": "Reason",
+    "reasonPh": "e.g. Bulk discount from vendor for full order",
+    "save": "Save override"
+   }
+  },
+  "invoice": {
+   "title": "Invoices",
+   "new": "New Invoice",
+   "confirmDelete": "Delete this invoice? This cannot be undone.",
+   "generate": "Generate Invoice",
+   "generating": "Generating…",
+   "sourceQuotation": "Source Quotation",
+   "grandTotal": "Grand total: {total}",
+   "name": "Invoice Name (optional)",
+   "namePh": "Auto-generated from quotation name",
+   "due": "Due Date (optional)",
+   "notes": "Notes (optional)",
+   "amountDue": "Amount Due",
+   "amountPaid": "Amount Paid",
+   "remaining": "Remaining",
+   "recordPayment": "Record Payment",
+   "amount": "Amount",
+   "amountPh": "0.00",
+   "paymentNotes": "Notes (optional)",
+   "paymentRefPh": "Payment reference…",
+   "savePayment": "Save Payment",
+   "paymentNotesTitle": "Payment Notes",
+   "notesLabel": "Notes",
+   "createdUpdated": "Created {created} · Updated {updated}",
+   "paid": " · Paid {date}"
+  },
+  "quotation": {
+   "title": "Quotations",
+   "new": "New Quotation",
+   "generate": "Generate Quotation",
+   "generating": "Generating…",
+   "confirmDelete": "Delete this quotation? This cannot be undone.",
+   "selectBoq": "Select a BOQ",
+   "sourceBoqReq": "Source BOQ *",
+   "clientDetails": "Client Details (optional)",
+   "name": "Name",
+   "namePh": "Client name",
+   "email": "Email",
+   "emailPh": "client@example.com",
+   "phone": "Phone",
+   "phonePh": "+91 98765 43210",
+   "pricing": "Pricing",
+   "markup": "Markup %",
+   "discount": "Discount %",
+   "tax": "Tax % (GST)",
+   "materialsSubtotal": "Materials subtotal",
+   "markupLine": "+ Markup ({pct}%)",
+   "discountLine": "- Discount ({pct}%)",
+   "taxLine": "+ Tax ({pct}%)",
+   "grandTotal": "Grand Total",
+   "quoteName": "Quotation Name (optional)",
+   "quoteNamePh": "Auto-generated if left blank",
+   "validUntil": "Valid Until (optional)",
+   "internalNotesPh": "Internal notes",
+   "termsOpt": "Terms & Conditions (optional)",
+   "termsPh": "Payment terms, validity, etc.",
+   "noClient": "No client",
+   "validSuffix": " · Valid until {date}",
+   "created": "Created {date}",
+   "sent": " · Sent {date}",
+   "markSent": "Mark as Sent",
+   "markAccepted": "Mark Accepted",
+   "markRejected": "Mark Rejected",
+   "pricingSummary": "Pricing Summary",
+   "client": "Client",
+   "ungrouped": "(Ungrouped)",
+   "cols": {
+    "item": "Item",
+    "qty": "Qty",
+    "unit": "Unit",
+    "rate": "Rate",
+    "amount": "Amount"
+   },
+   "notes": "Notes",
+   "termsTitle": "Terms & Conditions"
+  },
+  "brandSwap": {
+   "generic": "Generic"
+  },
+  "runCalc": "Run a calculator"
+ }
 }
