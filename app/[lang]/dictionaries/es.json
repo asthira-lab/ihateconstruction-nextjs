@@ -69,12 +69,18 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Herramientas gratuitas para contratistas indios",
-      "title": "Presupuestos y calculadoras hechas para la forma en que los contratistas realmente trabajan.",
-      "subtitle": "Calculadoras gratuitas y con unidades integradas que convierten las dimensiones de una pared en pedidos de materiales: ladrillos, cemento, arena, azulejos, pintura, acero, armadura y volumen de concreto. Los proyectos, BOQ y cotizaciones con GST llegan pronto.",
+      "eyebrow": "Gratis · Sin registro · Funciona en móvil",
+      "title": "Calculadoras de construcción gratuitas para toda la obra.",
+      "subtitle": "Calcula concreto, ladrillo, acero, pintura, azulejos y armadura, con cantidades de materiales precisas, en unidades métricas o imperiales y con desperdicio incluido.",
       "ctaPrimary": "Abrir calculadoras",
-      "ctaSecondary": "Prueba la calculadora de ladrillos",
-      "note": "No se requiere cuenta · Métrico e imperial · Funciona en el móvil"
+      "ctaSecondary": "Prueba la calculadora de concreto",
+      "note": "No requiere cuenta · Métrico e imperial · Funciona en el móvil",
+      "trust": [
+        "Unidades métricas e imperiales",
+        "Porcentaje de desperdicio incluido",
+        "Fórmulas de cálculo probadas",
+        "Gratis — sin registro"
+      ]
     },
     "features": {
       "eyebrow": "Qué incluye",
@@ -477,14 +483,35 @@
       },
       "eyebrow": "Herramientas",
       "title": "Calculadoras de construcción gratuitas",
-      "subtitle": "Siete calculadoras para los pedidos de material que realmente haces: cemento, concreto, ladrillo, acero, rebar, pintura y azulejo. Ingresa tus dimensiones y obtén bolsas, ladrillos, kilogramos o litros. Funciona en yardas cúbicas, pies cúbicos y metros cúbicos.",
+      "subtitle": "Doce calculadoras gratuitas para los pedidos de material que realmente haces — concreto, ladrillo, acero, armadura, pintura, azulejos y cada parte del vertido de concreto. Métrico o imperial. Con desperdicio incluido.",
       "missing": "¿Te falta una calculadora que usas a diario?",
       "contactSoon": "Formulario de contacto próximamente.",
       "search": {
-        "placeholder": "Buscar calculadoras…",
+        "placeholder": "Busca entre más de 12 calculadoras…",
         "empty": "Ninguna calculadora coincide con \"{q}\".",
         "clear": "Limpiar búsqueda",
-        "results": "{n} resultados"
+        "results": "{n} resultados",
+        "suggestionsLabel": "Populares",
+        "categoriesLabel": "Categoría"
+      },
+      "suggestions": [
+        "Concreto",
+        "Ladrillo",
+        "Armadura",
+        "Pintura",
+        "Azulejo",
+        "Acero"
+      ],
+      "categories": {
+        "all": "Todas",
+        "concrete": "Concreto",
+        "masonry": "Mampostería",
+        "steel": "Acero y armadura",
+        "finishes": "Acabados",
+        "sitework": "Obra en sitio"
+      },
+      "card": {
+        "cta": "Abrir calculadora"
       }
     },
     "common": {

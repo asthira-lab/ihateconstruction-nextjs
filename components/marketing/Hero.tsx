@@ -31,12 +31,21 @@ export function Hero({ dict, locale }: Props) {
             <Icon name="arrow-right" size={16} decorative />
           </a>
           <a
-            href={`/${locale}/calculators/brick-calculator`}
+            href={`/${locale}/calculators/concrete-calculator`}
             className="inline-flex h-11 items-center justify-center rounded border border-black/15 px-5 text-sm font-medium text-black transition-colors hover:bg-black/[.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/20 dark:text-white dark:hover:bg-white/[.06] dark:focus-visible:ring-white dark:focus-visible:ring-offset-black"
           >
             {dict.ctaSecondary}
           </a>
         </div>
+
+        <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-black/70 dark:text-white/70">
+          {dict.trust.map((bullet) => (
+            <li key={bullet} className="inline-flex items-center gap-2">
+              <Icon name="check" size={16} decorative className="text-black/50 dark:text-white/50" />
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
 
         <p className="mt-6 text-xs text-black/50 dark:text-white/50">
           {dict.note}

@@ -69,12 +69,18 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Kostenlose Werkzeuge für indische Bauunternehmer",
-      "title": "Kalkulation und Rechner, gebaut für die Praxis von Bauunternehmern.",
-      "subtitle": "Kostenlose, einheitenbewusste Rechner, die Wandabmessungen in Materialbestellungen umwandeln — Ziegel, Zement, Sand, Fliesen, Farbe, Stahl, Bewehrung und Betonvolumen. Projekte, BOQ und GST-fähige Angebote folgen bald.",
+      "eyebrow": "Kostenlos · Ohne Anmeldung · Mobil nutzbar",
+      "title": "Kostenlose Bau-Rechner für das ganze Projekt.",
+      "subtitle": "Berechne Beton, Ziegel, Stahl, Farbe, Fliesen und Bewehrung — mit präzisen Materialmengen, metrisch oder imperial, inklusive Verschnitt.",
       "ctaPrimary": "Rechner öffnen",
-      "ctaSecondary": "Ziegelrechner ausprobieren",
-      "note": "Kein Konto erforderlich · Metrisch und imperial · Funktioniert auf dem Handy"
+      "ctaSecondary": "Beton-Rechner ausprobieren",
+      "note": "Kein Konto erforderlich · Metrisch und imperial · Mobil nutzbar",
+      "trust": [
+        "Metrische & imperiale Einheiten",
+        "Verschnitt bereits einkalkuliert",
+        "Erprobte Berechnungsformeln",
+        "Kostenlos — ohne Anmeldung"
+      ]
     },
     "features": {
       "eyebrow": "Was drin ist",
@@ -477,14 +483,35 @@
       },
       "eyebrow": "Werkzeuge",
       "title": "Kostenlose Bau-Rechner",
-      "subtitle": "Sieben Rechner für die Materialbestellungen, die Sie tatsächlich aufgeben — Zement, Beton, Ziegel, Stahl, Bewehrung, Farbe und Fliesen. Geben Sie Ihre Abmessungen ein, erhalten Sie Säcke, Ziegel, Kilogramm oder Liter. Funktioniert in Kubikyards, Kubikfuß und Kubikmetern.",
+      "subtitle": "Zwölf kostenlose Rechner für die Materialbestellungen, die du wirklich aufgibst — Beton, Ziegel, Stahl, Bewehrung, Farbe, Fliesen und jeden Teil eines Betoniergangs. Metrisch oder imperial. Mit Verschnitt.",
       "missing": "Fehlt ein Rechner, den Sie täglich nutzen?",
       "contactSoon": "Kontaktformular kommt bald.",
       "search": {
-        "placeholder": "Rechner suchen…",
+        "placeholder": "Durchsuche 12+ Bau-Rechner…",
         "empty": "Kein Rechner stimmt mit \"{q}\" überein.",
         "clear": "Suche löschen",
-        "results": "{n} Ergebnisse"
+        "results": "{n} Ergebnisse",
+        "suggestionsLabel": "Beliebt",
+        "categoriesLabel": "Kategorie"
+      },
+      "suggestions": [
+        "Beton",
+        "Ziegel",
+        "Bewehrung",
+        "Farbe",
+        "Fliesen",
+        "Stahl"
+      ],
+      "categories": {
+        "all": "Alle",
+        "concrete": "Beton",
+        "masonry": "Mauerwerk",
+        "steel": "Stahl & Bewehrung",
+        "finishes": "Ausbau",
+        "sitework": "Aussenanlagen"
+      },
+      "card": {
+        "cta": "Rechner öffnen"
       }
     },
     "common": {

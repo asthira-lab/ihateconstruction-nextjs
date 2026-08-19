@@ -1,7 +1,14 @@
 "use client";
 
 import { useState, useEffect, useDeferredValue, useCallback, useMemo } from "react";
-import { CalculatorGrid } from "./CalculatorGrid";
+import { CalculatorGrid, type LocalizedEntry } from "./CalculatorGrid";
+import {
+  CALCULATOR_CATEGORIES,
+  type CalculatorCategory,
+} from "@/features/calculators/registry";
+
+// Union of the concrete categories plus the "all" pseudo-value.
+type CategoryFilter = "all" | CalculatorCategory;
 
 export interface CalculatorSearchProps {
   entries: LocalizedEntry[];
@@ -10,17 +17,15 @@ export interface CalculatorSearchProps {
   clearLabel: string;
   resultsLabelTemplate: string;
   comingLabel: string;
+  suggestions: string[];
+  suggestionsLabel: string;
+  categoriesLabel: string;
+  categoryLabels: Record<CategoryFilter, string>;
+  ctaLabel: string;
   locale: string;
 }
 
-export interface LocalizedEntry {
-  slug: string;
-  href: string;
-  title: string;
-  description: string;
-  keywords: string[];
-  status: "live" | "coming";
-}
+export type { LocalizedEntry };
 
 interface FuseInstance {
   search: (query: string) => Array<{ item: LocalizedEntry }>;
@@ -56,7 +61,11 @@ function useFuse(entries: LocalizedEntry[]) {
   return fuse;
 }
 
-function filterEntries(fuse: FuseInstance | null, entries: LocalizedEntry[], query: string) {
+function searchEntries(
+  fuse: FuseInstance | null,
+  entries: LocalizedEntry[],
+  query: string,
+) {
   if (!query.trim() || !fuse) return entries;
   return fuse.search(query).map((r) => r.item);
 }
@@ -68,13 +77,27 @@ export function CalculatorSearch({
   clearLabel,
   resultsLabelTemplate,
   comingLabel,
+  suggestions,
+  suggestionsLabel,
+  categoriesLabel,
+  categoryLabels,
+  ctaLabel,
   locale,
 }: CalculatorSearchProps) {
   const [query, setQuery] = useState("");
+  const [category, setCategory] = useState<CategoryFilter>("all");
   const deferredQuery = useDeferredValue(query);
   const fuse = useFuse(entries);
 
-  const filtered = useMemo(() => filterEntries(fuse, entries, deferredQuery), [fuse, entries, deferredQuery]);
+  // Search wins when a query is active — matches user expectation ("I typed something, show me matches").
+  // Otherwise the category chip narrows the full list.
+  const filtered = useMemo(() => {
+    if (deferredQuery.trim() !== "") {
+      return searchEntries(fuse, entries, deferredQuery);
+    }
+    if (category === "all") return entries;
+    return entries.filter((e) => e.category === category);
+  }, [fuse, entries, deferredQuery, category]);
 
   const handleClear = useCallback(() => {
     setQuery("");
@@ -91,24 +114,36 @@ export function CalculatorSearch({
         const firstEntry = filtered[0];
         if (firstEntry) {
           const firstResult = document.getElementById(
-            `calculator-result-${firstEntry.slug}`
+            `calculator-result-${firstEntry.slug}`,
           );
           firstResult?.focus();
         }
       }
     },
-    [filtered, handleClear]
+    [filtered, handleClear],
   );
+
+  const handleSuggestion = useCallback((s: string) => {
+    setQuery(s);
+    const input = document.getElementById(
+      "calculator-search-input",
+    ) as HTMLInputElement | null;
+    input?.focus();
+  }, []);
 
   const resultCount = filtered.length;
   const showEmpty = query.trim() !== "" && resultCount === 0;
+  const isEmptySearch = query.trim() === "";
+  const isFiltering = !isEmptySearch || category !== "all";
+
+  const chipCategories: CategoryFilter[] = ["all", ...CALCULATOR_CATEGORIES];
 
   return (
     <div>
       <label htmlFor="calculator-search-input" className="sr-only">
         {placeholder}
       </label>
-      <div className="relative mb-8">
+      <div className="relative mb-4">
         <input
           id="calculator-search-input"
           type="search"
@@ -150,13 +185,63 @@ export function CalculatorSearch({
         )}
       </div>
 
+      {isEmptySearch && suggestions.length > 0 && (
+        <div className="mb-6 flex flex-wrap items-center gap-2">
+          <span className="text-xs font-medium uppercase tracking-widest text-black/50 dark:text-white/50">
+            {suggestionsLabel}
+          </span>
+          {suggestions.map((s) => (
+            <button
+              key={s}
+              type="button"
+              onClick={() => handleSuggestion(s)}
+              className="rounded-full border border-black/10 px-3 py-1 text-xs text-black/70 transition-colors hover:border-black/25 hover:bg-black/[.03] focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/15 dark:text-white/70 dark:hover:border-white/25 dark:hover:bg-white/[.05] dark:focus-visible:ring-white dark:focus-visible:ring-offset-black"
+            >
+              {s}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div
+        role="radiogroup"
+        aria-label={categoriesLabel}
+        className="mb-6 flex flex-wrap gap-2"
+      >
+        {chipCategories.map((c) => {
+          const selected = category === c;
+          return (
+            <button
+              key={c}
+              type="button"
+              role="radio"
+              aria-checked={selected}
+              onClick={() => setCategory(c)}
+              className={
+                selected
+                  ? "rounded-full border border-black bg-black px-3 py-1 text-xs font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white dark:bg-white dark:text-black dark:focus-visible:ring-white dark:focus-visible:ring-offset-black"
+                  : "rounded-full border border-black/10 px-3 py-1 text-xs text-black/70 transition-colors hover:border-black/25 hover:bg-black/[.03] focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/15 dark:text-white/70 dark:hover:border-white/25 dark:hover:bg-white/[.05] dark:focus-visible:ring-white dark:focus-visible:ring-offset-black"
+              }
+            >
+              {categoryLabels[c]}
+            </button>
+          );
+        })}
+      </div>
+
+      {isFiltering && !showEmpty && (
+        <p className="mb-4 text-xs text-black/60 dark:text-white/60">
+          {resultsLabelTemplate.replace("{n}", String(resultCount))}
+        </p>
+      )}
+
       <div
         id="calculator-search-status"
         aria-live="polite"
         aria-atomic="true"
         className="sr-only"
       >
-        {query.trim() === ""
+        {isEmptySearch && category === "all"
           ? ""
           : resultCount === 0
           ? emptyLabel.replace("{q}", query)
@@ -179,6 +264,8 @@ export function CalculatorSearch({
           id="calculator-results"
           locale={locale}
           comingLabel={comingLabel}
+          categoryLabels={categoryLabels as Record<CalculatorCategory, string>}
+          ctaLabel={ctaLabel}
           entries={filtered}
         />
       )}

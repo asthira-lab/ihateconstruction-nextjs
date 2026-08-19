@@ -69,12 +69,18 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Free tools for Indian contractors",
-      "title": "Estimating and calculators built for how contractors actually work.",
-      "subtitle": "Free, unit-aware calculators that turn wall dimensions into material orders — bricks, cement, sand, tile, paint, steel, rebar, and concrete volume. Projects, BOQ, and GST-ready quotations are coming next.",
+      "eyebrow": "Free · No signup · Works on mobile",
+      "title": "Free construction calculators for the whole job.",
+      "subtitle": "Calculate concrete, brick, steel, paint, tile, and rebar — with accurate material quantities, metric or imperial, and built-in waste allowances.",
       "ctaPrimary": "Open calculators",
-      "ctaSecondary": "Try the brick calculator",
-      "note": "No account required · Metric and imperial · Works on mobile"
+      "ctaSecondary": "Try the concrete calculator",
+      "note": "No account required · Metric and imperial · Works on mobile",
+      "trust": [
+        "Metric & imperial units",
+        "Waste allowances built in",
+        "Tested calculation formulas",
+        "Free — no registration"
+      ]
     },
     "features": {
       "eyebrow": "What's inside",
@@ -477,14 +483,35 @@
       },
       "eyebrow": "Tools",
       "title": "Free construction calculators",
-      "subtitle": "Eight calculators for the material orders you actually place — cement, concrete, concrete slab, brick, steel, paint, tile, and rebar. Enter your dimensions, get bags, bricks, kilograms, or litres. Works in cubic yards, cubic feet, and cubic metres.",
+      "subtitle": "Twelve free calculators for the material orders you actually place — concrete, brick, steel, rebar, paint, tile and every part of a concrete pour. Metric or imperial. Waste allowances built in.",
       "missing": "Missing a calculator you use daily?",
       "contactSoon": "Contact form coming soon.",
       "search": {
-        "placeholder": "Search calculators…",
+        "placeholder": "Search 12+ construction calculators…",
         "empty": "No calculators match \"{q}\".",
         "clear": "Clear search",
-        "results": "{n} results"
+        "results": "{n} results",
+        "suggestionsLabel": "Popular",
+        "categoriesLabel": "Category"
+      },
+      "suggestions": [
+        "Concrete",
+        "Brick",
+        "Rebar",
+        "Paint",
+        "Tile",
+        "Steel"
+      ],
+      "categories": {
+        "all": "All",
+        "concrete": "Concrete",
+        "masonry": "Masonry",
+        "steel": "Steel & rebar",
+        "finishes": "Finishes",
+        "sitework": "Site work"
+      },
+      "card": {
+        "cta": "Open calculator"
       }
     },
     "common": {

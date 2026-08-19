@@ -69,12 +69,18 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Outils gratuits pour les entrepreneurs indiens",
-      "title": "Estimation et calculateurs conçus pour la façon dont les entrepreneurs travaillent réellement.",
-      "subtitle": "Calculateurs gratuits, compatibles avec toutes les unités, qui transforment les dimensions d'un mur en commandes de matériaux : briques, ciment, sable, carrelage, peinture, acier, armature et volume de béton. Projets, BOQ et devis avec GST bientôt disponibles.",
+      "eyebrow": "Gratuit · Sans inscription · Fonctionne sur mobile",
+      "title": "Calculateurs de construction gratuits pour tout le chantier.",
+      "subtitle": "Calculez le béton, les briques, l'acier, la peinture, le carrelage et l'armature — quantités précises, unités métriques ou impériales, pertes incluses.",
       "ctaPrimary": "Ouvrir les calculateurs",
-      "ctaSecondary": "Essayer le calculateur de briques",
-      "note": "Aucun compte requis · Métrique et impérial · Fonctionne sur mobile"
+      "ctaSecondary": "Essayer le calculateur de béton",
+      "note": "Aucun compte requis · Métrique et impérial · Fonctionne sur mobile",
+      "trust": [
+        "Unités métriques et impériales",
+        "Marge de perte intégrée",
+        "Formules de calcul éprouvées",
+        "Gratuit — sans inscription"
+      ]
     },
     "features": {
       "eyebrow": "Ce qui est inclus",
@@ -477,14 +483,35 @@
       },
       "eyebrow": "Outils",
       "title": "Calculateurs de construction gratuits",
-      "subtitle": "Sept calculateurs pour les commandes de matériaux que vous passez réellement — ciment, béton, brique, acier, ferraillage, peinture et carrelage. Saisissez vos dimensions, obtenez des sacs, des briques, des kilogrammes ou des litres. Fonctionne en yards cubes, pieds cubes et mètres cubes.",
+      "subtitle": "Douze calculateurs gratuits pour les commandes de matériaux que vous passez vraiment — béton, brique, acier, armature, peinture, carrelage et chaque partie d'un coulage de béton. Métrique ou impérial. Marge de perte intégrée.",
       "missing": "Il manque un calculateur que vous utilisez au quotidien ?",
       "contactSoon": "Formulaire de contact bientôt disponible.",
       "search": {
-        "placeholder": "Rechercher des calculateurs…",
+        "placeholder": "Rechercher parmi 12+ calculateurs de chantier…",
         "empty": "Aucun calculateur ne correspond à « {q} ».",
         "clear": "Effacer la recherche",
-        "results": "{n} résultats"
+        "results": "{n} résultats",
+        "suggestionsLabel": "Populaires",
+        "categoriesLabel": "Catégorie"
+      },
+      "suggestions": [
+        "Béton",
+        "Brique",
+        "Armature",
+        "Peinture",
+        "Carrelage",
+        "Acier"
+      ],
+      "categories": {
+        "all": "Tous",
+        "concrete": "Béton",
+        "masonry": "Maçonnerie",
+        "steel": "Acier et armature",
+        "finishes": "Finitions",
+        "sitework": "Travaux de site"
+      },
+      "card": {
+        "cta": "Ouvrir le calculateur"
       }
     },
     "common": {

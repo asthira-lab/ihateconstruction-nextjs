@@ -6,7 +6,11 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Container } from "@/components/layout/Container";
 import { CalculatorSearch } from "@/components/marketing/CalculatorSearch";
-import { CALCULATORS, calculatorHref } from "@/features/calculators/registry";
+import {
+  CALCULATORS,
+  calculatorHref,
+  type CalculatorCategory,
+} from "@/features/calculators/registry";
 import { getDictionaryFor } from "@/app/[lang]/dictionaries";
 import { isLocale, locales, defaultLocale } from "@/app/i18n-config";
 
@@ -67,6 +71,7 @@ interface LocalizedEntry {
   description: string;
   keywords: string[];
   status: "live" | "coming";
+  category: CalculatorCategory;
 }
 
 export default async function CalculatorsPage({
@@ -88,8 +93,19 @@ export default async function CalculatorsPage({
       description: calcDict?.meta?.description ?? e.description,
       keywords: e.keywords ?? [],
       status: e.status,
+      category: e.category,
     };
   });
+
+  // Union of "all" plus the concrete category union, so the shape lines up with CalculatorSearch's prop.
+  const categoryLabels = {
+    all: t.categories.all,
+    concrete: t.categories.concrete,
+    masonry: t.categories.masonry,
+    steel: t.categories.steel,
+    finishes: t.categories.finishes,
+    sitework: t.categories.sitework,
+  };
 
   return (
     <>
@@ -120,6 +136,11 @@ export default async function CalculatorsPage({
             emptyLabel={t.search.empty}
             clearLabel={t.search.clear}
             resultsLabelTemplate={t.search.results}
+            suggestions={t.suggestions}
+            suggestionsLabel={t.search.suggestionsLabel}
+            categoriesLabel={t.search.categoriesLabel}
+            categoryLabels={categoryLabels}
+            ctaLabel={t.card.cta}
           />
 
           <p className="mt-12 text-xs text-black/50 dark:text-white/50">
